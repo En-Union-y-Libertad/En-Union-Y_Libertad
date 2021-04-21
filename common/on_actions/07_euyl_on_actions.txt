@@ -1,0 +1,73 @@
+#FROM is war target
+on_actions = {
+	on_declare_war = {
+		effect = {
+            #Peru starts the war against Ecuador 
+			if = {
+				limit = {
+					tag = PRU
+                    NOT = {
+                        has_country_flag = is_in_second_war_of_the_pacific
+                    }
+					FROM = {
+						tag = ECU
+					}
+				}
+                ECU = {
+                    mark_focus_tree_layout_dirty = yes
+                }
+                #news_event = { id = news.346 hours = 6 }
+            }
+
+            #The Second Chaco War 
+            if = {
+                limit = {
+                    tag = BOL 
+                    FROM = {
+                        tag = PAR
+                    }
+                }
+                #news_event { id = news.347 hours = 6 }
+            }
+        }
+    }
+    #ROOT is winner #FROM gets annexed - This will also fire on_annex
+    on_civil_war_end = {
+        effect = {
+            #End of Peruvian civil war
+            if = {
+                limit = {
+                    FROM = {
+                        original_tag = PRU 
+                    }
+                    ROOT = {
+                        original_tag = PRU 
+                        has_government = fascism
+                    }
+                }
+                ROOT = {
+                    country_event = { id = peru.24 hours = 8 }
+                }
+            }
+            #End of Bolivian Civil War 
+            if = {
+                limit = {
+                    FROM = {
+                        original_tag = BOL 
+                    }
+                    ROOT = {
+                        original_tag = BOL 
+                        OR = {
+                            has_government = democratic
+                            has_government = communism
+                        }
+                    }
+                }
+                ROOT = {
+                    drop_cosmetic_tag = yes 
+                }
+            }
+        }
+    }
+}
+

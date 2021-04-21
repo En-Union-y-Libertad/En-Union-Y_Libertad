@@ -1,0 +1,6961 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = chile_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CHL
+		}
+	}
+	
+	initial_show_position = {
+		x = 0
+	}
+	
+	default = no
+
+	focus = {
+		id = CHL_the_second_war_of_the_pacific
+		icon = GFX_second_war_of_pacific_chile_side 
+		allow_branch = {
+			has_country_flag = is_in_second_war_of_the_pacific
+		}
+		x = -6
+		y = 0
+
+		cost = 4
+
+		available = {
+			has_country_flag = is_in_second_war_of_the_pacific
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_country_flag = is_in_second_war_of_the_pacific
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC}
+		completion_reward = {
+			unlock_decision_category_tooltip = ROOT_the_second_war_of_the_pacific
+		}
+	}
+
+	focus = {
+		id = CHL_focus_fully_on_the_war
+		icon = GFX_CHL_military_economy
+		x = 0
+		y = 1
+		relative_position_id = CHL_the_second_war_of_the_pacific
+		prerequisite = { focus = CHL_the_second_war_of_the_pacific }
+
+		cost = 5
+
+		available = {
+			has_country_flag = is_in_second_war_of_the_pacific
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = tot_economic_mobilisation
+							has_idea = war_economy
+						}
+					}
+				}
+				add_ideas = war_economy
+			}
+			else = {
+				add_political_power = 150 
+			}
+		}
+	}
+
+	focus = {
+		id = CHL_mobilize_desperately_our_reserves
+		icon = GFX_CHL_mobilize_desperately_reserves
+		x = 0
+		y = 1
+		relative_position_id = CHL_focus_fully_on_the_war
+		prerequisite = { focus = CHL_focus_fully_on_the_war }
+
+		cost = 6
+
+		available = {
+			has_country_flag = is_in_second_war_of_the_pacific
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC}
+		completion_reward = {
+			custom_effect_tooltip = URG_mobilize_reserves
+			add_manpower = 44230
+			hidden_effect = {
+				division_template = { 
+					name = "Reservas Militares" 
+					division_names_group = SPAN_INF_02 
+					is_locked = yes 
+					regiments = { 
+						infantry = { x = 0 y = 0 }  
+						infantry = { x = 0 y = 1 } 
+						infantry = { x = 0 y = 2 } 
+						infantry = { x = 0 y = 3 } 
+						infantry = { x = 0 y = 4 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Reservas Militares\" division_template = \"Reservas Militares\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Reservas Militares\" division_template = \"Reservas Militares\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Reservas Militares\" division_template = \"Reservas Militares\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHL_try_to_gain_foreign_support
+		icon = GFX_goal_generic_dangerous_deal
+		x = -3
+		y = 1
+		relative_position_id = CHL_mobilize_desperately_our_reserves 
+		prerequisite = { focus = CHL_mobilize_desperately_our_reserves }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = is_in_second_war_of_the_pacific
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC }
+		completion_reward = {
+			custom_effect_tooltip = FROM_unlock_influence_and_invite_decision
+		}
+	}
+
+	focus = {
+		id = CHL_draw_up_war_plans
+		icon = GFX_goal_generic_position_armies 
+		x = 0
+		y = 1
+		relative_position_id = CHL_mobilize_desperately_our_reserves
+		prerequisite = { focus = CHL_mobilize_desperately_our_reserves }
+
+		cost = 5
+
+		available = {
+			has_country_flag = is_in_second_war_of_the_pacific
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		search_filters = { FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			unlock_decision_tooltip = CHL_draw_up_war_plan_rojo
+			unlock_decision_tooltip = CHL_draw_up_war_plan_verde
+		}
+	}
+
+	focus = {
+		id = CHL_launch_war_plan_rojo
+		icon = GFX_focus_PRU_attack 
+		x = -1
+		y = 1
+		relative_position_id = CHL_draw_up_war_plans
+		prerequisite = { focus = CHL_draw_up_war_plans }
+
+		cost = 1
+
+		available = {
+			has_country_flag = is_in_second_war_of_the_pacific
+			has_war_with = PRU 
+			PRU = {
+				has_capitulated = no 
+			}
+			custom_trigger_tooltip = {
+				tooltip = CHL_has_drawn_up_war_plan_rojo
+				has_country_flag = CHL_drew_up_war_plan_rojo
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		search_filters = { FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC }
+		completion_reward = {
+			activate_mission_tooltip = CHL_war_plan_rojo
+		}
+	}
+
+	focus = {
+		id = CHL_launch_war_plan_verde
+		icon = GFX_focus_BOL_attack
+		x = 1
+		y = 1
+		relative_position_id = CHL_draw_up_war_plans
+		prerequisite = { focus = CHL_draw_up_war_plans }
+
+		cost = 1
+
+		available = {
+			has_country_flag = is_in_second_war_of_the_pacific
+			has_war_with = BOL 
+			BOL = {
+				has_capitulated = no 
+			}
+			custom_trigger_tooltip = {
+				tooltip = CHL_has_drawn_up_war_plan_verde
+				has_country_flag = CHL_drew_up_war_plan_verde
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		search_filters = { FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC }
+		completion_reward = {
+			activate_mission_tooltip = CHL_war_plan_verde
+		}
+	}
+
+	focus = {
+		id = CHL_expand_our_conscription
+		icon = GFX_ARG_quantity
+		x = 3
+		y = 1
+		relative_position_id = CHL_mobilize_desperately_our_reserves
+		prerequisite = { focus = CHL_mobilize_desperately_our_reserves }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = is_in_second_war_of_the_pacific
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC }
+		completion_reward = {
+			add_manpower = 91235
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Reservas Militares\" division_template = \"Reservas Militares\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHL_victors_of_the_second_war_of_the_pacific
+		icon = GFX_CHL_victors_of_the_second_war_of_the_pacific 
+		x = 0
+		y = 2
+		relative_position_id = CHL_draw_up_war_plans
+		prerequisite = {
+			focus = CHL_launch_war_plan_rojo
+			focus = CHL_launch_war_plan_verde
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_country_flag = is_in_second_war_of_the_pacific
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
+			NOT = {
+				OR = {
+					has_war_with = PRU 
+					has_war_with = BOL 
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = 0.5
+			hidden_effect = {
+				clr_country_flag = is_in_second_war_of_the_pacific
+			}
+		}
+	}
+
+	focus = {
+		id = CHL_aftermath_of_the_great_depression
+		icon = GFX_goal_generic_construction 
+		x = 6
+		y = 0
+		
+		cost = 6
+		
+		ai_will_do = {
+			factor = 6
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 50
+			add_tech_bonus = {
+				name = CHL_aftermath_of_the_great_depression
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			add_ideas = CHL_aftermath_of_the_great_depression_idea
+		}
+	}
+	
+	focus = {
+		id = CHL_maintain_the_stability_of_the_nation
+		icon = GFX_goal_generic_neutrality_focus 
+		x = -1
+		y = 1
+		relative_position_id = CHL_aftermath_of_the_great_depression
+		prerequisite = { focus = CHL_aftermath_of_the_great_depression }
+		
+		cost = 5
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+		}
+	}
+	
+	focus = {
+		id = CHL_embrace_chilean_nationalism
+		icon = GFX_CHL_nationalism
+		x = 1
+		y = 1
+		relative_position_id = CHL_aftermath_of_the_great_depression
+		prerequisite = { focus = CHL_aftermath_of_the_great_depression }
+		
+		cost = 5
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.05
+			add_manpower = 32500
+		}
+	}
+	
+	focus = {
+		id = CHL_expand_the_industry
+		icon = GFX_goal_generic_construct_civ_factory 
+		x = -4
+		y = 1
+		relative_position_id = CHL_aftermath_of_the_great_depression
+		prerequisite = { focus = CHL_aftermath_of_the_great_depression }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_ramp_up_the_armories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 1
+		relative_position_id = CHL_aftermath_of_the_great_depression
+		prerequisite = { focus = CHL_aftermath_of_the_great_depression }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_invest_more_in_the_civilian_economy
+		icon = GFX_goal_generic_consumer_goods 
+		x = 1
+		y = 1
+		relative_position_id = CHL_expand_the_industry
+		prerequisite = { focus = CHL_expand_the_industry }
+		prerequisite = { focus = CHL_maintain_the_stability_of_the_nation }
+		mutually_exclusive = { focus = CHL_invest_more_in_the_military }
+		
+		cost = 8
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.1
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_invest_more_in_the_military
+		icon = GFX_focus_generic_tank_production 
+		x = -1
+		y = 1
+		relative_position_id = CHL_ramp_up_the_armories
+		prerequisite = { focus = CHL_ramp_up_the_armories }
+		prerequisite = { focus = CHL_embrace_chilean_nationalism }
+		mutually_exclusive = { focus = CHL_invest_more_in_the_civilian_economy }
+		
+		cost = 8
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.08
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_industrialize_the_nation
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 3
+		relative_position_id = CHL_aftermath_of_the_great_depression
+		prerequisite = {
+			focus = CHL_invest_more_in_the_civilian_economy
+			focus = CHL_invest_more_in_the_military
+		}
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = ROOT 
+					is_owned_by = ROOT 
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_invest_in_the_education
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+		relative_position_id = CHL_industrialize_the_nation
+		prerequisite = { focus = CHL_industrialize_the_nation }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = CHL_strengthen_the_civilian_economy
+		icon = GFX_goal_generic_construct_civilian 
+		x = 1
+		y = 1
+		relative_position_id = CHL_invest_more_in_the_civilian_economy
+		prerequisite = { focus = CHL_invest_more_in_the_civilian_economy }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = { has_idea = CHL_aftermath_of_the_great_depression_idea }
+				swap_ideas = {
+					remove_idea = CHL_aftermath_of_the_great_depression_idea
+					add_idea = CHL_aftermath_of_the_great_depression_idea_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CHL_aftermath_of_the_great_depression_idea_4
+					add_idea = CHL_aftermath_of_the_great_depression_idea_5
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_sacrifice_the_civilian_economy
+		icon = GFX_goal_generic_production 
+		x = -1
+		y = 1
+		relative_position_id = CHL_invest_more_in_the_military
+		prerequisite = { focus = CHL_invest_more_in_the_military }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = { has_idea = CHL_aftermath_of_the_great_depression_idea }
+				swap_ideas = {
+					remove_idea = CHL_aftermath_of_the_great_depression_idea
+					add_idea = CHL_aftermath_of_the_great_depression_idea_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CHL_aftermath_of_the_great_depression_idea_6
+					add_idea = CHL_aftermath_of_the_great_depression_idea_8
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_invest_in_the_capital
+		icon = GFX_focus_generic_industry_3
+		x = -1
+		y = 1
+		relative_position_id = CHL_expand_the_industry
+		prerequisite = { focus = CHL_expand_the_industry }
+		
+		cost = 10
+		
+		available = {
+			279 = {
+				is_controlled_by = ROOT 
+			}
+		}
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			279 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				if = {
+					limit = {
+						infrastructure < 10
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_expand_steel_mines
+		icon = GFX_focus_generic_steel 
+		x = -1
+		y = 1
+		relative_position_id = CHL_invest_in_the_capital
+		prerequisite = { focus = CHL_invest_in_the_capital }
+		
+		cost = 10
+		
+		available = {
+			has_tech = excavation2
+			279 = {
+				is_controlled_by = ROOT 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			279 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 18
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_an_economy_for_the_people
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 1
+		y = 1
+		relative_position_id = CHL_invest_in_the_capital
+		prerequisite = { focus = CHL_invest_in_the_capital }
+		prerequisite = { focus = CHL_invest_more_in_the_civilian_economy }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = CHL_aftermath_of_the_great_depression_idea }
+				swap_ideas = {
+					remove_idea = CHL_aftermath_of_the_great_depression_idea
+					add_idea = CHL_aftermath_of_the_great_depression_idea_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CHL_aftermath_of_the_great_depression_idea_2 
+					add_idea = CHL_aftermath_of_the_great_depression_idea_5
+				}
+			}
+		}
+	}
+				
+	focus = {
+		id = CHL_arm_the_north
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 1
+		relative_position_id = CHL_ramp_up_the_armories
+		prerequisite = { focus = CHL_ramp_up_the_armories }
+		
+		cost = 10
+		
+		available = {
+			controls_state = 828
+			controls_state = 829
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			828 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			829 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_produce_fuel_for_our_forces
+		icon = GFX_goal_generic_oil_refinery
+		x = 1
+		y = 1
+		relative_position_id = CHL_arm_the_north
+		prerequisite = { focus = CHL_arm_the_north }
+		
+		cost = 10
+		
+		available = {
+			has_tech = excavation2
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = oil
+					amount = 7
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_reform_the_economy
+		icon = GFX_goal_generic_army_tanks 
+		x = -1
+		y = 1
+		relative_position_id = CHL_arm_the_north
+		prerequisite = { focus = CHL_arm_the_north }
+		prerequisite = { focus = CHL_invest_more_in_the_military }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = CHL_aftermath_of_the_great_depression_idea }
+				swap_ideas = {
+					remove_idea = CHL_aftermath_of_the_great_depression_idea
+					add_idea = CHL_aftermath_of_the_great_depression_idea_6
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CHL_aftermath_of_the_great_depression_idea_3
+					add_idea = CHL_aftermath_of_the_great_depression_idea_8
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_consolidate_part_of_the_civilian_economy
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 1
+		relative_position_id = CHL_strengthen_the_civilian_economy
+		prerequisite = { focus = CHL_strengthen_the_civilian_economy }
+		prerequisite = { focus = CHL_an_economy_for_the_people }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHL_aftermath_of_the_great_depression_idea_5
+				add_idea = CHL_aftermath_of_the_great_depression_idea_7
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_invest_heavily_in_the_military
+		icon = GFX_focus_generic_combined_arms 
+		x = 0
+		y = 2
+		relative_position_id = CHL_invest_more_in_the_military
+		prerequisite = { focus = CHL_reform_the_economy }
+		prerequisite = { focus = CHL_sacrifice_the_civilian_economy }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHL_aftermath_of_the_great_depression_idea_8
+				add_idea = CHL_aftermath_of_the_great_depression_idea_9
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_steel_for_everyone
+		icon = GFX_CHL_steel_everyone
+		x = -1
+		y = 1
+		relative_position_id = CHL_an_economy_for_the_people
+		prerequisite = { focus = CHL_an_economy_for_the_people }
+		prerequisite = { focus = CHL_expand_steel_mines }
+		
+		cost = 10
+		
+		available = {
+			has_tech = excavation3 
+			NOT = {
+				has_completed_focus = CHL_everyone_must_bear_the_torch
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = CHL_steel_for_everyone_idea
+			if = {
+				limit = { NOT = { has_idea = free_trade } }
+				add_ideas = free_trade
+			}
+			else = {
+				add_political_power = 150
+			}
+			if = {
+				limit = { controls_state = 828 }
+				828 = {
+					add_resource = {
+						type = steel
+						amount = 6
+					}
+				}
+			}
+			if = {
+				limit = { controls_state = 829 }
+				829 = {
+					add_resource = {
+						type = steel
+						amount = 2
+					}
+				}
+			}
+			if = {
+				limit = { controls_state = 279 }
+				279 = {
+					add_resource = {
+						type = steel
+						amount = 14
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_a_modern_chilean_economy
+		icon = GFX_CHL_modern_economy
+		x = 0
+		y = 2
+		relative_position_id = CHL_an_economy_for_the_people
+		prerequisite = { focus = CHL_an_economy_for_the_people }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_conserve_our_resources
+		icon = GFX_ARG_limit_exports 
+		x = 1
+		y = 1
+		relative_position_id = CHL_reform_the_economy
+		prerequisite = { focus = CHL_reform_the_economy }
+		prerequisite = { focus = CHL_produce_fuel_for_our_forces }
+		
+		cost = 10
+		
+		available = {
+			has_tech = excavation3
+			NOT = {
+				has_completed_focus = CHL_everyone_must_bear_the_torch
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = limited_exports } }
+				add_ideas = limited_exports
+			}
+			else = {
+				add_political_power = 150
+			}
+			if = {
+				limit = { controls_state = 507 }
+				507 = {
+					add_resource = {
+						type = oil
+						amount = 8
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { controls_state = 279 }
+				279 = {
+					add_resource = {
+						type = steel
+						amount = 6
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_the_chilean_military_economy
+		icon = GFX_CHL_military_economy
+		x = 0
+		y = 2
+		relative_position_id = CHL_reform_the_economy
+		prerequisite = { focus = CHL_reform_the_economy }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_new_mining_techniques
+		icon = GFX_goal_generic_construction2 
+		x = 0
+		y = 2
+		relative_position_id = CHL_invest_in_the_education
+		prerequisite = {
+			focus = CHL_the_chilean_military_economy
+			focus = CHL_a_modern_chilean_economy
+		}
+		
+		cost = 10
+		
+		available = {
+			has_tech = excavation4 
+			OR = {
+				has_completed_focus = CHL_conserve_our_resources
+				has_completed_focus = CHL_steel_for_everyone
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = ARG_improved_mining_techniques
+		}
+	}
+	
+	focus = {
+		id = CHL_communist_path
+		icon = GFX_CHL_alternative
+		mutually_exclusive = { focus = CHL_fascist_path }
+		mutually_exclusive = { focus = CHL_democracy_path }
+		x = 20
+		y = 0
+		
+		ai_will_do = {
+			factor = 250
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = communist_influence
+		}		
+		cost = 10	
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}	
+	
+	focus = {
+		id = CHL_strengthen_the_workers
+		prerequisite = { focus = CHL_communist_path }
+		icon = GFX_r56_goal_generic_workers_support
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = CHL_workers_strengthened
+			add_popularity = { ideology = communism popularity = 0.05 }
+		}
+		relative_position_id = CHL_communist_path
+		cost = 10		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	
+	focus = {
+		id = CHL_legalize_labor_unions
+		prerequisite = { focus = CHL_strengthen_the_workers focus = CHL_create_the_pan_american_highway }
+		icon = GFX_focus_laborunion
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = CHL_labor_unions_legalized_idea
+			add_popularity = { ideology = communism popularity = 0.05 }
+		}
+		relative_position_id = CHL_strengthen_the_workers
+		cost = 10			
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+	}
+	
+	focus = {
+		id = CHL_create_the_pan_american_highway
+		prerequisite = { focus = CHL_communist_path }
+		icon = GFX_CHL_pan_american
+		x = -1
+		y = 1
+		
+		available = {
+			has_war = no
+		}
+		relative_position_id = CHL_communist_path
+		cost = 15	
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+			custom_effect_tooltip = CHL_pan_highway_tooltip
+			add_ideas = CHL_the_pan_american_highway_complete
+			add_popularity = { ideology = communism popularity = 0.1 }
+			
+			hidden_effect = {
+				279 = {
+					if = {
+						limit = { 
+							is_controlled_by = ROOT 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				506 = {
+					if = {
+						limit = { 
+							is_controlled_by = ROOT 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+				828 = {
+					if = {
+						limit = { 
+							is_controlled_by = ROOT 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				829 = {
+					if = {
+						limit = { 
+							is_controlled_by = ROOT 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				492 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}			
+				303 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}			
+				305 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}	
+				306 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}				
+				493 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}				
+				304 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}				
+				685 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}		
+				316 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}			
+				317 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}	
+				312 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}				
+				314 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}				
+				313 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}	
+				475 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}				
+				476 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}		
+				477 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}		
+				277 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}				
+				479 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}	
+				480 = {
+					if = {
+						limit = { 
+							infrastructure < 10
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				PRU = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}		
+				ECU = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}		
+				COL = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}	
+				PAN = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}	
+				USA = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}		
+				COS = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}			
+				NIC = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}				
+				HON = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}	
+				ELS = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}				
+				GUA = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}	
+				MEX = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway }		
+				}	
+
+				PRU = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}		
+				ECU = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}		
+				COL = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}	
+				PAN = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}	
+				USA = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}		
+				COS = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}			
+				NIC = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}				
+				HON = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}	
+				ELS = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}				
+				GUA = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}	
+				MEX = {
+				add_opinion_modifier = { target = CHL modifier = pan_american_highway_2 }		
+				}		
+
+
+				CHL = {
+					add_opinion_modifier = { target = PRU modifier = pan_american_highway }		
+					add_opinion_modifier = { target = ECU modifier = pan_american_highway }		
+					add_opinion_modifier = { target = COL modifier = pan_american_highway }		
+					add_opinion_modifier = { target = PAN modifier = pan_american_highway }		
+					add_opinion_modifier = { target = USA modifier = pan_american_highway }		
+					add_opinion_modifier = { target = USA modifier = pan_american_highway }		
+					add_opinion_modifier = { target = COS modifier = pan_american_highway }		
+					add_opinion_modifier = { target = NIC modifier = pan_american_highway }		
+					add_opinion_modifier = { target = HON modifier = pan_american_highway }		
+					add_opinion_modifier = { target = ELS modifier = pan_american_highway }		
+					add_opinion_modifier = { target = GUA modifier = pan_american_highway }		
+					add_opinion_modifier = { target = MEX modifier = pan_american_highway }		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_crush_the_press
+		prerequisite = { focus = CHL_communist_path focus = CHL_fascist_path}
+		icon = GFX_r56_goal_SIA_weaken_democracy
+		x = 3
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+		relative_position_id = CHL_communist_path
+		cost = 10		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}		
+	}
+	
+	focus = {
+		id = CHL_establish_propaganda_news
+		prerequisite = { focus = CHL_crush_the_press }
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		completion_reward = {
+			add_manpower = 31250
+			add_ideas = CHL_fake_press
+		}		
+		relative_position_id = CHL_crush_the_press
+		cost = 10			
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+	}
+	
+	focus = {
+		id = CHL_our_commie_path
+		prerequisite = { focus = CHL_create_the_pan_american_highway }
+		prerequisite = { focus = CHL_legalize_labor_unions }
+		prerequisite = { focus = CHL_strengthen_the_workers }
+		mutually_exclusive = { focus = CHL_join_soviets }
+		mutually_exclusive = { focus = CHL_a_new_idea }
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 2
+	
+		available = {
+			communism > 0.45
+		}
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			if = {
+				limit = { NOT = { has_government = communism } }
+				set_politics = { ruling_party = communism }
+			}
+			create_faction = "The World Revolution"
+		}		
+		relative_position_id = CHL_create_the_pan_american_highway
+		cost = 5	
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}	
+	
+	focus = {
+		id = CHL_a_new_idea
+		icon = GFX_CHL_new_idea
+		x = -3
+		y = 1
+		relative_position_id = CHL_legalize_labor_unions
+		prerequisite = { focus = CHL_create_the_pan_american_highway }
+		prerequisite = { focus = CHL_legalize_labor_unions }
+		prerequisite = { focus = CHL_strengthen_the_workers }
+		mutually_exclusive = { focus = CHL_our_commie_path }
+		mutually_exclusive = { focus = CHL_join_soviets }
+		
+		ai_will_do = {
+			factor = 45
+		}
+		
+		cost = 5
+		
+		available = {
+			is_subject = no
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			custom_effect_tooltip = CHL_pathcivilwar
+			add_stability = -0.1
+			add_popularity = { ideology = neutrality popularity = 0.1 }
+			add_popularity = { ideology = communism popularity = -0.07 }
+			add_ideas = CHL_anarchist_society_1
+			remove_ideas = {
+				communist_influence
+				CHL_labor_unions_legalized_idea
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = CHL_anarchism_party_long
+				name = CHL_anarchism_party
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_arm_the_people
+		icon = GFX_focus_generic_manpower
+		x = 0
+		y = 1
+		relative_position_id = CHL_a_new_idea
+		prerequisite = { focus = CHL_a_new_idea }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_stability = -0.1
+			custom_effect_tooltip = CHL_gain_militias
+		}
+	}
+	
+	focus = {
+		id = CHL_seize_the_means_of_production
+		icon = GFX_goal_generic_construct_civilian 
+		x = -2
+		y = 1
+		relative_position_id = CHL_a_new_idea
+		prerequisite = { focus = CHL_a_new_idea }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_stability = -0.1
+			custom_effect_tooltip = CHL_production
+			effect_tooltip = {
+				add_ideas = CHL_seized_production
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_seize_the_reserves
+		icon = GFX_goal_generic_military_sphere 
+		x = 0
+		y = 1
+		relative_position_id = CHL_seize_the_means_of_production
+		prerequisite = { focus = CHL_seize_the_means_of_production }
+		prerequisite = { focus = CHL_arm_the_people }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_stability = -0.1
+			custom_effect_tooltip = CHL_save_equipment
+		}
+	}
+	
+	focus = {
+		id = CHL_our_own_fate
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 0
+		y = 1
+		relative_position_id = CHL_seize_the_reserves
+		prerequisite = { focus = CHL_seize_the_reserves }
+		
+		cost = 6
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			has_civil_war = no 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+				
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = democratic
+				size = 0.4
+				capital = 506
+				states = {
+					506 507 830 831 828
+				}
+			}
+
+			add_stability = -0.25	
+			
+			hidden_effect = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Ministerio de Trabajadores"
+					desc = "POLITICS_CHILEAN_COUNCIL_DESC"
+					picture = "portrait_chl_anarchist_commune.dds" 
+					expire = "1965.1.1"
+					ideology = anarchism
+					traits = {
+						CHL_the_council_of_workers
+					}
+				}
+				add_days_mission_timeout = {
+					mission = CHL_people_demanding_social_class_balancing
+					days = 175
+				}
+				
+				add_popularity = { ideology = neutrality popularity = 0.25 }
+		
+				division_template = { 
+				name = "Anarqúistas" 
+				division_names_group = SPAN_INF_02 
+				is_locked = no
+					regiments = { 
+						infantry = { x = 0 y = 0 }  
+						infantry = { x = 0 y = 1 } 
+						infantry = { x = 0 y = 2 } 
+						infantry = { x = 0 y = 3 } 
+						infantry = { x = 0 y = 4 }
+					}
+				}
+			
+				279 = {
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+				}
+				832 = {
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+				}
+				833 = {
+					create_unit = {
+						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+				}
+			
+				random_other_country = {
+					limit = {
+						original_tag = CHL
+						has_civil_war = yes
+						has_government = democratic
+					}
+					
+					add_ideas = CHL_seized_production
+					remove_ideas = CHL_anarchist_society_1
+					
+					division_template = { 
+						name = "Loyalists" 
+						division_names_group = SPAN_INF_02 
+						is_locked = yes 
+						regiments = { 
+							infantry = { x = 0 y = 0 }  
+							infantry = { x = 0 y = 1 } 
+							infantry = { x = 0 y = 2 } 
+							infantry = { x = 0 y = 3 } 
+							infantry = { x = 0 y = 4 }
+						}
+					}
+					506 = {
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+					507 = {
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+					830 = {
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+				}
+				
+				news_event = { id = news.340 days = 2} 
+			}
+		}
+	}
+					
+	focus = {
+		id = CHL_appropriate_the_means_of_production
+		icon = GFX_focus_generic_support_the_left_right 
+		x = -1
+		y = 1
+		relative_position_id = CHL_our_own_fate
+		prerequisite = { focus = CHL_our_own_fate }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			is_subject = no
+			has_government = neutrality
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = CHL_consolidate_the_economy
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_13
+					add_idea = CHL_anarchist_society_12
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_seize_the_factories
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_2
+					add_idea = CHL_anarchist_society_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_1
+					add_idea = CHL_anarchist_society_3
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_train_the_workers_army
+		icon = GFX_focus_generic_military_academy
+		x = -1
+		y = 1
+		relative_position_id = CHL_appropriate_the_means_of_production
+		prerequisite = { focus = CHL_appropriate_the_means_of_production }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = CHL_an_army_of_workers
+					has_completed_focus = CHL_consolidate_the_economy 
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_14
+					add_idea = CHL_anarchist_society_9
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_an_army_of_workers
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_5
+					add_idea = CHL_anarchist_society_8
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_consolidate_the_economy
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_12
+					add_idea = CHL_anarchist_society_10
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_seize_the_factories
+					NOT = { has_completed_focus = CHL_consolidate_the_economy }				
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_4
+					add_idea = CHL_anarchist_society_7
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_3
+					add_idea = CHL_anarchist_society_6
+				}
+			}
+		}
+	}				
+	
+	focus = {
+		id = CHL_seize_the_factories
+		icon = GFX_focus_eng_crush_the_dream 
+		x = 1
+		y = 1
+		relative_position_id = CHL_our_own_fate
+		prerequisite = { focus = CHL_our_own_fate }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			is_subject = no
+			has_government = neutrality
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = CHL_train_the_workers_army
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_6
+					add_idea = CHL_anarchist_society_7
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_appropriate_the_means_of_production
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_3
+					add_idea = CHL_anarchist_society_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_1 
+					add_idea = CHL_anarchist_society_2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_consolidate_the_economy
+		icon = GFX_goal_generic_consumer_goods
+		x = 1
+		y = 1
+		relative_position_id = CHL_seize_the_factories
+		prerequisite = { focus = CHL_seize_the_factories }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = CHL_an_army_of_workers
+					has_completed_focus = CHL_train_the_workers_army
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_8
+					add_idea = CHL_anarchist_society_9
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_an_army_of_workers
+					NOT = { has_completed_focus = CHL_train_the_workers_army }
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_5
+					add_idea = CHL_anarchist_society_14
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_train_the_workers_army
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_7
+					add_idea = CHL_anarchist_society_10
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_appropriate_the_means_of_production
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_4
+					add_idea = CHL_anarchist_society_12
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_2
+					add_idea = CHL_anarchist_society_13
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_an_army_of_workers
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = -1
+		y = 1
+		relative_position_id = CHL_seize_the_factories
+		prerequisite = { focus = CHL_seize_the_factories }
+		prerequisite = { focus = CHL_appropriate_the_means_of_production }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_manpower = 17500
+			if = {
+				limit = {
+					has_completed_focus = CHL_consolidate_the_economy
+					has_completed_focus = CHL_train_the_workers_army
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_10
+					add_idea = CHL_anarchist_society_9
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_consolidate_the_economy
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_12
+					add_idea = CHL_anarchist_society_14
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_train_the_workers_army
+				}
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_7
+					add_idea = CHL_anarchist_society_8
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CHL_anarchist_society_4
+					add_idea = CHL_anarchist_society_5
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_everyone_must_bear_the_torch
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 0
+		y = 1
+		relative_position_id = CHL_an_army_of_workers
+		prerequisite = { focus = CHL_an_army_of_workers }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_civil_war = no
+			is_subject = no
+			has_government = neutrality
+		}
+		 
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_war_support = 0.2
+			if = {
+				limit = {
+					NOT = { has_idea = SPR_collectivized_society }
+				}
+				add_ideas = SPR_collectivized_society
+			}
+			else = {
+				add_political_power = 150
+			}
+			if = {
+				limit = {
+					NOT = { has_idea = closed_economy }
+				}
+				add_ideas = closed_economy
+			}
+			else = {
+				add_political_power = 150
+			}
+			hidden_effect = {
+				ARG = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				PRU = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				PAR = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				URG = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				ECU = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				BRA = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				COL = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				VEN = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				FRA = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				BOL = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				ENG = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+				USA = {
+					add_opinion_modifier = { target = CHL modifier = CHL_anarchist_state_in_proximity }
+				}
+			}
+		}	
+	}
+	
+	focus = {
+		id = CHL_equal_education
+		icon = GFX_focus_research2 
+		x = -3
+		y = 2
+		relative_position_id = CHL_everyone_must_bear_the_torch
+		prerequisite = { focus = CHL_everyone_must_bear_the_torch }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = CHL_militarize_the_economy
+		icon = GFX_goal_generic_construct_mil_factory 
+		x = 3
+		y = 2
+		relative_position_id = CHL_everyone_must_bear_the_torch
+		prerequisite = { 
+			focus = CHL_everyone_must_bear_the_torch 
+			focus = CHL_an_army_against_fascism
+		}
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+		
+		
+	focus = {
+		id = CHL_bolivian_anarchism
+		icon = GFX_focus_BOL_attack 
+		x = -1
+		y = 1
+		relative_position_id = CHL_everyone_must_bear_the_torch
+		prerequisite = { focus = CHL_everyone_must_bear_the_torch }
+		will_lead_to_war_with = BOL
+		
+		cost = 10
+		
+		available = {
+			has_army_manpower = { size > 99999 }
+			NOT = {
+				is_in_faction_with = BOL
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_everyone_must_bear_the_torch
+			ROOT = {
+				has_war_with = BOL
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BOL
+			}
+		}
+	}
+		
+	focus = {
+		id = CHL_peruvian_anarchism
+		icon = GFX_focus_PRU_attack
+		x = 1
+		y = 1
+		relative_position_id = CHL_everyone_must_bear_the_torch
+		prerequisite = { focus = CHL_everyone_must_bear_the_torch }
+		will_lead_to_war_with = PRU
+		
+		cost = 10
+		
+		available = {
+			has_army_manpower = { size > 129999 }
+			NOT = {
+				is_in_faction_with = PRU
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_everyone_must_bear_the_torch
+			ROOT = {
+				has_war_with = PRU
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PRU
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_argentine_anarchism
+		icon = GFX_focus_ARG_attack
+		x = 0
+		y = 2
+		relative_position_id = CHL_everyone_must_bear_the_torch
+		prerequisite = { focus = CHL_bolivian_anarchism }
+		prerequisite = { focus = CHL_peruvian_anarchism }
+		will_lead_to_war_with = ARG
+		
+		cost = 10
+		
+		available = {
+			has_army_manpower = { size > 199999 }
+			NOT = {
+				is_in_faction_with = ARG
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_everyone_must_bear_the_torch
+			ROOT = {
+				has_war_with = ARG
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ARG
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_anarchism_has_no_borders
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		x = 0
+		y = 1
+		relative_position_id = CHL_argentine_anarchism
+		prerequisite = { focus = CHL_argentine_anarchism }
+		
+		cost = 10
+		
+		available = {
+			has_army_manpower = { size > 249999 }
+			controls_state = 303
+			controls_state = 302
+			controls_state = 278
+			controls_state = 807
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = CHL_anarchism_no_borders
+		}
+	}
+	
+	focus = {
+		id = CHL_establish_the_global_commune
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 1
+		relative_position_id = CHL_anarchism_has_no_borders
+		prerequisite = { focus = CHL_anarchism_has_no_borders }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			custom_effect_tooltip = CHL_known_as_global
+			custom_effect_tooltip = CHL_unlock_integrate
+			hidden_effect = {
+				set_cosmetic_tag = CHL_anarchist_global_commune
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_combine_with_the_anarchists_in_iberia
+		icon = GFX_goal_generic_major_alliance 
+		x = 0
+		y = 1
+		relative_position_id = CHL_establish_the_global_commune
+		prerequisite = { focus = CHL_establish_the_global_commune }
+		
+		cost = 10
+		
+		available = {
+			SPC = {
+				is_subject = no
+				has_civil_war = no
+				controls_state = 165
+				controls_state = 41
+				controls_state = 171
+				controls_state = 169
+			}
+			ROOT = {
+				is_subject = no
+				has_government = neutrality
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			SPC = {
+				country_event = { id = chile.15 hours = 6 }
+			}
+			custom_effect_tooltip = ARG_iftheyaccept
+			effect_tooltip = {
+				annex_country = {
+					target = SPC
+					transfer_troops = yes
+				}
+				add_state_core = 177
+				add_state_core = 165
+				add_state_core = 794
+				add_state_core = 166
+				add_state_core = 172
+				add_state_core = 792
+				add_state_core = 790
+				add_state_core = 171
+				add_state_core = 174
+				add_state_core = 791
+				add_state_core = 176
+				add_state_core = 793
+				add_state_core = 41
+				add_state_core = 788
+				add_state_core = 170
+				add_state_core = 175
+				add_state_core = 167
+				add_state_core = 168
+				add_state_core = 169
+				add_state_core = 789
+				add_state_core = 168
+				add_state_core = 173
+				add_state_core = 290
+				add_state_core = 699
+				add_state_core = 783
+				add_state_core = 178
+				add_state_core = 297
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_join_soviets 
+		prerequisite = { focus = CHL_create_the_pan_american_highway }
+		prerequisite = { focus = CHL_legalize_labor_unions }
+		prerequisite = { focus = CHL_strengthen_the_workers }
+		mutually_exclusive = { focus = CHL_our_commie_path }
+		mutually_exclusive = { focus = CHL_a_new_idea }
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 1
+		y = 1
+	
+		available = {
+			communism > 0.45
+			is_in_faction = no
+			NOT = {
+				has_war_with = SOV 
+			}
+		}
+
+		bypass = {
+			has_government = communism
+			is_in_faction_with = SOV 
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_government = communism } }
+				set_politics = { ruling_party = communism }
+			}
+			if = {
+				limit = { has_idea = monroe_doctrine_idea }
+				remove_ideas = monroe_doctrine_idea
+			}
+			SOV = {
+				country_event = chile.5
+			}
+		}
+		relative_position_id = CHL_legalize_labor_unions
+		cost = 5		
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}	
+	
+	focus = {
+		id = CHL_create_a_mountaineer_korp
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = -1
+		y = 1
+		relative_position_id = CHL_join_soviets
+		prerequisite = {
+			focus = CHL_join_soviets
+			focus = CHL_our_commie_path
+		}
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			custom_effect_tooltip = ARG_createmountaineers
+			hidden_effect = {
+				506 = {
+					create_unit = {
+						division = "name = \"División Montañera de Chile\" division_template = \"División Montañera\" start_experience_factor = 0.1 start_equipment_factor = 0.85" 
+						owner = CHL
+					}
+					create_unit = {
+						division = "name = \"División Montañera de Chile\" division_template = \"División Montañera\" start_experience_factor = 0.1 start_equipment_factor = 0.85" 
+						owner = CHL
+					}
+				}
+				279 = {
+					create_unit = {
+						division = "name = \"División Montañera de Chile\" division_template = \"División Montañera\" start_experience_factor = 0.1 start_equipment_factor = 0.85" 
+						owner = CHL
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_adjust_the_labor_unions
+		icon = GFX_focus_spr_class_war 
+		x = 1
+		y = 1
+		relative_position_id = CHL_join_soviets
+		prerequisite = {
+			focus = CHL_join_soviets
+			focus = CHL_our_commie_path
+		}
+		
+		cost = 10
+		
+		available = {
+			has_idea = CHL_labor_unions_legalized_idea
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHL_labor_unions_legalized_idea
+				add_idea = CHL_labor_unions_legalized_idea_2
+			}
+		}
+	}
+		
+	
+	focus = {
+		id = CHL_take_out_bolivia
+		icon = GFX_focus_BOL_attack
+		x = 0
+		y = 1
+		relative_position_id = CHL_create_a_mountaineer_korp
+		prerequisite = { focus = CHL_create_a_mountaineer_korp }
+		will_lead_to_war_with = BOL
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = {
+				is_in_faction_with = BOL
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_create_a_mountaineer_korp
+			has_war_with = BOL
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BOL
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_spread_the_revolution_to_argentina
+		icon = GFX_focus_ARG_attack
+		x = 1
+		y = 1
+		relative_position_id = CHL_take_out_bolivia
+		prerequisite = { focus = CHL_take_out_bolivia }
+		
+		mutually_exclusive = { focus = CHL_alliance_with_the_argentines }
+		mutually_exclusive = { focus = CHL_fuego_demand }
+		will_lead_to_war_with = ARG
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_army_manpower = { size > 149999 }
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_create_a_mountaineer_korp
+			OR = {
+				has_war_with = ARG 
+				AND = {
+					ARG = {
+						has_government = communism
+						is_in_faction_with = ROOT 
+					}
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ARG
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_revolution_to_the_cisplatine
+		icon = GFX_ARG_attack_uruguay
+		x = -1
+		y = 1
+		relative_position_id = CHL_take_out_bolivia
+		prerequisite = { focus = CHL_take_out_bolivia }
+		will_lead_to_war_with = URG
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_create_a_mountaineer_korp
+			OR = {	
+				has_war_with = URG 
+				is_in_faction_with = URG
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = URG
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_destroy_paraguay
+		icon = GFX_ARG_go_through_paraguay
+		x = -2
+		y = 1
+		relative_position_id = CHL_spread_the_revolution_to_argentina
+		prerequisite = { focus = CHL_revolution_to_the_cisplatine }
+		prerequisite = { focus = CHL_spread_the_revolution_to_argentina }
+		mutually_exclusive = { focus = CHL_invite_paraguay }
+		will_lead_to_war_with = PAR
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = {
+				is_in_faction_with = PAR 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_take_out_bolivia
+			has_war_with = PAR 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PAR
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_invite_paraguay
+		icon = GFX_URG_invite_paraguay
+		x = 0
+		y = 1
+		relative_position_id = CHL_spread_the_revolution_to_argentina
+		prerequisite = { focus = CHL_revolution_to_the_cisplatine }
+		prerequisite = { 
+			focus = CHL_spread_the_revolution_to_argentina
+			focus = CHL_alliance_with_the_argentines
+		}
+		mutually_exclusive = { focus = CHL_destroy_paraguay }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			PAR = {
+				is_in_faction = no 
+			}
+			NOT = {
+				has_war_with = PAR 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_take_out_bolivia
+			is_in_faction_with = PAR 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = { 
+					has_completed_focus = CHL_join_soviets
+					is_in_faction_with = SOV 
+				}
+				PAR = {
+					country_event = { id = chile.20 hours = 6 }
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = CHL_join_soviets
+					is_in_faction = no 
+				}
+				set_rule = { can_create_factions = yes }
+				create_faction = "The World Revolution"
+				PAR = {
+					country_event = { id = generic.5 hours = 6 }
+				}
+			}
+			else = {
+				PAR = {
+					country_event = { id = generic.5 hours = 6 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_go_for_brazil
+		icon = GFX_ARG_attack_brazil
+		x = -1
+		y = 1
+		relative_position_id = CHL_invite_paraguay
+		prerequisite = {
+			focus = CHL_invite_paraguay
+			focus = CHL_destroy_paraguay
+			focus = CHL_joint_military_build_up
+		}
+		will_lead_to_war_with = BRA
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_army_manpower = { size > 249999 }
+			NOT = {
+				has_completed_focus = CHL_build_up_the_military
+			}
+			OR = {
+				AND = {
+					controls_state = 827
+					controls_state = 300
+				}
+				any_other_country = {
+					OR = {
+						AND = {
+							is_in_faction_with = ROOT 
+							has_government = communism
+						}
+						is_subject_of = ROOT 
+					}
+					controls_state = 827
+					controls_state = 300
+				}
+			}
+			OR = {
+				AND = {
+					controls_state = 278
+					controls_state = 807
+				}
+				any_other_country = {
+					OR = {
+						AND = {
+							is_in_faction_with = ROOT 
+							has_government = communism
+						}
+						is_subject_of = ROOT 
+					}
+					controls_state = 278
+					controls_state = 807
+				}
+			}
+			OR = {
+				AND = {
+					controls_state = 688
+					controls_state = 301
+				}
+				any_other_country = {
+					OR = {
+						AND = {
+							is_in_faction_with = ROOT 
+							has_government = communism
+						}
+						is_subject_of = ROOT 
+					}
+					controls_state = 688
+					controls_state = 301
+				}
+			}
+			OR = {
+				AND = {
+					controls_state = 302
+					controls_state = 487
+					controls_state = 826
+				}
+				any_other_country = {
+					OR = {
+						AND = {
+							is_in_faction_with = ROOT 
+							has_government = communism
+						}
+						is_subject_of = ROOT 
+					}
+					controls_state = 302
+					controls_state = 487
+					controls_state = 826
+				}
+			}
+		}
+		
+		bypass = {
+			OR = {
+				has_completed_focus = CHL_destroy_paraguay
+				has_completed_focus = CHL_invite_paraguay
+			}
+			OR = {
+				has_war_with = BRA
+				AND = {
+					is_in_faction_with = BRA 
+					BRA = { has_government = communism }
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BRA
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_an_army_against_fascism
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution 
+		x = 0
+		y = 1
+		relative_position_id = CHL_go_for_brazil
+		prerequisite = { focus = CHL_go_for_brazil }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_manpower = 64315
+			add_ideas = ARG_workers_in_the_armed_forces
+		}
+	}
+	
+	focus = {
+		id = CHL_decimate_the_peruvians
+		icon = GFX_focus_PRU_attack
+		x = 0
+		y = 1
+		relative_position_id = CHL_an_army_against_fascism
+		prerequisite = { focus = CHL_an_army_against_fascism }
+		will_lead_to_war_with = PRU
+		
+		cost = 10
+		
+		available = {
+			NOT = {
+				is_in_faction_with = PRU 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_an_army_against_fascism
+			has_war_with = PRU 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PRU 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_integrate_our_historical_claims
+		icon = GFX_CHL_historical_land
+		x = 2
+		y = 1
+		relative_position_id = CHL_decimate_the_peruvians
+		prerequisite = { 
+			focus = CHL_decimate_the_peruvians 
+			focus = CHL_stab_peru_in_the_back
+		}
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 30
+		}
+		
+		available = {
+			controls_state = 492
+			controls_state = 834
+			controls_state = 835
+			controls_state = 837
+			controls_state = 841
+			controls_state = 840
+			controls_state = 843
+			controls_state = 302
+			controls_state = 826
+			controls_state = 820
+			controls_state = 819
+			controls_state = 808
+			controls_state = 809
+			controls_state = 810
+			controls_state = 811
+			controls_state = 512
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.05
+			add_state_core = 492
+			add_state_core = 302
+			add_state_core = 826
+			add_state_core = 820
+			add_state_core = 819
+			add_state_core = 808
+			add_state_core = 809
+			add_state_core = 810
+			add_state_core = 811
+			add_state_core = 512
+			add_state_core = 834
+			add_state_core = 835
+			add_state_core = 837
+			add_state_core = 841
+			add_state_core = 840
+			add_state_core = 843
+		}
+	}
+			
+	
+	focus = {
+		id = CHL_make_way_for_the_venezuelan_threat
+		icon = GFX_ARG_push_past
+		x = 0
+		y = 1
+		relative_position_id = CHL_decimate_the_peruvians
+		prerequisite = { focus = CHL_decimate_the_peruvians }
+		will_lead_to_war_with = ECU 
+		will_lead_to_war_with = COL
+		
+		cost = 10
+		
+		available = {
+			NOT = {
+				is_in_faction_with = ECU 
+				is_in_faction_with = COL 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_an_army_against_fascism
+			has_war_with = ECU
+			has_war_with = COL 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = ECU }
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ECU 
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_war_with = COL }
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = COL 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_take_out_the_final_fascist_threat
+		icon = GFX_ARG_attack_venezuela
+		x = 0
+		y = 1
+		relative_position_id = CHL_make_way_for_the_venezuelan_threat
+		prerequisite = { focus = CHL_make_way_for_the_venezuelan_threat }
+		
+		cost = 10
+		
+		available = {
+			NOT = {
+				is_in_faction_with = VEN 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_decimate_the_peruvians
+			has_war_with = VEN
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = VEN
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_improve_the_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = CHL_militarize_the_economy
+		prerequisite = { focus = CHL_militarize_the_economy }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = ARG_invest_in_infrastructure
+		}
+	}
+	
+	focus = {
+		id = CHL_exploit_the_bolivian_tungsten
+		icon = GFX_focus_generic_tungsten 
+		x = -1
+		y = 1
+		relative_position_id = CHL_improve_the_infrastructure
+		prerequisite =  { focus = CHL_improve_the_infrastructure }
+		
+		cost = 10
+		
+		available = {
+			is_subject = no
+			ROOT = {
+				controls_state = 302
+				NOT = {
+					has_war_with = BOL
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = ARG_tungstenbolivia
+			302 = {
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = {
+						infrastructure < 10
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = { 
+						ROOT = {
+							has_tech = excavation5 
+						}
+					}
+					add_resource = {
+						type = tungsten
+						amount = 46
+					}
+					add_resource = {
+						type = steel
+						amount = 10
+					}
+				}
+				else_if = {
+					limit = { 
+						ROOT = {
+							has_tech = excavation4 
+						}
+					}
+					add_resource = {
+						type = tungsten
+						amount = 40
+					}
+					add_resource = {
+						type = steel
+						amount = 7
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_tech = excavation3 
+						}
+					}
+					add_resource = {
+						type = tungsten
+						amount = 34
+					}
+					add_resource = {
+						type = steel
+						amount = 2
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_tech = excavation2 
+						}
+					}
+					add_resource = {
+						type = tungsten
+						amount = 30
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_tech = excavation1 
+						}
+					}
+					add_resource = {
+						type = tungsten
+						amount = 24
+					}
+				}
+				else = {
+					add_resource = {
+						type = tungsten
+						amount = 18
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_exploit_the_intellects
+		icon = GFX_focus_generic_socialist_science
+		x = -1
+		y = 1
+		relative_position_id = CHL_take_out_the_final_fascist_threat
+		prerequisite = { focus = CHL_take_out_the_final_fascist_threat }
+		prerequisite = { focus = CHL_improve_the_infrastructure }
+		
+		cost = 10
+		
+		available = {
+			is_subject = no
+			has_government = communism
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = CHL_fascist_path
+		mutually_exclusive = { focus = CHL_communist_path }
+		mutually_exclusive = { focus = CHL_democracy_path }
+		icon = GFX_CHL_might
+		x = 26
+		y = 0
+	
+		ai_will_do = {
+			factor = 250
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = fascist_influence
+		}
+		cost = 10	
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}
+
+	focus = {
+		id = CHL_gain_the_edge
+		prerequisite = { focus = CHL_fascist_path }
+		icon = GFX_focus_chi_army_reform
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}			
+		
+		completion_reward = {
+			custom_effect_tooltip = CHL_gain_militias
+		}
+		relative_position_id = CHL_fascist_path
+		cost = 8
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}	
+
+	focus = {
+		id = CHL_fight_for_it
+		prerequisite = { focus = CHL_fascist_path }
+		icon = GFX_focus_r56_goal_generic_uprising
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_civil_war = no 
+		}		
+		
+		cancel_if_invalid = yes 
+		
+		completion_reward = {
+			custom_effect_tooltip = CHL_civilwar
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = democratic
+				size = 0.45
+				capital = 506
+				states = {
+					506 507 828 829 830 831 
+				}
+			}
+			hidden_effect = {
+				country_event = { id = chile.19 days = 8 }
+				add_days_mission_timeout = {
+					mission = CHL_people_demanding_social_class_balancing
+					days = 175
+				}
+				division_template = { 
+					name = "Fascistas" 
+					division_names_group = SPAN_INF_02 
+					is_locked = no
+					regiments = { 
+						infantry = { x = 0 y = 0 }  
+						infantry = { x = 0 y = 1 } 
+						infantry = { x = 0 y = 2 } 
+						infantry = { x = 0 y = 3 } 
+						infantry = { x = 0 y = 4 }
+					}
+				}
+				
+				279 = {
+					create_unit = {
+						division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					if = {
+						limit = {
+							ROOT = {
+								has_completed_focus = CHL_gain_the_edge
+							}
+						}
+						create_unit = {
+							division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+							owner = ROOT
+						}
+					}
+				}
+				833 = {
+					create_unit = {
+						division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+				}
+				832 = {
+					create_unit = {
+						division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Fascistas\" division_template = \"Fascistas\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+				}
+				
+				random_other_country = {
+					limit = {
+						has_civil_war = yes
+						original_tag = CHL
+						has_government = democratic
+					}
+					
+					division_template = { 
+						name = "Loyalists" 
+						division_names_group = SPAN_INF_02 
+						is_locked = no
+						regiments = { 
+							infantry = { x = 0 y = 0 }  
+							infantry = { x = 0 y = 1 } 
+							infantry = { x = 0 y = 2 } 
+							infantry = { x = 0 y = 3 } 
+							infantry = { x = 0 y = 4 }
+						}
+					}
+					833 = {
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}	
+					506 = {
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+					830 = {
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+					831 = {
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+					507 = {
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+				}
+			}
+		}
+				
+		relative_position_id = CHL_fascist_path
+		cost = 12		
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}
+	
+	focus = {
+		id = CHL_world_oyster
+		# The World is our Oyster
+		prerequisite = { focus = CHL_fight_for_it }
+		icon = GFX_focus_r56_goal_GER_european_reich
+		x = 0
+		y = 1
+		
+		available = {
+			has_government = fascism
+			has_civil_war = no 
+		}	
+		completion_reward = {
+			add_ideas = CHL_world_oyster_idea
+		}
+		relative_position_id = CHL_fight_for_it
+		cost = 10	
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}
+	
+	focus = {
+		id = CHL_prepare_the_people_for_war
+		prerequisite = { focus = CHL_fight_for_it }
+		icon = GFX_focus_generic_manpower
+		x = 2
+		y = 1
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		completion_reward = {
+			add_war_support = 0.1
+			add_ideas = CHL_prepare_the_people_for_war_idea
+		}
+		relative_position_id = CHL_fight_for_it
+		cost = 10	
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}	
+	
+	focus = {
+		id = CHL_secure_the_peruvian_alliance
+		icon = GFX_ARG_invite_peru
+		x = 0
+		y = 1
+		relative_position_id = CHL_world_oyster
+		prerequisite = { focus = CHL_world_oyster }
+		
+		cost = 10
+		
+		available = {
+			NOT = {
+				has_war_with = PRU 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_world_oyster
+			is_in_faction_with = PRU
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "Union de Fascistas Latinoamericanos"
+			PRU = {
+				country_event = { id = generic.5 hours = 6 }
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_decimate_the_bolivians
+		icon = GFX_focus_BOL_attack
+		x = 0
+		y = 1
+		relative_position_id = CHL_secure_the_peruvian_alliance
+		prerequisite = { focus = CHL_secure_the_peruvian_alliance }
+		will_lead_to_war_with = BOL
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = {
+				is_in_faction_with = BOL 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_secure_the_peruvian_alliance
+			has_war_with = BOL 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = BOL 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_build_up_the_military
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		relative_position_id = CHL_decimate_the_bolivians
+		prerequisite = { focus = CHL_decimate_the_bolivians }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = { 
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_maintain_the_fire
+		icon = GFX_CHL_nationalism
+		x = 1
+		y = 1
+		relative_position_id = CHL_decimate_the_bolivians
+		prerequisite = { focus = CHL_decimate_the_bolivians }
+		
+		cost = 15
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_war_support = 0.15
+			add_stability = 0.05
+			add_research_slot = 1
+			custom_effect_tooltip = CHL_if_completed_prepare
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CHL_prepare_the_people_for_war_idea
+					add_idea = CHL_prepare_the_people_for_war_idea_2
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_idea = CHL_prepare_the_people_for_war_idea }
+					swap_ideas = {
+						remove_idea = CHL_prepare_the_people_for_war_idea
+						add_idea = CHL_prepare_the_people_for_war_idea_2
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_fuego_demand
+		icon = GFX_focus_FUEGO_attack
+		x = 0
+		y = 2
+		relative_position_id = CHL_decimate_the_bolivians
+		prerequisite = { focus = CHL_maintain_the_fire }
+		prerequisite = { focus = CHL_build_up_the_military }
+		
+		mutually_exclusive = { focus = CHL_alliance_with_the_argentines }
+		mutually_exclusive = { focus = CHL_spread_the_revolution_to_argentina }
+		will_lead_to_war_with = ARG
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_army_manpower = { size > 119999 }
+			ARG = {
+				is_subject = no
+				controls_state = 808
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_maintain_the_fire
+			has_completed_focus = CHL_build_up_the_military
+			OR = {
+				is_in_faction_with = ARG
+				has_war_with = ARG 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			ARG = {
+				country_event = { id = chile.410 hours = 6 }
+			}
+			custom_effect_tooltip = ARG_iftheyaccept
+			effect_tooltip = {
+				transfer_state = 808
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_alliance_with_the_argentines
+		icon = GFX_focus_ARG_inv 
+		x = -1
+		y = 1
+		relative_position_id = CHL_build_up_the_military
+		prerequisite = {
+			focus = CHL_take_out_bolivia
+			focus = CHL_build_up_the_military
+		}
+		
+		mutually_exclusive = { focus = CHL_spread_the_revolution_to_argentina }
+		mutually_exclusive = { focus = CHL_fuego_demand }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = ARG 
+			}
+			ARG = {
+				OR = {
+					has_government = communism
+					has_government = fascism 
+				}
+			}
+		}
+		
+		bypass = {
+			OR = {
+				has_completed_focus = CHL_take_out_bolivia
+				has_completed_focus = CHL_build_up_the_military
+			}
+			is_in_faction_with = ARG 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			ARG = {
+				add_opinion_modifier = { modifier = URG_secured_alliance target = CHL }
+			}
+			add_opinion_modifier = { modifier = URG_secured_alliance target = ARG }
+			if = {
+				limit = {
+					is_in_faction = yes 
+					is_faction_leader = yes 
+					ARG = {
+						is_in_faction = no 
+					}
+				}
+				ARG = {
+					country_event = { id = generic.5 hours = 6 }
+				}
+			}
+			else_if = {
+				limit = {
+					ARG = {
+						is_in_faction = yes 
+						is_faction_leader = yes 
+					}
+				}
+				ARG = {
+					country_event = { id = generic.2 hours = 6 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_joint_military_build_up
+		icon = GFX_goal_generic_construct_mil_factory 
+		x = 0
+		y = 1
+		relative_position_id = CHL_alliance_with_the_argentines
+		prerequisite = { focus = CHL_alliance_with_the_argentines }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			is_in_faction = yes 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+			if = {
+				limit = {
+					ARG = { is_in_faction_with = CHL }
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes 
+					}
+				}
+			}
+			if = {
+				limit = {
+					PRU = { is_in_faction_with = CHL }
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_ARG_ultimatum
+		icon = GFX_focus_ARG_attack
+		x = 0
+		y = 1
+		relative_position_id = CHL_fuego_demand
+		prerequisite = { focus = CHL_fuego_demand }
+		will_lead_to_war_with = ARG
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_army_manpower = { size > 199999 }
+			ARG = {
+				is_subject = no
+				controls_state = 809
+				controls_state = 810
+				controls_state = 512
+				controls_state = 811
+				controls_state = 819
+				controls_state = 820
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_maintain_the_fire
+			has_completed_focus = CHL_build_up_the_military
+			OR = {
+				is_in_faction_with = ARG
+				has_war_with = ARG 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			ARG = {
+				country_event = { id = chile.510 hours = 6 }
+			}
+			custom_effect_tooltip = ARG_iftheyaccept
+			effect_tooltip = {
+				random_list = {
+					50 = {
+						transfer_state = 809
+						transfer_state = 810	
+						transfer_state = 512	
+						transfer_state = 811	
+						transfer_state = 819
+						transfer_state = 820
+					}
+					50 = {
+						puppet = ARG
+					}
+				}
+					
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_purge_the_communist_scums
+		icon = GFX_ARG_go_through_paraguay
+		x = 0
+		y = 1
+		relative_position_id = CHL_ARG_ultimatum
+		prerequisite = { 
+			focus = CHL_ARG_ultimatum 
+			focus = CHL_joint_military_build_up
+		}
+		will_lead_to_war_with = PAR
+		
+		cost = 10
+		
+		available = {
+			NOT = {
+				has_completed_focus = CHL_take_out_bolivia
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_ARG_ultimatum
+			OR = {
+				has_war_with = PAR 
+				is_in_faction_with = PAR 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PAR 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_tackle_the_giant
+		icon = GFX_ARG_attack_brazil
+		x = 0
+		y = 1
+		relative_position_id = CHL_purge_the_communist_scums
+		prerequisite = { focus = CHL_purge_the_communist_scums }
+		will_lead_to_war_with = BRA
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_army_manpower = { size > 249999 }
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_ARG_ultimatum
+			OR = {
+				has_war_with = BRA 
+				is_in_faction_with = BRA 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = extensive_conscription }
+				}
+				add_ideas = extensive_conscription
+			}
+			else = {
+				add_political_power = 150
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BRA 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_strenghthen_our_ties_with_peru
+		icon = GFX_ARG_invite_peru
+		x = 1
+		y = 1
+		relative_position_id = CHL_tackle_the_giant
+		prerequisite = { focus = CHL_tackle_the_giant }
+		mutually_exclusive = { focus = CHL_stab_peru_in_the_back }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			PRU = {
+				is_in_faction_with = ROOT 
+			}
+			ROOT = {
+				has_war_with = BRA 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.05
+			PRU = {
+				add_stability = 0.05
+				add_opinion_modifier = { target = ROOT modifier = CHL_strengthened_ties }
+				add_opinion_modifier = { target = ROOT modifier = CHL_strengthened_ties_economy }
+			}
+			ROOT = {
+				add_opinion_modifier = { target = PRU modifier = CHL_strengthened_ties }
+				add_opinion_modifier = { target = PRU modifier = CHL_strengthened_ties_economy }
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_stab_peru_in_the_back
+		icon = GFX_focus_PRU_attack
+		x = -1
+		y = 1
+		relative_position_id = CHL_tackle_the_giant
+		prerequisite = { focus = CHL_tackle_the_giant }
+		mutually_exclusive = { focus = CHL_strenghthen_our_ties_with_peru }
+		will_lead_to_war_with = PRU
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			OR = {
+				PRU = {
+					is_in_faction_with = ROOT
+				}
+				has_army_manpower = { size > 269999 }
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_tackle_the_giant
+			PRU = {
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+				has_war_with = ROOT 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = { is_in_faction_with = PRU }
+				remove_from_faction = PRU 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PRU 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_push_past_peru
+		icon = GFX_ARG_push_past
+		x = 0
+		y = 1
+		relative_position_id = CHL_stab_peru_in_the_back
+		prerequisite = { focus = CHL_stab_peru_in_the_back }
+		will_lead_to_war_with = ECU
+		
+		cost = 10
+		
+		available = {
+			NOT = {
+				is_in_faction_with = ECU 
+				is_in_faction_with = COL 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_stab_peru_in_the_back
+			has_war_with = ECU
+			has_war_with = COL 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = ECU }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ECU 
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_war_with = COL }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = COL 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_secure_the_oil_fields
+		icon = GFX_ARG_attack_venezuela
+		x = 0
+		y = 1
+		relative_position_id = CHL_push_past_peru
+		prerequisite = { focus = CHL_push_past_peru }
+		will_lead_to_war_with = VEN
+		
+		cost = 10
+		
+		available = {
+			NOT = {
+				is_in_faction_with = VEN 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_push_past_peru
+			has_war_with = VEN 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = VEN 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_join_the_axis
+		icon = GFX_focus_chi_mission_to_germany 
+		x = -1
+		y = 1
+		relative_position_id = CHL_secure_the_oil_fields
+		prerequisite = { focus = CHL_secure_the_oil_fields }
+		
+		cost = 10
+		
+		available = {
+			NOT = {
+				has_war_with = GER
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_push_past_peru
+			is_in_faction_with = GER 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = { has_idea = monroe_doctrine_idea }
+				remove_ideas = monroe_doctrine_idea
+			}
+			dismantle_faction = yes
+			GER = {
+				country_event = { id = generic.2 hours = 6 }
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_invite_the_venezuelans
+		icon = GFX_ARG_invite_venezuela
+		x = 0
+		y = 1
+		relative_position_id = CHL_strenghthen_our_ties_with_peru
+		prerequisite = { focus = CHL_strenghthen_our_ties_with_peru }
+		
+		cost = 10
+		
+		available = {
+			NOT = {
+				has_war_with = VEN 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_strenghthen_our_ties_with_peru
+			is_in_faction_with = VEN
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			VEN = {
+				country_event = { id = generic.5 hours = 6 }
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_establish_an_economic_alliance_with_peru
+		icon = GFX_focus_generic_tank_production 
+		x = 2
+		y = 1
+		relative_position_id = CHL_strenghthen_our_ties_with_peru
+		prerequisite = { 
+			focus = CHL_strenghthen_our_ties_with_peru 
+			focus = CHL_strenghten_our_pacts		
+		}
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			is_in_faction_with = PRU 
+			is_subject = no
+			PRU = {
+				is_subject = no
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			PRU = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_attack_from_both_sides
+		icon = GFX_ARG_push_past
+		x = 0
+		y = 1
+		relative_position_id = CHL_invite_the_venezuelans
+		prerequisite = { focus = CHL_invite_the_venezuelans }
+		will_lead_to_war_with = ECU 
+		will_lead_to_war_with = COL
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			is_in_faction_with = VEN
+			is_in_faction_with = PRU
+			NOT = {
+				is_in_faction_with = ECU 
+				is_in_faction_with = COL 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_invite_the_venezuelans
+			has_war_with = ECU
+			has_war_with = COL 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = ECU }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ECU 
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_war_with = COL }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = COL 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_prepare_for_one_final_invasion
+		icon = GFX_goal_generic_amphibious_assault 
+		x = -1
+		y = 1
+		relative_position_id = CHL_attack_from_both_sides
+		prerequisite = { 
+			focus = CHL_attack_from_both_sides 
+			focus = CHL_secure_the_oil_fields
+		}
+		
+		cost = 10
+		
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			navy_experience = 30
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_get_revenge_on_our_colonizers
+		icon = GFX_focus_focus_fra_intervention_spain 
+		x = 0
+		y = 1
+		relative_position_id = CHL_prepare_for_one_final_invasion
+		prerequisite = { focus = CHL_prepare_for_one_final_invasion }
+		will_lead_to_war_with = SPR 
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+		
+		available = {
+			has_navy_size = { size > 29 }
+			NOT = {
+				OR = {
+					is_in_faction_with = SPR
+					is_in_faction_with = SPA
+					is_in_faction_with = SPB
+					is_in_faction_with = SPC
+					is_in_faction_with = SPD
+				}
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_prepare_for_one_final_invasion
+			OR = {
+				has_war_with = SPA
+				has_war_with = SPB
+				has_war_with = SPC
+				has_war_with = SPD
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = { 	
+				limit = {
+					SPR = { controls_state = 41 }
+				}
+				create_wargoal = {
+					type = annex_everything 
+					target = SPR 
+				}
+			}
+			else_if = {
+				limit = {
+					SPA = { controls_state = 41 }
+				}
+				create_wargoal = {
+					type = annex_everything 
+					target = SPA 
+				}
+			}
+			else_if = {
+				limit = {
+					SPB = { controls_state = 41 }
+				}
+				create_wargoal = {
+					type = annex_everything 
+					target = SPB 
+				}
+			}
+			else_if = {
+				limit = {
+					SPC = { controls_state = 41 }
+				}
+				create_wargoal = {
+					type = annex_everything 
+					target = SPC 
+				}
+			}
+			else = {
+				create_wargoal = {
+					type = annex_everything 
+					target = SPD 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_democracy_path
+		mutually_exclusive = { focus = CHL_fascist_path }
+		mutually_exclusive = { focus = CHL_communist_path }
+		icon = GFX_CHL_by_right
+		ai_will_do = {
+			factor = 250
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 300
+			}
+		}	
+		completion_reward = {
+			add_political_power = 75
+			add_ideas = democratic_influence
+		}
+		x = 32
+		y = 0
+		cost = 10	
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}	
+	
+	focus = {
+		id = CHL_invest_in_the_universities
+		icon = GFX_focus_research 
+		x = 0
+		y = 1
+		relative_position_id = CHL_democracy_path
+		prerequisite = { focus = CHL_democracy_path }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = CHL_status_quo
+		mutually_exclusive = { focus = CHL_liberalism }
+		prerequisite = { focus = CHL_democracy_path }
+		icon = GFX_goal_generic_consumer_goods
+	
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}	
+		
+		completion_reward = {
+			add_ideas = CHL_laissez_faire
+		}
+		x = -2
+		y = 2
+		relative_position_id = CHL_democracy_path
+		cost = 10			
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}	
+
+	focus = {
+		id = CHL_liberalism
+		mutually_exclusive = { focus = CHL_status_quo }
+		prerequisite = { focus = CHL_democracy_path }
+		icon = GFX_focus_bebelin
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 100
+		}		
+		completion_reward = {
+			add_ideas = CHL_diff_approach
+			add_political_power = 125
+		}
+		relative_position_id = CHL_democracy_path
+		cost = 10		
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}
+	
+	focus = {
+		id = CHL_central_bank
+		prerequisite = { focus = CHL_liberalism }
+		icon = GFX_focus_centralbank
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = CHL_central_bank_idea
+			add_political_power = 125
+		}		
+		relative_position_id = CHL_liberalism
+		cost = 10		
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+	}	
+	
+	focus = {
+		id = CHL_revenue_tax
+		prerequisite = { focus = CHL_liberalism }
+		icon = GFX_focus_revenuetax
+		x = -1
+		y = 1
+		completion_reward = {
+			add_stability = -0.05
+			
+			add_ideas = CHL_tax_revenue
+		}
+		relative_position_id = CHL_liberalism
+		cost = 10			
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_STABILITY}		
+	}	
+	
+	focus = {
+		id = CHL_freer_people
+		prerequisite = { focus = CHL_status_quo }
+		icon = GFX_focus_r56_goal_generic_supremacy_of_will
+		x = 1
+		y = 1
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = -0.05
+		}
+		relative_position_id = CHL_status_quo
+		cost = 5		
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		search_filters = {FOCUS_FILTER_STABILITY}		
+	}	
+	
+	focus = {
+		id = CHL_freer_market
+		prerequisite = { focus = CHL_status_quo }
+		icon = GFX_focus_r56_goal_generic_stock_exchange
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = free_trade
+			add_political_power = 125
+		}
+		relative_position_id = CHL_status_quo
+		cost = 5			
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}	
+	
+	focus = {
+		id = CHL_bastion_democracy
+		prerequisite = { focus = CHL_revenue_tax focus = CHL_central_bank focus = CHL_freer_market focus = CHL_freer_people }
+		mutually_exclusive = { focus = CHL_communist_counterweight }	
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = CHL_revenue_tax
+					has_completed_focus = CHL_central_bank
+				}
+				AND = {
+					has_completed_focus = CHL_freer_market
+					has_completed_focus = CHL_freer_people
+				}
+			}
+		}
+			
+		completion_reward = {
+			add_ideas = CHL_democratic_bastion
+			if = {
+				limit = {
+					has_idea = CHL_diff_approach
+				}
+				remove_ideas = CHL_diff_approach
+			}
+		}
+		relative_position_id = CHL_central_bank
+		cost = 15		
+		search_filters = {FOCUS_FILTER_POLITICAL}	
+		search_filters = {FOCUS_FILTER_STABILITY}		
+	}	
+
+	focus = {
+		id = CHL_join_allies
+		prerequisite = { focus = CHL_bastion_democracy }	
+		mutually_exclusive = { focus = CHL_our_path }
+		icon = GFX_focus_eng_the_sun_never_sets
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				is_historical_focus_on = yes 
+				factor = 0
+			}
+		}
+		available = {
+			is_in_faction = no
+			is_subject = no
+			has_civil_war = no
+			OR = {
+				ENG = {
+					NOT = {
+						has_war_with = ROOT
+						has_government = communism
+					}
+					is_faction_leader = yes
+				}
+				FRA = {
+					NOT = {
+						has_war_with = ROOT
+					}
+					has_government = democratic
+					is_faction_leader = yes
+				}
+				USA = {
+					NOT = {
+						has_war_with = ROOT
+					}
+					has_government = democratic
+					is_faction_leader = yes
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				is_in_faction_with = ENG
+				is_in_faction_with = FRA
+				is_in_faction_with = USA
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = monroe_doctrine_idea }
+				remove_ideas = monroe_doctrine_idea
+			}
+			if = {
+				limit = {
+					ENG = {
+						NOT = {
+							has_war_with = ROOT
+							has_government = communism
+						}
+						is_faction_leader = yes
+					}
+				}
+				ENG = {
+					country_event = generic.2
+				}
+			}
+			else_if = {
+				limit = {
+					FRA = {
+						NOT = {
+							has_war_with = ROOT
+							has_government = communism
+						}
+						is_faction_leader = yes
+					}
+				}
+				FRA = {
+					country_event = generic.2
+				}
+			}
+			else_if = {
+				limit = {
+					USA = {
+						NOT = {
+							has_war_with = ROOT
+							has_government = communism
+						}
+						is_faction_leader = yes
+					}
+				}
+				USA = {
+					country_event = generic.2
+				}
+			}
+		}		
+		relative_position_id = CHL_bastion_democracy
+		cost = 10		
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}	
+	
+	focus = {
+		id = CHL_learn_british_naval_tactics
+		icon = GFX_goal_generic_navy_battleship
+		x = 1
+		y = 1
+		relative_position_id = CHL_join_allies
+		prerequisite = { focus = CHL_join_allies }
+		
+		cost = 10
+		
+		available = {
+			is_in_faction_with = ENG 
+			ENG = {
+				is_subject = no 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_learn_british_naval_tactics
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHL_prepare_for_an_amphibious_invasion
+		icon = GFX_goal_generic_amphibious_assault
+		x = 0
+		y = 1
+		relative_position_id = CHL_learn_british_naval_tactics
+		prerequisite = { focus = CHL_learn_british_naval_tactics }
+		prerequisite = { focus = CHL_build_up_the_armories }
+
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_prepare_for_an_amphibious_invasion
+				bonus = 1.0
+				uses = 1
+				technology = marines
+				technology = marines2
+			}
+			add_tech_bonus = {
+				name = CHL_prepare_for_an_amphibious_invasion
+				bonus = 1.0
+				uses = 1
+				category = tp_tech 
+			}
+		}
+	}
+
+	focus = {
+		id = CHL_take_out_the_japanese
+		icon = GFX_focus_attack_japan
+		x = 0
+		y = 1
+		relative_position_id = CHL_prepare_for_an_amphibious_invasion
+		prerequisite = { focus = CHL_prepare_for_an_amphibious_invasion }
+
+		cost = 10
+
+		available = {
+			NOT = {
+				is_in_faction_with = JAP 
+			}
+		}
+
+		bypass = {
+			has_completed_focus = CHL_prepare_for_an_amphibious_invasion
+			has_war_with = JAP 
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JAP 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_our_path
+		prerequisite = { 
+			focus = CHL_bastion_democracy 
+			focus = CHL_communist_counterweight
+		}
+		mutually_exclusive = { focus = CHL_join_allies }		
+		icon = GFX_focus_generic_little_entente
+		x = -1
+		y = 1
+		
+		available = {
+			has_civil_war = no
+			has_government = democratic
+		}
+	
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "The Southern Alliance"
+		}
+		relative_position_id = CHL_bastion_democracy
+		cost = 10		
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}	
+	
+	focus = {
+		id = CHL_invite_argentina
+		prerequisite = { focus = CHL_our_path }	
+		icon = GFX_focus_ARG_inv
+		x = -3
+		y = 2
+		available = {
+			NOT = {
+				has_war_with = ARG 
+			}
+			ARG = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality 
+				}
+			}
+		}
+		completion_reward = {
+		  hidden_effect = {
+			ARG = {
+				if = {
+					limit = {
+						ROOT = { is_in_faction = yes }
+					}
+					country_event = chile.2
+				}
+				else = {
+					
+				}
+			}
+		  }	
+			custom_effect_tooltip = CHL_arg_invite_descr
+		}
+		relative_position_id = CHL_our_path
+		cost = 10	
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}
+	
+	focus = {
+		id = CHL_invite_south_america
+		prerequisite = { focus = CHL_our_path }	
+		icon = GFX_focus_SA_demo
+		x = -1
+		y = 2
+		completion_reward = {
+		    every_country = {
+				limit = {
+					has_government = democratic
+					is_in_faction = no 
+					NOT = {
+						has_war_with = ROOT 
+					}
+					OR = {
+						tag = ARG
+						tag = BRA
+						tag = COL
+						tag = BOL
+						tag = URG
+						tag = PRU 
+						tag = ECU 
+						tag = PAR 
+						tag = VEN
+					}
+				}
+				country_event = { id = generic.5 hours = 6 }
+			}
+		}		
+		relative_position_id = CHL_our_path
+		cost = 10			
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	
+	focus = {
+		id = CHL_invite_central_america
+		prerequisite = { focus = CHL_invite_south_america }	
+		icon = GFX_focus_CA_demo
+		x = 0
+		y = 1
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = democratic
+					is_in_faction = no 
+					NOT = {
+						has_war_with = ROOT 
+					}
+					OR = {
+						tag = CUB
+						tag = HAI
+						tag = DOM
+						tag = HON
+						tag = ELS
+						tag = PAN 
+						tag = GUA 
+						tag = NIC 
+						tag = COS
+					}
+				}
+				country_event = { id = generic.5 hours = 6 }
+			}
+		}
+		relative_position_id = CHL_invite_south_america
+		cost = 10		
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}
+
+	focus = {
+		id = CHL_build_up_the_armories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 1
+		relative_position_id = CHL_join_allies
+		prerequisite = {
+			focus = CHL_join_allies
+			focus = CHL_our_path
+		}
+
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_remove_fascism_from_the_continent
+		icon = GFX_ARG_rid_fascism
+		x = -1
+		y = 2
+		relative_position_id = CHL_join_allies
+		prerequisite = { focus = CHL_build_up_the_armories }
+
+		cost = 10
+		
+		available = {
+			NOT = {
+				has_completed_focus = CHL_communist_counterweight
+			}
+			has_civil_war = no
+			is_subject = no
+			has_government = democratic
+		}
+		
+		bypass = {
+			OR = {
+				has_completed_focus = CHL_join_allies
+				has_completed_focus = CHL_our_path
+			}
+			OR = {
+				has_war_with = PRU
+				has_war_with = VEN
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			custom_effect_tooltip = ARG_removefascismfromcontinent
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						capital_scope = { is_on_continent = south_america }
+						has_government = fascism
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT 
+								has_war_with = ROOT
+							}
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_remove_communism_from_the_continent
+		icon = GFX_ARG_rid_communism
+		x = 0
+		y = 1
+		relative_position_id = CHL_remove_fascism_from_the_continent
+		prerequisite = { focus = CHL_remove_fascism_from_the_continent }
+		
+		cost = 10
+		
+		available = {
+			is_subject = no
+			has_government = democratic
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_remove_fascism_from_the_continent
+			OR = {
+				has_war_with = PAR
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			custom_effect_tooltip = ARG_removecommunismfromcontinent
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						capital_scope = { is_on_continent = south_america }
+						has_government = communism
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT 
+								has_war_with = ROOT
+							}
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+ 	
+	focus = {
+		id = CHL_communist_counterweight
+		prerequisite = { focus = CHL_freer_people }
+		prerequisite = { focus = CHL_freer_market }
+		mutually_exclusive = { focus = CHL_bastion_democracy }		
+		icon = GFX_goal_anti_comintern_pact
+		x = 1
+		y = 1
+		
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		
+		completion_reward = {
+			#remove_ideas = CHL_laissez_faire
+			add_ideas = CHL_capitalist_counterweight
+			
+			CHL = {
+				add_opinion_modifier = { target = SOV modifier = communist_menace }
+				add_opinion_modifier = { target = MON modifier = communist_menace }
+				add_opinion_modifier = { target = SIK modifier = communist_menace }
+				add_opinion_modifier = { target = PRC modifier = communist_menace }
+				add_opinion_modifier = { target = TAN modifier = communist_menace }
+				add_opinion_modifier = { target = PAR modifier = communist_menace }
+			}	
+			if = {
+				limit = {
+					has_idea = CHL_laissez_faire
+				}
+				remove_ideas = CHL_laissez_faire
+			}
+			set_rule = { can_send_volunteers = yes }
+		}
+		relative_position_id = CHL_freer_market
+		cost = 15			
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_STABILITY}
+	}
+
+	focus = {
+		id = CHL_arm_the_population
+		icon = GFX_goal_generic_allies_build_infantry 
+		x = 0
+		y = 2
+		relative_position_id = CHL_revenue_tax
+		prerequisite = {
+			focus = CHL_bastion_democracy
+			focus = CHL_communist_counterweight
+		}
+		
+		cost = 8
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = CHL_prepare_the_people_for_war_idea
+		}
+	}
+
+	focus = {
+		id = CHL_offer_a_compromise_to_the_communists
+		icon = GFX_PRU_left_and_right_united
+		x = 0
+		y = 1
+		relative_position_id = CHL_arm_the_population
+		prerequisite = { focus = CHL_arm_the_population }
+
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			add_days_mission_timeout = {
+				mission = CHL_people_demanding_social_class_balancing
+				days = 200
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_NAP
+		prerequisite = { focus = CHL_communist_counterweight }	
+		icon = GFX_focus_generic_treaty
+		x = -1
+		y = 1
+		
+		available = {
+			NOT = {
+				has_war_with = BOL
+				has_war_with = ARG 
+				has_war_with = PRU 
+			}
+		}
+		
+		completion_reward = {
+			ARG = {
+				country_event = {
+					id = chile.1
+					hours = 4
+					random_hours = 2
+				}
+			}
+			BOL = {
+				country_event = {
+					id = chile.1
+					hours = 4
+					random_hours = 2
+				}
+			}
+			PRU = {
+				country_event = {
+					id = chile.1
+					hours = 4
+					random_hours = 2
+				}
+			}			
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				ARG = {
+					add_opinion_modifier = {
+						target = FROM
+						modifier = NAP
+					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = non_aggression_pact
+					}
+				}
+				BOL = {
+					add_opinion_modifier = {
+						target = FROM
+						modifier = NAP
+					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = non_aggression_pact 
+					}
+				}
+				PRU = {
+					add_opinion_modifier = {
+						target = FROM
+						modifier = NAP
+					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = non_aggression_pact
+					}
+				}				
+			}		
+		}
+		relative_position_id = CHL_communist_counterweight
+		cost = 10			
+		search_filters = {FOCUS_FILTER_POLITICAL}
+	}
+	
+	focus = {
+		id = CHL_economic_alliance_with_new_friends
+		icon = GFX_goal_generic_construct_civ_factory 
+		x = -1
+		y = 1
+		relative_position_id = CHL_NAP
+		prerequisite = { 
+			focus = CHL_NAP 
+		}
+		
+		cost = 10
+		
+		available = {
+			is_subject = no
+			has_war = no
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = CHL_nap_civies
+			hidden_effect = {
+				if = {
+					limit = {
+						has_non_aggression_pact_with = ARG 
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_non_aggression_pact_with = BOL 
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_non_aggression_pact_with = PRU 
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_global_market
+		prerequisite = { focus = CHL_communist_counterweight }	
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = CHL_open_markets
+		}
+		relative_position_id = CHL_communist_counterweight
+		cost = 10			
+		search_filters = {FOCUS_FILTER_POLITICAL}		
+	}	
+	
+	focus = {
+		id = CHL_strenghten_our_pacts
+		icon = GFX_goal_generic_intelligence_exchange 
+		x = -1
+		y = 1
+		relative_position_id = CHL_global_market
+		prerequisite = { focus = CHL_global_market }
+		prerequisite = { focus = CHL_NAP }
+		prerequisite = { focus = CHL_our_path }
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				has_non_aggression_pact_with = PRU 
+				has_non_aggression_pact_with = BOL 
+				has_non_aggression_pact_with = ARG 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = CHL_invite_nonagression
+			if = {
+				limit = { 
+					PRU = {
+						NOT = { is_in_faction_with = ROOT }
+						has_non_aggression_pact_with = ROOT
+					}
+				}
+				PRU = {
+					add_timed_idea = { idea = democratic_influence days = 3 }
+					country_event = { id = generic.5 hours = 6 }
+				}
+			}
+			if = {
+				limit = { 
+					ARG = {
+						NOT = { is_in_faction_with = ROOT }
+						has_non_aggression_pact_with = ROOT
+					}
+				}
+				ARG = {
+					add_timed_idea = { idea = democratic_influence days = 3 }
+					country_event = { id = generic.5 hours = 6 }
+				}
+			}
+			if = {
+				limit = { 
+					BOL = {
+						NOT = { is_in_faction_with = ROOT }
+						has_non_aggression_pact_with = ROOT
+					}
+				}
+				BOL = {
+					add_timed_idea = { idea = democratic_influence days = 3 }
+					country_event = { id = generic.5 hours = 6 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_destroy_the_communist_paraguayans
+		icon = GFX_ARG_go_through_paraguay
+		x = 0
+		y = 1
+		relative_position_id = CHL_strenghten_our_pacts
+		prerequisite = { focus = CHL_strenghten_our_pacts }
+		will_lead_to_war_with = PAR
+		
+		cost = 10
+		
+		available = {
+			BOL = {
+				is_in_faction_with = ROOT 
+			}
+			NOT = {
+				is_in_faction_with = PAR 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_strenghten_our_pacts
+			has_war_with = PAR 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PAR 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_go_after_the_soviets
+		icon = GFX_focus_attack_soviet 
+		x = 0
+		y = 1
+		relative_position_id = CHL_destroy_the_communist_paraguayans
+		prerequisite = { focus = CHL_destroy_the_communist_paraguayans }
+		will_lead_to_war_with = SOV
+		
+		cost = 10
+		
+		available = {
+			NOT = {
+				is_in_faction_with = SOV 
+			}
+		}
+		
+		bypass = {
+			has_completed_focus = CHL_strenghten_our_pacts
+			has_war_with = SOV 
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SOV 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_jointmilitary_training
+		icon = GFX_focus_generic_military_academy 
+		x = 0
+		y = 1
+		relative_position_id = CHL_go_after_the_soviets
+		prerequisite = { focus = CHL_go_after_the_soviets }
+		
+		cost = 10
+		
+		available = {
+			is_in_faction = yes
+			is_faction_leader = yes
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {  }
+		completion_reward = {
+			add_ideas = ARG_joint_germanargentine_military_training
+		}
+	}
+	
+	focus = {
+		id = CHL_economic_pact_with_argentina
+		icon = GFX_focus_generic_the_giant_wakes 
+		x = 0
+		y = 1
+		relative_position_id = CHL_invite_argentina
+		prerequisite = { focus = CHL_invite_argentina }
+		
+		cost = 10
+		
+		available = {
+			has_completed_focus = CHL_bastion_democracy
+			ARG = {
+				is_in_faction_with = ROOT 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			ARG = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_fuerzas_armadas
+		icon = GFX_CHL_fuerzas_armadas
+		x = 55
+		y = 0
+		
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				add = 40
+				has_civil_war = yes 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { }
+		completion_reward = {
+			navy_experience = 15
+			air_experience = 10
+			army_experience = 5
+		}
+	}
+	
+	focus = {
+		id = CHL_armada_chilena
+		icon = GFX_CHL_armada
+		x = -10
+		y = 1
+		relative_position_id = CHL_fuerzas_armadas
+		prerequisite = { focus = CHL_fuerzas_armadas }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_keep_up_with_the_south_american_naval_race
+		icon = GFX_ARG_naval_arms_race
+		x = 0
+		y = 1
+		relative_position_id = CHL_armada_chilena
+		prerequisite = { focus = CHL_armada_chilena }
+		
+		cost = 5
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_keep_up_with_the_south_american_naval_race
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_focus_on_heavy_ships
+		icon = GFX_goal_generic_navy_battleship
+		x = -2
+		y = 1
+		relative_position_id = CHL_keep_up_with_the_south_american_naval_race
+		prerequisite = { focus = CHL_keep_up_with_the_south_american_naval_race }
+		mutually_exclusive = { focus = CHL_focus_on_light_ships }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_focus_on_heavy_ships
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				name = CHL_focus_on_heavy_ships
+				bonus = 1.0
+				uses = 2
+				category = cl_tech	
+				category = ca_tech	
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_focus_on_light_ships
+		icon = GFX_goal_generic_navy_submarine
+		x = 2
+		y = 1
+		relative_position_id = CHL_keep_up_with_the_south_american_naval_race
+		prerequisite = { focus = CHL_keep_up_with_the_south_american_naval_race }
+		mutually_exclusive = { focus = CHL_focus_on_heavy_ships }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_focus_on_light_ships
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = CHL_focus_on_light_ships
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_expand_our_naval_industry
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -2
+		y = 1
+		relative_position_id = CHL_focus_on_light_ships
+		prerequisite = {
+			focus = CHL_focus_on_light_ships
+			focus = CHL_focus_on_heavy_ships
+		}
+		
+		cost = 5
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_create_a_carrier_fleet
+		icon = GFX_goal_generic_navy_carrier
+		x = -2
+		y = 1
+		relative_position_id = CHL_focus_on_heavy_ships
+		prerequisite = { focus = CHL_focus_on_heavy_ships }
+		
+		cost = 5
+		
+		available = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = ARG_build_a_carrier
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_imrpove_our_capital_ships
+		icon = GFX_focus_generic_cruiser2
+		x = 2
+		y = 0
+		relative_position_id = CHL_create_a_carrier_fleet
+		prerequisite = { focus = CHL_focus_on_heavy_ships }
+		
+		cost = 5
+		
+		available = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { }
+		completion_reward = {
+			add_ideas = ARG_improved_heavy_ships
+		}
+	}
+	
+	focus = {
+		id = CHL_build_a_new_battleship
+		icon = GFX_focus_generic_navy_battleship2
+		x = 0
+		y = 1
+		relative_position_id = CHL_imrpove_our_capital_ships
+		prerequisite = { focus = CHL_imrpove_our_capital_ships }
+		
+		cost = 8
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = CHL_create_battleship
+			hidden_effect = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_heavy_1
+							creator = "CHL" 
+							version_name = "Almirante Latorre Class"
+						}
+						name = "BACH Arica" 
+						requested_factories = 1
+						progress = 0.8
+						amount = 1
+					}
+				}
+				else = {
+					add_equipment_production = {
+						equipment = {
+							type = battleship_1
+							creator = "CHL"
+						}
+						requested_factories = 1
+						progress = 0.8
+						amount = 1
+					}
+				}
+			}
+		}
+	}
+		
+	focus = {
+		id = CHL_expand_the_light_cruiser_fleet
+		icon = GFX_goal_generic_navy_cruiser
+		x = 2
+		y = 1
+		relative_position_id = CHL_focus_on_light_ships
+		prerequisite = { focus = CHL_focus_on_light_ships }
+		
+		cost = 5
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_expand_the_light_cruiser_fleet
+				bonus = 1.0
+				uses = 1
+				category = cl_tech 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_produce_more_submarines
+		icon = GFX_goal_generic_navy_submarine
+		x = 0
+		y = 1
+		relative_position_id = CHL_focus_on_light_ships
+		prerequisite = { focus = CHL_focus_on_light_ships }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { }
+		completion_reward = {
+			add_ideas = ARG_increased_submarine_output
+		}
+	}
+	
+	focus = {
+		id = CHL_produce_more_destroyers
+		icon = GFX_focus_generic_destroyer
+		x = 0
+		y = 1
+		relative_position_id = CHL_produce_more_submarines
+		prerequisite = { focus = CHL_produce_more_submarines }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { }
+		completion_reward = {
+			add_ideas = ARG_increased_destroyer_output
+		}
+	}
+	
+	focus = {
+		id = CHL_a_stronger_navy
+		icon = GFX_CHL_strong_navy 
+		x = 0
+		y = 2
+		relative_position_id = CHL_expand_our_naval_industry
+		prerequisite = { focus = CHL_expand_our_naval_industry }
+		prerequisite = {
+			focus = CHL_produce_more_destroyers
+			focus = CHL_build_a_new_battleship
+		}
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHL_purchase_british_ships_focus
+		icon = GFX_british_navy
+		x = -3
+		y = 1
+		relative_position_id = CHL_a_stronger_navy
+		prerequisite = { focus = CHL_a_stronger_navy }
+		prerequisite = { focus = CHL_learn_british_naval_tactics }
+
+		cost = 10
+
+		available = {
+			is_in_faction_with = ENG 
+			ENG = {
+				has_capitulated = no 
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			unlock_decision_category_tooltip = CHL_purchasing_british_ships
+			random_owned_controlled_state = {
+				limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_ejercito_de_chile
+		icon = GFX_CHL_ejericto_chileno
+		x = 0
+		y = 1
+		relative_position_id = CHL_fuerzas_armadas
+		prerequisite = { focus = CHL_fuerzas_armadas }
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				add = 40
+				has_civil_war = yes 
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			army_experience = 20
+			add_ideas = CHL_ejercito_chileno
+			unlock_decision_category_tooltip = south_american_armament
+		}
+	}
+	
+	focus = {
+		id = CHL_expand_our_numbers
+		icon = GFX_ARG_quantity
+		x = -1
+		y = 1
+		relative_position_id = CHL_ejercito_de_chile
+		prerequisite = { focus = CHL_ejercito_de_chile }
+		mutually_exclusive = { focus = CHL_improve_the_quality }
+		
+		cost = 8
+		
+		search_filters = { }
+		completion_reward = {
+			add_manpower = 41500
+			swap_ideas = {
+				remove_idea = CHL_ejercito_chileno
+				add_idea = CHL_ejercito_chileno_3
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_improve_the_quality
+		icon = GFX_focus_generic_military_mission
+		x = 1
+		y = 1
+		relative_position_id = CHL_ejercito_de_chile
+		prerequisite = { focus = CHL_ejercito_de_chile }
+		mutually_exclusive = { focus = CHL_expand_our_numbers }
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				add = 40
+				has_civil_war = yes 
+			}
+		}
+		
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHL_ejercito_chileno
+				add_idea = CHL_ejercito_chileno_2
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_invite_german_advisors
+		icon = GFX_focus_chi_mission_to_germany 
+		x = -1
+		y = 1
+		relative_position_id = CHL_improve_the_quality
+		prerequisite = { 
+			focus = CHL_improve_the_quality
+			focus = CHL_expand_our_numbers
+		}
+		mutually_exclusive = { focus = CHL_invite_american_advisors }
+		mutually_exclusive = { focus = CHL_invite_soviet_advisors }
+		
+		cost = 5
+		
+		available = {
+			GER = {
+				is_subject = no 
+				NOT = {
+					has_war_with = ROOT 
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_invite_german_advisors
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+			random_owned_controlled_state = {	
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_invite_american_advisors
+		icon = GFX_focus_chi_mission_to_the_us
+		x = -3
+		y = 1
+		relative_position_id = CHL_improve_the_quality
+		prerequisite = { 
+			focus = CHL_improve_the_quality
+			focus = CHL_expand_our_numbers
+		}
+		mutually_exclusive = { focus = CHL_invite_german_advisors }
+		mutually_exclusive = { focus = CHL_invite_soviet_advisors }
+		
+		cost = 5
+		
+		available = {
+			USA = {
+				is_subject = no 
+				NOT = {
+					has_war_with = ROOT 
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_invite_american_advisors
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_invite_soviet_advisors
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 1
+		y = 1
+		relative_position_id = CHL_improve_the_quality
+		prerequisite = { 
+			focus = CHL_improve_the_quality
+			focus = CHL_expand_our_numbers
+		}
+		mutually_exclusive = { focus = CHL_invite_german_advisors }
+		mutually_exclusive = { focus = CHL_invite_american_advisors }
+		
+		cost = 5
+		
+		available = {
+			SOV = {
+				is_subject = no 
+				NOT = {
+					has_war_with = ROOT 
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = { has_idea = CHL_ejercito_chileno_2 }
+				swap_ideas = {
+					remove_idea = CHL_ejercito_chileno_2
+					add_idea = CHL_ejercito_chileno_5
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = CHL_ejercito_chileno_3
+					add_idea = CHL_ejercito_chileno_4
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_produce_more_equipment
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 2
+		relative_position_id = CHL_invite_american_advisors
+		prerequisite = { focus = CHL_invite_american_advisors }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = {  }
+		completion_reward = {
+			add_ideas = ARG_cheaper_equipment
+		}
+	}
+	
+	focus = {
+		id = CHL_modernize_our_tanks
+		icon = GFX_focus_generic_army_tanks2
+		x = 0
+		y = 2
+		relative_position_id = CHL_invite_german_advisors
+		prerequisite = { focus = CHL_invite_german_advisors }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_modernize_our_tanks
+				bonus = 1.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_adjust_our_tactics
+		icon = GFX_goal_generic_axis_build_infantry 
+		x = 0
+		y = 2
+		relative_position_id = CHL_invite_soviet_advisors
+		prerequisite = { focus = CHL_invite_soviet_advisors }
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_adjust_our_tactics
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_improve_our_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = -1
+		y = 1
+		relative_position_id = CHL_invite_american_advisors
+		prerequisite = {
+			focus = CHL_invite_american_advisors
+			focus = CHL_invite_german_advisors
+			focus = CHL_invite_soviet_advisors
+		}
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_adjust_our_tactics
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_produce_more_motorized
+		icon = GFX_goal_generic_army_motorized
+		x = 1
+		y = 1
+		relative_position_id = CHL_invite_soviet_advisors
+		prerequisite = {
+			focus = CHL_invite_american_advisors
+			focus = CHL_invite_german_advisors
+			focus = CHL_invite_soviet_advisors
+		}
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = {  }
+		completion_reward = {
+			add_ideas = ARG_produce_motorized
+		}
+	}
+	
+	focus = {
+		id = CHL_a_modern_army
+		icon = GFX_CHL_army
+		x = 0
+		y = 1
+		relative_position_id = CHL_modernize_our_tanks
+		prerequisite = {
+			focus = CHL_modernize_our_tanks
+			focus = CHL_adjust_our_tactics
+			focus = CHL_produce_more_equipment
+		}
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_a_modern_army
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			add_ideas = ARG_quality
+		}
+	}
+	
+	focus = {
+		id = CHL_fuerza_aerea
+		icon = GFX_CHL_fuerza_aerea
+		x = 10
+		y = 1
+		
+		relative_position_id = CHL_fuerzas_armadas
+		prerequisite = { focus = CHL_fuerzas_armadas }
+		
+		cost = 5
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+	
+	focus = {
+		id = CHL_improve_our_numbers
+		icon = GFX_CHL_improve_numbers
+		x = -2
+		y = 1
+		relative_position_id = CHL_fuerza_aerea
+		prerequisite = { focus = CHL_fuerza_aerea }
+		mutually_exclusive = { focus = CHL_improve_our_fighters }
+		
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = CHL_expanding_our_numbers
+		}
+	}
+	
+	focus = {
+		id = CHL_improve_our_fighters
+		icon = GFX_CHL_improve_tech
+		x = 2
+		y = 1
+		relative_position_id = CHL_fuerza_aerea
+		prerequisite = { focus = CHL_fuerza_aerea }
+		mutually_exclusive = { focus = CHL_improve_our_numbers }
+		
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_improve_our_fighters
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+			add_ideas = CHL_modernizing_our_figthers
+		}
+	}
+	
+	focus = {
+		id = CHL_purchase_foreign_planes
+		icon = GFX_goal_generic_intelligence_exchange 
+		x = -2
+		y = 1
+		relative_position_id = CHL_improve_our_fighters
+		prerequisite = {
+			focus = CHL_improve_our_fighters
+			focus = CHL_improve_our_numbers
+		}
+		
+		cost = 10
+		
+		completion_reward = {
+			custom_effect_tooltip = CHL_purchase_planes
+		}
+	}
+	
+	focus = {
+		id = CHL_expand_our_air_bases
+		icon = GFX_goal_generic_air_production 
+		x = 0
+		y = 1
+		relative_position_id = CHL_purchase_foreign_planes
+		prerequisite = { focus = CHL_purchase_foreign_planes }
+		
+		cost = 6
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_expand_our_airfoce_armament
+		icon = GFX_goal_generic_production 
+		x = 0
+		y = 1
+		relative_position_id = CHL_expand_our_air_bases
+		prerequisite = { focus = CHL_expand_our_air_bases }
+		
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			air_experience = 25
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_improving_our_CAS
+		icon = GFX_goal_generic_CAS 
+		x = 2
+		y = 1
+		relative_position_id = CHL_improve_our_fighters
+		prerequisite = { focus = CHL_improve_our_fighters }
+		
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_improving_our_CAS
+				bonus = 1.0
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_modernize_our_bombers
+		icon = GFX_goal_generic_air_bomber 
+		x = 0
+		y = 1
+		relative_position_id = CHL_improve_our_fighters
+		prerequisite = { focus = CHL_improve_our_fighters }
+		
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_modernize_our_bombers
+				bonus = 1.0
+				uses = 1
+				category = cat_strategic_bomber
+			}
+			add_tech_bonus = {
+				name = CHL_modernize_our_bombers
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_focus_on_naval_bombers
+		icon = GFX_goal_generic_navy_carrier 
+		x = 2
+		y = 1
+		relative_position_id = CHL_modernize_our_bombers
+		prerequisite = { focus = CHL_improving_our_CAS }
+		
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_focus_on_naval_bombers
+				bonus = 1.0
+				uses = 1
+				category = naval_air
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_professional_chilean_pilots
+		icon = GFX_goal_generic_air_doctrine 
+		x = 0
+		y = 2
+		relative_position_id = CHL_modernize_our_bombers
+		prerequisite = { focus = CHL_improving_our_CAS }
+		prerequisite = { focus = CHL_modernize_our_bombers }
+		
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_professional_chilean_pilots
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+			add_ideas = CHL_professional_pilots
+		}
+	}
+	
+	focus = {
+		id = CHL_produce_more_bombers
+		icon = GFX_goal_generic_air_bomber 
+		x = 0
+		y = 1
+		relative_position_id = CHL_improve_our_numbers
+		prerequisite = { focus = CHL_improve_our_numbers }
+		
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = CHL_produce_bombers
+		}
+	}
+	
+	focus = {
+		id = CHL_produce_more_CAS
+		icon = GFX_goal_generic_CAS
+		x = -2
+		y = 1
+		relative_position_id = CHL_improve_our_numbers
+		prerequisite = { focus = CHL_improve_our_numbers }
+		
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = CHL_produce_CAS
+		}
+	}
+	
+	focus = {
+		id = CHL_create_a_powerful_naval_air_fleet
+		icon = GFX_goal_generic_navy_carrier 
+		x = 0
+		y = 1
+		relative_position_id = CHL_produce_more_CAS
+		prerequisite = { focus = CHL_produce_more_CAS }
+		
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = CHL_produce_a_naval_air_fleet
+		}
+	}
+	
+	focus = {
+		id = CHL_divert_production_for_heavy_fighters
+		icon = GFX_focus_chi_flying_tigers
+		x = 0
+		y = 2
+		relative_position_id = CHL_produce_more_bombers
+		prerequisite = { focus = CHL_produce_more_bombers }
+		prerequisite = { focus = CHL_produce_more_CAS }
+		
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHL_divert_production_for_heavy_fighters
+				bonus = 1.0
+				uses = 1
+				category = cat_heavy_fighter
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHL_a_modern_air_force
+		icon = GFX_CHL_modern_air
+		x = 0
+		y = 1
+		relative_position_id = CHL_expand_our_airfoce_armament
+		prerequisite = { focus = CHL_expand_our_airfoce_armament }
+		prerequisite = {
+			focus = CHL_professional_chilean_pilots
+			focus = CHL_divert_production_for_heavy_fighters
+		}
+		
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = CHL_a_modern_air_force
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+			add_ideas = CHL_a_modern_air_force
+		}
+	}
+		
+		
+	
+	
+	
+	
+	
+###############################
+###############################
+###############################	
+
+	
+
+
+
+
+
+	
+}

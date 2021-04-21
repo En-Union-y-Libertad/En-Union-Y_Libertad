@@ -1,0 +1,1216 @@
+CHL_balancing_out_the_social_classes = {
+	
+	CHL_people_demanding_social_class_balancing = {
+		priority = 50
+		icon = generic_ignite_civil_war
+		
+		allowed = {
+			original_tag = CHL 
+		}
+		
+		available = {
+			OR = {
+				has_government = communism
+				has_completed_focus = CHL_our_own_fate
+				custom_trigger_tooltip = {
+					tooltip = CHL_balanced_social_classes
+					NOT = {
+						OR = {
+							has_idea = CHL_highly_divided_social_classes_idea
+							has_idea = CHL_highly_divided_social_classes_idea_2
+							has_idea = CHL_highly_divided_social_classes_idea_3 
+							has_idea = CHL_highly_divided_social_classes_idea_4 
+							has_idea = CHL_highly_divided_social_classes_idea_5
+							has_idea = CHL_highly_divided_social_classes_idea_6 
+							has_idea = CHL_highly_divided_social_classes_idea_7 
+							has_idea = CHL_highly_divided_social_classes_idea_8 
+							has_idea = CHL_highly_divided_social_classes_idea_9 
+							has_idea = CHL_highly_divided_social_classes_idea_10 
+							has_idea = CHL_highly_divided_social_classes_idea_11 
+							has_idea = CHL_highly_divided_social_classes_idea_12 
+							has_idea = CHL_highly_divided_social_classes_idea_13 
+							has_idea = CHL_highly_divided_social_classes_idea_14 
+							has_idea = CHL_highly_divided_social_classes_idea_15 
+						}
+					}
+				}
+			}
+		}
+		
+		activation = {
+			has_idea = CHL_highly_divided_social_classes_idea
+		}
+		
+		days_mission_timeout = 1000
+		
+		is_good = no 
+		
+		timeout_effect = {
+			start_civil_war = {
+				ruling_party = ROOT
+				ideology = communism
+				size = 0.65
+				capital = 506
+				states = {
+					506 507 828 829 830 831 
+				}
+			}
+			hidden_effect = {
+				division_template = { 
+					name = "Loyalists" 
+					division_names_group = SPAN_INF_02 
+					is_locked = no
+					regiments = { 
+						infantry = { x = 0 y = 0 }  
+						infantry = { x = 0 y = 1 } 
+						infantry = { x = 0 y = 2 } 
+						infantry = { x = 0 y = 3 } 
+						infantry = { x = 0 y = 4 }
+					}
+				}
+				
+				279 = {
+					create_unit = {
+						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+				}
+				
+				random_other_country = {
+					limit = {
+						has_civil_war = yes
+						original_tag = CHL
+						has_government = communism
+					}
+					load_focus_tree = {
+						tree = chile_focus
+						keep_completed  = no 
+					}
+					complete_national_focus = CHL_communist_path
+					complete_national_focus = CHL_create_the_pan_american_highway
+					complete_national_focus = CHL_strengthen_the_workers
+					complete_national_focus = CHL_legalize_labor_unions
+					division_template = { 
+						name = "Comunistas" 
+						division_names_group = SPAN_INF_02 
+						is_locked = no
+						regiments = { 
+							infantry = { x = 0 y = 0 }  
+							infantry = { x = 0 y = 1 } 
+							infantry = { x = 0 y = 2 } 
+							infantry = { x = 0 y = 3 } 
+							infantry = { x = 0 y = 4 }
+						}
+					}
+					506 = {
+						create_unit = {
+							division = "name = \"Comunistas\" division_template = \"Comunistas\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Comunistas\" division_template = \"Comunistas\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Comunistas\" division_template = \"Comunistas\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Comunistas\" division_template = \"Comunistas\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+					507 = {
+						create_unit = {
+							division = "name = \"Comunistas\" division_template = \"Comunistas\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"Comunistas\" division_template = \"Comunistas\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+					829 = {
+						create_unit = {
+							division = "name = \"Comunistas\" division_template = \"Comunistas\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+					830 = {
+						create_unit = {
+							division = "name = \"Comunistas\" division_template = \"Comunistas\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+					831 = {
+						create_unit = {
+							division = "name = \"Comunistas\" division_template = \"Comunistas\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+				}
+			}
+		}
+	}	
+	
+	CHL_redistribute_the_wealth_of_the_rich = {
+		priority = 10
+		icon = gre_investment_decisions
+		
+		allowed = {
+			original_tag = CHL
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = CHL_class_fix_in_progress
+			}
+		}
+		
+		cost = 120
+		
+		fire_only_once = yes
+		
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 220
+		}
+		
+		days_remove = 160
+		
+		complete_effect = {
+			set_country_flag = CHL_class_fix_in_progress
+		}
+		
+		remove_effect = {
+			clr_country_flag = CHL_class_fix_in_progress
+			add_popularity = { ideology = communism popularity = 0.01 }
+			if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea
+					add_idea = CHL_highly_divided_social_classes_idea_2
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_3 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_3
+					add_idea = CHL_highly_divided_social_classes_idea_4
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_5 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_5
+					add_idea = CHL_highly_divided_social_classes_idea_6
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_7 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_7
+					add_idea = CHL_highly_divided_social_classes_idea_8
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_9 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_9
+					add_idea = CHL_highly_divided_social_classes_idea_10
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_11 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_11
+					add_idea = CHL_highly_divided_social_classes_idea_12
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_13 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_13
+					add_idea = CHL_highly_divided_social_classes_idea_14
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_15 }
+				remove_ideas = CHL_highly_divided_social_classes_idea_15
+			}
+			add_days_mission_timeout = {
+				mission = CHL_people_demanding_social_class_balancing
+				days = 35
+			}
+		}
+	}
+	
+	CHL_adjust_the_upper_middle_class = {
+		priority = 10
+		icon = generic_political_discourse
+		
+		allowed = {
+			original_tag = CHL
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = CHL_class_fix_in_progress
+			}
+		}
+		
+		cost = 120
+		
+		fire_only_once = yes
+		
+		modifier = {
+			political_power_factor = -0.25
+		}
+		
+		ai_will_do = {
+			factor = 220
+		}
+		
+		days_remove = 160
+		
+		complete_effect = {
+			set_country_flag = CHL_class_fix_in_progress
+		}
+		
+		remove_effect = {
+			clr_country_flag = CHL_class_fix_in_progress
+			add_popularity = { ideology = communism popularity = 0.01 }
+			if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea
+					add_idea = CHL_highly_divided_social_classes_idea_3
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_2 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_2
+					add_idea = CHL_highly_divided_social_classes_idea_4
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_5 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_5
+					add_idea = CHL_highly_divided_social_classes_idea_9
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_7 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_7
+					add_idea = CHL_highly_divided_social_classes_idea_11
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_8 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_8
+					add_idea = CHL_highly_divided_social_classes_idea_12
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_6 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_6
+					add_idea = CHL_highly_divided_social_classes_idea_10
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_13 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_13
+					add_idea = CHL_highly_divided_social_classes_idea_15
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_14 }
+				remove_ideas = CHL_highly_divided_social_classes_idea_14
+			}
+			add_days_mission_timeout = {
+				mission = CHL_people_demanding_social_class_balancing
+				days = 35
+			}
+		}
+	}
+	
+	CHL_help_out_the_lower_middle_class = {
+		priority = 10
+		icon = hol_exchange_intelligence_data
+		
+		allowed = {
+			original_tag = CHL
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = CHL_class_fix_in_progress
+			}
+		}
+		
+		cost = 120
+		
+		fire_only_once = yes
+		
+		modifier = {
+			stability_factor = -0.2
+		}
+		
+		ai_will_do = {
+			factor = 220
+		}
+		
+		days_remove = 160
+		
+		complete_effect = {
+			set_country_flag = CHL_class_fix_in_progress
+		}
+		
+		remove_effect = {
+			clr_country_flag = CHL_class_fix_in_progress
+			add_popularity = { ideology = communism popularity = 0.01 }
+			if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea
+					add_idea = CHL_highly_divided_social_classes_idea_5
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_3 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_3
+					add_idea = CHL_highly_divided_social_classes_idea_9
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_2 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_2
+					add_idea = CHL_highly_divided_social_classes_idea_6
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_7 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_7
+					add_idea = CHL_highly_divided_social_classes_idea_13
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_8 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_8
+					add_idea = CHL_highly_divided_social_classes_idea_14
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_4 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_4
+					add_idea = CHL_highly_divided_social_classes_idea_10
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_11 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_11
+					add_idea = CHL_highly_divided_social_classes_idea_15
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_12 }
+				remove_ideas = CHL_highly_divided_social_classes_idea_12
+			}
+			add_days_mission_timeout = {
+				mission = CHL_people_demanding_social_class_balancing
+				days = 35
+			}
+		}
+	}
+	
+	CHL_give_out_welfare_plans_to_the_poor = {
+		priority = 10
+		icon = eng_blackshirt_march
+		
+		allowed = {
+			original_tag = CHL
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = CHL_class_fix_in_progress
+			}
+		}
+		
+		cost = 120
+		
+		fire_only_once = yes
+		
+		modifier = {
+			production_speed_arms_factory_factor = -0.25
+			production_speed_industrial_complex_factor = -0.25
+		}
+		
+		ai_will_do = {
+			factor = 220
+		}
+		
+		days_remove = 160
+		
+		complete_effect = {
+			set_country_flag = CHL_class_fix_in_progress
+		}
+		
+		remove_effect = {
+			clr_country_flag = CHL_class_fix_in_progress
+			add_popularity = { ideology = communism popularity = 0.01 }
+			if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea
+					add_idea = CHL_highly_divided_social_classes_idea_7
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_2 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_2
+					add_idea = CHL_highly_divided_social_classes_idea_8
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_3 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_3
+					add_idea = CHL_highly_divided_social_classes_idea_11
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_5 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_5
+					add_idea = CHL_highly_divided_social_classes_idea_13
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_6 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_6
+					add_idea = CHL_highly_divided_social_classes_idea_14
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_9 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_9
+					add_idea = CHL_highly_divided_social_classes_idea_15
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_4 }
+				swap_ideas = {
+					remove_idea = CHL_highly_divided_social_classes_idea_4
+					add_idea = CHL_highly_divided_social_classes_idea_12
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHL_highly_divided_social_classes_idea_10 }
+				remove_ideas = CHL_highly_divided_social_classes_idea_10
+			}
+			add_days_mission_timeout = {
+				mission = CHL_people_demanding_social_class_balancing
+				days = 35
+			}
+		}
+	}
+}
+
+CHL_purchasing_foreign_planes = {
+	
+	CHL_purhcase_fighters_from_FROM = {
+		
+		icon = generic_air
+		
+		allowed = {
+			original_tag = CHL 
+		}
+		
+		available = {
+			NOT = {
+				FROM = { has_war_with = ROOT }
+				has_capitulated = yes
+				is_puppet = yes
+			}
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 39
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				is_major = yes 
+				has_government = ROOT 
+			}
+		}
+		
+		visible = {
+			has_completed_focus = CHL_purchase_foreign_planes
+			NOT = { has_country_flag = CHL_purchasing_planes }
+		}
+		
+		days_remove = 50
+
+		cost = 75
+
+		fire_only_once = no
+		
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_factor = -0.1
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = CHL_purchasing_planes
+		}
+		
+		remove_effect = {
+			clr_country_flag = CHL_purchasing_planes
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 65
+				producer = FROM
+			}
+		}
+	}
+	
+	CHL_purchase_bombers_from_FROM = {
+		
+		icon = generic_bomber
+		
+		allowed = {
+			original_tag = CHL 
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = CHL_purchasing_planes
+				FROM = { has_war_with = ROOT }
+				has_capitulated = yes
+				is_puppet = yes
+			}
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 39
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				is_major = yes
+				has_government = ROOT 
+			}
+		}
+		
+		days_remove = 50
+
+		cost = 75
+
+		fire_only_once = no
+		
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_factor = -0.1
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+		
+		visible = {
+			has_completed_focus = CHL_purchase_foreign_planes
+			NOT = { has_country_flag = CHL_purchasing_planes }
+		}
+		
+		complete_effect = {
+			set_country_flag = CHL_purchasing_planes
+		}
+		
+		remove_effect = {
+			clr_country_flag = CHL_purchasing_planes
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment
+				amount = 65
+				producer = FROM
+			}
+		}
+	}
+}
+			
+CHL_purchasing_british_ships = {
+
+	CHL_purchase_british_submarines = {
+		icon = generic_naval
+
+		allowed = {
+			original_tag = CHL 
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = ENG 
+			}
+		}
+
+		available = {
+			NOT = {
+				has_idea = ROOT_paying_for_ship_purchase
+			}
+			FROM = {
+				NOT = {
+					has_war_with = ROOT 
+				}
+				is_subject = no 
+				has_capitulated = no 
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = ROOT_asking_for_ship_purchase
+				}
+			}
+		}
+
+		cost = 15
+		days_remove = 10
+
+
+		complete_effect = {
+			set_country_flag = ROOT_asking_for_ship_purchase
+			FROM = {
+				country_event = { id = peru.25 hours = 4 }
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = ROOT_asking_for_ship_purchase
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = ROOT_paying_for_ship_purchase
+					days = 15
+				}
+				FROM = {
+					add_timed_idea = {
+						idea = FROM_getting_payed_for_ship_purchase
+						days = 15
+					}
+					transfer_ship = {
+						type = submarine
+						target = CHL
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = FROM_accepted_purchase_of_ships
+					}
+					ROOT = {
+						add_timed_idea = {
+							idea = ROOT_paying_for_ship_purchase
+							days = 15
+						}
+					}
+					FROM = {
+						add_timed_idea = {
+							idea = FROM_getting_payed_for_ship_purchase
+							days = 15
+						}
+						transfer_ship = {
+							type = submarine
+							target = ROOT
+						}
+					}
+					clr_country_flag = FROM_accepted_purchase_of_ships
+				}
+			}
+		}
+	}
+
+	CHL_purchase_destroyers = {
+		icon = generic_naval
+
+		allowed = {
+			original_tag = CHL 
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = ENG 
+			}
+		}
+
+		available = {
+			NOT = {
+				has_idea = ROOT_paying_for_ship_purchase
+			}
+			FROM = {
+				NOT = {
+					has_war_with = ROOT 
+				}
+				is_subject = no 
+				has_capitulated = no 
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = ROOT_asking_for_ship_purchase
+				}
+			}
+		}
+
+		cost = 25
+		days_remove = 15
+
+		complete_effect = {
+			set_country_flag = ROOT_asking_for_ship_purchase
+			FROM = {
+				country_event = { id = peru.25 hours = 4 }
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = ROOT_asking_for_ship_purchase
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = ROOT_paying_for_ship_purchase
+					days = 25
+				}
+				FROM = {
+					add_timed_idea = {
+						idea = FROM_getting_payed_for_ship_purchase
+						days = 25
+					}
+					transfer_ship = {
+						type = destroyer
+						target = CHL
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = FROM_accepted_purchase_of_ships
+					}
+					ROOT = {
+						add_timed_idea = {
+							idea = ROOT_paying_for_ship_purchase
+							days = 25
+						}
+					}
+					FROM = {
+						add_timed_idea = {
+							idea = FROM_getting_payed_for_ship_purchase
+							days = 25
+						}
+						transfer_ship = {
+							type = destroyer
+							target = ROOT
+						}
+					}
+					clr_country_flag = FROM_accepted_purchase_of_ships
+				}
+			}
+		}
+	}
+
+	CHL_purchase_light_cruiser = {
+		icon = generic_naval
+
+		allowed = {
+			original_tag = CHL 
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = ENG 
+			}
+		}
+
+		available = {
+			NOT = {
+				has_idea = ROOT_paying_for_ship_purchase
+			}
+			FROM = {
+				NOT = {
+					has_war_with = ROOT 
+				}
+				is_subject = no 
+				has_capitulated = no 
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = ROOT_asking_for_ship_purchase
+				}
+			}
+		}
+
+		cost = 40
+		days_remove = 35
+
+
+		complete_effect = {
+			set_country_flag = ROOT_asking_for_ship_purchase
+			FROM = {
+				country_event = { id = peru.25 hours = 4 }
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = ROOT_asking_for_ship_purchase
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = ROOT_paying_for_ship_purchase
+					days = 45
+				}
+				FROM = {
+					add_timed_idea = {
+						idea = FROM_getting_payed_for_ship_purchase
+						days = 45
+					}
+					transfer_ship = {
+						type = light_cruiser
+						target = CHL
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = FROM_accepted_purchase_of_ships
+					}
+					ROOT = {
+						add_timed_idea = {
+							idea = ROOT_paying_for_ship_purchase
+							days = 45
+						}
+					}
+					FROM = {
+						add_timed_idea = {
+							idea = FROM_getting_payed_for_ship_purchase
+							days = 45
+						}
+						transfer_ship = {
+							type = light_cruiser
+							target = ROOT
+						}
+					}
+					clr_country_flag = FROM_accepted_purchase_of_ships
+				}
+			}
+		}
+	}
+
+	CHL_purchase_heavy_cruiser = {
+		icon = generic_naval
+
+		allowed = {
+			original_tag = CHL 
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = ENG 
+			}
+		}
+
+		available = {
+			NOT = {
+				has_idea = ROOT_paying_for_ship_purchase
+			}
+			FROM = {
+				NOT = {
+					has_war_with = ROOT 
+				}
+				is_subject = no 
+				has_capitulated = no 
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = ROOT_asking_for_ship_purchase
+				}
+			}
+		}
+
+		cost = 75
+		days_remove = 50
+
+		complete_effect = {
+			set_country_flag = ROOT_asking_for_ship_purchase
+			FROM = {
+				country_event = { id = peru.25 hours = 4 }
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = ROOT_asking_for_ship_purchase
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = ROOT_paying_for_ship_purchase
+					days = 100
+				}
+				FROM = {
+					add_timed_idea = {
+						idea = FROM_getting_payed_for_ship_purchase
+						days = 100
+					}
+					transfer_ship = {
+						type = heavy_cruiser
+						target = CHL
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = FROM_accepted_purchase_of_ships
+					}
+					ROOT = {
+						add_timed_idea = {
+							idea = ROOT_paying_for_ship_purchase
+							days = 100
+						}
+					}
+					FROM = {
+						add_timed_idea = {
+							idea = FROM_getting_payed_for_ship_purchase
+							days = 100
+						}
+						transfer_ship = {
+							type = heavy_cruiser
+							target = ROOT
+						}
+					}
+					clr_country_flag = FROM_accepted_purchase_of_ships
+				}
+			}
+		}
+	}
+
+	CHL_purchase_carrier = {
+		icon = generic_naval
+
+		allowed = {
+			original_tag = CHL 
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = ENG 
+			}
+		}
+
+		available = {
+			NOT = {
+				has_idea = ROOT_paying_for_ship_purchase
+			}
+			FROM = {
+				NOT = {
+					has_war_with = ROOT 
+				}
+				is_subject = no 
+				has_capitulated = no 
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = ROOT_asking_for_ship_purchase
+				}
+			}
+		}
+
+		cost = 100
+		days_remove = 60
+
+		complete_effect = {
+			set_country_flag = ROOT_asking_for_ship_purchase
+			FROM = {
+				country_event = { id = peru.25 hours = 4 }
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = ROOT_asking_for_ship_purchase
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = ROOT_paying_for_ship_purchase
+					days = 180
+				}
+				FROM = {
+					add_timed_idea = {
+						idea = FROM_getting_payed_for_ship_purchase
+						days = 180
+					}
+					transfer_ship = {
+						type = carrier
+						target = CHL
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = FROM_accepted_purchase_of_ships
+					}
+					ROOT = {
+						add_timed_idea = {
+							idea = ROOT_paying_for_ship_purchase
+							days = 180
+						}
+					}
+					FROM = {
+						add_timed_idea = {
+							idea = FROM_getting_payed_for_ship_purchase
+							days = 180
+						}
+						transfer_ship = {
+							type = carrier
+							target = ROOT
+						}
+					}
+					clr_country_flag = FROM_accepted_purchase_of_ships
+				}
+			}
+		}
+	}
+
+	CHL_purchase_battleship = {
+		icon = generic_naval
+
+		allowed = {
+			original_tag = CHL 
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = ENG 
+			}
+		}
+
+		available = {
+			NOT = {
+				has_idea = ROOT_paying_for_ship_purchase
+			}
+			FROM = {
+				NOT = {
+					has_war_with = ROOT 
+				}
+				is_subject = no 
+				has_capitulated = no 
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = ROOT_asking_for_ship_purchase
+				}
+			}
+		}
+
+		cost = 100
+		days_remove = 60
+
+		complete_effect = {
+			set_country_flag = ROOT_asking_for_ship_purchase
+			FROM = {
+				country_event = { id = peru.25 hours = 4 }
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = ROOT_asking_for_ship_purchase
+			custom_effect_tooltip = ARG_iftheyaccept
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = ROOT_paying_for_ship_purchase
+					days = 180
+				}
+				FROM = {
+					add_timed_idea = {
+						idea = FROM_getting_payed_for_ship_purchase
+						days = 180
+					}
+					transfer_ship = {
+						type = battleship
+						target = CHL
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = FROM_accepted_purchase_of_ships
+					}
+					ROOT = {
+						add_timed_idea = {
+							idea = ROOT_paying_for_ship_purchase
+							days = 180
+						}
+					}
+					FROM = {
+						add_timed_idea = {
+							idea = FROM_getting_payed_for_ship_purchase
+							days = 180
+						}
+						transfer_ship = {
+							type = battleship
+							target = ROOT
+						}
+					}
+					clr_country_flag = FROM_accepted_purchase_of_ships
+				}
+			}
+		}
+	}
+}			

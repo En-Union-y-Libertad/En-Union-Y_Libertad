@@ -1,0 +1,630 @@
+URG_prisoners_of_the_terra_dictatorship = {
+	
+	URG_arrest_politicians = {
+		priority = 10
+		icon = generic_arrest
+		allowed = {
+			original_tag = URG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_terra_decision
+			}
+			has_country_flag = URG_terra
+			check_variable = { URG_politicians_arrested < 81 }
+		}
+		
+		cost = 10
+		
+		fire_only_once = no
+		
+		modifier = {
+			political_power_factor = -0.05
+		}
+		
+		ai_will_do = {
+			factor = 105
+			modifier = {
+				is_historical_focus_on = yes 
+				factor = 115
+			}
+			modifier = {
+				has_completed_focus = URG_go_with_terra
+				factor = 125
+			}
+		}
+		
+		days_remove = 25
+		
+		complete_effect = {
+			set_country_flag = URG_terra_decision
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_terra_decision
+			custom_effect_tooltip = URG_politicians_being_arrested
+			hidden_effect = {
+				add_to_variable = { URG_politicians_arrested = 2 }
+				set_temp_variable = { URG_terra_democracy = 43 }
+				set_temp_variable = { URG_stability_made_terra = 0.115 }
+				set_temp_variable = { URG_the_politicans_arrested = URG_politicians_arrested }
+				set_temp_variable = { URG_support_for_terra = -0.12 }
+				multiply_temp_variable = { URG_the_politicans_arrested = 0.005 }
+				subtract_from_temp_variable = { URG_stability_made_terra = URG_the_politicans_arrested }
+				set_variable = { URG_terra_stability = URG_stability_made_terra }
+				multiply_temp_variable = { URG_the_politicans_arrested = 0.8 }
+				add_to_temp_variable = { URG_support_for_terra = URG_the_politicans_arrested }
+				set_variable = { URG_terra_support = URG_support_for_terra }
+				subtract_from_temp_variable = { URG_terra_democracy = URG_politicians_arrested }
+				multiply_temp_variable = { URG_terra_democracy = 0.007 }
+				set_variable = { URG_democracy_from_terra = URG_terra_democracy }
+			}
+		}
+	}
+	
+	URG_set_free_politicians = {
+		priority = 10
+		icon = hol_war_on_pacifism
+		allowed = {
+			original_tag = URG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_terra_decision
+			}
+			has_country_flag = URG_terra
+		}
+		
+		cost = 10
+		
+		fire_only_once = no
+		
+		modifier = {
+			political_power_factor = -0.05
+		}
+		
+		ai_will_do = {
+			factor = 105
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				has_completed_focus = URG_go_against_terra
+				factor = 125
+			}
+		}
+		
+		days_remove = 25
+		
+		complete_effect = {
+			set_country_flag = URG_terra_decision
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_terra_decision
+			custom_effect_tooltip = URG_politicians_being_set_free
+			hidden_effect = {
+				subtract_from_variable = { URG_politicians_arrested = 2 }
+				set_temp_variable = { URG_terra_democracy = 43 }
+				set_temp_variable = { URG_stability_made_terra = 0.115 }
+				set_temp_variable = { URG_the_politicans_arrested = URG_politicians_arrested }
+				set_temp_variable = { URG_support_for_terra = -0.12 }
+				multiply_temp_variable = { URG_the_politicans_arrested = 0.005 }
+				subtract_from_temp_variable = { URG_stability_made_terra = URG_the_politicans_arrested }
+				set_variable = { URG_terra_stability = URG_stability_made_terra }
+				multiply_temp_variable = { URG_the_politicans_arrested = 0.8 }
+				add_to_temp_variable = { URG_support_for_terra = URG_the_politicans_arrested }
+				set_variable = { URG_terra_support = URG_support_for_terra }
+				subtract_from_temp_variable = { URG_terra_democracy = URG_politicians_arrested }
+				multiply_temp_variable = { URG_terra_democracy = 0.007 }
+				set_variable = { URG_democracy_from_terra = URG_terra_democracy }
+			}
+		}
+	}
+}
+
+URG_repaying_the_debt_to_britain = {
+	
+	URG_small_debt_repayment = {
+		priority = 10
+		icon = gre_paying_ifc_debt
+		allowed = { original_tag = URG }
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_debt_repayment_in_progress
+			}
+		}
+		
+		cost = 20
+		
+		ai_will_do = {
+			factor = 135
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.03
+			political_power_factor = -0.05
+		}
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = URG_debt_repayment_in_progress
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_debt_repayment_in_progress
+			custom_effect_tooltip = URG_15_debt_paid
+			hidden_effect = {
+				add_to_variable = { URG_debt_to_britain = 15 }
+			}
+		}
+	}
+	
+	URG_medium_debt_repayment = {
+		priority = 10
+		icon = gre_paying_ifc_debt
+		allowed = { original_tag = URG }
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_debt_repayment_in_progress
+			}
+		}
+		
+		cost = 45
+		
+		ai_will_do = {
+			factor = 145
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.07
+			political_power_factor = -0.1
+		}
+		
+		days_remove = 70
+		
+		complete_effect = {
+			set_country_flag = URG_debt_repayment_in_progress
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_debt_repayment_in_progress
+			custom_effect_tooltip = URG_25_debt_paid
+			hidden_effect = {
+				add_to_variable = { URG_debt_to_britain = 25 }
+			}
+		}
+	}
+	
+	URG_large_debt_repayment = {
+		priority = 10
+		icon = gre_paying_ifc_debt
+		allowed = { original_tag = URG }
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_debt_repayment_in_progress
+			}
+		}
+		
+		cost = 75
+		
+		ai_will_do = {
+			factor = 155
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.15
+			political_power_factor = -0.2
+		}
+		
+		days_remove = 100
+		
+		complete_effect = {
+			set_country_flag = URG_debt_repayment_in_progress
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_debt_repayment_in_progress
+			custom_effect_tooltip = URG_40_debt_paid
+			hidden_effect = {
+				add_to_variable = { URG_debt_to_britain = 40 }
+			}
+		}
+	}
+}
+
+URG_dealing_with_the_protestors = {
+
+	URG_stomp_out_the_loyalists_in_the_capital = {
+		priority = 10
+		icon = generic_civil_support
+		allowed = { original_tag = URG }
+		
+		available = {
+			has_completed_focus = URG_march_to_the_capital
+			NOT = {
+				has_country_flag = URG_dealing_with_protestors
+			}
+		}
+		
+		cost = 75
+		
+		ai_will_do = {
+			factor = 180
+		}
+		
+		modifier = {
+			weekly_manpower = -80
+		}
+		
+		days_remove = 100
+		
+		complete_effect = {
+			set_country_flag = URG_dealing_with_protestors
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_dealing_with_protestors
+			300 = { remove_dynamic_modifier = { modifier = URG_terra_loyalities } }
+			add_stability = 0.05
+		}
+	}
+
+	URG_stomp_out_the_loyalists_in_the_capital_2 = {
+		priority = 10
+		icon = generic_civil_support
+		allowed = { original_tag = URG }
+		
+		available = {
+			has_completed_focus = URG_march_to_the_capital
+			NOT = {
+				has_country_flag = URG_dealing_with_protestors
+			}
+		}
+		
+		cost = 75
+		
+		ai_will_do = {
+			factor = 180
+		}
+		
+		modifier = {
+			weekly_manpower = -80
+		}
+		
+		days_remove = 100
+		
+		complete_effect = {
+			set_country_flag = URG_dealing_with_protestors
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_dealing_with_protestors
+			847 = { remove_dynamic_modifier = { modifier = URG_terra_loyalities } }
+			add_stability = 0.05
+		}
+	}
+	
+	URG_stomp_out_the_loyalists_in_paysandu = {
+		priority = 10
+		icon = generic_civil_support
+		allowed = { original_tag = URG }
+		
+		available = {
+			has_completed_focus = URG_march_to_paysandu
+			NOT = {
+				has_country_flag = URG_dealing_with_protestors
+			}
+		}
+		
+		cost = 75
+		
+		ai_will_do = {
+			factor = 180
+		}
+		
+		modifier = {
+			weekly_manpower = -80
+		}
+		
+		days_remove = 100
+		
+		complete_effect = {
+			set_country_flag = URG_dealing_with_protestors
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_dealing_with_protestors
+			827 = { remove_dynamic_modifier = { modifier = URG_terra_loyalities } }
+			add_stability = 0.05
+		}
+	}
+}
+
+URG_guide_the_companies = {
+	
+	URG_ask_companies_to_invest_slightly_in_the_industry = {
+		
+		priority = 10
+		icon = generic_factory
+		
+		allowed = {
+			tag = URG 
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_guiding_company
+			}
+		}
+		
+		cost = 100
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 80
+		
+		complete_effect = {
+			set_country_flag = URG_guiding_company
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_guiding_company
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	URG_ask_companies_to_invest_heavily_in_the_industry = {
+		
+		priority = 10
+		icon = generic_factory
+		
+		allowed = {
+			tag = URG 
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_guiding_company
+			}
+		}
+		
+		cost = 200
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 145
+		
+		complete_effect = {
+			set_country_flag = URG_guiding_company
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_guiding_company
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	URG_ask_companies_to_invest_slightly_in_the_military = {
+		
+		priority = 10
+		icon = ger_military_buildup
+		
+		allowed = {
+			tag = URG 
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_guiding_company
+			}
+		}
+		
+		cost = 80
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 65
+		
+		complete_effect = {
+			set_country_flag = URG_guiding_company
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_guiding_company
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	URG_ask_companies_to_invest_heavily_in_the_military = {
+		
+		priority = 10
+		icon = ger_military_buildup
+		
+		allowed = {
+			tag = URG 
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_guiding_company
+			}
+		}
+		
+		cost = 175
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 110
+		
+		complete_effect = {
+			set_country_flag = URG_guiding_company
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_guiding_company
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	URG_ask_companies_to_invest_dockyard_expansion = {
+		
+		priority = 10
+		icon = generic_naval
+		
+		allowed = {
+			tag = URG 
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_guiding_company
+			}
+		}
+		
+		cost = 75
+		
+		ai_will_do = {
+			factor = 200
+		}
+		
+		days_remove = 60
+		
+		complete_effect = {
+			set_country_flag = URG_guiding_company
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_guiding_company
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	URG_ask_companies_to_invest_in_the_infrastructure = {
+		
+		priority = 10
+		icon = railroad_construction
+		
+		allowed = {
+			tag = URG 
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = URG_guiding_company
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 150
+		}
+		
+		days_remove = 40
+		
+		complete_effect = {
+			set_country_flag = URG_guiding_company
+		}
+		
+		remove_effect = {
+			clr_country_flag = URG_guiding_company
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+URG_march_to_argentina_capital = {
+	
+	URG_capture_buenos_aires = {
+		priority = 10
+		
+		icon = generic_civil_support
+		
+		allowed = { tag = URG } 
+		
+        available = {                        
+            controls_state = 807            
+        }
+		
+        activation = {                       
+            has_completed_focus = URG_march_to_buenos_aires           
+        }
+		
+        is_good = yes  
+		
+        days_mission_timeout = 250 
+		
+        timeout_effect = {                   
+            add_stability = -0.02
+		    add_war_support = -0.05
+			ARG = {
+				add_war_support = 0.03
+			}
+        }
+        complete_effect = {                  
+            add_stability = 0.1
+		    add_war_support = 0.15 
+			ARG = {
+				add_war_support = -0.2
+			}
+        }
+    }
+}
+	

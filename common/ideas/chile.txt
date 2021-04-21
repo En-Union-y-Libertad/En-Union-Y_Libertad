@@ -1,0 +1,2625 @@
+ideas = {
+	# MILITARY
+
+	country = {
+
+		CHL_purchasing_arica = {
+
+			picture = generic_foreign_capital
+
+			allowed = { 
+				original_tag = CHL 
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		CHL_professional_pilots = {
+			picture = generic_air_payment
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				air_ace_generation_chance_factor = 0.1
+			}
+		}
+		
+		CHL_produce_bombers = {
+			picture = generic_bomber_production_diverted
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				tac_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		
+		CHL_produce_CAS = {
+			picture = generic_air_bonus
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				CAS_equipment = {
+					build_cost_ic = -0.075
+					instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		
+		CHL_produce_a_naval_air_fleet = {
+			picture = generic_air_payment
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				cv_nav_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				nav_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		
+		CHL_expanding_our_numbers = {
+			picture = generic_fighter_production_diverted
+			
+			allowed = { 
+				OR = {
+					tag = CHL 
+					original_tag = BOL 
+				}
+			}
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+			
+			modifier = {
+				air_accidents_factor = 0.07
+			}
+		}
+		
+		CHL_modernizing_our_figthers = {
+			picture = generic_air_bonus
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				air_air_superiority_attack_factor = 0.05
+				air_air_superiority_defence_factor = 0.05
+			}
+		}
+		
+		CHL_a_modern_air_force = {
+			picture = generic_air_research
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				air_air_superiority_attack_factor = 0.1
+				air_air_superiority_defence_factor = 0.1
+			}
+		}
+	
+		CHL_land_of_mountain = {
+			picture = CHL_land_of_mountains
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.05
+				special_forces_min = 5
+			}
+		}
+		
+		CHL_ejercito_chileno = {
+			
+			name = CHL_ejercito_chileno_name
+			
+			picture = CHL_ejercito
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		
+		CHL_ejercito_chileno_2 = {
+			
+			name = CHL_ejercito_chileno_name
+			
+			picture = CHL_ejercito
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		
+		CHL_ejercito_chileno_3 = {
+			
+			name = CHL_ejercito_chileno_name
+			
+			picture = CHL_ejercito
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.025
+			}
+		}
+			
+		CHL_ejercito_chileno_4 = {
+			
+			name = CHL_ejercito_chileno_name
+			
+			picture = CHL_ejercito
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.03
+			}
+		}
+		
+		CHL_ejercito_chileno_5 = {
+			
+			name = CHL_ejercito_chileno_name
+			
+			picture = CHL_ejercito
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.015
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		
+		CHL_steel_for_everyone_idea = {
+			picture = can_wartime_prices_and_trade_board #low chance of change
+			
+			allowed = { tag = CHL }
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.4
+			}
+		}
+	
+		CHL_aftermath_of_the_great_depression_idea = {
+			
+			name = CHL_aftermath_of_the_great_depression_name
+			
+			picture = CHL_aftermath_depress
+			
+			allowed = {
+				original_tag = CHL 
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		CHL_aftermath_of_the_great_depression_idea_2 = {
+			
+			name = CHL_aftermath_of_the_great_depression_name
+			
+			picture = CHL_aftermath_depress
+			
+			allowed = {
+				original_tag = CHL 
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.03
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = -0.05
+			}
+		}
+		
+		CHL_aftermath_of_the_great_depression_idea_3 = {
+			
+			name = CHL_aftermath_of_the_great_depression_name
+			
+			picture = CHL_aftermath_depress
+			
+			allowed = {
+				original_tag = CHL 
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		CHL_aftermath_of_the_great_depression_idea_4 = {
+			
+			name = CHL_aftermath_of_the_great_depression_name
+			
+			picture = CHL_aftermath_depress
+			
+			allowed = {
+				original_tag = CHL 
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		CHL_aftermath_of_the_great_depression_idea_5 = {
+			
+			name = CHL_aftermath_of_the_great_depression_name
+			
+			picture = CHL_aftermath_depress
+			
+			allowed = {
+				original_tag = CHL 
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.03
+				production_speed_industrial_complex_factor = 0.25
+				production_speed_arms_factory_factor = -0.05
+			}
+		}
+		
+		CHL_aftermath_of_the_great_depression_idea_6 = {
+			
+			name = CHL_aftermath_of_the_great_depression_name
+			
+			picture = CHL_aftermath_depress
+			
+			allowed = {
+				original_tag = CHL 
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = -0.05
+			}
+		}
+		
+		CHL_aftermath_of_the_great_depression_idea_7 = {
+			
+			name = CHL_aftermath_of_the_great_depression_name
+			
+			picture = CHL_aftermath_depress
+			
+			allowed = {
+				original_tag = CHL 
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.02
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = -0.05
+			}
+		}
+		
+		CHL_aftermath_of_the_great_depression_idea_8 = {
+			
+			name = CHL_aftermath_of_the_great_depression_name
+			
+			picture = CHL_aftermath_depress
+			
+			allowed = {
+				original_tag = CHL 
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_industrial_complex_factor = -0.2
+				production_speed_arms_factory_factor = 0.2
+			}
+		}
+		
+		CHL_aftermath_of_the_great_depression_idea_9 = {
+			
+			name = CHL_aftermath_of_the_great_depression_name
+			
+			picture = CHL_aftermath_depress
+			
+			allowed = {
+				original_tag = CHL 
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.2
+				consumer_goods_factor = -0.07
+				production_speed_industrial_complex_factor = -0.25
+				production_speed_arms_factory_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+	
+		CHL_anarchism_no_borders = {
+			picture = SPR_torchbearers_of_tomorrow
+
+			allowed = {
+				original_tag = CHL
+				NOT = { has_government = fascism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.10
+				justify_war_goal_time = -0.75
+			}
+		}
+		
+		CHL_anarchist_society_1 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+				NOT = { has_government = fascism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+			}
+		}
+		
+		CHL_anarchist_society_2 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
+		
+		CHL_anarchist_society_3 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		CHL_anarchist_society_4 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+				NOT = { 
+					OR = {
+						has_government = fascism
+						has_government = democratic 
+						has_government = communism
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
+		
+		CHL_anarchist_society_5 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+				NOT = { 
+					OR = {
+						has_government = fascism
+						has_government = democratic 
+						has_government = communism
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				conscription = 0.08
+			}
+		}
+		
+		CHL_anarchist_society_6 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		
+		CHL_anarchist_society_7 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+				NOT = { 
+					OR = {
+						has_government = fascism
+						has_government = democratic 
+						has_government = communism
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		
+		CHL_anarchist_society_8 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+				NOT = { 
+					OR = {
+						has_government = fascism
+						has_government = democratic 
+						has_government = communism
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				conscription = 0.08
+			}
+		}
+		
+		CHL_anarchist_society_9 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+				NOT = { 
+					OR = {
+						has_government = fascism
+						has_government = democratic 
+						has_government = communism
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				consumer_goods_factor = -0.07
+				conscription = 0.08
+			}
+		}
+		
+		CHL_anarchist_society_10 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+				NOT = { 
+					OR = {
+						has_government = fascism
+						has_government = democratic 
+						has_government = communism
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				consumer_goods_factor = -0.07
+			}
+		}
+		
+		CHL_anarchist_society_11 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				consumer_goods_factor = -0.07
+			}
+		}
+		
+		CHL_anarchist_society_12 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+				NOT = { 
+					OR = {
+						has_government = fascism
+						has_government = democratic 
+						has_government = communism
+					}
+				}
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				consumer_goods_factor = -0.07
+			}
+		}
+		
+		CHL_anarchist_society_13 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				consumer_goods_factor = -0.07
+			}
+		}
+		
+		
+		CHL_anarchist_society_14 = {
+
+			name = CHL_anarchist_society
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
+				NOT = { 
+					OR = {
+						has_government = fascism
+						has_government = democratic 
+						has_government = communism
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.02
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				consumer_goods_factor = -0.07
+				conscription = 0.08
+			}
+		}
+	
+		CHL_laissez_faire = {
+			
+			picture = liberty
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = -0.05
+			communism_drift = -0.05
+			stability_factor = -0.05
+			political_power_gain = -0.1
+			}
+		}
+		
+		CHL_seized_production = {
+			picture = eng_spirit_of_the_industrial_revolution
+			
+			allowed = {
+				tag = CHL
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.1
+			}
+		}
+		
+		CHL_tax_revenue = {
+			
+			picture = taxidea
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.25
+				political_advisor_cost_factor = -0.25
+			}
+		}
+		
+		#Banco Central de Chile
+		
+		CHL_central_bank_idea = {
+			
+			picture = bank
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.25
+				civilian_intel_to_others = -20.0
+				navy_intel_to_others = -20	
+				army_intel_to_others = -20
+			}
+		}		
+
+		CHL_diff_approach = {
+			
+			picture = change
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.05
+				political_power_gain = -0.25
+			}
+		}	
+
+		CHL_democratic_bastion = {
+			
+			picture = generic_victors_of_ww1
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.1
+				stability_factor = 0.15
+				political_power_gain = 0.25
+			}
+		}
+		
+		CHL_capitalist_counterweight = {
+		
+			picture = anti_soviet_pact
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = no
+				#not sure 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			communism_drift = -0.25
+			stability_factor = 0.1
+			political_power_gain = 0.25				
+			}		
+		}
+		
+		CHL_open_markets = {
+		
+			picture = gold
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+				#not sure 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				min_export = 0.05	
+				trade_opinion_factor = 0.25
+			}		
+		}
+
+		CHL_workers_strengthened = {
+		
+			picture = hol_liberation
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+				#not sure 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+				political_power_gain = -0.1
+			}		
+		}
+		
+		CHL_labor_unions_legalized_idea = {
+		
+			name = CHL_labor_unions_legalized
+		
+			picture = prc_low_popular_support3
+			
+			allowed = {
+				OR = {
+					tag = CHL 
+					original_tag = PRU 
+				}
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+				#not sure 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				min_export = -0.15
+				economy_cost_factor = -0.25
+			}		
+		}
+		
+		CHL_prepare_the_people_for_war_idea = {
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				OR = {
+					tag = CHL
+					original_tag = BOL 
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.025
+				conscription_factor = 0.075
+				non_core_manpower = 0.05
+			}
+		}
+		
+		CHL_prepare_the_people_for_war_idea_2 = {
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				tag = CHL
+			}
+			
+			allowed_civil_war = {
+				always = yes 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.04
+				conscription_factor = 0.1
+				non_core_manpower = 0.1
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.06
+				stability_factor = -0.1
+				production_speed_arms_factory_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_2 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.1
+				production_speed_arms_factory_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_3 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.06
+				stability_factor = -0.1
+				production_speed_arms_factory_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_4 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				production_speed_arms_factory_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_5 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.06
+				production_speed_arms_factory_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_6 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				production_speed_arms_factory_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_7 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.06
+				stability_factor = -0.1
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_8 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.1
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_9 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.06
+				production_speed_arms_factory_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_10 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_11 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.06
+				stability_factor = -0.1
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_12 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_13 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.06
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_14 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
+		
+		CHL_highly_divided_social_classes_idea_15 = {
+		
+			name = CHL_highly_divided_social_classes
+			picture = SPR_class_war
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.06
+			}
+		}
+		
+		CHL_labor_unions_legalized_idea_2 = {
+		
+			name = CHL_labor_unions_legalized
+		
+			picture = prc_low_popular_support3
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+				#not sure 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				min_export = -0.1
+				economy_cost_factor = -0.25
+				stability_factor = -0.15
+			}		
+		}
+		
+		CHL_the_pan_american_highway_complete = {
+		
+			picture = generic_build_infrastructure
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+				#not sure 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				supply_consumption_factor = -0.05
+				mobilization_speed = 0.1
+				stability_factor = 0.05
+			}				
+		}
+		
+		CHL_no_more_free_speech = {
+				
+			picture = boot
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+				#not sure 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -1.0
+				stability_weekly = 0.01
+				drift_defence_factor = 0.25
+			}	
+		
+		}
+		
+		CHL_fake_press = {
+			
+			picture = usa_magic
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+				#not sure 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				opinion_gain_monthly_same_ideology_factor = 0.5 
+			}	
+		
+		}		
+		
+		CHL_world_oyster_idea = {
+			
+			picture = oyster
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+				#not sure 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.25
+				planning_speed = 0.1
+				max_planning = 0.25
+				army_org_factor = 0.25
+				army_attack_factor = 0.1
+			}	
+		
+		}	
+	}
+
+	political_advisor = {
+
+		CHL_gustavo_ross_santa_maria = {
+
+			picture = generic_political_advisor_south_america_1
+
+			allowed = {
+				original_tag = CHL
+			}
+			
+			traits = { armaments_organizer }
+		}
+
+		CHL_miguel_cruchaga_tacomal = {
+
+			picture = generic_political_advisor_south_america_2
+				
+			allowed = {
+				original_tag = CHL
+			}
+			
+			traits = { war_industrialist }
+		}
+
+		CHL_luis_alamos_barros = {
+
+			picture = generic_political_advisor_south_america_3
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			traits = { ideological_crusader }
+		}
+		
+		CHL_pedro_dartnell = {
+			picture = generic_political_advisor_south_america_2
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			traits = { captain_of_industry }
+		}
+		
+		CHL_augusto_pinochet = {
+			picture = generic_political_advisor_south_america_1
+
+			allowed = {
+				original_tag = CHL
+			}
+			
+			traits = { war_industrialist }
+		}
+	}
+
+	army_chief = {
+
+		CHL_julio_allard_pinto = {
+
+			picture = generic_army_south_america_1
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}		
+			
+			traits = { army_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_e_novoa_fuentes = {
+
+			picture = generic_army_south_america_2
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHL_defensive_military_council = { # Anarchist
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_offensive_military_council = { # Anarchist
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_organizational_military_council = { # Anarchist
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+		CHL_dario_mujica_gamboa = {
+
+			picture = generic_air_south_america_2
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_marmaduke_grove = {
+
+			picture = generic_air_south_america_2
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}
+			
+			traits = { air_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHL_air_safety_aviation_council = { # Anarchist
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_all_weather_aviation_council = { # Anarchist
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		CHL_c_j_de_la_motte = {
+
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_francisco_o_ryan_orrego = {
+
+			picture = generic_navy_south_america_1
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}
+					
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHL_commerce_raiding_naval_council = { # Anarchist
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_reform_naval_council = { # Anarchist
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		CHL_ernesto_m_orlando = {
+			ledger = army
+			
+			picture = generic_army_south_america_2
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHL_arturo_espinoza_mujica = {
+			ledger = army
+
+			picture = generic_army_south_america_4
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}
+			
+			traits = { army_artillery_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_jose_luis_sanchez_besa = {
+			ledger = air
+
+			picture = generic_air_south_america_2
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}
+			
+			traits = { air_strategic_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_carlos_puga_monsalve = {
+			ledger = navy
+
+			picture = generic_air_south_america_3
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}
+			
+			traits = { air_naval_strike_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHL_gustavo_silva = {
+			ledger = navy
+
+			picture = generic_navy_south_america_3
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			available = {
+				NOT = {
+					has_completed_focus = CHL_our_own_fate
+				}
+			}
+			
+			traits = { navy_naval_air_defense_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		CHL_infantry_military_council = { # Anarchist
+			ledger = army
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { army_infantry_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_army_regrouping_military_council = { # Anarchist
+			ledger = army
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_concealment_military_council = { # Anarchist
+			ledger = army
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { army_concealment_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_naval_strike_aviation_council = { # Anarchist
+			ledger = navy
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { air_naval_strike_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_close_air_support_aviation_council = { # Anarchist
+			ledger = air
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_logistics_naval_council = { # Anarchist
+			ledger = navy
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CHL_anti_submarine_naval_council = { # Anarchist
+			ledger = navy
+			
+			picture = SPR_anarchist_council
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			visible = {
+				has_completed_focus = CHL_our_own_fate
+			}
+
+			available = {
+				has_completed_focus = CHL_our_own_fate
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			traits = { navy_anti_submarine_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+
+	theorist = {
+		CHL_carlos_fuentes_rabe = {
+			ledger = army
+			
+			picture = generic_army_south_america_3
+
+			allowed = {
+				original_tag = CHL
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		CHL_dario_cellejas_rojas = {
+			ledger = navy
+
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}	
+
+		CHL_ariosto_herrera = {
+			ledger = air
+
+			picture = generic_air_south_america_1
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes 
+		
+		CHL_ASMAR = {
+			
+			picture = CHL_asmar
+
+			allowed = {
+				original_tag = CHL
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			on_add = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		CHL_FAMAE = {
+			
+			allowed = {
+				original_tag = CHL
+			}
+			
+			picture = CHL_famae
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			on_add = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
+		}
+}
