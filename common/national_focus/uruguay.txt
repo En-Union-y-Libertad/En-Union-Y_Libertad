@@ -134,21 +134,23 @@ focus_tree = {
 		}
 		
 		cost = 10
-		
-		available = {
-			has_idea = URG_ancap_idea_1
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
+	
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = URG_ancap_idea_1
-				add_idea = URG_ancap_idea_2
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
 			}
+			add_tech_bonus = {
+				name = GER_coal_liquidization
+				bonus = 1.0
+				uses = 1
+				category = synth_resources
+			}
+			custom_effect_tooltip = URG_available_ancap
 		}
 	}
 	
