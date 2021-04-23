@@ -132,6 +132,15 @@ leader_traits = {
 		mobilization_laws_cost_factor = 0.1
 		economy_cost_factor = 0.1
 	}
+
+####Uruguay####
+    urg_ancap_trait = {
+		random = no
+		synth_resources = 0.10
+        local_resources_factor = 0.1
+		production_speed_industrial_complex_factor = 0.1
+		consumer_goods_factor = -0.02		
+	}	
 	
 	dictator = {
 		random = no

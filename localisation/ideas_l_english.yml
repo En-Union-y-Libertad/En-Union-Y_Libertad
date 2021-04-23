@@ -2624,7 +2624,7 @@
  POR_the_portuguese_empire:0 "The Portuguese Empire"
  TUR_generic_head_of_intelligence:0 "Elyesa Bazna"
  SWE_generic_head_of_intelligence:0 "Carl Petersén"
- 
+###ARGENTINA### 
  ARG_generic_fascist_demagogue:0 "Juan Bautista Molina"
  ARG_generic_democratic_reformer:0 "Vicente Gallo"
  ARG_generic_communist_revolutionary:0 "Victorio Codovilla"
@@ -2891,7 +2891,8 @@
  great_south_american_war_name:0 "The Great South American War"
  great_south_american_war_name_desc:0 "After various fights and battles broke out between various South American nations, it is clear that a major war has undoubtedly started. We shall win this war, no matter what the cost may be!"
  
- 
+
+###CHILE### 
  CHL_infantry_military_council:0 "Infantry Military Council"
  CHL_army_regrouping_military_council:0 "Army Regrouping Military Council"
  CHL_concealment_military_council:0 "Concealment Military Council"
@@ -2922,15 +2923,15 @@
  CHL_FAMAE:0 "FAMAE"
  CHL_FAMAE_desc:0 "FAMAE (Fábricas y Maestranzas del Ejército, "Factories and Workshops of the Army") is a Chilean state-owned firearms manufacturer. Its products are used by the Chilean armed forces and the Carabineros police force. The company produces among others the FAMAE CT-30 carbine, FAMAE SAF submachine gun, FAMAE FD-200 sniper rifle, Rayo rocket launcher and FAMAE revolver."
  
- 
+###Uruguay### 
  URG_rodney_arismendi:0 "Rodney Arismendi"
  URG_serafino_mazzolini:0 "Serafino Mazzolini"
  URG_debt_repayment_in_progress:0 "Debt Repayment in Progress"
  URG_the_terra_dictatorship:0 "The Terra Dictatorship"
  URG_the_terra_dictatorship_idea:0 "The Terra Dictatorship"
  URG_the_terra_dictatorship_idea_desc:0 "Gabriel Terra has been ruling the nation with an iron fist ever since he assumed power. Due to this, many enemies were made along the way, and many of them were dealt with by arresting them. This along with multiple coups has turned the dictatorship into a fragile one, where the second Terra stops ruling with brutality, the country will burn up in flames. \n\n§RThis is NOT the official idea, this is simply a placeholder to tell you what is going on, this idea will be removed the next day.§!"
- URG_ancap_name:0 "ANCAP"
- URG_ancap_name_desc:0 "ANCAP (short for Administración Nacional de Combustibles, Alcohol y Portland) is a petroleum industry created in 1931 by Gabriel Terra. Despite the type of industry it is, it also focuses on controlling the monopolies on the alcahol and fuel industries. This industry will change depending on what decisions we take with our government."
+ URG_ancap_concern:0 "ANCAP"
+ URG_ancap_concern_desc:0 "ANCAP (short for Administración Nacional de Combustibles, Alcohol y Portland) is a petroleum industry created in 1931 by Gabriel Terra. Despite the type of industry it is, it also focuses on controlling the monopolies on the alcahol and fuel industries. This industry will change depending on what decisions we take with our government."
  URG_debt_to_the_british:0 "Debt to the British"
  URG_debt_to_the_british_desc:0 "Due to our various industrial expansions in the last few decades, we have amassed a debt that needs to be payed back to the British. The British are expecting us to pay this debt back, and with the world heating up all around us, we can only hope no blood is shed with this problem and we are able to pay it back peacefully. \n§RThis idea will be removed when all of your debt to the British has been repayed."
  URG_terra_loyalities:0 "Terra Loyalists"
@@ -2948,8 +2949,13 @@
  URG_building_up_an_airforce_desc:0 "With a powerful airforce, we can dominate the skies, and dominating the skies will give us the edge in any future conflict."
  URG_privatized_industry:0 "Privatized Industry"
  URG_privatized_industry_desc:0 "With a privatized industry, we can no longer intervene directly in the economy as efficiently as we did before. Privatizing our industry however, enables us with new options that most other nations don't have at their disposal."
-  #Peru and Ecuador
+ URG_safu:0 "Sociedad Anónima Fabril Uruguaya"
+ URG_ute:0 "Usinas y Trasmisiones Eléctricas"
+ URG_ute_desc:0 "The National Administration of Power Plants and Electric Transmission, better known by its acronym UTE, is the state company tasked with the production and supply of electricity in Uruguay. Created on October 21, 1912, when a law was promulgated that gave rise to this public company, within the framework of the reformist and modernization drive of the successive Batllist governments."
+ URG_aserradero_oriental:0 "Aserradero Oriental"
+ urg_ancap_trait:0 "State-Owned Company"
  
+###Peru and Ecuador###
  PRU_purchase_unlocked:0 "Completing this focus will unlock decisions that allow you to §Ypurchase equipment§W from the §YUnited States§W."
  PRU_purchasing_1:0 "Paying for the Armaments"
  PRU_purchasing_2:0 "Paying for the American Planes"

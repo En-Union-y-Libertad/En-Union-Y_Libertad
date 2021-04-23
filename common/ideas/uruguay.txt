@@ -33,41 +33,6 @@ ideas = {
 			}
 		}
 		
-		URG_ancap_idea_1 = {
-			name = URG_ancap_name
-			
-			picture = URG_ancap
-			
-			allowed = { tag = URG }
-			
-			allowed_civil_war = { always = yes }
-			
-			removal_cost = -1
-			
-			modifier = {
-				local_resources_factor = 0.05
-				production_speed_industrial_complex_factor = 0.05
-			}
-		}
-		
-		URG_ancap_idea_2 = {
-			name = URG_ancap_name
-			
-			picture = URG_ancap
-			
-			allowed = { tag = URG }
-			
-			allowed_civil_war = { always = yes }
-			
-			removal_cost = -1
-			
-			modifier = {
-				local_resources_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
-				consumer_goods_factor = -0.02
-			}
-		}
-		
 		URG_violent_protests = {
 			picture = URG_violent_protestors
 			
@@ -627,4 +592,89 @@ ideas = {
 			}
 		}
 	}
+	industrial_concern = {
+		
+		ancap_concern = {
+			
+            picture = URG_ancap
+
+			allowed = {
+				original_tag = URG
+			}
+            
+            available = {
+				has_completed_focus = URG_strengthen_the_ANCAP
+			}
+
+			cost = 75
+
+			research_bonus = {
+				industry = 0.05		
+			}
+			
+			traits = { urg_ancap_trait }
+			
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		safu = {
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = URG
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		ute = {
+			
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				original_tag = URG
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+			
+			traits = { electronics_concern }
+		}
+	}
+
+	naval_manufacturer = { 
+	
+		aserradero_oriental = {
+
+			allowed = {
+				original_tag = URG
+			}
+
+			ai_will_do = {
+				factor = 1
+			}	
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}	
+
+			traits = { electronics_concern }
+		}
+	}		
 }
