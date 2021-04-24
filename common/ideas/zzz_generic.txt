@@ -1185,6 +1185,33 @@ ideas = {
 				production_cost_max_ship_hull_carrier = 10750
 			}
 		}
+
+		EUYL_war_of_survival = {
+			picture = war_of_survival
+			allowed = {
+				OR = {
+					original_tag = ECU 
+					original_tag = PAR 
+				}
+			}
+
+			available = {
+				has_war = yes 
+			}
+
+			allowed_civil_war = {
+				always = no 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.15
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+				weekly_manpower = 850
+			}
+		}
 	}
 	
 	political_advisor = {
