@@ -14,6 +14,11 @@ spriteTypes = {
 		name = "GFX_idea_ARG_soviet_aid"
 		texturefile = "gfx/interface/ideas/ARG_soviet_aid.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_war_of_survival"
+		texturefile = "gfx/interface/ideas/war_of_survival.dds"
+	}
 
 	spriteType = {
 		name = "GFX_idea_PBC_war_of_independence"
