@@ -136,10 +136,10 @@ leader_traits = {
 ####Uruguay####
     urg_ancap_trait = {
 		random = no
-		synth_resources = 0.10
+		production_oil_factor = 0.10
         local_resources_factor = 0.1
 		production_speed_industrial_complex_factor = 0.1
-		consumer_goods_factor = -0.02		
+		consumer_goods_factor = -0.03		
 	}	
 	
 	dictator = {

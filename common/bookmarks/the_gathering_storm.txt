@@ -564,7 +564,6 @@ bookmarks = {
 			ideas = {
 				URG_the_terra_dictatorship_idea
 				URG_debt_to_the_british
-				URG_ancap_idea_1
 			}
 			focuses = {
 				URG_imprison_Terra
