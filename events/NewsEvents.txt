@@ -13614,6 +13614,7 @@ news_event = {
 	desc = news.345.d 
 	picture = GFX_PBC_newsevent_345 
 
+	major = yes 
 	is_triggered_only = yes 
 
 	option = {
@@ -13650,6 +13651,182 @@ news_event = {
 				original_tag = CHL 
 				original_tag = ECU 
 				original_tag = ECU 
+			}
+		}
+	}
+}
+
+#Peru Ecuador war 
+news_event = {
+	id = news.346
+	title = news.346.t
+	desc = news.346.d
+	picture = GFX_news_346_pic
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.346.a 
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = BOL 
+					original_tag = PRU 
+					original_tag = ARG 
+					original_tag = CHL 
+					original_tag = ECU 
+					original_tag = BRA 
+				}
+			}
+		}
+	}
+
+	option = {
+		name = news.346.b 
+		trigger = {
+			OR = {
+				original_tag = BOL 
+				original_tag = ARG 
+				original_tag = CHL 
+				original_tag = BRA 
+			}
+		}
+	}
+
+	option = {
+		name = news.346.c 
+		trigger = {
+			original_tag = PRU 
+		}
+		add_war_support = 0.05
+	}
+
+	option = {
+		name = news.346.e 
+		trigger = {
+			original_tag = ECU 
+		}
+		add_ideas = EUYL_war_of_survival
+		division_template = {
+			name = "Reservistas" 
+			division_names_group = SPAN_INF_02 
+			is_locked = no 
+			regiments = { 
+				infantry = { x = 0 y = 0 }  
+				infantry = { x = 0 y = 1 } 
+				infantry = { x = 0 y = 2 } 
+				infantry = { x = 0 y = 3 } 
+				infantry = { x = 0 y = 4 } 
+			}
+		}
+		ECU = {
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+					owner = ECU
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+					owner = ECU
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+					owner = ECU
+				}
+			}
+		}
+	}
+}
+
+#Second Chaco War 
+news_event = {
+	id = news.347
+	title = news.347.t 
+	desc = news.347.d 
+	picture = GFX_news_347_pic
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = news.347.a 
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = BOL 
+					original_tag = PRU 
+					original_tag = ARG 
+					original_tag = CHL 
+					original_tag = ECU 
+					original_tag = BRA 
+					original_tag = PAR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = news.347.b 
+		trigger = {
+			OR = {
+				original_tag = ARG 
+				original_tag = CHL 
+				original_tag = BRA 
+				original_tag = PRU 
+				original_tag = ECU
+			}
+		}
+	}
+
+	option = {
+		name = news.347.c 
+		trigger = {
+			original_tag = BOL 
+		}
+		add_war_support = 0.05
+	}
+
+	option = {
+		name = news.347.e 
+		trigger = {
+			original_tag = PAR 
+		}
+		add_ideas = EUYL_war_of_survival
+		division_template = {
+			name = "Reservistas" 
+			division_names_group = SPAN_INF_02 
+			is_locked = no 
+			regiments = { 
+				infantry = { x = 0 y = 0 }  
+				infantry = { x = 0 y = 1 } 
+				infantry = { x = 0 y = 2 } 
+				infantry = { x = 0 y = 3 } 
+				infantry = { x = 0 y = 4 } 
+			}
+		}
+		PAR = {
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+					owner = PAR
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+					owner = PAR
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+					owner = PAR
+				}
 			}
 		}
 	}

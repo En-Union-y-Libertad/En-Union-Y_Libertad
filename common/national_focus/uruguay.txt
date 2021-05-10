@@ -138,6 +138,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+			}
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1.0
@@ -207,10 +215,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex 
-					level = 2
+					level = 1
+					instant_build = yes 
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory 
+					level = 1
 					instant_build = yes 
 				}
 			}
@@ -1223,7 +1239,7 @@ focus_tree = {
 	
 	focus = {
 		id = URG_launch_the_plan 
-		icon = GFX_ARG_consolidate 
+		icon = GFX_URG_execute_the_plan 
 		x = 0
 		y = 1
 		relative_position_id = URG_prepare_our_plan
@@ -2135,7 +2151,7 @@ focus_tree = {
 	
 	focus = {
 		id = URG_modernizing_the_army
-		icon = GFX_goal_generic_army_tanks 
+		icon = GFX_uruguayan_military 
 		x = 1
 		y = 1
 		relative_position_id = URG_expand_the_universities
@@ -2289,7 +2305,7 @@ focus_tree = {
 			
 	focus = {
 		id = URG_focus_on_tanks
-		icon = GFX_focus_generic_army_tanks2 
+		icon = GFX_uruguayan_tanks 
 		x = 1
 		y = 1
 		relative_position_id = URG_modernizing_the_army

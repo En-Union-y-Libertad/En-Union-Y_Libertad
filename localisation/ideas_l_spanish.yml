@@ -1665,7 +1665,8 @@
  SOA_conscript_proper_militia:0 "Recluta una milicia adecuada"
  SOA_conscript_proper_divison:0 "Reclutar una división adecuada"
  SOA_employ_stricter_conscription_laws_in_FROM:0 "Emplear leyes de reclutamiento más estrictas en [FROM.GetName]"
-
+ EUYL_war_of_survival:0 "Guerra de supervivencia"
+ EUYL_war_of_survival_desc:0 "La soberanía de nuestra nación está siendo puesta en peligro mientras hablamos por una potencia extranjera, y debemos hacer todo lo que esté a nuestro alcance para asegurarnos de derrotar a nuestro enemigo y salir victoriosos."
  
  AFG_generic_fascist_demagogue:0 "Muhammed Hashim"
  AFG_generic_democratic_reformer:0 "Carlo Enrico Barduzzi"
@@ -3014,8 +3015,8 @@
  URG_the_terra_dictatorship_idea:0 "La Dictadura de Terra"
  URG_the_terra_dictatorship_idea_desc:0 "Gabriel Terra ha estado gobernando la nación con mano de hierro desde que asumió el poder. Debido a esto, muchos enemigos se hicieron a lo largo del camino, y muchos de ellos fueron tratados con el arresto de ellos. Esto junto con múltiples golpes de estado ha convertido a la dictadura en una frágil, donde en el momento en que Terra deje de gobernar con brutalidad, el país arderá en llamas.  \n\n§RSi el apoyo a Terra cae por debajo del 35%, entonces se lanzará en una guerra civil casi imposible!"
  URG_debt_repayment_in_progress:0 "Devolución de la deuda en curso"
- URG_ancap_name:0 "ANCAP"
- URG_ancap_name_desc:0 "ANCAP (abreviatura de Administración Nacional de Combustibles, Alcohol y Portland) es una industria petrolera creada en 1931 por Gabriel Terra. A pesar del tipo de industria que es, también se centra en el control de los monopolios de las industrias del alcahol y los combustibles. Esta industria cambiará dependiendo de las decisiones que tomemos con nuestro gobierno".
+ URG_ancap_concern:0 "ANCAP"
+ URG_ancap_concern_desc:0 "ANCAP (abreviatura de Administración Nacional de Combustibles, Alcohol y Portland) es una industria petrolera creada en 1931 por Gabriel Terra. A pesar del tipo de industria que es, también se centra en el control de los monopolios de las industrias del alcahol y los combustibles. Esta industria cambiará dependiendo de las decisiones que tomemos con nuestro gobierno".
  URG_debt_to_the_british:0 "Deuda con los británicos"
  URG_debt_to_the_british_desc:0 "Debido a nuestras diversas expansiones industriales en las últimas décadas, hemos acumulado una deuda que hay que devolver a los británicos. Los británicos esperan que paguemos esta deuda, y con el mundo calentándose a nuestro alrededor, sólo podemos esperar que no se derrame sangre con este problema y que seamos capaces de pagarla pacíficamente. \N - Esta idea se eliminará cuando se haya pagado toda la deuda con los británicos".
  URG_terra_loyalities:0 "Leales a Terra"
@@ -3061,7 +3062,7 @@
  BOL_switched_to_an_agrarian_industry:0 "Cambio a una sociedad agraria"
  BOL_switched_to_an_agrarian_industry_desc:0 "Durante mucho tiempo, la industria minera ha dominado nuestra economía e industria en su conjunto, pero eso está empezando a cambiar. Muchos de nuestros campos, que antes eran de secano, se están cultivando ahora y nuestra economía está pasando, de forma lenta pero segura, de ser minera a ser agrícola. Los beneficios que traerá tener una sociedad agraria se van a notar y se notarán muy pronto".
  BOL_coup_being_planned:0 "Se está planeando un golpe de estado"
- BOL_begin_civil_war_with_south:0 "Comenzará la guerra civil con las provincias de §YChuiquisaca, Oruro, Tarija y Potosí§!"
+ BOL_begin_civil_war_with_south:0 "Comenzarás la guerra civil con la §GMayoría§ de las provincias"
  BOL_unlock_decision_to_delay_coup:0 "¡Desbloquea las decisiones para §Gatrasar§! la §YGuerra civil§!".
  BOL_intervention_in_politics:0 "Actualmente interviene en nuestra política"
  BOL_gain_4_elite_militias:0 "Ganarás §Ganar§! 4 milicias de élite"
@@ -3091,7 +3092,7 @@
  PAR_purchasing_chaco:0 "Bolivia paga por el Chaco"
  BOL_purchasing_acre:0 "Pagando por el Acre"
  BRA_purchasing_acre:0 "Bolivia pagando por Acre"
- BOL_german_rebelling:0 "¡Alemán se rebela!"
+ BOL_german_rebelling:0 "Germán se esta rebelando!"
  BOL_german_will_rebel_tt:0 "¡Ir con Toro provocará§! ¡§YGermán Busch§! §Reconvierta en rebelde y vaya en contra de nuestro gobierno y se detenga su golpe.§!"
  BOL_kick_out_toro_tt:0 "§RLanzaremos un golpe de estado para echar§! a §YDavid Toro§! y §Robligarle a dejar el poder.§!"
  BOL_welfare_plans:0 "Repartiendo planes de bienestar"

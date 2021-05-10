@@ -58,7 +58,6 @@ hidden_effect = { #NATIONAL SPIRIT
 set_war_support = 0.16
 
 add_ideas = URG_the_terra_dictatorship_idea
-add_ideas = URG_ancap_idea_1
 add_ideas = URG_debt_to_the_british
 add_ideas = monroe_doctrine_idea
 country_event = { id = uruguay.4 days = 1 }

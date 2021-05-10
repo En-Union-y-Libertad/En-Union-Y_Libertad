@@ -5580,14 +5580,14 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						communism < 0.5
+						communism < 0.4
 					}
 					random_list = {
 						70 = {
 							start_civil_war = {
 								ruling_party = communism
 								ideology = ROOT
-								size = 0.6
+								size = 0.55
 							}
 						}
 						30 = {
@@ -5603,7 +5603,7 @@ focus_tree = {
 							start_civil_war = {
 								ruling_party = communism
 								ideology = ROOT
-								size = 0.4
+								size = 0.35
 							}
 						}
 						75 = {

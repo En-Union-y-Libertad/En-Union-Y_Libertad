@@ -2624,7 +2624,7 @@
  POR_the_portuguese_empire:0 "The Portuguese Empire"
  TUR_generic_head_of_intelligence:0 "Elyesa Bazna"
  SWE_generic_head_of_intelligence:0 "Carl Petersén"
-###ARGENTINA### 
+ 
  ARG_generic_fascist_demagogue:0 "Juan Bautista Molina"
  ARG_generic_democratic_reformer:0 "Vicente Gallo"
  ARG_generic_communist_revolutionary:0 "Victorio Codovilla"
@@ -2891,8 +2891,7 @@
  great_south_american_war_name:0 "The Great South American War"
  great_south_american_war_name_desc:0 "After various fights and battles broke out between various South American nations, it is clear that a major war has undoubtedly started. We shall win this war, no matter what the cost may be!"
  
-
-###CHILE### 
+ 
  CHL_infantry_military_council:0 "Infantry Military Council"
  CHL_army_regrouping_military_council:0 "Army Regrouping Military Council"
  CHL_concealment_military_council:0 "Concealment Military Council"
@@ -2923,7 +2922,7 @@
  CHL_FAMAE:0 "FAMAE"
  CHL_FAMAE_desc:0 "FAMAE (Fábricas y Maestranzas del Ejército, "Factories and Workshops of the Army") is a Chilean state-owned firearms manufacturer. Its products are used by the Chilean armed forces and the Carabineros police force. The company produces among others the FAMAE CT-30 carbine, FAMAE SAF submachine gun, FAMAE FD-200 sniper rifle, Rayo rocket launcher and FAMAE revolver."
  
-###Uruguay### 
+ 
  URG_rodney_arismendi:0 "Rodney Arismendi"
  URG_serafino_mazzolini:0 "Serafino Mazzolini"
  URG_debt_repayment_in_progress:0 "Debt Repayment in Progress"
@@ -2932,6 +2931,11 @@
  URG_the_terra_dictatorship_idea_desc:0 "Gabriel Terra has been ruling the nation with an iron fist ever since he assumed power. Due to this, many enemies were made along the way, and many of them were dealt with by arresting them. This along with multiple coups has turned the dictatorship into a fragile one, where the second Terra stops ruling with brutality, the country will burn up in flames. \n\n§RThis is NOT the official idea, this is simply a placeholder to tell you what is going on, this idea will be removed the next day.§!"
  URG_ancap_concern:0 "ANCAP"
  URG_ancap_concern_desc:0 "ANCAP (short for Administración Nacional de Combustibles, Alcohol y Portland) is a petroleum industry created in 1931 by Gabriel Terra. Despite the type of industry it is, it also focuses on controlling the monopolies on the alcahol and fuel industries. This industry will change depending on what decisions we take with our government."
+ URG_safu:0 "Sociedad Anónima Fabril Uruguaya"
+ URG_ute:0 "Usinas y Trasmisiones Eléctricas"
+ URG_ute_desc:0 "The National Administration of Power Plants and Electric Transmission, better known by its acronym UTE, is the state company tasked with the production and supply of electricity in Uruguay. Created on October 21, 1912, when a law was promulgated that gave rise to this public company, within the framework of the reformist and modernization drive of the successive Batllist governments."
+ URG_aserradero_oriental:0 "Aserradero Oriental"
+ urg_ancap_trait:0 "State-Owned Company"
  URG_debt_to_the_british:0 "Debt to the British"
  URG_debt_to_the_british_desc:0 "Due to our various industrial expansions in the last few decades, we have amassed a debt that needs to be payed back to the British. The British are expecting us to pay this debt back, and with the world heating up all around us, we can only hope no blood is shed with this problem and we are able to pay it back peacefully. \n§RThis idea will be removed when all of your debt to the British has been repayed."
  URG_terra_loyalities:0 "Terra Loyalists"
@@ -2949,13 +2953,8 @@
  URG_building_up_an_airforce_desc:0 "With a powerful airforce, we can dominate the skies, and dominating the skies will give us the edge in any future conflict."
  URG_privatized_industry:0 "Privatized Industry"
  URG_privatized_industry_desc:0 "With a privatized industry, we can no longer intervene directly in the economy as efficiently as we did before. Privatizing our industry however, enables us with new options that most other nations don't have at their disposal."
- URG_safu:0 "Sociedad Anónima Fabril Uruguaya"
- URG_ute:0 "Usinas y Trasmisiones Eléctricas"
- URG_ute_desc:0 "The National Administration of Power Plants and Electric Transmission, better known by its acronym UTE, is the state company tasked with the production and supply of electricity in Uruguay. Created on October 21, 1912, when a law was promulgated that gave rise to this public company, within the framework of the reformist and modernization drive of the successive Batllist governments."
- URG_aserradero_oriental:0 "Aserradero Oriental"
- urg_ancap_trait:0 "State-Owned Company"
+  #Peru and Ecuador
  
-###Peru and Ecuador###
  PRU_purchase_unlocked:0 "Completing this focus will unlock decisions that allow you to §Ypurchase equipment§W from the §YUnited States§W."
  PRU_purchasing_1:0 "Paying for the Armaments"
  PRU_purchasing_2:0 "Paying for the American Planes"
@@ -3077,7 +3076,7 @@
  BOL_switched_to_an_agrarian_industry:0 "Switched to an Agrarian Society"
  BOL_switched_to_an_agrarian_industry_desc:0 "For a very long time, the mining industry has dominated our economics and industry as a whole, but that is starting to change. Many of our once dry fields are now being cultivated and our economy is switching slowly but surely from a mining one to an agricultural one. The benefits that will bring with having an agrarian society are going to show and they will show soon enough."
  BOL_coup_being_planned:0 "There is a coup being planned"
- BOL_begin_civil_war_with_south:0 "You will begin the civil war with the provinces of §YChuiquisaca, Oruro, Tarija, and Potosi§!"
+ BOL_begin_civil_war_with_south:0 "You will begin the civil war with the §Gmajority§! of the provinces"
  BOL_unlock_decision_to_delay_coup:0 "Unlocks decisions to §Gdelay§! the §Ycivil war§!."
  BOL_intervention_in_politics:0 "Currently Intervening in our Politics"
  BOL_gain_4_elite_militias:0 "You will §Ggain§! 4 elite militias"
@@ -3135,7 +3134,8 @@
  SOA_conscript_proper_militia:0 "Conscript a Proper Militia"
  SOA_conscript_proper_divison:0 "Conscript a Proper Division"
  SOA_employ_stricter_conscription_laws_in_FROM:0 "Employ Stricter Conscription Laws in [FROM.GetName]"
-
+ EUYL_war_of_survival:0 "War of Survival"
+ EUYL_war_of_survival_desc:0 "Our nation's sovereignty is being put at risk as we speak by a foreign power, and we must do everything at our disposal to make sure we defeat our enemy and stand victorious."
 
  # Peru-Bolivian Confederation 
  PBC_divided_ideological_sentiments:0 "Divided Ideological Sentiments"

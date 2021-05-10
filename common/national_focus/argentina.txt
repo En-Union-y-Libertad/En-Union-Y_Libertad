@@ -5249,7 +5249,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = ARG_drift_back_towards_the_confederation
 		
-		cost = 3
+		cost = 2
 		
 		available = {
 			AND = {
@@ -5284,7 +5284,7 @@ focus_tree = {
 		relative_position_id = ARG_fuerzas_armadas_argentinas
 		prerequisite = { focus = ARG_fuerzas_armadas_argentinas }
 		
-		cost = 10
+		cost = 8
 		
 		available = {
 			512 = {	
@@ -5958,7 +5958,7 @@ focus_tree = {
 		relative_position_id = ARG_fuerzas_armadas_argentinas
 		prerequisite = { focus = ARG_fuerzas_armadas_argentinas }
 		
-		cost = 5
+		cost = 4
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -6261,7 +6261,7 @@ focus_tree = {
 		relative_position_id = ARG_fuerzas_armadas_argentinas
 		prerequisite = { focus = ARG_fuerzas_armadas_argentinas }
 		
-		cost = 5
+		cost = 4
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no

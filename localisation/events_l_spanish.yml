@@ -3468,7 +3468,19 @@
  news.341.b:0 "¡Pagarán con su sangre! Movilizá las reservas!"
  news.341.c:0 "¡Los Argentinos no tienen ninguna posibilidad!"
 
- 
+ news.346.t:0 "La Guerra Peruano-Ecuatoriana"
+ news.346.d:0 "Tras el aumento de las tensiones y los conflictos fronterizos entre los dos países, estalló una guerra total entre ambas naciones en una lucha por quién controlará Pastaza. \n\nAunque muchos piensan que Perú será el claro ganador debido a su supremacía industrial y militar, existe una pequeña minoría que cree que Ecuador puede salir victorioso de esta guerra. \n\nPor ahora, sólo el tiempo dirá quién será el verdadero vencedor de este conflicto".
+ news.346.a:0 "Bastante interesante"
+ news.346.b:0 "Deberíamos estudiar este conflicto"
+ news.346.c:0 "¡Estos Ecuatorianos caerán!"
+ news.346.e:0 "¡No permitiremos que estos calentólogos se salgan con la suya!"
+
+ news.347.t:0 "La segunda guerra del Chaco"
+ news.347.d:0 "A los pocos años de la primera Guerra del Chaco, los bolivianos no soportaron que los paraguayos fueran dueños del territorio del Chaco, territorio que los bolivianos reclaman como suyo. Después de varios conflictos fronterizos, los bolivianos lanzaron una ofensiva militar contra los paraguayos e iniciaron oficialmente la Segunda Guerra del Chaco. \n\nEl mundo observará con mucha atención los acontecimientos que se produzcan en esta guerra, ya que cualquier vencedor de la misma puede tener una posición bastante dominante en el centro de Sudamérica."
+ news.347.a:0 "Muy interesante"
+ news.347.b:0 "Hay que tener cuidado con esos dos"
+ news.347.c:0 "¡El CHACO SERÁ NUESTRO UNA VEZ MÁS!"
+ news.347.e:0 "¡Esta vez los Bolivianos sí que van a caer!"
  
 
  uruguay.2.t:0 "Nuestros oficiales han arrestado a algunas personas sospechosas"

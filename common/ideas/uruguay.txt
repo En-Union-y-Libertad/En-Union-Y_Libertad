@@ -662,6 +662,8 @@ ideas = {
 	
 		aserradero_oriental = {
 
+			picture = generic_naval_manufacturer_1
+
 			allowed = {
 				original_tag = URG
 			}

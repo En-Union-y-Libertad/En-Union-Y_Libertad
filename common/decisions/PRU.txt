@@ -26,6 +26,10 @@ PRU_army_navy_rivalry = {
 				factor = 0
 				check_variable = { PRU_army_power > 29 }
 			}
+			modifier = {
+				factor = 175
+				check_variable = { PRU_navy_power > 29 }
+			}
 		}
 
 		complete_effect = {
@@ -82,6 +86,10 @@ PRU_army_navy_rivalry = {
 				factor = 0
 				check_variable = { PRU_army_power > 29 }
 			}
+			modifier = {
+				factor = 175
+				check_variable = { PRU_navy_power > 29 }
+			}
 		}
 
 		complete_effect = {
@@ -137,6 +145,10 @@ PRU_army_navy_rivalry = {
 			modifier = {
 				factor = 0
 				check_variable = { PRU_army_power > 29 }
+			}
+			modifier = {
+				factor = 175
+				check_variable = { PRU_navy_power > 29 }
 			}
 		}
 
@@ -202,6 +214,10 @@ PRU_army_navy_rivalry = {
 				factor = 0
 				check_variable = { PRU_navy_power > 29 }
 			}
+			modifier = {
+				factor = 175
+				check_variable = { PRU_army_power > 29 }
+			}
 		}
 
 		complete_effect = {
@@ -258,6 +274,10 @@ PRU_army_navy_rivalry = {
 				factor = 0
 				check_variable = { PRU_navy_power > 29 }
 			}
+			modifier = {
+				factor = 175
+				check_variable = { PRU_army_power > 29 }
+			}
 		}
 
 		complete_effect = {
@@ -313,6 +333,10 @@ PRU_army_navy_rivalry = {
 			modifier = {
 				factor = 0
 				check_variable = { PRU_navy_power > 29 }
+			}
+			modifier = {
+				factor = 175
+				check_variable = { PRU_army_power > 29 }
 			}
 		}
 

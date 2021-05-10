@@ -3758,6 +3758,20 @@
  peru.29.d:0 "The hostilities between our army and navy that have been hurting us for a while now have finally calmed down. Many sectors of the army and navy now agree ideologically and have decided to stop this childish rivalry. \n\nNow that our army and navy are collaborating with each other, we can truly begin to foment a strong Peruvian state, one that will be feared and respected by our neighbors."
  peru.29.a:0 "Finally, we can relax"
 
+ news.346.t:0 "The [GetYear] Peru-Ecuador War"
+ news.346.d:0 "After rising tensions and border conflicts between the two countries, all out war broke out between the two nations in a struggle for who shall control Pastaza. \n\nWhile many think Peru will be the clear winner due to their industrial and military supremacy, there is the small minority that believe Ecuador can come out of this war as the victor. \n\nFor now, only time will tell who will be the true victor of this conflict."
+ news.346.a:0 "Quite Interesting Indeed"
+ news.346.b:0 "We should study this conflict"
+ news.346.c:0 "These Ecuadorians shall fall!"
+ news.346.e:0 "We won't allow these warmongerers get away with this!"
+
+ news.347.t:0 "The Second Chaco War"
+ news.347.d:0 "After only a few years from the first Chaco War, the Bolivians simpyl couldn't stand the Paraguayans owning the Chaco territory, a territory the Bolivians claim as theirs. After various border conflicts, the Bolivians have launched an all outt military offensive against the Paraguayans and officially started the Second Chaco War. \n\nThe world will watch with a very careful eye the events that occur in this war, as any victor in this war may result in a fairly dominant position in Central South America."
+ news.347.a:0 "Very Interesting Indeed"
+ news.347.b:0 "We need to watch out with those two"
+ news.347.c:0 "THE CHACO SHALL BE OURS ONCE MORE!"
+ news.347.e:0 "This time the Bolivians will well and truly FALL!"
+
  # Bolivia
 
  bolivia.1.t:0 "The Military has Launched the Coup"
