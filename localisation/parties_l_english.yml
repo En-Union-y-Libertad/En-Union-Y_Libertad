@@ -718,6 +718,10 @@
  PRU_theocracy_party:0 "Theocracy"
  ARG_democratic_liberal_party:0 "Partido Liberal"
  ARG_democratic_liberal_party_long:0 "Partido Liberal"
+ RPE_UNIFIED_fascism_party_long:0 "Partido Nacional-Socialista Rioplatense"
+ RPE_UNIFIED_fascism_party:0 "PNSR"
+ RPE_UNIFIED_communism_party_long:0 "Partido Comunista Rioplatense"
+ RPE_UNIFIED_communism_party:0 "PCR"
 
  peronism:0 "Peronismo"
  peronism_desc:0 "Peronism"
