@@ -3228,13 +3228,10 @@
  FRA_armored_car_at_equipment_short:0 "V.S. 207"
  
  # small arms
- 
- 
- URG_light_tank_equipment_1:0 "M2 Light Tank"
- URG_light_tank_equipment_1_short:0 "M2 Light"
- URG_light_tank_equipment_2:0 "M3 Stuart"
- URG_light_tank_equipment_2_short:0 "M3 Stuart"
- URG_light_tank_equipment_3:0 "Chaffee 24"
+ URG_gw_tank_equipment:0 "Renault FT-17"
+ URG_gw_tank_equipment_short:0 "FT-17"
+ URG_light_tank_equipment_1:0 "Vickers Medium Mark II"
+ URG_light_tank_equipment_1_short:0 "Vickers II"
  URG_light_tank_equipment_3_short:0 "Chaffee 24"
  URG_medium_tank_equipment_1:0 "M3 Lee"
  URG_medium_tank_equipment_1_short:0 "M3 Lee"
