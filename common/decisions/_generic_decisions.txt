@@ -3436,7 +3436,7 @@ south_american_armament = {
 				is_core_of = ROOT
 				is_fully_controlled_by = ROOT
 				NOT = {
-					has_state_flag = PRU_conscripted_in_state
+					has_state_flag = SAU_conscripted_in_state
 				}
 			}
 		}
@@ -3466,7 +3466,7 @@ south_american_armament = {
 		remove_effect = {
 			add_manpower = 10000
 			FROM = {
-				set_state_flag = PRU_conscripted_in_state
+				set_state_flag = SAU_conscripted_in_state
 			}
 		}
 	}

@@ -388,9 +388,12 @@ PRU_army_navy_rivalry = {
 		}
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = PRU_below_40_army
-				check_variable = { PRU_army_power < 39 }
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = PRU_below_40_army
+					check_variable = { PRU_army_power < 39 }
+				}
+				has_country_flag = PRU_stabilized_army_navy
 			}
 		}
 
@@ -573,9 +576,12 @@ PRU_army_navy_rivalry = {
 		}
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = PRU_below_40_navy
-				check_variable = { PRU_navy_power < 39 }
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = PRU_below_40_navy
+					check_variable = { PRU_navy_power < 39 }
+				}
+				has_country_flag = PRU_stabilized_army_navy
 			}
 		}
 
@@ -2046,6 +2052,7 @@ PRU_social_democracy_investment = {
 					original_tag = NOR
 					original_tag = FRA
 					original_tag = NZL
+					original_tag = AST
 				}
 				NOT = {
 					#has_idea = PRU_investing

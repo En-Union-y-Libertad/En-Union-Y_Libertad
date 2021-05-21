@@ -1033,7 +1033,7 @@ ARG_the_argentine_civil_war = {
 			}
 		}
 		
-		cost = 50
+		cost = 40
 		
 		fire_only_once = yes
 		
@@ -1067,7 +1067,7 @@ ARG_the_argentine_civil_war = {
 			}
 		}
 		
-		cost = 50
+		cost = 40
 		
 		fire_only_once = yes
 		
@@ -1101,7 +1101,7 @@ ARG_the_argentine_civil_war = {
 			}
 		}
 		
-		cost = 50
+		cost = 40
 		
 		fire_only_once = yes
 		
@@ -1135,7 +1135,7 @@ ARG_the_argentine_civil_war = {
 			}
 		}
 		
-		cost = 25
+		cost = 15
 		
 		fire_only_once = no
 		
@@ -1175,7 +1175,7 @@ ARG_the_argentine_civil_war = {
 			}
 		}
 		
-		cost = 25
+		cost = 15
 		
 		fire_only_once = no
 		
@@ -1215,7 +1215,7 @@ ARG_the_argentine_civil_war = {
 			}
 		}
 		
-		cost = 25
+		cost = 15
 		
 		fire_only_once = no
 		
@@ -1255,7 +1255,7 @@ ARG_the_argentine_civil_war = {
 			}
 		}
 		
-		cost = 25
+		cost = 15
 		
 		fire_only_once = no
 		
@@ -1295,9 +1295,13 @@ ARG_the_argentine_civil_war = {
 
 		highlight_state_targets = { state = 814 }
 
-		on_map_mode = map_and_decisions_view
+		on_map_mode = map_only
 
-		cost = 25
+		custom_cost_trigger = {
+			has_army_experience > 10
+		}
+
+		custom_cost_text = ARG_mobilize_elite 
 
 		fire_only_once = yes
 
@@ -1342,9 +1346,13 @@ ARG_the_argentine_civil_war = {
 
 		highlight_state_targets = { state = 818 }
 
-		on_map_mode = map_and_decisions_view
+		on_map_mode = map_only
 
-		cost = 25
+		custom_cost_trigger = {
+			has_army_experience > 10
+		}
+
+		custom_cost_text = ARG_mobilize_elite 
 
 		fire_only_once = yes
 
@@ -1389,9 +1397,13 @@ ARG_the_argentine_civil_war = {
 
 		highlight_state_targets = { state = 510 }
 
-		on_map_mode = map_and_decisions_view
+		on_map_mode = map_only
 
-		cost = 25
+		custom_cost_trigger = {
+			has_army_experience > 10
+		}
+
+		custom_cost_text = ARG_mobilize_elite 
 
 		fire_only_once = yes
 
@@ -1436,9 +1448,13 @@ ARG_the_argentine_civil_war = {
 
 		highlight_state_targets = { state = 509 }
 
-		on_map_mode = map_and_decisions_view
+		on_map_mode = map_only
 
-		cost = 25
+		custom_cost_trigger = {
+			has_army_experience > 10
+		}
+
+		custom_cost_text = ARG_mobilize_elite 
 
 		fire_only_once = yes
 
@@ -3108,7 +3124,7 @@ ARG_sharpen_air_safety_regulations = {
 		}
 
 		complete_effect = {
-			add_timed_idea = { idea = GER_air_safety_regulations days = 1095 }
+			add_timed_idea = { idea = ARG_air_safety_regulations days = 1095 }
 			clr_country_flag = ARG_has_not_sharpened_air_safety
 		}
 	}

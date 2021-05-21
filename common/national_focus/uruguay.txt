@@ -2138,6 +2138,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			army_experience = 5
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -2161,7 +2162,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			army_experience = 15
+			army_experience = 20
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -3207,6 +3208,7 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 30000
 			add_war_support = 0.1
+			army_experience = 20
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
