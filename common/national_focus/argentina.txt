@@ -5221,7 +5221,6 @@ focus_tree = {
 				add_political_power = 150
 			}
 			add_ideas = ARG_federalized_society
-			unlock_national_focus = ARG_exploit_la_vaca_muerta
 		}
 	}
 	
@@ -7032,7 +7031,7 @@ focus_tree = {
 		relative_position_id = ARG_go_back_to_our_liberal_ways
 		prerequisite = { focus = ARG_go_back_to_our_liberal_ways }
 		
-		cost = 5
+		cost = 4
 		
 		available = {
 			is_subject = no

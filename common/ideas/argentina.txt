@@ -1696,6 +1696,7 @@ ideas = {
 			}
 			
 			available = {
+				has_civil_war = yes 
 			}
 			
 			cancel = {
@@ -1900,6 +1901,7 @@ ideas = {
 				OR = {
 					tag = CHL
 					tag = ARG
+					tag = URG
 				}
 			}
 			

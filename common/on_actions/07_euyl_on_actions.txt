@@ -187,6 +187,10 @@ on_actions = {
                 complete_national_focus = ARG_reduce_public_expense
                 complete_national_focus = ARG_rapidly_mobilize
                 complete_national_focus = ARG_raise_military_salary
+                complete_national_focus = ARG_spread_military_propganda
+                complete_national_focus = ARG_idolize_war_heroes
+                complete_national_focus = ARG_restrict_the_usage_of_the_dollar
+                complete_national_focus = ARG_develop_the_capital
             }
         }
     }

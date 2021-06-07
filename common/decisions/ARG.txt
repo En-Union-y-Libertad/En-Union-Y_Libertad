@@ -7,10 +7,7 @@ ARG_inflation = {
 		allowed = { tag = ARG }
 		
 		available = {
-			OR = {
-				has_completed_focus = ARG_tackle_our_economic_woes
-				has_completed_focus = ARG_deal_with_the_inflation
-			}
+			has_completed_focus = ARG_deal_with_the_inflation
 		}
 		
 		days_mission_timeout = ARG_inflationary_period_days
@@ -408,7 +405,7 @@ ARG_inflation = {
 				limit = { has_idea = ARG_inflation_7 }
 				swap_ideas = {
 					remove_idea = ARG_inflation_7
-					add_idea = ARG_inflation_6
+					add_idea = ARG_inflation_5
 				}
 			}
 			else_if = {
@@ -1133,9 +1130,16 @@ ARG_the_argentine_civil_war = {
 					has_country_flag = ARG_decision_already_in_progress
 				}
 			}
+			command_power > 10
+			has_army_experience > 1
 		}
 		
-		cost = 15
+		custom_cost_trigger = {
+			command_power > 10
+			has_army_experience > 1
+		}
+
+		custom_cost_text = ARG_division_bonuses_civil_war
 		
 		fire_only_once = no
 		
@@ -1151,6 +1155,10 @@ ARG_the_argentine_civil_war = {
 		
 		complete_effect = {
 			set_country_flag = ARG_decision_already_in_progress
+			hidden_effect = {
+				add_command_power = -10
+				army_experience = -1
+			}
 		}
 		
 		remove_effect = {
@@ -1173,9 +1181,16 @@ ARG_the_argentine_civil_war = {
 					has_country_flag = ARG_decision_already_in_progress
 				}
 			}
+			command_power > 10
+			has_army_experience > 1
 		}
 		
-		cost = 15
+		custom_cost_trigger = {
+			command_power > 10
+			has_army_experience > 1
+		}
+
+		custom_cost_text = ARG_division_bonuses_civil_war
 		
 		fire_only_once = no
 		
@@ -1191,6 +1206,10 @@ ARG_the_argentine_civil_war = {
 		
 		complete_effect = {
 			set_country_flag = ARG_decision_already_in_progress
+			hidden_effect = {
+				add_command_power = -10
+				army_experience = -1
+			}
 		}
 		
 		remove_effect = {
@@ -1213,9 +1232,16 @@ ARG_the_argentine_civil_war = {
 					has_country_flag = ARG_decision_already_in_progress
 				}
 			}
+			command_power > 10
+			has_army_experience > 1
 		}
 		
-		cost = 15
+		custom_cost_trigger = {
+			command_power > 10
+			has_army_experience > 1
+		}
+
+		custom_cost_text = ARG_division_bonuses_civil_war
 		
 		fire_only_once = no
 		
@@ -1231,6 +1257,10 @@ ARG_the_argentine_civil_war = {
 		
 		complete_effect = {
 			set_country_flag = ARG_decision_already_in_progress
+			hidden_effect = {
+				add_command_power = -10
+				army_experience = -1
+			}
 		}
 		
 		remove_effect = {
@@ -1253,9 +1283,16 @@ ARG_the_argentine_civil_war = {
 					has_country_flag = ARG_decision_already_in_progress
 				}
 			}
+			command_power > 10
+			has_army_experience > 1
 		}
 		
-		cost = 15
+		custom_cost_trigger = {
+			command_power > 10
+			has_army_experience > 1
+		}
+
+		custom_cost_text = ARG_division_bonuses_civil_war
 		
 		fire_only_once = no
 		
@@ -1271,6 +1308,10 @@ ARG_the_argentine_civil_war = {
 		
 		complete_effect = {
 			set_country_flag = ARG_decision_already_in_progress
+			hidden_effect = {
+				add_command_power = -10
+				army_experience = -1
+			}
 		}
 		
 		remove_effect = {

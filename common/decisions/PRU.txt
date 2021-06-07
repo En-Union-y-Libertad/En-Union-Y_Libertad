@@ -3106,8 +3106,6 @@ PRU_civil_war = {
 			base = 120
 		}
 
-		on_map_mode = map_and_decisions_view
-
 		state_target = yes
 
 		target_array = controlled_states
@@ -3122,22 +3120,36 @@ PRU_civil_war = {
 
 		available = {
 			has_manpower > 999
-			has_army_experience > 4
+			has_army_experience > PRU_cost_xp
 		}
 
 		visible = {
 			has_completed_focus = PRU_the_army_of_the_sun
 		}
 
-		cost = 10
+		custom_cost_trigger = {
+			has_political_power > PRU_cost_pp
+			has_army_experience > PRU_cost_xp
+		}
+
+		custom_cost_text = PRU_cost_of_division
 
 		days_remove = 15
 
 		complete_effect = {
 			add_manpower = -1000
-			army_experience = -5
+			set_temp_variable = { PRU_remove_pp = PRU_cost_pp }
+			set_temp_variable = { PRU_remove_xp = PRU_cost_xp }
+			multiply_temp_variable = { PRU_remove_pp = -1 }
+			multiply_temp_variable = { PRU_remove_xp = -1 }
+			army_experience = PRU_remove_xp
+			add_political_power = PRU_remove_pp
 			FROM = {
 				set_state_flag = INC_already_conscripted_div
+			}
+			hidden_effect = {
+				add_to_variable = { PRU_cost_pp = 15 }
+				add_to_variable = { PRU_cost_xp = 5 }
 			}
 		}
 
@@ -3149,7 +3161,6 @@ PRU_civil_war = {
 				}
 			}
 		}
-
 	}
 }
 
