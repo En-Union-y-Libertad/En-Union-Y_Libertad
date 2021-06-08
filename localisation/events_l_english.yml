@@ -3772,6 +3772,11 @@
  news.347.c:0 "THE CHACO SHALL BE OURS ONCE MORE!"
  news.347.e:0 "This time the Bolivians will well and truly FALL!"
 
+ news.348.t:0 "Fall of Buenos Aires"
+ news.348.d:0 "Military experts are in shock as reports from Buenos Aires confirm that the capital has fallen to advancing Uruguayan troops. \n\nWhile some areas are still under combat, most units of the Argentinian army have retreated to the countryside surrounding the city. \n\nUruguayan troops have begun a victory parade through the 9 de Julio Avenue, with [URG.GetLeader] having flown to participate in it as well. \n\nRumors say that the Argentine government managed to escape through the Ruta 7 towards the Andes, however, experts consider this is a devastating blow to Argentina."
+ news.348.b:0 "Who's the province now?"
+ news.348.c:0 "This is outrageous!"
+
  # Bolivia
 
  bolivia.1.t:0 "The Military has Launched the Coup"

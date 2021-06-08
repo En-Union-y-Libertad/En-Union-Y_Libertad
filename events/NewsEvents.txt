@@ -13831,3 +13831,45 @@ news_event = {
 		}
 	}
 }
+
+news_event = {
+	id = news.348
+	title = news.348.t
+	desc = news.348.d
+	picture = GFX_news_buenos_aires
+	
+	major = yes
+	
+	trigger = {
+		16 = { is_controlled_by = URG }
+		16 = { is_owned_by = ARG }
+		ARG = { has_war_with = URG }
+		NOT = { has_global_flag = fall_of_buenos_aires_urg }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_buenos_aires_urg
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = news.101.a
+		trigger = {
+			NOT = {
+				TAG = URG
+				TAG = ARG
+			}
+		}
+	}
+	option = {
+		name = news.348.b
+		trigger = { TAG = URG }
+	}
+	option = {
+		name = news.348.c
+		trigger = { TAG = ARG }
+	}
+}
