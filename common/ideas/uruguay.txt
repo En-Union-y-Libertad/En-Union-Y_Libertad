@@ -255,7 +255,8 @@ ideas = {
 				original_tag = URG 
 			}
 			
-			traits = { communist_revolutionary }
+			traits = { communist_revolutionary red_suffragette }
+
 		}
 
 		URG_emilio_frugoni = {
@@ -272,7 +273,7 @@ ideas = {
 				}
 			}
 			
-			traits = { smooth_talking_charmer }
+			traits = { smooth_talking_charmer social_reformer }
 		}
 
 		URG_horacio_arredondo = {
@@ -283,7 +284,7 @@ ideas = {
 				original_tag = URG
 			}
 			
-			traits = { popular_figurehead }
+			traits = { linchpin_of_infrastructure }
 		}
 
 		URG_pedro_manini_rios = {
@@ -294,10 +295,24 @@ ideas = {
 				original_tag = URG
 			}
 			
-			traits = { backroom_backstabber }
-			ai_will_do = {
-				factor = 0
+			traits = { economist }
+			
+			on_add = {
+				add_popularity = { ideology = fascism popularity = 0.05 }
+				add_popularity = { ideology = neutrality popularity = 0.05 }
 			}
+		}
+
+		URG_alfredo_navarro = {
+			
+            picture = URG_pedro_manini_rios
+			
+			allowed = {
+				original_tag = URG
+			}
+			
+			traits = { silent_workhorse }
+
 		}
 		
 		URG_rodney_arismendi = {
@@ -311,7 +326,7 @@ ideas = {
 			traits = { captain_of_industry }
 			
 			on_add = {
-				add_popularity = { ideology = communism popularity = 0.05 }
+				add_popularity = { ideology = communism popularity = 0.1 }
 			}
 		}
 		
@@ -323,11 +338,8 @@ ideas = {
 				original_tag = URG 
 			}
 			
-			traits = { connected_citizen }
+			traits = { connected_citizen fascist_demagogue }
 			
-			on_add = {
-				add_popularity = { ideology = communism popularity = 0.05 }
-			}
 		}
 	}
 
@@ -511,7 +523,7 @@ ideas = {
 			
 
 			
-			traits = { army_chief_drill_2 }
+			traits = { army_chief_old_guard }
 			
 			ai_will_do = {
 				factor = 1
@@ -521,7 +533,7 @@ ideas = {
 
 	air_chief = {
 
-		URG_manuel_heinz_azpurua = {
+		URG_oscar_diego_gestido = {
 			
 			picture = generic_air_south_america_3
 			
