@@ -734,6 +734,34 @@ country_event = {
 				PBC_split_armies_1
 				PBC_divided_economy_1
 			}
+			retire_country_leader = yes
+			if = {
+				limit = {
+					has_government = communism
+				}
+				create_country_leader = {
+					name = "Congreso de Tacna"
+					desc = "POLITICS_OSCAR_BENAVIDES_DESC"
+					picture = "gfx/leaders/PRU/PBC_portrait_congreso_de_tacna.dds"
+					expire = "1965.1.1"
+					ideology = socialism
+					traits = {
+						PRU_not_a_real_person
+					}
+				}
+			}
+			else = {
+				create_country_leader = {
+					name = "Congreso de Tacna"
+					desc = "POLITICS_OSCAR_BENAVIDES_DESC"
+					picture = "gfx/leaders/PRU/PBC_portrait_congreso_de_tacna.dds"
+					expire = "1965.1.1"
+					ideology = gen_nazism
+					traits = {
+						PRU_not_a_real_person
+					}
+				}
+			}	
 			every_neighbor_country = {
 				limit = {
 					NOT = { 
@@ -2511,6 +2539,7 @@ country_event = {
 		name = peru.29.a 
 		add_stability = 0.05
 		add_war_support = 0.05
+		set_country_flag = PRU_stabilized_army_navy
 		remove_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 		hidden_effect = {
 			clear_variable = PRU_navy_power
