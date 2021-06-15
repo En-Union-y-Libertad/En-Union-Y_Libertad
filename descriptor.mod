@@ -8,5 +8,5 @@ tags={
 }
 name="En Unión y Libertad | A South America Rework"
 picture="thumbnail.png"
-supported_version="1.10.7"
+supported_version="1.10.5"
 remote_file_id="2320963406"

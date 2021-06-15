@@ -1260,10 +1260,6 @@ PBC_maneging_the_confederation = {
     PBC_appoint_a_ministry_of_economy = {
         icon = eng_trade_unions_support
 
-        ai_will_do = {
-            factor = 140
-        }
-
         available = {
             has_completed_focus = PBC_maneging_the_new_nation
             NOT = {
@@ -1296,10 +1292,6 @@ PBC_maneging_the_confederation = {
 
     PBC_appoint_a_ministry_of_defense = {
         icon = eng_trade_unions_support
-
-        ai_will_do = {
-            factor = 200
-        }
 
         available = {
             has_completed_focus = PBC_maneging_the_new_nation
@@ -1334,10 +1326,6 @@ PBC_maneging_the_confederation = {
     PBC_appoint_a_ministry_of_foreign_relations = {
         icon = eng_trade_unions_support
 
-        ai_will_do = {
-            factor = 140
-        }
-
         available = {
             has_completed_focus = PBC_maneging_the_new_nation
             NOT = {
@@ -1370,10 +1358,6 @@ PBC_maneging_the_confederation = {
 
     PBC_appoint_a_ministry_of_education = {
         icon = eng_trade_unions_support
-
-        ai_will_do = {
-            factor = 140
-        }
 
         available = {
             has_completed_focus = PBC_maneging_the_new_nation

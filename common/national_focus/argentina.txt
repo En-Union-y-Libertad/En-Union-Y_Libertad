@@ -33,7 +33,7 @@ focus_tree = {
 		prerequisite = {}
 		
 		
-		cost = 5
+		cost = 6
 		
 		bypass = {
 		}
@@ -218,7 +218,7 @@ focus_tree = {
 		prerequisite = { focus = ARG_modernize_ruta_40 }
 		
 		
-		cost = 6
+		cost = 8
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -722,6 +722,9 @@ focus_tree = {
 		cost = 6
 		
 		available = {
+			NOT = {
+				has_completed_focus = ARG_drift_back_towards_the_confederation
+			}
 			807 = {
 				is_core_of = ROOT
 				is_controlled_by = ROOT
@@ -1191,6 +1194,12 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 20
+		}
+		
+		available = {
+			NOT = {
+				has_completed_focus = ARG_drift_back_towards_the_confederation
+			}
 		}
 		
 		bypass = {
@@ -2935,6 +2944,7 @@ focus_tree = {
 		
 		available = {
 			is_subject = no
+			has_idea = ARG_economic_depression_2
 			has_government = fascism
 			custom_trigger_tooltip = {
 				tooltip = ARG_inflation_2_or_less
@@ -2951,6 +2961,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
+			remove_ideas = ARG_economic_depression_2
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -2959,6 +2970,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			unlock_national_focus = ARG_deal_with_the_inflation
 		}
 	}
 	
@@ -3186,7 +3198,7 @@ focus_tree = {
 		prerequisite = { focus = ARG_etsablish_the_confederation }
 		
 		
-		cost = 10
+		cost = 8
 		
 		ai_will_do = {
 			factor = 5
@@ -3196,8 +3208,12 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
+			custom_effect_tooltip = ARG_add_15_days
+			hidden_effect = {
+				add_to_variable = { ARG_inflationary_period_days = 15 }
+			}
 			if = {
 				limit = { 
 					has_completed_focus = ARG_viva_los_militares
@@ -3846,6 +3862,7 @@ focus_tree = {
 		cost = 8
 		
 		available = {
+			has_completed_focus = ARG_annex_uruguay
 			807 = {
 				is_controlled_by = ROOT
 				is_core_of = ROOT
@@ -5221,6 +5238,7 @@ focus_tree = {
 				add_political_power = 150
 			}
 			add_ideas = ARG_federalized_society
+			unlock_national_focus = ARG_exploit_la_vaca_muerta
 		}
 	}
 	
@@ -6838,12 +6856,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CHI_INFLATION }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			custom_effect_tooltip = ARG_add_15_days
-			hidden_effect = {
-				add_to_variable = { ARG_inflationary_period_days = 15 }
-			}
 			add_stability = -0.05
 			add_war_support = 0.03
 			swap_ideas = {
@@ -7031,7 +7045,7 @@ focus_tree = {
 		relative_position_id = ARG_go_back_to_our_liberal_ways
 		prerequisite = { focus = ARG_go_back_to_our_liberal_ways }
 		
-		cost = 4
+		cost = 5
 		
 		available = {
 			is_subject = no
@@ -9538,12 +9552,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CHI_INFLATION }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			custom_effect_tooltip = ARG_add_15_days
-			hidden_effect = {
-				add_to_variable = { ARG_inflationary_period_days = 15 }
-			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -9610,12 +9620,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CHI_INFLATION }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			custom_effect_tooltip = ARG_add_15_days
-			hidden_effect = {
-				add_to_variable = { ARG_inflationary_period_days = 15 }
-			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {

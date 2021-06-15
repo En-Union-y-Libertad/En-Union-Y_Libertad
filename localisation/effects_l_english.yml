@@ -115,7 +115,7 @@
  CHL_drew_up_war_plan_verde:0 "Drew up War Plan Verde"
  
  PRU_high_opinion_factories:0 "For §YEvery neighboring country§! that has a §Gvery good opinion§! of you, you will recieve §G2§! §YCivilian Factories§!."
- PRU_stabilized_army_navy:0 "\n   Your §YArmy§! and §YNavy§! are no longer in a state of §Rrivalry§!"
+ 
  
  EFFECT_LIST_OTHERS:0 "$LIST$ and $NUMBER|Y$ others"
  EFFECT_LIST_COUNTRY:1 "@$TAG$$COUNTRY|UH$"

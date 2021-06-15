@@ -1,3 +1,4 @@
+
 state={
 	id=847
 	name="Montevideo"
@@ -29,7 +30,7 @@ state={
 	}
 
 	provinces={
-		10362 13238 13237
+		10362 13240 13238
 	}
 	manpower=904023
 	buildings_max_level_factor=1.000

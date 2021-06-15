@@ -40,7 +40,7 @@ focus_tree = {
 			factor = 40
 		}
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 250
 			hidden_effect = {
 				if = {
 					limit = {
@@ -53,7 +53,7 @@ focus_tree = {
 				}
 			}
 		}		
-		cost = 6	
+		cost = 10	
 		search_filters = {FOCUS_FILTER_POLITICAL}
 	}			
 
@@ -77,7 +77,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = PRU_what_is_our_nation		
 		}		
-		cost = 4	
+		cost = 5	
 		search_filters = {FOCUS_FILTER_POLITICAL}
 	}		
 	
@@ -104,7 +104,7 @@ focus_tree = {
 			remove_ideas = PRU_what_is_our_nation		
 			add_ideas = PRU_presidential_republic	
 		}		
-		cost = 10
+		cost = 12	
 		search_filters = {FOCUS_FILTER_POLITICAL}
 	}		
 
@@ -132,7 +132,7 @@ focus_tree = {
 			add_ideas = PRU_parliamentary_republic	
 			custom_effect_tooltip = PRU_facism_warning
 		}		
-		cost = 10	
+		cost = 12	
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		search_filters = {FOCUS_FILTER_STABILITY}
 	}	
@@ -166,7 +166,7 @@ focus_tree = {
 			remove_ideas = PRU_what_is_our_nation		
 			add_ideas = PRU_mixed_republic	
 		}		
-		cost = 6
+		cost = 8
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		search_filters = {FOCUS_FILTER_STABILITY}		
 	}		
@@ -206,7 +206,7 @@ focus_tree = {
 					popularity = -0.15
 				}				
 		}		
-		cost = 4
+		cost = 5
 		search_filters = {FOCUS_FILTER_POLITICAL}
 	}	
 
@@ -307,7 +307,7 @@ focus_tree = {
 			custom_effect_tooltip = PRU_civil_liberties
 		}		
 		cost = 8
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 	}	
 
 	focus = {
@@ -330,7 +330,7 @@ focus_tree = {
 				popularity = 0.15
 			}
 		}		
-		cost = 4
+		cost = 5
 		search_filters = {FOCUS_FILTER_POLITICAL}
 	}		
 	
@@ -356,7 +356,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			army_experience = 10
+			army_experience = 5
 			add_war_support = 0.05
 			if = {
 				limit = {
@@ -385,7 +385,7 @@ focus_tree = {
 			}	
 		}		
 		cost = 4
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 	}		
 	
 	focus = {
@@ -459,9 +459,8 @@ focus_tree = {
 			factor = 15
 		}
 
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			navy_experience = 5
 			add_tech_bonus = {
 				name = PRU_focus_on_our_navy
 				bonus = 0.5
@@ -515,9 +514,8 @@ focus_tree = {
 			factor = 15
 		}
 
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			army_experience = 5
 			add_tech_bonus = {
 				name = PRU_focus_on_army
 				bonus = 0.5
@@ -573,7 +571,6 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			air_experience = 5
 			add_tech_bonus = {
 				name = PRU_focus_on_air
 				bonus = 0.5
@@ -608,7 +605,7 @@ focus_tree = {
 			}
 		}		
 		cost = 6
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 	}		
 
 	#Industry 
@@ -1142,7 +1139,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = PRU_pathcivilwar_tt
 			custom_effect_tooltip = PRU_navy_abandonment_tt	
-			add_political_power = 45
+			add_political_power = 40
 			remove_ideas = PRU_fascist_oppression
 			add_popularity = {
 				ideology = fascism
@@ -1150,7 +1147,6 @@ focus_tree = {
 			}
 			add_ideas = fascist_influence
 			activate_mission_tooltip = PRU_overthrow_oscars_government
-			army_experience = 5
 			hidden_effect = {
 				set_variable = { PRU_chance_of_civil_war = 100 }
 				set_variable = { PRU_chance_of_peaceful_coup = 0 }
@@ -1159,7 +1155,7 @@ focus_tree = {
 			}
 		}		
 		cost = 5
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 	}	
 
 	focus = {
@@ -1189,7 +1185,6 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_political_power = 10
 			custom_effect_tooltip = PRU_unlock_coup_decisions
 		}
 	}
@@ -1347,7 +1342,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_political_power = 35
+			add_political_power = 25
 			add_days_mission_timeout = {
 				mission = PRU_overthrow_oscars_government
 				days = 45
@@ -1459,7 +1454,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 150
+			factor = 70
 		}
 
 		available = {
@@ -1566,7 +1561,7 @@ focus_tree = {
 		relative_position_id = PRU_launch_the_coup
 		prerequisite = { focus = PRU_launch_the_coup }
 
-		cost = 6
+		cost = 8
 
 		ai_will_do = {
 			factor = 50
@@ -1605,7 +1600,7 @@ focus_tree = {
 			factor = 50
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			custom_effect_tooltip = PRU_purchase_foreign_arms_from_other_country
 			if = {
@@ -1650,7 +1645,7 @@ focus_tree = {
 			factor = 50
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			custom_effect_tooltip = PRU_unlock_conscription_decisions
 			if = {
@@ -1788,7 +1783,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			navy_experience = 50 
 			add_stability = 0.05
@@ -1910,7 +1905,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			navy_experience = 25
 			random_owned_controlled_state = {
@@ -1966,7 +1961,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			army_experience = 15
 			random_owned_controlled_state = {
@@ -2016,7 +2011,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
@@ -2316,7 +2311,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC }
 		completion_reward = {
 			add_manpower = 19500
 			custom_effect_tooltip = URG_mobilize_reserves
@@ -2442,7 +2437,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC }
 		completion_reward = {
 			if = {
 				limit = {
@@ -2527,7 +2522,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC }
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
@@ -2701,17 +2696,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_victor_war_of_pacific
-			OR = {
-				has_war_with = BOL 
-				BOL = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			}
+			has_war_with = BOL 
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -2802,17 +2787,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_victor_war_of_pacific
-			OR = {
-				has_war_with = PAR 
-				PAR = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			}
+			has_war_with = PAR 
 		}
 
 		cancel_if_invalid = yes 
@@ -4199,10 +4174,6 @@ focus_tree = {
 				remove_idea = PRU_warriors_of_the_sun_2
 				add_idea = PRU_warriors_of_the_sun_3
 			}
-			hidden_effect = {
-				set_variable = { PRU_cost_pp = 15 }
-				set_variable = { PRU_cost_xp = 5 }
-			}
 		}
 	}
 
@@ -4356,17 +4327,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_continuing_atahualpas_legacy
-			OR = {
-				has_war_with = ECU 
-				ECU = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			}
+			has_war_with = ECU 
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4396,17 +4357,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_continuing_atahualpas_legacy
-			OR = {
-				has_war_with = BOL 
-				BOL = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			} 
+			has_war_with = BOL 
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4439,17 +4390,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_continuing_atahualpas_legacy
-			OR = {
-				has_war_with = CHL 
-				CHL = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			}
+			has_war_with = CHL 
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4532,17 +4473,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_our_true_borders
-			OR = {
-				has_war_with = ARG 
-				ARG = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			}
+			has_war_with = ARG 
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4572,17 +4503,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_our_true_borders
-			OR = {
-				has_war_with = BRA 
-				BRA = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			}
+			has_war_with = BRA 
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4612,17 +4533,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_our_true_borders
-			OR = {
-				has_war_with = PAR 
-				PAR = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			}
+			has_war_with = PAR 
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4652,17 +4563,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_our_true_borders
-			OR = {
-				has_war_with = URG 
-				URG = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			}
+			has_war_with = URG 
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4777,17 +4678,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_our_true_borders
-			OR = {
-				has_war_with = COL 
-				COL = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			}
+			has_war_with = COL 
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4817,17 +4708,7 @@ focus_tree = {
 
 		bypass = {
 			has_completed_focus = PRU_our_true_borders
-			OR = {
-				has_war_with = VEN 
-				VEN = {
-					OR = {
-						is_subject_of = ROOT
-						capital_scope = {
-							is_controlled_by = ROOT
-						} 
-					}
-				}
-			}
+			has_war_with = VEN 
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -5085,7 +4966,7 @@ focus_tree = {
 			}	
 		}		
 		cost = 6
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 	}	
 
 	focus = {
@@ -5589,7 +5470,7 @@ focus_tree = {
 				remove_ideas = PRU_communist_oppression
 			}
 		}		
-		cost = 4
+		cost = 5
 		search_filters = {FOCUS_FILTER_POLITICAL}
 	}
 
@@ -5646,7 +5527,7 @@ focus_tree = {
 			
 			
 		}		
-		cost = 4
+		cost = 5
 		search_filters = {FOCUS_FILTER_POLITICAL}
 	}	
 
@@ -5677,29 +5558,61 @@ focus_tree = {
 			}
 		}
 		completion_reward = {		
-			set_temp_variable = {
-				var = ban_ideology_var
-				value = party_popularity@democratic
-			}
-			multiply_temp_variable = {
-				var = ban_ideology_var
-				value = -0.25
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = ban_ideology_var
-			}
-			multiply_temp_variable = {
-				var = ban_ideology_var
-				value = -1
-			}	
-			add_popularity = {
-				ideology = communism
-				popularity = ban_ideology_var
-			}
-			set_politics = {
-				ruling_party = communism
-			}
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@democratic
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -0.25
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}	
+				add_popularity = {
+					ideology = communism
+					popularity = ban_ideology_var
+				}
+				if = {
+					limit = {
+						communism < 0.4
+					}
+					random_list = {
+						70 = {
+							start_civil_war = {
+								ruling_party = communism
+								ideology = ROOT
+								size = 0.55
+							}
+						}
+						30 = {
+							set_politics = {
+								ruling_party = communism
+							}
+						}
+					}	
+				}
+				else = {
+					random_list = {
+						25 = {
+							start_civil_war = {
+								ruling_party = communism
+								ideology = ROOT
+								size = 0.35
+							}
+						}
+						75 = {
+							set_politics = {
+								ruling_party = communism
+							}								
+						}
+					}
+				}		
 		}		
 		cost = 10
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -5943,7 +5856,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			add_ideas = URG_expanded_consription
 			if = {
@@ -6063,9 +5976,6 @@ focus_tree = {
 			NOT = {
 				has_war_with = BOL 
 			}
-			BOL = {
-				has_government = communism
-			}
 		}
 
 		bypass = {
@@ -6096,7 +6006,6 @@ focus_tree = {
 			has_completed_focus = PRU_our_unique_revolution
 			PAR = {
 				is_in_faction = no 
-				has_government = communism
 				NOT = {
 					has_war_with = ROOT
 				}
@@ -6154,7 +6063,7 @@ focus_tree = {
 
 		cost = 8
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -6262,7 +6171,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			custom_effect_tooltip = PRU_purchase_foreign_arms_from_other_country
 			if = {
@@ -6303,7 +6212,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			custom_effect_tooltip = PRU_unlock_conscription_decisions
 			if = {
@@ -6613,7 +6522,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC }
 		completion_reward = {
 			add_manpower = 22500
 			custom_effect_tooltip = URG_mobilize_reserves
@@ -6711,7 +6620,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC }
 		completion_reward = {
 			if = {
 				limit = {
@@ -7315,7 +7224,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -7374,7 +7283,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -7733,7 +7642,6 @@ focus_tree = {
 						original_tag = NOR
 						original_tag = FRA
 						original_tag = NZL
-						original_tag = AST
 					}
 					NOT = {
 						has_war_with = ROOT
@@ -7849,9 +7757,9 @@ focus_tree = {
 			factor = 3
 		}
 		completion_reward = {		
-			AST = { add_opinion_modifier = { modifier = strengthened_ties target = ROOT } }
+			AUS = { add_opinion_modifier = { modifier = strengthened_ties target = ROOT } }
 			NZL = { add_opinion_modifier = { modifier = strengthened_ties target = ROOT } }
-			add_opinion_modifier = { modifier = strengthened_ties target = AST }
+			add_opinion_modifier = { modifier = strengthened_ties target = AUS }
 			add_opinion_modifier = { modifier = strengthened_ties target = NZL }
 		}		
 		cost = 10
@@ -8413,7 +8321,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			custom_effect_tooltip = PRU_every_allied_nation_recieve
 			effect_tooltip = {
@@ -8687,7 +8595,7 @@ focus_tree = {
 			}
 		}		
 		cost = 10
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 	}	
 
 	focus = {
@@ -8969,20 +8877,6 @@ focus_tree = {
 		y = 1
 		
 		available = {
-			NOT = {
-				has_war_with = CHL 
-			}
-			CHL = {
-				OR = {
-					has_government = democratic
-					AND = {
-						has_government = neutrality
-						NOT = {
-							has_completed_focus = CHL_a_new_idea
-						}
-					}
-				}
-			}
 		}
 		
 		ai_will_do = {
@@ -9261,7 +9155,7 @@ focus_tree = {
 		x = 34
 		y = 0
 
-		cost = 1
+		cost = 2
 
 		ai_will_do = {
 			base = 1
@@ -9300,7 +9194,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			army_experience = 10
 			add_tech_bonus = {
@@ -9356,7 +9250,7 @@ focus_tree = {
 
 		cost = 4
 
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			navy_experience = 20
 			add_tech_bonus = {
@@ -9474,7 +9368,7 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_NAVY_RIVALRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -9526,7 +9420,6 @@ focus_tree = {
 
 		cost = 6
 
-		search_filters = { FOCUS_FILTER_ARMY_NAVY_RIVALRY }
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = PRU_pathetic_navy_1
@@ -9808,7 +9701,6 @@ focus_tree = {
 
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_ARMY_NAVY_RIVALRY FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 3
@@ -9919,7 +9811,7 @@ focus_tree = {
 			}	
 		}		
 		cost = 5
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 	}		
 
 	focus = {
@@ -10024,7 +9916,7 @@ focus_tree = {
 			}			
 		}		
 		cost = 6
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_NAVY_RIVALRY}		
+		search_filters = {FOCUS_FILTER_MANPOWER}		
 	}		
 	
 	focus = {
@@ -10143,7 +10035,7 @@ focus_tree = {
 			}	
 		}		
 		cost = 5
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 	}		
 
 	focus = {
@@ -10207,7 +10099,7 @@ focus_tree = {
 			}		
 		}		
 		cost = 5
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 	}
 	
 	focus = {
@@ -10262,7 +10154,7 @@ focus_tree = {
 			}	
 		}		
 		cost = 8
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 	}		
 	
 	focus = {
@@ -10404,7 +10296,7 @@ focus_tree = {
 			}	
 		}		
 		cost = 8
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 	}			
 	
 	
@@ -10531,7 +10423,8 @@ focus_tree = {
 		}
 
 		cost = 10
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_NAVY_RIVALRY}		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_RESEARCH}		
 	}	
 	focus = {
 		id = PRU_work_with_the_americans
@@ -10610,7 +10503,7 @@ focus_tree = {
 			}	
 		}
 		cost = 10
-		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 	}		
 	
 	focus = {
@@ -10690,7 +10583,7 @@ focus_tree = {
 			}		
 		}		
 		cost = 10
-		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_NAVY_RIVALRY}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 	}		
 	
 	focus = {

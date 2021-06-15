@@ -286,3 +286,10 @@ form_natural_borders = {
 
 	picture = GFX_BOL_natural_borders
 }
+
+form_liga_federal_category = {
+	
+	icon = generic_formable_nations
+
+	picture = gfx_decision_category_form_liga_federal_category
+}

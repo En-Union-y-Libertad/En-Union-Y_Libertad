@@ -152,9 +152,9 @@ spriteTypes = {
 		name = "GFX_decision_category_URG_terra_dictatorship"
 		texturefile = "gfx/interface/decisions/decision_category_URG_terra_dictatorship.dds"
 	}
-	
+
 	spriteType = {
-		name = "GFX_decision_category_form_liga_federal"
+		name = "GFX_decision_category_form_liga_federal_category"
 		texturefile = "gfx/interface/decisions/decision_category_form_liga_federal_category.dds"
 	}
 	

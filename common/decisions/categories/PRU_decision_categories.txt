@@ -13,6 +13,7 @@ PRU_army_navy_rivalry = {
 	}
 
 	available = {
+		has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 		NOT = {
 			has_country_flag = is_PBC
 		}

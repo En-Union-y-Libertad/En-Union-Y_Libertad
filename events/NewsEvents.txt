@@ -13551,7 +13551,7 @@ news_event = {
 	}
 
 	option = {
-		name = news.343.e
+		name = news.343.d 
 		trigger = {
 			OR = {
 				original_tag = ECU 
