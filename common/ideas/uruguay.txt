@@ -160,6 +160,49 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.15
 			}
 		}
+
+		URG_prepare_the_army_1 = {
+			name = URG_prepare_the_army
+			picture = war_of_survival
+
+			allowed = { original_tag = URG }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			modifier = {
+				conscription = 0.04
+			}
+		}
+
+		URG_prepare_the_army_2 = {
+			name = URG_prepare_the_army
+			picture = war_of_survival
+
+			allowed = { original_tag = URG }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+		URG_prepare_the_army_3 = {
+			name = URG_prepare_the_army
+			picture = war_of_survival
+
+			allowed = { original_tag = URG }
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			modifier = {
+				conscription = 0.04
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
 			
 		URG_building_up_an_airforce = {
 			picture = generic_air_bonus
@@ -224,10 +267,42 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				consumer_goods_factor = 0.5
 				production_speed_industrial_complex_factor = -1
 				production_speed_dockyard_factor = -1
 				production_speed_infrastructure_factor = -1
 				production_speed_arms_factory_factor = -1
+			}
+		}
+
+		URG_economic_instability = {
+			picture = PRU_fiat_currency_instability
+
+			allowed = { tag = URG }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+		URG_rebelling_officers = {
+			picture = ARG_military_distrust
+
+			allowed = { tag = URG }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.15
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
 			}
 		}
 	}

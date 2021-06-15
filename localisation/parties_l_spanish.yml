@@ -760,6 +760,10 @@
  ARG_democratic_liberal_party_long:0 "Partido Liberal"
  BOL_communism_party:0 "Socialismo Militar"
  BOL_communism_party_long:0 "Socialismo Militar"
+ RPE_UNIFIED_fascism_party_long:0 "Partido Nacional-Socialista Rioplatense"
+ RPE_UNIFIED_fascism_party:0 "PNSR"
+ RPE_UNIFIED_communism_party_long:0 "Partido Comunista Rioplatense"
+ RPE_UNIFIED_communism_party:0 "PCR"
 
 
 # === [LocEditor:OrphanedKeys] Keys that do not exist in English ===

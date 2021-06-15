@@ -3169,20 +3169,20 @@ south_american_armament = {
 		icon = generic_army_support
 
 		ai_will_do = {
-			base = 35
+			base = 5
 			modifier = {
-				add = 55
+				add = 15
 				has_manpower < 9999
 			}
 			modifier = {
-				add = 30
+				add = 20
 				has_war = yes 
 			}
 		}
 
 		available = {
 			has_equipment = {
-				infantry_equipment > 99
+				infantry_equipment > 199
 			}
 			NOT = {
 				has_country_flag = SAU_conscription_in_progress
@@ -3190,23 +3190,27 @@ south_american_armament = {
 		}
 
 		custom_cost_trigger = {
-			has_political_power > 24
-			command_power > 14
+			has_political_power > 25
+			command_power > 15
+			has_army_experience > 5
 		}
 
 		custom_cost_text = SAU_cost_15_command
 
-		days_remove = 20
+		days_remove = 60
+
+		days_re_enable = 70
 
 		complete_effect = {
 			set_country_flag = SAU_conscription_in_progress
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
-			    amount = -100
+			    amount = -200
 			}
 			hidden_effect = {
 				add_command_power = -15
 				add_political_power = -25
+				army_experience = -5
 			}
 		}
 
@@ -3243,20 +3247,20 @@ south_american_armament = {
 		icon = generic_army_support
 
 		ai_will_do = {
-			base = 35
+			base = 5
 			modifier = {
-				add = 55
+				add = 15
 				has_manpower < 9999
 			}
 			modifier = {
-				add = 30
+				add = 20
 				has_war = yes 
 			}
 		}
 
 		available = {
 			has_equipment = {
-				infantry_equipment > 299
+				infantry_equipment > 499
 			}
 			NOT = {
 				has_country_flag = SAU_conscription_in_progress
@@ -3264,25 +3268,27 @@ south_american_armament = {
 		}
 
 		custom_cost_trigger = {
-			has_political_power > 49
-			command_power > 24
-			has_army_experience > 4
+			has_political_power > 50
+			command_power > 25
+			has_army_experience > 10
 		}
 
 		custom_cost_text = SAU_cost_25_command
 
-		days_remove = 40
+		days_remove = 80
+
+		days_re_enable = 80
 
 		complete_effect = {
 			set_country_flag = SAU_conscription_in_progress
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
-			    amount = -300
+			    amount = -500
 			}
 			hidden_effect = {
 				add_command_power = -25
 				add_political_power = -50
-				army_experience = -5
+				army_experience = -10
 			}
 		}
 
@@ -3324,9 +3330,9 @@ south_american_armament = {
 		icon = generic_army_support
 
 		ai_will_do = {
-			base = 45
+			base = 10
 			modifier = {
-				add = 65
+				add = 20
 				has_manpower < 9999
 			}
 			modifier = {
@@ -3337,7 +3343,7 @@ south_american_armament = {
 
 		available = {
 			has_equipment = {
-				infantry_equipment > 899
+				infantry_equipment > 999
 			}
 			NOT = {
 				has_country_flag = SAU_conscription_in_progress
@@ -3345,25 +3351,27 @@ south_american_armament = {
 		}
 
 		custom_cost_trigger = {
-			has_political_power > 79
-			command_power > 44
-			has_army_experience > 9
+			has_political_power > 80
+			command_power > 45
+			has_army_experience > 20
 		}
 
 		custom_cost_text = SAU_cost_45_command
 
-		days_remove = 50
+		days_remove = 90
+
+		days_re_enable = 100
 
 		complete_effect = {
 			set_country_flag = SAU_conscription_in_progress
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
-			    amount = -900
+			    amount = -1000
 			}
 			hidden_effect = {
 				add_command_power = -45
 				add_political_power = -80
-				army_experience = -10
+				army_experience = -20
 			}
 		}
 
@@ -3410,9 +3418,9 @@ south_american_armament = {
 		icon = generic_military
 
 		ai_will_do = {
-			base = 0
+			base = 5
 			modifier = {
-				add = 100
+				add = 35
 				OR = {
 					has_government = fascism
 					has_government = neutrality
@@ -3436,7 +3444,7 @@ south_american_armament = {
 				is_core_of = ROOT
 				is_fully_controlled_by = ROOT
 				NOT = {
-					has_state_flag = PRU_conscripted_in_state
+					has_state_flag = SAU_conscripted_in_state
 				}
 			}
 		}
@@ -3448,6 +3456,12 @@ south_american_armament = {
 		visible = {
 			NOT = {
 				original_tag = PRU
+			}
+			FROM = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					has_state_flag = SAU_conscripted_in_state
+				}
 			}
 		}
   
@@ -3466,7 +3480,7 @@ south_american_armament = {
 		remove_effect = {
 			add_manpower = 10000
 			FROM = {
-				set_state_flag = PRU_conscripted_in_state
+				set_state_flag = SAU_conscripted_in_state
 			}
 		}
 	}
