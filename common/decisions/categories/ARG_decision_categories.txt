@@ -6,7 +6,7 @@ ARG_inflation = {
 	priority = 10
 	icon = ARG_inflationary
 	
-	allowed = { tag = ARG }
+	allowed = { original_tag = ARG }
 	
 	visible = {
 		OR = {

@@ -5800,6 +5800,7 @@ form_rioplatense_empire_category = {
 				has_government = neutrality
 				has_government = fascism 
 			}
+			has_completed_focus = URG_form_the_rioplatense_empire
 		}
 		
 		icon = generic_form_nation
@@ -5839,6 +5840,12 @@ form_rioplatense_empire_category = {
 			810 = { add_core_of = ROOT }
 			809 = { add_core_of = ROOT }
 			808 = { add_core_of = ROOT }
+			hidden_effect = {
+				add_ideas = {
+					URG_economic_instability
+					URG_rebelling_officers
+				}
+			}
 		}
 	}
 }
@@ -5880,49 +5887,6 @@ form_natural_borders = {
 		complete_effect = {
 			add_stability = 0.1
 			add_war_support = 0.15
-		}
-	}
-}
-
-form_liga_federal_category = {
-	
-	form_liga_federal = {
-		allowed = {
-			original_tag = URG 
-		}
-		visible = {
-			OR = {
-				has_government = neutrality
-				has_government = fascism 
-				has_government = communist
-			}
-		}
-		
-		icon = generic_form_nation
-		
-		fire_only_once = yes
-		
-		available = {
-			hidden_trigger  = {
-				controls_state = 827
-				controls_state = 300
-			}
-			controls_state = 502
-			controls_state = 824
-			controls_state = 823
-			controls_state = 510
-			controls_state = 813
-			controls_state = 814
-		}
-		
-		complete_effect = {
-			set_cosmetic_tag = LGA_federal
-			502 = { add_core_of = ROOT }
-			824 = { add_core_of = ROOT }
-			823 = { add_core_of = ROOT }
-			510 = { add_core_of = ROOT }
-			813 = { add_core_of = ROOT }
-			814 = { add_core_of = ROOT }						
 		}
 	}
 }

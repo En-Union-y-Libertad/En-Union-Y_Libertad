@@ -347,5 +347,10 @@ spriteTypes = {
 		name = "GFX_FOCUS_FILTER_SECOND_WAR_OF_THE_PACIFIC"
 		texturefile = "gfx/interface/focusview/filter/second_war_of_pacific_filter.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_ARMY_NAVY_RIVALRY"
+		texturefile = "gfx/interface/focusview/filter/focus_filter_army_navy_rivalry_filter.dds"
+	}
 
 }
