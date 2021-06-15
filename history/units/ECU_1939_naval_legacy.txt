@@ -1,0 +1,15 @@
+﻿
+units= {
+
+	##### Naval OOB #####
+	fleet = {
+		name = "Armada Ecuatoriana"
+		naval_base = 8252 # Guayaquil
+		task_force = {				
+			name = "Armada Ecuatoriana"			
+			location = 8252 # Montevideo
+			ship = { name = "BAE Presidente Alfaro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ECU } } }
+		}				
+	}
+} 
+

@@ -77,6 +77,50 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Herbert Knöhr"
+	desc = "POLITICS_HERBERT_KNOHR_DESC"
+	picture = "gfx/leaders/GER/Portrait_Germany_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Manuel Mora Valverde"
+	desc = "POLITICS_MANUEL_MORA_VALVERDE_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_4.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Rafael Calderón Guardia"
+	desc = "POLITICS_RAFAEL_CALDERON_GUARDIA_DESC"
+	picture = "gfx/leaders/COS/portrait_COS_rafael_angel_calderon.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Ricardo Fernández Peralta"
+	portrait_path = "gfx/leaders/COS/portrait_COS_ricardo_fernandez_peralta.dds"
+	traits = { trait_engineer }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
 1939.1.1 = {
 	set_politics = {
 		ruling_party = democratic
@@ -93,11 +137,11 @@ create_country_leader = {
 	create_country_leader = {
 		name = "León Cortés Castro"
 		desc = "POLITICS_LEON_CORTES_CASTRO_DESC"
-		picture = "gfx/leaders/South America/Portrait_South_America_Generic_navy_3.dds"
+		picture = "gfx/leaders/COS/portrait_COS_leon_cortes_castro.dds"
 		expire = "1965.1.1"
-		ideology = liberalism
+		ideology = conservatism
 		traits = {
-			#
+			fascist_sympathies
 		}
 	}
 }

@@ -76,6 +76,94 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Arturo Araujo"
+	desc = "POLITICS_ARTURO_ARAUJO_DESC"
+	picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Miguel Mármol"
+	desc = "POLITICS_MIGUEL_MARMOL_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Consejo de Gobierno Revolucionario"
+	desc = "POLITICS_CONSEJO_DE_GOBIERNO_REVOLUCIONARIO_DESC"
+	picture = "gfx/leaders/ELS/portrait_ELS_consejo_de_gobierno_revolucionario.dds"
+	expire = "1965.1.1"
+	ideology = oligarchism
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Maximiliano Hernández Martínez"
+	portrait_path = "gfx/leaders/ELS/portrait_els_maximiliano_hernandez_martinez.dds"
+	traits = { harsh_leader politically_connected }
+	skill = 3
+    attack_skill = 3
+    defense_skill = 3
+    planning_skill = 1
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Osmín Aguirre y Salinas"
+	portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+	traits = { hill_fighter }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Salvador Castaneda Castro"
+	portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+	traits = { trait_mountaineer }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Andrés Ignacio Menéndez"
+	portrait_path = "gfx/leaders/RAJ/Portrait_The_Raj_Army_Generic_2.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 3
+}
+
+create_navy_leader = {
+	name = "César Yanes Urías"
+	portrait_path = "gfx/leaders/ITA/Portrait_Italy_Generic_navy_1.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+
 1939.1.1 = {
 	set_politics = {
 		ruling_party = fascism
