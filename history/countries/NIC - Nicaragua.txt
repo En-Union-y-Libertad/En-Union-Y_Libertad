@@ -76,7 +76,7 @@ set_popularities = {
 create_country_leader = {
 	name = "Juan Bautista Sacasa"
 	desc = "POLITICS_JUAN_BAUTISTA_SACASA_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+	picture = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = {
@@ -84,12 +84,25 @@ create_country_leader = {
 	}
 }
 
-1939.1.1 = {
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1936.12.8"
-		election_frequency = 48
-		elections_allowed = no
+create_country_leader = {
+	name = "Mario Flores Ortiz"
+	desc = "POLITICS_JUAN_BAUTISTA_SACASA_DESC"
+	picture = "gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Luis Alberto Cabrales"
+	desc = "POLITICS_JUAN_BAUTISTA_SACASA_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_6.dds"
+	expire = "1965.1.1"
+	ideology = Falangism
+	traits = {
+		#
 	}
 }
 
@@ -103,3 +116,35 @@ create_country_leader = {
 		#
 	}
 }
+
+create_field_marshal = {
+	name = "Anastasio Somoza García"
+	portrait_path = "gfx/leaders/NIC/portrait_nic_anastasio_somoza_garcia.dds"
+	traits = { politically_connected infantry_officer }
+	skill = 3
+    attack_skill = 4
+    defense_skill = 1
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Francisco Parajón Montealegre"
+	portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+	traits = {  }
+	skill = 3
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.12.8"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+

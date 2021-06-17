@@ -2697,7 +2697,7 @@ focus_tree = {
 	
 	focus = {
 		id = URG_a_new_path
-		icon = GFX_goal_support_communism 
+		icon = GFX_URG_new_path
 		x = 6
 		y = 1
 		relative_position_id = URG_imprison_Terra

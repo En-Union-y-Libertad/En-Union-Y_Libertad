@@ -62,7 +62,8 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	fascism = 100
+	fascism = 70
+	neutrality = 30
 }
 
 create_country_leader = {
@@ -171,4 +172,8 @@ create_navy_leader = {
 		election_frequency = 48
 		elections_allowed = yes
 	}
+	set_popularities = {
+	fascism = 70
+	neutrality = 30
+}
 }

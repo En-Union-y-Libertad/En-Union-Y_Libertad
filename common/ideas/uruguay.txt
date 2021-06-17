@@ -727,7 +727,7 @@ ideas = {
 
 		ute = {
 			
-			picture = generic_electronics_concern_1
+			picture = URG_UTE
 
 			allowed = {
 				original_tag = URG
@@ -747,9 +747,9 @@ ideas = {
 
 	naval_manufacturer = { 
 	
-		aserradero_oriental = {
+		SRCA = {
 
-			picture = generic_naval_manufacturer_1
+			picture = URG_SCRA
 
 			allowed = {
 				original_tag = URG
@@ -763,7 +763,89 @@ ideas = {
 				naval_equipment = 0.15
 			}	
 
-			traits = { electronics_concern }
+			traits = { coastal_defence_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		URG_escuela_militar_aeronautica = {
+			
+			allowed = {
+				original_tag = URG
+			}
+			
+			picture = URG_escuela_militar_aeronautica
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		URG_PASMA = {
+			
+			allowed = {
+				original_tag = URG
+			}
+			
+			picture = URG_PASMA
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		URG_CIACA = {
+			
+			allowed = {
+				original_tag = URG
+			}
+			
+			picture = URG_CIACA
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		URG_Ford = {
+			
+			allowed = {
+				original_tag = URG
+			}
+			
+			picture = ford_motor_company
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
 		}
 	}		
 }

@@ -13841,8 +13841,8 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		16 = { is_controlled_by = URG }
-		16 = { is_owned_by = ARG }
+		12364 = { is_controlled_by = URG }
+		12364 = { is_owned_by = ARG }
 		ARG = { has_war_with = URG }
 		NOT = { has_global_flag = fall_of_buenos_aires_urg }
 	}

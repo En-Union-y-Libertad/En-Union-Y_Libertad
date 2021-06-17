@@ -3052,8 +3052,13 @@
  URG_safu:0 "Sociedad Anónima Fabril Uruguaya"
  URG_ute:0 "Usinas y Trasmisiones Eléctricas"
  URG_ute_desc:0 "La Administración Nacional de Usinas y Trasmisiones Eléctricas,​ más conocida por sus siglas UTE, es la compañía estatal de producción y abastecimiento de energía eléctrica de Uruguay. Fue creada el 21 de octubre de 1912, cuando se promulgó una ley que dio origen a esta empresa pública,​ en el marco del impulso reformista y de modernización de los sucesivos gobiernos batllistas."
- URG_aserradero_oriental:0 "Aserradero Oriental"
- URG_ancap_trait:0 "Compañía Estatal" 
+ URG_SRCA:0 "SRCA"
+ URG_SRCA_desc:0 "The Servicio de Construcciones, Reparaciones y Armamento es la rama de la armada encargada de la construccion y el mantenimiento de los buques nacionales. Tambien maneja los astilleros nacionales."
+ URG_ancap_trait:0 "Compañía Estatal"
+ URG_escuela_militar_aeronautica:0 "Escuela Militar de Aeronáutica"
+ URG_PASMA:0 "PESMA"
+ URG_CIACA:0 "CIACA"
+ URG_Ford:0 "Ford Uruguay" 
  
  
  # Bolivia
