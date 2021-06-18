@@ -15,8 +15,9 @@ state={
 
 		}
 		add_core_of = BRA
+		add_core_of = SUL
 		victory_points = {
-			10447 3 
+			10447 10
 		}
 		victory_points = {
 			13386 3 

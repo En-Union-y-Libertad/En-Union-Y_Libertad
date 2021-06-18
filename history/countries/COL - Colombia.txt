@@ -126,9 +126,31 @@ create_country_leader = {
 create_country_leader = {
 	name = "Mariano Ospina Pérez"
 	desc = "POLITICS_MARIANO_OSPINA_PEREZ_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+	picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
 	expire = "1965.1.1"
 	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Eutiquio Timoté"
+	desc = "POLITICS_MARIANO_EUTIQUIO_TIMOTE_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Laureano Gómez"
+	desc = "POLITICS_MARIANO_EUTIQUIO_TIMOTE_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
 	traits = {
 		#
 	}

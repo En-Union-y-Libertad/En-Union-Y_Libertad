@@ -229,6 +229,16 @@ spriteTypes = {
 		name = "GFX_idea_ARG_AFNE"
 		texturefile = "gfx/interface/ideas/ARG_AFNE.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_fapesa"
+		texturefile = "gfx/interface/ideas/ARG_fapesa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_UIA"
+		texturefile = "gfx/interface/ideas/ARG_UIA.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_ARG_arsenal_naval_puerto_belgrano"
@@ -283,6 +293,31 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_URG_ancap"
 		texturefile = "gfx/interface/ideas/URG_ancap.dds"
+	}
+
+    spriteType = {
+		name = "GFX_idea_URG_escuela_militar_aeronautica"
+		texturefile = "gfx/interface/ideas/URG_escuela_militar_aeronautica.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_URG_SCRA"
+		texturefile = "gfx/interface/ideas/URG_SCRA.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_URG_CIACA"
+		texturefile = "gfx/interface/ideas/URG_CIACA.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_URG_PASMA"
+		texturefile = "gfx/interface/ideas/URG_PESMA.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_URG_UTE"
+		texturefile = "gfx/interface/ideas/URG_UTE.dds"
 	}
 	
 	spriteType = {

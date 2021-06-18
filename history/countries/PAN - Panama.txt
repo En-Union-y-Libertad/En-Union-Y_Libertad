@@ -72,10 +72,76 @@ create_country_leader = {
 	desc = "POLITICS_HARMODIO_ARIAS_MADRID_DESC"
 	picture = "GFX_portrait_panama_harmodio_arias_madrid"
 	expire = "1965.1.1"
-	ideology = liberalism
+	ideology = conservatism
 	traits = {
 		#
 	}
+}
+
+create_country_leader = {
+	name = "Cristóbal Ladislao"
+	desc = "POLITICS_CRISTOBAL_LADISLAO_DESC"
+	picture = "gfx/leaders/PAN/portrait_PAN_Cristobal_Ladislao.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Arnulfo Arias Madrid"
+	desc = "POLITICS_ARNULFO_ARIAS_MADRID_DESC"
+	picture = "gfx/leaders/PAN/portrait_PAN_Arnulfo_Arias_Madrid.dds"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Enrique A. Jiménez"
+	desc = "POLITICS_ARNULFO_ARIAS_MADRID_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_6.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+	
+	}
+}
+
+create_corps_commander = { 
+	name = "Nicanor de Obarrio"
+	portrait_path = "gfx/leaders/PAN/portrait_PAN_Nicanor_de_Obarrio.dds"
+	traits = { politically_connected }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Manuel Quintero"
+	portrait_path = "gfx/leaders/PAN/portrait_PAN_Manuel_Quintero.dds"
+	traits = { old_guard homeland_connoisseur }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Esteban Huertas"
+	portrait_path = "gfx/leaders/South America/portrait_UL_South_America_Generic_army_1.dds"
+	traits = { brilliant_strategist }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
 }
 
 1939.1.1 = {
@@ -92,17 +158,6 @@ create_country_leader = {
 		picture = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
 		expire = "1965.1.1"
 		ideology = liberalism
-		traits = {
-			#
-		}
-	}
-
-	create_country_leader = {
-		name = "July Portocarrero"
-		desc = "POLITICS_JULY_PORTOCARRERO_DESC"
-		picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
-		expire = "1965.1.1"
-		ideology = marxism
 		traits = {
 			#
 		}

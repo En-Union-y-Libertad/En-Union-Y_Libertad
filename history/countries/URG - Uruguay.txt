@@ -242,6 +242,17 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
+	name = "Alfredo R. Campos"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Generic_land_3.dds"
+	traits = { engineer }
+	skill = 2
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
 	name = "Angel Cambior"
 	portrait_path = "gfx/leaders/URG/r56_portrait_URG_Angel_Camblor.dds"
 	traits = { urban_assault_specialist }

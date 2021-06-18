@@ -708,3 +708,13 @@ SHL = {
 	color = rgb { 51 51 255 }
 	color_ui = rgb { 51 51 255 }
 }
+
+PAT = {
+	color = rgb { 149 45 102 }
+	color_ui = rgb { 194 59 133 }
+}
+
+SUL = {
+	color = rgb { 40 190 105 }
+	color_ui = rgb { 40 190 105 }
+}

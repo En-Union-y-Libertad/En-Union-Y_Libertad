@@ -59,31 +59,103 @@ set_convoys = 10
 }
 
 set_politics = {
-	ruling_party = democratic
-	last_election = "1932.10.28"
+	ruling_party = neutrality
+	last_election = "1932.10.28" 
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 100
+	democratic = 40
+	neutrality = 59
+	communism = 1
 }
 
-create_country_leader = {
+create_country_leader = { 
 	name = "Tiburcio Carías Andino"
 	desc = "POLITICS_TIBURCIO_CARIAS_ANDINO_DESC"
 	picture = "GFX_portrait_honduras_portrait_tiburcio_carias_andino"
 	expire = "1965.1.1"
-	ideology = conservatism
+	ideology = despotism
 	traits = {
 		#
 	}
 }
 
+create_country_leader = {
+	name = "Manuel Calix Herrera"
+	desc = "POLITICS_MANUEL_CALIX_HERRERA_DESC"
+	picture = "gfx/leaders/South America/portrait_UL_South_America_political_young.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "José Ángel Zúñiga"
+	desc = "POLITICS_JOSE_ANGEL_ZUÑIGA_DESC"
+	picture = "gfx/leaders/South America/portrait_UL_South_America_political_3.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Tiburcio Carías Andino"
+	GFX = "GFX_portrait_honduras_portrait_tiburcio_carias_andino"
+	traits = { old_guard politically_connected }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Abel Villanueva Villacorta"
+	portrait_path = "gfx/leaders/HON/portrait_HON_abel_villanueva_villacorta.dds"
+	traits = { trait_cautious }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Mateo Ortega"
+	portrait_path = "gfx/leaders/South America/portrait_UL_South_America_Generic_army_1.dds"
+	traits = { jungle_rat }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_navy_leader = {
+	name = "Williams Calderon"
+	portrait_path = "gfx/leaders/South America/Portrait_UL_South_America_Generic_navy_1.dds"
+	traits = { bold }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
 1939.1.1 = {
 	set_politics = {
-		ruling_party = democratic
+		ruling_party = neutrality
 		last_election = "1936.3.28"
 		election_frequency = 48
-		elections_allowed = yes
+		elections_allowed = no #Tiburcío became an "official" dictator
+	}
+	set_popularities = {
+		democratic = 25
+		neutrality = 75
 	}
 }
