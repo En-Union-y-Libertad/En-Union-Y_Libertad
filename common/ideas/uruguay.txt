@@ -681,7 +681,7 @@ ideas = {
 	}
 	industrial_concern = {
 		
-		ancap_concern = {
+		URG_ancap_concern = {
 			
             picture = URG_ancap
 
@@ -707,7 +707,7 @@ ideas = {
 			}
 		}
 		
-		safu = {
+		URG_safu = {
 			picture = generic_industrial_concern_1
 
 			allowed = {
@@ -725,7 +725,7 @@ ideas = {
 			traits = { industrial_concern }
 		}
 
-		ute = {
+		URG_ute = {
 			
 			picture = URG_UTE
 
@@ -747,7 +747,7 @@ ideas = {
 
 	naval_manufacturer = { 
 	
-		SRCA = {
+		URG_SRCA = {
 
 			picture = URG_SCRA
 
@@ -839,7 +839,7 @@ ideas = {
 			picture = ford_motor_company
 			
 			research_bonus = {
-				infantry_weapons = 0.15
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }

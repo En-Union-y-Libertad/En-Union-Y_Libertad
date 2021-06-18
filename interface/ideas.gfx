@@ -229,6 +229,16 @@ spriteTypes = {
 		name = "GFX_idea_ARG_AFNE"
 		texturefile = "gfx/interface/ideas/ARG_AFNE.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_fapesa"
+		texturefile = "gfx/interface/ideas/ARG_fapesa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_UIA"
+		texturefile = "gfx/interface/ideas/ARG_UIA.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_ARG_arsenal_naval_puerto_belgrano"
