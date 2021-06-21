@@ -2845,7 +2845,7 @@ ideas = {
 			traits = { war_industrialist }
 		}
 		
-		ARG_enzo_bordabehere = {
+		ARG_leopoldo_melo = {
 			
 			picture = ARG_minister_enzo_bordabehere
 			

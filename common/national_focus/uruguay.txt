@@ -197,6 +197,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes 
 				}
+				847 = {
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 1
@@ -205,6 +206,7 @@ focus_tree = {
 				add_resource = {
 					type = oil
 					amount = 2
+				}
 				}
 			}
 		}
