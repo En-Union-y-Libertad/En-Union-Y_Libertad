@@ -886,3 +886,12 @@
  STATE_885:0 "La Araucanía"
  STATE_886:0 "Mapari"
  STATE_887:0 "Yaguas"
+ STATE_888:0 "Bluefields"
+ STATE_889:0 "Matagalpa"
+ STATE_890:0 "Izabal"
+ STATE_891:0 "Quetzaltenango"
+ STATE_892:0 "Petén"
+ STATE_893:0 "Colón"
+ STATE_894:0 "San Pedro Sula"
+ STATE_895:0 "San Jose de David"
+
