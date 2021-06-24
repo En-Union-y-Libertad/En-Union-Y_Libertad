@@ -3826,3 +3826,9 @@
  perubolivia.1.b:0 "Germán Busch"
  perubolivia.1.c:0 "Luis A. Flores"
  perubolivia.1.e:0 "Manuel Prado Ugarteche"
+
+ ### Nicaragua ###
+ nicaragua.1.t:0 "The Army makes a Coup d'Etat!"
+ nicaragua.1.d:0 "Military units under the banner of the Guardia Nacional have begun rising up all throught Nicaragua, with the intent of deposing [Root.GetLeader]'s weak government. A battle on the outskirts of Managua between the forces still loyal to our cause and the forces loyal to the army has begun. As Managua is our only loyal city, the defeat of our forces would mean the collapse of all resistence against the army."
+ nicaragua.1.a:0 "The Guardia Nacional is victorious!"
+ nicaragua.1.b:0 "The Loyalists hold the line!"

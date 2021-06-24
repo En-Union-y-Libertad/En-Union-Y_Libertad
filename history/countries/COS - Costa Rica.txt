@@ -1,5 +1,8 @@
 ﻿capital = 316
-add_ideas = monroe_doctrine_idea
+add_ideas = {
+	monroe_doctrine_idea
+	Central_banana_republic
+}
 oob = "COS_1936"
 
 # Starting tech
@@ -62,8 +65,9 @@ set_politics = {
 }
 
 set_popularities = {
-	democratic = 98
+	democratic = 93
 	fascism = 2
+	communism = 5
 }
 
 create_country_leader = {
@@ -73,16 +77,16 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = {
-		#
+		cos_intellectual_dictator
 	}
 }
 
 create_country_leader = {
-	name = "Herbert Knöhr"
+	name = "Max Koberg Bolandi"
 	desc = "POLITICS_HERBERT_KNOHR_DESC"
 	picture = "gfx/leaders/South America/portrait_UL_South_America_political_2.dds"
 	expire = "1965.1.1"
-	ideology = nazism
+	ideology = fascism_ideology
 	traits = {
 		#
 	}
@@ -130,8 +134,8 @@ create_corps_commander = {
 	}
 
 	set_popularities = {
-		democratic = 95
-		communism = 5
+		democratic = 90
+		communism = 10
 	}
 
 	create_country_leader = {

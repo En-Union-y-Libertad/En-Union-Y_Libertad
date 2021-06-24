@@ -901,3 +901,18 @@
  PRU_purchase_convoys:0 "Purchase Convoys"
  PRU_discuss_investment_possibilities_with_FROM:0 "Discuss Investment Opportunities With [FROM.GetNameDef]"
  PRU_south_american_investment:0 "South American Investment Opportunities" 
+
+ #Central America
+ central_UFC_investment_category:0 "UFC Investments"
+ central_light_civilian_investment:0 "Request Small Investment in Civilian Industry"
+ central_heavy_civilian_investment:0 "Request Large Investment in Civilian Industry"
+ central_light_military_investment:0 "Request Small Investment in Arms Industry"
+ central_heavy_military_investment:0 "Request Large Investment in Arms Industry"
+ central_infrastructure_investment:0 "Request Investment in Infrastructure"
+ central_communist_revolt_category:0 "Communist Revolt"
+ central_communist_revolt:0 "Communist Revolt"
+ central_american_intervention_category:0 "American Intervention"
+ central_american_intervention_category_desc:0 "Following our decision to kick the fruit companies out of the country, the United States, feeling that their trade is being threatened, has begun asking for compensation due to the profit loss these companies will face, and the US too as a result. \n\nCurrent percentage of the requested compensation we have payed back:  [?central_american_concession_variable|G0]§G%§!"
+ central_american_intervention:0 "American Intervention"
+ central_american_concession_25:0 "Pay back §G25%§! of the compensation"
+ central_american_concession_50:0 "Pay back §G50%§! of the compensation" 

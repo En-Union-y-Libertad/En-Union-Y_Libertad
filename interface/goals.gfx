@@ -3896,5 +3896,58 @@ spriteTypes = {
 	spriteType = {
 		name = "PRU_goal_liberal_path"
 		texturefile = "gfx/interface/goals/my_additions/PRU_liberal_path.dds"
-	}			
+	}	
+
+	#Central America
+
+	spriteType = {
+		name = "GFX_focus_central_cooperate_companies"
+		texturefile = "gfx/interface/goals/focus_central_cooperate_companies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_suppress_unions"
+		texturefile = "gfx/interface/goals/focus_central_suppress_unions.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_ufc_investment"
+		texturefile = "gfx/interface/goals/focus_central_ufc_investment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_subdue_peasantry"
+		texturefile = "gfx/interface/goals/focus_central_subdue_peasantry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_curtail_influence"
+		texturefile = "gfx/interface/goals/focus_central_curtail_influence.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_depose_companies"
+		texturefile = "gfx/interface/goals/focus_central_depose_companies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_expand_healthcare"
+		texturefile = "gfx/interface/goals/focus_central_expand_healthcare.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_industrial_independence"
+		texturefile = "gfx/interface/goals/focus_central_industrial_independence.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_industrial_takeover"
+		texturefile = "gfx/interface/goals/focus_central_industrial_takeover.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_invest_businesses"
+		texturefile = "gfx/interface/goals/focus_central_invest_businesses.dds"
+	}
+
 }

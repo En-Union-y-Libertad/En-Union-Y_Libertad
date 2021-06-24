@@ -25,6 +25,8 @@
  PBC_socialist_tendencies_2:0 "Tendencias socialistas"
  PBC_fascist_tendencies:0 "Tendencias fascistas"
  PBC_democratic_tendencies:0 "Tendencias democráticas"
+ COS_intellectual_dictator:0 "Dictador Intelectual"
+ generic_army_connections:0 "Conexiones en el Ejército"
  
 
  cc_leader:0 "General"

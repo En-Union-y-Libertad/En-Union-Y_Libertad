@@ -1,0 +1,36 @@
+﻿division_template = {
+	name = "División de Infantería"		
+	division_names_group = SPAN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Ejercito Costarricense"
+		location = 13087 # San José
+		division_template = "División de Infantería"
+		start_experience_factor = 0
+		start_equipment_factor = 0.1
+
+	}
+
+	##### No Notable Naval Forces #####
+}
+
+##### No notable armed forces #####
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "COS"
+		}
+		requested_factories = 1
+		progress = 0.22
+		efficiency = 100
+	}
+}

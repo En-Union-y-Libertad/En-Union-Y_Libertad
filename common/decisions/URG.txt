@@ -361,7 +361,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = URG_guiding_company
+				has_country_flag = UFC_currently_investing
 			}
 		}
 		
@@ -374,11 +374,11 @@ URG_guide_the_companies = {
 		days_remove = 80
 		
 		complete_effect = {
-			set_country_flag = URG_guiding_company
+			set_country_flag = UFC_currently_investing
 		}
 		
 		remove_effect = {
-			clr_country_flag = URG_guiding_company
+			clr_country_flag = UFC_currently_investing
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -401,7 +401,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = URG_guiding_company
+				has_country_flag = UFC_currently_investing
 			}
 		}
 		
@@ -414,11 +414,11 @@ URG_guide_the_companies = {
 		days_remove = 145
 		
 		complete_effect = {
-			set_country_flag = URG_guiding_company
+			set_country_flag = UFC_currently_investing
 		}
 		
 		remove_effect = {
-			clr_country_flag = URG_guiding_company
+			clr_country_flag = UFC_currently_investing
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -441,7 +441,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = URG_guiding_company
+				has_country_flag = UFC_currently_investing
 			}
 		}
 		
@@ -454,11 +454,11 @@ URG_guide_the_companies = {
 		days_remove = 65
 		
 		complete_effect = {
-			set_country_flag = URG_guiding_company
+			set_country_flag = UFC_currently_investing
 		}
 		
 		remove_effect = {
-			clr_country_flag = URG_guiding_company
+			clr_country_flag = UFC_currently_investing
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -481,7 +481,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = URG_guiding_company
+				has_country_flag = UFC_currently_investing
 			}
 		}
 		
@@ -494,11 +494,11 @@ URG_guide_the_companies = {
 		days_remove = 110
 		
 		complete_effect = {
-			set_country_flag = URG_guiding_company
+			set_country_flag = UFC_currently_investing
 		}
 		
 		remove_effect = {
-			clr_country_flag = URG_guiding_company
+			clr_country_flag = UFC_currently_investing
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -521,7 +521,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = URG_guiding_company
+				has_country_flag = UFC_currently_investing
 			}
 		}
 		
@@ -534,11 +534,11 @@ URG_guide_the_companies = {
 		days_remove = 60
 		
 		complete_effect = {
-			set_country_flag = URG_guiding_company
+			set_country_flag = UFC_currently_investing
 		}
 		
 		remove_effect = {
-			clr_country_flag = URG_guiding_company
+			clr_country_flag = UFC_currently_investing
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -561,7 +561,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = URG_guiding_company
+				has_country_flag = UFC_currently_investing
 			}
 		}
 		
@@ -574,11 +574,11 @@ URG_guide_the_companies = {
 		days_remove = 40
 		
 		complete_effect = {
-			set_country_flag = URG_guiding_company
+			set_country_flag = UFC_currently_investing
 		}
 		
 		remove_effect = {
-			clr_country_flag = URG_guiding_company
+			clr_country_flag = UFC_currently_investing
 			random_owned_controlled_state = {
 				add_building_construction = {
 					type = infrastructure

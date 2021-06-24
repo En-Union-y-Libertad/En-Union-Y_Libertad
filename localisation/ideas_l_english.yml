@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  communist_menace:0 "Communist Menace"
  monroe_doctrine_idea:0 "The Monroe Doctrine"
  monroe_doctrine_idea_desc:0 "The Monroe Doctrine is the policy by the United States that warns European Nations to not declare war or colonize any Central or South American nations. Due to this, South and Central American nations should not join European alliances or work with Europeans, much in the same way Europeans can't exploit any Latin American nation."
@@ -3170,4 +3170,23 @@ l_english:
  PBC_war_of_independence:0 "Our War of Independence"
  PBC_war_of_independence_desc:0 "These damn bastards want us dead yet again, they don't want our union to work. They are egotistical and scared that we will be succesful, and to their unpleasent surprise, WE WILL! No matter how many of our men we will lose, we have to win this war. Our predecessors tried it once and failed, but this time we will succeed!"
  
- 
+ # Nicaragua
+ nic_rebellious_army:0 "Rebellious Army"
+
+ # Central America
+ central_banana_republic:0 "Banana Republic"
+ central_banana_republic_desc:0 "In political science, the term banana republic describes a politically unstable country with an economy dependent upon the exportation of a limited-resource product, such as bananas or minerals."
+ central_banana_republic_cooperate:0 "Cooperating with the Fruit Companies"
+ central_banana_republic_cooperate_desc:0 "This government has begun making concessions to the fruit companies, even if it means sacrificing civil liberties and rights. However, this action has begun stirring the socialist movements, who have begun to openly oppose the government."
+ central_banana_republic_cooperate2:0 "Union Supression"
+ central_banana_republic_cooperate2_desc:0 "Due to the socialist revolots, this government has deemed necessary to begin prohibiting all types of unions."
+ central_banana_republic_i1:0 "Land Nationalisation"
+ central_banana_republic_i1:0 "This government has begun nationalising the lands owned by the private fruit companies. While this move will begin shifting public support in favor of the government, the influencial companies will make everything they can to block any propossals of the government."
+ kicking_the_companies:0 "Deposing the Companies"
+ kicking_the_companies_desc:0 "The fruit companies are being kicked out of [Root.GetName]. This has gained the government the support of the people but also angered the elites, who are using using bribes and legal loopholes to cause as much problems for the government as possible."
+ central_banana_republic_cooperate3:0 "Media Supression"
+ central_banana_republic_cooperate3_desc:0 "In an effort to combat discontent within the popualace, this government has begun shutting down independent news stations and replaicing them with state-owned ones."
+ central_banana_republic_cooperate4:0 "Revolutionaries Quelled"
+ central_banana_republic_cooperate4_desc:0 "Due to the vast anti-revolutionary reforms of the government, the [Root.GetCommunistParty] has all but failed and gone underground. With no opposition remaining, this government has begun putting all efforts into turning [Root.GetName] into the perfect corporatocracy"
+ central_banana_republic_cooperate5:0 "Banana Economy"
+ central_banana_republic_cooperate5_desc:0 "This government has turned into a corporatocracy, with most political efforts being to secure the influence and profitability of the fruit companies over the welfare of the people"
