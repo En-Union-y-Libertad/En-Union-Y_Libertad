@@ -193,6 +193,16 @@ on_actions = {
                 complete_national_focus = ARG_develop_the_capital
             }
         }
+		effect = {
+			#Sul puppet of Brazil
+			if = {
+				limit = { 
+					original_tag = SUL  
+					FROM = { original_tag = BRA }
+				}
+				set_cosmetic_tag = SUL_BRA
+			}
+		}
     }
 }
 

@@ -28,12 +28,6 @@ on_actions = {
 		}
 	}
 
-	#Sul puppet of Brazil
-	if = {
-        limit = { original_tag = SUL  FROM = { original_tag = BRA }}
-        set_cosmetic_tag = SUL_BRA
-        }
-
 	# Ace pilots
 	# country, FROM = ace
 	on_ace_promoted = {

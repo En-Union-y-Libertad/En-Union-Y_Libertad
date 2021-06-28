@@ -24,7 +24,7 @@ focus_tree = {
 		id = central_industrial_effort
 		text = central_industrial_effort
 		icon = GFX_goal_generic_production
-		cost = 5,00
+		cost = 5
 		x = 9
 		y = 0
 			search_filters = { FOCUS_FILTER_INDUSTRY  FOCUS_FILTER_RESEARCH }
@@ -42,7 +42,7 @@ focus_tree = {
 		id = central_cooperate_companies
 		text = central_cooperate_companies
 		icon = GFX_focus_central_cooperate_companies
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_industrial_effort
 		}
@@ -68,7 +68,7 @@ focus_tree = {
 		id = central_repress_unions
 		text = central_repress_unions
 		icon = GFX_focus_central_suppress_unions
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_cooperate_companies
 		}
@@ -90,7 +90,7 @@ focus_tree = {
 		id = central_UFC_investment
 		text = central_UFC_investment
 		icon = GFX_focus_central_ufc_investment
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_cooperate_companies
 		}
@@ -111,7 +111,7 @@ focus_tree = {
 		id = central_supress_media
 		text = central_supress_media
 		icon = GFX_goal_continuous_suppression
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_repress_unions
 		}
@@ -137,7 +137,7 @@ focus_tree = {
 		id = central_accept_bribes
 		text = central_accept_bribes
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_cooperate_companies
 		}
@@ -158,7 +158,7 @@ focus_tree = {
 		id = central_UMC_in_government
 		text = central_UMC_in_government
 		icon = GFX_focus_hol_the_foundations_of_defense
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_UFC_investment
 		}
@@ -180,7 +180,7 @@ focus_tree = {
 		id = central_subdue_peasants
 		text = central_subdue_peasants
 		icon = GFX_focus_central_subdue_peasantry
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_supress_media
 		}
@@ -205,7 +205,7 @@ focus_tree = {
 		id = central_nationalise_land
 		text = central_nationalise_land
 		icon = GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_industrial_effort
 		}
@@ -251,7 +251,7 @@ focus_tree = {
 		id = central_concession_fruit_company
 		text = central_concession_fruit_company
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_nationalise_land
 		}
@@ -266,7 +266,7 @@ focus_tree = {
 		id = central_curtial_influence
 		text = central_curtial_influence
 		icon = GFX_focus_central_curtail_influence
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_concession_fruit_company
 		}
@@ -278,7 +278,7 @@ focus_tree = {
 		id = central_invest_munitions_plant
 		text = central_invest_munitions_plant
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_concession_fruit_company
 		}
@@ -290,7 +290,7 @@ focus_tree = {
 		id = central_buy_industrial_centers
 		text = central_buy_industrial_centers
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_concession_fruit_company
 		}
@@ -302,7 +302,7 @@ focus_tree = {
 		id = central_deal_with_fruit_companies
 		text = central_deal_with_fruit_companies
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_invest_munitions_plant
 		}
@@ -317,7 +317,7 @@ focus_tree = {
 		id = central_depose_companies
 		text = central_depose_companies
 		icon = GFX_focus_central_depose_companies
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_nationalise_land
 		}
@@ -340,7 +340,7 @@ focus_tree = {
 		id = central_distribute_unused_land
 		text = central_distribute_unused_land
 		icon = GFX_goal_continuous_increase_nu
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_concession_fruit_company
 			focus = central_depose_companies
@@ -356,7 +356,7 @@ focus_tree = {
 		id = central_expand_railways
 		text = central_expand_railways
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_distribute_unused_land
 		}
@@ -397,7 +397,7 @@ focus_tree = {
 		id = central_deal_with_corruption
 		text = central_deal_with_corruption
 		icon = GFX_ARG_clamp_down
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_depose_companies
 		}
@@ -412,7 +412,7 @@ focus_tree = {
 		id = central_industrial_take_over
 		text = central_industrial_take_over
 		icon = GFX_focus_central_industrial_takeover
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_depose_companies
 		}
@@ -455,7 +455,7 @@ focus_tree = {
 		id = central_industrial_independence
 		text = central_industrial_independence
 		icon = GFX_focus_central_industrial_independence
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_deal_with_corruption
 		}
@@ -470,7 +470,7 @@ focus_tree = {
 		id = central_modern_industry
 		text = central_modern_industry
 		icon = GFX_focus_generic_industry_3
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_expand_railways
 		}
@@ -488,7 +488,7 @@ focus_tree = {
 		id = central_invest_small_businesses
 		text = central_invest_small_businesses
 		icon = GFX_focus_central_invest_businesses
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_banana_economy
 		}
@@ -500,7 +500,7 @@ focus_tree = {
 		id = central_extend_healthcare_system
 		text = central_extend_healthcare_system
 		icon = GFX_focus_central_expand_healthcare
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_modern_industry
 		}
@@ -513,7 +513,7 @@ focus_tree = {
 		id = central_concessions_to_americans
 		text = central_concessions_to_americans
 		icon = GFX_focus_chi_mission_to_the_us
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_depose_companies
 		}
@@ -523,12 +523,6 @@ focus_tree = {
 			effect_tooltip = {
 				custom_effect_tooltip = central_concessions_to_americans_tt
 			}
-			hidden_effect = {
-                set_variable = { central_american_concession_variable = 0 }
-				ROOT = {
-				    set_country_flag = central_concessions_to_americans_flag
-				}
-			}
 		}	
     }
 
@@ -536,7 +530,7 @@ focus_tree = {
 		id = central_create_industrial_park
 		text = central_create_industrial_park
 		icon = GFX_focus_generic_industry_2
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_invest_small_businesses
 			focus = central_extend_healthcare_system
@@ -552,7 +546,7 @@ focus_tree = {
 		id = central_banana_economy
 		text = central_banana_economy
 		icon = GFX_focus_r56_goal_generic_stock_exchange
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_subdue_peasants
 		}
@@ -570,7 +564,7 @@ focus_tree = {
 		id = central_education_budget
 		text = central_education_budget
 		icon = GFX_focus_research
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_banana_economy
 			focus = central_modern_industry
@@ -581,7 +575,7 @@ focus_tree = {
 	focus = {
 		id = central_reform_army
 		icon = GFX_focus_chi_army_reform
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_army_effort
 		}
@@ -595,7 +589,7 @@ focus_tree = {
 	focus = {
 		id = central_purchase_old_equipment
 		icon = GFX_focus_secret_rearmament
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_reform_army
 		}
@@ -606,7 +600,7 @@ focus_tree = {
 	focus = {
 		id = central_special_forces
 		icon = GFX_goal_generic_secret_weapon
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_purchase_old_equipment
 		}
@@ -617,7 +611,7 @@ focus_tree = {
 	focus = {
 		id = central_artillery_production
 		icon = GFX_goal_generic_army_artillery2
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_special_forces
 		}
@@ -632,7 +626,7 @@ focus_tree = {
 	focus = {
 		id = central_military_academies
 		icon = GFX_goal_generic_army_doctrines
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_reform_army
 		}
@@ -643,7 +637,7 @@ focus_tree = {
 	focus = {
 		id = central_acquire_old_cannons
 		icon = GFX_goal_generic_army_artillery
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_purchase_old_equipment
 		}
@@ -657,7 +651,7 @@ focus_tree = {
 	focus = {
 		id = central_employ_graduates
 		icon = GFX_focus_usa_build_the_pentagon
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_military_academies
 		}
@@ -668,7 +662,7 @@ focus_tree = {
 	focus = {
 		id = central_develop_guns
 		icon = GFX_goal_generic_small_arms
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_acquire_old_cannons
 			focus = central_special_forces
@@ -685,7 +679,7 @@ focus_tree = {
 	focus = {
 		id = central_improve_high_command
 		icon = GFX_goal_generic_cavalry
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_employ_graduates
 		}
@@ -700,7 +694,7 @@ focus_tree = {
 	focus = {
 		id = central_motorize_army
 		icon = GFX_goal_generic_army_motorized
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_artillery_production
 			focus = central_improve_high_command
@@ -713,7 +707,7 @@ focus_tree = {
 	focus = {
 		id = central_acquire_new_equipment
 		icon = GFX_goal_generic_axis_build_infantry
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_artillery_production
 			focus = central_develop_guns
@@ -729,7 +723,7 @@ focus_tree = {
 	focus = {
 		id = create_updated_tactics
 		icon = GFX_goal_demand_sudetenland
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_artillery_production
 			focus = central_develop_guns
@@ -745,7 +739,7 @@ focus_tree = {
 	focus = {
 		id = central_purchase_outdated_tanks
 		icon = GFX_goal_generic_army_tanks
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_acquire_new_equipment
 			focus = create_updated_tactics
@@ -760,7 +754,7 @@ focus_tree = {
 	focus = {
 		id = central_disband_army
 		icon = GFX_goal_continuous_increase_nu
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_army_effort
 		}
@@ -774,7 +768,7 @@ focus_tree = {
 	focus = {
 		id = central_disarmed_nation
 		icon = GFX_goal_continuous_boost_freedom
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_disband_army
 		}
@@ -788,7 +782,7 @@ focus_tree = {
 	focus = {
 		id = central_diplomatic_effort
 		icon = GFX_goal_generic_improve_relations
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_disarmed_nation
 		}
@@ -799,7 +793,7 @@ focus_tree = {
 	focus = {
 		id = central_true_pacifism
 		icon = GFX_focus_smiling_buddha
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_disarmed_nation
 		}
@@ -810,7 +804,7 @@ focus_tree = {
 	focus = {
 		id = central_create_guard
 		icon = GFX_goal_generic_defence
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_disband_army
 		}
@@ -824,7 +818,7 @@ focus_tree = {
 	focus = {
 		id = central_fund_police
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_disarmed_nation
 			focus = central_create_guard
@@ -836,7 +830,7 @@ focus_tree = {
 	focus = {
 		id = central_non_agression_pact
 		icon = GFX_goal_generic_major_alliance
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_diplomatic_effort
 		}
@@ -853,7 +847,7 @@ focus_tree = {
 	focus = {
 		id = central_reserve_forces
 		icon = GFX_goal_generic_military_sphere
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_create_guard
 		}
@@ -864,7 +858,7 @@ focus_tree = {
 	focus = {
 		id = central_public_forces
 		icon = GFX_goal_generic_allies_build_infantry
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_fund_police
 		}
@@ -881,7 +875,7 @@ focus_tree = {
 	focus = {
 		id = central_international_support
 		icon = GFX_goal_generic_trade
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_non_agression_pact
 			focus = central_public_forces
@@ -896,7 +890,7 @@ focus_tree = {
 	focus = {
 		id = central_army_effort
 		icon = GFX_focus_generic_combined_arms
-		cost = 10,00
+		cost = 10
 		x = 33
 		y = 0
 
@@ -904,7 +898,7 @@ focus_tree = {
 	focus = {
 		id = central_train_guard
 		icon = GFX_goal_continuous_reduce_training_time
-		cost = 10,00
+		cost = 10
 		prerequisite = {
 			focus = central_create_guard
 		}

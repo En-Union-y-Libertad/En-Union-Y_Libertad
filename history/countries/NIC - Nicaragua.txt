@@ -14,6 +14,7 @@ set_technology = {
 	early_bomber = 1
 }
 set_country_flag = monroe_doctrine
+set_variable = { NIC_central_american_concession_variable = 0 }
 set_war_support = 0.1
 set_convoys = 10
 

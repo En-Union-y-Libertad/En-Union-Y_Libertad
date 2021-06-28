@@ -28,13 +28,6 @@ central_UFC_investment_category = {
 central_communist_revolt_category = {	
 	priority = 20
 	icon = GFX_decision_category_generic_industry 
-	
-    cancel_trigger = {
-			OR = {
-				has_government = communism
-                has_completed_focus = central_subdue_peasants
-		    }
-		}
 
 	allowed = {
 	    OR = {
@@ -51,6 +44,9 @@ central_communist_revolt_category = {
 			    has_government = communism
 		    }
 	    }
+		NOT = {
+			has_completed_focus = central_subdue_peasants
+		}
     }
 	
 	visible = {
@@ -60,6 +56,9 @@ central_communist_revolt_category = {
 			    has_government = communism
 		    }
 	    }
+		NOT = {
+			has_completed_focus = central_subdue_peasants
+		}
 	}	
 }
 
@@ -79,10 +78,43 @@ central_american_intervention_category = {
     }
 	
 	visible = {
-		check_variable = { central_american_concession_variable < 100 }
-		OR = {
-			has_completed_focus = central_depose_companies
+		if = {
+			limit = {
+				original_tag = PAN 
+			}
+			check_variable = { PAN_central_american_concession_variable < 100 }
 		}
+		if = {
+			limit = {
+				original_tag = COS 
+			}
+			check_variable = { COS_central_american_concession_variable < 100 }
+		}
+		if = {
+			limit = {
+				original_tag = NIC 
+			}
+			check_variable = { NIC_central_american_concession_variable < 100 }
+		}
+		if = {
+			limit = {
+				original_tag = HON 
+			}
+			check_variable = { HON_central_american_concession_variable < 100 }
+		}
+		if = {
+			limit = {
+				original_tag = ELS 
+			}
+			check_variable = { ELS_central_american_concession_variable < 100 }
+		}
+		if = {
+			limit = {
+				original_tag = GUA 
+			}
+			check_variable = { GUA_central_american_concession_variable < 100 }
+		}
+		has_completed_focus = central_depose_companies
 		NOT = {
 			has_country_flag = central_american_concession_failed
 		}

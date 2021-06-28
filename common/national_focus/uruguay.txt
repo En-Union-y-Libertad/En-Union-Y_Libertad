@@ -3981,14 +3981,9 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			every_other_country = {
-				limit = {
-					capital_scope = { is_on_continent = south_america }
-				}
-				ROOT = {
-					NOT = {
-						has_war_with = FROM
-					}
+			all_neighbor_country = {
+				NOT = {
+					has_war_with = ROOT
 				}
 			}
 		}

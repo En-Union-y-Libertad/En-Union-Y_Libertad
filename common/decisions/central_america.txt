@@ -188,19 +188,22 @@ central_UFC_investment_category = {
 }
 central_communist_revolt_category = {
     central_communist_revolt = {
-		cancel_trigger = {
+
+		available = {
 			OR = {
 				has_government = communism
                 has_completed_focus = central_subdue_peasants
 		    }
 		}
-
-		available = {
-			hidden_trigger = { always = no }
+		
+		activation = {
+			has_completed_focus = central_cooperate_companies
 		}
 
 		visible = {
-		    has_completed_focus = central_cooperate_companies
+		    NOT = {
+				has_completed_focus = central_subdue_peasants
+			}
 	    }	
 
 		icon = revolt
@@ -210,7 +213,48 @@ central_communist_revolt_category = {
         
         timeout_effect = {
 			start_civil_war = {
+				ruling_party = ROOT
 				ideology = communism
+				size = 0.45
+			}
+			hidden_effect = {
+				division_template = { 
+					name = "Milicia" division_names_group = SPAN_INF_02 is_locked = yes regiments = { 
+						infantry = { x = 0 y = 0 } 
+						infantry = { x = 1 y = 0 } 
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Milicia Leal\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Milicia Leal\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+						owner = ROOT
+					}
+				}
+				random_other_country = {
+					limit = {
+						original_tag = ROOT 
+						has_civil_war = yes 
+						has_government = communism
+					}
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"Milicia Comunista\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+							owner = PREV
+						}
+					}
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"Milicia Comunista\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+							owner = PREV
+						}
+					}
+				}
 			}
 		}
 	}
@@ -218,8 +262,15 @@ central_communist_revolt_category = {
 
 central_american_intervention_category = {
     central_american_intervention = {
-		available = {
-			hidden_trigger = { always = no }
+		allowed = {
+			OR = {
+				original_tag = PAN 
+				original_tag = HON 
+				original_tag = NIC 
+				original_tag = COS
+				original_tag = ELS 
+				original_tag = GUA 
+			}
 		}	
 
 		icon = revolt
@@ -227,22 +278,108 @@ central_american_intervention_category = {
 		priority = 10
         days_mission_timeout = 190  
 
-		cancel_trigger = {
-			AND = {
-				custom_effect_tooltip = central_concessions_to_americans_100_tt
-				hidden_trigger = {
-					check_variable = { central_american_concession_variable > 99 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = central_concessions_to_americans_100_tt
+				if = {
+					limit = {
+						original_tag = PAN 
+					}
+					check_variable = { PAN_central_american_concession_variable > 99 }
 				}
-		    }
+				if = {
+					limit = {
+						original_tag = COS 
+					}
+					check_variable = { COS_central_american_concession_variable > 99 }
+				}
+				if = {
+					limit = {
+						original_tag = NIC 
+					}
+					check_variable = { NIC_central_american_concession_variable > 99 }
+				}
+				if = {
+					limit = {
+						original_tag = HON 
+					}
+					check_variable = { HON_central_american_concession_variable > 99 }
+				}
+				if = {
+					limit = {
+						original_tag = ELS 
+					}
+					check_variable = { ELS_central_american_concession_variable > 99 }
+				}
+				if = {
+					limit = {
+						original_tag = GUA 
+					}
+					check_variable = { GUA_central_american_concession_variable > 99 }
+				}
+			}
+		}
+		
+		activation = {
+			has_completed_focus = central_depose_companies
 		}
 
 		visible = {
-			check_variable = { central_american_concession_variable < 100 }
+			if = {
+				limit = {
+					original_tag = PAN 
+				}
+				check_variable = { PAN_central_american_concession_variable < 100 }
+			}
+			if = {
+				limit = {
+					original_tag = COS 
+				}
+				check_variable = { COS_central_american_concession_variable < 100 }
+			}
+			if = {
+				limit = {
+					original_tag = NIC 
+				}
+				check_variable = { NIC_central_american_concession_variable < 100 }
+			}
+			if = {
+				limit = {
+					original_tag = HON 
+				}
+				check_variable = { HON_central_american_concession_variable < 100 }
+			}
+			if = {
+				limit = {
+					original_tag = ELS 
+				}
+				check_variable = { ELS_central_american_concession_variable < 100 }
+			}
+			if = {
+				limit = {
+					original_tag = GUA 
+				}
+				check_variable = { GUA_central_american_concession_variable < 100 }
+			}
 			has_completed_focus = central_depose_companies
 		}
         
         timeout_effect = {
 			custom_effect_tooltip = central_american_intervention_tt
+			effect_tooltip = {
+				random_list = {
+					90 = {
+						USA = {
+							create_wargoal = {
+								type = annex_everything 
+								target = ROOT 
+							}
+						}
+					}
+					10 = {
+					}
+				}
+			}	
 			hidden_effect = {
 				USA = { country_event = { id = central.1 } }
 				set_country_flag = central_american_concession_failed
@@ -253,10 +390,6 @@ central_american_intervention_category = {
 	central_american_concession_25 = {
 
 		icon = generic_independence
-
-		allowed = {
-			has_completed_focus = central_concessions_to_americans
-		}
 
 		available = {
 			NOT = {
@@ -271,20 +404,54 @@ central_american_intervention_category = {
 		}
 
 		visible = {
-			has_country_flag = central_concessions_to_americans_flag
+			has_completed_focus = central_concessions_to_americans
 		}
 
 		days_remove = 30
 
 		complete_effect = {
-			add_ideas = central_american_concession
 			set_country_flag = central_american_concession_paying
 		}
 
 		remove_effect = {
 			custom_effect_tooltip = central_american_concession_tt_25
 			hidden_effect = {
-				add_to_variable = { central_american_concession_variable = 25 }
+				if = {
+					limit = {
+						original_tag = PAN 
+					}
+					add_to_variable = { PAN_central_american_concession_variable = 25 }
+				}
+				if = {
+					limit = {
+						original_tag = COS 
+					}
+					add_to_variable = { COS_central_american_concession_variable = 25 }
+				}
+				if = {
+					limit = {
+						original_tag = NIC 
+					}
+					add_to_variable = { NIC_central_american_concession_variable = 25 }
+				}
+				if = {
+					limit = {
+						original_tag = HON 
+					}
+					add_to_variable = { HON_central_american_concession_variable = 25 }
+				}
+				if = {
+					limit = {
+						original_tag = ELS 
+					}
+					add_to_variable = { ELS_central_american_concession_variable = 25 }
+				}
+				if = {
+					limit = {
+						original_tag = GUA 
+					}
+					add_to_variable = { GUA_central_american_concession_variable = 25 }
+				}
 				clr_country_flag = central_american_concession_paying
 			}
 		}
@@ -293,10 +460,6 @@ central_american_intervention_category = {
 
 		icon = generic_independence
 
-		allowed = {
-			has_completed_focus = central_concessions_to_americans
-		}
-
 		available = {
 			NOT = {
 				has_country_flag = central_american_concession_paying
@@ -309,21 +472,55 @@ central_american_intervention_category = {
 			base = 200
 		}
 
-		allowed = {
+		visible = {
 			has_completed_focus = central_concessions_to_americans
 		}
 
 		days_remove = 90
 
 		complete_effect = {
-			add_ideas = central_american_concession
 			set_country_flag = central_american_concession_paying
 		}
 
 		remove_effect = {
 			custom_effect_tooltip = central_american_concession_tt_50
 			hidden_effect = {
-				add_to_variable = { central_american_concession_variable = 50 }
+				if = {
+					limit = {
+						original_tag = PAN 
+					}
+					add_to_variable = { PAN_central_american_concession_variable = 50 }
+				}
+				if = {
+					limit = {
+						original_tag = COS 
+					}
+					add_to_variable = { COS_central_american_concession_variable = 50 }
+				}
+				if = {
+					limit = {
+						original_tag = NIC 
+					}
+					add_to_variable = { NIC_central_american_concession_variable = 50 }
+				}
+				if = {
+					limit = {
+						original_tag = HON 
+					}
+					add_to_variable = { HON_central_american_concession_variable = 50 }
+				}
+				if = {
+					limit = {
+						original_tag = ELS 
+					}
+					add_to_variable = { ELS_central_american_concession_variable = 50 }
+				}
+				if = {
+					limit = {
+						original_tag = GUA 
+					}
+					add_to_variable = { GUA_central_american_concession_variable = 50 }
+				}
 				clr_country_flag = central_american_concession_paying
 			}
 		}
@@ -332,10 +529,6 @@ central_american_intervention_category = {
 
 		icon = generic_independence
 
-		allowed = {
-			has_completed_focus = central_concessions_to_americans
-		}
-
 		available = {
 			NOT = {
 				has_country_flag = central_american_concession_paying
@@ -348,7 +541,7 @@ central_american_intervention_category = {
 			base = 200
 		}
 
-		allowed = {
+		visible = {
 			has_completed_focus = central_concessions_to_americans
 		}
 
