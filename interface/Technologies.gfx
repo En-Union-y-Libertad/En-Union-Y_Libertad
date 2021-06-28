@@ -4984,6 +4984,11 @@ spriteTypes = {
     name = "GFX_URG_fighter2_medium"
     texturefile = "gfx/interface/technologies/URG_north_american_at-6b.dds"
     } 
+
+	SpriteType = {
+	name = "GFX_URG_naval_bomber1_medium"
+	texturefile = "gfx/interface/technologies/URG_naval_bomber1.dds"
+	}
 	
 	SpriteType = {
 		name = "GFX_URG_infantry_weapons1_medium"
@@ -4999,6 +5004,11 @@ spriteTypes = {
 	name = "GFX_URG_advanced_infantry_weapons_medium"
 	texturefile = "gfx/interface/technologies/URG_m1_carbine.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_URG_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/ENG_basic_light_tank.dds"
+	}
 	
 	SpriteType = {
 		name = "GFX_URG_improved_light_tank_medium"
@@ -5007,7 +5017,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_URG_main_battle_tank_medium"
-		texturefile = "gfx/interface/technologies/SOV_main_battle_tank.dds"
+		texturefile = "gfx/interface/technologies/tank/medium_tank/URG_main_battle_tank.dds"
 	}
 
 	SpriteType = {
