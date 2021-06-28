@@ -1,0 +1,91 @@
+############################
+##### Central America ######
+############################
+
+central_UFC_investment_category = {
+
+	priority = 10
+	icon = GFX_decision_category_generic_industry 
+	
+	allowed = {
+	    OR = {
+			original_tag =  PAN
+			original_tag =  COS
+			original_tag =  NIC
+			original_tag =  HON
+			original_tag =  ELS
+			original_tag =  GUA
+		}
+    }
+
+	available = { has_completed_focus = central_UFC_investment }
+	
+	visible = {
+		has_completed_focus = central_UFC_investment
+	}
+}
+
+central_communist_revolt_category = {	
+	priority = 20
+	icon = GFX_decision_category_generic_industry 
+	
+    cancel_trigger = {
+			OR = {
+				has_government = communism
+                has_completed_focus = central_subdue_peasants
+		    }
+		}
+
+	allowed = {
+	    OR = {
+			original_tag =  PAN
+			original_tag =  COS
+			original_tag =  NIC
+			original_tag =  HON
+			original_tag =  ELS
+			original_tag =  GUA
+		}
+		AND = {	
+		    has_completed_focus = central_cooperate_companies
+		    NOT = {
+			    has_government = communism
+		    }
+	    }
+    }
+	
+	visible = {
+	    AND = {	
+		    has_completed_focus = central_cooperate_companies
+		    NOT = {
+			    has_government = communism
+		    }
+	    }
+	}	
+}
+
+central_american_intervention_category = {	
+	priority = 20
+	icon = GFX_decision_category_generic_industry 
+	
+	allowed = {
+	    OR = {
+			original_tag =  PAN
+			original_tag =  COS
+			original_tag =  NIC
+			original_tag =  HON
+			original_tag =  ELS
+			original_tag =  GUA
+		}
+    }
+	
+	visible = {
+		check_variable = { central_american_concession_variable < 100 }
+		OR = {
+			has_completed_focus = central_depose_companies
+		}
+		NOT = {
+			has_country_flag = central_american_concession_failed
+		}
+	}
+}
+

@@ -1,4 +1,15 @@
 leader_traits = {
+	#generic
+
+    generic_army_connections = {
+		random = yes
+		high_command_cost_factor = -0.20
+		air_chief_cost_factor = -0.20
+		army_chief_cost_factor = -0.20
+		navy_chief_cost_factor = -0.20
+	}
+
+	
 	#PERU
 	
 	PBC_socialist_tendencies_1 = {
@@ -140,7 +151,13 @@ leader_traits = {
         local_resources_factor = 0.1
 		production_speed_industrial_complex_factor = 0.1
 		consumer_goods_factor = -0.03		
-	}	
+	}
+####Costa Rica####
+	COS_intellectual_dictator = {
+		political_power_factor = 0.15
+		political_advisor_cost_factor = 0.1	
+	}
+###########################################################################		
 	
 	dictator = {
 		random = no

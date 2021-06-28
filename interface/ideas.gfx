@@ -7,9 +7,44 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_traits_strip.dds"
 		noOfFrames = 15		
 	}
-
+	
 	### new tfv nat spirit icons
 	
+    spriteType = {
+		name = "GFX_idea_banana_republic"
+		texturefile = "gfx/interface/ideas/banana_republic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_NIC_rebellious_army"
+		texturefile = "gfx/interface/ideas/NIC_rebellious_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_central_banana_republic_cooperate1"
+		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_central_banana_republic_cooperate2"
+		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_central_banana_republic_cooperate3"
+		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_central_banana_republic_cooperate4"
+		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_central_banana_republic_cooperate5"
+		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate5.dds"
+	}
+
 	spriteType = {
 		name = "GFX_idea_ARG_soviet_aid"
 		texturefile = "gfx/interface/ideas/ARG_soviet_aid.dds"

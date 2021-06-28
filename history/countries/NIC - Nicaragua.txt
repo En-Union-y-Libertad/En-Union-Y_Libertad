@@ -1,5 +1,9 @@
 ﻿capital = 317
-add_ideas = monroe_doctrine_idea
+add_ideas = {
+	monroe_doctrine_idea
+	Central_banana_republic
+	nic_rebellious_army
+}
 oob = "NIC_1936"
 
 # Starting tech
@@ -16,6 +20,11 @@ set_convoys = 10
 1939.1.1 = {
 
 	add_political_power = 1198
+
+add_ideas = {
+	monroe_doctrine_idea
+	Central_banana_republic
+}
 	
 	#generic focuses
 	complete_national_focus = army_effort
@@ -61,7 +70,7 @@ set_convoys = 10
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = democratic
 	last_election = "1934.11.8"
 	election_frequency = 48
 	elections_allowed = no
@@ -113,7 +122,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
-		#
+		generic_army_connections
 	}
 }
 
@@ -122,6 +131,7 @@ create_field_marshal = {
 	portrait_path = "gfx/leaders/NIC/portrait_nic_anastasio_somoza_garcia.dds"
 	traits = { politically_connected infantry_officer }
 	skill = 3
+	id = 24457
     attack_skill = 4
     defense_skill = 1
     planning_skill = 3
@@ -133,6 +143,7 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
 	traits = {  }
 	skill = 3
+	id = 24456
     attack_skill = 3
     defense_skill = 2
     planning_skill = 3

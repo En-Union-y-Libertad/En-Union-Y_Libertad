@@ -1,0 +1,370 @@
+central_UFC_investment_category = {
+	
+	central_light_civilian_investment = {
+		
+		priority = 10
+		icon = generic_factory
+		
+		available = {
+			NOT = {
+				has_country_flag = UFC_currently_investing
+			}
+		}
+		
+		cost = 100
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 80
+		
+		complete_effect = {
+			set_country_flag = UFC_currently_investing
+		}
+		
+		remove_effect = {
+			clr_country_flag = UFC_currently_investing
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	central_heavy_civilian_investment = {
+		
+		priority = 10
+		icon = generic_factory
+		
+		
+		
+		available = {
+			NOT = {
+				has_country_flag = UFC_currently_investing
+			}
+		}
+		
+		cost = 200
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 145
+		
+		complete_effect = {
+			set_country_flag = UFC_currently_investing
+		}
+		
+		remove_effect = {
+			clr_country_flag = UFC_currently_investing
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	central_light_military_investment = {
+		
+		priority = 10
+		icon = ger_military_buildup
+		
+		
+		
+		available = {
+			NOT = {
+				has_country_flag = UFC_currently_investing
+			}
+		}
+		
+		cost = 80
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 65
+		
+		complete_effect = {
+			set_country_flag = UFC_currently_investing
+		}
+		
+		remove_effect = {
+			clr_country_flag = UFC_currently_investing
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	central_heavy_military_investment = {
+		
+		priority = 10
+		icon = ger_military_buildup
+		
+		
+		
+		available = {
+			NOT = {
+				has_country_flag = UFC_currently_investing
+			}
+		}
+		
+		cost = 175
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 110
+		
+		complete_effect = {
+			set_country_flag = UFC_currently_investing
+		}
+		
+		remove_effect = {
+			clr_country_flag = UFC_currently_investing
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_infrastructure_investment = {
+		
+		priority = 10
+		icon = railroad_construction
+		
+		
+		
+		available = {
+			NOT = {
+				has_country_flag = UFC_currently_investing
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 150
+		}
+		
+		days_remove = 40
+		
+		complete_effect = {
+			set_country_flag = UFC_currently_investing
+		}
+		
+		remove_effect = {
+			clr_country_flag = UFC_currently_investing
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+central_communist_revolt_category = {
+    central_communist_revolt = {
+		cancel_trigger = {
+			OR = {
+				has_government = communism
+                has_completed_focus = central_subdue_peasants
+		    }
+		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		visible = {
+		    has_completed_focus = central_cooperate_companies
+	    }	
+
+		icon = revolt
+		is_good = no
+		priority = 10
+        days_mission_timeout = 360  
+        
+        timeout_effect = {
+			start_civil_war = {
+				ideology = communism
+			}
+		}
+	}
+}
+
+central_american_intervention_category = {
+    central_american_intervention = {
+		available = {
+			hidden_trigger = { always = no }
+		}	
+
+		icon = revolt
+		is_good = no
+		priority = 10
+        days_mission_timeout = 190  
+
+		cancel_trigger = {
+			AND = {
+				custom_effect_tooltip = central_concessions_to_americans_100_tt
+				hidden_trigger = {
+					check_variable = { central_american_concession_variable > 99 }
+				}
+		    }
+		}
+
+		visible = {
+			check_variable = { central_american_concession_variable < 100 }
+			has_completed_focus = central_depose_companies
+		}
+        
+        timeout_effect = {
+			custom_effect_tooltip = central_american_intervention_tt
+			hidden_effect = {
+				USA = { country_event = { id = central.1 } }
+				set_country_flag = central_american_concession_failed
+			}
+		}
+	}
+
+	central_american_concession_25 = {
+
+		icon = generic_independence
+
+		allowed = {
+			has_completed_focus = central_concessions_to_americans
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = central_american_concession_paying
+			}
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			base = 200
+		}
+
+		visible = {
+			has_country_flag = central_concessions_to_americans_flag
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			add_ideas = central_american_concession
+			set_country_flag = central_american_concession_paying
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = central_american_concession_tt_25
+			hidden_effect = {
+				add_to_variable = { central_american_concession_variable = 25 }
+				clr_country_flag = central_american_concession_paying
+			}
+		}
+	}
+	central_american_concession_50 = {
+
+		icon = generic_independence
+
+		allowed = {
+			has_completed_focus = central_concessions_to_americans
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = central_american_concession_paying
+			}
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			base = 200
+		}
+
+		allowed = {
+			has_completed_focus = central_concessions_to_americans
+		}
+
+		days_remove = 90
+
+		complete_effect = {
+			add_ideas = central_american_concession
+			set_country_flag = central_american_concession_paying
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = central_american_concession_tt_50
+			hidden_effect = {
+				add_to_variable = { central_american_concession_variable = 50 }
+				clr_country_flag = central_american_concession_paying
+			}
+		}
+	}
+	test = {
+
+		icon = generic_independence
+
+		allowed = {
+			has_completed_focus = central_concessions_to_americans
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = central_american_concession_paying
+			}
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			base = 200
+		}
+
+		allowed = {
+			has_completed_focus = central_concessions_to_americans
+		}
+
+		days_remove = 1
+
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = central_american_intervention
+				days = -188
+			}
+		}
+	}
+}	
+
+
+
+
+
+

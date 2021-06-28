@@ -1,0 +1,280 @@
+ideas = { 
+    country = {
+		central_banana_republic = {
+			picture = banana_republic
+
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.2
+				production_speed_industrial_complex_factor = -0.2
+				production_speed_arms_factory_factor = -0.2
+                local_resources_factor = 0.5
+                min_export = 1.0
+			}
+		}
+        central_banana_republic_i1 = {
+			picture = banana_republic
+
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.15
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = -0.15
+                local_resources_factor = 0.4
+                min_export = 0.75
+			}
+		}
+		central_banana_republic_cooperate = {
+			picture = central_banana_republic_cooperate1
+
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			cancel = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_factor = 0.1
+				communism_drift = 0.2
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.2
+				production_speed_industrial_complex_factor = -0.2
+				production_speed_arms_factory_factor = -0.2
+                local_resources_factor = 0.5
+                min_export = 0.9
+			}
+		}
+		central_banana_republic_cooperate2 = {
+			picture = central_banana_republic_cooperate2
+
+            allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			cancel = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_factor = 0.1
+				communism_drift = 0.1
+				stability_factor = -0.20
+				war_support_factor = -0.20
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+                local_resources_factor = 0.8
+                min_export = 0.8
+			}
+		}
+		central_banana_republic_cooperate3 = {
+			picture = central_banana_republic_cooperate3
+            
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			cancel = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_factor = 0.1
+				communism_drift = 0.05
+				stability_factor = -0.20
+				war_support_factor = -0.20
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+                local_resources_factor = 0.8
+                min_export = 0.8
+			}
+		}
+		central_banana_republic_cooperate4 = {
+			picture = central_banana_republic_cooperate4
+
+            allowed = {
+				always = no
+			}
+			
+			cancel = {
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.05
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = -0.05
+                local_resources_factor = 0.8
+                min_export = 0.6
+			}
+		}
+		central_banana_republic_cooperate5 = {
+			picture = central_banana_republic_cooperate5
+
+            allowed = {
+				always = no
+			}
+			
+			cancel = {
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.05
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = -0.05
+                local_resources_factor = 0.5
+                min_export = 0.3
+			}
+		}
+		kicking_the_companies = {
+			picture = banana_republic
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_factor = -0.50
+				
+			}
+		}
+        UFC_in_government_idea = {
+			picture = banana_republic
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_factor = 0.15
+				
+			}
+		}
+    
+    
+    
+    
+    }
+}    
