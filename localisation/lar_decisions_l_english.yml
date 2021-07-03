@@ -910,7 +910,9 @@
  central_heavy_military_investment:0 "Request Large Investment in Arms Industry"
  central_infrastructure_investment:0 "Request Investment in Infrastructure"
  central_communist_revolt_category:0 "Communist Revolt"
+ central_communist_revolt_category_desc:0 "The peasants have noticed our recent cooperation with the UFC companies and, from the looks of it, they are not pleased in the slightest. They are claiming that our government is filled with 'cowards' and a 'puppet to the Americans'. Intel from our intelligence agency has picked up on various communist groups and peasant groups buying illegal firearms and preparing what seems to be a full on revolt. We need to do something about this as soon as possible before it becomes a serious problem."
  central_communist_revolt:0 "Communist Revolt"
+ central_communist_revolt_desc:0 "These damn bastards..."
  central_american_intervention_category:0 "American Intervention"
  central_american_intervention_category_desc:0 "Following our decision to kick the fruit companies out of the country, the United States, feeling that their trade is being threatened, has begun asking for compensation due to the profit loss these companies will face, and the US too as a result. \n\n[AmericanInterventionCentralAmericaVariable]"
  PAN_AMERICAN_INTERVENTION_VARIABLE:0 "Current percentage of the requested compensation we have payed back:  [?PAN_central_american_concession_variable|G0]§G%§!"
@@ -922,3 +924,4 @@
  central_american_intervention:0 "American Intervention"
  central_american_concession_25:0 "Pay back §G25%§! of the compensation"
  central_american_concession_50:0 "Pay back §G50%§! of the compensation" 
+ 

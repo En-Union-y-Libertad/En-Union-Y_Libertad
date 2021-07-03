@@ -200,16 +200,14 @@ central_communist_revolt_category = {
 			has_completed_focus = central_cooperate_companies
 		}
 
-		visible = {
-		    NOT = {
-				has_completed_focus = central_subdue_peasants
-			}
-	    }	
-
 		icon = revolt
 		is_good = no
 		priority = 10
         days_mission_timeout = 360  
+		
+		complete_effect = {
+			add_stability = 0.01
+		}
         
         timeout_effect = {
 			start_civil_war = {
