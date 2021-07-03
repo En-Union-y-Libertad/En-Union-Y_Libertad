@@ -38,15 +38,6 @@ central_communist_revolt_category = {
 			original_tag =  ELS
 			original_tag =  GUA
 		}
-		AND = {	
-		    has_completed_focus = central_cooperate_companies
-		    NOT = {
-			    has_government = communism
-		    }
-	    }
-		NOT = {
-			has_completed_focus = central_subdue_peasants
-		}
     }
 	
 	visible = {

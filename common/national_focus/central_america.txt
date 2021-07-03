@@ -713,9 +713,6 @@ focus_tree = {
 			focus = central_develop_guns
 			focus = central_improve_high_command
 		}
-		prerequisite = {
-			focus = central_special_forces
-		}
 		x = 26
 		y = 5
 
@@ -728,9 +725,6 @@ focus_tree = {
 			focus = central_artillery_production
 			focus = central_develop_guns
 			focus = central_improve_high_command
-		}
-		prerequisite = {
-			focus = central_employ_graduates
 		}
 		x = 30
 		y = 5
