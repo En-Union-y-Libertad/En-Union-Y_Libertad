@@ -3828,7 +3828,14 @@
  perubolivia.1.e:0 "Manuel Prado Ugarteche"
 
  ### Nicaragua ###
- nicaragua.1.t:0 "The Army makes a Coup d'Etat!"
- nicaragua.1.d:0 "Military units under the banner of the Guardia Nacional have begun rising up all throught Nicaragua, with the intent of deposing [Root.GetLeader]'s weak government. A battle on the outskirts of Managua between the forces still loyal to our cause and the forces loyal to the army has begun. As Managua is our only loyal city, the defeat of our forces would mean the collapse of all resistence against the army."
- nicaragua.1.a:0 "The Guardia Nacional is victorious!"
- nicaragua.1.b:0 "The Loyalists hold the line!"
+ UL_nicaragua.1.t:0 "The Army makes a Coup d'Etat!"
+ UL_nicaragua.1.d:0 "Military units under the banner of the Guardia Nacional have begun rising up all throught Nicaragua, with the intent of deposing [Root.GetLeader]'s weak government. A battle on the outskirts of Managua between the forces still loyal to our cause and the forces loyal to the army has begun. As Managua is our only loyal city, the defeat of our forces would mean the collapse of all resistence against the army."
+ UL_nicaragua.1.a:0 "The Guardia Nacional is victorious!"
+ UL_nicaragua.1.b:0 "The Loyalists hold the line!"
+
+ ### Costa Rica ###
+ costarica.1.t:0 "1936 General Elections"
+ costarica.1.d:0 "The elections have begun. While many had expected Ricardo Jimenez to run for re-election, he rejected it emphatically arguing that such a thing went against democracy. As so, the [Root.GetDemocraticParty] has fowarded León Cortés Castro as the candidate for the elections. A staunch conservative, Cortés is considered a very polarizing figure in Costa Rica for his support of Nazism and his anti-semite views. with the opossition labeling him as a 'authoritarian, fascist and tyrant'. \n\nThe main opossition, the Partido Nacional, initially fowarded Julio Acosta, but Acosta eventually resigned due to feeling a lack of support from the party. Eventually, Octavio Béeche Argüello was fowarded for the candidacy. A liberal candidate, he came under attack by the right-wing due to his left-leaning ideals, even being called a communist by his main detractors. \n\nThe last party to run for presidency was a surprise to many. The [Root.GetCommunistParty], led by Manuel Mora Valverde, managed to register as a political party for the first time in Costa Rican history. However, Valverde was not allowed, as candidates have to be older than 30 to run. Instead, he was replaced by known writer, Carlos Luis Sáenz. \n\nThis election is considered very polarizing, with Carlos María Jiménez calling it a choice between 'Cortesism or communism, the extreme right and the extreme left, fascism and sovietism.' \n\nAs votes are being counted, it is obvious that..."
+ costarica.1.a:0 "The Partido Republicano won"
+ costarica.1.b:0 "The Partido Nacional won"
+ costarica.1.c:0 "The [Root.GetCommunistParty] won"

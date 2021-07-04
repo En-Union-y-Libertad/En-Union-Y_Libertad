@@ -2,12 +2,12 @@
 # Nicaraguan Events
 ###########################
 
-add_namespace = UL_nicaragua
+add_namespace = nicaragua
 
 country_event = {
-	id = UL_nicaragua.1
-	title = UL_nicaragua.1.t
-	desc = UL_nicaragua.1.d
+	id = nicaragua.1
+	title = nicaragua.1.t
+	desc = nicaragua.1.d
 
 	fire_only_once = yes
 
@@ -21,7 +21,7 @@ country_event = {
 	}
 
 	option = {
-		name = UL_nicaragua.1.a
+		name = nicaragua.1.a
         
 		add_stability = -0.05
 		remove_ideas = nic_rebellious_army
@@ -37,7 +37,7 @@ country_event = {
 	}
 
 	option = {
-		name = UL_nicaragua.1.b
+		name = nicaragua.1.b
         
 		add_stability = -0.1
 		add_war_support = 0.05
@@ -93,17 +93,6 @@ country_event = {
 						has_government = neutrality
 						has_civil_war = yes
 					}	
-			create_country_leader = {
-				name = "Anastasio Somoza García"
-				desc = "POLITICS_ANASTASIO_SOMOZA_GARCIA_DESC"
-				picture = "GFX_portrait_nicaragua_portrait_anastasio_somoza_garcia"
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {
-					generic_army_connections
-				}
-			}
-			
 			division_template = { 
 				name = "Milicia" division_names_group = SPAN_INF_02 is_locked = yes regiments = { 
 					infantry = { x = 0 y = 0 } 
@@ -128,9 +117,9 @@ country_event = {
 }
 
 country_event = {
-	id = UL_nicaragua.2
-	title = UL_nicaragua.2.t
-	desc = UL_nicaragua.2.d
+	id = nicaragua.2
+	title = nicaragua.2.t
+	desc = nicaragua.2.d
 
 	fire_only_once = yes
 
@@ -139,50 +128,16 @@ country_event = {
 	}	
 
 	trigger = { 
-		original_tag = NIC
+		tag = NIC
 		has_country_flag = NIC_civil_war
 		has_civil_war = no
 	}
 
 	option = {
-		name = UL_nicaragua.2.a
+		name = nicaragua.2.a
 		delete_unit_template_and_units = { division_template = "Milicia" }
 	}
-}	
-
-country_event = {
-	id = UL_nicaragua.3
-	title = UL_nicaragua.3.t
-	desc = UL_nicaragua.3.d
-
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		days = 1
-	}	
-
-	trigger = { 
-		original_tag = NIC
-		has_civil_war = no
-		ruling_party = neutrality
-		date > 1936.12.30
-	}
-
-	option = {
-		name = UL_nicaragua.3.a
-		
-		create_country_leader = {
-				name = "Anastasio Somoza García"
-				desc = "POLITICS_ANASTASIO_SOMOZA_GARCIA_DESC"
-				picture = "GFX_portrait_nicaragua_portrait_anastasio_somoza_garcia"
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {
-					generic_army_connections
-				}
-			}
-	}
-}
+}		
 
 
 

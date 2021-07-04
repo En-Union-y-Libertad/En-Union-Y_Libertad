@@ -425,6 +425,8 @@
  COS_fascism_party_long:0 "Partido Nacionalista"
  COS_neutrality_party:0 "PR"
  COS_neutrality_party_long:0 "Partido Republicano"
+ COS_democratic_party_PN:0 "PN"
+ COS_democratic_party_PN_long:0 "Partido Nacional"
  ELS_fascism_party:0 "Pro-Patria"
  ELS_fascism_party_long:0 "Partido Nacional 'Pro-Patria'"
  ELS_democratic_party:0 "PL"
@@ -793,6 +795,8 @@
  RPE_UNIFIED_fascism_party:0 "PNSR"
  RPE_UNIFIED_communism_party_long:0 "Partido Comunista Rioplatense"
  RPE_UNIFIED_communism_party:0 "PCR"
+ NIC_neutrality_party_PCT_long:0 "Partido Conservador Tradicionalista"
+ NIC_neutrality_party_PCT:0 "PCT"
 
  peronism:0 "Peronismo"
  peronism_desc:0 "Peronism"

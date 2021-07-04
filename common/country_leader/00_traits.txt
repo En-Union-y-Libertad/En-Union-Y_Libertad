@@ -9,6 +9,25 @@ leader_traits = {
 		navy_chief_cost_factor = -0.20
 	}
 
+    generic_physician = {
+		random = yes
+		army_morale_factor = 0.05
+	}
+
+	generic_lawyer = {
+		random = yes
+		political_power_gain = 0.05
+	}
+
+	generic_judge = {
+		random = yes
+		stability_factor = 0.1
+	}
+	
+	generic_writer = {
+		random = yes
+		stability_factor = 0.05
+	}
 	
 	#PERU
 	
@@ -151,6 +170,10 @@ leader_traits = {
         local_resources_factor = 0.1
 		production_speed_industrial_complex_factor = 0.1
 		consumer_goods_factor = -0.03		
+	}
+	URG_el_guerrillero = {
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.2	
 	}
 ####Costa Rica####
 	COS_intellectual_dictator = {

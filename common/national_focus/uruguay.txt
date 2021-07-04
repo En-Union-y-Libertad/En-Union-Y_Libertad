@@ -2592,6 +2592,45 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
+				create_country_leader = {
+					name = "Basilio Muñoz"
+					desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
+					picture = "gfx/leaders/South America/portrait_UL_South_America_political_3.dds"
+					expire = "1965.1.1"
+					ideology = conservatism
+					traits = {
+						URG_el_guerrillero
+					}
+				}
+				create_corps_commander = {  
+					name = "Basilio Muñoz"
+					portrait_path = "gfx/leaders/South America/portrait_UL_South_America_political_3.dds"
+					traits = {  }
+					skill = 2
+    				attack_skill = 1
+    				defense_skill = 2
+    				planning_skill = 2
+    				logistics_skill = 2
+				}
+				create_corps_commander = {  
+					name = "Julio César Martínez"
+					portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+					traits = {  }
+					skill = 3
+    				attack_skill = 3
+    				defense_skill = 3
+    				planning_skill = 2
+    				logistics_skill = 2
+				}
+				random_other_country = {
+				    limit = {
+						original_tag = URG
+						ruling_party = neutrality
+						has_civil_war = yes
+					}
+				    keep_unit_leaders = { 1934 }
+					keep_unit_leaders = { 1935 }
+				}	
 				clr_country_flag = URG_terra
 				remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
 				country_event = { id = uruguay.17 days = 1 }

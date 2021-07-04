@@ -27,6 +27,11 @@
  PBC_democratic_tendencies:0 "Tendencias democráticas"
  COS_intellectual_dictator:0 "Dictador Intelectual"
  generic_army_connections:0 "Conexiones en el Ejército"
+ URG_el_guerrillero:0 "El Guerrillero"
+ generic_physician:0 "Medico"
+ generic_lawyer:0 "Abogado"
+ generic_judge:0 "Juez"
+ generic_writer:0 "Escritor"
  
 
  cc_leader:0 "General"

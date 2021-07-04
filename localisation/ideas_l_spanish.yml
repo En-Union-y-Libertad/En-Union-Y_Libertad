@@ -3244,3 +3244,48 @@
 
  BOL_sea_access_loss:0 "Pérdida de acceso al mar"
  BOL_sea_access_loss_desc:0 "Tras perder la guerra del pacífico, perdimos nuestro acceso al mar. Desde ese día, nuestro pueblo y nuestra economía han sufrido enormemente por ello. Si algún día conseguimos una salida al mar, ¡nuestro pueblo levantará la bandera boliviana con orgullo y nacionalismo! \n\n§REl control de cualquier estado costero acabará con este espíritu nacional§!."
+
+ # Venezuela
+
+ VEN_generic_fascist_demagogue:0 "Adolfo Melgarejo"
+ VEN_generic_democratic_reformer:0 "Romulo Betancourt"
+ VEN_mariano_picon_salas:0 "Mariano Picón Salas"
+ VEN_isaias_medina_angarita:0 "Isaias Medina Angarita"
+ VEN_carlos_delgado:0 "Carlos Delgado"
+ VEN_rodolfo_quintero:0 "Rodolfo Quintero"
+ VEN_arnold_margerie:0 "Arnold Margerie"
+ VEN_tomas_contreras_villalobos:0 "Tomas Contreras Villalobos"
+ VEN_david_lopez_henriques:0 "David Lopez Henriques"
+ VEN_miguel_diaz_fraile:0 "Miguel Díaz Fraile"
+ VEN_humberto_santabria_villa:0 "Humberto Santabria Villa"
+ VEN_carlos_molina_talavayo:0 "Carlos Molina Talavayo"
+ VEN_victor_sanchez_croes:0 "Victor Sanchez Croes"
+ VEN_carlos_delgado_chalbaud:0 "Carlos Delgado Chalbaud"
+ VEN_roberto_de_luca_varesano:0 "Roberto de Luca Varesano"
+ VEN_carlos_ramos_diaz:0 "Carlos Ramos Díaz"
+ VEN_carlos_garcia_mendoza:0 "Carlos Garcia Mendoza"
+ VEN_antonio_casas_gonzalez:0 "Antonio Casas Gonzalez"
+ VEN_jose_polares_pavon:0 "José Polares Pavon"
+
+ # Nicaragua
+ nic_rebellious_army:0 "Rebelión en el Ejército"
+
+ # Central America
+ central_banana_republic:0 "Republica Bananera"
+ central_banana_republic_desc:0 "En ciencias políticas, el término república bananera describe un país políticamente inestable con una economía que depende de la exportación de de recursos limitados, como bananas o minerales."
+ central_banana_republic_cooperate:0 "Cooperando con las Compañías de Fruta"
+ central_banana_republic_cooperate_desc:0 "Este gobierno ha comenzado a hacer concesiones a las empresas frutícolas, aunque eso conlleve sacrificar las libertades y los derechos civiles. Como resultado, esta acción ha comenzado a agitar movimientos socialistas locales, que han comenzado a oponerse abiertamente al gobierno."
+ central_banana_republic_cooperate2:0 "Suprimiendo las Uniones"
+ central_banana_republic_cooperate2_desc:0 "Debido a las revueltas socialistas, este gobierno ha considerado necesario comenzar a prohibir todo tipo de sindicatos y uniones."
+ central_banana_republic_i1:0 "Compañías Enfurecidas"
+ central_banana_republic_i1:0 "Este gobierno ha comenzado a nacionalizar las tierras de las empresas frutícolas privadas. Si bien esta medida comenzará a cambiar la opinión público a favor del gobierno, las empresas influyentes harán todo lo posible para bloquear cualquier propuesta del gobierno."
+ kicking_the_companies:0 "Destituyendo a las Compañías"
+ kicking_the_companies_desc:0 "Las empresas frutícolas están siendo expulsadas de [Root.GetName]. Esto le ha obtenido al gobierno el apoyo de la gente, pero también ha enfurecido a las élites, que están utilizando sobornos y lagunas legales para causar tantos problemas al gobierno como sea posible."
+ central_banana_republic_cooperate3:0 "Censurando a los Medios"
+ central_banana_republic_cooperate3_desc:0 "En un esfuerzo por combatir el descontento en la población, este gobierno ha comenzado a cerrar estaciones de noticias independientes y ha empezado reemplazarlas por estaciones estatales."
+ central_banana_republic_cooperate4:0 "Revolución Vencida"
+ central_banana_republic_cooperate4_desc:0 "Debido a las vastas reformas antirrevolucionarias del gobierno, el [Root.GetCommunistParty] casi ha fracasado y se ha ido a la clandestinidad. Sin oposición restante, este gobierno ha comenzado a hacer todos los esfuerzos para convertir a [Root.GetName] en la corporatocracia perfecta."
+ central_banana_republic_cooperate5:0 "Economía Bananera"
+ central_banana_republic_cooperate5_desc:0 "Este gobierno se ha convertido en una corporatocracia, con la mayoría de los esfuerzos políticos siendo enfocados en asegurar la influencia y rentabilidad de las empresas frutícolas sobre el bienestar de la gente."
+ central_industrial_independence:0 "Industria Independiente"
+ central_banana_republic_i2:0 "Gran Influencia Empresarial"

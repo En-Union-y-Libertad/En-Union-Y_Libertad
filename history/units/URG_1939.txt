@@ -59,12 +59,18 @@ units = {
 	}
 }
 
-air_wings = {  #A group of Uruguayan pilots volunteer in the Spanish Civil War
-	847 = {
+air_wings = {  #An airforce was used for the first time in Uruguay on 1935 on a revolution against Terra
+	847 = { 
 		# Fighter Air Group -- ARME Montevideo
 		fighter_equipment_0 =  {
 			owner = "URG" 
-			amount = 10
+			amount = 5
+		}
+	}
+	847 = { 
+		CAS_equipment_1 =  {
+			owner = "URG" 
+			amount = 2
 		}
 	}
 }

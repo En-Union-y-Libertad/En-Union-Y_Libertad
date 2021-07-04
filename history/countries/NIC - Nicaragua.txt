@@ -74,7 +74,7 @@ set_politics = {
 	ruling_party = democratic
 	last_election = "1934.11.8"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 set_popularities = {
 	democratic = 15
@@ -90,7 +90,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = {
-		#
+		generic_physician
 	}
 }
 
@@ -117,13 +117,13 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Anastasio Somoza García"
+	name = "Carlos Brenes Jarquín"
 	desc = "POLITICS_ANASTASIO_SOMOZA_GARCIA_DESC"
-	picture = "GFX_portrait_nicaragua_portrait_anastasio_somoza_garcia"
+	picture = "gfx/leaders/NIC/portrait_NIC_carlos_brenes_jarquin.dds"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
-		generic_army_connections
+		figurehead_president
 	}
 }
 

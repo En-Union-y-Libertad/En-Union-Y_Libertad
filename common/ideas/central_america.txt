@@ -50,7 +50,7 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_factor = -0.25
+				political_power_factor = -0.3
 				stability_factor = -0.15
 				war_support_factor = -0.15
 				consumer_goods_factor = 0.10
@@ -127,8 +127,8 @@ ideas = {
 				war_support_factor = -0.20
 				consumer_goods_factor = 0.1
 				industrial_capacity_factory = -0.1
-				production_speed_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
                 local_resources_factor = 0.8
                 min_export = 0.8
 			}
@@ -163,8 +163,8 @@ ideas = {
 				war_support_factor = -0.20
 				consumer_goods_factor = 0.1
 				industrial_capacity_factory = -0.1
-				production_speed_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.4
                 local_resources_factor = 0.8
                 min_export = 0.8
 			}
@@ -198,8 +198,8 @@ ideas = {
 				war_support_factor = -0.1
 				consumer_goods_factor = 0.1
 				industrial_capacity_factory = -0.05
-				production_speed_industrial_complex_factor = -0.05
-				production_speed_arms_factory_factor = -0.05
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
                 local_resources_factor = 0.8
                 min_export = 0.6
 			}
@@ -230,8 +230,8 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.1
 				consumer_goods_factor = 0.05
-				production_speed_industrial_complex_factor = -0.05
-				production_speed_arms_factory_factor = -0.05
+				production_speed_industrial_complex_factor = -0.75
+				production_speed_arms_factory_factor = -0.75
                 local_resources_factor = 0.5
                 min_export = 0.3
 			}
@@ -267,14 +267,134 @@ ideas = {
 				always = yes 
 			}
 
+			cancel = {
+				has_government = communism
+			}
+
 			modifier = {
 				political_power_factor = 0.15
 				
 			}
 		}
-    
-    
-    
+        central_industrial_independence = {
+			picture = generic_production_bonus
+
+            allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.1
+                min_export = -0.15
+			}
+		}
+		central_banana_republic_i2 = {
+			picture = banana_republic
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+                local_resources_factor = 0.4
+                min_export = 0.6
+			}
+		}
+        central_recent_purchase = {
+			picture = banana_republic
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+        central_recent_purchase2 = {
+			picture = banana_republic
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+		central_banana_republic_i3 = {
+			picture = banana_republic
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		central_modern_healthcare = {
+			picture = banana_republic
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
     
     }
 }    

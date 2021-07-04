@@ -89,7 +89,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
-		#
+		CHL_economist
 	}
 }
 
@@ -100,7 +100,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = leninism
 	traits = {
-		#
+		generic_lawyer
 	}
 }
 
@@ -111,7 +111,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = centrism
 	traits = {
-		#
+		social_revolutionary
 	}
 }
 
@@ -146,7 +146,7 @@ create_corps_commander = {
 		expire = "1965.1.1"
 		ideology = conservatism
 		traits = {
-			fascist_sympathies
+			fascist_sympathies generic_lawyer
 		}
 	}
 }

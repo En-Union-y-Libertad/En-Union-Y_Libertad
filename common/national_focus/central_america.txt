@@ -43,6 +43,7 @@ focus_tree = {
 		text = central_cooperate_companies
 		icon = GFX_focus_central_cooperate_companies
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_industrial_effort
 		}
@@ -69,6 +70,7 @@ focus_tree = {
 		text = central_repress_unions
 		icon = GFX_focus_central_suppress_unions
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_cooperate_companies
 		}
@@ -91,6 +93,7 @@ focus_tree = {
 		text = central_UFC_investment
 		icon = GFX_focus_central_ufc_investment
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_cooperate_companies
 		}
@@ -181,6 +184,7 @@ focus_tree = {
 		text = central_subdue_peasants
 		icon = GFX_focus_central_subdue_peasantry
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_supress_media
 		}
@@ -214,30 +218,30 @@ focus_tree = {
 		}
 		x = 15
 		y = 1
-			search_filters = { FOCUS_FILTER_INDUSTRY }
-			available_if_capitulated = yes
-			completion_reward = {
-				swap_ideas = {
-					remove_idea = central_banana_republic
-					add_idea = central_banana_republic_i1
-				}
-					random_owned_state = {
-							limit = {
-									is_core_of = ROOT
-									is_controlled_by = ROOT
-									free_building_slots = {
-											building = industrial_complex
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = industrial_complex
-									level = 2
-									instant_build = yes
-								}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = central_banana_republic
+				add_idea = central_banana_republic_i1
+			}
+				random_owned_state = {
+					limit = {
+						is_core_of = ROOT
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
 						}
+					}
+				    add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 				}
+			}
 			ai_will_do = {
 					factor = 3
 					modifier = {
@@ -245,13 +249,13 @@ focus_tree = {
 							date < 1938.1.1
 						}
 				}
-
-	}
+	}     	
 	focus = {
 		id = central_concession_fruit_company
 		text = central_concession_fruit_company
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_nationalise_land
 		}
@@ -260,18 +264,26 @@ focus_tree = {
 		}
 		x = 13
 		y = 2
-
+		completion_reward = {
+			remove_ideas = central_banana_republic_i1
+			add_ideas = central_banana_republic_i2
+		}
 	}
 	focus = {
 		id = central_curtial_influence
 		text = central_curtial_influence
 		icon = GFX_focus_central_curtail_influence
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_concession_fruit_company
 		}
 		x = 9
 		y = 3
+		completion_reward = {
+			remove_ideas = central_banana_republic_i2
+			add_timed_idea = { idea = central_banana_republic_i3 days = 360 }
+		}
 
 	}
 	focus = {
@@ -279,11 +291,49 @@ focus_tree = {
 		text = central_invest_munitions_plant
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_concession_fruit_company
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
 		x = 11
 		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+			if = {
+				limit = { has_idea = central_recent_purchase }
+					remove_ideas = central_recent_purchase
+					add_timed_idea = { idea = central_recent_purchase2 days = 160 }
+				}
+				else = {
+					add_timed_idea = { idea = central_recent_purchase days = 80 }
+			    }		
+		}
 
 	}
 	focus = {
@@ -291,18 +341,56 @@ focus_tree = {
 		text = central_buy_industrial_centers
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_concession_fruit_company
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
 		x = 13
 		y = 3
-
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+			}
+			if = {
+				limit = { has_idea = central_recent_purchase }
+					remove_ideas = central_recent_purchase
+					add_timed_idea = { idea = central_recent_purchase2 days = 60 }
+				}
+				else = {
+					add_timed_idea = { idea = central_recent_purchase days = 30 }
+			    }	
+		}	
 	}
 	focus = {
 		id = central_deal_with_fruit_companies
 		text = central_deal_with_fruit_companies
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_invest_munitions_plant
 		}
@@ -311,6 +399,16 @@ focus_tree = {
 		}
 		x = 12
 		y = 4
+		completion_reward = {
+			if ={
+				limit ={ has_idea = central_banana_republic_i3 }
+				modify_timed_idea = { idea = central_banana_republic_i3 days = -60 }
+				add_political_power = 25
+			}
+			else = {
+				add_political_power = 100
+			}
+		}
 
 	}
 	focus = {
@@ -318,6 +416,7 @@ focus_tree = {
 		text = central_depose_companies
 		icon = GFX_focus_central_depose_companies
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_nationalise_land
 		}
@@ -357,6 +456,7 @@ focus_tree = {
 		text = central_expand_railways
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_distribute_unused_land
 		}
@@ -404,8 +504,8 @@ focus_tree = {
 		x = 17
 		y = 3
 		completion_reward = {
-			add_stability = 0.15
-            add_political_power = -50
+			add_stability = 0.1
+            add_political_power = -100
 		}
     }
 	focus = {
@@ -413,12 +513,38 @@ focus_tree = {
 		text = central_industrial_take_over
 		icon = GFX_focus_central_industrial_takeover
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_depose_companies
+		}
+		bypass = {
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = construction_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = industrial_complex
+							size < 1
+							include_locked = yes
+						}					
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = production_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = arms_factory
+							size < 1
+							include_locked = yes
+						}
+					}
+				}
+			}	
 		}
 		x = 19
 		y = 3
 		completion_reward = {
+			add_political_power = -50
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -437,7 +563,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
-						building = industrial_complex
+						building = arms_factory
 						size > 2
 						include_locked = yes
 					}
@@ -456,6 +582,7 @@ focus_tree = {
 		text = central_industrial_independence
 		icon = GFX_focus_central_industrial_independence
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_deal_with_corruption
 		}
@@ -464,13 +591,16 @@ focus_tree = {
 		}
 		x = 18
 		y = 4
-
+		completion_reward = {
+			add_ideas = central_industrial_independence
+		}
 	}
 	focus = {
 		id = central_modern_industry
 		text = central_modern_industry
 		icon = GFX_focus_generic_industry_3
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_expand_railways
 		}
@@ -482,6 +612,44 @@ focus_tree = {
 		}
 		x = 15
 		y = 5
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -489,24 +657,70 @@ focus_tree = {
 		text = central_invest_small_businesses
 		icon = GFX_focus_central_invest_businesses
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_banana_economy
 		}
 		x = 8
 		y = 6
-
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}	
+		completion_reward = {    
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
 	}
 	focus = {
 		id = central_extend_healthcare_system
 		text = central_extend_healthcare_system
 		icon = GFX_focus_central_expand_healthcare
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_modern_industry
 		}
 		x = 12
 		y = 6
-
+		completion_reward = {
+		    add_ideas = central_modern_healthcare
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
 	}
 
 	focus = {
@@ -531,6 +745,7 @@ focus_tree = {
 		text = central_create_industrial_park
 		icon = GFX_focus_generic_industry_2
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_invest_small_businesses
 			focus = central_extend_healthcare_system
@@ -538,8 +753,64 @@ focus_tree = {
 		prerequisite = {
 			focus = central_education_budget
 		}
+		bypass = {
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = construction_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = industrial_complex
+							size < 1
+							include_locked = yes
+						}					
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = production_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = arms_factory
+							size < 1
+							include_locked = yes
+						}
+					}
+				}
+			}	
+		}
 		x = 10
 		y = 7
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}	
 
 	}
 	focus = {
@@ -547,6 +818,7 @@ focus_tree = {
 		text = central_banana_economy
 		icon = GFX_focus_r56_goal_generic_stock_exchange
 		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
 			focus = central_subdue_peasants
 		}
@@ -571,7 +843,11 @@ focus_tree = {
 		}
 		x = 10
 		y = 6
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
+	
 	focus = {
 		id = central_reform_army
 		icon = GFX_focus_chi_army_reform
@@ -657,6 +933,37 @@ focus_tree = {
 		}
 		x = 30
 		y = 3
+		completion_reward = {
+			custom_effect_tooltip = central_new_generals_tt
+			hidden_effect = {
+				create_corps_commander = {
+					traits = { infantry_officer }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+
+				create_corps_commander = {
+					traits = { inflexible_strategist }
+					skill = 2
+					attack_skill = 1
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 2
+				}
+
+				create_corps_commander = {
+					traits = { brilliant_strategist }
+					skill = 2
+					attack_skill = 3
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 1
+				}
+			}
+		}
 
 	}
 	focus = {
