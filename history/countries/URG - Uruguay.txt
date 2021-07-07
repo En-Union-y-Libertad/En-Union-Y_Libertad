@@ -149,9 +149,9 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {  #According to election results
-	democratic = 61
+	neutrality = 56
 	fascism = 1
-	neutrality = 35
+	democratic = 40
 	communism = 3
 }
 
@@ -307,6 +307,33 @@ create_navy_leader = {
 		last_election = "1938.3.28"
 		election_frequency = 48
 		elections_allowed = no
+	}
+	set_popularities = {  #According to election results
+		neutrality = 61
+		fascism = 1
+		democratic = 35
+		communism = 3
+	}
+	create_country_leader = {
+		name = "Juan José de Arteaga"
+		desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
+		picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			
+		}
+	}
+	create_country_leader = {
+		name = "Alfredo Baldomir Ferrari"
+		desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
+		picture = "portrait_urg_alfredo_baldomir.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			generic_army_connections #He was still a general
+			fascist_sympathies
+		}
 	}
 }
 

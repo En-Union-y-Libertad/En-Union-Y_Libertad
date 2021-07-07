@@ -188,6 +188,16 @@ country_event = {
 			ruling_party = democratic
 			elections_allowed = yes 
 		}
+		create_country_leader = {
+			name = "Juan José de Arteaga"
+			desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
+			picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				
+			}
+		}
 	}
 	
 	option = {
