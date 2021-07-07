@@ -896,4 +896,8 @@
  STATE_895:0 "David"
  STATE_896:0 "Guanacaste"
  STATE_897:0 "Puntarenas"
- STATE_898:0 "Northern El Salvador" 
+ STATE_898:0 "Northern El Salvador"
+ STATE_899:0 "Darien"
+ STATE_900:0 "Veraguas"
+ STATE_901:0 "Coiba"
+ 

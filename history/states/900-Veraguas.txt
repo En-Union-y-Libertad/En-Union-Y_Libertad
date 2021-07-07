@@ -1,0 +1,23 @@
+state={
+	id=900
+	name="STATE_900"
+	
+    history={
+		owner = PAN
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = PAN
+        victory_points = {
+			14566 3 
+		}
+	}
+
+	provinces={
+		1633 14566 14567 14568 
+	}
+	manpower=116617
+	buildings_max_level_factor=1.000
+	state_category=town
+}

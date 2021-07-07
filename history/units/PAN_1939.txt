@@ -11,7 +11,7 @@
 units = {
 	division= {	
 		name = "Guardia Nacional"
-		location = 7630 # Panama City
+		location = 14570 # Panama City
 		division_template = "División de Infantería"
 		start_experience_factor = 0
 		start_equipment_factor = 0.1
