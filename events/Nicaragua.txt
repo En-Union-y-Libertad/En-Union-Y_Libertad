@@ -17,7 +17,13 @@ country_event = {
 
 	trigger = { 
 		date > 1936.6.8
+		date < 1936.8.8
 		original_tag = NIC
+		NOT = {
+			NIC = {
+				has_country_flag = NIC_coup_disband
+			}
+		}
 	}
 
 	option = {
@@ -30,7 +36,8 @@ country_event = {
 			elections_allowed = no
 		}
 		hidden_effect = { 
-		    NIC ={
+			set_country_flag = NIC_coup_disband
+			NIC ={
 				country_lock_all_division_template = no
 			}
 		}		
@@ -63,6 +70,7 @@ country_event = {
 		}
 		remove_ideas = nic_rebellious_army
 		hidden_effect = {
+			set_country_flag = NIC_coup_disband
 			set_country_flag = NIC_civil_war
 			remove_unit_leader = 24457
 			division_template = { 
@@ -85,8 +93,6 @@ country_event = {
 			NIC ={
 				country_lock_all_division_template = no
 			}
-		}		
-		hidden_effect = {	
 			random_other_country = {	
 					limit = {
 						original_tag = NIC
@@ -147,6 +153,7 @@ country_event = {
 	option = {
 		name = UL_nicaragua.2.a
 		delete_unit_template_and_units = { division_template = "Milicia" }
+		clr_country_flag = NIC_coup_disband
 	}
 }	
 
@@ -157,16 +164,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	mean_time_to_happen = {
-		days = 1
-	}	
-
-	trigger = { 
-		original_tag = NIC
-		has_civil_war = no
-		ruling_party = neutrality
-		date > 1936.12.30
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = UL_nicaragua.3.a
@@ -181,6 +179,120 @@ country_event = {
 					generic_army_connections
 				}
 			}
+	}
+}
+
+country_event = {
+	id = UL_nicaragua.4
+	title = UL_nicaragua.1.t
+	desc = UL_nicaragua.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = UL_nicaragua.4.a
+        
+		add_stability = -0.05
+		remove_ideas = nic_rebellious_army
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		hidden_effect = { 
+			set_country_flag = NIC_coup_disband
+			NIC ={
+				country_lock_all_division_template = no
+			}
+		}		
+	}
+
+	option = {
+		name = UL_nicaragua.4.b
+        
+		add_stability = -0.1
+		add_war_support = 0.05
+		start_civil_war = {
+			ideology = neutrality
+			size = 1.0
+			keep_unit_leaders = { 24456 }
+		}
+		create_country_leader = {
+			name = "Leonardo Argüello Barreto"
+			desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
+			picture = "gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			expire = "1965.1.1"
+			ideology = moderatism
+			traits = {
+				
+			}
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = NIC_neutrality_party_PCT_long
+			name = NIC_neutrality_party_PCT
+		}
+		remove_ideas = nic_rebellious_army
+		hidden_effect = {
+			set_country_flag = NIC_coup_disband
+			set_country_flag = NIC_civil_war
+			remove_unit_leader = 24457
+			division_template = { 
+				name = "Milicia" division_names_group = SPAN_INF_02 is_locked = yes 
+				regiments = { 
+					infantry = { x = 0 y = 0 } 
+					infantry = { x = 1 y = 0 } 
+				} 
+			}
+			317 = {
+					create_unit = {
+						division = "name = \"Milicia\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Milicia\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+						owner = ROOT
+					}
+			    }
+			NIC ={
+				country_lock_all_division_template = no
+			}		
+			random_other_country = {	
+					limit = {
+						original_tag = NIC
+						has_government = neutrality
+						has_civil_war = yes
+					}	
+			create_country_leader = {
+				name = "Anastasio Somoza García"
+				desc = "POLITICS_ANASTASIO_SOMOZA_GARCIA_DESC"
+				picture = "GFX_portrait_nicaragua_portrait_anastasio_somoza_garcia"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					generic_army_connections
+				}
+			}
+			
+			division_template = { 
+				name = "Milicia" division_names_group = SPAN_INF_02 is_locked = yes regiments = { 
+					infantry = { x = 0 y = 0 } 
+					infantry = { x = 1 y = 0 } 
+				}
+			}	 
+			889 = {	
+					create_unit = {
+						division = "name = \"Milicia\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+						owner = PREV
+					}
+			    }
+			888 = {
+					create_unit = {
+						division = "name = \"Milicia\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+						owner = PREV
+					}
+			    }		
+			}	
+		}		
 	}
 }
 
