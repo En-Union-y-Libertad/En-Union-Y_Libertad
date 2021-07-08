@@ -22,6 +22,7 @@
  ARG_inflation_4_or_less:0 "Currently has §YModerate Inflation§! or §Ybetter§!"
  ARG_inflation_2_or_less:0 "Currently has §YMinimal Inflation§! or §Ybetter§!"
  ARG_inflation_worse_than_3:0 "Currently has §YSlight Inflation§! or §Yworse§!"
+ NIC_coup_disband:0 "The Army has Coup'd to prevent the army's disbanding"
  
  
  URG_over_50:0 "Has at least §Y50§! people in prison (currently: [?URG_politicians_arrested|Y0])"

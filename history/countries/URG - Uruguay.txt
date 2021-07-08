@@ -148,10 +148,10 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = yes
 }
-set_popularities = {  #According to election results
-	neutrality = 56
-	fascism = 1
+set_popularities = { 
 	democratic = 40
+	fascism = 1
+	neutrality = 56
 	communism = 3
 }
 
@@ -309,9 +309,9 @@ create_navy_leader = {
 		elections_allowed = no
 	}
 	set_popularities = {  #According to election results
-		neutrality = 61
-		fascism = 1
 		democratic = 35
+		fascism = 1
+		neutrality = 61
 		communism = 3
 	}
 	create_country_leader = {
@@ -321,7 +321,7 @@ create_navy_leader = {
 		expire = "1965.1.1"
 		ideology = conservatism
 		traits = {
-			
+
 		}
 	}
 	create_country_leader = {
@@ -334,7 +334,7 @@ create_navy_leader = {
 			generic_army_connections #He was still a general
 			fascist_sympathies
 		}
-	}
+	}		
 }
 
 ### VARIANTS ###
