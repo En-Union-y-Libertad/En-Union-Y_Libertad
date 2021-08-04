@@ -1,10 +1,9 @@
 ideas = {
 	# MILITARY
 
-
 	political_advisor = {
 
-		COS_julio_acosta_garcia = {
+		COS_jose_figueres_ferrer = {
 
 			picture = generic_political_advisor_south_america_1
 
@@ -15,7 +14,7 @@ ideas = {
 			traits = { war_industrialist }
 		}
 
-		COS_ricardo_castro_eeche = {
+		COS_juan_rafael_arias = {
 
 			picture = generic_political_advisor_south_america_3
 				
@@ -34,10 +33,10 @@ ideas = {
 				original_tag = COS
 			}
 			
-			traits = { captain_of_industry }
+			traits = { industry_reformer }
 		}
 
-		COS_chico_orlich_bolmarich = {
+		COS_solon_nunez_frutos = {
 
 			picture = generic_political_advisor_south_america_2
 			
@@ -48,7 +47,7 @@ ideas = {
 			traits = { popular_figurehead }
 		}
 
-		COS_jose_figueres_ferrer = {
+		COS_manuel_f_jimenez = {
 
 			picture = generic_political_advisor_south_america_2
 			
@@ -56,12 +55,12 @@ ideas = {
 				original_tag = COS
 			}
 			
-			traits = { compassionate_gentleman }
+			traits = { compassionate_gentleman smooth_talking_charmer }
 		}
 
 		COS_carmen_lyra = {
 
-			picture = generic_political_advisor_south_america_2
+			picture = generic_political_advisor_female_arab
 			
 			allowed = {
 				original_tag = COS
@@ -69,14 +68,34 @@ ideas = {
 			
 			traits = { communist_revolutionary }
 		}
+		COS_carlos_jimenez_ortiz = {
+
+			picture = generic_captain_of_industry_western_european_2d
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { democratic_reformer }
+		}
+		COS_max_effinger = {
+
+			picture = generic_fascist_demagogue_western_european_2d
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { fascist_demagogue }
+		}
 	}
 
 	theorist = {
 		
-		COS_luis_fernandez_rodriguez = {
+		COS_tobias_bolanos_palma = {
 			ledger = air
 
-			picture = generic_air_south_america_1
+			picture = COS_tobias_bolanos_palma
 			
 			allowed = {
 				original_tag = COS
@@ -88,30 +107,29 @@ ideas = {
 			
 			traits = { air_warfare_theorist }
 		}	
+		COS_joaquin_zavaleta = {
+			ledger = army
 
-		COS_tobias_picado_cortes = {
-			ledger = navy
-
-			picture = generic_navy_south_america_1
+			picture = COS_joaquin_zavaleta
 			
 			allowed = {
 				original_tag = COS
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.10
+				land_doctrine = 0.10
 			}
 			
-			traits = { naval_theorist }
+			traits = { military_theorist }
 		}
 	}
 
 	high_command = {
 
-		COS_francisco_rosendo_arguello = {
+		COS_ricardo_fernandez_peralta = {
 			ledger = army
 			
-			picture = generic_army_south_america_4
+			picture = COS_ricardo_fernandez_peralta
 			
 			allowed = {
 				original_tag = COS
@@ -123,24 +141,39 @@ ideas = {
 				factor = 1
 			}
 		}
-		
-		COS_guillermo_macho_nunez = {
-			ledger = air
-
-			picture = generic_air_south_america_1
+		COS_francisco_marshall = {
+			ledger = army
+			
+			picture = generic_army_chief_def_south_american_2d
 			
 			allowed = {
 				original_tag = COS
 			}
 			
-			traits = { air_air_combat_training_2 }
+			traits = { army_infantry_1 }
 			
 			ai_will_do = {
 				factor = 1
 			}
 		}
 
-		COS_carlos_uribe_alpoveda = {
+		COS_jose_figueres_ferrer_army = {
+			ledger = army
+			
+			picture = generic_political_advisor_south_america_1
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { army_chief_morale_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		COS_manuel_guerra = {
 			ledger = air
 
 			picture = generic_air_south_america_2
@@ -149,7 +182,7 @@ ideas = {
 				original_tag = COS
 			}
 			
-			traits = { air_strategic_bombing_2 }
+			traits = { air_air_combat_training_2 }
 			
 			ai_will_do = {
 				factor = 1
@@ -175,22 +208,7 @@ ideas = {
 
 	army_chief = {
 
-		COS_hugo_montes_ramirez = {
-
-			picture = generic_army_south_america_3
-			
-			allowed = {
-				original_tag = COS
-			}		
-			
-			traits = { army_chief_maneuver_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		COS_jorge_volio_jimenez = {
+		COS_hector_zuniga = {
 
 			picture = generic_army_south_america_2
 			
@@ -205,7 +223,7 @@ ideas = {
 			}
 		}
 
-		COS_baptista_e_gutierrez = {
+		COS_amadeo_vargas = {
 
 			picture = generic_army_south_america_1
 			
@@ -222,22 +240,7 @@ ideas = {
 	}
 
 	air_chief = {
-
-		COS_manuel_mora_valverde = {
-
-			picture = generic_air_south_america_2
-			
-			allowed = {
-				original_tag = COS
-			}
-			
-			traits = { air_chief_all_weather_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
+		
 		COS_oscar_padilla_sellean = {
 
 			picture = generic_air_south_america_1

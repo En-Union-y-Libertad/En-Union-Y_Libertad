@@ -237,7 +237,7 @@ ideas = {
 			}
 		}
 		kicking_the_companies = {
-			picture = banana_republic
+			picture = great_depression
 
             allowed = {
 				always = no
@@ -255,7 +255,7 @@ ideas = {
 			}
 		}
         UFC_in_government_idea = {
-			picture = banana_republic
+			picture = generic_pp_unity_bonus
 
             allowed = {
 				always = no
@@ -277,7 +277,7 @@ ideas = {
 			}
 		}
         central_industrial_independence = {
-			picture = generic_production_bonus
+			picture = idea_generic_central_management
 
             allowed = {
 				always = no
@@ -298,7 +298,7 @@ ideas = {
 			}
 		}
 		central_banana_republic_i2 = {
-			picture = banana_republic
+			picture = generic_deal_with_the_devil
 
             allowed = {
 				always = no
@@ -323,7 +323,7 @@ ideas = {
 			}
 		}
         central_recent_purchase = {
-			picture = banana_republic
+			picture = ger_mefo_bills_payment
 
             allowed = {
 				always = no
@@ -340,7 +340,7 @@ ideas = {
 			}
 		}
         central_recent_purchase2 = {
-			picture = banana_republic
+			picture = ger_mefo_bills_payment
 
             allowed = {
 				always = no
@@ -357,7 +357,7 @@ ideas = {
 			}
 		}
 		central_banana_republic_i3 = {
-			picture = banana_republic
+			picture = received_attache
 
             allowed = {
 				always = no
@@ -378,7 +378,7 @@ ideas = {
 			}
 		}
 		central_modern_healthcare = {
-			picture = banana_republic
+			picture = generic_exploit_mines
 
             allowed = {
 				always = no
@@ -396,7 +396,7 @@ ideas = {
 			}
 		}
         central_army_reform = {
-			picture = banana_republic
+			picture = generic_manpower_bonus
 
             allowed = {
 				always = no
@@ -413,7 +413,7 @@ ideas = {
 			}
 		}
 		central_artillery_production = {
-			picture = banana_republic
+			picture = generic_artillery_regiments
 
             allowed = {
 				always = no
@@ -434,7 +434,7 @@ ideas = {
 			}
 		}
 		central_weapon_production = {
-			picture = banana_republic
+			picture = volunteer_defence_corps
 
             allowed = {
 				always = no
@@ -455,7 +455,7 @@ ideas = {
 			}
 		}
 		central_improve_high_command_idea = {
-			picture = banana_republic
+			picture = cze_planning_bonus
 
             allowed = {
 				always = no
@@ -478,7 +478,7 @@ ideas = {
 			}
 		}
 		central_motorization_effort = {
-			picture = banana_republic
+			picture = FRA_motorized_focus
 
             allowed = {
 				always = no
@@ -499,7 +499,7 @@ ideas = {
 			}
 		}
 		central_disbanded_army = {
-			picture = banana_republic
+			picture = generic_constitutional_guarantees
 
             allowed = {
 				always = no
@@ -514,6 +514,70 @@ ideas = {
 			
 			modifier = {
 				conscription = -1.00
+				defensive_war_stability_factor = 0.3
+				ai_focus_defense_factor = 0.5
+			}
+		}
+		central_disarmed_nation_idea = {
+			picture = generic_constitutional_guarantees
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_industrial_complex_factor = 0.25
+				stability_factor = 0.15
+				production_speed_arms_factory_factor = -1.0
+				ai_focus_defense_factor = 1.0
+			}
+		}
+		central_trained_guard = {
+			picture = generic_fortify_the_borders
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			
+			modifier = {
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				local_org_regain = 0.1
+	            supply_consumption_factor = -0.1
+			}
+		}
+		central_efficient_police = {
+			picture = generic_fortify_the_borders
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			
+			modifier = {
+				drift_defence_factor = 0.5
+				stability_weekly = 0.001
 			}
 		}
     }

@@ -5025,6 +5025,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/usa_improved_infantry_weapons.dds"
 	}	
 
+	SpriteType = {
+		name = "GFX_URG_armored_car_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/urg_armored_car_equipment_2.dds"
+	}
+
 	### Chile ###
 	
 	SpriteType = {

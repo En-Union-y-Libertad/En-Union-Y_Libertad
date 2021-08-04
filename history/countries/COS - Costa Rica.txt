@@ -126,6 +126,38 @@ create_corps_commander = {
     logistics_skill = 2
 }
 
+create_corps_commander = {
+	name = "Amadeo Vargas"
+	portrait_path = "gfx/leaders/COS/portrait_COS_amadeo_vargas.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 3
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Hector Zuñiga"
+	portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Joaquin Zavaleta"
+	portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_11.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 3
+    logistics_skill = 2
+}
+
 1939.1.1 = {
 	set_politics = {
 		ruling_party = democratic

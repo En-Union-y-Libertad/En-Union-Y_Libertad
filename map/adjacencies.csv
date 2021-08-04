@@ -176,6 +176,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 14565;14456;impassable;-1;-1;-1;-1;-1;;darien
 14565;14479;impassable;-1;-1;-1;-1;-1;;darien
 10482;14479;impassable;-1;-1;-1;-1;-1;;darien 
-4642;7678;sea;-1;-1;-1;-1;-1;PANAMA_CANAL;Panama
+8857;2284;sea;4642;7617;1009;1556;1016;PANAMA_CANAL;Panama
 3314;6336;sea;2752;2885;1578;2890;1581;;Afsluitdijk
 -1;-1;;-1;-1;-1;-1;-1;-1

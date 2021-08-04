@@ -27,17 +27,17 @@ focus_tree = {
 		cost = 5
 		x = 9
 		y = 0
-			search_filters = { FOCUS_FILTER_INDUSTRY  FOCUS_FILTER_RESEARCH }
-			available_if_capitulated = yes
-			completion_reward = {
-					add_tech_bonus = {
-							name = industrial_bonus
-							bonus = 1.0
-							uses = 1
-							category = industry
-						}
-				}
-	        }
+		search_filters = { FOCUS_FILTER_INDUSTRY  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+		completion_reward = {
+		    add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
 	focus = {
 		id = central_cooperate_companies
 		text = central_cooperate_companies
@@ -972,7 +972,7 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = artillery_equipment_1
-				amount = 100
+				amount = 250
 				producer = USA
 			}
 		}
@@ -1174,20 +1174,109 @@ focus_tree = {
 		}
 		x = 38
 		y = 1
-		
-        select_effect = {
-			if = {
-				limit = {
-					tag = NIC
-				}
-			    country_event = { id = UL_nicaragua. days = 1 }	
-			}
-		}
 
 		completion_reward = {
+			add_stability = 0.3
+			add_war_support = -1.0
 			add_ideas = central_disbanded_army
+			custom_effect_tooltip = central_disband_army_tt
 			hidden_effect = {
+				country_lock_all_division_template = yes
 				add_ideas = disarmed_nation
+				add_manpower = -500000
+				if = {
+					limit = { original_tag = PAN }
+					PAN = {
+						delete_unit = {
+    						state = 899
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 304
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 895
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 900
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 901
+    						disband = no
+  						}      
+					}
+				}
+				else_if = {
+					limit = { original_tag = COS }
+					COS = {
+						delete_unit = {
+    						state = 897
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 316
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 896
+    						disband = no
+  						}
+					}
+				}
+				else_if = {
+					limit = { original_tag = HON }
+					HON = {
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
+					}
+				}
+				else_if = {
+					limit = { original_tag = ELS }
+					ELS = {
+						delete_unit = {
+    						state = 314
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 898
+    						disband = no
+  						}
+					}
+				}
+				else_if = {
+					limit = { original_tag = GUA }
+					GUA = {
+						delete_unit = {
+    						state = 313
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 890
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 891
+    						disband = no
+  						}
+						delete_unit = {
+    					    state = 892
+    						disband = no
+  						}
+					}
+				}
 			}	
 		}
 	}
@@ -1203,7 +1292,9 @@ focus_tree = {
 		}
 		x = 36
 		y = 2
-
+        completion_reward = {
+			add_ideas = central_disarmed_nation_idea
+		}
 	}
 	focus = {
 		id = central_diplomatic_effort
@@ -1239,8 +1330,30 @@ focus_tree = {
 		}
 		x = 40
 		y = 2
-
+		completion_reward = {
+			custom_effect_tooltip = central_create_guard_tt
+			hidden_effect = {
+				division_template = {
+					name = "Guardia Nacional"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+					}
+				}
+					
+				random_owned_controlled_state = {
+					limit = { is_capital = yes }
+					create_unit = { 
+						division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2" 
+						owner = ROOT
+					}
+				}
+			}	
+		}
 	}
+
 	focus = {
 		id = central_fund_police
 		icon = GFX_goal_generic_intelligence_exchange
@@ -1251,7 +1364,9 @@ focus_tree = {
 		}
 		x = 38
 		y = 3
-
+		completion_reward = {
+			add_ideas = central_efficient_police
+		}
 	}
 	focus = {
 		id = central_non_agression_pact
@@ -1279,8 +1394,35 @@ focus_tree = {
 		}
 		x = 42
 		y = 3
-
-	}
+		completion_reward = {
+			custom_effect_tooltip = central_create_reserve_tt
+			hidden_effect = {
+				division_template = {
+					name = "División de Reserva"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+				}
+					
+				random_owned_controlled_state = {
+					limit = { is_capital = yes }
+					create_unit = { 
+						division = "name = \"1a División de Reserva\" division_template = \"División de Reserva\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"2a División de Reserva\" division_template = \"División de Reserva\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"3a División de Reserva\" division_template = \"División de Reserva\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+			}	
+		}
+    }
 	focus = {
 		id = central_public_forces
 		icon = GFX_goal_generic_allies_build_infantry
@@ -1296,6 +1438,35 @@ focus_tree = {
 		}
 		x = 40
 		y = 4
+		completion_reward = {
+			custom_effect_tooltip = central_public_force_tt
+			hidden_effect = {
+				delete_unit_template_and_units = { division_template = "Guardia Nacional" }
+				division_template = {
+					name = "Fuerza Publica"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+					}
+				}
+					
+				random_owned_controlled_state = {
+					limit = { is_capital = yes }
+					create_unit = { 
+						division = "name = \"Fuerza Pública\" division_template = \"Fuerza Publica\" start_experience_factor = 0.3" 
+						owner = ROOT
+					}
+				}
+			}	
+		}
 
 	}
 	focus = {
@@ -1338,7 +1509,9 @@ focus_tree = {
 		}
 		x = 40
 		y = 3
-
+        completion_reward = {
+			add_ideas = central_trained_guard
+		}
 	}
 
 }

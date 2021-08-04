@@ -45,6 +45,35 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate5.dds"
 	}
 
+	### Costa Rica ###
+
+    spriteType = {
+		name = "GFX_idea_COS_amadeo_vargas"
+		texturefile = "gfx/interface/ideas/idea_COS_amadeo_vargas.dds"
+	}
+
+    spriteType = {
+		name = "GFX_idea_COS_hector_zuniga"
+		texturefile = "gfx/interface/ideas/idea_COS_hector_zuniga.dds"
+	}
+
+    spriteType = {
+		name = "GFX_idea_COS_joaquin_zavaleta"
+		texturefile = "gfx/interface/ideas/idea_COS_joaquin_zavaleta.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COS_tobias_bolanos_palma"
+		texturefile = "gfx/interface/ideas/idea_COS_tobias_bolanos_palma.dds"
+	}  
+
+    spriteType = {
+		name = "GFX_idea_COS_ricardo_fernandez_peralta"
+		texturefile = "gfx/interface/ideas/idea_COS_ricardo_fernandez_peralta.dds"
+	}	
+	
+	##################
+
 	spriteType = {
 		name = "GFX_idea_ARG_soviet_aid"
 		texturefile = "gfx/interface/ideas/ARG_soviet_aid.dds"

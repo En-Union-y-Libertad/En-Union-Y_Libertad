@@ -10,3 +10,7 @@
   central_american_concession_tt_50:0 "We will pay §G50%§! of the requested compensation" 
   central_concessions_to_americans_tt:0 "This will unlock the §YConcessions to the Americans§! decisions, allowing you to make concessions to the Americans to avoid an §Rintervention§!" 
   central_new_generals_tt:0 "After completing this focus, you will gain §G3§! §Ynew generals§!"
+  central_disband_army_tt:0 "Complething this focus will §Rdisband all of your divisions§!"
+  central_create_guard_tt:0 "§YThis will spawn a unit of the§! §GGuardia Nacional§!"
+  central_create_reserve_tt:0 "§YThis will spawn §Gthree§! unit of reserves"
+  central_public_force_tt:0 "§YThis will replace the§! §RGuardia Nacional§! §Ywith a§! §Gbetter§! §Ydivision§!"
