@@ -3471,3 +3471,142 @@ south_american_armament = {
 		}
 	}
 }
+
+conference_cat = {
+	
+	conference_mission1 = {
+
+		icon = GFX_decision_generic_factory
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = conference_denied
+			}
+		}
+
+		days_mission_timeout = 106
+		
+		activation = {
+			has_country_flag = conference
+			NOT = { has_country_flag = conference_denied }
+			NOT = { has_country_flag = conference1_ready }
+		}
+
+		visible = {
+			NOT = { has_country_flag = conference_denied }
+			has_country_flag = conference
+		}
+		
+		timeout_effect = {
+			ROOT = {
+				country_event = { id = conference.1 hours = 8 }
+				set_country_flag = conference1_ready
+			} 
+		}
+		complete_effect = {
+			
+		}
+	}
+
+	conference_mission2 = {
+
+		icon = GFX_decision_generic_military
+		
+		available = {
+			hidden_trigger = {
+				has_country_flag = conference_denied
+			}
+		}
+
+		days_mission_timeout = 212
+		
+		activation = {
+			has_country_flag = conference
+			NOT = { has_country_flag = conference_denied }
+			NOT = { has_country_flag = conference2_ready }
+		}
+
+		visible = {
+			NOT = { has_country_flag = conference_denied }
+			has_country_flag = conference
+		}
+
+		timeout_effect = {
+			ROOT = {
+				country_event = { id = conference.2 hours = 8 }
+				set_country_flag = conference2_ready
+			}
+		}
+		complete_effect = {
+			
+		}
+	}
+
+	conference_mission3 = {
+
+		icon = GFX_decision_generic_research	
+		
+		available = {
+			hidden_trigger = {
+				has_country_flag = conference_denied
+			}
+		}
+
+		days_mission_timeout = 318
+		
+		activation = {
+			has_country_flag = conference
+			NOT = { has_country_flag = conference_denied }
+			NOT = { has_country_flag = conference3_ready }
+		}
+
+		visible = {
+			NOT = { has_country_flag = conference_denied }
+			has_country_flag = conference
+		}
+
+		timeout_effect = {
+			ROOT = {
+				country_event = { id = conference.3 hours = 8 }
+				set_country_flag = conference3_ready
+			}
+		}
+		complete_effect = {
+			
+		}
+	}
+
+	conference_mission4 = {
+
+		icon = GFX_decision_eng_trade_unions_support	
+		
+		available = {
+			hidden_trigger = {
+				has_country_flag = conference_denied
+			}
+		}
+
+		days_mission_timeout = 20
+		
+		activation = {
+			date > 1936.11.30
+			NOT = { has_country_flag = conference_denied }
+			NOT = { has_global_flag = conference_ends }
+			has_country_flag = conference
+		}
+
+		visible = {
+			NOT = { has_country_flag = conference_denied }
+			has_country_flag = conference
+		}
+
+		timeout_effect = {
+			ROOT = {
+				country_event = { id = conference.4 hours = 8 }
+			}
+		}
+		complete_effect = {
+			
+		}
+	}
+}

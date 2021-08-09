@@ -564,7 +564,6 @@ bookmarks = {
 			ideas = {
 				URG_the_terra_dictatorship_idea
 				URG_debt_to_the_british
-				URG_ancap_idea_1
 			}
 			focuses = {
 				URG_imprison_Terra
@@ -607,6 +606,22 @@ bookmarks = {
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
+		}
+
+		"COL" = {
+			minor = yes 
+			history = "COL_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				COL_political_violence_6
+				COL_oposicion
+				COL_economia_1
+			}
+			focuses = {
+				COL_mandato_de_unificacion
+				COL_pueblo_a_la_carga
+				COL_nuestro_por_derecho
+			}
 		}
 	}
 }

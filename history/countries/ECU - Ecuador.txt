@@ -91,3 +91,14 @@ create_country_leader = {
 		}
 	}
 }
+
+create_corps_commander = {
+	name = "Alberto Enríquez Gallo"
+	portrait_path = "gfx/leaders/ECU/Portrait_Alberto_Enriquez_Gallo.dds"
+	traits = { jungle_rat }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}

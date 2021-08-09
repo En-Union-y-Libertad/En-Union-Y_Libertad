@@ -25,6 +25,13 @@
  PBC_socialist_tendencies_2:0 "Tendencias socialistas"
  PBC_fascist_tendencies:0 "Tendencias fascistas"
  PBC_democratic_tendencies:0 "Tendencias democráticas"
+ COL_heroe_colombo_peruano:0 "Héroe de la guerra colombo-peruana"
+ COL_monsignor_of_the_armies:0 "Monseñor de los ejércitos"
+ COL_british_naval_attache:0 "Agregado naval británico"
+ COL_haz_godo:0 "El Haz Godo"
+ COL_proselito_del_duce:0 "Prosélito del Duce"
+ COL_hombre_tempestad:0 "El Hombre Tempestad"
+ COL_voice_of_the_people:0 "La voz del pueblo"
  
 
  cc_leader:0 "General"

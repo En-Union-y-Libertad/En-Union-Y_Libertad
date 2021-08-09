@@ -30,6 +30,7 @@ country_event = {
 			NOT = { original_tag = GRE }
 			NOT = { original_tag = TUR }
 		}
+		NOT = { original_tag = COL }
 	}
 
 	fire_only_once = yes
@@ -195,6 +196,7 @@ country_event = {
 			NOT = { original_tag = GRE }
 			NOT = { original_tag = TUR }
 		}
+		NOT = { original_tag = COL }
 	}
 
 	mean_time_to_happen = {
@@ -253,6 +255,7 @@ country_event = {
 			NOT = { original_tag = GRE }
 			NOT = { original_tag = TUR }
 		}
+		NOT = { original_tag = COL }
 	}
 
 	mean_time_to_happen = {
@@ -651,6 +654,7 @@ country_event = {
 			NOT = { original_tag = GRE }
 			NOT = { original_tag = TUR }
 		}
+		NOT = { original_tag = COL }
 	}
 
 	mean_time_to_happen = {
@@ -1141,6 +1145,7 @@ country_event = {
 			NOT = { original_tag = GRE }
 			NOT = { original_tag = TUR }
 		}
+		NOT = { original_tag = COL }
 	}
 
 	mean_time_to_happen = {
@@ -1253,6 +1258,7 @@ country_event = {
 				has_dlc = "La Resistance"
 			}
 		}
+		NOT = { original_tag = COL }
 	}
 
 	mean_time_to_happen = {

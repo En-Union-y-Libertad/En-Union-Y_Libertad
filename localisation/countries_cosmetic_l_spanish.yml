@@ -3,6 +3,30 @@
  ARG_greater_confederation_DEF:0 "La Gran Confederación Argentina"
  ARG_military_junta:0 "Junta Militar Argentina"
  ARG_military_junta_DEF:0 "La Junta Militar Argentina"
+
+ UCO_unified:0 "Estados Unidos de Colombia"
+ UCO_unified_DEF:0 "Los Estados Unidos de Colombia"
+ UCO_unified_ADJ:0 "de los Estados Unidos de Colombia"
+
+ GRC_UNIFIED:0 "Gran Colombia"
+ GRC_UNIFIED_DEF:0 "La Gran Colombia"
+ GRC_UNIFIED_ADJ:0 "de la Gran Colombia"
+
+ COL_gaitan_war:0 "Colombia Gaitanista"
+ COL_gaitan_war_DEF:0 "la Colombia Gaitanista"
+ COL_gaitan_war_ADJ:0 "de la Colombia Gaitanista"
+
+ COL_azul_war:0 "Colombia Tradicionalista"
+ COL_azul_war_DF:0 "la Colombia Tradicionalista"
+ COL_azul_war_ADJ:0 "de la Colombia Tradicionalista"
+
+ COL_militar_gov:0 "Junta Provisional Colombiana"
+ COL_militar_gov_DEF:0 "la Junta Provisional Colombiana"
+ COL_militar_gov_ADJ:0 "de la Junta Provisional Colombiana"
+
+ COL_rojas_pinilla_war:0 "Comando General de Colombia"
+ COL_rojas_pinilla_war_DEF:0 "el Comando General de Colombia"
+ COL_rojas_pinilla_war_ADJ:0 "del Comando General de Colombia"
  
  CHL_anarchist_global_commune:0 "Comunidad Anrquísta Global"
  CHL_anarchist_global_commune_DEF:0 "La Comunidad Anrquísta Global"
@@ -32,6 +56,20 @@
  RPE_UNIFIED_fascism:0 "Imperio Rioplatense"
  RPE_UNIFIED_neutrality_DEF:0 "el Imperio Rioplatense"
  RPE_UNIFIED_fascism_DEF:0 "el Imperio Rioplatense"
+ RPE_UNIFIED_fascism_DEF:0 "the Rioplatense Empire"
+ RPE_UNIFIED_democratic:0 "Rioplatense Republic"
+ RPE_UNIFIED_democratic_DEF:0 "the Rioplatense Republic"
+ RPE_UNIFIED_communism:0 "Rioplatense Union"
+ RPE_UNIFIED_communism_def:0 "the Rioplatense Union"
+
+ LGA_federal_neutrality:0 "Liga Federal"
+ LGA_federal_fascism:0 "Liga Federal"
+ LGA_federal_communism:0 "Unión de los Pueblos Libres"
+ LGA_federal_democratic:0 "Federación Libre"
+ LGA_federal_neutrality_DEF:0 "the Liga Federal"
+ LGA_federal_fascism_DEF:0 "the Liga Federal"
+ LGA_federal_communism_DEF:0 "the Unión de los Pueblos Libres"
+ LGA_federal_democratic_DEF:0 "the Federación Libre"
 
  PRU_naval_junta:0 "Junta Naval Peruana"
  PRU_military_junta:0 "Junta Militar Peruana"

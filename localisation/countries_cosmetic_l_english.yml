@@ -4,6 +4,30 @@
  ARG_military_junta:0 "Argentine Military Junta"
  ARG_military_junta_DEF:0 "the Argentine Military Junta"
 
+ UCO_unified:0 "United States of Colombia"
+ UCO_unified_DEF:0 "the United States of Colombia"
+ UCO_unified_ADJ:0 "Colombian"
+
+ GRC_UNIFIED:0 "Gran Colombia"
+ GRC_UNIFIED_DEF:0 "the Gran Colombia"
+ GRC_UNIFIED_ADJ:0 "Colombian"
+
+ COL_gaitan_war:0 "Gaitanist Colombia"
+ COL_gaitan_war_DEF:0 "the Gaitanist Colombia"
+ COL_gaitan_war_ADJ:0 "of the Gaitanist Colombia"
+
+ COL_azul_war:0 "Traditionalist Colombia"
+ COL_azul_war_DF:0 "the Traditionalist Colombia"
+ COL_azul_war_ADJ:0 "of the Traditionalist Colombia"
+
+ COL_militar_gov:0 " Transitional Government of Colombia"
+ COL_militar_gov_DEF:0 "the Transitional Government of Colombia"
+ COL_militar_gov_ADJ:0 "of the Transitional Government of Colombia"
+
+ COL_rojas_pinilla_war:0 "General Command of Colombia"
+ COL_rojas_pinilla_war_DEF:0 "the General Command of Colombia"
+ COL_rojas_pinilla_war_ADJ:0 "of the General Command of Colombia"
+
  CHL_anarchist_global_commune:0 "Global Anarchist Commune"
  CHL_anarchist_global_commune_DEF:0 "the Global Anarchist Commune"
 
@@ -32,6 +56,19 @@
  RPE_UNIFIED_fascism:0 "Rioplatense Empire"
  RPE_UNIFIED_neutrality_DEF:0 "the Rioplatense Empire"
  RPE_UNIFIED_fascism_DEF:0 "the Rioplatense Empire"
+ RPE_UNIFIED_democratic:0 "Rioplatense Republic"
+ RPE_UNIFIED_democratic_DEF:0 "the Rioplatense Republic"
+ RPE_UNIFIED_communism:0 "Rioplatense Union"
+ RPE_UNIFIED_communism_def:0 "the Rioplatense Union"
+
+ LGA_federal_neutrality:0 "Liga Federal"
+ LGA_federal_fascism:0 "Liga Federal"
+ LGA_federal_communism:0 "Unión de los Pueblos Libres"
+ LGA_federal_democratic:0 "Federación Libre"
+ LGA_federal_neutrality_DEF:0 "the Liga Federal"
+ LGA_federal_fascism_DEF:0 "the Liga Federal"
+ LGA_federal_communism_DEF:0 "the Unión de los Pueblos Libres"
+ LGA_federal_democratic_DEF:0 "the Federación Libre"
 
  PRU_naval_junta:0 "Peruvian Naval Junta"
  PRU_military_junta:0 "Peruvian Military Junta"

@@ -2986,6 +2986,43 @@ spriteTypes = {
 	spriteType = { 
 		name = "GFX_report_PRU_event_election"
 		texturefile = "gfx/event_pictures/PRU_event_election.dds"
-	}		
+	}
+
+	#Colombia
+
+	spriteType = { 
+		name = "GFX_report_event_gaitan"
+		texturefile = "gfx/event_pictures/report_event_gaitan.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_rojas_coup"
+		texturefile = "gfx/event_pictures/report_event_rojas_coup.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_tragedy"
+		texturefile = "gfx/event_pictures/report_event_tragedy.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_conference"
+		texturefile = "gfx/event_pictures/report_event_conference.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_news_event_conference_ends"
+		texturefile = "gfx/event_pictures/news_event_conference_ends.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_unir"
+		texturefile = "gfx/event_pictures/report_event_unir.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_gaitan_muerte"
+		texturefile = "gfx/event_pictures/report_event_gaitan_muerte.dds"
+	}	
 	
 }
