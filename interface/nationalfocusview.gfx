@@ -367,5 +367,4 @@ spriteTypes = {
 		name = "GFX_FOCUS_FILTER_BIPARTISANSHIP"
 		texturefile = "gfx/interface/focusview/filter/col_bipartisanship.dds"
 	}
-
 }

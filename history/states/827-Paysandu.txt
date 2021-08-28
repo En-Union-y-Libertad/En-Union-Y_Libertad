@@ -1,4 +1,3 @@
-
 state={
 	id=827
 	name="STATE_827"
@@ -13,23 +12,30 @@ state={
 			infrastructure = 3
 			industrial_complex = 2
 			air_base = 1
-
 		}
 		victory_points = {
-			13275 3
+			13280 1
+		}
+        victory_points = {
+			13241 1
+		}
+		victory_points = {
+			13279 5 
 		}
 		victory_points = {
 			13270 5 
 		}
-		
 		victory_points = {
-			13278 1
+			13275 2 
+		}
+		victory_points = {
+			10502 3
 		}
 
 	}
 
 	provinces={
-		1613 1626 10502 12440 12468 13241 13242 13243 13264 13265 13267 13269 13270 13272 13273 13274 13275 13276 13277 13278 13279 13280 13281 
+		1613 1626 10502 12440 12468 13243 13264 13265 13267 13269 13270 13272 13274 13275 13276 13277 13278 13279 12481 13280 13281 13241 13242 
 	}
 	manpower=435421
 	buildings_max_level_factor=1.000

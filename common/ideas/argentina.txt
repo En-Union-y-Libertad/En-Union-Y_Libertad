@@ -675,6 +675,79 @@ ideas = {
 				conscription = 0.04
 			}
 		}
+
+		ARG_air_safety_regulations = {
+			allowed = {
+				original_tag = ARG
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_air_bonus
+
+			equipment_bonus = {
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				cv_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				jet_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				nav_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				cv_nav_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				rocket_interceptor_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				jet_tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				jet_strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				heavy_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+			}
+		}
 		
 		ARG_soviet_economic_aid_sent = {
 			picture = ARG_soviet_aid
@@ -968,8 +1041,8 @@ ideas = {
 				war_support_factor = 0.1
 				production_speed_buildings_factor = 0.15
 				consumer_goods_factor = -0.05
-				army_attack_factor = 0.15
-				army_defence_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
 			}
 		}
 		
@@ -1025,8 +1098,8 @@ ideas = {
 			modifier = {
 				stability_factor = 0.1
 				war_support_factor = 0.1
-				army_attack_factor = 0.15
-				army_defence_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
 			}
 		}
 		
@@ -1623,6 +1696,7 @@ ideas = {
 			}
 			
 			available = {
+				has_civil_war = yes 
 			}
 			
 			cancel = {
@@ -1827,6 +1901,7 @@ ideas = {
 				OR = {
 					tag = CHL
 					tag = ARG
+					tag = URG
 				}
 			}
 			
@@ -2770,7 +2845,7 @@ ideas = {
 			traits = { war_industrialist }
 		}
 		
-		ARG_enzo_bordabehere = {
+		ARG_leopoldo_melo = {
 			
 			picture = ARG_minister_enzo_bordabehere
 			
@@ -3024,6 +3099,24 @@ ideas = {
 			modifier = {
 			}
 		}
+
+		ARG_fundiciones_santini = {  #Manufacturer of the Ñandú
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			picture = generic_motorized_equipment_manufacturer_3
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
 	}
 	
 	aircraft_manufacturer = {
@@ -3129,6 +3222,43 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+
+		ARG_UIA = {
+			picture = ARG_UIA
+
+			allowed = {
+				original_tag = ARG
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		ARG_fapesa = {
+			
+			picture = ARG_fapesa
+
+			allowed = {
+				original_tag = ARG
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+			
+			traits = { electronics_concern }
 		}
 	}
 

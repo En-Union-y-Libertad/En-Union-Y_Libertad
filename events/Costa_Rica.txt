@@ -1,0 +1,94 @@
+###########################
+# Costarican Events
+###########################
+
+add_namespace = costarica
+
+country_event = {
+	id = costarica.1
+	title = costarica.1.t
+	desc = costarica.1.d
+	picture = GFX_COS_event_1
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}	
+
+	trigger = { 
+		date > 1936.2.9
+		original_tag = COS
+		has_government = democratic
+	}
+
+	option = {
+		name = costarica.1.a
+
+		retire_country_leader = yes
+
+		modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		
+		create_country_leader = {
+			name = "León Cortés Castro"
+			desc = "POLITICS_LEON_CORTES_CASTRO_DESC"
+			picture = "gfx/leaders/COS/portrait_COS_leon_cortes_castro.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				fascist_sympathies generic_lawyer
+			}
+		}
+	}
+
+	option = {
+		name = costarica.1.b
+
+		retire_country_leader = yes
+
+		create_country_leader = {
+			name = "Octavio Béeche Argüello"
+			desc = "POLITICS_LEON_CORTES_CASTRO_DESC"
+			picture = "gfx/leaders/ITA/Portrait_Italy_Generic_2.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				generic_judge
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = COS_democratic_party_PN_long
+			name = COS_democratic_party_PN
+		}
+	}
+
+    option = {
+		name = costarica.1.c
+        
+		add_stability = -0.05
+		create_country_leader = {  #Mora Valverde was the initial candidate, but was replaced by Carlos because Mora wasn't allowed to run due to his age
+			name = "Carlos Luis Sáenz"
+			desc = "POLITICS_LEON_CORTES_CASTRO_DESC"
+			picture = "gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = {
+				generic_writer
+			}
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.5
+		}
+	}
+}		
+        
+	

@@ -3468,7 +3468,19 @@
  news.341.b:0 "¡Pagarán con su sangre! Movilizá las reservas!"
  news.341.c:0 "¡Los Argentinos no tienen ninguna posibilidad!"
 
- 
+ news.346.t:0 "La Guerra Peruano-Ecuatoriana"
+ news.346.d:0 "Tras el aumento de las tensiones y los conflictos fronterizos entre los dos países, estalló una guerra total entre ambas naciones en una lucha por quién controlará Pastaza. \n\nAunque muchos piensan que Perú será el claro ganador debido a su supremacía industrial y militar, existe una pequeña minoría que cree que Ecuador puede salir victorioso de esta guerra. \n\nPor ahora, sólo el tiempo dirá quién será el verdadero vencedor de este conflicto".
+ news.346.a:0 "Bastante interesante"
+ news.346.b:0 "Deberíamos estudiar este conflicto"
+ news.346.c:0 "¡Estos Ecuatorianos caerán!"
+ news.346.e:0 "¡No permitiremos que estos calentólogos se salgan con la suya!"
+
+ news.347.t:0 "La segunda guerra del Chaco"
+ news.347.d:0 "A los pocos años de la primera Guerra del Chaco, los bolivianos no soportaron que los paraguayos fueran dueños del territorio del Chaco, territorio que los bolivianos reclaman como suyo. Después de varios conflictos fronterizos, los bolivianos lanzaron una ofensiva militar contra los paraguayos e iniciaron oficialmente la Segunda Guerra del Chaco. \n\nEl mundo observará con mucha atención los acontecimientos que se produzcan en esta guerra, ya que cualquier vencedor de la misma puede tener una posición bastante dominante en el centro de Sudamérica."
+ news.347.a:0 "Muy interesante"
+ news.347.b:0 "Hay que tener cuidado con esos dos"
+ news.347.c:0 "¡El CHACO SERÁ NUESTRO UNA VEZ MÁS!"
+ news.347.e:0 "¡Esta vez los Bolivianos sí que van a caer!"
  
 
  uruguay.2.t:0 "Nuestros oficiales han arrestado a algunas personas sospechosas"
@@ -3706,7 +3718,7 @@
  news.343.a:0 "¿Qué te pasa, Sudamérica?"
  news.343.b:0 "¡Es hora de recuperar nuestras tierras perdidas!"
  news.343.c:0 "¡Estos mongers de guerra perderán como la primera vez! VIVA CHILE!"
- news.343.d:0 "¡Necesitamos ayudar a nuestros hermanos chilenos! Hay que parar a estos belicistas!"
+ news.343.e:0 "¡Necesitamos ayudar a nuestros hermanos chilenos! Hay que parar a estos belicistas!"
 
  news.344.t:0 "Ecuador y Bolivia se han unido a la segunda guerra del Pacífico"
  news.344.d:0 "Rápidamente se difundió la noticia de que las fuerzas colombianas y ecuatorianas cruzaron la frontera peruana y se unieron oficialmente a Chile en su lado de la guerra. \n\nEl mundo está conmocionado al ver que lo que antes se consideraba un continente relativamente tranquilo se sale de control. \n\nPor ahora, sólo tenemos que esperar y ver cómo se desarrolla todo esto".
@@ -3813,7 +3825,6 @@
  perubolivia.1.b:0 "Germán Busch"
  perubolivia.1.c:0 "Luis A. Flores"
  perubolivia.1.e:0 "Manuel Prado Ugarteche"
-
 
  ### Eventos de Colombia ###
 
@@ -4185,3 +4196,10 @@
  colombia.91.a:0 "¡El mundo sabrá de lo que somos capaces!"
  colombia.91.b:0 "Otro desequilibrio de poder en la región."
  colombia.91.c:0 "¡No durarán mucho!"
+
+### Noticias aparte ###
+
+ news.348.t:0 "Caida de Buenos Aires"
+ news.348.d:0 "Expertos militares estan en shock debido a los reportes provenientes de Buenos Aires que confirman que la capital cayó antes las fuerzas Uruguayas. \n\nAunque algunas zonas siguen en combate, la mayoria de las unidades Argentinas se han retirado hacia el campo cercano a la ciudad. \n\nTropas uruguayan han empezado a hacer un desfile militar en la avenida 9 de Julio, del que participara Gabriel Terra, quien voló recientemente a Buenos Aires. \n\nHay rumores de que el gobierno Argentino logro escapar por la ruta 7 hacia los Andes, pero expertos creen que este fue un golpe devastador contra Argentina."
+ news.348.b:0 "Quien es la provincia ahora?"
+ news.348.c:0 "Imposible!"

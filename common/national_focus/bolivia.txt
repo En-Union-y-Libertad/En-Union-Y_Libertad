@@ -815,13 +815,13 @@ focus_tree = {
 			}
             hidden_effect = {
                 set_variable = { BOL_military_divisions = 33 }
-                set_variable = { BOL_civilian_army_divisions = 4}
+                set_variable = { BOL_civilian_army_divisions = 5 }
             }
         }
     }
 
     focus = {
-        id = BOL_secure_the_southern_provinces
+        id = BOL_secure_the_southern_provinces #secure our provinces
         icon = GFX_goal_generic_position_armies #might change 
         x = -5
         y = 1
@@ -951,9 +951,6 @@ focus_tree = {
             }
             custom_effect_tooltip = BOL_retain_70_equipment
             country_event = bolivia.1
-            hidden_effect = {
-                subtract_from_variable = { BOL_civil_war_power = 0.4 }
-            }
         }
     }
 

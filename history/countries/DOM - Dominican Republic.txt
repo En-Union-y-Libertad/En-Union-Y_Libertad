@@ -78,6 +78,105 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Juan Bosch"
+	desc = "POLITICS_JUAN_BOSCH_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_5.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Freddy Valdez"
+	desc = "POLITICS_RAFAEL_TRUJILLO_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_4.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Juan Rodríguez"
+	desc = "POLITICS_RAFAEL_TRUJILLO_DESC"
+	picture = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Rafael Trujillo"
+	portrait_path = "gfx/leaders/DOM/portrait_dom_rafael_trujillo.dds"
+	traits = { politically_connected }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Simón Díaz"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	traits = { infantry_officer }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Hector B. Trujillo"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+	traits = { old_guard politically_connected }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "José Garcia"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Ramfis Trujillo"
+	portrait_path = "gfx/leaders/DOM/portrait_DOM_ramfis_trujillo.dds"
+	traits = { old_guard politically_connected trait_cautious }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Federico Fiallo"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+	traits = {  }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 3
+    planning_skill = 1
+    logistics_skill = 2
+}
+
 1939.1.1 = {
 	create_country_leader = {
 		name = "Jacinto Peynado"

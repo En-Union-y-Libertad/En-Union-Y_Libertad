@@ -16,6 +16,26 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_news_346_pic"
+		texturefile = "gfx/event_pictures/news_346_pic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_COS_event_1"
+		texturefile = "gfx/event_pictures/COS_event.1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_347_pic"
+		texturefile = "gfx/event_pictures/news_347_pic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_buenos_aires"
+		texturefile = "gfx/event_pictures/news_event_buenos_aires.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_uruguay6"
 		texturefile = "gfx/event_pictures/uruguay6.dds"
 	}

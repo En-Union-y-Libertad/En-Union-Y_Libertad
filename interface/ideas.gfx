@@ -7,7 +7,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_traits_strip.dds"
 		noOfFrames = 15		
 	}
-
+	
 	### new tfv nat spirit icons
 
 	spriteType = {
@@ -320,9 +320,78 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/COL_camilo_daza.dds"
 	}
 	
+    spriteType = {
+		name = "GFX_idea_banana_republic"
+		texturefile = "gfx/interface/ideas/banana_republic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_NIC_rebellious_army"
+		texturefile = "gfx/interface/ideas/NIC_rebellious_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_central_banana_republic_cooperate1"
+		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_central_banana_republic_cooperate2"
+		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_central_banana_republic_cooperate3"
+		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_central_banana_republic_cooperate4"
+		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_central_banana_republic_cooperate5"
+		texturefile = "gfx/interface/ideas/central_banana_republic_cooperate5.dds"
+	}
+
+	### Costa Rica ###
+
+    spriteType = {
+		name = "GFX_idea_COS_amadeo_vargas"
+		texturefile = "gfx/interface/ideas/idea_COS_amadeo_vargas.dds"
+	}
+
+    spriteType = {
+		name = "GFX_idea_COS_hector_zuniga"
+		texturefile = "gfx/interface/ideas/idea_COS_hector_zuniga.dds"
+	}
+
+    spriteType = {
+		name = "GFX_idea_COS_joaquin_zavaleta"
+		texturefile = "gfx/interface/ideas/idea_COS_joaquin_zavaleta.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COS_tobias_bolanos_palma"
+		texturefile = "gfx/interface/ideas/idea_COS_tobias_bolanos_palma.dds"
+	}  
+
+    spriteType = {
+		name = "GFX_idea_COS_ricardo_fernandez_peralta"
+		texturefile = "gfx/interface/ideas/idea_COS_ricardo_fernandez_peralta.dds"
+	}	
+	
+	##################
+
 	spriteType = {
 		name = "GFX_idea_ARG_soviet_aid"
 		texturefile = "gfx/interface/ideas/ARG_soviet_aid.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_war_of_survival"
+		texturefile = "gfx/interface/ideas/war_of_survival.dds"
 	}
 
 	spriteType = {
@@ -534,6 +603,16 @@ spriteTypes = {
 		name = "GFX_idea_ARG_AFNE"
 		texturefile = "gfx/interface/ideas/ARG_AFNE.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_fapesa"
+		texturefile = "gfx/interface/ideas/ARG_fapesa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_UIA"
+		texturefile = "gfx/interface/ideas/ARG_UIA.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_ARG_arsenal_naval_puerto_belgrano"
@@ -588,6 +667,31 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_URG_ancap"
 		texturefile = "gfx/interface/ideas/URG_ancap.dds"
+	}
+
+    spriteType = {
+		name = "GFX_idea_URG_escuela_militar_aeronautica"
+		texturefile = "gfx/interface/ideas/URG_escuela_militar_aeronautica.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_URG_SCRA"
+		texturefile = "gfx/interface/ideas/URG_SCRA.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_URG_CIACA"
+		texturefile = "gfx/interface/ideas/URG_CIACA.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_URG_PASMA"
+		texturefile = "gfx/interface/ideas/URG_PESMA.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_URG_UTE"
+		texturefile = "gfx/interface/ideas/URG_UTE.dds"
 	}
 	
 	spriteType = {

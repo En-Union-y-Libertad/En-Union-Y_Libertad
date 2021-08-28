@@ -32,6 +32,13 @@
  COL_proselito_del_duce:0 "Prosélito del Duce"
  COL_hombre_tempestad:0 "El Hombre Tempestad"
  COL_voice_of_the_people:0 "La voz del pueblo"
+ COS_intellectual_dictator:0 "Dictador Intelectual"
+ generic_army_connections:0 "Conexiones en el Ejército"
+ URG_el_guerrillero:0 "El Guerrillero"
+ generic_physician:0 "Medico"
+ generic_lawyer:0 "Abogado"
+ generic_judge:0 "Juez"
+ generic_writer:0 "Escritor"
  
 
  cc_leader:0 "General"

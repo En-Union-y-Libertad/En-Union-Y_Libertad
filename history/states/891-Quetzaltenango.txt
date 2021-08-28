@@ -1,0 +1,21 @@
+state={
+	id=891
+	name="STATE_891"
+	history={
+		owner = GUA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = GUA
+		victory_points = {
+			14549 3 
+		}
+	}
+	provinces={
+		10842 14548 14549 
+	}
+	manpower=709405
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

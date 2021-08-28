@@ -1213,6 +1213,7 @@ ideas = {
 			}
 		}
 
+
 		conference1 = {
 				
 			picture = conf_inter

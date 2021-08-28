@@ -3705,7 +3705,7 @@
  news.343.a:0 "What's gotten into you, South America?"
  news.343.b:0 "It's time we get back our lost lands!"
  news.343.c:0 "These war mongerers will lose just like the first time! VIVA CHILE!"
- news.343.d:0 "We need to help our Chilean brothers! These warmongerers need to be stopped!"
+ news.343.e:0 "We need to help our Chilean brothers! These warmongerers need to be stopped!"
 
  news.344.t:0 "Ecuador and Bolivia Have Joined the Second War of the Pacific"
  news.344.d:0 "News quickly spread of Colombian and Ecuadorian forces crossing the Peruvian border and officially joining Chile on their side of the war. \n\nThe world stands in shock as they see what was once considered a relatively calm continent spiral out of control. \n\nFor now, we just have to wait and see how this all plays out."
@@ -3758,6 +3758,25 @@
  peru.29.d:0 "The hostilities between our army and navy that have been hurting us for a while now have finally calmed down. Many sectors of the army and navy now agree ideologically and have decided to stop this childish rivalry. \n\nNow that our army and navy are collaborating with each other, we can truly begin to foment a strong Peruvian state, one that will be feared and respected by our neighbors."
  peru.29.a:0 "Finally, we can relax"
 
+ news.346.t:0 "The [GetYear] Peru-Ecuador War"
+ news.346.d:0 "After rising tensions and border conflicts between the two countries, all out war broke out between the two nations in a struggle for who shall control Pastaza. \n\nWhile many think Peru will be the clear winner due to their industrial and military supremacy, there is the small minority that believe Ecuador can come out of this war as the victor. \n\nFor now, only time will tell who will be the true victor of this conflict."
+ news.346.a:0 "Quite Interesting Indeed"
+ news.346.b:0 "We should study this conflict"
+ news.346.c:0 "These Ecuadorians shall fall!"
+ news.346.e:0 "We won't allow these warmongerers get away with this!"
+
+ news.347.t:0 "The Second Chaco War"
+ news.347.d:0 "After only a few years from the first Chaco War, the Bolivians simpyl couldn't stand the Paraguayans owning the Chaco territory, a territory the Bolivians claim as theirs. After various border conflicts, the Bolivians have launched an all outt military offensive against the Paraguayans and officially started the Second Chaco War. \n\nThe world will watch with a very careful eye the events that occur in this war, as any victor in this war may result in a fairly dominant position in Central South America."
+ news.347.a:0 "Very Interesting Indeed"
+ news.347.b:0 "We need to watch out with those two"
+ news.347.c:0 "THE CHACO SHALL BE OURS ONCE MORE!"
+ news.347.e:0 "This time the Bolivians will well and truly FALL!"
+
+ news.348.t:0 "Fall of Buenos Aires"
+ news.348.d:0 "Military experts are in shock as reports from Buenos Aires confirm that the capital has fallen to advancing Uruguayan troops. \n\nWhile some areas are still under combat, most units of the Argentinian army have retreated to the countryside surrounding the city. \n\nUruguayan troops have begun a victory parade through the 9 de Julio Avenue, with [URG.GetLeader] having flown to participate in it as well. \n\nRumors say that the Argentine government managed to escape through the Ruta 7 towards the Andes, however, experts consider this is a devastating blow to Argentina."
+ news.348.b:0 "Who's the province now?"
+ news.348.c:0 "This is outrageous!"
+
  # Bolivia
 
  bolivia.1.t:0 "The Military has Launched the Coup"
@@ -3807,3 +3826,16 @@
  perubolivia.1.b:0 "Germán Busch"
  perubolivia.1.c:0 "Luis A. Flores"
  perubolivia.1.e:0 "Manuel Prado Ugarteche"
+
+ ### Nicaragua ###
+ UL_nicaragua.1.t:0 "The Army makes a Coup d'Etat!"
+ UL_nicaragua.1.d:0 "Military units under the banner of the Guardia Nacional have begun rising up all throught Nicaragua, with the intent of deposing [Root.GetLeader]'s weak government. A battle on the outskirts of Managua between the forces still loyal to our cause and the forces loyal to the army has begun. As Managua is our only loyal city, the defeat of our forces would mean the collapse of all resistence against the army."
+ UL_nicaragua.1.a:0 "The Guardia Nacional is victorious!"
+ UL_nicaragua.1.b:0 "The Loyalists hold the line!"
+
+ ### Costa Rica ###
+ costarica.1.t:0 "1936 General Elections"
+ costarica.1.d:0 "The elections have begun. While many had expected Ricardo Jimenez to run for re-election, he rejected it emphatically arguing that such a thing went against democracy. As so, the [Root.GetDemocraticParty] has fowarded León Cortés Castro as the candidate for the elections. A staunch conservative, Cortés is considered a very polarizing figure in Costa Rica for his support of Nazism and his anti-semite views. with the opossition labeling him as a 'authoritarian, fascist and tyrant'. \n\nThe main opossition, the Partido Nacional, initially fowarded Julio Acosta, but Acosta eventually resigned due to feeling a lack of support from the party. Eventually, Octavio Béeche Argüello was fowarded for the candidacy. A liberal candidate, he came under attack by the right-wing due to his left-leaning ideals, even being called a communist by his main detractors. \n\nThe last party to run for presidency was a surprise to many. The [Root.GetCommunistParty], led by Manuel Mora Valverde, managed to register as a political party for the first time in Costa Rican history. However, Valverde was not allowed, as candidates have to be older than 30 to run. Instead, he was replaced by known writer, Carlos Luis Sáenz. \n\nThis election is considered very polarizing, with Carlos María Jiménez calling it a choice between 'Cortesism or communism, the extreme right and the extreme left, fascism and sovietism.' \n\nAs votes are being counted, it is obvious that..."
+ costarica.1.a:0 "The Partido Republicano won"
+ costarica.1.b:0 "The Partido Nacional won"
+ costarica.1.c:0 "The [Root.GetCommunistParty] won"
