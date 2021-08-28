@@ -1155,6 +1155,42 @@ spriteTypes = {
 		name = "GFX_nato_unit_alpacalry_icon_small"
 		texturefile = "gfx/texticons/nato_unit_alpacalry_icon_small.dds"
 		legacy_lazy_load = no
-	}	
+	}
+
+	spriteType = {
+		name = "GFX_col_conservador"
+		texturefile = "gfx/texticons/col_conservador.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_col_liberal"
+		texturefile = "gfx/texticons/col_liberal.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_col_militar"
+		texturefile = "gfx/texticons/col_militar.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_col_cat"
+		texturefile = "gfx/texticons/col_cat.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_col_crist"
+		texturefile = "gfx/texticons/col_crist.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_col_athe"
+		texturefile = "gfx/texticons/col_athe.dds"
+		legacy_lazy_load = no
+	}
 
 }

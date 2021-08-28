@@ -7,6 +7,102 @@ spriteTypes = {
 
 	### categories
 	
+	spriteType = {
+		name = "GFX_category_oposicion"
+		texturefile = "gfx/interface/decisions/category_oposicion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_mandato_unificacion"
+		texturefile = "gfx/interface/decisions/decision_category_mandato_unificacion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_COL_oposicion"
+		texturefile = "gfx/interface/decisions/decision_category_COL_oposicion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_cat"
+		texturefile = "gfx/interface/decisions/decision_col_cat.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_crist"
+		texturefile = "gfx/interface/decisions/decision_col_crist.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_athe"
+		texturefile = "gfx/interface/decisions/decision_col_athe.dds"
+	}
+
+	#ALINEAR LIBERAL/MILITAR/CONSERADOR
+
+	spriteType = {
+		name = "GFX_decision_col_liberal0"
+		texturefile = "gfx/interface/decisions/decision_col_liberal0.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_liberal1"
+		texturefile = "gfx/interface/decisions/decision_col_liberal1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_liberal2"
+		texturefile = "gfx/interface/decisions/decision_col_liberal2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_liberal3"
+		texturefile = "gfx/interface/decisions/decision_col_liberal3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_conser0"
+		texturefile = "gfx/interface/decisions/decision_col_conser0.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_conser1"
+		texturefile = "gfx/interface/decisions/decision_col_conser1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_conser2"
+		texturefile = "gfx/interface/decisions/decision_col_conser2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_conser3"
+		texturefile = "gfx/interface/decisions/decision_col_conser3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_mil0"
+		texturefile = "gfx/interface/decisions/decision_col_mil0.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_mil1"
+		texturefile = "gfx/interface/decisions/decision_col_mil1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_mil2"
+		texturefile = "gfx/interface/decisions/decision_col_mil2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_col_mil3"
+		texturefile = "gfx/interface/decisions/decision_col_mil3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_conference"
+		texturefile = "gfx/interface/decisions/decision_category_conference.dds"
+	}
 
 	spriteType = {
 		name = "GFX_decision_category_generic"

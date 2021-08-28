@@ -607,5 +607,21 @@ bookmarks = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
 		}
+
+		"COL" = {
+			minor = yes 
+			history = "COL_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				COL_political_violence_6
+				COL_oposicion
+				COL_economia_1
+			}
+			focuses = {
+				COL_mandato_de_unificacion
+				COL_pueblo_a_la_carga
+				COL_nuestro_por_derecho
+			}
+		}
 	}
 }

@@ -3826,6 +3826,377 @@
  perubolivia.1.c:0 "Luis A. Flores"
  perubolivia.1.e:0 "Manuel Prado Ugarteche"
 
+ ### Eventos de Colombia ###
+
+ colombia.1.title:0 "Un líder del ejército se gradúa como experto en desiertos"
+ colombia.1.desc:0 "Tras un largo periodo de estudio y entrenamiento del terreno, uno de nuestros líderes del ejército finalmente se ha graudado como experto en combate en el desiertos. Sin duda, este es un gran logro no solo para él, sino para todo el sistema de entrenamiento militar. \n\nSu nuevo rasgo de seguro le será de gran ayuda en las futuras batallas por la patria."
+ colombia.2.title:0 "Un líder del ejército se gradúa como experto en pantanos"
+ colombia.2.desc:0 "Tras un largo periodo de estudio y entrenamiento del terreno, uno de nuestros líderes del ejército finalmente se ha graudado como experto en combate en pantanos. Sin duda, este es un gran logro no solo para él, sino para todo el sistema de entrenamiento militar. \n\nSu nuevo rasgo de seguro le será de gran ayuda en las futuras batallas por la patria."
+ colombia.3.title:0 "Un líder del ejército se gradúa como experto en montañas"
+ colombia.3.desc:0 "Tras un largo periodo de estudio y entrenamiento del terreno, uno de nuestros líderes del ejército finalmente se ha graudado como experto en combate en las montañas. Sin duda, este es un gran logro no solo para él, sino para todo el sistema de entrenamiento militar. \n\nSu nuevo rasgo de seguro le será de gran ayuda en las futuras batallas por la patria."
+ colombia.4.title:0 "Un líder del ejército se gradúa como experto en colinas"
+ colombia.4.desc:0 "Tras un largo periodo de estudio y entrenamiento del terreno, uno de nuestros líderes del ejército finalmente se ha graudado como experto en combate en colinas. Sin duda, este es un gran logro no solo para él, sino para todo el sistema de entrenamiento militar. \n\nSu nuevo rasgo de seguro le será de gran ayuda en las futuras batallas por la patria."
+ colombia.5.title:0 "Un líder del ejército se gradúa como experto en selvas"
+ colombia.5.desc:0 "Tras un largo periodo de estudio y entrenamiento del terreno, uno de nuestros líderes del ejército finalmente se ha graudado como experto en combate en la selva. Sin duda, este es un gran logro no solo para él, sino para todo el sistema de entrenamiento militar. \n\nSu nuevo rasgo de seguro le será de gran ayuda en las futuras batallas por la patria."
+ colombia.6.title:0 "Un líder del ejército se gradúa como experto en bosques"
+ colombia.6.desc:0 "Tras un largo periodo de estudio y entrenamiento del terreno, uno de nuestros líderes del ejército finalmente se ha graudado como experto en combate en bosques. Sin duda, este es un gran logro no solo para él, sino para todo el sistema de entrenamiento militar. \n\nSu nuevo rasgo de seguro le será de gran ayuda en las futuras batallas por la patria."
+ colombia.7.title:0 "Un líder del ejército se gradúa como experto en zonas urbanas"
+ colombia.7.desc:0 "Tras un largo periodo de estudio y entrenamiento del terreno, uno de nuestros líderes del ejército finalmente se ha graudado como experto en combate en zonas urbanas. Sin duda, este es un gran logro no solo para él, sino para todo el sistema de entrenamiento militar. \n\nSu nuevo rasgo de seguro le será de gran ayuda en las futuras batallas por la patria."
+ colombia.1.a:0 "Un ejemplo de excelencia."
+
+ colombia.9.title:0 "La Tragedia de Fúquene"
+ colombia.9.desc:0 "Hoy ha ocurrido una terrible tragedia en la laguna de Fúquene, situada a 120 kilómetros de al norte de Bogotá. Una lancha con sobrecarga de pasajeros se hundió en las heladas aguas de la laguna y en un punto muy distante a la orilla. De las 27 personas que estaban en la embarcación, 21 se ahogaron. Entre las víctimas se encuentran distinguidos oficiales del ejército y varios personajes destacados de nuestra sociedad. Esta catástrofe ha conmovido hondamente a la nación entera y ha cubierto de luto a muy respetables familias de la capital."
+ colombia.9.a:0 "Un doloroso suceso."
+ colombia.10.title:0 "Se evitó una tragedia en Fúquene"
+ colombia.10.desc:0 "El día de hoy hubiese pasado a la historia como un trágico día en Cundinamarca. En la laguna de Fúquene, una lancha con sobrecarga de pasajeros estaba a punto de embarcarse en las heladas aguas de la laguna. Sin embargo, los pasajeros tardaron más de lo esperado en abordar la lancha, por lo que el viaje se retrasó varios minutos. Tiempo después, una repentina ventisca, acompañada de una lluvia torrencial les impidió zarpar. Eventualmente se comprobó que el motor de la lancha presentaba fallas, por lo que muy posiblemente, de haber zarpado a la hora programada, se hubiesen quedado a la deriva, y la lluvia hubiera hundido la embarcación."
+ colombia.10.a:0 "Una advertencia del destino..."
+
+ colombia.11.title:0 "La misión militar de Rojas Pinilla"
+ colombia.11.desc:0 "La dirección militar del ejército ha propuesto enviar un delegado a nombre del país a una potencia extranjera o a un centro de estudio focalizado para que traiga consigo información clave para el desarrollo de las fuerzas armadas. Después de revisar entre muchos candidatos, finalmente la dirección eligió al teniente Gustavo Rojas Pinilla para ejecutar esta labor. Lo único que hace falta aclarar es a dónde será enviado."
+ colombia.11.a:0 "Enviarlo a Estados Unidos"
+ colombia.11.b:0 "Enviarlo a Alemania"
+ colombia.11.c:0 "Enviarlo al centro de estudios militares"
+
+ #colombia.12
+ lideres.protegidos.title:0 "Los caudillos liberales son protegidos por el gobierno"
+ lideres.protegidos.desc:0 "Después de muchos años de persecución política, los caudillos liberales del oriente del país finalmente recibieron el apoyo y la protección del gobierno para realizar su acción sin vandalismo. La población liberal ha agradecido este gesto, que ha contribuido a la estabilidad de la región."
+ lideres.protegidos.a:0 "Un triunfo para el pueblo."
+ #colombia.13
+ bog.oponen.title:0 "Los comerciantes liberales se oponen a negociar con los conservadores"
+ bog.oponen.desc:0 "Los principales empresarios liberales, que dominan el mercado en Cundinamarca, no aceptaron colaborar económicamente con sus contrarios conservadores. Argumentan que no tienen garantías para negociar, y que el favoritismo por los conservadores por parte de otros empresarios podría costarles su trabajo y sus ganancias."
+ bog.oponen.a:0 "Qué obstinados.."
+ #colombia.14
+ bog.aceptan.title:0 "Empresarios liberales y conservadores negocian acuerdos comerciales"
+ bog.aceptan.desc:0 "Después de varias reuniones con los directores de las asociaciones industriales y los dirigentes de las empresas nacionales de Cundinamarca, el gobierno logró organizar a ambos grupos, liberales y conservadores, para que acordaran su mutua colaboración en el mercado. Los industriales liberales aceptaron un tanto reacios, aunque vieron con buenos ojos las utilidades que podrían obtener de sincronizar sus empresas, dejando a un lado las diferencias políticas."
+ bog.aceptab.a:0 "¡Una ganancia mutua!"
+ #colombia.15
+ int.acept.title:0 "Alcaldes liberales toman su puesto el Magdalena"
+ int.acept.desc:0 "Tras una larga campaña de reestructuración institucional y la intervención directa de [ROOT.GetLeader], los alcaldes de las principales ciudades del Magdalena finalmente pudieron asumir su cargo, que estaba siendo obstaculizado por las directivas conservadoras del lugar. La delegación liberal se regocijó con la noticia, anunciando que es una victoria para el pueblo."
+ int.acept.a:0 "Así funciona la democracia."
+ #colombia.16
+ int.oponen.title:0 "Conservadores rechazan nuevos alcaldes en Magdalena"
+ int.oponen.desc:0 "Texto conservadores rechazan."
+ int.oponen.a:0 "Empeñados en obstruir la voluntad del pueblo."
+ #colombia.17
+ prensa.eliminada.title:0 "Gobierno elimina prensa subversiva"
+ prensa.eliminada.desc:0 "Texto prensa eliminada."
+ prensa.eliminada.1:0 "Excelente."
+ #colombia.18
+ prensa.continua.title:0 "Periódicos conservadores continúan circulando"
+ prensa.continua.desc:0 "Texto prensa sigue circulando."
+ prensa.continua.a:0 "No por mucho tiempo."
+ #colombia.19
+ conser.arrestados.title:0 "Conservadores extremistas arrestados"
+ conser.arrestados.desc:0 "Texto Conservadores arrestados."
+ conser.arrestados.a:0 "Se hace justicia."
+ #colombia.20
+ conser.escapan.title:0 "Conservadores extremistas escapan de operativo"
+ conser.escapan.desc:0 "Texto Conservadores escapan"
+ conser.escapan.a:0 "Ya los encontraremos."
+ #colombia.21
+ conser.mueren.title:0 "Líderes conservadores mueren en operativo de captura"
+ conser.mueren.desc:0 "Texto conservadores mueren"
+ conser.mueren.a:0 "Maldición."
+ #colombia.22
+ pol.desman.title:0 "Policía conservadora desmantelada en Nariño"
+ pol.desman.desc:0 "Texto policía desmantelada."
+ pol.desman.a:0 "¡Todo un logro!"
+ #colombia.23
+ pol.gana.title:0 "Fuerzas armadas son derrotadas por paramilitares conservadores"
+ pol.gana.desc:0 "Texto policía le gana al ejército."
+ pol.gana.a:0 "Inconcebible."
+ #colombia.24
+ pol.mueren.title:0 "Enfrentamiento entre policía conservadora y fuerzas armadas"
+ pol.mueren.desc:0 "Texto policía muere."
+ pol.mueren.a:0 "No faltaba más..."
+
+ colombia.25.title:0 "¡Insurrección conservadora!"
+ colombia.25.desc:0 "El cúmulo de tensión política que veníamos acumulando finalmente estalló. Al sur del país se ha desatado una feroz contienda entre milicias del partido conservador y el ejército nacional. La situación, para nuestra desgracia, es clara, los conservadores se levantan en armas. \n\nHicimos mal al permitir que su influencia subversiva se esparciera por la nación, y ahora han quedado bajo control del temible Laureano Gómez. No solo hay rezagos del ejército que se rebelaron, sino que toda la cadena de mando colapsó y es imposible hacer contacto o dirigir institución alguna en su zona de influencia. Ahora solo queda una opción: retomar el orden por la fuerza."
+ colombia.25.a:0 "Esta situación se nos salió de las manos..."
+ colombia_25_tt:0 "Los partidarios §Yconservadores§! iniciarán una guerra civil."
+
+ colombia.26.title:0 "¡Insurrección militar!"
+ colombia.26.desc:0 "Los generales renegados que veían con desconfianza la gestión de [COL.GetLeader] han actuado. La noticia de la rebelión vino acompañada con motines en todo el ejército. Algunos fueron suprimidos en todo el ejército, mientras que otros consumaron su cometido y se unieron a las filas de los renegados. Parte del alto mando ha quedado disuelto, y varias reservas de municiones fueron saqueadas por las fuerzas sublevadas. Aunque la república no ha entrado en un caos generalizado, sin duda este evento traerá repercusiones en la administración de los partidos tradicionales."
+ colombia.26.a:0 "Esta situación se nos salió de las manos..."
+ colombia_26_tt:0 "Los §Ymilitares§! iniciarán una guerra civil."
+
+ colombia.27.title:0 "¡Insurrección liberal!"
+ colombia.27.desc:0 "La oposición liberal resultó ser más violenta de lo que esperábamos. Su líder, Jorge Eliécer Gaitán, alega que todo este tiempo había intentado hacer las cosas “pacíficamente”, pero que la escalada de violencia que ha azotado a sus copartidarios no podía pasar desapercibida ni manejarse con la parsimonia del pacifismo. Los principales dirigentes liberales se reunieron al norte del país y con ayuda del general Alfredo Azuero Arenas iniciaron una revolución armada contra el gobierno. No hay certeza sobre el tamaño o fuerza de combate de sus unidades de milicianos improvisadas, pero sabemos que, si no se detienen a tiempo, tomarán la capital y no se detendrán hasta controlar todo el país."
+ colombia.27.a:0 "Esta situación se nos salió de las manos..."
+ colombia_27_tt:0 "Los partidarios §Yliberales§! iniciarán una guerra civil."
+
+ colombia.28.title:0 "Milicias conservadoras se organizan por el país"
+ colombia.28.a:0 "El alto mando de las fuerzas armadas remitió al gabinete presidencial una noticia preocupante. A lo largo del país se han reportado paramilitares conservadores armándose y tomando el control de diferentes poblaciones al sur del país. Si no se hace algo al respecto, el gobierno podría perder el control de la situación."
+ colombia.28.b:0 "Apresar a sus líderes es suficiente."
+ colombia.28.c:0 "Ya se les pasará."
+
+ colombia.29.title:0 "Laureano Gómez amenaza con la guerra civil"
+ colombia.29.desc:0 "El dirigente conservador Laureano Gómez le ha hecho un ultimátum al gobierno. Afirma que, si el gobierno liberal no detiene su acción e involucra en sus disposiciones las propuestas del conservatismo, sus partidarios se alzarán en armas y harán invivible la república. Esta delicada situación ha estremecido a todo el gabinete nacional, pues las amenazas son certeras y suenan bastante reales."
+ colombia.29.a:0 "Habrá que ceder a sus demandas..."
+ colombia.29.b:0 "Cambiemos un par de cosas para calmarlo."
+ colombia.29.c:0 "Ya veremos si es capaz."
+
+ colombia.31.title:0 "El general Vega demuestra deslealtad"
+ colombia.31.a:0 "Retirar al general Vega del servicio."
+ colombia.31.b:0 "No es para tanto."
+
+ colombia.32.title:0 "El general Villamizar demuestra deslealtad"
+ colombia.32.a:0 "Retirar al general Villamizar del servicio."
+ colombia.32.b:0 "No es para tanto."
+
+ colombia.33.title:0 "El general Neira demuestra deslealtad"
+ colombia.33.a:0 "Retirar al general Neira del servicio."
+ colombia.33.b:0 "No es para tanto."
+
+ colombia.34.title:0 "La cúpula miltiar desacata la autoridad"
+ colombia.34.a:0 "Una sanción severa es lo justo."
+ colombia.34.b:0 "Una advertencia será suficiente."
+ colombia.34.c:0 "No es para tanto."
+
+ colombia.36.title:0 "Los militares exigen reintegrar a Vega"
+ colombia.36.a:0 "El general ya aprendió la lección."
+ colombia.36.b:0 "Vega permanecerá fuera del servicio."
+
+ colombia.37.title:0 "Los militares exigen reintegrar a Villamizar"
+ colombia.37.a:0 "El general ya aprendió la lección."
+ colombia.37.b:0 "Villamizar permanecerá fuera del servicio."
+
+ colombia.38.title:0 "Los militares exigen reintegrar a Neira"
+ colombia.38.a:0 "El general ya aprendió la lección."
+ colombia.38.b:0 "Neira permanecerá fuera del servicio."
+
+ colombia.39.title:0 "El retorno de la UNIR"
+ colombia.39.desc:0 "Aunque la Unión Nacional de Izquierda Revolucionaria (UNIR) se disolvió en 1935 para fusionarse con el partido liberal, era obvio que tal vínculo no iba a durar mucho. Jorge Eliécer Gaitán, caudillo popular y fundador de la UNIR, decidió restablecer formalmente su movimiento político, ahora apoyado por los sectores más radicales del liberalismo, incluyendo, entre otros, su compañero ideológico Plinio Mendoza Neira y el mismo presidente López Pumarejo. \n\nGozando de gran acogida entre la población, la UNIR se fortalece cada vez más, concentrando enormes masas populares bajo el liderazjo de Gaitán."
+ colombia.39.a:0 "Grandes cambios se avecinan en Colombia."
+
+ colombia.41.title:0 "Los conservadores orquestan un golpe de estado"
+ colombia.41.desc:0 "Después de organizar una gran unidad de militantes, respaldados tanto por gran parte de la población civil como el sector clerical, se formó una poderosa fuerza de asalto conservadora que arremetió en el palacio presidencial ayer en la noche con tal decisión que la guardia local fue incapaz de responder. Como era de esperarse, [COL.GetLeader] no había previsto esta situación, por lo que aislarlo junto con su gabinete en la oficina presidencial fue una labor bastante sencilla. Los principales dirigentes del conservatismo, Gilberto Alzate Avendaño y Laureano Gómez, no tardaron en hacer presencia. Fueron recibidos con una gran ovación de partidarios que se agruparon fuera del palacio para mantenerse al tanto de la situación. \n\nDespués de varias horas, ya entrada la madrugada, [COL.GetLeader] finalmente accedió a firmar la renuncia y ceder el mando del país al partido conservador. La noticia se espació por las calles, y mientras los seguidores del partido celebraban el hecho, en el interior del palacio se libraba una batalla por elegir cuál de los dos líderes asumiría el cargo: el osado falangista Gilberto Alzate o el acérrimo tradicionalista Laureano Gómez."
+ colombia.41.a:0 "Alzate es el líder que necesita Colombia."
+ colombia.41.b:0 "Laureano Gómez es el único que estabilizará la república."
+
+ colombia.42.title:0 "[ROOT.GetLeader] renuncia a la presidencia"
+ colombia.42.desc:0 "Hoy, el presidente [ROOT.GetLeader] manifestó al congreso la grave “desatención” de las directivas liberales clásicas a la solución de los problemas nacionales. Los desacuerdos dentro del liberalismo, sumado a los reproches del partido conservador, dividieron la administración pública e hizo imposible gobernar. En contraposición, arguyó que su mandato no puede proseguir bajo este panorama, y que debía ceder el mando a alguien que sí gozara de gran apoyo popular generalizado. Así las cosas, [FROM.GetLeader] formalmente renunció al mando presidencial para cederlo al actual alcalde de Bogotá (y candidato a las próximas elecciones) Jorge Eliécer Gaitán. \n\nGaitán es una personalidad ilustre, que no solo conmueve a todo el pueblo colombiano con su elocuencia y tenacidad, sino que demuestra verdadero interés en reformar completamente el sistema colombiano. Entre un enorme festejo por parte de sus seguidores, Gaitán asumió el mando de la república y, tras un exquisito discurso, se escuchó al unísono el lema de su campaña: ¡A la carga!"
+ colombia.42.a:0 "Gaitán no es un hombre, es un pueblo..."
+
+ colombia.43.title:0 "¡El golpe de estado fracasa!"
+ colombia.43.desc:0 "Descripción golpe de estado conservador fracasa."
+ colombia.43.a:0 "¡Alzate nos guiará a la victoria!"
+ colombia.43.b:0 "¡Venceremos bajo el liderazgo de Laureano Gómez!"
+
+ COL_grc_rejected:0 "Rechazaron la solicitud"
+
+ colombia.44.title:0 "Colombia busca nuestra anexión"
+ colombia.44.desc:0 "Descripción colombia exige la anexión."
+ colombia.44.a:0 "Seguiremos el camino de los colombianos."
+ colombia.44.b:0 "¡El pueblo ecuatoriano permanecerá libre!"
+
+ colombia.45.title:0 "¡Ecuador rechaza la anexión!"
+ colombia.45.desc:0 "Alegando que la independencia de Ecuador ya es definitiva, [FROM.GetLeader] negó rotundamente reintegrar su estado a nuestro proyecto de restauración grancolombiano. Ecuador cerró sus fronteras y desplegó varias unidades a lo largo, tal vez previendo una posible acción militar de nuestra parte."
+ colombia.45.a:0 "Será por la fuerza entonces..."
+
+ colombia.46.title:0 "Ecuador accede a nuestras demandas"
+ colombia.46.desc:0 "[FROM.GetLeader] recibió con entusiasmo la propuesta que le hemos planteado. Los movimientos políticos del país que buscaban la reunificación de la Gran Colombia celebraron la decisión y anunciaron que colaborarían a nuestro gobierno en todas las gestiones necesarias."
+ colombia.46.a:0 "Han elegido bien."
+
+ colombia.47.title:0 "Colombia busca reintegrarnos a su territorio"
+ colombia.47.desc:0 "Descripción colombia."
+ colombia.47.a:0 "El destino de Panamá está con Colombia."
+ colombia.47.b:0 "¡Nuestra independencia es más valiosa que sus ambiciones!"
+
+ colombia.48.title:0 "¡Panamá se rehúsa a volver a ser parte de Colombia!"
+ colombia.48.desc:0 "La decisión de [FROM.GetLeader] fue certera: Panamá nunca aceptaría una anexión a Colombia. Evocó las muchas décadas en que el istmo estuvo bajo nuestro control y fue ignorado por los gobiernos en curso. Aseveró que la lucha por la independencia de Panamá fue un suceso definitivo e irreversible, y que el pueblo panameño ha de prosperar por cuenta propia. Es obvio que ante una invasión de nuestras fuerzas el istmo estará indefenso. Sin embargo, el principal inconveniente es que no hay ruta terrestre a la región, pues el tapón del Darién es una selva inexpugnable."
+ colombia.48.a:0 "No saben lo que les conviene."
+
+ colombia.49.title:0 "Panamá se dispone a ser reintegrada"
+ colombia.49.desc:0 "Nuestra solicitud puso en evidencia al pueblo panameño la realidad actual: Panamá es una nación en crisis, reducida a ser un títere de Estados Unidos. Por ello, cuando la noticia del proyecto grancolombiano llegó a sus oídos, cientos de personas se manifestaron en la capital del país y alegaron que Panamá debía ser reintegrada a Colombia, no solo por el cambio estructural y político que está viviendo, sino porque representa un futuro más prometedor que siendo un enclave de los norteamericanos. Ante la presión popular, [FROM.GetLeader] aprobó la propuesta y el proceso de anexión ya se encuentra en curso."
+ colombia.49.a:0 "Hacen lo correcto."
+
+ colombia.50.title:0 "Colombia propone retomar el proyecto grancolombiano"
+ colombia.50.desc:0 "Descripción colombia."
+ colombia.50.a:0 "¡Unidos honraremos el legado de Bolívar!"
+ colombia.50.b:0 "Son solo ansias de poder."
+
+ colombia.51.title:0 "¡Venezuela se niega a colaborar en el proyecto grancolombiano!"
+ colombia.51.desc:0 "Tras un agudo debate entre los gobernantes venezolanos a nivel local y nacional, [FROM.GetLeader] declaró que Venezuela no será anexada súbitamente. Alegó que el origen común que unía a Colombia y a Venezuela se perdió hace mucho tiempo, y que una unificación haría insostenible la nueva nación además de esparcir la inestabilidad política de Colombia al territorio venezolano. No está claro si [FROM.GetLeader] ha ordenado un repliegue militar a fin de evitar una invasión por parte nuestra, pero no sería algo de extrañar."
+ colombia.51.a:0 "¡Son una deshonra para el libertador!"
+
+ colombia.52.title:0 "El gobierno venezolano aprueba nuestra propuesta"
+ colombia.52.desc:0 "Tras un agudo debate entre los gobernantes venezolanos a nivel local y nacional, la embajada nos notificó que [FROM.GetName] colaborará armoniosamente en la restauración de la Gran Colombia. Como estaba previsto en nuestra propuesta, [FROM.GetLeader] se mantendrá a la cabeza de la nueva administración en la región, y se adelantarán los trámites burocráticos necesarios para la unificación."
+ colombia.52.a:0 "Se acerca el regreso de la Gran Colombia."
+
+ colombia.53.title:0 "Colombia está dispuesta a comprar Yaguas"
+ colombia.53.desc:0 "Descripción colombia."
+ colombia.53.a:0 "Una propuesta interesante."
+ colombia.53.b:0 "Nuestra tierra no está en venta."
+
+ colombia.54.title:0 "[FROM.GetName] acepta la venta de Yaguas"
+ colombia.54.desc:0 "Yaguas fue parte de la Gran Colombia y la ayudaba a tener una frontera consistente con el amazonas. Por ello, es muy grato saber que [FROM.GetName] supo reconocerlo y aceptó cedernos el territorio. No falta mucho para reestablecer el territorio grancolombiano en el sur."
+ colombia.54.a:0 "La diplomacia es un arte sutil."
+
+ colombia.55.title:0 "[FROM.GetName] rechaza la propuesta de Yaguas"
+ colombia.55.desc:0 "[FROM.GetLeader] tuvo la osadía de negarnos el territorio de Yaguas. Este estado fue parte de la Gran Colombia, y sin él nuestra nueva nación no tendrá una frontera consistente con el amazonas. Afirman que su soberanía sobre el territorio es la única reconocida y no lo piensan cambiar."
+ colombia.55.a:0 "¡Entonces lo tomaremos nosotros mismos!"
+ colombia.55.b:0 "Lástima."
+
+ colombia.56.title:0 "Colombia desea comprar Mapari"
+ colombia.56.desc:0 "Descripción colombia."
+ colombia.56.a:0 "Una propuesta interesante."
+ colombia.56.b:0 "Nuestra tierra no está en venta."
+
+ colombia.57.title:0 "[FROM.GetName] acepta la propuesta de Mapari"
+ colombia.57.desc:0 "Descripción."
+ colombia.57.a:0 "Excelente."
+
+ colombia.58.title:0 "[FROM.GetName] se niega a vender Mapari"
+ colombia.58.desc:0 "Descripción."
+ colombia.58.a:0 "Volverá a ser nuestro, a cualquier costo."
+ colombia.58.b:0 "No hay nada que hacer."
+
+ colombia.59.title:0 "Colombia quiere negociar la compra de Japurá"
+ colombia.59.desc:0 "Descripción colombia."
+ colombia.59.a:0 "Una propuesta interesante."
+ colombia.59.b:0 "Nuestra tierra no está en venta."
+
+ colombia.60.title:0 "[FROM.GetName] acepta vender Japurá"
+ colombia.60.desc:0 "Descripción."
+ colombia.60.a:0 "Nuestras fronteras se reestablecen."
+
+ colombia.61.title:0 "[FROM.GetName] no accede a vender Japurá"
+ colombia.61.desc:0 "Descripción."
+ colombia.61.a:0 "¡Pues se lo arrebataremos!"
+ colombia.61.b:0 "Es una pena."
+
+ colombia.62.title:0 "Colombia solicita la venta de la Guayana Esequiba"
+ colombia.62.desc:0 "Descripción colombia."
+ colombia.62.a:0 "Una propuesta interesante."
+ colombia.62.b:0 "Nuestra tierra no está en venta."
+
+ colombia.63.title:0 "[FROM.GetName] está dispuesto a vender el Esequibo"
+ colombia.63.desc:0 "[FROM.GetName] accedió a cedernos el esequibo a cambio de una cuota industrial accesible. No era realmente esperado que [FROM.GetName] accediera, pero teniendo en cuenta el panorama mundial, es probable que aceptaran debido a su incapacidad de mantener el territorio."
+ colombia.63.a:0 "Nuestras fronteras se reestablecen."
+
+ colombia.64.title:0 "[FROM.GetName] no negociará la venta del Esequibo"
+ colombia.64.desc:0 "Representantes de [FROM.GetName] han dejado claro que el territorio del esequibo no será vendido bajo ninguna circunstancia a nuestra nación, pues es una zona de recursos estratégica y esencial. Quizá previendo nuestros planes, han movilizado tropas a la zona fronteriza para su protección. No queda ya mucho que hacer al respecto diplomáticamente."
+ colombia.64.a:0 "Si tanto insisten en conservar lo que es nuestro..."
+ colombia.64.b:0 "Se quedará en sus manos entonces."
+
+ colombia.65.title:0 "El Bloque Hispano"
+ colombia.65.desc:0 "Descripción."
+ colombia.65.a:0 "Una idea excelente."
+ colombia.65.b:0 "No nos interesa aliarnos con un país atrasado."
+ colombia.66.title:0 "El gobierno [From.GetAdjective] acepta ingresar al Bloque Hispano."
+ colombia.66.desc:0 "Descripción Bloque Hispano."
+ colombia.66.a:0 "Nuestra alianza hará temblar las potencias mundiales."
+ colombia.67.title:0 "El gobierno [From.GetAdjective] no está interesado en unirse al Bloque Hispano."
+ colombia.67.desc:0 "Descripción no está interesado en unirse al Bloque Hispano."
+ colombia.67.a:0 "Puede que cambien de opinión más adelante."
+
+ colombia.69.title:0 "Las elecciones de 1938"
+ colombia.69.desc:0 "Estas elecciones han sido históricas, puesto que es la primera vez (gracias a las reformas de López Pumarejo) en la que los votantes no requirieron de condiciones de renta o ilustración para votar. Como estaba previsto, los conservadores se abstuvieron de participar, alegando que no tenían oportunidad de ganar ni garantías democráticas. Por tanto, el liberal Eduardo Santos ganó sin contendientes con un total de 511.947 votos."
+ colombia.69.a:0 "El pueblo ha hablado."
+ colombia.71.title:0 "Las elecciones de 1942"
+ colombia.71.desc:0 "Al igual que hace cuatro años, el partido liberal resultó victorioso en estas elecciones. El expresidente López Pumarejo se presentó nuevamente como candidato y salió triunfante frente a otro candidato de la disidencia liberal. Aunque los cuatro años que vienen son prometedores, los conservadores más arraigados están lanzando amenazas sobre la nueva presidencia. Esperemos que no prosperen."
+
+ colombia.72.title:0 "El ascenso de Rojas Pinilla"
+ colombia.72.desc:0 "El oficial Gustavo Rojas Pinilla está demostrando un talento y habilidad excepcional para comandar unidades. Algunos lo atribuyen a sus conocimientos adquiridos en su misión militar, mientras que otros solo afirman que es un don nato. Sea cual fuera la razón, su desempeño ha impresionado a sus superiores, quienes han decidido unánimemente ascenderlo a general. Sin embargo, para el ascenso surta efecto, debe ser aprobado por el presidente [ROOT.GetLeader] tal como lo dicta la ley."
+ colombia.72.a:0 "Tiene la aprobación."
+ colombia.72.b:0 "Aún no está listo."
+
+ colombia.73.title:0 "La cuestión opositora"
+ colombia.73.desc:0 "Los focos de este nuevo estado conservador están puestos sobre los antiguos gobernantes y eternos opositores de la doctrina tradicionalista: los liberales. No cabe duda que su gestión ha sido sumamente popular, pero eso no excusa que sus reformas estaban llevando a Colombia por el camino del ateísmo y la anarquía. Era algo inaceptable. \n\nAhora bien, a pesar de que nuestro golpe de estado fue un éxito, los liberales siguen representando un serio problema para la república. Ya no están en las filas del poder, pero continúan movilizándose contra el orden institucional en las calles y en las plazas. Personajes como Jorge Eliécer Gaitán solo incitan a las masas a contradecir al gobierno, y si siguen haciendo de las suyas llegará un punto en que no tengamos control sobre el país. Pero teniendo en cuenta que su antiguo gobierno fue bastante exitoso, solo nos quedan dos opciones: o colaborar con ellos para evitar la ira popular, o arremeter contra ellos con tal fuerza que nunca podrán recuperarse."
+ colombia.73.a:0 "Ya es momento de una Concentración Nacional."
+ colombia_73_a_tt:0 "La §Yinfluencia subversiva liberal§! crecerá un §R25%§! más rápido, pero eliminarla será sencillo."
+ colombia.73.b:0 "¡No le entregaremos el país a esos alienados!"
+ colombia_73_b_tt:0 "La §Yinfluencia subversiva liberal§! crecerá un §G35%§! más lento, pero eliminarla será complicado."
+
+ colombia.74.title:0 "La república sumida en el desorden"
+ colombia.74.desc:0 "El gobierno de Laureano Gómez no ha sido popular. La estabilidad del país parece ser cada vez más baja, mientras que la violencia política, ya sea entre los partidos tradicionales o entre los fanáticos ideológicos, ha alcanzado un punto de agudeza nunca antes visto, sumado al constante temor de un conflicto bélico a escalas inimaginables. \n\nLa oposición ha culpado a Laureano Gómez y a sus políticas extremistas y represivas. Sorpresivamente, estos partidarios anti-laureano encontraron un aliado en las fuerzas armadas. El ejército también había estado viendo con malos ojos el nuevo régimen, y liderados por Gustavo Rojas Pinilla coincidieron con la oposición y ahora parecen estar organizando una gran rebelión. Tal vez la única forma de evitar que el país entre en su décima guerra civil es ceder el poder a Rojas y a los insurgentes pacíficamente..."
+ colombia.74.a:0 "¡A ver si se atreven!"
+
+ colombia.75.title:0 "El alzamiento de los opositores"
+ colombia.75.desc:0 "Ocurrió lo que habíamos previsto, y sin embargo nos tomó por sorpresa. El ahora general rebelado Gustavo Rojas Pinilla consolidó suficiente poder entre la oposición como para liderar una rebelión armada. Llegan reportes urgentes de casi todos los rincones del país anunciando que varias guarniciones militares se han sublevado y han repartido armamento entre la población civil. La cadena de mando ha caído, el ejército ha quedado disperso y las fuerzas gubernamentales luchan fervientemente por recuperar el control institucional. Colombia ha entrado en una cruenta guerra civil."
+ colombia.75.a:0 "¡Traidores ingratos!"
+ colombia_75_tt:0 "Los partidarios de §YGustavo Rojas Pinilla§! iniciarán una guerra civil."
+
+ colombia.76.title:0 "El golpe de opinión"
+ colombia.76.desc:0 "El pueblo y la oposición celebran la caída del régimen de Laureano Gómez. En lo que han denominado el “Golpe de Opinión” (ya que ha sido apoyado por casi todo el país), el ahora general al mando Gustavo Rojas Pinilla asumió la presidencia sin derramar una sola gota de sangre. Rojas Pinilla promete estabilizar el país y llevarlo a una época de gloria nunca antes vista bajo cualquier otro mando. Sin duda no le será difícil, considerando que no solo es extraordinariamente popular, sino también hábil para mantener unido al ejército bajo su figura."
+ colombia_76_tt:0 "§YComando General de las Fuerzas Armadas§! se convierte en el partido gobernante."
+ colombia.76.a:0 "Y así comienza otro régimen militar..."
+
+ colombia.77.title:0 "Nuestras fuerzas derrotan a los estadounidenses"
+ colombia.77.desc:0 ""
+ colombia.77.a:0 "¡Retomamos lo que nos pertenece!"
+
+ colombia.78.title:0 "El ejército es derrotado en el istmo"
+ colombia.78.desc:0 "El dictador de Colombia [From.GetLeader] ha tenido la osadía de lanzar una gran ofensiva contra nuestras fuerzas del canal de Panamá desde unas bases cercanas. Su ha sido un éxito y nuestras confusas tropas se están replegando. El ataque ha mermado nuestra capacidad para proyectar nuestra fuerza al mundo, lo que supone una humillación a nivel internacional."
+ colombia.78.a:0 "Por desgracia, tenemos asuntos más acuciantes. Un embargo debería bastar."
+ colombia.78.b:0 "¡Esto amerita más que una advertencia!"
+
+ colombia.79.title:0 "El ejército es vencido en el istmo"
+ colombia.79.desc:0 ""
+ colombia.79.a:0 "Un pequeño inconveniente, nada más."
+
+ colombia.80.title:0 "Nuestras fuerzas logran contener el ataque sobre el canal"
+ colombia.80.desc:0 "El dictador de Colombia [From.GetLeader] ha tenido la osadía de lanzar una gran ofensiva contra nuestras fuerzas del canal de Panamá desde unas bases cercanas. Por suerte, nuestros valientes soldados lograron detener su operación y han repelido a los invasores. El ataque ha demostrado que ya no somos los dueños del continente, lo que supone una humillación a nivel internacional."
+ colombia.80.a:0 "Por desgracia, tenemos asuntos más acuciantes. Un embargo debería bastar."
+ colombia.80.b:0 "¡Estas acciones son inaceptables!"
+
+ colombia.81.title1:0 "[USA.GetName] cede ante la presión sobre el canal de Panamá"
+ colombia.81.title2:0 "Conflictos por el control del canal de Panamá"
+ colombia.81.desc1:0 "Tras un inesperado ataque al Canal de Panamá, las fuerzas colombianas ocuparon la zona circundante y dispersaron a las fuerzas estadounidenses asentadas en el lugar. [COL.GetLeader] calificó este suceso como una victoria total y definitiva, alegando que todo el territorio panameño finalmente está “en manos de su legítimo dueño”. \n\nLa comunidad internacional reconoce que este suceso es una humillación para las fuerzas estadounidenses y tal vez suponga la decadencia de dicho país. Si bien [USA.GetLeader] no ha dado declaraciones al momento, no sería de extrañar que responda con severas represalias contra la nación sudamericana."
+ colombia.81.desc2:0 "Tras un inesperado ataque al Canal de Panamá, fuerzas del ejército colombiano atacaron el enclave estadounidense desde unas bases militares cercanas. No obstante, el ataque no logró consumarse y supuso una aplastante derrota para los agresores. Mientras que ni [COL.GetLeader] ni [USA.GetLeader] han brindado declaraciones al respecto, analistas internacionales concuerdan que este suceso no pasará desapercibido, por lo que no sería de extrañar que los norteamericanos respondan con severas represalias contra la nación latina."
+ colombia.81.a:0 "¡Demostramos nuestra fuerza!"
+ colombia.81.b:0 "Una ofensa a la soberanía de Estados Unidos."
+ colombia.81.c:0 "¿Colombia pretende hacer de las suyas sin consecuencias?"
+
+ colombia.82.title:0 "La negociación sobre los campos petroleros"
+ colombia.82.desc:0 "Similar a nuestros congéneres mexicanos y venezolanos, nuestro país es uno de los grandes productores de petróleo de la región. Nuestra economía depende en gran parte de su extracción, pero la reciente industrialización ha dejado ver que las arcas de la nación no solo se llenan con ese llamado “oro negro”. \n\nPara dejar de depender casi exclusivamente de esta exportación, hemos organizado un plan para otorgarle concesiones a otras potencias extranjeras democráticas a cambio de un apoyo en la producción civil y militar. Esto no solo nos beneficiará en materia industrial a nosotros, sino que apoyará la causa bélica en la defensa de la democracia durante estos recios tiempos. Lo único que resta es firmar el plan y elegir a quién vamos a presentarlo."
+ colombia.82.a:0 "La maquinaria estadounidense necesita combustible colombiano."
+ colombia.82.b:0 "El ejército francés está algo corto de crudo."
+ colombia.82.c:0 "Nuestro petróleo ayudará a Marina Real británica."
+ colombia.82.d:0 "Otros potencias necesitan nuestros recursos."
+ 
+ colombia.83.title:0 "Colombia ofrece la concesión de sus yacimientos petrolíferos"
+ colombia.83.desc:0 "En un giro de sucesos inesperado, la embajada de Colombia nos hizo llegar un plan desarrollado por el mismo [COL.GetLeader] en que nos propone otorgarnos derechos sobre uno de sus yacimientos petroleros a cambio de una sencilla y modita cuota industrial. Aceptar la oferta es una opción tentadora, aunque si la nación está corta en fábricas quizá debamos rechazarla."
+ colombia.83.a:0 "¡Una propuesta maravillosa!"
+ colombia.83.b:0 "Ahora no estamos en condiciones de aceptar."
+ COL_oil_concession:0 "Nos han cedido sus recursos"
+ 
+ colombia.84.title:0 "[FROM.GetName] acepta la concesión"
+ colombia.84.desc:0 "Una nota diplomática nos ha informado que [FROM.GetLeader] mostró gran interés por la oferta de nuestro plan de concesión y la aceptó inmediatamente. Los respectivos trámites ya están en curso y se espera que dentro de poco la concesión se formalizará y recibiremos nuestra cuota industrial."
+ colombia.84.a:0 "¡Excelente!"
+ 
+ colombia.85.title:0 "[FROM.GetName] rechaza la concesión sobre el petróleo"
+ colombia.85.desc:0 "Aunque estábamos seguros que [FROM.GetName] iba a aceptar nuestra oferta, sorpresivamente ha llegado la noticia de que la han rechazado. Alegan no estar en condiciones de cumplir la cuota industrial que pedimos a cambio y que deberíamos buscar otra opción."
+ colombia.85.a:0 "Será para otro entonces."
+
+ colombia.86.title:0 "Los oligarcas condenan el gobierno de [ROOT.GetLeader]"
+ colombia.86.desc:0 "Un reporte urgente proveniente del ministerio de hacienda confirma que la nación ha entrado en una delicada crisis económica y social. Varios emprendedores y oligarcas decidieron retirar del país sus principales industrias tras conocer que [ROOT.GetLeader] ratificó la tan controversial reforma agraria, expresando que dicha reforma era “innecesaria” y que iba “en contra del emprendimiento nacional”. En consecuencia, los magnates cerraron sus principales industrias y alegaron no volver a abrirlas hasta que el gobierno garantizara el “trato justo que merecen”. Si el gobierno no se pronuncia al respecto, es seguro que otros oligarcas del país tomarán la misma decisión."
+ colombia.86.a:0 "¡Pero es por el bien del pueblo!"
+
+ colombia.87.title:0 "Los sindicatos se movilizan contra el gobierno "
+ colombia.87.desc:0 "Hoy ha llegado una preocupante noticia a la oficina presidencial. Las principales organizaciones sindicales del país se hartaron de esperar la colaboración del gobierno. El enojo de estos grupos llegó a su punto máximo cuando se les notificó que la administración de [ROOT.GetLeader] no sancionó la reforma agraria tan anhelada entre el gremio obrero, sino que continuó con una política que privilegia a los oligarcas por encima de a los trabajadores. Debido a esto, los líderes sindicales incitaron a sus seguidores a bloquear las carreteras, impedir el paso de suministros y organizar huelgas generales a lo largo de todo el país. Afirman que estas acciones no se detendrán hasta que el gobierno ceda y reforme la ley laboral."
+ colombia.87.a:0 "¡Pero es por el bien de la república!"
+
+ colombia.88.title:0 "El tratado de asistencia colombo-americano"
+ colombia.88.desc:0 "Con la amenaza fascista y comunista cerniéndose sobre el mundo occidental, el presidente de Colombia [COL.GetLeader] nos ha propuesto entablar una alianza que podría mantener a nuestras dos naciones estables y seguras ante un posible conflicto."
+ colombia.88.a:0 "Una alianza estratégica."
+ colombia.88.b:0 "No nos interesa."
+
+ colombia.89.title:0 "Estados Unidos firma el tratato"
+ colombia.89.desc:0 "La embajada estadounidense en la capital del país confirmó que [USA.GetLeader] accedió a ratificar el tratado, y que entrará en vigor lo antes posible. Sin embargo, quizá solo veamos sus efectos cuando nos encontremos en un conflicto armado."
+ colombia.89.a:0 "¡Buenas noticias!"
+
+ colombia.90.title:0 "Estados Unidos rechaza el tratado"
+ colombia.90.desc:0 "La embajada estadounidense en la capital del país notificó que [USA.GetLeader] no se mostró interesado en ratificar el tratado de asistencia, y que no estaba dispuesto a aceptar una propuesta similar en estos tiempos de guerra."
+ colombia.90.a:0 "Entonces no contamos con ellos..."
+
+ colombia.91.title:0 "La reunificación de la Gran Colombia"
+ colombia.91.desc:0 "Tras haber recuperado todas las naciones pertenecientes a la antigua Gran Colombia, el gobierno colombiano en cabeza de [COL.GetLeader] proclamó a la comunidad internacional la reunificación oficial de la Gran Colombia. Inspirados por las ideas políticas de Simón Bolívar, la propaganda pannacionalista se ha esparcido por toda la nación, cimentando la confianza de los ciudadanos en el futuro de su nueva patria. \n\nSin embargo, este “renacimiento del legado de Bolívar” ha dado mucho de qué hablar en el continente americano; mientras unos argumentan que la inestabilidad hará colapsar la naciente república, otros consideran que las amenazas externas son un problema mucho más grande. Por ahora, el porvenir del pueblo colombiano sigue siendo un misterio."
+ colombia.91.a:0 "¡El mundo sabrá de lo que somos capaces!"
+ colombia.91.b:0 "Otro desequilibrio de poder en la región."
+ colombia.91.c:0 "¡No durarán mucho!"
+
 ### Noticias aparte ###
 
  news.348.t:0 "Caida de Buenos Aires"

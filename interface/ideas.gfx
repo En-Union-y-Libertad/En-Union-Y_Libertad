@@ -9,6 +9,316 @@ spriteTypes = {
 	}
 	
 	### new tfv nat spirit icons
+
+	spriteType = {
+		name = "GFX_idea_COL_puestos_de_mando"
+		texturefile = "gfx/interface/ideas/COL_puestos_de_mando.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_estado_mayor"
+		texturefile = "gfx/interface/ideas/COL_estado_mayor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_usa_influence"
+		texturefile = "gfx/interface/ideas/COL_usa_influence.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_proteger"
+		texturefile = "gfx/interface/ideas/COL_proteger.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_inscredial"
+		texturefile = "gfx/interface/ideas/COL_inscredial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_ejercito_conservador"
+		texturefile = "gfx/interface/ideas/COL_ejercito_conservador.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_libertad_orden"
+		texturefile = "gfx/interface/ideas/COL_libertad_orden.dds"
+	}
+
+	spriteType = {
+		name = "GFX_modifiers_col_laureanist_agitation"
+		texturefile = "gfx/interface/state_modifiers/modifiers_col_laureanist_agitation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_modifiers_col_strikes"
+		texturefile = "gfx/interface/state_modifiers/modifiers_col_strikes.dds"
+	}
+
+	spriteType = {
+		name = "GFX_modifiers_col_blockade"
+		texturefile = "gfx/interface/state_modifiers/modifiers_col_blockade.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_culto_alzatismo"
+		texturefile = "gfx/interface/ideas/COL_culto_alzatismo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_unificacion_reciente"
+		texturefile = "gfx/interface/ideas/COL_unificacion_reciente.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_ejercito_libertador"
+		texturefile = "gfx/interface/ideas/COL_ejercito_libertador.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_bolivar_spirit"
+		texturefile = "gfx/interface/ideas/COL_bolivar_spirit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_oligarquia_insatisfecha"
+		texturefile = "gfx/interface/ideas/COL_oligarquia_insatisfecha.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_derecha_dividida"
+		texturefile = "gfx/interface/ideas/COL_derecha_dividida.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_a_la_carga"
+		texturefile = "gfx/interface/ideas/COL_a_la_carga.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_gaitan"
+		texturefile = "gfx/interface/ideas/COL_gaitan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_heridas"
+		texturefile = "gfx/interface/ideas/COL_heridas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_economia_first"
+		texturefile = "gfx/interface/ideas/COL_economia_first.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_economia_second"
+		texturefile = "gfx/interface/ideas/COL_economia_second.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_economia_third"
+		texturefile = "gfx/interface/ideas/COL_economia_third.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_economia_fouth"
+		texturefile = "gfx/interface/ideas/COL_economia_fouth.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_etb"
+		texturefile = "gfx/interface/ideas/idea_etb.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ferronal"
+		texturefile = "gfx/interface/ideas/idea_ferronal.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_col_ferronal_spirit"
+		texturefile = "gfx/interface/ideas/COL_ferronal_spirit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_aicsa"
+		texturefile = "gfx/interface/ideas/idea_aicsa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_indumil"
+		texturefile = "gfx/interface/ideas/idea_indumil.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_paz"
+		texturefile = "gfx/interface/ideas/idea_paz.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_umca"
+		texturefile = "gfx/interface/ideas/idea_umca.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_avianca"
+		texturefile = "gfx/interface/ideas/idea_avianca.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_scadta"
+		texturefile = "gfx/interface/ideas/idea_scadta.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_armada"
+		texturefile = "gfx/interface/ideas/idea_armada.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ejercito"
+		texturefile = "gfx/interface/ideas/idea_ejercito.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_politicised_army"
+		texturefile = "gfx/interface/ideas/idea_mex_politicised_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_revolucion_en_marcha"
+		texturefile = "gfx/interface/ideas/COL_revolucion_en_marcha.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_COL_political_violence"
+		texturefile = "gfx/interface/ideas/COL_political_violence.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_carlos_echeverri_cortes"
+		texturefile = "gfx/interface/ideas/COL_carlos_echeverri_cortes.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_eliseo_arango_ramos"
+		texturefile = "gfx/interface/ideas/COL_eliseo_arango_ramos.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_gabriel_echevarria_misas"
+		texturefile = "gfx/interface/ideas/COL_gabriel_echevarria_misas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_german_arciniegas"
+		texturefile = "gfx/interface/ideas/COL_german_arciniegas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_juan_de_la_cruz_posada"
+		texturefile = "gfx/interface/ideas/COL_juan_de_la_cruz_posada.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_luis_angel_arango"
+		texturefile = "gfx/interface/ideas/COL_luis_angel_arango.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_luis_cano_villegas"
+		texturefile = "gfx/interface/ideas/COL_luis_cano_villegas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_mariano_roldan_uribe"
+		texturefile = "gfx/interface/ideas/COL_mariano_roldan_uribe.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_pedro_estrada_gonzalez"
+		texturefile = "gfx/interface/ideas/COL_pedro_estrada_gonzalez.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_plinio_mendoza_neira"
+		texturefile = "gfx/interface/ideas/COL_plinio_mendoza_neira.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_roberto_urdaneta_arbelaez"
+		texturefile = "gfx/interface/ideas/COL_roberto_urdaneta_arbelaez.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_tulio_enrique_tascon"
+		texturefile = "gfx/interface/ideas/COL_tulio_enrique_tascon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_luis_lopez_de_mesa"
+		texturefile = "gfx/interface/ideas/COL_luis_lopez_de_mesa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_maria_cano"
+		texturefile = "gfx/interface/ideas/COL_maria_cano.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_COL_laureano_gomez"
+		texturefile = "gfx/interface/ideas/COL_laureano_gomez.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_miguel_j_neira"
+		texturefile = "gfx/interface/ideas/COL_miguel_j_neira.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_guillermo_padilla"
+		texturefile = "gfx/interface/ideas/COL_guillermo_padilla.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_gabriel_paris_gordillo"
+		texturefile = "gfx/interface/ideas/COL_gabriel_paris_gordillo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_ruben_piedrahita"
+		texturefile = "gfx/interface/ideas/COL_ruben_piedrahita.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_rafael_navas"
+		texturefile = "gfx/interface/ideas/COL_rafael_navas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_deogracias_fonseca"
+		texturefile = "gfx/interface/ideas/COL_deogracias_fonseca.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_luis_ernesto"
+		texturefile = "gfx/interface/ideas/COL_luis_ernesto.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_ismael_perdomo"
+		texturefile = "gfx/interface/ideas/COL_ismael_perdomo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_alfredo_arenas"
+		texturefile = "gfx/interface/ideas/COL_alfredo_arenas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_camilo_daza"
+		texturefile = "gfx/interface/ideas/COL_camilo_daza.dds"
+	}
 	
     spriteType = {
 		name = "GFX_idea_banana_republic"

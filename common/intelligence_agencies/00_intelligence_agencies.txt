@@ -245,13 +245,13 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
-	picture = GFX_intelligence_agency_logo_arg
-	names = { "Secretaría de Inteligencia" }
+	picture = GFX_intelligence_agency_logo_col
+	names = { "DIPOL" }
 
 	available = { always = yes }
 	
-	default = { tag = ARG }
-	available = { original_tag = ARG }
+	default = { tag = COL }
+	available = { original_tag = COL }
 }
 
 intelligence_agency = {

@@ -193,6 +193,192 @@ on_actions = {
                 complete_national_focus = ARG_develop_the_capital
             }
         }
+
+        effect = {
+            #End of the colombian liberal Civil War
+            if = {
+                limit = { 
+                    FROM = {
+                        original_tag = COL
+                    }
+                    ROOT = {
+                        original_tag = COL 
+                        has_government = communism
+                        has_cosmetic_tag = COL_gaitan_war
+                    }
+                }
+                ROOT = {
+                    load_focus_tree = {
+                        tree = colombia_focus
+                        keep_completed = no 
+                    }
+                    complete_national_focus = COL_la_revolucion_en_marcha
+                    complete_national_focus = COL_ley_de_movilizacion_militar
+                    complete_national_focus = COL_integrar_la_inversion_militar
+                    complete_national_focus = COL_continuar_la_reforma_agraria
+                    complete_national_focus = COL_propiedad_social
+                    complete_national_focus = COL_la_reforma_constitucional
+                    complete_national_focus = COL_bienestar_general
+                    complete_national_focus = COL_apoyar_la_unir
+                    complete_national_focus = COL_unificar_la_poblacion
+                    complete_national_focus = COL_el_legado_de_santander
+                    complete_national_focus = COL_la_voluntad_del_pueblo
+                    complete_national_focus = COL_el_ejercito_popular
+                    complete_national_focus = COL_tribuno_del_pueblo
+                }
+            }
+        }
+
+        effect = {
+            #End of the colombian military Civil War
+            if = {
+                limit = { 
+                    FROM = {
+                        original_tag = COL
+                    }
+                    ROOT = {
+                        original_tag = COL 
+                        has_government = neutrality
+                        has_cosmetic_tag = COL_militar_gov
+                    }
+                }
+                ROOT = {
+                    drop_cosmetic_tag = yes
+                    load_focus_tree = {
+                        tree = colombia_focus
+                        keep_completed = no 
+                    }
+                    complete_national_focus = COL_la_revolucion_en_marcha
+                    complete_national_focus = COL_ley_de_movilizacion_militar
+                    complete_national_focus = COL_integrar_la_inversion_militar
+                    complete_national_focus = COL_mantener_los_privilegios_patronales
+                    complete_national_focus = COL_cooperar_con_los_terratenientes
+                    complete_national_focus = COL_expulsar_a_los_politicos
+                    complete_national_focus = COL_derogar_la_constitucion
+                    complete_national_focus = COL_la_patria_por_encima_de_los_partidos
+                    complete_national_focus = COL_centralizar_la_banca
+                    complete_national_focus = COL_nacionalizar_las_armerias
+                }
+            }
+        }
+
+        effect = {
+            #End of the colombian conservative Civil War
+            if = {
+                limit = { 
+                    FROM = {
+                        original_tag = COL
+                    }
+                    ROOT = {
+                        original_tag = COL 
+                        OR = {
+                            has_government = neutrality
+                            has_government = fascism
+                        }
+                        has_cosmetic_tag = COL_azul_war
+                    }
+                }
+                ROOT = {
+                    drop_cosmetic_tag = yes
+                    load_focus_tree = {
+                        tree = colombia_focus
+                        keep_completed = no 
+                    }
+                    complete_national_focus = COL_la_revolucion_en_marcha
+                }
+            }
+        }
+
+        effect = {
+            #End of the colombian Rojas Pinilla Civil War
+            if = {
+                limit = { 
+                    FROM = {
+                        original_tag = COL
+                    }
+                    ROOT = {
+                        original_tag = COL 
+                        has_government = neutrality
+                        has_cosmetic_tag = COL_rojas_pinilla_war
+                    }
+                }
+                ROOT = {
+                    load_focus_tree = {
+                        tree = colombia_focus
+                        keep_completed = yes
+                    }
+                    complete_national_focus = COL_fortalecer_a_los_opositores
+                    complete_national_focus = COL_buscar_apoyo_en_el_ejercito
+                    complete_national_focus = COL_el_golpe_de_opinion
+                }
+            }
+            if = {
+                limit = { 
+                    FROM = {
+                        original_tag = COL
+                        has_cosmetic_tag = GRC_UNIFIED
+                    }
+                    ROOT = {
+                        original_tag = COL 
+                        has_government = neutrality
+                        has_cosmetic_tag = COL_rojas_pinilla_war
+                    }
+                }
+                ROOT = {
+                    set_cosmetic_tag = GRC_UNIFIED
+                }
+            }
+            else = {
+                ROOT = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+        }
+    }
+
+    on_monthly_COL = {
+        effect = { #Check if Rojas Pinilla is going to rebel if the president is Laureano Gómez
+            if = { 
+                limit = {
+                    has_completed_focus = COL_laureanismo
+                    NOT = {
+                        has_completed_focus = COL_cuestionar_a_gomez
+                    }
+                    has_civil_war = no
+                }
+                COL_rojas_pinilla_may_rebel = yes
+            }
+        }
+        effect = { #Check if there will be strikes or anger from the oligarchy
+            if = { 
+                limit = {
+                    date > 1938.1.1
+                    has_completed_focus = COL_la_reforma_constitucional
+                    OR = {
+                        has_completed_focus = COL_continuar_la_reforma_agraria #Angry Oligarchy
+                        has_completed_focus = COL_mantener_los_privilegios_patronales #Angry Population
+                    }
+                    NOT = {
+                        has_country_flag = crisis_social_flag
+                    }
+                }
+                set_country_flag = crisis_social_flag
+                COL_may_have_social_crisis = yes
+                }
+                complete_national_focus = ARG_infamous_decade
+                complete_national_focus = ARG_focus_economy
+                complete_national_focus = ARG_make_an_effort_to_control_the_inflation
+                complete_national_focus = ARG_support_our_growing_industry
+                complete_national_focus = ARG_reduce_public_expense
+                complete_national_focus = ARG_rapidly_mobilize
+                complete_national_focus = ARG_raise_military_salary
+                complete_national_focus = ARG_spread_military_propganda
+                complete_national_focus = ARG_idolize_war_heroes
+                complete_national_focus = ARG_restrict_the_usage_of_the_dollar
+                complete_national_focus = ARG_develop_the_capital
+                
+            }
+        }
 		effect = {
 			#Sul puppet of Brazil
 			if = {

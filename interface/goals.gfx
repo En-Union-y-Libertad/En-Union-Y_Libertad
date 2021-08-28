@@ -3896,8 +3896,255 @@ spriteTypes = {
 	spriteType = {
 		name = "PRU_goal_liberal_path"
 		texturefile = "gfx/interface/goals/my_additions/PRU_liberal_path.dds"
-	}	
+	}
 
+	#COLOMBIA
+
+	SpriteType = { 
+		name = "GFX_col_focus_revolucion_en_marcha"
+		texturefile = "gfx/interface/goals/col_focus_revolucion_en_marcha.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_inscredial"
+		texturefile = "gfx/interface/goals/col_focus_inscredial.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_dominio"
+		texturefile = "gfx/interface/goals/col_focus_dominio.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_escuela_superior"
+		texturefile = "gfx/interface/goals/col_focus_escuela_superior.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_richs"
+		texturefile = "gfx/interface/goals/col_focus_richs.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_corpo"
+		texturefile = "gfx/interface/goals/col_focus_corpo.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_autocracia"
+		texturefile = "gfx/interface/goals/col_focus_autocracia.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_derrocar"
+		texturefile = "gfx/interface/goals/col_focus_derrocar.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_nueva_col"
+		texturefile = "gfx/interface/goals/col_focus_nueva_col.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_camp_liber"
+		texturefile = "gfx/interface/goals/col_focus_camp_liber.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_bolivar"
+		texturefile = "gfx/interface/goals/col_focus_bolivar.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_gran_colombia"
+		texturefile = "gfx/interface/goals/col_focus_gran_colombia.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_canal"
+		texturefile = "gfx/interface/goals/col_focus_canal.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_arrestar_gaitan"
+		texturefile = "gfx/interface/goals/col_focus_arrestar_gaitan.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_vieja_guardia"
+		texturefile = "gfx/interface/goals/col_focus_vieja_guardia.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_ocupar_pan"
+		texturefile = "gfx/interface/goals/col_focus_ocupar_pan.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_patria"
+		texturefile = "gfx/interface/goals/col_focus_patria.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_intervenir_panama"
+		texturefile = "gfx/interface/goals/col_focus_intervenir_panama.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_alzatismo"
+		texturefile = "gfx/interface/goals/col_focus_alzatismo.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_union"
+		texturefile = "gfx/interface/goals/col_focus_union.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_tratado"
+		texturefile = "gfx/interface/goals/col_focus_tratado.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_oea"
+		texturefile = "gfx/interface/goals/col_focus_oea.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_banrep"
+		texturefile = "gfx/interface/goals/col_focus_banrep.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_acabar_hegemonia"
+		texturefile = "gfx/interface/goals/col_focus_acabar_hegemonia.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_proteger_pueblo"
+		texturefile = "gfx/interface/goals/col_focus_proteger_pueblo.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_apoyar_la_unir"
+		texturefile = "gfx/interface/goals/col_focus_apoyar_la_unir.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_sindicatos"
+		texturefile = "gfx/interface/goals/col_focus_sindicatos.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_col_focus_priorizar_obrero"
+		texturefile = "gfx/interface/goals/col_focus_priorizar_obrero.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_etb"
+		texturefile = "gfx/interface/goals/col_focus_etb.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_propiedad_social"
+		texturefile = "gfx/interface/goals/col_focus_propiedad_social.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_era_electronica"
+		texturefile = "gfx/interface/goals/col_focus_era_electronica.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_fuerza_aerea"
+		texturefile = "gfx/interface/goals/col_focus_fuerza_aerea.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_ejercito"
+		texturefile = "gfx/interface/goals/col_focus_ejercito.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_armada"
+		texturefile = "gfx/interface/goals/col_focus_armada.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_oligarquia"
+		texturefile = "gfx/interface/goals/col_focus_oligarquia.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_junta"
+		texturefile = "gfx/interface/goals/col_focus_junta.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_encargarse"
+		texturefile = "gfx/interface/goals/col_focus_encargarse.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_expulsar"
+		texturefile = "gfx/interface/goals/col_focus_expulsar.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_ingenieria"
+		texturefile = "gfx/interface/goals/col_focus_ingenieria.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_tierra"
+		texturefile = "gfx/interface/goals/col_focus_tierra.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_excavaciones"
+		texturefile = "gfx/interface/goals/col_focus_excavaciones.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_bastion"
+		texturefile = "gfx/interface/goals/col_focus_bastion.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_escuela"
+		texturefile = "gfx/interface/goals/col_focus_escuela.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_silos"
+		texturefile = "gfx/interface/goals/col_focus_silos.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_santander"
+		texturefile = "gfx/interface/goals/col_focus_santander.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_tribuno_del_pueblo"
+		texturefile = "gfx/interface/goals/col_focus_tribuno_del_pueblo.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_a_la_carga"
+		texturefile = "gfx/interface/goals/col_focus_a_la_carga.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_attack_south"
+		texturefile = "gfx/interface/goals/col_focus_attack_south.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_col_focus_materias_primas"
+		texturefile = "gfx/interface/goals/col_focus_materias_primas.dds"
+	}		
+  
 	#Central America
 
 	spriteType = {
@@ -3949,5 +4196,4 @@ spriteTypes = {
 		name = "GFX_focus_central_invest_businesses"
 		texturefile = "gfx/interface/goals/focus_central_invest_businesses.dds"
 	}
-
 }

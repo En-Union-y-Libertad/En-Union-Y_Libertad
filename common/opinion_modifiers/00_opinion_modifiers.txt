@@ -1202,4 +1202,20 @@ opinion_modifiers = {
 	BOL_chose_path_of_force = {
 		value = -15
 	}
+
+	COL_grc_rejected = {
+		value = -40
+	}
+
+	COL_same_origin = {
+		value = 50
+	}
+
+	COL_german_colombian_diplomacy = {
+		value = 25
+	}
+
+	COL_oil_concession = {
+		value = 75
+	}
 }
