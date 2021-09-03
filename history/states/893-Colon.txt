@@ -1,0 +1,20 @@
+state={
+	id=893
+	name="STATE_893"
+	history={
+		owner = HON
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = HON
+		victory_points = {
+			14552 1 
+		}
+	}	
+	provinces={
+		2031 14541 14547 14552 
+	}
+	manpower=191952
+	buildings_max_level_factor=1.000
+	state_category=town
+}

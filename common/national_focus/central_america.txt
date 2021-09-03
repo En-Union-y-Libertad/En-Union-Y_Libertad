@@ -1,0 +1,1519 @@
+focus_tree = {
+	id = central_america
+	country = {
+		factor = 0
+
+        modifier = {
+			add = 10
+		or = {
+			tag = PAN
+		    tag = COS
+		    tag = NIC
+		    tag = HON
+		    tag = ELS
+		    tag = GUA
+		    tag = BLZ
+		    }
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1000 }	
+	
+	focus = {
+		id = central_industrial_effort
+		text = central_industrial_effort
+		icon = GFX_goal_generic_production
+		cost = 5
+		x = 9
+		y = 0
+		search_filters = { FOCUS_FILTER_INDUSTRY  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+		completion_reward = {
+		    add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = central_cooperate_companies
+		text = central_cooperate_companies
+		icon = GFX_focus_central_cooperate_companies
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_industrial_effort
+		}
+		mutually_exclusive = {
+			focus = central_nationalise_land
+		}
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		x = 5
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = central_cooperate_warning_tt
+			swap_ideas = {
+				remove_idea = central_banana_republic
+				add_idea = central_banana_republic_cooperate
+			}
+		}
+	}
+	focus = {
+		id = central_repress_unions
+		text = central_repress_unions
+		icon = GFX_focus_central_suppress_unions
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_cooperate_companies
+		}
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		x = 3
+		y = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = central_banana_republic_cooperate
+				add_idea = central_banana_republic_cooperate2
+			}
+		}
+	} 
+	focus = {
+		id = central_UFC_investment
+		text = central_UFC_investment
+		icon = GFX_focus_central_ufc_investment
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_cooperate_companies
+		}
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		x = 5
+		y = 2
+    completion_reward = {
+		custom_effect_tooltip = central_UFC_investment_tt
+		add_political_power = 50
+		set_country_flag = UFC_investment_flag 
+	    }
+	}
+	focus = {
+		id = central_supress_media
+		text = central_supress_media
+		icon = GFX_goal_continuous_suppression
+		cost = 10
+		prerequisite = {
+			focus = central_repress_unions
+		}
+		prerequisite = {
+			focus = central_UFC_investment
+		}
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		x = 4
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+					remove_idea = central_banana_republic_cooperate2
+					add_idea = central_banana_republic_cooperate3
+				}
+		}
+
+	}
+	focus = {
+		id = central_accept_bribes
+		text = central_accept_bribes
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 10
+		prerequisite = {
+			focus = central_cooperate_companies
+		}
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		x = 7
+		y = 2
+		completion_reward = { 
+		    add_political_power = 200
+			add_stability = -0.05
+	    }
+	}
+
+	focus = {
+		id = central_UMC_in_government
+		text = central_UMC_in_government
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 10
+		prerequisite = {
+			focus = central_UFC_investment
+		}
+		prerequisite = {
+			focus = central_accept_bribes
+		}
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		x = 6
+		y = 3
+		completion_reward = { 
+			add_ideas = UFC_in_government_idea
+		}	
+	}
+	focus = {
+		id = central_subdue_peasants
+		text = central_subdue_peasants
+		icon = GFX_focus_central_subdue_peasantry
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_supress_media
+		}
+		prerequisite = {
+			focus = central_UMC_in_government
+		}
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		x = 5
+		y = 4
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = central_banana_republic_cooperate3
+				add_idea = central_banana_republic_cooperate4
+			}
+		}
+    }
+	focus = {
+		id = central_nationalise_land
+		text = central_nationalise_land
+		icon = GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
+		cost = 10
+		prerequisite = {
+			focus = central_industrial_effort
+		}
+		mutually_exclusive = {
+			focus = central_cooperate_companies
+		}
+		x = 15
+		y = 1
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = central_banana_republic
+				add_idea = central_banana_republic_i1
+			}
+				random_owned_state = {
+					limit = {
+						is_core_of = ROOT
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				    add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			ai_will_do = {
+					factor = 3
+					modifier = {
+							factor = 0
+							date < 1938.1.1
+						}
+				}
+	}     	
+	focus = {
+		id = central_concession_fruit_company
+		text = central_concession_fruit_company
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_nationalise_land
+		}
+		mutually_exclusive = {
+			focus = central_depose_companies
+		}
+		x = 13
+		y = 2
+		completion_reward = {
+			remove_ideas = central_banana_republic_i1
+			add_ideas = central_banana_republic_i2
+		}
+	}
+	focus = {
+		id = central_curtial_influence
+		text = central_curtial_influence
+		icon = GFX_focus_central_curtail_influence
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_concession_fruit_company
+		}
+		x = 9
+		y = 3
+		completion_reward = {
+			remove_ideas = central_banana_republic_i2
+			add_timed_idea = { idea = central_banana_republic_i3 days = 360 }
+		}
+
+	}
+	focus = {
+		id = central_invest_munitions_plant
+		text = central_invest_munitions_plant
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_concession_fruit_company
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		x = 11
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+			if = {
+				limit = { has_idea = central_recent_purchase }
+					remove_ideas = central_recent_purchase
+					add_timed_idea = { idea = central_recent_purchase2 days = 160 }
+				}
+				else = {
+					add_timed_idea = { idea = central_recent_purchase days = 80 }
+			    }		
+		}
+
+	}
+	focus = {
+		id = central_buy_industrial_centers
+		text = central_buy_industrial_centers
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_concession_fruit_company
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		x = 13
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+			}
+			if = {
+				limit = { has_idea = central_recent_purchase }
+					remove_ideas = central_recent_purchase
+					add_timed_idea = { idea = central_recent_purchase2 days = 60 }
+				}
+				else = {
+					add_timed_idea = { idea = central_recent_purchase days = 30 }
+			    }	
+		}	
+	}
+	focus = {
+		id = central_deal_with_fruit_companies
+		text = central_deal_with_fruit_companies
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_invest_munitions_plant
+		}
+		prerequisite = {
+			focus = central_buy_industrial_centers
+		}
+		x = 12
+		y = 4
+		completion_reward = {
+			if ={
+				limit ={ has_idea = central_banana_republic_i3 }
+				modify_timed_idea = { idea = central_banana_republic_i3 days = -60 }
+				add_political_power = 25
+			}
+			else = {
+				add_political_power = 100
+			}
+		}
+
+	}
+	focus = {
+		id = central_depose_companies
+		text = central_depose_companies
+		icon = GFX_focus_central_depose_companies
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_nationalise_land
+		}
+		mutually_exclusive = {
+			focus = central_concession_fruit_company
+		}
+		x = 17
+		y = 2
+		completion_reward = {
+			remove_ideas = central_banana_republic_i1
+			custom_effect_tooltip = central_communist_depose_companies_tt
+			custom_effect_tooltip = central_usa_depose_companies_tt
+			add_timed_idea = {
+                idea = kicking_the_companies
+				days = 60
+			}
+		}	
+	}
+	focus = {
+		id = central_distribute_unused_land
+		text = central_distribute_unused_land
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10
+		prerequisite = {
+			focus = central_concession_fruit_company
+			focus = central_depose_companies
+		}
+		x = 15
+		y = 3
+		completion_reward = {
+			add_war_support = 0.15
+		}
+    }
+	
+	focus = {
+		id = central_expand_railways
+		text = central_expand_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_distribute_unused_land
+		}
+		x = 15
+		y = 4
+		completion_reward = [
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+			}
+	    }
+    }
+	focus = {
+		id = central_deal_with_corruption
+		text = central_deal_with_corruption
+		icon = GFX_ARG_clamp_down
+		cost = 10
+		prerequisite = {
+			focus = central_depose_companies
+		}
+		x = 17
+		y = 3
+		completion_reward = {
+			add_stability = 0.1
+            add_political_power = -100
+		}
+    }
+	focus = {
+		id = central_industrial_take_over
+		text = central_industrial_take_over
+		icon = GFX_focus_central_industrial_takeover
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_depose_companies
+		}
+		bypass = {
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = construction_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = industrial_complex
+							size < 1
+							include_locked = yes
+						}					
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = production_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = arms_factory
+							size < 1
+							include_locked = yes
+						}
+					}
+				}
+			}	
+		}
+		x = 19
+		y = 3
+		completion_reward = {
+			add_political_power = -50
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = central_industrial_independence
+		text = central_industrial_independence
+		icon = GFX_focus_central_industrial_independence
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_deal_with_corruption
+		}
+		prerequisite = {
+			focus = central_industrial_take_over
+		}
+		x = 18
+		y = 4
+		completion_reward = {
+			add_ideas = central_industrial_independence
+		}
+	}
+	focus = {
+		id = central_modern_industry
+		text = central_modern_industry
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		prerequisite = {
+			focus = central_expand_railways
+		}
+		prerequisite = {
+			focus = central_deal_with_fruit_companies
+		}
+		prerequisite = {
+			focus = central_industrial_independence
+		}
+		x = 15
+		y = 5
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = central_invest_small_businesses
+		text = central_invest_small_businesses
+		icon = GFX_focus_central_invest_businesses
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_banana_economy
+		}
+		x = 8
+		y = 6
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}	
+		completion_reward = {    
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = central_extend_healthcare_system
+		text = central_extend_healthcare_system
+		icon = GFX_focus_central_expand_healthcare
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_modern_industry
+		}
+		x = 12
+		y = 6
+		completion_reward = {
+		    add_ideas = central_modern_healthcare
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = central_concessions_to_americans
+		text = central_concessions_to_americans
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 10
+		prerequisite = {
+			focus = central_depose_companies
+		}
+		x = 21
+		y = 3
+		completion_reward = {
+			effect_tooltip = {
+				custom_effect_tooltip = central_concessions_to_americans_tt
+			}
+		}	
+    }
+
+	focus = {
+		id = central_create_industrial_park
+		text = central_create_industrial_park
+		icon = GFX_focus_generic_industry_2
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_invest_small_businesses
+			focus = central_extend_healthcare_system
+		}
+		prerequisite = {
+			focus = central_education_budget
+		}
+		bypass = {
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = construction_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = industrial_complex
+							size < 1
+							include_locked = yes
+						}					
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = production_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = arms_factory
+							size < 1
+							include_locked = yes
+						}
+					}
+				}
+			}	
+		}
+		x = 10
+		y = 7
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}	
+
+	}
+	focus = {
+		id = central_banana_economy
+		text = central_banana_economy
+		icon = GFX_focus_r56_goal_generic_stock_exchange
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = central_subdue_peasants
+		}
+		x = 5
+		y = 5
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = central_banana_republic_cooperate4
+				add_idea = central_banana_republic_cooperate5
+			}
+		}
+
+	}
+	focus = {
+		id = central_education_budget
+		text = central_education_budget
+		icon = GFX_focus_research
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = {
+			focus = central_banana_economy
+			focus = central_modern_industry
+		}
+		x = 10
+		y = 6
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = central_reform_army
+		icon = GFX_focus_chi_army_reform
+		cost = 10
+		prerequisite = {
+			focus = central_army_effort
+		}
+		mutually_exclusive = {
+			focus = central_disband_army
+		}
+		x = 28
+		y = 1
+		completion_reward = {
+			add_ideas = central_army_reform
+		}
+
+	}
+	focus = {
+		id = central_purchase_old_equipment
+		icon = GFX_focus_secret_rearmament
+		cost = 10
+		prerequisite = {
+			focus = central_reform_army
+		}
+		x = 27
+		y = 2
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 3000
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 50
+				producer = USA
+			}
+		}
+	}
+	focus = {
+		id = central_special_forces
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10
+		prerequisite = {
+			focus = central_purchase_old_equipment
+		}
+		x = 26
+		y = 3
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 2
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+
+	}
+	focus = {
+		id = central_artillery_production
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10
+		prerequisite = {
+			focus = central_special_forces
+		}
+		mutually_exclusive = {
+			focus = central_develop_guns
+			focus = central_improve_high_command
+		}
+		x = 24
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			add_ideas = central_artillery_production
+		}
+
+	}
+	focus = {
+		id = central_military_academies
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		prerequisite = {
+			focus = central_reform_army
+		}
+		x = 29
+		y = 2
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = central_acquire_old_cannons
+		icon = GFX_goal_generic_army_artillery
+		cost = 10
+		prerequisite = {
+			focus = central_purchase_old_equipment
+		}
+		prerequisite = {
+			focus = central_military_academies
+		}
+		x = 28
+		y = 3
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 250
+				producer = USA
+			}
+		}
+
+	}
+	focus = {
+		id = central_employ_graduates
+		icon = GFX_focus_usa_build_the_pentagon
+		cost = 10
+		prerequisite = {
+			focus = central_military_academies
+		}
+		x = 30
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = central_new_generals_tt
+			hidden_effect = {
+				create_corps_commander = {
+					traits = { infantry_officer }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+
+				create_corps_commander = {
+					traits = { inflexible_strategist }
+					skill = 2
+					attack_skill = 1
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 2
+				}
+
+				create_corps_commander = {
+					traits = { brilliant_strategist }
+					skill = 2
+					attack_skill = 3
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 1
+				}
+			}
+			add_manpower = 5000
+		}
+
+	}
+	focus = {
+		id = central_develop_guns
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = central_acquire_old_cannons
+			focus = central_special_forces
+			focus = central_employ_graduates
+		}
+		mutually_exclusive = {
+			focus = central_artillery_production
+			focus = central_improve_high_command
+		}
+		x = 28
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			add_ideas = central_weapon_production
+		}
+
+	}
+	focus = {
+		id = central_improve_high_command
+		icon = GFX_goal_generic_cavalry
+		cost = 10
+		prerequisite = {
+			focus = central_employ_graduates
+		}
+		mutually_exclusive = {
+			focus = central_develop_guns
+			focus = central_artillery_production
+		}
+		x = 32
+		y = 4
+		completion_reward = { 
+			add_ideas = central_improve_high_command_idea
+		}
+	}
+	focus = {
+		id = central_motorize_army
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		prerequisite = {
+			focus = central_artillery_production
+			focus = central_improve_high_command
+			focus = central_develop_guns
+		}
+		x = 28
+		y = 5
+		completion_reward = {
+			add_ideas = central_motorization_effort
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+
+	}
+	focus = {
+		id = central_acquire_new_equipment
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = central_artillery_production
+			focus = central_develop_guns
+			focus = central_improve_high_command
+		}
+		x = 26
+		y = 5
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+
+	}
+	focus = {
+		id = create_updated_tactics
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = central_artillery_production
+			focus = central_develop_guns
+			focus = central_improve_high_command
+		}
+		x = 30
+		y = 5
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = central_purchase_outdated_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		prerequisite = {
+			focus = central_acquire_new_equipment
+			focus = create_updated_tactics
+		}
+		prerequisite = {
+			focus = central_motorize_army
+		}
+		x = 28
+		y = 6
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = gw_tank_equipment
+				amount = 180
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = gw_tank_equipment
+				amount = 180
+				producer = FRA
+			}
+			set_technology = { 
+				gwtank = 1
+			}	
+		}
+
+	}
+	focus = {
+		id = central_disband_army
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10
+		prerequisite = {
+			focus = central_army_effort
+		}
+		mutually_exclusive = {
+			focus = central_reform_army
+		}
+		cancel = {
+			has_country_flag = NIC_coup_disband
+		}
+		x = 38
+		y = 1
+
+		completion_reward = {
+			add_stability = 0.3
+			add_war_support = -1.0
+			add_ideas = central_disbanded_army
+			custom_effect_tooltip = central_disband_army_tt
+			hidden_effect = {
+				country_lock_all_division_template = yes
+				add_ideas = disarmed_nation
+				add_manpower = -500000
+				if = {
+					limit = { original_tag = PAN }
+					PAN = {
+						delete_unit = {
+    						state = 899
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 304
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 895
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 900
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 901
+    						disband = no
+  						}      
+					}
+				}
+				else_if = {
+					limit = { original_tag = COS }
+					COS = {
+						delete_unit = {
+    						state = 897
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 316
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 896
+    						disband = no
+  						}
+					}
+				}
+				else_if = {
+					limit = { original_tag = HON }
+					HON = {
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
+					}
+				}
+				else_if = {
+					limit = { original_tag = ELS }
+					ELS = {
+						delete_unit = {
+    						state = 314
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 898
+    						disband = no
+  						}
+					}
+				}
+				else_if = {
+					limit = { original_tag = GUA }
+					GUA = {
+						delete_unit = {
+    						state = 313
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 890
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 891
+    						disband = no
+  						}
+						delete_unit = {
+    					    state = 892
+    						disband = no
+  						}
+					}
+				}
+			}	
+		}
+	}
+	focus = {
+		id = central_disarmed_nation
+		icon = GFX_goal_continuous_boost_freedom
+		cost = 10
+		prerequisite = {
+			focus = central_disband_army
+		}
+		mutually_exclusive = {
+			focus = central_create_guard
+		}
+		x = 36
+		y = 2
+        completion_reward = {
+			add_ideas = central_disarmed_nation_idea
+		}
+	}
+	focus = {
+		id = central_diplomatic_effort
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = central_disarmed_nation
+		}
+		x = 34
+		y = 3
+
+	}
+	focus = {
+		id = central_true_pacifism
+		icon = GFX_focus_smiling_buddha
+		cost = 10
+		prerequisite = {
+			focus = central_disarmed_nation
+		}
+		x = 36
+		y = 3
+
+	}
+	focus = {
+		id = central_create_guard
+		icon = GFX_goal_generic_defence
+		cost = 10
+		prerequisite = {
+			focus = central_disband_army
+		}
+		mutually_exclusive = {
+			focus = central_disarmed_nation
+		}
+		x = 40
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = central_create_guard_tt
+			hidden_effect = {
+				division_template = {
+					name = "Guardia Nacional"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+					}
+				}
+					
+				random_owned_controlled_state = {
+					limit = { is_capital = yes }
+					create_unit = { 
+						division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2" 
+						owner = ROOT
+					}
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = central_fund_police
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = central_disarmed_nation
+			focus = central_create_guard
+		}
+		x = 38
+		y = 3
+		completion_reward = {
+			add_ideas = central_efficient_police
+		}
+	}
+	focus = {
+		id = central_non_agression_pact
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = central_diplomatic_effort
+		}
+		prerequisite = {
+			focus = central_true_pacifism
+		}
+		prerequisite = {
+			focus = central_fund_police
+		}
+		x = 36
+		y = 4
+
+	}
+	focus = {
+		id = central_reserve_forces
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = central_create_guard
+		}
+		x = 42
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = central_create_reserve_tt
+			hidden_effect = {
+				division_template = {
+					name = "División de Reserva"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+				}
+					
+				random_owned_controlled_state = {
+					limit = { is_capital = yes }
+					create_unit = { 
+						division = "name = \"1a División de Reserva\" division_template = \"División de Reserva\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"2a División de Reserva\" division_template = \"División de Reserva\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"3a División de Reserva\" division_template = \"División de Reserva\" start_experience_factor = 0.1" 
+						owner = ROOT
+					}
+				}
+			}	
+		}
+    }
+	focus = {
+		id = central_public_forces
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = central_fund_police
+		}
+		prerequisite = {
+			focus = central_train_guard
+		}
+		prerequisite = {
+			focus = central_reserve_forces
+		}
+		x = 40
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = central_public_force_tt
+			hidden_effect = {
+				delete_unit_template_and_units = { division_template = "Guardia Nacional" }
+				division_template = {
+					name = "Fuerza Publica"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+					}
+				}
+					
+				random_owned_controlled_state = {
+					limit = { is_capital = yes }
+					create_unit = { 
+						division = "name = \"Fuerza Pública\" division_template = \"Fuerza Publica\" start_experience_factor = 0.3" 
+						owner = ROOT
+					}
+				}
+			}	
+		}
+
+	}
+	focus = {
+		id = central_international_support
+		icon = GFX_goal_generic_trade
+		cost = 10
+		prerequisite = {
+			focus = central_non_agression_pact
+			focus = central_public_forces
+		}
+		prerequisite = {
+			focus = central_fund_police
+		}
+		x = 38
+		y = 5
+
+	}
+	focus = {
+		id = central_army_effort
+		icon = GFX_focus_generic_combined_arms
+		cost = 10
+		x = 33
+		y = 0
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = central_train_guard
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10
+		prerequisite = {
+			focus = central_create_guard
+		}
+		x = 40
+		y = 3
+        completion_reward = {
+			add_ideas = central_trained_guard
+		}
+	}
+
+}
+
+

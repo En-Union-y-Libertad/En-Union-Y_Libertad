@@ -250,6 +250,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_decision_category_form_liga_federal"
+		texturefile = "gfx/interface/decisions/decision_category_form_liga_federal_category.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_URG_terra_dictator_cat"
 		texturefile = "gfx/interface/decisions/URG_terra_dictator_cat.dds"
 	}

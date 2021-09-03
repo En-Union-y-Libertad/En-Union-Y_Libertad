@@ -497,6 +497,19 @@ on_actions = {
                 }
                 set_country_flag = crisis_social_flag
                 COL_may_have_social_crisis = yes
+                }
+                complete_national_focus = ARG_infamous_decade
+                complete_national_focus = ARG_focus_economy
+                complete_national_focus = ARG_make_an_effort_to_control_the_inflation
+                complete_national_focus = ARG_support_our_growing_industry
+                complete_national_focus = ARG_reduce_public_expense
+                complete_national_focus = ARG_rapidly_mobilize
+                complete_national_focus = ARG_raise_military_salary
+                complete_national_focus = ARG_spread_military_propganda
+                complete_national_focus = ARG_idolize_war_heroes
+                complete_national_focus = ARG_restrict_the_usage_of_the_dollar
+                complete_national_focus = ARG_develop_the_capital
+                
             }
         }
         effect = { #Check if Vásquez Cobo is going to die

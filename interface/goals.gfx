@@ -8,6 +8,41 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+	name = "GFX_uruguayan_military"
+	texturefile = "gfx/interface/goals/uruguayan_military.dds"		
+	}
+
+	SpriteType = {
+	name = "GFX_URG_strive_to_reform_liga_federal"
+	texturefile = "gfx/interface/goals/URG_strive_to_reform_liga_federal.dds"		
+	}
+
+	SpriteType = {
+	name = "GFX_URG_ramping_up_the_uruguayan_military"
+	texturefile = "gfx/interface/goals/URG_ramping_up_the_uruguayan_military.dds"		
+	}
+
+	SpriteType = {
+	name = "GFX_uruguayan_tanks"
+	texturefile = "gfx/interface/goals/uruguayan_tanks.dds"		
+	}
+
+	SpriteType = {
+	name = "GFX_URG_execute_the_plan"
+	texturefile = "gfx/interface/goals/URG_execute_the_plan.dds"		
+	}
+
+	SpriteType = {
+	name = "GFX_URG_new_path"
+	texturefile = "gfx/interface/goals/URG_new_path.dds"		
+	}
+
+	SpriteType = {
+		name = "GFX_URG_study_british_navy"
+		texturefile = "gfx/interface/goals/urg_study_british_navy.dds"		
+		}
+
+	SpriteType = {
 	name = "GFX_PBC_militias"
 	texturefile = "gfx/interface/goals/PBC_militias.dds"		
 	}
@@ -4109,4 +4144,56 @@ spriteTypes = {
 		name = "GFX_col_focus_materias_primas"
 		texturefile = "gfx/interface/goals/col_focus_materias_primas.dds"
 	}		
+  
+	#Central America
+
+	spriteType = {
+		name = "GFX_focus_central_cooperate_companies"
+		texturefile = "gfx/interface/goals/focus_central_cooperate_companies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_suppress_unions"
+		texturefile = "gfx/interface/goals/focus_central_suppress_unions.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_ufc_investment"
+		texturefile = "gfx/interface/goals/focus_central_ufc_investment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_subdue_peasantry"
+		texturefile = "gfx/interface/goals/focus_central_subdue_peasantry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_curtail_influence"
+		texturefile = "gfx/interface/goals/focus_central_curtail_influence.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_depose_companies"
+		texturefile = "gfx/interface/goals/focus_central_depose_companies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_expand_healthcare"
+		texturefile = "gfx/interface/goals/focus_central_expand_healthcare.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_industrial_independence"
+		texturefile = "gfx/interface/goals/focus_central_industrial_independence.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_industrial_takeover"
+		texturefile = "gfx/interface/goals/focus_central_industrial_takeover.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_central_invest_businesses"
+		texturefile = "gfx/interface/goals/focus_central_invest_businesses.dds"
+	}
 }

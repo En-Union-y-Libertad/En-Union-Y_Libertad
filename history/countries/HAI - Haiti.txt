@@ -82,10 +82,67 @@ create_country_leader = {
 create_country_leader = {
 	name = "Jacques Roumain"
 	desc = "POLITICS_JACQUES_ROUMAIN_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
+	picture = "gfx/leaders/Africa/Portrait_South_Africa_Political_Leader_Generic.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Franck Lavaud"
+	desc = "POLITICS_FRANCK_LAVAUD_DESC"
+	picture = "gfx/leaders/HAI/portrait_HAI_franck_lavaud.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "François Duvalier"
+	desc = "POLITICS_FRANCOIS_DUVALIER_DESC"
+	picture = "gfx/leaders/HAI/Portrait_South_Africa_Political_Leader_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Franck Lavaud"
+	portrait_path = "gfx/leaders/HAI/portrait_HAI_franck_lavaud.dds"
+	traits = { }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Paul Magloire"
+	portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
+	traits = { }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Antoine Levelt"
+	portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_2.dds"
+	traits = {  }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+

@@ -1,0 +1,561 @@
+central_UFC_investment_category = {
+	
+	central_light_civilian_investment = {
+		
+		priority = 10
+		icon = generic_factory
+		
+		available = {
+			NOT = {
+				has_country_flag = UFC_currently_investing
+			}
+		}
+		
+		cost = 100
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 80
+		
+		complete_effect = {
+			set_country_flag = UFC_currently_investing
+		}
+		
+		remove_effect = {
+			clr_country_flag = UFC_currently_investing
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	central_heavy_civilian_investment = {
+		
+		priority = 10
+		icon = generic_factory
+		
+		
+		
+		available = {
+			NOT = {
+				has_country_flag = UFC_currently_investing
+			}
+		}
+		
+		cost = 200
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 145
+		
+		complete_effect = {
+			set_country_flag = UFC_currently_investing
+		}
+		
+		remove_effect = {
+			clr_country_flag = UFC_currently_investing
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	central_light_military_investment = {
+		
+		priority = 10
+		icon = ger_military_buildup
+		
+		
+		
+		available = {
+			NOT = {
+				has_country_flag = UFC_currently_investing
+			}
+		}
+		
+		cost = 80
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 65
+		
+		complete_effect = {
+			set_country_flag = UFC_currently_investing
+		}
+		
+		remove_effect = {
+			clr_country_flag = UFC_currently_investing
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	central_heavy_military_investment = {
+		
+		priority = 10
+		icon = ger_military_buildup
+		
+		
+		
+		available = {
+			NOT = {
+				has_country_flag = UFC_currently_investing
+			}
+		}
+		
+		cost = 175
+		
+		ai_will_do = {
+			factor = 250
+		}
+		
+		days_remove = 110
+		
+		complete_effect = {
+			set_country_flag = UFC_currently_investing
+		}
+		
+		remove_effect = {
+			clr_country_flag = UFC_currently_investing
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	central_infrastructure_investment = {
+		
+		priority = 10
+		icon = railroad_construction
+		
+		
+		
+		available = {
+			NOT = {
+				has_country_flag = UFC_currently_investing
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 150
+		}
+		
+		days_remove = 40
+		
+		complete_effect = {
+			set_country_flag = UFC_currently_investing
+		}
+		
+		remove_effect = {
+			clr_country_flag = UFC_currently_investing
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+central_communist_revolt_category = {
+    central_communist_revolt = {
+
+		available = {
+			OR = {
+				has_government = communism
+                has_completed_focus = central_subdue_peasants
+		    }
+		}
+		
+		activation = {
+			has_completed_focus = central_cooperate_companies
+		}
+
+		icon = revolt
+		is_good = no
+		priority = 10
+        days_mission_timeout = 360  
+		
+		complete_effect = {
+			add_stability = 0.01
+		}
+        
+        timeout_effect = {
+			start_civil_war = {
+				ruling_party = ROOT
+				ideology = communism
+				size = 0.45
+			}
+			hidden_effect = {
+				division_template = { 
+					name = "Milicia" division_names_group = SPAN_INF_02 is_locked = yes regiments = { 
+						infantry = { x = 0 y = 0 } 
+						infantry = { x = 1 y = 0 } 
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Milicia Leal\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Milicia Leal\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+						owner = ROOT
+					}
+				}
+				random_other_country = {
+					limit = {
+						original_tag = ROOT 
+						has_civil_war = yes 
+						has_government = communism
+					}
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"Milicia Comunista\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+							owner = PREV
+						}
+					}
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"Milicia Comunista\" division_template = \"Milicia\" start_experience_factor = 0 start_equipment_factor = 0.6" 
+							owner = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+central_american_intervention_category = {
+    central_american_intervention = {
+		allowed = {
+			OR = {
+				original_tag = PAN 
+				original_tag = HON 
+				original_tag = NIC 
+				original_tag = COS
+				original_tag = ELS 
+				original_tag = GUA 
+			}
+		}	
+
+		icon = revolt
+		is_good = no
+		priority = 10
+        days_mission_timeout = 190  
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = central_concessions_to_americans_100_tt
+				if = {
+					limit = {
+						original_tag = PAN 
+					}
+					check_variable = { PAN_central_american_concession_variable > 99 }
+				}
+				if = {
+					limit = {
+						original_tag = COS 
+					}
+					check_variable = { COS_central_american_concession_variable > 99 }
+				}
+				if = {
+					limit = {
+						original_tag = NIC 
+					}
+					check_variable = { NIC_central_american_concession_variable > 99 }
+				}
+				if = {
+					limit = {
+						original_tag = HON 
+					}
+					check_variable = { HON_central_american_concession_variable > 99 }
+				}
+				if = {
+					limit = {
+						original_tag = ELS 
+					}
+					check_variable = { ELS_central_american_concession_variable > 99 }
+				}
+				if = {
+					limit = {
+						original_tag = GUA 
+					}
+					check_variable = { GUA_central_american_concession_variable > 99 }
+				}
+			}
+		}
+		
+		activation = {
+			has_completed_focus = central_depose_companies
+		}
+
+		visible = {
+			if = {
+				limit = {
+					original_tag = PAN 
+				}
+				check_variable = { PAN_central_american_concession_variable < 100 }
+			}
+			if = {
+				limit = {
+					original_tag = COS 
+				}
+				check_variable = { COS_central_american_concession_variable < 100 }
+			}
+			if = {
+				limit = {
+					original_tag = NIC 
+				}
+				check_variable = { NIC_central_american_concession_variable < 100 }
+			}
+			if = {
+				limit = {
+					original_tag = HON 
+				}
+				check_variable = { HON_central_american_concession_variable < 100 }
+			}
+			if = {
+				limit = {
+					original_tag = ELS 
+				}
+				check_variable = { ELS_central_american_concession_variable < 100 }
+			}
+			if = {
+				limit = {
+					original_tag = GUA 
+				}
+				check_variable = { GUA_central_american_concession_variable < 100 }
+			}
+			has_completed_focus = central_depose_companies
+		}
+        
+        timeout_effect = {
+			custom_effect_tooltip = central_american_intervention_tt
+			effect_tooltip = {
+				random_list = {
+					90 = {
+						USA = {
+							create_wargoal = {
+								type = annex_everything 
+								target = ROOT 
+							}
+						}
+					}
+					10 = {
+					}
+				}
+			}	
+			hidden_effect = {
+				USA = { country_event = { id = central.1 } }
+				set_country_flag = central_american_concession_failed
+			}
+		}
+	}
+
+	central_american_concession_25 = {
+
+		icon = generic_independence
+
+		available = {
+			NOT = {
+				has_country_flag = central_american_concession_paying
+			}
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			base = 200
+		}
+
+		visible = {
+			has_completed_focus = central_concessions_to_americans
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			set_country_flag = central_american_concession_paying
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = central_american_concession_tt_25
+			hidden_effect = {
+				if = {
+					limit = {
+						original_tag = PAN 
+					}
+					add_to_variable = { PAN_central_american_concession_variable = 25 }
+				}
+				if = {
+					limit = {
+						original_tag = COS 
+					}
+					add_to_variable = { COS_central_american_concession_variable = 25 }
+				}
+				if = {
+					limit = {
+						original_tag = NIC 
+					}
+					add_to_variable = { NIC_central_american_concession_variable = 25 }
+				}
+				if = {
+					limit = {
+						original_tag = HON 
+					}
+					add_to_variable = { HON_central_american_concession_variable = 25 }
+				}
+				if = {
+					limit = {
+						original_tag = ELS 
+					}
+					add_to_variable = { ELS_central_american_concession_variable = 25 }
+				}
+				if = {
+					limit = {
+						original_tag = GUA 
+					}
+					add_to_variable = { GUA_central_american_concession_variable = 25 }
+				}
+				clr_country_flag = central_american_concession_paying
+			}
+		}
+	}
+	central_american_concession_50 = {
+
+		icon = generic_independence
+
+		available = {
+			NOT = {
+				has_country_flag = central_american_concession_paying
+			}
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			base = 200
+		}
+
+		visible = {
+			has_completed_focus = central_concessions_to_americans
+		}
+
+		days_remove = 90
+
+		complete_effect = {
+			set_country_flag = central_american_concession_paying
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = central_american_concession_tt_50
+			hidden_effect = {
+				if = {
+					limit = {
+						original_tag = PAN 
+					}
+					add_to_variable = { PAN_central_american_concession_variable = 50 }
+				}
+				if = {
+					limit = {
+						original_tag = COS 
+					}
+					add_to_variable = { COS_central_american_concession_variable = 50 }
+				}
+				if = {
+					limit = {
+						original_tag = NIC 
+					}
+					add_to_variable = { NIC_central_american_concession_variable = 50 }
+				}
+				if = {
+					limit = {
+						original_tag = HON 
+					}
+					add_to_variable = { HON_central_american_concession_variable = 50 }
+				}
+				if = {
+					limit = {
+						original_tag = ELS 
+					}
+					add_to_variable = { ELS_central_american_concession_variable = 50 }
+				}
+				if = {
+					limit = {
+						original_tag = GUA 
+					}
+					add_to_variable = { GUA_central_american_concession_variable = 50 }
+				}
+				clr_country_flag = central_american_concession_paying
+			}
+		}
+	}
+	test = {
+
+		icon = generic_independence
+
+		available = {
+			NOT = {
+				has_country_flag = central_american_concession_paying
+			}
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			base = 200
+		}
+
+		visible = {
+			has_completed_focus = central_concessions_to_americans
+		}
+
+		days_remove = 1
+
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = central_american_intervention
+				days = -188
+			}
+		}
+	}
+}	
+
+
+
+
+
+

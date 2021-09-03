@@ -1,0 +1,293 @@
+ideas = {
+	# MILITARY
+
+	political_advisor = {
+
+		COS_jose_figueres_ferrer = {
+
+			picture = generic_political_advisor_south_america_1
+
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { war_industrialist }
+		}
+
+		COS_juan_rafael_arias = {
+
+			picture = generic_political_advisor_south_america_3
+				
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		COS_roberto_brenes_mesen = {
+
+			picture = generic_political_advisor_south_america_2
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { industry_reformer }
+		}
+
+		COS_solon_nunez_frutos = {
+
+			picture = generic_political_advisor_south_america_2
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+		COS_manuel_f_jimenez = {
+
+			picture = generic_political_advisor_south_america_2
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { compassionate_gentleman smooth_talking_charmer }
+		}
+
+		COS_carmen_lyra = {
+
+			picture = generic_political_advisor_female_arab
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { communist_revolutionary }
+		}
+		COS_carlos_jimenez_ortiz = {
+
+			picture = generic_captain_of_industry_western_european_2d
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { democratic_reformer }
+		}
+		COS_max_effinger = {
+
+			picture = generic_fascist_demagogue_western_european_2d
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { fascist_demagogue }
+		}
+	}
+
+	theorist = {
+		
+		COS_tobias_bolanos_palma = {
+			ledger = air
+
+			picture = COS_tobias_bolanos_palma
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}	
+		COS_joaquin_zavaleta = {
+			ledger = army
+
+			picture = COS_joaquin_zavaleta
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+	}
+
+	high_command = {
+
+		COS_ricardo_fernandez_peralta = {
+			ledger = army
+			
+			picture = COS_ricardo_fernandez_peralta
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		COS_francisco_marshall = {
+			ledger = army
+			
+			picture = generic_army_chief_def_south_american_2d
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { army_infantry_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		COS_jose_figueres_ferrer_army = {
+			ledger = army
+			
+			picture = generic_political_advisor_south_america_1
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { army_chief_morale_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		COS_manuel_guerra = {
+			ledger = air
+
+			picture = generic_air_south_america_2
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		COS_hugo_siedler_mendoza = {
+			ledger = navy
+
+			picture = generic_navy_south_america_3
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { navy_anti_submarine_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+
+	army_chief = {
+
+		COS_hector_zuniga = {
+
+			picture = generic_army_south_america_2
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		COS_amadeo_vargas = {
+
+			picture = generic_army_south_america_1
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+		COS_oscar_padilla_sellean = {
+
+			picture = generic_air_south_america_1
+			
+			allowed = {
+				original_tag = COS
+			}
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		COS_roberto_juarez_camposino = {
+
+			picture = generic_navy_south_america_3
+			
+			allowed = {
+				original_tag = COS
+			}
+					
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		COS_felipe_abreu_castro = {
+
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = COS
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+}

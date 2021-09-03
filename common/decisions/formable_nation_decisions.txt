@@ -5793,3 +5793,106 @@ form_turan_category = {
 		}
 	}
 }
+
+form_rioplatense_empire_category = {
+	
+	form_rioplatense_empire = {
+		allowed = {
+			original_tag = URG 
+		}
+		visible = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism 
+			}
+			has_completed_focus = URG_form_the_rioplatense_empire
+		}
+		
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		
+		available = {
+			hidden_trigger  = {
+				controls_state = 827
+				controls_state = 300
+			}
+			controls_state = 823
+			controls_state = 813
+			controls_state = 278
+			controls_state = 807
+			controls_state = 812
+			controls_state = 811
+			controls_state = 512
+			controls_state = 810
+			controls_state = 809
+			controls_state = 808
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_party_name = { ideology = fascism long_name = RPE_UNIFIED_fascism_party_long name = RPE_UNIFIED_fascism_party }
+				set_party_name = { ideology = communism long_name = RPE_UNIFIED_communism_party_long name = RPE_UNIFIED_communism_party }
+			}
+			set_cosmetic_tag = RPE_UNIFIED
+			823 = { add_core_of = ROOT }
+			813 = { add_core_of = ROOT }
+			278 = { add_core_of = ROOT }
+			807 = { add_core_of = ROOT }
+			812 = { add_core_of = ROOT }
+			811 = { add_core_of = ROOT }
+			512 = { add_core_of = ROOT }
+			810 = { add_core_of = ROOT }
+			809 = { add_core_of = ROOT }
+			808 = { add_core_of = ROOT }
+			hidden_effect = {
+				add_ideas = {
+					URG_economic_instability
+					URG_rebelling_officers
+				}
+			}
+		}
+	}
+}
+
+form_natural_borders = {
+
+	BOL_our_natural_borders = {
+		allowed = {
+			original_tag = BOL
+		}
+
+		visible = {
+			always = yes
+		}
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 828
+			controls_state = 688
+			controls_state = 845
+			controls_state = 884
+			controls_state = 880
+			controls_state = 882
+			hidden_trigger = {
+				controls_state = 302
+				controls_state = 487
+				controls_state = 826
+				controls_state = 840
+				controls_state = 841
+				controls_state = 842
+				controls_state = 843
+				controls_state = 844
+			}
+		}
+
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.15
+		}
+	}
+}
+			

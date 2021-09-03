@@ -88,10 +88,8 @@ country_event = {
                 start_civil_war = {
                     ruling_party = democratic
                     ideology = communism
-                    size = BOL_civil_war_power
+                    size = 0.4
                 }
-                remove_unit_leader = 44123
-                remove_unit_leader = 44124
                 add_ideas = BOL_the_bolivian_civil_war_government
                 swap_ideas = {
                     remove_idea = BOL_unstable_republic
@@ -99,10 +97,6 @@ country_event = {
                 }
                 hidden_effect = {
                     set_cosmetic_tag = BOL_government
-                    transfer_state = 826
-                    transfer_state = 841
-                    transfer_state = 843
-                    transfer_state = 840
                     retire_country_leader = yes 
                     create_country_leader = {
                         name = "José Luis Tejada Sorzano"
@@ -116,7 +110,7 @@ country_event = {
                     }
                     if = {
                         limit = { has_completed_focus = BOL_secure_the_guardia_nacional }
-                        841  = {
+                        840 = {
                             create_unit = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = ROOT
@@ -135,7 +129,7 @@ country_event = {
                             }
                         }
                     }
-                    840 = {
+                    844 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
@@ -177,7 +171,7 @@ country_event = {
                             }
                         }
                     }
-                    843 = {
+                    302 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
@@ -202,7 +196,7 @@ country_event = {
                             }
                         }
                     }
-                    826 = {
+                    844 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
@@ -211,6 +205,12 @@ country_event = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
                         }
+                        create_unit = {
+                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+                            owner = ROOT
+                        }
+                    }
+                    840 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
@@ -228,12 +228,8 @@ country_event = {
                         limit = {
                             original_tag = BOL 
                             has_civil_war = yes 
-                            has_government = communism
                         }
-                        transfer_state = 844
-                        transfer_state = 842
                         transfer_state = 487
-                        transfer_state = 302
                         remove_ideas = BOL_unstable_republic
                         add_ideas = BOL_the_bolivian_civil_war_armed_forces
                         set_cosmetic_tag = BOL_armed_forces
@@ -264,7 +260,7 @@ country_event = {
                                     }
                                 }
                             }
-                            844 = {
+                            826 = {
                                 create_unit = {
                                     division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                     owner = PREV
@@ -283,7 +279,7 @@ country_event = {
                                 }
                             }
                         }
-                        302 = {
+                        843 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -305,41 +301,7 @@ country_event = {
                                 owner = PREV
                             }
                         }
-                        842 = {
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                        }
-                        844 = {
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
+                        843 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -366,6 +328,68 @@ country_event = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
                             }
+                            create_unit = {
+                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                owner = PREV
+                            }
+                            create_unit = {
+                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                owner = PREV
+                            }
+                            create_unit = {
+                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                owner = PREV
+                            }
+                        }
+                        843 = {
+                            create_unit = {
+                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                owner = PREV
+                            }
+                            create_unit = {
+                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                owner = PREV
+                            }
+                            create_unit = {
+                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                owner = PREV
+                            }
+                            if = {
+                                limit = {
+                                    NOT = {
+                                        PREV = { controls_state = 842 }
+                                    }
+                                }
+                                create_unit = {
+                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                    owner = PREV
+                                }
+                                create_unit = {
+                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                    owner = PREV
+                                }
+                                create_unit = {
+                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                    owner = PREV
+                                }
+                            }
+                        }
+                        842 = {
+                            if = {
+                                limit = { is_controlled_by = PREV }
+                                create_unit = {
+                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                    owner = PREV
+                                }
+                                create_unit = {
+                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                    owner = PREV
+                                }
+                                create_unit = {
+                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                    owner = PREV
+                                }
+                            }
                         }
                     }
                 }
@@ -375,13 +399,16 @@ country_event = {
                     ruling_party = democratic
                     ideology = communism
                     size = BOL_civil_war_power
+                    capital = 302
+                    states = {
+                        841 302 826 487 844 842 843
+                    }
                 }
                 remove_unit_leader = 44123
                 remove_unit_leader = 44124
                 add_ideas = BOL_the_bolivian_civil_war_government
                 add_ideas = BOL_disbanded_the_army
                 hidden_effect = {
-                    transfer_state = 840
                     set_cosmetic_tag = BOL_government
                     retire_country_leader = yes 
                     create_country_leader = {
@@ -418,13 +445,6 @@ country_event = {
                             has_civil_war = yes 
                             has_government = communism
                         }
-                        transfer_state = 844
-                        transfer_state = 842
-                        transfer_state = 487
-                        transfer_state = 302
-                        transfer_state = 826
-                        transfer_state = 841
-                        transfer_state = 843
                         set_cosmetic_tag = BOL_armed_forces
                         add_ideas = BOL_the_bolivian_civil_war_armed_forces
                         retire_country_leader = yes 

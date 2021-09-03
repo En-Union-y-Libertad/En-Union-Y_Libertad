@@ -1,4 +1,5 @@
 leader_traits = {
+
 	#COLOMBIA
 
 	COL_tribuno_del_pueblo = {

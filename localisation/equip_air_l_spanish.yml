@@ -2024,7 +2024,14 @@
  URG_cv_fighter_equipment_2:0 "Grumman F6F Hellcat" 
  URG_cv_fighter_equipment_2_short:0 "F6F Hellcat"
  URG_tac_bomber_equipment_2:0 "North American B-25 Mitchell"
- URG_tac_bomber_equipment_2_short:0 "B-25 Mitchell" 
+ URG_tac_bomber_equipment_2_short:0 "B-25 Mitchell"
+ 
+ ELS_fighter_equipment_0:0 "Curtiss-Wright CW-14 Osprey"
+ ELS_fighter_equipment_0_short:0 "CW-14 Osprey"
+ ELS_fighter_equipment_1:0 "Caproni AP.1"
+ ELS_fighter_equipment_1_short:0 "AP.1" 
+ ELS_tac_bomber_equipment_0:0 "Breguet 14"
+ ELS_tac_bomber_equipment_0_short:0 "Breguet 14"
 
 
 # === [LocEditor:OrphanedKeys] Keys that do not exist in English ===
