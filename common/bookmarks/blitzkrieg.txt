@@ -483,9 +483,9 @@ bookmarks = {
 				CHL_tax_revenue
 			}
 			focuses = {
-				CHL_our_path
-				CHL_join_allies
-				CHL_strenghten_our_pacts
+				CHL_focus_on_internal_politics
+				CHL_join_the_comintern
+				CHL_invite_british_architects
 			}
 		}
 		
@@ -538,6 +538,22 @@ bookmarks = {
 		effect = {
 			randomize_weather = 12345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
+		}
+
+		"COL" = {
+			minor = yes 
+			history = "COL_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+				COL_economia_3
+				COL_ferronal_spirit
+				COL_libertad_orden2
+			}
+			focuses = {
+				COL_fundar_la_oea
+				COL_proteger_al_pueblo_colombiano
+				COL_tratado_de_asistencia_colombo_americano
+			}
 		}
 	}
 }

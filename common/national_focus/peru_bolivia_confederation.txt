@@ -38,6 +38,12 @@ focus_tree = {
 
         cost = 1
 
+        bypass = {
+        	hidden_trigger = {
+        		has_cosmetic_tag = PBC_UNIFYING
+        	}
+        }
+
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 50
@@ -57,10 +63,13 @@ focus_tree = {
 
 		available = {
 			OR = {
-				has_war_with = CHL 
-				has_war_with = ARG 
-				has_war_with = ECU 
-				has_war_with = COL 
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						capital_scope = { is_on_continent = south_america }
+					}
+				}
+				has_war_support > 0.2
 			}
 		}
 
@@ -87,10 +96,13 @@ focus_tree = {
 			has_country_flag = PBC_appointed_ministry_of_defense
 			has_country_flag = is_in_second_war_of_confederation
 			OR = {
-				has_war_with = CHL 
-				has_war_with = ARG 
-				has_war_with = ECU 
-				has_war_with = COL 
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						capital_scope = { is_on_continent = south_america }
+					}
+				}
+				has_war_support > 0.2
 			}
 		}
 
@@ -113,10 +125,13 @@ focus_tree = {
 		available = {
 			has_country_flag = is_in_second_war_of_confederation
 			OR = {
-				has_war_with = CHL 
-				has_war_with = ARG 
-				has_war_with = ECU 
-				has_war_with = COL 
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						capital_scope = { is_on_continent = south_america }
+					}
+				}
+				has_stability > 0.2
 			}
 		}
 
@@ -128,6 +143,7 @@ focus_tree = {
 			unlock_decision_tooltip = PBC_appoint_a_ministry_of_defense
 			unlock_decision_tooltip = PBC_appoint_a_ministry_of_foreign_relations
 			unlock_decision_tooltip = PBC_appoint_a_ministry_of_education
+			unlock_decision_tooltip = PBC_choose_our_new_capital
 		}
 	}
 
@@ -308,6 +324,28 @@ focus_tree = {
 
 		cost = 8
 
+		bypass = {
+			has_completed_focus = PBC_maneging_the_new_nation
+			OR = {
+				has_country_flag = PBC_winner_of_war_of_independence
+				AND = {
+					NOT = {
+						OR = {
+							has_war_with = ARG 
+							has_war_with = ECU 
+							has_war_with = CHL 
+							has_war_with = COL 
+						}
+					}
+					OR = {
+						controls_state = 829
+						controls_state = 828
+						controls_state = 490
+					}
+				}
+			}
+		}
+
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_stability = 0.05
@@ -365,12 +403,14 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = is_in_second_war_of_confederation
 			OR = {
-				has_war_with = CHL 
-				has_war_with = ARG 
-				has_war_with = ECU 
-				has_war_with = COL 
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						capital_scope = { is_on_continent = south_america }
+					}
+				}
+				has_war_support > 0.4
 			}
 		}
 
@@ -426,10 +466,13 @@ focus_tree = {
 		available = {
 			has_country_flag = is_in_second_war_of_confederation
 			OR = {
-				has_war_with = CHL 
-				has_war_with = ARG 
-				has_war_with = ECU 
-				has_war_with = COL 
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						capital_scope = { is_on_continent = south_america }
+					}
+				}
+				has_war_support > 0.4
 			}
 		}
 
@@ -450,12 +493,14 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = is_in_second_war_of_confederation
 			OR = {
-				has_war_with = CHL 
-				has_war_with = ARG 
-				has_war_with = ECU 
-				has_war_with = COL 
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						capital_scope = { is_on_continent = south_america }
+					}
+				}
+				has_war_support > 0.4
 			}
 		}
 
@@ -484,12 +529,14 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			has_country_flag = is_in_second_war_of_confederation
 			OR = {
-				has_war_with = CHL 
-				has_war_with = ARG 
-				has_war_with = ECU 
-				has_war_with = COL 
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						capital_scope = { is_on_continent = south_america }
+					}
+				}
+				has_war_support > 0.6
 			}
 		}
 
@@ -513,10 +560,13 @@ focus_tree = {
 			has_country_flag = PBC_appointed_ministry_of_foreign_relations
 			has_country_flag = is_in_second_war_of_confederation
 			OR = {
-				has_war_with = CHL 
-				has_war_with = ARG 
-				has_war_with = ECU 
-				has_war_with = COL 
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						capital_scope = { is_on_continent = south_america }
+					}
+				}
+				has_war_support > 0.6
 			}
 		}
 
@@ -565,10 +615,13 @@ focus_tree = {
 		available = {
 			has_country_flag = is_in_second_war_of_confederation
 			OR = {
-				has_war_with = CHL 
-				has_war_with = ARG 
-				has_war_with = ECU 
-				has_war_with = COL 
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						capital_scope = { is_on_continent = south_america }
+					}
+				}
+				has_war_support > 0.6
 			}
 		}
 
@@ -607,6 +660,8 @@ focus_tree = {
 				}
 			}
 		}
+
+		
 
 		cost = 10
 

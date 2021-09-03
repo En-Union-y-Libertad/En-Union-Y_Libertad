@@ -9,10 +9,20 @@ spriteTypes = {
 	}
 
 	### new tfv nat spirit icons
-
+	
 	spriteType = {
 		name = "GFX_idea_COL_puestos_de_mando"
 		texturefile = "gfx/interface/ideas/COL_puestos_de_mando.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_martires_guerra_colombo_peruana"
+		texturefile = "gfx/interface/ideas/COL_martires_guerra_colombo_peruana.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COL_estado_laico"
+		texturefile = "gfx/interface/ideas/COL_estado_laico.dds"
 	}
 
 	spriteType = {
@@ -324,6 +334,11 @@ spriteTypes = {
 		name = "GFX_idea_ARG_soviet_aid"
 		texturefile = "gfx/interface/ideas/ARG_soviet_aid.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_war_of_survival"
+		texturefile = "gfx/interface/ideas/war_of_survival.dds"
+	}
 
 	spriteType = {
 		name = "GFX_idea_PBC_war_of_independence"
@@ -338,6 +353,46 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_PBC_split_economy"
 		texturefile = "gfx/interface/ideas/PBC_split_economy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_political_cooperation"
+		texturefile = "gfx/interface/ideas/CHL_political_cooperation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_armed_neutrality"
+		texturefile = "gfx/interface/ideas/CHL_armed_neutrality.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_goodbye_fp"
+		texturefile = "gfx/interface/ideas/CHL_goodbye_fp.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_angry_council"
+		texturefile = "gfx/interface/ideas/CHL_angry_council.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_very_angry_council"
+		texturefile = "gfx/interface/ideas/CHL_very_angry_council.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_literary_gen_1"
+		texturefile = "gfx/interface/ideas/CHL_literary_gen_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_literary_gen_2"
+		texturefile = "gfx/interface/ideas/CHL_literary_gen_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_literary_gen_3"
+		texturefile = "gfx/interface/ideas/CHL_literary_gen_3.dds"
 	}
 
 	spriteType = {
@@ -356,8 +411,23 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_bol_controlled_by_toro"
-		texturefile = "gfx/interface/ideas/bol_controlled_by_toro.dds"
+		name = "GFX_idea_BOL_toro_rebelling"
+		texturefile = "gfx/interface/ideas/BOL_toro_rebelling.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_political_instability"
+		texturefile = "gfx/interface/ideas/CHL_political_instability.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_nacista_rebellion"
+		texturefile = "gfx/interface/ideas/CHL_nacista_rebellion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHL_communists_rebellion"
+		texturefile = "gfx/interface/ideas/CHL_communists_rebellion.dds"
 	}
 
 	spriteType = {
@@ -2026,6 +2096,10 @@ SpriteType = {
 	}
 	
 	### ECONOMY LAWS
+	spriteType = {
+		name = "GFX_idea_laissez_faire"
+		texturefile = "gfx/interface/ideas/idea_laissez_faire.dds"
+	}
 	spriteType = {
 		name = "GFX_idea_undisturbed_isolation"
 		texturefile = "gfx/interface/ideas/idea_undisturbed_isolation.dds"

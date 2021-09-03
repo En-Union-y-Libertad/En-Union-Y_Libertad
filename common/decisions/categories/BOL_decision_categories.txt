@@ -219,7 +219,10 @@ PBC_maneging_the_confederation = {
 	}
 
 	available = {
-		has_cosmetic_tag = PBC_UNIFIED
+		OR = {
+			has_cosmetic_tag = PBC_UNIFIED
+			has_cosmetic_tag = PBC_UNIFYING
+		}
 	}
 
 	visible = {
