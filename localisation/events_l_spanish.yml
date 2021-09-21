@@ -2986,6 +2986,10 @@
  argentina.68.d:0 "Con la Segunda Guerra de la Confederación en pleno desarrollo y varias otras naciones en guerra con la Confederación, hay que preguntarse: ¿Debemos crear una facción entre todos y ayudarnos mutuamente contra esta amenaza? \n\nPor ahora la respuesta es..."
  argentina.68.a:0 "Sí"
  argentina.68.b:0 "No"
+ news.349.t:0 "La Masacre del Seguro Obrero"
+ news.349.d:0 "Hoy han llegado tristes noticias desde el país de Chile, ya que más de 80 aparecierón muertos tras ocupar el edificio del Seguro Obrero en Santiago de Chile. Autoidentificados como Nacistas, ellos ocuparon varios edificios como un intento de golpe de estado para derrocar al presidente Arturo Alessandri, y en su lugar poner en el poder a Carlos Ibáñez del Campo. El gobierno Chileno respondió a este intento de golpe con sangre, enviando a los Carabineros y abriendo fuego contra los Nacistas. Hasta ahora se ha confirmado la muerte de 80 personas, pero puede haber más que ese número. \n\nLa situación global se ve sombría, ya que las ideologías extremas están creciendo en todo el planeta. El mundo se está quemando rápidamente, y Sudamérica también está incluida."
+ news.349.a:0 "Había que hacerlo"
+ news.349.b:0 "Jesucristo..."
 
  excellent:0 "Excelente."
  unfortunate:0 "Una lástima."
@@ -3312,7 +3316,7 @@
  argentina.21.t:0 "Alemania ha rechazado nuestra solicitud para unirse al Eje"
  argentina.21.d:0 "Los diplomáticos alemanes han respondido a nuestra solicitud de unirse al Eje. Nos dijeron que no están dispuestos a aceptarnos en nuestra facción"
  argentina.21.a:0 "¡Entonces morirán solos!"
- argentina.22.t:0 "Las elecciones de septiembre de 1937"
+ argentina.22.t:0 "Las elecciones de 1937"
  argentina.22.d:0 "Las elecciones están aquí, después de 6 años de Agustín Pedro Justo ahora tenemos que elegir un nuevo líder para liderar Argentina. \n\n Hay 2 partidos principales que se destacan en Argentina en estas elecciones, la Concordancia, que es el partido de Justo, y la Unión Cívica Radical, que representa los ideales democráticos y un nuevo camino para las naciones. \n\n Ambos partidos en algún momento conducirán a diferentes futuros para la nación, sin embargo una opción será mejor que el otro. \n\n ¿Quién gana las elecciones? "
  argentina.22.a:0 "Concordancia"
  argentina.22.b:0 "Union Civica Radical"
@@ -3718,7 +3722,7 @@
  news.343.a:0 "¿Qué te pasa, Sudamérica?"
  news.343.b:0 "¡Es hora de recuperar nuestras tierras perdidas!"
  news.343.c:0 "¡Estos mongers de guerra perderán como la primera vez! VIVA CHILE!"
- news.343.e:0 "¡Necesitamos ayudar a nuestros hermanos chilenos! Hay que parar a estos belicistas!"
+ news.343.d:0 "¡Necesitamos ayudar a nuestros hermanos chilenos! Hay que parar a estos belicistas!"
 
  news.344.t:0 "Ecuador y Bolivia se han unido a la segunda guerra del Pacífico"
  news.344.d:0 "Rápidamente se difundió la noticia de que las fuerzas colombianas y ecuatorianas cruzaron la frontera peruana y se unieron oficialmente a Chile en su lado de la guerra. \n\nEl mundo está conmocionado al ver que lo que antes se consideraba un continente relativamente tranquilo se sale de control. \n\nPor ahora, sólo tenemos que esperar y ver cómo se desarrolla todo esto".
@@ -3776,6 +3780,102 @@
  chile.20.a:0 "Claro, nos uniremos con gusto"
  chile.20.b:0 "¡No representan nuestros ideales!"
 
+ chile.21.t:0 "La formación del Frente Popular"
+ chile.21.d:0 "Se ha difundido la noticia de que hoy se cumple el primer día de existencia del Frente Popular como partido político en Chile. Este nuevo partido consiste en una coalición de la mayoría de los partidos comunistas que combinan sus fuerzas en un gran partido mayoritario. El responsable de este nuevo partido político es Pedro Aguirre Cerda. \n\nDesafortunadamente, no tenemos información actual sobre cómo reaccionarán los fascistas a la formación de este nuevo partido, pero por lo que se ha visto anteriormente, no será bonito. Nuestro gobierno también tiene que estar atento, ya que este nuevo partido está ganando rápidamente popularidad entre los ciudadanos chilenos."
+ chile.21.a:0 "Interesante..."
+
+ chile.22.t:0 "Los nacistas protestan por la supresión de su partido"
+ chile.22.d:0 "Después de varios intentos de suprimir el movimiento político Nacista, muchos de sus miembros protestan por esta acción, y lo hacen tomando el control de una de nuestras provincias. Tal acto no será tolerado, y tenemos que lidiar con su pequeño acto tan rápido como sea posible antes de que se vuelvan demasiado poderosos!"
+ chile.22.a:0 "¡Pagarán por esto!"
+
+ chile.23.t:0 "Los comunistas protestan por la supresión de su partido"
+ chile.23.d:0 "Después de nuestros diversos intentos de suprimir el partido comunista, sus miembros se han enfurecido contra nuestro gobierno y han decidido demostrarlo ocupando por la fuerza una de nuestras provincias. Este acto no se tomará a la ligera, ¡y se les responderá con la fuerza bruta!"
+ chile.23.a:0 "¡Pagarán por esto!"
+
+ chile.25.t:0 "Los nacistas exigen mayor representación política"
+ chile.25.d:0 "Varios dirigentes políticos del partido Nacista se han presentado en nuestra sede, exigiendo que su partido esté debidamente representado entre nuestro gobierno y el pueblo. También han manifestado que si no accedemos a sus demandas, utilizarán la fuerza para conseguir lo que quieren. \n\nLa decisión está en nuestras manos: ¿acatamos sus demandas o las ignoramos?
+ chile.25.a:0 "Aceptar sus demandas"
+ chile.25.b:0 "Ignorarlas"
+
+ chile.26.t:0 "Los comunistas exigen mayor representación política"
+ chile.26.d:0 "Varios dirigentes políticos del partido comunista han llegado a nuestra sede principal, exigiendo que se aumente el reconocimiento de su partido en todo nuestro gobierno, y en todo el pueblo. Afirman que su partido es más popular que lo que representa nuestro gobierno, y que utilizarán la fuerza si no escuchamos sus demandas. \n\n¿Qué debemos hacer, aceptar o ignorar sus demandas?"
+
+ chile.28.t:0 "Los nacistas aumentan su poder político"
+ chile.28.d:0 "Nos ha llegado la información de que después de varias campañas de propaganda ilegal y diversos niveles de corrupción, los Nacistas han aumentado su representación política en nuestro gobierno. \n\nTenemos que tener cuidado, si les permitimos seguir haciendo acciones como estas, solo el tiempo dirá si seguiremos teniendo el control total de nuestra nación."
+ chile.28.a:0 "Parece que tienen intenciones bastante nefastas"
+
+ chile.29.t:0 "Los comunistas aumentan su poder político"
+ chile.29.d:0 "Nos llega la información de que tras varias campañas de propaganda ilegal y diversos niveles de corrupción, los comunistas han aumentado su respectiva representación política en nuestro gobierno. \n\nSi esta situación continúa, o incluso se agrava, ¡estaremos en serios problemas!"
+ chile.29.a:0 "Sí, esas son unas intenciones muy nefastas"
+
+ chile.30.t:0 "El debate político se ha desatado entre los fascistas y los comunistas"
+ chile.30.d:0 "Hoy mismo, varios dirigentes políticos de ambos bandos se han enzarzado en una fuerte discusión, en la que algunos han llegado a pelearse. Por lo que nos dice nuestra inteligencia, esto dará lugar a una fase temporal de campañas de propaganda dirigidas el uno contra el otro. \n\nAunque cualquier resultado puede ser beneficioso para nuestro gobierno, tenemos que tener cuidado ya que al pueblo chileno no le gustará tanto caos dentro de nuestro gobierno. Esperemos que las cosas no se pongan violentas".
+ chile.30.a:0 "Esperemos una paz duradera..."
+
+ chile.31.t:0 "Los nacistas exigen que cerremos la economía"
+ chile.31.d:0 "Varios dirigentes políticos del partido fascista exigen que cerremos la economía para los extranjeros, alegando que los recursos chilenos están "hechos por y sólo para el pueblo chileno". Estas exigencias extremas se deben a que su movimiento político está ganando una gran fuerza, y saben muy bien que tienen el suficiente respaldo para hacer estas insensatas exigencias. \n\nLa decisión está en nuestras manos, ¿debemos cumplirlas o simplemente ignorarlas?"
+ chile.31.a:0 "Cumplir con sus demandas"
+ chile.31.b:0 "Ignorar sus demandas"
+
+ chile.32.t:0 "Los nacistas exigen mayor representación parlamentaria
+ chile.32.d:0 "Después de ganar popularidad masiva en todo el país y convertirse en un partido político importante en nuestra nación, los Nacistas están exigiendo que se les represente con un margen mucho mayor en nuestro parlamento. \n\nSu poder parece crecer sin parar, y eso nos preocupa mucho. Un poco más de poder y supondrán una seria amenaza."
+ chile.32.a:0 "Ceder a sus demandas"
+ chile.32.b:0 "¡No conseguirán lo que quieren!"
+
+ chile.33.t:0 "Los Comunistas Exigen el Equilibrio de Nuestras Clases Sociales"
+ chile.33.d:0 "Desde la creación de esta nación, nuestras clases sociales han estado muy desproporcionadas. Debido a diversas políticas económicas, este problema no ha hecho más que agravarse, y ahora que los comunistas tienen un dominio sobre la escena política del país, exigen que equilibremos estas clases y rápido. \n\nNos dan un plazo bastante estricto para hacerlo, sin embargo, incluso ellos reconocen la dificultad de la tarea y ofrecieron su ayuda para resolver de una vez por todas esta cuestión tan antigua. \n\n¿Debemos escuchar sus demandas o ignorarlas?"
+ chile.33.a:0 "Escuchar sus demandas"
+ chile.33.b:0 "Ignorar sus demandas"
+
+ chile.34.t:0 "Los Comunistas Exigen Aumentar los Planes de Bienestar"
+ chile.34.d:0 "Después de ganar popularidad masiva entre el pueblo chileno, los comunistas vuelven a acudir a nosotros con una demanda bastante extrema. Aumentar nuestros planes de bienestar, especialmente a los pobres. \n\nLos comunistas están tratando de abusar de su poder, y el hecho de que no podamos hacer mucho es lo peor. Por ahora, todo lo que podemos hacer es escuchar y acatar sus demandas, o simplemente ignorarlas y esperar lo mejor".
+ chile.34.a:0 "Cumplir"
+ chile.34.b:0 "Ignorarlos"
+
+ chile.35.t:0 "Los Chilenos se Preparan para las Elecciones de 1938"
+ chile.35.d:0 "Cuando falta más de un año para las elecciones de 1938, el pueblo ya ha comenzado a prepararse para los próximos comicios. Los partidos políticos también se preparan, colgando carteles por todas partes y varios líderes políticos dando discursos por toda la nación. \n\nAunque la mayoría de las elecciones son un momento para celebrar un nuevo líder, esta vez muchos están preocupados por el resultado de estas elecciones. Especialmente debido a la agresividad entre los comunistas y los fascistas dentro de la nación. \n\nMientras las cosas resulten pacíficas, todo irá bien. Sin embargo, sólo el tiempo dirá si eso es realmente así".
+ chile.35.a:0 "Esperemos que las elecciones sean pacíficas"
+
+ chile.36.t:0 "Los Nacistas Ganan las Elecciones"
+ chile.36.d:0 "Después de unas elecciones muy reñidas y del recuento de todos los votos, los Nacistas sorprendieron a todos al salir vencedores. Si hubo corrupción o no, no lo podemos saber por ahora. \n\nLo que sí es seguro es que su victoria aumentará las tensiones en toda América Latina y, sobre todo, entre las potencias aliadas. \n\n¡Basta de estos malditos demócratas, es hora de que Chile se convierta en la potencia que merece! Nuestros enemigos temblarán de miedo al ver la bandera chilena".
+ chile.36.a:0 "Es hora de brillar de verdad"
+
+ chile.37.t:0 "El Frente Popular Gana las Elecciones"
+ chile.37.d:0 "Tras una votación muy reñida, los comunistas se han impuesto. Su victoria, sea veraz o no, se ha producido con toda seguridad y en breve tomarán el poder en Chile. \n\nSi esto agitará las tensiones en la región o no, desgraciadamente no lo sabemos todavía. Sin embargo, una cosa segura es que las cosas cambiarán mucho en Sudamérica. \n\nEs hora de que hagamos resurgir a Chile de sus cenizas y le demos al pueblo verdadera libertad. Empoderamiento de la clase trabajadora".
+ chile.37.a:0 "Es hora de mostrar a Sudamérica de qué estamos hechos"
+
+ chile.38.t:0 "Los Demócratas Ganan las Elecciones una Vez Más"
+ chile.38.d:0 "Tras una votación bastante ajustada, nuestro gobierno ha vuelto a imponerse a nuestra oposición y se mantendrá en el poder durante otros 4 años. \n\nSi bien la suerte estuvo de nuestro lado esta vez, no se puede decir lo mismo de la oposición, ya que puede intentar hacer algo para interrumpir nuestro segundo mandato. Sea como sea, tenemos que estar preparados para todo y no permitir que nadie nos supere".
+ chile.38.a:0 "Otros cuatro años"
+
+ chile.39.t:0 "Se Formó la Alianza Popular Libertadora"
+ chile.39.d:0 "se ha extendido por todo el país la noticia de que el MNS se ha disuelto y que para ocupar su lugar está la Alianza Popular Libertadora, (APL) para abreviar. \n\nEl partido también ha decidido elegir como líder a Carlos Ibáñez del Campo, antiguo ex presidente de Chile. Sus ideales autoritarios habían suscitado polémica en el pasado, y lo mismo está ocurriendo ahora, ya que muchos de nuestro propio gobierno y del partido comunista están denunciando su llegada al poder una vez más. \n\nPor ahora, esperemos que la situación se calme y podamos tener un período electoral pacífico".
+ chile.39.a:0 "¿Otro cambio de nombre del partido?"
+
+ chile.40.t:0 "El Gobierno ha Suprimido a Nuestro Partido"
+ chile.40.d:0 "El gobierno Chileno se equivoco gravemente por suprimir nuestro partido político. Esto ha sido una acción abiertamente ilegal y un escupitajo en la cara a nuestra libertad de expresión. \n\nA pesar de que lo que hicieron estuvo mal, no podemos entrar en una furia incontrolable y derrocar al gobierno, ya que muchos morirían haciendo tal cosa, y desperdiciar tantas vidas por algo tan insignificante simplemente no es inteligente. \n\nEso no significa que no vayamos a estar tranquilos, ¡pronto se arrepentirán de haber tomado esas acciones!"
+ chile.40.a:0 "¡Lo pagarán!"
+
+ chile.42.t:0 "Chile está dispuesto a pagar mucho por la Patagonia"
+ chile.42.d:0 "Funcionarios chilenos se han acercado a nosotros con una oferta muy repentina. Están dispuestos a pagar no sólo 4 fábricas civiles, sino también diversos beneficios económicos durante más de medio año a cambio de la Patagonia. \n\n¿Debemos aceptar esta oferta?"
+ chile.42.a:0 "Sí"
+ chile.42.b:0 "No"
+
+ chile.43.t:0 "Chile quiere la Isla Pitcairn"
+ chile.43.d:0 "Varios políticos chilenos se han puesto en contacto con nosotros, preguntando por la isla de Pitcairn. Afirman que quieren utilizarla como base para una invasión anfibia japonesa, junto con el desarrollo de infraestructuras. \n\n¿Deberíamos darles la isla?"
+ chile.43.a:0 "Sí"
+ chile.43.b:0 "No"
+
+ chile.44.t:0 "El Asesinato de Arturo Alessandri"
+ chile.44.d:0 "Hoy ha llegado la noticia de que un grupo de terroristas desconocidos ha asesinado hoy a Arturo. Su cuerpo fue encontrado dentro de la casa del presidente, y al parecer fue emboscado. \n\nEl grupo se ha autoidentificado como Nacistas, cantando "¡La guerra va a comenzar! La guerra va a comenzar". Mientras se redacta esta noticia, cientos e incluso miles de personas están tomando las armas en lo que parece ser un enfrentamiento entre el gobierno y los Nacistas. \n\nVa a comenzar una guerra civil y la sangre que se va a derramar va a ser inmensa".
+ chile.44.a:0 "¡Victoria para el Nacismo!"
+
+ chile.45.t:0 "[ROOT.GetPoliticalEnemy] Están cooperando con el Gobierno!"
+ chile.45.d:0 "Nos acaban de llegar noticias de que [ROOT.GetPoliticalEnemy] están cooperando con el gobierno y trabajando contra nosotros. Están ofreciendo al Gobierno suministros, equipos e incluso hombres para luchar contra nosotros. Nuestro enemigo ya no es sólo el Gobierno, sino también [ROOT.GetPoliticalEnemy]. \n\nDe cualquier manera, seguiremos ganando y saldremos victoriosos de esto, ¡sin importar los costos!"
+ chile.45.a:0 "¡Estos malditos bastardos pagarán!"
+ CHL_nacismo_enemy:0 "Los nacistas"
+ CHL_communismo_enemy:0 "Los comunistas"
+
  # Bolivia
 
  bolivia.1.t:0 "Los Militares han Lanzado el Golpe de Estado"
@@ -3826,6 +3926,19 @@
  perubolivia.1.c:0 "Luis A. Flores"
  perubolivia.1.e:0 "Manuel Prado Ugarteche"
 
+ perubolivia.2.t:0 "¿Qué Ciudad Debe ser Nuestra Capital?"
+ perubolivia.2.d:0 "Ahora que somos una entidad política en el mapa, necesitamos encontrar una ciudad para establecerla como nuestra capital. Hasta ahora tenemos 3 opciones: Tacna, Lima y La Paz. Cada una de estas ciudades no sólo tiene importancia histórica para la Confederación, sino también política. \n\nDe estas 3 ciudades, la capital de la Confederación Perú-Boliviana será..."
+ perubolivia.2.a:0 "Tacna"
+ perubolivia.2.b:0 "Lima"
+ perubolivia.2.c:0 "La Paz"
+
+### Noticias aparte ###
+
+ news.348.t:0 "Caida de Buenos Aires"
+ news.348.d:0 "Expertos militares estan en shock debido a los reportes provenientes de Buenos Aires que confirman que la capital cayó antes las fuerzas Uruguayas. \n\nAunque algunas zonas siguen en combate, la mayoria de las unidades Argentinas se han retirado hacia el campo cercano a la ciudad. \n\nTropas uruguayan han empezado a hacer un desfile militar en la avenida 9 de Julio, del que participara Gabriel Terra, quien voló recientemente a Buenos Aires. \n\nHay rumores de que el gobierno Argentino logro escapar por la ruta 7 hacia los Andes, pero expertos creen que este fue un golpe devastador contra Argentina."
+ news.348.b:0 "Quien es la provincia ahora?"
+ news.348.c:0 "Imposible!"
+ 
  ### Eventos de Colombia ###
 
  colombia.1.title:0 "Un líder del ejército se gradúa como experto en desiertos"
@@ -3872,42 +3985,42 @@
  #colombia.15
  int.acept.title:0 "Alcaldes liberales toman su puesto el Magdalena"
  int.acept.desc:0 "Tras una larga campaña de reestructuración institucional y la intervención directa de [ROOT.GetLeader], los alcaldes de las principales ciudades del Magdalena finalmente pudieron asumir su cargo, que estaba siendo obstaculizado por las directivas conservadoras del lugar. La delegación liberal se regocijó con la noticia, anunciando que es una victoria para el pueblo."
- int.acept.a:0 "Así funciona la democracia."
+ int.acept.a:0 "Un triunfo para la democracia."
  #colombia.16
  int.oponen.title:0 "Conservadores rechazan nuevos alcaldes en Magdalena"
- int.oponen.desc:0 "Texto conservadores rechazan."
+ int.oponen.desc:0 "A pesar de los esfuerzos presidenciales por otorgarle la alcaldía a los liberales electos, ha sido imposible lograr este cometido. Los gobernadores departamentales conservadores argumentan que el país se encuentra en estado de sitio desde 1899, por lo que están avalados constitucionalmente para “remover del cargo a cualquier subordinado si lo consideran adecuado”. Es más que obvio que estos conflictos son de un orden ideológico, pero están sustentados legalmente y es poco lo que se puede hacer al respecto."
  int.oponen.a:0 "Empeñados en obstruir la voluntad del pueblo."
  #colombia.17
  prensa.eliminada.title:0 "Gobierno elimina prensa subversiva"
- prensa.eliminada.desc:0 "Texto prensa eliminada."
- prensa.eliminada.1:0 "Excelente."
+ prensa.eliminada.desc:0 "El extenso operativo preparado por las autoridades ha dado sus frutos. La imprenta de diarios ultraconservadores finalmente fue ubicada en Medellín, desde donde se distribuía a todo el departamento, incitando el odio hacia los liberales. Múltiples personas fueron arrestadas y el lugar de la imprenta ha quedado bajo custodia policial. La dirección liberal antioqueña exaltó la labor gubernamental y espera que con este hecho merme la violencia política."
+ prensa.eliminada.a:0 "Excelente."
  #colombia.18
  prensa.continua.title:0 "Periódicos conservadores continúan circulando"
- prensa.continua.desc:0 "Texto prensa sigue circulando."
+ prensa.continua.desc:0 "Los esfuerzos policiales por identificar el lugar de origen de la prensa ultraconservadora no tuvieron éxito. En un primer momento las investigaciones llevaron a la captura de varios sospechosos, todos miembros del partido conservador, pero las pruebas documentales resultaron ser insuficientes para sustentar imputaciones serias. El proceso terminó siendo archivado y las autoridades no tuvieron más opción que dejar en libertad a los arrestados."
  prensa.continua.a:0 "No por mucho tiempo."
  #colombia.19
  conser.arrestados.title:0 "Conservadores extremistas arrestados"
- conser.arrestados.desc:0 "Texto Conservadores arrestados."
+ conser.arrestados.desc:0 "Una redada militar a lo largo de todo el Caquetá culminó hoy con más de un centenar de arrestos. Una organización conservadora extremista, que se dedicaba a sembrar el caos y amenazar opositores, fue disuelta con el operativo. Los principales dirigentes serán los primeros en ser presentados ante un juez, y deberán responder por varios delitos. El partido conservador, por otro lado, argumentó que estas personas no tienen vínculo alguno con el partido, sino que han actuado por cuenta propia. Estas afirmaciones se han puesto en duda por varios periódicos importantes, aunque hará falta una investigación más exhaustiva para esclarecer este hecho."
  conser.arrestados.a:0 "Se hace justicia."
  #colombia.20
- conser.escapan.title:0 "Conservadores extremistas escapan de operativo"
- conser.escapan.desc:0 "Texto Conservadores escapan"
+ conser.escapan.title:0 "Conservadores extremistas escapan del operativo"
+ conser.escapan.desc:0 "Aunque se planificó llevar a cabo una redada en el Caquetá contra los extremistas de la región, la situación presentó complicaciones desde el primer momento, hasta que culminó en un fracaso total. Los altos dirigentes de las sociedades extremistas debieron haberse enterado, por lo que abandonaron rápidamente el lugar donde se supone que estarían hoy. No se han dado declaraciones públicas sobre lo ocurrido, y tampoco se esperan, pues es obvio que significa una vergüenza para la institucionalidad nacional."
  conser.escapan.a:0 "Ya los encontraremos."
  #colombia.21
  conser.mueren.title:0 "Líderes conservadores mueren en operativo de captura"
- conser.mueren.desc:0 "Texto conservadores mueren"
+ conser.mueren.desc:0 "Los esfuerzos por identificar y arrestar a los dirigentes de las sociedades extremistas no resultaron tan exitosos como se esperaba. En medio de la redada la situación se complicó en varios puntos, derivando en un fuego cruzado que culminó con la muerte de casi todos los líderes extremistas arrestados. El partido conservador ha denunciado la mala gestión del gobierno para con estos individuos, argumentando que el suceso “corrobora la inefectividad de las instituciones nacionales” y acusa a [COL.GetLeader] de incitar a la violencia política con este tipo de “acciones desmedidas”."
  conser.mueren.a:0 "Maldición."
  #colombia.22
  pol.desman.title:0 "Policía conservadora desmantelada en Nariño"
- pol.desman.desc:0 "Texto policía desmantelada."
+ pol.desman.desc:0 "En una operación meticulosamente calculada por parte del alto mando militar, la fuerza pública logró infiltrarse y lanzar un ataque conjunto a los cuarteles de los paramilitares conservadores en Nariño. La gran mayoría de estos centros al margen de la ley se encontraban a las afueras de Pasto, resguardados en haciendas desde donde planeaban sus ataques subversivos y almacenaban grandes alijos de armas. Los rezagos de este cuerpo paramilitar derechista son aislados, y no se espera que representen un problema mayor en tanto son capturados y judicializados."
  pol.desman.a:0 "¡Todo un logro!"
  #colombia.23
  pol.gana.title:0 "Fuerzas armadas son derrotadas por paramilitares conservadores"
- pol.gana.desc:0 "Texto policía le gana al ejército."
+ pol.gana.desc:0 "La cuidadosa operación orquestada por el alto mando militar bajo orden presidencial se salió de control poco tiempo después de comenzar. Los agentes gubernamentales infiltrados en el cuerpo paramilitar fueron descubiertos y se vieron obligados a revelar toda la información. En consecuencia, cuando las autoridades allanaron las haciendas donde se tenía registro de estas actividades, la policía conservadora ya se había replegado, mientras que otros miembros se quedaron y dieron de baja a varios militares antes de escapar."
  pol.gana.a:0 "Inconcebible."
  #colombia.24
  pol.mueren.title:0 "Enfrentamiento entre policía conservadora y fuerzas armadas"
- pol.mueren.desc:0 "Texto policía muere."
+ pol.mueren.desc:0 "Las haciendas que se encontraban a las afueras de Pasto atestiguaron un brutal combate entre la fuerza pública y la denominada Policía Conservadora. Durante el allanamiento de las mismas, los guardias de las haciendas opusieron resistencia, y entre el forcejeo se escuchó un disparo que hizo estallar todo el ambiente. No se sabe de dónde provino, pero el enfrentamiento terminó con varias decenas de muertos de ambas partes. Las fuerzas militaron quedaron manchadas al conocerse lo sucedido, recibiendo críticas principalmente por parte del clero. El gobierno no se ha pronunciado al respecto, pero varios sectores políticos exigen una explicación sobre lo acontecido, sobre todo miembros del partido conservador."
  pol.mueren.a:0 "No faltaba más..."
 
  colombia.25.title:0 "¡Insurrección conservadora!"
@@ -3926,42 +4039,50 @@
  colombia_27_tt:0 "Los partidarios §Yliberales§! iniciarán una guerra civil."
 
  colombia.28.title:0 "Milicias conservadoras se organizan por el país"
- colombia.28.a:0 "El alto mando de las fuerzas armadas remitió al gabinete presidencial una noticia preocupante. A lo largo del país se han reportado paramilitares conservadores armándose y tomando el control de diferentes poblaciones al sur del país. Si no se hace algo al respecto, el gobierno podría perder el control de la situación."
+ colombia.28.desc:0 "El alto mando de las fuerzas armadas remitió al gabinete presidencial una noticia preocupante. A lo largo del país se han reportado paramilitares conservadores armándose y tomando el control de diferentes poblaciones al sur del país. Si no se hace algo al respecto, el gobierno podría perder el control de la situación."
+ colombia.28.a:0 "¡Organicemos un operativo inmediatamente!"
  colombia.28.b:0 "Apresar a sus líderes es suficiente."
  colombia.28.c:0 "Ya se les pasará."
 
  colombia.29.title:0 "Laureano Gómez amenaza con la guerra civil"
- colombia.29.desc:0 "El dirigente conservador Laureano Gómez le ha hecho un ultimátum al gobierno. Afirma que, si el gobierno liberal no detiene su acción e involucra en sus disposiciones las propuestas del conservatismo, sus partidarios se alzarán en armas y harán invivible la república. Esta delicada situación ha estremecido a todo el gabinete nacional, pues las amenazas son certeras y suenan bastante reales."
+ colombia.29.desc:0 "El dirigente conservador Laureano Gómez le ha hecho un ultimátum al gobierno. Afirma que, si el gobierno actual no detiene su acción e involucra en sus disposiciones las propuestas del conservatismo, sus partidarios se alzarán en armas y harán invivible la república. Esta delicada situación ha estremecido a todo el gabinete nacional, pues las amenazas son certeras y suenan bastante reales."
  colombia.29.a:0 "Habrá que ceder a sus demandas..."
  colombia.29.b:0 "Cambiemos un par de cosas para calmarlo."
  colombia.29.c:0 "Ya veremos si es capaz."
 
- colombia.31.title:0 "El general Vega demuestra deslealtad"
+ colombia.31.title:0 "El caso Bonitto Vega"
+ colombia.31.desc:0 "La insubordinación del general Bonitto Vega como secretario de guerra está colmando la paciencia del gabinete ministerial. Mientras que el poder civil exige que se castigue al general lo antes posible, otros sectores, como la disidencia del partido conservador, afirman que el gobierno solo “buscar el desprestigio del Ejército ante la opinión pública", a favor de una Policía progresivamente militarizada y leal a los intereses del presidente de turno. Aunque el debate es tenso y la opinión está dividida, al final la decisión recae en [COL.GetLeader]."
  colombia.31.a:0 "Retirar al general Vega del servicio."
  colombia.31.b:0 "No es para tanto."
 
- colombia.32.title:0 "El general Villamizar demuestra deslealtad"
- colombia.32.a:0 "Retirar al general Villamizar del servicio."
+ colombia.32.title:0 "El general Villamizar desacata las órdenes"
+ colombia.32.desc:0 "La insubordinación del general Villamizar como secretario de guerra está colmando la paciencia del gabinete ministerial. No solo desacata las órdenes administrativas que recibe, sino que abiertamente incita a desobedecer al gobierno por su “falta de liderazgo”. Sugieren que se adelante de inmediato un Consejo de Guerra para que se le sancione con la destitución del cargo. Por otra parte, los demás miembros del alto mando militar consideran que la situación no es tan grave, sino que debe ser tomada como una crítica hacia el gobierno y no como un acto de rebeldía."
+ colombia.32.a:0 "¡Hay que instaurar el consejo de guerra!"
  colombia.32.b:0 "No es para tanto."
 
  colombia.33.title:0 "El general Neira demuestra deslealtad"
+ colombia.33.desc:0 "La insubordinación del general Neira como secretario de guerra está colmando la paciencia del gabinete ministerial. No solo desacata las órdenes administrativas que recibe, sino que abiertamente incita a desobedecer al gobierno por su “falta de liderazgo”. Sugieren que se adelante de inmediato un Consejo de Guerra para que se le sancione con la destitución del cargo. Por otra parte, los demás miembros del alto mando militar consideran que la situación no es tan grave, sino que debe ser tomada como una crítica hacia el gobierno y no como un acto de rebeldía."
  colombia.33.a:0 "Retirar al general Neira del servicio."
  colombia.33.b:0 "No es para tanto."
 
- colombia.34.title:0 "La cúpula miltiar desacata la autoridad"
+ colombia.34.title:0 "La cúpula militar desacata la autoridad"
+ colombia.34.desc:0 "El alto mando militar, precedido por los generales José Joaquín Villamizar, Miguel J. Neira y Eduardo Bonitto Vega, se está negando a presentar los respectivos informes al poder civil. Las órdenes administrativas también han sido ignoradas y tanto el congreso como el gabinete ministerial sospecha que los militares traen algo entre manos. Los asesores sugieren castigar este desacato antes que la situación pase a mayores. Por su parte, los altos generales argumentan que el gobierno “no tiene la fuerza requerida para mantener el orden”, y que solo están “haciendo lo que los políticos no saben hacer”."
  colombia.34.a:0 "Una sanción severa es lo justo."
  colombia.34.b:0 "Una advertencia será suficiente."
  colombia.34.c:0 "No es para tanto."
 
  colombia.36.title:0 "Los militares exigen reintegrar a Vega"
+ colombia.36.desc:0 "Los demás miembros de la cúpula militar le han dejado en claro al poder ejecutivo su inconformidad con la destitución del general Vega. Argumentan que el gobierno de turno no está en condiciones de retirar miembros del alto mando militar sin autorización del congreso, y que solo se está “empeorando la gravísima situación de orden público actual”. \n\nSus fuertes aseveraciones no han sido bien recibidas por el gabinete ministerial, quienes afirman que los militares están extralimitando sus funciones, por lo que ceder a sus demandas sería sinónimo de entregarles el poder de la institución. Las demás autoridades, por otro lado, vislumbran la posibilidad de un complot militar contra el poder civil, aunque son conjeturas inconclusas."
  colombia.36.a:0 "El general ya aprendió la lección."
  colombia.36.b:0 "Vega permanecerá fuera del servicio."
 
  colombia.37.title:0 "Los militares exigen reintegrar a Villamizar"
+ colombia.37.desc:0 "Los demás miembros de la cúpula militar le han dejado en claro al poder ejecutivo su inconformidad con la destitución del general Villamizar. Argumentan que el gobierno de turno no está en condiciones de retirar miembros del alto mando militar sin autorización del congreso, y que solo se está “empeorando la gravísima situación de orden público actual”. \n\nSus fuertes aseveraciones no han sido bien recibidas por el gabinete ministerial, quienes afirman que los militares están extralimitando sus funciones, por lo que ceder a sus demandas sería sinónimo de entregarles el poder de la institución. Las demás autoridades, por otro lado, vislumbran la posibilidad de un complot militar contra el poder civil, aunque son conjeturas inconclusas."
  colombia.37.a:0 "El general ya aprendió la lección."
  colombia.37.b:0 "Villamizar permanecerá fuera del servicio."
 
  colombia.38.title:0 "Los militares exigen reintegrar a Neira"
+ colombia.38.desc:0 "Los demás miembros de la cúpula militar le han dejado en claro al poder ejecutivo su inconformidad con la destitución del general Neira. Argumentan que el gobierno de turno no está en condiciones de retirar miembros del alto mando militar sin autorización del congreso, y que solo se está “empeorando la gravísima situación de orden público actual”. \n\nSus fuertes aseveraciones no han sido bien recibidas por el gabinete ministerial, quienes afirman que los militares están extralimitando sus funciones, por lo que ceder a sus demandas sería sinónimo de entregarles el poder de la institución. Las demás autoridades, por otro lado, vislumbran la posibilidad de un complot militar contra el poder civil, aunque son conjeturas inconclusas."
  colombia.38.a:0 "El general ya aprendió la lección."
  colombia.38.b:0 "Neira permanecerá fuera del servicio."
 
@@ -3979,14 +4100,14 @@
  colombia.42.a:0 "Gaitán no es un hombre, es un pueblo..."
 
  colombia.43.title:0 "¡El golpe de estado fracasa!"
- colombia.43.desc:0 "Descripción golpe de estado conservador fracasa."
+ colombia.43.desc:0 "Las milicias organizadas por el partido conservador no fueron lo suficientemente efectivas para el golpe. El plan era arremeter en el palacio presidencial y obligar a [COL.GetLeader] a dimitir. Sin embargo, la guardia presidencial tuvo el tiempo suficiente para notificarle al ejército la situación. Las fuerzas armadas se movilizaron y en cuestión de minutos la situación se tornó en un caos absoluto. Las estaciones de radio difundieron el mensaje rápidamente y, ante la ira, cientos de militantes conservadores asaltaron las armerías de las comisarías y conformaron grandes grupos de civiles. La arremetida de estas divisiones fue tan severa que los contrarios, los partidarios liberales, también salieron a las calles con armas en mano. \n\nLa situación escaló hasta que los dos principales dirigentes del partido conservador, Laureano Gómez y Gilberto Alzate Avendaño, pronunciaron que “ante el fracaso de la fuerza civil solo queda la fuerza armamentística”, iniciando así una guerra civil entre los partidarios conservadores y los seguidores aún leales a la administración de [COL.GetLeader]. Incluso en el propio ejército cientos de soldados desertaron para engrosar las filas conservadoras. La república está ahora en un desorden sin precedentes."
  colombia.43.a:0 "¡Alzate nos guiará a la victoria!"
  colombia.43.b:0 "¡Venceremos bajo el liderazgo de Laureano Gómez!"
 
  COL_grc_rejected:0 "Rechazaron la solicitud"
 
  colombia.44.title:0 "Colombia busca nuestra anexión"
- colombia.44.desc:0 "Descripción colombia exige la anexión."
+ colombia.44.desc:0 "Últimamente ha estado rondando la retórica pannacionalista en Colombia, apelando a la antigua idea de reformar la antigua Gran Colombia. Así pues, por iniciativa popular, [COL.GetLeader] le ha solicitado a nuestro gobierno reintegrarnos a su territorio pacíficamente. Aceptar supondría subyugar nuestra independencia y autonomía al gobierno de Bogotá, por lo que es difícil concluir si resultaría beneficioso o no. Es claro, sin embargo, que el actual gobierno colombiano tiende a ser represivo y autoritario, por lo que quizá someternos no sea la mejor opción en un primer momento."
  colombia.44.a:0 "Seguiremos el camino de los colombianos."
  colombia.44.b:0 "¡El pueblo ecuatoriano permanecerá libre!"
 
@@ -3999,7 +4120,7 @@
  colombia.46.a:0 "Han elegido bien."
 
  colombia.47.title:0 "Colombia busca reintegrarnos a su territorio"
- colombia.47.desc:0 "Descripción colombia."
+ colombia.47.desc:0 "Nuestro pequeño istmo fue parte de Colombia hace mucho tiempo, pero nuestro pueblo decidió separarse por la falta de atención que recibíamos del gobierno central. Ahora, [COL.GetLeader] propone que deberíamos volver a unirnos a ellos, para retomar el proyecto de la Gran Colombia. ¿Deberíamos aceptar?"
  colombia.47.a:0 "El destino de Panamá está con Colombia."
  colombia.47.b:0 "¡Nuestra independencia es más valiosa que sus ambiciones!"
 
@@ -4012,7 +4133,7 @@
  colombia.49.a:0 "Hacen lo correcto."
 
  colombia.50.title:0 "Colombia propone retomar el proyecto grancolombiano"
- colombia.50.desc:0 "Descripción colombia."
+ colombia.50.desc:0 "[COL.GetLeader] dejó en claro, desde que asumió la presidencia del país vecino, su interés por reunificar la Gran Colombia. Sus deseos finalmente se están viendo materializados, por lo que nos notificó la posibilidad de unir nuestras dos naciones para darle continuidad al sueño del libertador Simón Bolívar. No obstante, aceptar supondría subyugar toda nuestra independencia y autonomía a la administración bogotana, además de la siempre persistente oposición por aceptar sin más complicaciones a que Venezuela deje de existir como nación. Muchos han mostrado su apoyo a la moción, aunque de igual manera otros se han negado rotundamente a aceptar. La decisión final está en manos de [VEN.GetLeader]."
  colombia.50.a:0 "¡Unidos honraremos el legado de Bolívar!"
  colombia.50.b:0 "Son solo ansias de poder."
 
@@ -4025,12 +4146,12 @@
  colombia.52.a:0 "Se acerca el regreso de la Gran Colombia."
 
  colombia.53.title:0 "Colombia está dispuesta a comprar Yaguas"
- colombia.53.desc:0 "Descripción colombia."
+ colombia.53.desc:0 "Diplomáticos colombianos suministraron la posibilidad de que les vendemos el estado de Yaguas. De antaño fue parte de la Gran Colombia, y aunque no representa una zona estratégica ni ampliamente industrializada, insisten en que cedamos el terreno. Puede que sea una propuesta razonable, pero debemos tener en cuenta el costo-beneficio de la venta y si podría resultar factible a largo plazo. ¿Deberíamos aceptar?"
  colombia.53.a:0 "Una propuesta interesante."
  colombia.53.b:0 "Nuestra tierra no está en venta."
 
  colombia.54.title:0 "[FROM.GetName] acepta la venta de Yaguas"
- colombia.54.desc:0 "Yaguas fue parte de la Gran Colombia y la ayudaba a tener una frontera consistente con el amazonas. Por ello, es muy grato saber que [FROM.GetName] supo reconocerlo y aceptó cedernos el territorio. No falta mucho para reestablecer el territorio grancolombiano en el sur."
+ colombia.54.desc:0 "Yaguas fue parte de la Gran Colombia y la ayudaba a tener una frontera consistente con el amazonas. Por ello, es muy grato saber que [FROM.GetName] supo reconocerlo y aceptó cedernos el territorio. No falta mucho para reestablecer el territorio colombiano en el sur."
  colombia.54.a:0 "La diplomacia es un arte sutil."
 
  colombia.55.title:0 "[FROM.GetName] rechaza la propuesta de Yaguas"
@@ -4039,35 +4160,35 @@
  colombia.55.b:0 "Lástima."
 
  colombia.56.title:0 "Colombia desea comprar Mapari"
- colombia.56.desc:0 "Descripción colombia."
+ colombia.56.desc:0 "Diplomáticos colombianos han hecho saber al gobierno el interés de Colombia por adquirir el estado de Mapari. Afirman que están dispuestos a pagar una suma considerable, y que sería de gran ayuda en la reconstrucción de sus fronteras, propuesta por [COL.GetLeader]. ¿Deberíamos aceptar esta oferta?"
  colombia.56.a:0 "Una propuesta interesante."
  colombia.56.b:0 "Nuestra tierra no está en venta."
 
  colombia.57.title:0 "[FROM.GetName] acepta la propuesta de Mapari"
- colombia.57.desc:0 "Descripción."
+ colombia.57.desc:0 "[FROM.GetLeader] está de acuerdo con vendernos Mapari, siempre y cuando paguemos el precio acordado y respetemos los demás límites que tenemos con ellos. Las guarniciones de [FROM.GetName] ya están siendo retiradas y el cambio de administración ya fue notificado a la población de la zona, los cuales (o al menos la mayoría) ven con esperanza este cambio."
  colombia.57.a:0 "Excelente."
 
  colombia.58.title:0 "[FROM.GetName] se niega a vender Mapari"
- colombia.58.desc:0 "Descripción."
+ colombia.58.desc:0 "[FROM.GetLeader] no está de acuerdo con vendernos Mapari, pues considera que nuestras ambiciones están llegando demasiado lejos al entrometernos con su soberanía. Por lo que es posible que refuercen la presencia militar en la zona para evitar un posible altercado. El gabinete ministerial lamenta que no se haya podido llegar a un acuerdo diplomáticamente, y la guerra comienza a verse como una opción plausible."
  colombia.58.a:0 "Volverá a ser nuestro, a cualquier costo."
  colombia.58.b:0 "No hay nada que hacer."
 
  colombia.59.title:0 "Colombia quiere negociar la compra de Japurá"
- colombia.59.desc:0 "Descripción colombia."
+ colombia.59.desc:0 "A través de una nota diplomática el gobierno colombiano ha notificado su interés por el estado de Japurá, que está bajo nuestro control. Este territorio, que de antaño fue parte de la Gran Colombia, parece representar parte de la identidad nacional de la nueva república que busca forjar [COL.GetLeader]. Es por ello que han ofrecido comprar el territorio, una opción que resuena entre los asesores gubernamentales como viable ante el tenso panorama actual."
  colombia.59.a:0 "Una propuesta interesante."
  colombia.59.b:0 "Nuestra tierra no está en venta."
 
  colombia.60.title:0 "[FROM.GetName] acepta vender Japurá"
- colombia.60.desc:0 "Descripción."
+ colombia.60.desc:0 "[FROM.GetLeader] estimó viable entregarnos el control de Japurá a cambio de la paga acordada. Los trámites burocráticos ya están en curso y los guardias fronterizos han sido movilizados a la línea divisora resultante. La población ha celebrado este hito y ven con buenos ojos el futuro de nuestra nación."
  colombia.60.a:0 "Nuestras fronteras se reestablecen."
 
  colombia.61.title:0 "[FROM.GetName] no accede a vender Japurá"
- colombia.61.desc:0 "Descripción."
+ colombia.61.desc:0 "[FROM.GetLeader] no considera viable entregarnos el control de Japurá por más que paguemos. Su declaración ha quedado en firme y solicita que no se vuelvan a presentar una propuesta similar, puesto que la decisión es definitiva. La opinión pública no ha visto con buenos ojos este fracaso diplomático, pero ante la situación en que se encuentra el país no hay mucho que se pueda hacer al respecto."
  colombia.61.a:0 "¡Pues se lo arrebataremos!"
  colombia.61.b:0 "Es una pena."
 
  colombia.62.title:0 "Colombia solicita la venta de la Guayana Esequiba"
- colombia.62.desc:0 "Descripción colombia."
+ colombia.62.desc:0 "Diplomáticos colombianos suministraron la posibilidad de que les vendemos el territorio del esequibo a ellos. Puede que sea una propuesta razonable, pero debemos tener en cuenta la cantidad de recursos que contiene el lugar y en costo-beneficio de la venta. ¿Deberíamos aceptar?"
  colombia.62.a:0 "Una propuesta interesante."
  colombia.62.b:0 "Nuestra tierra no está en venta."
 
@@ -4081,14 +4202,14 @@
  colombia.64.b:0 "Se quedará en sus manos entonces."
 
  colombia.65.title:0 "El Bloque Hispano"
- colombia.65.desc:0 "Descripción."
+ colombia.65.desc:0 "Con la amenaza del comunismo y del populismo democrático cerniéndose sobre el mundo, el presidente de Colombia [COL.GetLeader] nos ha propuesto entablar una alianza que podría mantener a nuestras naciones estables y seguras ante el conflicto. Recordando nuestra raíz común, Colombia busca que este nuevo “Bloque Hispano” represente la supremacía de la voluntad autocrática. De esta alianza no solo devendría una poderosa unión en un contexto bélico, sino también un apoyo mutuo ante cualquier ataque."
  colombia.65.a:0 "Una idea excelente."
  colombia.65.b:0 "No nos interesa aliarnos con un país atrasado."
  colombia.66.title:0 "El gobierno [From.GetAdjective] acepta ingresar al Bloque Hispano."
- colombia.66.desc:0 "Descripción Bloque Hispano."
+ colombia.66.desc:0 "Se ha notificado que el gobierno [From.GetAdjective] está de acuerdo en entrar al Bloque Hispano, para así hacer frente y contrapeso a las potencias mundiales actuales. Los respectivos trámites están en curso, por lo que espera que muy pronto se formalice la alianza y recibamos los informes compartidos de inteligencia."
  colombia.66.a:0 "Nuestra alianza hará temblar las potencias mundiales."
  colombia.67.title:0 "El gobierno [From.GetAdjective] no está interesado en unirse al Bloque Hispano."
- colombia.67.desc:0 "Descripción no está interesado en unirse al Bloque Hispano."
+ colombia.67.desc:0 "El embajador de [From.GetName] ha dejado en claro que no están interesados en entablar una alianza con nosotros. Menciona que la coyuntura mundial no amerita este tipo de propuestas en este momento, ni que resultan propicias considerando el delicado contexto en que se encuentra el mundo."
  colombia.67.a:0 "Puede que cambien de opinión más adelante."
 
  colombia.69.title:0 "Las elecciones de 1938"
@@ -4124,7 +4245,7 @@
  colombia.76.a:0 "Y así comienza otro régimen militar..."
 
  colombia.77.title:0 "Nuestras fuerzas derrotan a los estadounidenses"
- colombia.77.desc:0 ""
+ colombia.77.desc:0 "La voluntad de nuestros hombres ha triunfado sobre las ambiciones estadounidenses de arrebatar nuestro territorio. Los valientes oficiales del ejército lideraron la carga contra las guarniciones norteamericanas; tan violento ataque resultó imposible de repeler, y hoy nuestras fuerzas ocuparon triunfales el canal. Se ha realizado el cambio de administración y el paso marítimo ha quedado definitivamente bajo nuestro control."
  colombia.77.a:0 "¡Retomamos lo que nos pertenece!"
 
  colombia.78.title:0 "El ejército es derrotado en el istmo"
@@ -4133,7 +4254,7 @@
  colombia.78.b:0 "¡Esto amerita más que una advertencia!"
 
  colombia.79.title:0 "El ejército es vencido en el istmo"
- colombia.79.desc:0 ""
+ colombia.79.desc:0 "La ofensiva militar no tuvo el éxito esperado en el canal. Las fuerzas estadounidenses plantaron una feroz defensa, estableciendo un frente que nos resultó imposible de quebrar. Los oficiales ya han ordenado la retirada y nuestros hombres se han replegado nuevamente en el istmo."
  colombia.79.a:0 "Un pequeño inconveniente, nada más."
 
  colombia.80.title:0 "Nuestras fuerzas logran contener el ataque sobre el canal"
@@ -4197,9 +4318,72 @@
  colombia.91.b:0 "Otro desequilibrio de poder en la región."
  colombia.91.c:0 "¡No durarán mucho!"
 
-### Noticias aparte ###
+ colombia.92.title:0 "Golpe de estado en la Gran Colombia"
+ colombia.92.desc:0 "Como respuesta al colapso de la administración civil en la Gran Colombia durante la presidencia de Laureano Gómez, los dos partidos tradicionales del país apoyaron una rebelión liderada por el ahora general Gustavo Rojas Pinilla. Aunque este alzamiento estuvo cerca de convertirse en otra guerra civil para el país, los militares finalmente depusieron al gobierno de Laureano Gómez e instauraron a Rojas Pinilla como nuevo jefe de estado. \n\nEste histórico suceso ha sido nombrado el ‘golpe de opinión’ por los analistas, puesto que ha sido apoyado por casi todos los sectores políticos no laureanistas de la nación. Aunque el nuevo gobierno no ha dado declaraciones expresas, se espera que Rojas Pinilla estabilice al país y reduzca el violento legado de su predecesor."
+ colombia.92.a:0 "¡Una nueva era para Colombia!"
+ colombia.92.b:0 "Era de esperarse."
+ colombia.92.c:0 "¡Los derrotaremos en cualquier caso!"
 
- news.348.t:0 "Caida de Buenos Aires"
- news.348.d:0 "Expertos militares estan en shock debido a los reportes provenientes de Buenos Aires que confirman que la capital cayó antes las fuerzas Uruguayas. \n\nAunque algunas zonas siguen en combate, la mayoria de las unidades Argentinas se han retirado hacia el campo cercano a la ciudad. \n\nTropas uruguayan han empezado a hacer un desfile militar en la avenida 9 de Julio, del que participara Gabriel Terra, quien voló recientemente a Buenos Aires. \n\nHay rumores de que el gobierno Argentino logro escapar por la ruta 7 hacia los Andes, pero expertos creen que este fue un golpe devastador contra Argentina."
- news.348.b:0 "Quien es la provincia ahora?"
- news.348.c:0 "Imposible!"
+ colombia.93.title:0 "¡Óscar Benavides se rebela contra el gobierno!" 
+ colombia.93.desc:0 "El general Óscar Benavides venía presentando tendencias a la insubordinación desde hacía ya un tiempo. Estaba claro que no concordaba del todo con el nuevo gobierno que se instauró tras la Asamblea Constituyente. Hoy finalmente se dio a conocer que su rebelión es definitiva: Benavides abandonó su cargo y cruzó a Colombia al tiempo de la declaración de guerra. Ahora está al servicio de nuestros enemigos, pretendiendo instaurar un nuevo régimen en nuestra nación con su apoyo."
+ colombia.93.a:0 "¡Traidor!"
+
+ colombia.95.title:0 "El gobierno provisional de Loreto" 
+ colombia.95.desc:0 "Con Loreto bajo ocupación por parte de nuestras fuerzas armadas, el general Óscar Benavides ha sugerido establecer allí el nuevo gobierno provisional peruano. Ya se ha establecido un orden administrativo para mantener el orden, y se han comenzado a reclutar milicias militares para apoyar la causa peruana. Benavides ha manifestado su agradecimiento con nosotros, y espera que las relaciones entre el nuevo estado peruano y nuestra nación sean cercanas y amigables."
+ colombia.95.a:0 "Juntos reestableceremos en orden en Perú."
+
+ colombia.96.title:0 "La muerte de Vásquez Cobo" 
+ colombia.96.desc:0 "La república está de duelo. Tras sufrir varios quebrantos de salud, el general Vásquez Cobo, héroe de la guerra colombo-peruana y gran opositor de los politiqueros falleció hoy. Su avanzada edad no le fue impedimento para liderar el golpe contra los dos partidos tradicionales, que estaban llevando a la nación a un estado de violencia cíclica y perpetua. Su legado vivirá en el devenir de la nación y su dedicación nunca será olvidada por el pueblo colombiano. Mas ahora la cuestión es ¿quién liderará la república?"
+ colombia.96.a:0 "Instaurar una junta mantendrá fuera los intereses personales."
+ colombia.96.b:0 "El Estado Mayor asumirá las funciones gubernamentales."
+ colombia.96.c:0 "El general Villamizar debe tomar el mando."
+ colombia.96.d:0 "El general Bonitto Vega es el líder indicado."
+
+ colombia.97.title1:0 "El ejército toma el control de Japurá"
+ colombia.97.title2:0 "Las fuerzas armadas ocupan Mapari"
+ colombia.97.desc1:0 "El ataque coordinado que hemos planificado sobre Japurá ha sido todo un éxito. Las fuerzas brasileñas se han replegado y han quedado desorganizadas mientras las nuestras han ocupado triunfantes el estado. No hace falta esperar para saber que [BRA.GetLeader] no reaccionará de la mejor manera a este suceso, pero al menos se ha asegurado la supremacía de nuestro ejército sobre el de ellos. Japurá pronto será oficialmente reintegrada a Colombia."
+ colombia.97.desc2:0 "La rápida ofensiva de nuestras tropas supuso un choque brutal entre nuestro ejército y el brasileño. El combate resultante se extendió por un tiempo hasta terminar con nuestra victoria y posterior ocupación de Mapari. Los comandantes de los batallones han recibido múltiples elogios por este triunfo al igual que el general encargado de liderar el enfrentamiento. Mapari está definitivamente bajo control colombiano, como debe ser."
+
+ colombia.98.title1:0 "El ejército es derrotado en Japurá"
+ colombia.98.title2:0 "Nuestras fuerzas son derrotadas en Mapari"
+ colombia.98.desc1:0 "El ataque coordinado que hemos planificado sobre Japurá ha sido todo un fracaso total. Las fuerzas brasileñas opusieron una feroz resistencia y le resultó imposible a nuestros soldados asegurar el territorio. No hace falta esperar para saber que [BRA.GetLeader] no reaccionará de la mejor manera a este suceso por más que hayan triunfado. En el peor de los escenarios, podría estallar un conflicto bélico a gran escala entre las dos naciones."
+ colombia.98.desc2:0 "La rápida ofensiva de nuestras tropas supuso un choque brutal entre nuestro ejército y el brasileño. El combate resultante se extendió por un tiempo, pero lastimosamente fuimos incapaces de tomar el control de Mapari. Los comandantes de los batallones todavía no se explican como un ataque tan planificado no tuvo el éxito esperado, mientras que el general al mando alude a varios factores de distinta índole. Las tropas han quedado muy desmoralizadas ante esta derrota, al igual que la opinión pública cuestiona la verdadera eficacia de nuestro ejército."
+
+ colombia.99.title1:0 "El ataque a Japurá es repelido"
+ colombia.99.title2:0 "Los colombianos se retiran de Mapari"
+ colombia.99.desc1:0 "Colombia ha tenido la osadía de lanzar una gran ofensiva contra nuestras fuerzas en Japurá desde unas bases cercanas. Era algo que esperábamos conociendo las ambiciones dictatoriales de [COL.GetLeader]. Por suerte, nuestros valientes soldados lograron detener su operación y han repelido a los invasores. Esta heroica defensa ha demostrado que nuestro ejército sigue estando en mejor estándar, reforzando nuestra soberanía en la región y nuestra unidad nacional."
+ colombia.99.desc2:0 "Un inesperado ataque colombiano a las guarniciones en Mapari obligó a nuestros hombres a entablar combate con los agresores. Afortunadamente, las divisiones fueron lo suficientemente fuertes para resistir en sus puestos y ni un metro de tierra quedó bajo control agresor. [BRA.GetLeader] ha exaltado la labor y el heroísmo de los soldados en el amazonas, pero aún se cuestiona si sería propicio organizar una respuesta militar o mantener el statu quo."
+ colombia.99.a:0 "Demostramos nuestra supremacía."
+ colombia.99.b:0 "¡Es una acto de agresión!"
+
+ colombia.100.title1:0 "Las fuerzas colombianas ocupan Japurá"
+ colombia.100.title2:0 "El ejército colombiano toma el control de Mapari"
+ colombia.100.desc1:0 "Colombia ha tenido la osadía de lanzar una gran ofensiva contra nuestras fuerzas en Japurá desde unas bases cercanas. Era algo que esperábamos conociendo las ambiciones dictatoriales de [COL.GetLeader]. Por desgracia, nuestro ejército fue incapaz de repeler el ataque y el estado ha caído en manos de los colombianos. Parece que nuestra nación está en declive, y es posible que las demás naciones se aprovechen de esta apariencia para sacar ventaja propia."
+ colombia.100.desc2:0 "Un inesperado ataque colombiano a las guarniciones en Mapari obligó a nuestros hombres a entablar combate con los agresores. Lastimosamente fue imposible repeler la carga y el estado ha terminado bajo ocupación colombiana. Los oficiales militares sugieren concretar un plan de ataque para hacerlos retroceder, pero considerando el resultado de la batalla, es probable que sea infructuoso."
+ colombia.100.a:0 "Que se lo queden entonces."
+ colombia.100.b:0 "¡Inaudito!"
+
+ colombia.101.title:0 "Colombia planea arrebatar nuestro territorio en el norte"
+ colombia.101.desc:0 "[COL.GetLeader] ha tenido el descaro de reclamar para su nación el territorio que controlamos en el norte y que justamente obtuvimos hace ya varios años. Si no enviamos un contingente de defensa a la frontera con Colombia, puede que se apoderen de ella sin mediar palabra, lo que sería todo un desprestigio para nuestro gobierno y para el ejército brasileño."
+ colombia.101.a:0 "Manejaremos la situación como se deba."
+
+ colombia.102.title:0 "Los políticos colombianos exiliados ofrecen su apoyo"
+ colombia.102.desc:0 "Tras el golpe de estado de Alfredo Vásquez Cobo en Colombia, muchos políticos tuvieron que partir al exilio ante la inminente toma de poder por parte de los militares. Sin embargo, se mantuvieron empeñados en retomar el poder en su nación y reestablecer el orden institucional previo. Esta es su oportunidad. Varios de esos exiliados han ofrecido al gobierno colaborar con nosotros en nuestra lucha, brindándonos su conocimiento sobre el funcionamiento interno del país para obtener una ventaja estratégica. Nuestros asesores gubernamentales no están totalmente de acuerdo en aceptar esta oferta, ya que no tenemos certeza sobre sus intenciones o si tan siquiera son verdaderas."
+ colombia.102.a:0 "¡Nos hacía falta esa ayuda!"
+ colombia.102.b:0 "No son de fiar."
+
+ colombia.103.title:0 "¡Los políticos en el exilio están apoyando a [From.GetName]!"
+ colombia.103.desc:0 "Tras el golpe de estado de Alfredo Vásquez Cobo en Colombia, muchos políticos tuvieron que partir al exilio ante la inminente toma de poder por parte de los militares. Sin embargo, se mantuvieron empeñados en retomar el control y reestablecer el orden institucional previo. Ahora, con el conflicto cerniéndose sobre Colombia, estos exiliados han encontrado su oportunidad de actuar; han tenido la osadía de ofrecerse al gobierno [From.GetAdjective] como colaboracionistas para derrocar el nuevo régimen. Ahora el enemigo conoce cómo funciona nuestro gobierno y tendrá ventaja estratégica en el combate."
+ colombia.103.a:0 "¡Incluso desde el extranjero traicionan a su patria!"
+
+ colombia.104.title:0 "Triunfo confederado en la guerra de unificación"
+ colombia.104.desc:0 "Nuestro apoyo a las fuerzas unionistas ha sido de gran ayuda en su campaña. El triunfo de su cometido ha sido bien recibido por la población, y se ha proclamado oficialmente la nueva Confederación Perú-boliviana. [PRU.GetLeader] ha notificado su gratitud para con nuestro gobierno, y espera que las relaciones entre la nueva nación y la nuestra sea cercana y gratificante. No obstante, puede que estén sospechando de nuestras intenciones por mantener la hegemonía de la región, lo que podría conllevar en un conflicto futuro. Pero esas conjeturas son inconclusas, y mientras nuestras acciones sean sutiles, no debería haber inconvenientes en nuestra labor."
+ colombia.104.a:0 "Excelente."
+
+ colombia.105.title:0 "¡Los unionistas se preparan para una insurrección!"
+ colombia.105.desc:0 "El momento que menos esperábamos finalmente ha llegado. Sabemos que las milicias unionistas se están preparando para alzarse en armas, y no hay mucho que podamos hacer salvo prepararnos para la guerra civil inminente. Es muy probable que cuenten con el apoyo militar de los colombianos, pero la coyuntura no nos permite encargarnos de ellos en este momento. Debemos hacer frente a los unionistas primero y luego nos haremos cargo de sus artífices."
+ colombia.105.a:0 "¡Los aplastaremos!"
+
+ colombia.106.title:0 "El gobierno colombiano apoya las milicias subversivas"
+ colombia.106.desc:0 "Nuestros informes de inteligencia reportan que las organizaciones de extrema derecha que abogan por la reunificación de la Confederación Perú-Boliviana están aumentando sus actividades en la nación. Estos incidentes antes eran aislados, pero se están intensificando debido a lo que parece ser un apoyo económico por parte de los colombianos. Estas acusaciones son delicadas, por lo que la ausencia de pruebas concluyentes nos deja en una posición inviable. En cualquier caso, lo mejor es prepararnos antes que sea demasiado tarde."
+ colombia.106.a:0 "¡¿Quienes se creen que son?!"
