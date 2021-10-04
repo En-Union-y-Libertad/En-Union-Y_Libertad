@@ -112,7 +112,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = despotism # liberalism, personally, but puppet for military
 	traits = {
-		#
+		BOL_tejada_incompetent_leader_1
 	}
 }
 
@@ -123,7 +123,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = gen_nazism
 	traits = {
-		ARG_brutal_leader_3
+		BOL_father_of_the_falange
 	}
 }
 

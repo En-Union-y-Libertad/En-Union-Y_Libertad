@@ -1,32 +1,66 @@
 leader_traits = {
-	#generic
+	#COLOMBIA
 
-    generic_army_connections = {
-		random = yes
-		high_command_cost_factor = -0.20
-		air_chief_cost_factor = -0.20
-		army_chief_cost_factor = -0.20
-		navy_chief_cost_factor = -0.20
+	COL_tribuno_del_pueblo = {
+		random = no
+		stability_factor = 0.10
+		political_power_gain = 0.10
+		production_speed_industrial_complex_factor = 0.1
 	}
 
-    generic_physician = {
-		random = yes
-		army_morale_factor = 0.05
+	COL_heroe_colombo_peruano = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = 0.10
+		neutrality_drift = 0.05
 	}
 
-	generic_lawyer = {
-		random = yes
-		political_power_gain = 0.05
+	COL_monsignor_of_the_armies = {
+		random = no
+		sprite = 9
+
+		army_morale_factor = 0.08
+		army_defence_factor = 0.1
 	}
 
-	generic_judge = {
-		random = yes
-		stability_factor = 0.1
+	COL_voice_of_the_people = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.10
+		war_support_factor = 0.05 
+		stability_weekly = 0.001
+	}
+
+	COL_british_naval_attache = {
+		random = no
+		sprite = 14
+		experience_gain_navy = 0.05
+	}
+
+	COL_haz_godo = {
+		random = no
+		max_command_power = 20
+		command_power_gain_mult = 0.25
+	}
+
+	COL_proselito_del_duce = {
+		random = no
+		fascism_drift = 0.1
+		military_leader_cost_factor = -0.25
+	}
+
+	COL_hombre_tempestad = {
+		random = no
+		political_power_factor = 0.05
+		war_support_factor = 0.1
+		army_org_factor = 0.05
 	}
 	
-	generic_writer = {
-		random = yes
-		stability_factor = 0.05
+	COL_el_general = {
+		random = no
+		conscription = 0.01
+		army_defence_factor = 0.10
+		army_morale_Factor = 0.10
 	}
 	
 	#PERU
@@ -50,7 +84,6 @@ leader_traits = {
 	PBC_democratic_tendencies = {
 		random = no 
 		democratic_drift = 0.02
-		stability_factor = 0.05
 	}
 
 	PRU_collapsing_coalition = {
@@ -118,11 +151,23 @@ leader_traits = {
 		mobilization_laws_cost_factor = -0.1
 		economy_cost_factor = -0.1
 	}
+
+	BOL_father_of_the_falange = {
+		random = no 
+		war_support_factor = 0.05
+		weekly_manpower = 650
+	}
 	
 	CHL_the_council_of_workers = {
 		random = no 
 		war_support_factor = 0.05
 		political_power_gain = 0.2
+	}
+
+	CHL_leader_of_the_people = {
+		random = no 
+		political_power_factor = 0.05
+		stability_factor = 0.05
 	}
 	
 	CHL_el_jefe = {
@@ -136,15 +181,22 @@ leader_traits = {
 	
 	CHL_military_leader = {
 		random = no 
-		army_attack_factor = 0.1
-		army_defence_factor = 0.1
-		political_power_factor = -0.15
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		political_power_factor = -0.05
 	}
 	
 	CHL_economist = {
 		random = no 
 		consumer_goods_factor = -0.05
 		production_speed_buildings_factor = 0.05
+	}
+
+	CHL_economist_2 = {
+		random = no 
+		stability_factor = -0.03
+		consumer_goods_factor = -0.03
+		production_speed_buildings_factor = 0.03
 	}
 
 	PRU_godly_being = {
@@ -163,6 +215,89 @@ leader_traits = {
 		economy_cost_factor = 0.1
 	}
 
+	PRU_not_a_real_person_2 = {
+		random = no 
+		political_power_factor = -0.1
+		stability_factor = 0.07
+		political_advisor_cost_factor = -0.05
+		trade_laws_cost_factor = 0.1
+		mobilization_laws_cost_factor = 0.1
+		economy_cost_factor = 0.1
+	}
+
+	BOL_tejada_incompetent_leader_1 = {
+		random = no 
+		political_power_factor = -0.1
+		stability_factor = -0.05
+		production_speed_buildings_factor = -0.1
+		industrial_capacity_factory = -0.05
+		army_attack_factor = -0.05
+		army_defence_factor = -0.05
+	}
+
+	BOL_tejada_incompetent_leader_2 = {
+		random = no 
+		political_power_factor = 0.02
+		production_speed_buildings_factor = -0.1
+		industrial_capacity_factory = -0.05
+		army_attack_factor = -0.05
+		army_defence_factor = -0.05
+	}
+
+	BOL_tejada_incompetent_leader_3 = {
+		random = no 
+		political_power_factor = -0.1
+		stability_factor = -0.05
+		production_speed_buildings_factor = 0.05
+		army_attack_factor = -0.05
+		army_defence_factor = -0.05
+	}
+
+	BOL_tejada_incompetent_leader_4 = {
+		random = no 
+		political_power_factor = -0.1
+		stability_factor = -0.05
+		production_speed_buildings_factor = -0.1
+		industrial_capacity_factory = -0.05
+	}
+
+	BOL_tejada_incompetent_leader_5 = {
+		random = no 
+		political_power_factor = 0.02
+		production_speed_buildings_factor = 0.05
+		army_attack_factor = -0.05
+		army_defence_factor = -0.05
+	}
+
+	BOL_tejada_incompetent_leader_6 = {
+		random = no 
+		political_power_factor = 0.02
+		production_speed_buildings_factor = -0.1
+		industrial_capacity_factory = -0.05
+	}
+
+	BOL_tejada_incompetent_leader_7 = {
+		random = no 
+		political_power_factor = -0.1
+		stability_factor = -0.05
+		production_speed_buildings_factor = 0.05
+	}
+
+	BOL_tejada_incompetent_leader_8 = {
+		random = no 
+		political_power_factor = 0.02
+		production_speed_buildings_factor = 0.05
+	}
+
+	PBC_disorganized_nationalists = {
+		random = no 
+		war_support_factor = 0.2
+		stability_factor = -0.05
+		army_attack_factor = -0.05
+		army_defence_factor = 0.05
+		production_speed_buildings_factor = -0.1
+	}
+
 ####Uruguay####
     urg_ancap_trait = {
 		random = no
@@ -170,17 +305,7 @@ leader_traits = {
         local_resources_factor = 0.1
 		production_speed_industrial_complex_factor = 0.1
 		consumer_goods_factor = -0.03		
-	}
-	URG_el_guerrillero = {
-		army_core_attack_factor = 0.05
-		army_core_defence_factor = 0.2	
-	}
-####Costa Rica####
-	COS_intellectual_dictator = {
-		political_power_factor = 0.15
-		political_advisor_cost_factor = 0.1	
-	}
-###########################################################################		
+	}	
 	
 	dictator = {
 		random = no
@@ -2116,6 +2241,18 @@ leader_traits = {
 
 
 	### IDEA TRAITS ###
+
+	#EUYL#
+
+	EUYL_soldier_recruiter = {
+		random = no 
+		sprite = 13
+		weekly_manpower = 950
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	
 	# drift is a percent applied weekly
 	communist_revolutionary = {

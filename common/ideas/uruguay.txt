@@ -330,8 +330,7 @@ ideas = {
 				original_tag = URG 
 			}
 			
-			traits = { communist_revolutionary red_suffragette }
-
+			traits = { communist_revolutionary }
 		}
 
 		URG_emilio_frugoni = {
@@ -348,7 +347,7 @@ ideas = {
 				}
 			}
 			
-			traits = { smooth_talking_charmer social_reformer }
+			traits = { smooth_talking_charmer }
 		}
 
 		URG_horacio_arredondo = {
@@ -359,7 +358,7 @@ ideas = {
 				original_tag = URG
 			}
 			
-			traits = { linchpin_of_infrastructure }
+			traits = { popular_figurehead }
 		}
 
 		URG_pedro_manini_rios = {
@@ -370,24 +369,10 @@ ideas = {
 				original_tag = URG
 			}
 			
-			traits = { economist }
-			
-			on_add = {
-				add_popularity = { ideology = fascism popularity = 0.05 }
-				add_popularity = { ideology = neutrality popularity = 0.05 }
+			traits = { backroom_backstabber }
+			ai_will_do = {
+				factor = 0
 			}
-		}
-
-		URG_alfredo_navarro = {
-			
-            picture = URG_pedro_manini_rios
-			
-			allowed = {
-				original_tag = URG
-			}
-			
-			traits = { silent_workhorse }
-
 		}
 		
 		URG_rodney_arismendi = {
@@ -401,7 +386,7 @@ ideas = {
 			traits = { captain_of_industry }
 			
 			on_add = {
-				add_popularity = { ideology = communism popularity = 0.1 }
+				add_popularity = { ideology = communism popularity = 0.05 }
 			}
 		}
 		
@@ -413,8 +398,11 @@ ideas = {
 				original_tag = URG 
 			}
 			
-			traits = { connected_citizen fascist_demagogue }
+			traits = { connected_citizen }
 			
+			on_add = {
+				add_popularity = { ideology = communism popularity = 0.05 }
+			}
 		}
 	}
 
@@ -598,7 +586,7 @@ ideas = {
 			
 
 			
-			traits = { army_chief_old_guard }
+			traits = { army_chief_drill_2 }
 			
 			ai_will_do = {
 				factor = 1
@@ -608,7 +596,7 @@ ideas = {
 
 	air_chief = {
 
-		URG_oscar_diego_gestido = {
+		URG_manuel_heinz_azpurua = {
 			
 			picture = generic_air_south_america_3
 			
@@ -727,7 +715,7 @@ ideas = {
 
 		URG_ute = {
 			
-			picture = URG_UTE
+			picture = generic_electronics_concern_1
 
 			allowed = {
 				original_tag = URG
@@ -747,9 +735,9 @@ ideas = {
 
 	naval_manufacturer = { 
 	
-		URG_SRCA = {
+		URG_aserradero_oriental = {
 
-			picture = URG_SCRA
+			picture = generic_naval_manufacturer_1
 
 			allowed = {
 				original_tag = URG
@@ -763,89 +751,7 @@ ideas = {
 				naval_equipment = 0.15
 			}	
 
-			traits = { coastal_defence_naval_manufacturer }
-		}
-	}
-
-	aircraft_manufacturer = {
-			
-		designer = yes
-		
-		URG_escuela_militar_aeronautica = {
-			
-			allowed = {
-				original_tag = URG
-			}
-			
-			picture = URG_escuela_militar_aeronautica
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { light_aircraft_manufacturer }
-			
-			modifier = {
-			}
-		}
-	}
-
-	materiel_manufacturer = {
-			
-		designer = yes
-		
-		URG_PASMA = {
-			
-			allowed = {
-				original_tag = URG
-			}
-			
-			picture = URG_PASMA
-			
-			research_bonus = {
-				infantry_weapons = 0.15
-			}
-			
-			traits = { infantry_equipment_manufacturer }
-			
-			modifier = {
-			}
-		}
-
-		URG_CIACA = {
-			
-			allowed = {
-				original_tag = URG
-			}
-			
-			picture = URG_CIACA
-			
-			research_bonus = {
-				infantry_weapons = 0.15
-			}
-			
-			traits = { artillery_manufacturer }
-			
-			modifier = {
-			}
-		}
-
-		URG_Ford = {
-			
-			allowed = {
-				original_tag = URG
-			}
-			
-			picture = ford_motor_company
-			
-			research_bonus = {
-				motorized_equipment = 0.15
-			}
-			
-			traits = { motorized_equipment_manufacturer }
-			
-			modifier = {
-			}
+			traits = { electronics_concern }
 		}
 	}		
 }

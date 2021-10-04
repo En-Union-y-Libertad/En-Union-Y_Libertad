@@ -211,3 +211,45 @@ music = {
 		}		
 	}
 }
+
+### Colombia 
+
+music = {
+	song = "Adiós al Séptimo de Línea"
+	
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}
+
+music = {
+	song = "Honores a Popayán"
+	
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}
+
+music = {
+	song = "Salud Adorada Bandera"
+	
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}
+
+music = {
+	song = "Canción de Boyacá"
+	
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}

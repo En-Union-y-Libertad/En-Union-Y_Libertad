@@ -741,10 +741,10 @@ country_event = {
 				}
 				create_country_leader = {
 					name = "Congreso de Tacna"
-					desc = "POLITICS_OSCAR_BENAVIDES_DESC"
+					desc = "POLITICS_CONGRESS_TACNA_DESC"
 					picture = "gfx/leaders/PRU/PBC_portrait_congreso_de_tacna.dds"
 					expire = "1965.1.1"
-					ideology = socialism
+					ideology = leninism
 					traits = {
 						PRU_not_a_real_person
 					}
@@ -753,7 +753,7 @@ country_event = {
 			else = {
 				create_country_leader = {
 					name = "Congreso de Tacna"
-					desc = "POLITICS_OSCAR_BENAVIDES_DESC"
+					desc = "POLITICS_CONGRESS_TACNA_DESC"
 					picture = "gfx/leaders/PRU/PBC_portrait_congreso_de_tacna.dds"
 					expire = "1965.1.1"
 					ideology = gen_nazism
@@ -1246,7 +1246,21 @@ country_event = {
 	trigger = {
 		has_country_flag = is_PBC
 		has_country_flag = is_in_second_war_of_confederation
-		has_war = yes 
+		NOT = {
+			has_country_flag = PBC_negotiating_peace_talks
+		}
+		OR = {
+			has_war_with = CHL 
+			has_war_with = ARG 
+			has_war_with = ECU 
+			has_war_with = COL 
+		}
+		NOT = {
+			OR = {
+				has_war_with = BOA 
+				has_war_with = PRA 
+			}
+		}
 		CHL = {
 			if = { 
 				limit = {
@@ -1256,8 +1270,8 @@ country_event = {
 				CHL = {
 					OR = {
 						has_capitulated = yes 
-						casualties > 54999
-						surrender_progress > 0.29
+						casualties > 65999
+						surrender_progress > 0.34
 					}
 				}
 			}
@@ -1271,8 +1285,8 @@ country_event = {
 				ARG = {
 					OR = {
 						has_capitulated = yes 
-						casualties > 54999
-						surrender_progress > 0.29
+						casualties > 65999
+						surrender_progress > 0.34
 					}
 				}
 			}
@@ -1286,8 +1300,8 @@ country_event = {
 				ECU = {
 					OR = {
 						has_capitulated = yes 
-						casualties > 54999
-						surrender_progress > 0.29
+						casualties > 65999
+						surrender_progress > 0.34
 					}
 				}
 			}
@@ -1301,8 +1315,8 @@ country_event = {
 				COL = {
 					OR = {
 						has_capitulated = yes 
-						casualties > 54999
-						surrender_progress > 0.29
+						casualties > 65999
+						surrender_progress > 0.34
 					}
 				}
 			}
@@ -1513,6 +1527,7 @@ country_event = {
 	option = {
 		name = peru.10.a 
 		set_country_flag = PBC_winner_of_war_of_independence
+		clr_country_flag = is_in_second_war_of_confederation
 		every_enemy_country = {
 			every_owned_state = {
 				limit = { 
@@ -2179,7 +2194,9 @@ country_event = {
 			}
 			modifier = {
 				add = 40 
-				num_divisions > 24
+				FROM = {
+					num_divisions > 24
+				}
 			}
 		}
 		FROM = {
@@ -2216,6 +2233,12 @@ country_event = {
 				has_opinion = {
 					target = FROM
 					value < 0
+				}
+			}
+			modifier = {
+				add = 500  #Anarchists wouldn't be willing to give away their lands what-so-ever
+				CHL = {
+					has_government = neutrality
 				}
 			}
 		}
@@ -2274,6 +2297,12 @@ country_event = {
 	option = { #decline 
 		ai_chance = {
 			base = 50
+			modifier = {
+				add = 500  #Anarchists wouldn't be willing to give away their lands what-so-ever
+				CHL = {
+					has_government = neutrality
+				}
+			}
 		}
 		FROM = {
 			country_event = peru.17 
@@ -2542,6 +2571,8 @@ country_event = {
 		set_country_flag = PRU_stabilized_army_navy
 		remove_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 		hidden_effect = {
+			set_variable = { PRU_army_power = 0 }
+			set_variable = { PRU_navy_power = 0 }
 			clear_variable = PRU_navy_power
 			clear_variable = PRU_army_power
 		}

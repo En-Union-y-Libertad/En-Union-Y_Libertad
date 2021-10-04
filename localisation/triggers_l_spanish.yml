@@ -623,7 +623,7 @@
  TRIGGER_LEGITIMACY:0 "Legitimidad"
  TRIGGER_HAS_RULE:0 "$RULE$"
  TRIGGER_HAS_NOT_RULE:0 "No tiene la regla $RULE$"
- TRIGGER_HAS_DYMAMIC_MODIFIER:0 "Tiene el modificador: $NAME|H$ ($NUM|H$ días)"
+ TRIGGER_HAS_DYMAMIC_MODIFIER:0 "Tiene el modificador: $NAME|H$ ($NUM|H$ días)\n"
  TRIGGER_HAS_NOT_DYMAMIC_MODIFIER:0 "No tiene el modificador: $NAME|H$"
  TRIGGER_HAS_MINES:0 "Como mínimo $NUM|H$ minas en $REGION|H$"
  TRIGGER_HAS_NOT_MINES:0 "Como mucho $NUM|H$ minas en $REGION|H$"

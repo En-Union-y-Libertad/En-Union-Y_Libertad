@@ -13,7 +13,6 @@ state={
 			infrastructure = 3
 		}
 		add_core_of = CHL
-		add_core_of = PAT
 		victory_points = {
 			12954 10 
 		}

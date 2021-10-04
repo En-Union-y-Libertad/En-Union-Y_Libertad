@@ -20,7 +20,6 @@ set_technology = {
 	infantry_weapons1 = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	CAS1 = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -107,7 +106,6 @@ set_convoys = 45
 		tech_mountaineers = 1
 		early_fighter = 1
 		gwtank = 1
-		CAS1 = 1
 		infantry_weapons = 1
 		infantry_weapons1 = 1
 		infantry_weapons2 = 1
@@ -148,10 +146,10 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = yes
 }
-set_popularities = { 
-	democratic = 40
-	fascism = 1
-	neutrality = 56
+set_popularities = {
+	democratic = 41
+	fascism = 4
+	neutrality = 52
 	communism = 3
 }
 
@@ -221,23 +219,10 @@ create_corps_commander = {
     logistics_skill = 2
 }
 
-create_corps_commander = {  #He was Chief of Police and brother-in-law of Gabriel Terra when he became a general
+create_corps_commander = {
 	name = "Alfredo Baldomir Ferrari"
 	portrait_path = "gfx/leaders/URG/URG_alfredo_baldomir_general.dds"
-	traits = { harsh_leader politically_connected }
-	ID = 1934
-	skill = 3
-    attack_skill = 2
-    defense_skill = 4
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {  
-	name = "Arturo B. Ríos"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Generic_land_1.dds"
-	traits = {  }
-	ID = 1935
+	traits = { harsh_leader }
 	skill = 3
     attack_skill = 4
     defense_skill = 2
@@ -257,31 +242,9 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Alfredo R. Campos"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Generic_land_3.dds"
-	traits = { trait_engineer }
-	skill = 2
-    attack_skill = 3
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {
 	name = "Angel Cambior"
 	portrait_path = "gfx/leaders/URG/r56_portrait_URG_Angel_Camblor.dds"
 	traits = { urban_assault_specialist }
-	skill = 1
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Eduardo Zubía"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Generic_land_1.dds"
-	traits = { trait_engineer }
 	skill = 1
     attack_skill = 1
     defense_skill = 1
@@ -308,33 +271,6 @@ create_navy_leader = {
 		election_frequency = 48
 		elections_allowed = no
 	}
-	set_popularities = {  #According to election results
-		democratic = 35
-		fascism = 1
-		neutrality = 61
-		communism = 3
-	}
-	create_country_leader = {
-		name = "Juan José de Arteaga"
-		desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
-		picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
-		expire = "1965.1.1"
-		ideology = conservatism
-		traits = {
-
-		}
-	}
-	create_country_leader = {
-		name = "Alfredo Baldomir Ferrari"
-		desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
-		picture = "portrait_urg_alfredo_baldomir.dds"
-		expire = "1965.1.1"
-		ideology = despotism
-		traits = {
-			generic_army_connections #He was still a general
-			fascist_sympathies
-		}
-	}		
 }
 
 ### VARIANTS ###

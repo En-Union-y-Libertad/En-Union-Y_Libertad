@@ -3251,8 +3251,6 @@
 
  URG_light_tank_destroyer_equipment_1:0 "M6 Gun Motor Carriage"
  URG_light_tank_destroyer_equipment_1_short:0 "M6 GMC"
- URG_light_tank_aa_equipment_1:0 "Vickers II AA"
- URG_light_tank_aa_equipment_1_short:0 "Vickers II AA"
  URG_light_tank_destroyer_equipment_2:1 "M3 Gun Motor Carriage"
  URG_light_tank_destroyer_equipment_2_short:1 "M3 GMC"
  URG_light_tank_artillery_equipment_1:0 "T30 Howitzer Motor Carriage"
@@ -3300,7 +3298,6 @@
  URG_mechanized_equipment_3:0 "Half-Track Personnel Carrier M5"
  URG_mechanized_equipment_3_short:0 "HF M5" 
  URG_motorized_equipment_1_short:0 "Dodge WC" 
- 
  URG_infantry_equipment_0:0 "Ceska Zbrojovka vz. 24"
  URG_infantry_equipment_0_short:0 "vz .24"
  URG_infantry_equipment_1:0 "M1 Garand"
@@ -3309,12 +3306,6 @@
  URG_infantry_equipment_3_short:0 "M1 Carbine"
  URG_infantry_equipment_2:0 "Thompson M1A1"
  URG_infantry_equipment_2_short:0 "Thompson M1"
-
- URG_support_weapons:0 "Browning M2 & Ballester-Molina"
- URG_support_weapons2:0 "FN M2HB & FN GP35"
- URG_support_weapons3:0 "FN M2HB & Molotov Cocktail"
- URG_support_weapons4:0 "M1941 Johnson MG & M2 4.2 inch mortar"
-
  URG_gw_armored_car_equipment:0 "M1 Armored Car"
  URG_gw_armored_car_equipment_short:0 "M1"
  URG_armored_car_equipment_1:0 "M3 Scout Car"

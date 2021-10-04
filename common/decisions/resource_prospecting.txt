@@ -5101,7 +5101,10 @@ prospect_for_resources = {
 		icon = oil
 
 		allowed = {
-			tag = ARG
+			OR = {
+				original_tag = ARG
+				original_tag = CHL
+			}
 		}
 
 		highlight_states = {
@@ -5119,7 +5122,14 @@ prospect_for_resources = {
 			has_tech = excavation1
 			owns_state = 512
 			controls_state = 512
-			ARG = { has_completed_focus = ARG_invest_in_our_mining_industry }
+			if = {
+				limit = { original_tag = ARG }
+				has_completed_focus = ARG_invest_in_our_mining_industry
+			}
+			if = {
+				limit = { original_tag = CHL }
+				has_completed_focus = CHL_exploit_the_patagonian_oil
+			}
 			512 = {
 				NOT = {
 					has_state_flag = rio_negro_oil_developed
@@ -5424,7 +5434,10 @@ prospect_for_resources = {
 		icon = oil
 
 		allowed = {
-			tag = ARG
+			OR = {
+				original_tag = ARG
+				original_tag = CHL
+			}
 		}
 
 		highlight_states = {
@@ -5441,7 +5454,14 @@ prospect_for_resources = {
 		visible = {
 			owns_state = 810
 			controls_state = 810
-			ARG = { has_completed_focus = ARG_invest_in_our_mining_industry }
+			if = {
+				limit = { original_tag = ARG }
+				has_completed_focus = ARG_invest_in_our_mining_industry
+			}
+			if = {
+				limit = { original_tag = CHL }
+				has_completed_focus = CHL_exploit_the_patagonian_oil
+			}
 			810 = {
 				NOT = {
 					has_state_flag = chubut_oil_developed

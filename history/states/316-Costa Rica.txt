@@ -2,20 +2,20 @@
 state={
 	id=316
 	name="STATE_316"
-	manpower = 369648
+	manpower = 503856
 	resources={
 		chromium=1 # was: 1
 	}
 	
-	state_category = city
+	state_category = town
 	
 
 	history={
 		owner = COS
 		buildings = {
-			infrastructure = 5
+			infrastructure = 4
 			arms_factory = 1
-			industrial_complex = 1 
+			industrial_complex = 2 
 			air_base = 1
 			13087 = {
 				naval_base = 1
@@ -26,11 +26,14 @@ state={
 			13087 5
 		}
 		victory_points = {
-			14558 3
+			12878 3
+		}
+		victory_points = {
+			13092 2
 		}
 	}
 
 	provinces={
-	    12878 13087 14560 14558
+		12878 13087 13092 
 	}
 }

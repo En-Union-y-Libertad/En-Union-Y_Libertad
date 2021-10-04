@@ -806,7 +806,7 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            add_political_power = 75
+            add_political_power = 90
             custom_effect_tooltip = BOL_lead_to_civil_war
             custom_effect_tooltip = BOL_unlock_decision_to_delay_coup
             add_popularity = {
@@ -814,7 +814,7 @@ focus_tree = {
 				popularity = 0.08
 			}
             hidden_effect = {
-                set_variable = { BOL_military_divisions = 33 }
+                set_variable = { BOL_military_divisions = 34 }
                 set_variable = { BOL_civilian_army_divisions = 5 }
             }
         }
@@ -834,6 +834,10 @@ focus_tree = {
             factor = 50
         }
 
+        available = {
+            has_completed_focus = BOL_side_with_the_people
+        }
+
         bypass = {
             has_completed_focus = BOL_side_with_the_people
             NOT = {
@@ -843,7 +847,7 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
-            add_political_power = 25
+            add_political_power = 30
             custom_effect_tooltip = BOL_begin_civil_war_with_south
             add_popularity = {
 				ideology = democratic
@@ -868,6 +872,10 @@ focus_tree = {
 
         ai_will_do = {
             factor = 50
+        }
+
+        available = {
+            has_completed_focus = BOL_side_with_the_people
         }
 
         bypass = {
@@ -901,6 +909,10 @@ focus_tree = {
             factor = 50
         }
 
+        available = {
+            has_completed_focus = BOL_side_with_the_people
+        }
+
         bypass = {
             has_completed_focus = BOL_side_with_the_people
             NOT = {
@@ -916,8 +928,8 @@ focus_tree = {
 				popularity = 0.05
 			}
             hidden_effect = {
-                subtract_from_variable = { BOL_military_divisions = 4 }
-                add_to_variable = { BOL_civilian_army_divisions = 4 }
+                subtract_from_variable = { BOL_military_divisions = 5 }
+                add_to_variable = { BOL_civilian_army_divisions = 5 }
             }
         }
     }
@@ -934,6 +946,10 @@ focus_tree = {
 
         ai_will_do = {
             factor = 50
+        }
+
+        available = {
+            has_completed_focus = BOL_side_with_the_people
         }
 
         bypass = {
@@ -1206,6 +1222,7 @@ focus_tree = {
             add_stability = 0.05
             add_research_slot = 1
             country_event = bolivia.2
+            unlock_decision_category_tooltip = BOL_tejadas_incompetence
         }
     }
 
@@ -1912,12 +1929,13 @@ focus_tree = {
         id = BOL_economic_boost_from_our_ally
         icon = GFX_goal_generic_construct_civilian
         x = 0
-        y = 1
+        y = 6
         relative_position_id = BOL_join_the_chileans
         prerequisite = { 
             focus = BOL_join_the_chileans
             focus = BOL_join_the_argentines
             focus = BOL_join_the_peruvians
+            focus = BOL_establish_an_allience_with_brazil
         }
 
         cost = 10
@@ -1927,6 +1945,7 @@ focus_tree = {
                 is_in_faction_with = ARG 
                 is_in_faction_with = CHL 
                 is_in_faction_with = PRU 
+                is_in_faction_with = BRA 
             }
         }
 
@@ -2095,7 +2114,7 @@ focus_tree = {
     }
 
     focus = {
-        id = BOL_a_path_of_force
+        id = BOL_a_path_of_force #centralize Government Control
         icon = GFX_BOL_guardia_nacional
         x = 3
         y = 1
@@ -2182,7 +2201,7 @@ focus_tree = {
     }
 
     focus = {
-        id = BOL_establish_the_new_regime
+        id = BOL_establish_the_new_regime #solidify Government Rule
         icon = GFX_focus_rom_royal_dictatorship
         x = 0
         y = 1
@@ -2196,7 +2215,7 @@ focus_tree = {
         }
 
         available = {
-            neutrality > 0.49
+            neutrality > 0.39
         }
 
         search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2205,10 +2224,38 @@ focus_tree = {
             set_politics = {
                 ruling_party = neutrality
             }
+            set_party_name = {
+                ideology = neutrality
+				long_name = BOL_central_government_long
+				name = BOL_central_government
+            }
             add_popularity = {
 				ideology = neutrality
 				popularity = 0.05
 			}
+        }
+    }
+
+    focus = {
+        id = BOL_the_tejada_dictatorship
+        icon = GFX_BOL_tejada_dictatoship
+        x = -2
+        y = 1
+        relative_position_id = BOL_establish_the_new_regime
+        prerequisite = { focus = BOL_establish_the_new_regime }
+
+        cost = 8
+
+        available = {
+            has_country_leader = {
+                name = "José Luis Tejada Sorzano"
+                ruling_only = yes 
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = BOL_the_tejada_dictatorship_idea
         }
     }
 
@@ -2654,7 +2701,7 @@ focus_tree = {
 
     focus = {
         id = BOL_embrace_a_new_idea
-        icon = GFX_goal_support_fascism
+        icon = GFX_BOL_embrace_new_idea
         x = 0
         y = 1
         relative_position_id = BOL_empower_the_young_officers
@@ -2672,6 +2719,11 @@ focus_tree = {
                 ideology = fascism
                 popularity = 0.1
             }
+            set_party_name = {
+				ideology = fascism
+				long_name = BOL_falange_long
+				name = BOL_falange
+			}
             add_ideas = fascist_influence
         }
     }
@@ -2854,7 +2906,7 @@ focus_tree = {
         completion_reward = {
             add_stability = 0.1
             add_research_slot = 1
-            remove_ideas = BOL_went_against_the_civilians_5
+            remove_ideas = BOL_went_against_the_civilians_6
             add_ideas = CHL_prepare_the_people_for_war_idea
         }
     }
@@ -3252,6 +3304,12 @@ focus_tree = {
                     clr_state_flag = BOL_controlled_by_player
                     clr_state_flag = BOL_state_will_be_controlled_by_toro
                     clr_state_flag = BOL_state_controlled_by_toro
+                    if = {
+                        limit = {
+                            has_dynamic_modifier = { modifier = BOL_controlled_by_toro }
+                        }
+                        remove_dynamic_modifier = { modifier = BOL_controlled_by_toro }
+                    }
                 }
                 clear_variable = BOL_number_of_states_controlled_by_toro
                 clear_variable = BOL_cost_of_taking_out_toro
@@ -4177,10 +4235,6 @@ focus_tree = {
 
         cost = 4
 
-        ai_will_do = {
-            base = 2
-        }
-
         available = {
             is_subject = no 
         }
@@ -4204,10 +4258,6 @@ focus_tree = {
         prerequisite = { focus = BOL_forge_our_own_path }
 
         cost = 6
-
-        ai_will_do = {
-            base = 2
-        }
 
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY }
         completion_reward = {
@@ -4239,12 +4289,11 @@ focus_tree = {
 
         bypass = {
             has_completed_focus = BOL_our_wars_of_vengence
-            OR = {
-                has_war_with = PAR 
-                controls_state = 688
-                AND = {
-                    any_other_country = {
-                        is_in_faction_with = ROOT 
+            PAR = {
+                OR = {
+                    has_war_with = ROOT 
+                    is_in_faction_with = ROOT 
+                    ROOT = {
                         controls_state = 688
                     }
                 }
@@ -4253,17 +4302,9 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_ANNEXATION }
         completion_reward = {
-            random_other_country = {
-                limit = {
-                    controls_state = 688
-                    NOT = {
-                        is_in_faction_with = ROOT 
-                    }
-                }
-                create_wargoal = {
-                    type = annex_everything
-                    target = PREV 
-                }
+            create_wargoal = {
+                type = annex_everything
+                target = PAR 
             }
         }
     }
@@ -4398,7 +4439,7 @@ focus_tree = {
     focus = {
         id = BOL_make_the_argentineans_pay
         icon = GFX_focus_ARG_attack
-        x = -1
+        x = 1
         y = 1
         relative_position_id = BOL_force_integrate_our_new_territory
         prerequisite = { focus = BOL_revenge_against_the_chileans }
@@ -4434,11 +4475,12 @@ focus_tree = {
     focus = {
         id = BOL_retaking_acre
         icon = GFX_ARG_attack_brazil
-        x = 1
+        x = -1
         y = 1
         relative_position_id = BOL_force_integrate_our_new_territory
         prerequisite = { focus = BOL_the_peruvian_menace }
         prerequisite = { focus = BOL_revenge_against_the_chileans }
+        mutually_exclusive = { focus = BOL_try_to_buy_acre_off_brazil }
 
         cost = 10
 
@@ -4468,9 +4510,125 @@ focus_tree = {
     }
 
     focus = {
+        id = BOL_try_to_buy_acre_off_brazil
+        icon = GFX_URG_deal_brazil
+        x = -1
+        y = 2
+        relative_position_id = BOL_revenge_against_the_chileans
+        prerequisite = { focus = BOL_revenge_against_the_chileans }
+        prerequisite = { focus = BOL_establish_the_new_regime }
+        mutually_exclusive = { focus = BOL_retaking_acre }
+
+        cost = 10
+
+        ai_will_do = {
+            base = 2
+        }
+
+        available = {
+            NOT = {
+                has_war_with = BRA 
+            }
+            any_other_country = {
+                controls_state = 845
+                controls_state = 884
+                controls_state = 882
+                controls_state = 880
+            }
+        }
+
+        bypass = {
+            has_completed_focus = BOL_revenge_against_the_chileans
+            OR = {
+                AND = {
+                    controls_state = 845
+                    controls_state = 884
+                    controls_state = 882
+                    controls_state = 880
+                }
+                has_war_with = BRA 
+            }
+        }
+
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ANNEXATION }
+        completion_reward = {
+            random_other_country = {
+                limit = {
+                    controls_state = 845
+                    controls_state = 884
+                    controls_state = 882
+                    controls_state = 880
+                }
+				country_event = { id = bolivia.6 hours = 8 }
+			}
+			custom_effect_tooltip = ARG_iftheyaccept
+			effect_tooltip = {
+				transfer_state = 845
+                transfer_state = 884
+                transfer_state = 882
+                transfer_state = 880
+				random_owned_controlled_state = {
+					limit = { industrial_complex > 1 }
+					remove_building = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+				add_timed_idea = {
+					idea = BOL_purchasing_acre
+					days = 180
+				}
+				BRA = {
+					add_offsite_building = { 
+						type = industrial_complex 
+						level = 2
+					}
+					add_timed_idea = {
+						idea = BRA_purchasing_acre
+						days = 180
+					}
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = BOL_establish_an_allience_with_brazil
+        icon = GFX_goal_generic_alliance
+        x = -1
+        y = 1
+        relative_position_id = BOL_try_to_buy_acre_off_brazil
+        prerequisite = { focus = BOL_try_to_buy_acre_off_brazil }
+
+        cost = 10
+
+        available = {
+            NOT = {
+                has_war_with = BRA 
+            }
+            BRA = {
+                is_in_faction = no 
+            }
+        }
+
+        bypass = {
+            has_completed_focus = BOL_try_to_buy_acre_off_brazil
+            is_in_faction_with = BRA 
+        }
+
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            create_faction = "The Southern Defense Pact"
+            BRA = {
+                country_event = { id = generic.5 hours = 8 }
+            }
+        }
+    }
+
+    focus = {
         id = BOL_go_after_ecuador
         icon = GFX_focus_northernlands
-        x = -1
+        x = 1
         y = 1
         relative_position_id = BOL_retaking_acre
         prerequisite = { focus = BOL_retaking_acre }
@@ -4501,7 +4659,7 @@ focus_tree = {
     focus = {
         id = BOL_go_after_colombia
         icon = GFX_PRU_attack_colombia
-        x = -1
+        x = 1
         y = 1
         relative_position_id = BOL_make_the_argentineans_pay
         prerequisite = { focus = BOL_make_the_argentineans_pay }
@@ -4531,7 +4689,7 @@ focus_tree = {
     focus = {
         id = BOL_take_out_venezuela
         icon = GFX_ARG_attack_venezuela 
-        x = 1
+        x = -1
         y = 1
         relative_position_id = BOL_retaking_acre 
         prerequisite = { focus = BOL_retaking_acre }
@@ -4800,10 +4958,10 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
             random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 3
+                add_extra_state_shared_building_slots = 2
                 add_building_construction = {
                     type = arms_factory
-                    level = 3
+                    level = 2
                     instant_build = yes 
                 }
             }

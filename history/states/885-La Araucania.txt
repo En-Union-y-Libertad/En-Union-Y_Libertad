@@ -4,7 +4,6 @@ state={
 	history={
 		owner = CHL
 		add_core_of = CHL
-		add_core_of = PAT
 		buildings = {
 			5121 = {
 				naval_base = 2

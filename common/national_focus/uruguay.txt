@@ -54,19 +54,7 @@ focus_tree = {
 			custom_effect_tooltip = URG_3_in_prison
 			hidden_effect = {
 				add_to_variable = { URG_politicians_arrested = 3 }
-				set_temp_variable = { URG_terra_democracy = 43 }
-				set_temp_variable = { URG_stability_made_terra = 0.115 }
-				set_temp_variable = { URG_the_politicans_arrested = URG_politicians_arrested }
-				set_temp_variable = { URG_support_for_terra = -0.12 }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.005 }
-				subtract_from_temp_variable = { URG_stability_made_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_stability = URG_stability_made_terra }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.8 }
-				add_to_temp_variable = { URG_support_for_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_support = URG_support_for_terra }
-				subtract_from_temp_variable = { URG_terra_democracy = URG_politicians_arrested }
-				multiply_temp_variable = { URG_terra_democracy = 0.007 }
-				set_variable = { URG_democracy_from_terra = URG_terra_democracy }
+				URG_set_up_prisoners_modifier = yes 
 			}
 		}
 	}
@@ -105,19 +93,7 @@ focus_tree = {
 			custom_effect_tooltip = URG_3_set_free
 			hidden_effect = {
 				subtract_from_variable = { URG_politicians_arrested = 3 }
-				set_temp_variable = { URG_terra_democracy = 43 }
-				set_temp_variable = { URG_stability_made_terra = 0.115 }
-				set_temp_variable = { URG_the_politicans_arrested = URG_politicians_arrested }
-				set_temp_variable = { URG_support_for_terra = -0.12 }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.005 }
-				subtract_from_temp_variable = { URG_stability_made_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_stability = URG_stability_made_terra }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.8 }
-				add_to_temp_variable = { URG_support_for_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_support = URG_support_for_terra }
-				subtract_from_temp_variable = { URG_terra_democracy = URG_politicians_arrested }
-				multiply_temp_variable = { URG_terra_democracy = 0.007 }
-				set_variable = { URG_democracy_from_terra = URG_terra_democracy }
+				URG_set_up_prisoners_modifier = yes 
 			}
 		}
 	}
@@ -197,7 +173,6 @@ focus_tree = {
 					level = 1
 					instant_build = yes 
 				}
-				847 = {
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 1
@@ -206,7 +181,6 @@ focus_tree = {
 				add_resource = {
 					type = oil
 					amount = 2
-				}
 				}
 			}
 		}
@@ -643,6 +617,14 @@ focus_tree = {
 		prerequisite = { focus = URG_march_to_the_capital }
 		
 		cost = 15
+
+		available = {
+			all_owned_state = {
+				NOT = {
+					has_dynamic_modifier = { modifier = URG_terra_loyalities }
+				}
+			}
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -759,19 +741,7 @@ focus_tree = {
 					}
 				}
 				subtract_from_variable = { URG_politicians_arrested = 3 }
-				set_temp_variable = { URG_terra_democracy = 43 }
-				set_temp_variable = { URG_stability_made_terra = 0.115 }
-				set_temp_variable = { URG_the_politicans_arrested = URG_politicians_arrested }
-				set_temp_variable = { URG_support_for_terra = -0.12 }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.005 }
-				subtract_from_temp_variable = { URG_stability_made_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_stability = URG_stability_made_terra }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.8 }
-				add_to_temp_variable = { URG_support_for_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_support = URG_support_for_terra }
-				subtract_from_temp_variable = { URG_terra_democracy = URG_politicians_arrested }
-				multiply_temp_variable = { URG_terra_democracy = 0.007 }
-				set_variable = { URG_democracy_from_terra = URG_terra_democracy }
+				URG_set_up_prisoners_modifier = yes 
 			}
 		}
 	}
@@ -826,19 +796,7 @@ focus_tree = {
 					}
 				}
 				subtract_from_variable = { URG_politicians_arrested = 3 }
-				set_temp_variable = { URG_terra_democracy = 43 }
-				set_temp_variable = { URG_stability_made_terra = 0.115 }
-				set_temp_variable = { URG_the_politicans_arrested = URG_politicians_arrested }
-				set_temp_variable = { URG_support_for_terra = -0.12 }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.005 }
-				subtract_from_temp_variable = { URG_stability_made_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_stability = URG_stability_made_terra }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.8 }
-				add_to_temp_variable = { URG_support_for_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_support = URG_support_for_terra }
-				subtract_from_temp_variable = { URG_terra_democracy = URG_politicians_arrested }
-				multiply_temp_variable = { URG_terra_democracy = 0.007 }
-				set_variable = { URG_democracy_from_terra = URG_terra_democracy }
+				URG_set_up_prisoners_modifier = yes 
 			}
 		}
 	}
@@ -1089,6 +1047,9 @@ focus_tree = {
 		}
 		
 		available = {
+			GER = {
+				has_government = fascism
+			}
 			OR = {
 				AND = {
 					has_completed_focus = URG_adopt_an_aggresive_foreign_policy
@@ -2121,19 +2082,7 @@ focus_tree = {
 					}
 				}
 				subtract_from_variable = { URG_politicians_arrested = 3 }
-				set_temp_variable = { URG_terra_democracy = 43 }
-				set_temp_variable = { URG_stability_made_terra = 0.115 }
-				set_temp_variable = { URG_the_politicans_arrested = URG_politicians_arrested }
-				set_temp_variable = { URG_support_for_terra = -0.12 }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.005 }
-				subtract_from_temp_variable = { URG_stability_made_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_stability = URG_stability_made_terra }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.8 }
-				add_to_temp_variable = { URG_support_for_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_support = URG_support_for_terra }
-				subtract_from_temp_variable = { URG_terra_democracy = URG_politicians_arrested }
-				multiply_temp_variable = { URG_terra_democracy = 0.007 }
-				set_variable = { URG_democracy_from_terra = URG_terra_democracy }
+				URG_set_up_prisoners_modifier = yes 
 			}
 		}
 	}
@@ -2504,19 +2453,7 @@ focus_tree = {
 			custom_effect_tooltip = URG_6_set_free
 			hidden_effect = {
 				subtract_from_variable = { URG_politicians_arrested = 6 }
-				set_temp_variable = { URG_terra_democracy = 43 }
-				set_temp_variable = { URG_stability_made_terra = 0.115 }
-				set_temp_variable = { URG_the_politicans_arrested = URG_politicians_arrested }
-				set_temp_variable = { URG_support_for_terra = -0.12 }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.005 }
-				subtract_from_temp_variable = { URG_stability_made_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_stability = URG_stability_made_terra }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.8 }
-				add_to_temp_variable = { URG_support_for_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_support = URG_support_for_terra }
-				subtract_from_temp_variable = { URG_terra_democracy = URG_politicians_arrested }
-				multiply_temp_variable = { URG_terra_democracy = 0.007 }
-				set_variable = { URG_democracy_from_terra = URG_terra_democracy }
+				URG_set_up_prisoners_modifier = yes 
 			}
 		}
 	}
@@ -2592,45 +2529,6 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				create_country_leader = {
-					name = "Basilio Muñoz"
-					desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
-					picture = "gfx/leaders/South America/portrait_UL_South_America_political_3.dds"
-					expire = "1965.1.1"
-					ideology = conservatism
-					traits = {
-						URG_el_guerrillero
-					}
-				}
-				create_corps_commander = {  
-					name = "Basilio Muñoz"
-					portrait_path = "gfx/leaders/South America/portrait_UL_South_America_political_3.dds"
-					traits = {  }
-					skill = 2
-    				attack_skill = 1
-    				defense_skill = 2
-    				planning_skill = 2
-    				logistics_skill = 2
-				}
-				create_corps_commander = {  
-					name = "Julio César Martínez"
-					portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
-					traits = {  }
-					skill = 3
-    				attack_skill = 3
-    				defense_skill = 3
-    				planning_skill = 2
-    				logistics_skill = 2
-				}
-				random_other_country = {
-				    limit = {
-						original_tag = URG
-						ruling_party = neutrality
-						has_civil_war = yes
-					}
-				    keep_unit_leaders = { 1934 }
-					keep_unit_leaders = { 1935 }
-				}	
 				clr_country_flag = URG_terra
 				remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
 				country_event = { id = uruguay.17 days = 1 }
@@ -2738,7 +2636,7 @@ focus_tree = {
 	
 	focus = {
 		id = URG_a_new_path
-		icon = GFX_URG_new_path
+		icon = GFX_goal_support_communism 
 		x = 6
 		y = 1
 		relative_position_id = URG_imprison_Terra
@@ -3000,7 +2898,10 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_completed_focus = URG_ramp_up_the_military_production
+						OR = {
+							has_idea = URG_prepare_the_army_1
+							has_idea = URG_prepare_the_army_2
+						}
 					}
 				}
 				add_ideas = URG_prepare_the_army_1
@@ -3037,7 +2938,10 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_completed_focus = URG_prepare_the_uruguayan_army
+						OR = {
+							has_idea = URG_prepare_the_army_1
+							has_idea = URG_prepare_the_army_2
+						}
 					}
 				}
 				add_ideas = URG_prepare_the_army_2

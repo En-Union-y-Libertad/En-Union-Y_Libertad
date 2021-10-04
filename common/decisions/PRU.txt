@@ -43,19 +43,7 @@ PRU_army_navy_rivalry = {
 			hidden_effect = {
 				add_to_variable = { PRU_army_power = 5 }
 				subtract_from_variable = { PRU_navy_power = 5 }
-				set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-				set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-				subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 350 }
-				set_variable = { PRU_factory_output = PRU_army_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 1.5 }
-				set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-				set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-				subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-				divide_temp_variable = { PRU_navy_power_temp = 325 }
-				set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-				set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-				set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+				PRU_set_up_army_navy_rivalry = yes
 			}		
 		}
 	}
@@ -103,19 +91,7 @@ PRU_army_navy_rivalry = {
 			hidden_effect = {
 				add_to_variable = { PRU_army_power = 10 }
 				subtract_from_variable = { PRU_navy_power = 10 }
-				set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-				set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-				subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 350 }
-				set_variable = { PRU_factory_output = PRU_army_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 1.5 }
-				set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-				set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-				subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-				divide_temp_variable = { PRU_navy_power_temp = 325 }
-				set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-				set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-				set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+				PRU_set_up_army_navy_rivalry = yes
 			}		
 		}
 	}
@@ -163,19 +139,7 @@ PRU_army_navy_rivalry = {
 			hidden_effect = {
 				add_to_variable = { PRU_army_power = 15 }
 				subtract_from_variable = { PRU_navy_power = 15 }
-				set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-				set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-				subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 350 }
-				set_variable = { PRU_factory_output = PRU_army_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 1.5 }
-				set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-				set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-				subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-				divide_temp_variable = { PRU_navy_power_temp = 325 }
-				set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-				set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-				set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+				PRU_set_up_army_navy_rivalry = yes
 			}		
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
@@ -231,19 +195,7 @@ PRU_army_navy_rivalry = {
 			hidden_effect = {
 				add_to_variable = { PRU_navy_power = 5 }
 				subtract_from_variable = { PRU_army_power = 5 }
-				set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-				set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-				subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 350 }
-				set_variable = { PRU_factory_output = PRU_army_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 1.5 }
-				set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-				set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-				subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-				divide_temp_variable = { PRU_navy_power_temp = 325 }
-				set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-				set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-				set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+				PRU_set_up_army_navy_rivalry = yes
 			}		
 		}
 	}
@@ -291,19 +243,7 @@ PRU_army_navy_rivalry = {
 			hidden_effect = {
 				add_to_variable = { PRU_navy_power = 10 }
 				subtract_from_variable = { PRU_army_power = 10 }
-				set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-				set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-				subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 350 }
-				set_variable = { PRU_factory_output = PRU_army_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 1.5 }
-				set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-				set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-				subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-				divide_temp_variable = { PRU_navy_power_temp = 325 }
-				set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-				set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-				set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+				PRU_set_up_army_navy_rivalry = yes
 			}		
 		}
 	}
@@ -351,19 +291,7 @@ PRU_army_navy_rivalry = {
 			hidden_effect = {
 				add_to_variable = { PRU_navy_power = 15 }
 				subtract_from_variable = { PRU_army_power = 15 }
-				set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-				set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-				subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 350 }
-				set_variable = { PRU_factory_output = PRU_army_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 1.5 }
-				set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-				set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-				subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-				divide_temp_variable = { PRU_navy_power_temp = 325 }
-				set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-				set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-				set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+				PRU_set_up_army_navy_rivalry = yes
 			}		
 			random_owned_controlled_state = {
 				limit = {
@@ -424,19 +352,7 @@ PRU_army_navy_rivalry = {
 			hidden_effect = {
 				add_to_variable = { PRU_navy_power = 35 }
 				subtract_from_variable = { PRU_army_power = 35 }
-				set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-				set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-				subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 350 }
-				set_variable = { PRU_factory_output = PRU_army_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 1.5 }
-				set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-				set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-				subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-				divide_temp_variable = { PRU_navy_power_temp = 325 }
-				set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-				set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-				set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+				PRU_set_up_army_navy_rivalry = yes
 				division_template = { 
 					name = "Loyalists" 
 					division_names_group = SPAN_INF_02 
@@ -612,19 +528,7 @@ PRU_army_navy_rivalry = {
 			hidden_effect = {
 				add_to_variable = { PRU_army_power = 35 }
 				subtract_from_variable = { PRU_navy_power = 35 }
-				set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-				set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-				subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 350 }
-				set_variable = { PRU_factory_output = PRU_army_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 1.5 }
-				set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-				set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-				subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-				divide_temp_variable = { PRU_navy_power_temp = 325 }
-				set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-				set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-				set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+				PRU_set_up_army_navy_rivalry = yes 
 				division_template = { 
 					name = "Loyalists" 
 					division_names_group = SPAN_INF_02 
@@ -2804,6 +2708,7 @@ PRU_the_peruvian_civil_war = {
 				check_variable = { PRU_chance_of_civil_war > 80 }
 			}
 			modifier = {
+				add = 60
 				check_variable = { PRU_chance_of_civil_war > 30 }
 			}
 		}

@@ -679,7 +679,7 @@ focus_tree = {
 		prerequisite = { }
 		
 		
-		cost = 3
+		cost = 2
 		
 		ai_will_do = {
 			factor = 100
@@ -827,7 +827,7 @@ focus_tree = {
 		prerequisite = { focus = ARG_focus_economy }
 		
 		
-		cost = 5
+		cost = 4
 		
 		ai_will_do = {
 			factor = 20
@@ -855,7 +855,7 @@ focus_tree = {
 		relative_position_id = ARG_focus_economy
 		prerequisite = { focus = ARG_focus_economy }
 		
-		cost = 6
+		cost = 5
 		
 		available = {
 			custom_trigger_tooltip = {
@@ -933,10 +933,10 @@ focus_tree = {
 				add_to_variable = { ARG_inflationary_period_days = 5 }
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes 
 				}
 			}
@@ -1187,7 +1187,7 @@ focus_tree = {
 		
 		prerequisite = { focus = ARG_restrict_circulation_currency }
 		
-		cost = 6
+		cost = 5
 		
 		ai_will_do = {
 			factor = 20
@@ -2056,6 +2056,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			remove_ideas = ARG_distrust_of_military_7
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -2070,23 +2078,9 @@ focus_tree = {
 		
 		cost = 10
 		
-		available = {
-			509 = {
-				is_controlled_by = ROOT
-				is_core_of = ROOT
-				arms_factory < 9
-			}
-		}
-		
-		bypass = {
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			509 = {
+			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -2216,6 +2210,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			remove_ideas = ARG_distrust_of_military_2
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -2245,8 +2247,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			custom_effect_tooltip = ARG_infamous
-				
+			unlock_decision_tooltip = ARG_pressure_the_parties_for_faster_elections
 			add_political_power = 125
 		}
 	}
@@ -2261,7 +2262,7 @@ focus_tree = {
 		mutually_exclusive = { focus = ARG_infamous_decade }
 		
 		ai_will_do = {
-			factor = 250
+			factor = 270
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -2275,14 +2276,15 @@ focus_tree = {
 			}
 		}
 		
-		cost = 6
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 75
+			custom_effect_tooltip = ARG_elections_called_off_tt
+			add_political_power = 50
 			set_party_name = {
 				ideology = fascism
 				long_name = ARG_federalism_party_long
@@ -2526,7 +2528,7 @@ focus_tree = {
 			}
 			
 			hidden_effect = {
-				division_template = { name = "Federales" division_names_group = SPAN_INF_02 is_locked = yes regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } infantry = { x = 3 y = 0 } } }
+				division_template = { name = "Federales" division_names_group = SPAN_INF_02 is_locked = no regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } infantry = { x = 3 y = 0 } } }
 				division_template = { 
 					name = "Division de Infanteria Federalista" 
 					division_names_group = SPAN_INF_02 
@@ -2680,7 +2682,7 @@ focus_tree = {
 					set_capital = 807
 					
 					hidden_effect = {
-						division_template = { name = "Unitarios" division_names_group = SPAN_INF_02 is_locked = yes regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } infantry = { x = 3 y = 0 } } }
+						division_template = { name = "Unitarios" division_names_group = SPAN_INF_02 is_locked = no regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } infantry = { x = 3 y = 0 } } }
 						division_template = { 
 							name = "Division de Infanteria Unitaria" 
 							division_names_group = SPAN_INF_02 
@@ -2792,10 +2794,6 @@ focus_tree = {
 								owner = PREV
 							}
 							create_unit = {
-								division = "name = \"16. Unitarios\" division_template = \"Unitarios\" start_experience_factor = 0 start_equipment_factor = 0.3" 
-								owner = PREV
-							}
-							create_unit = {
 								division = "name = \"Division de Infanteria Unitaria\" division_template = \"Division de Infanteria Unitaria\" start_experience_factor = 0.1 start_equipment_factor = 0.7" 
 								owner = PREV
 							}
@@ -2813,7 +2811,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARG_launch_the_civil_war
 		prerequisite = { focus = ARG_launch_the_civil_war }
-		
 		
 		cost = 10
 		
@@ -2882,10 +2879,10 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2937,10 +2934,20 @@ focus_tree = {
 			is_subject = no
 			has_government = fascism
 			custom_trigger_tooltip = {
-				tooltip = ARG_inflation_2_or_less
-				OR = {
-					has_idea = ARG_inflation_1
-					has_idea = ARG_inflation_2
+				tooltip = ARG_not_suffering_inflation
+				NOT = {
+					OR = {
+						has_idea = ARG_inflation_1
+						has_idea = ARG_inflation_2
+						has_idea = ARG_inflation_3
+						has_idea = ARG_inflation_4
+						has_idea = ARG_inflation_5
+						has_idea = ARG_inflation_6
+						has_idea = ARG_inflation_7
+						has_idea = ARG_inflation_8
+						has_idea = ARG_inflation_9
+						has_idea = ARG_inflation_10
+					}
 				}
 			}
 		}
@@ -3716,6 +3723,14 @@ focus_tree = {
 			else = {
 				add_political_power = 150
 			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -3830,6 +3845,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = ARG_expansionist_policy
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -4161,10 +4184,20 @@ focus_tree = {
 		
 		bypass = {
 			has_completed_focus = ARG_prepare_the_army
-			NOT = {
-				has_war_with = BRA 
+			OR = {
+				AND = {
+					NOT = {
+						has_war_with = BRA 
+					}
+					controls_state = 825
+				}
+				AND = {
+					has_war_with = BRA 
+					825 = {
+						is_controlled_by = ROOT
+					}
+				}
 			}
-			controls_state = 825
 		}
 		
 		cancel_if_invalid = yes
@@ -7352,105 +7385,25 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = ARG_investmentcivilianfactories
 			hidden_effect = {
-				if = {
-					limit = { has_country_flag = ARG_invested_italy }
-					random_owned_controlled_state = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
+				every_other_country = {
+					limit = { 
+						has_country_flag = invested_in_ARG 
+						NOT = { has_war_with = ROOT }
 					}
-					clr_country_flag = ARG_invested_italy
-				}
-				if = {
-					limit = { has_country_flag = ARG_invested_brazil }
-					random_owned_controlled_state = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					}
-					clr_country_flag = ARG_invested_brazil
-				}
-				if = {
-					limit = { has_country_flag = ARG_invested_japan }
-					random_owned_controlled_state = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					}
-					clr_country_flag = ARG_invested_japan
-				}
-				if = {
-					limit = { has_country_flag = ARG_invested_soviet_union }
-					random_owned_controlled_state = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					}
-					clr_country_flag = ARG_invested_soviet_union
-				}
-				if = {
-					limit = { has_country_flag = ARG_invested_germany }
-					random_owned_controlled_state = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					}
-					clr_country_flag = ARG_invested_germany
-				}
-				if = {
-					limit = { has_country_flag = ARG_invested_in_uk }
-					random_owned_controlled_state = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = {
-					limit = { has_country_flag = ARG_invested_france }
-					random_owned_controlled_state = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					}
-					clr_country_flag = ARG_invested_france
-				}
-				if = {
-					limit = { has_country_flag = ARG_invested_america }
-					random_owned_controlled_state = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
+					ARG = {
+						random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = industrial_complex
+								level = 2
+								instant_build = yes 
+							}
 						}
 					}
 				}
 			}
 		}
-	}
-		
-		
+	}	
 	
 	focus = {
 		id = ARG_review_our_foreign_policy
@@ -7667,7 +7620,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ARG_iftheyaccept
 			effect_tooltip = {
-				create_faction = "The American-Argentine Allience"
+				create_faction = "The American-Argentine Alliance"
 				ARG = {
 					add_to_faction = USA
 				}
@@ -7782,7 +7735,11 @@ focus_tree = {
 			}
 			hidden_effect = {
 				if = {
-					limit = { has_country_flag = ARG_invested_america }
+					limit = { 
+						USA = {
+							has_country_flag = invested_in_ARG
+						}
+					}
 					random_owned_controlled_state = {
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
@@ -8810,7 +8767,11 @@ focus_tree = {
 			}
 			hidden_effect = {
 				if = {
-					limit = { has_country_flag = ARG_invested_in_uk }
+					limit = { 
+						ENG = {
+							has_country_flag = invested_in_ARG
+						}
+					}
 					278 = {
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
@@ -9600,7 +9561,7 @@ focus_tree = {
 		relative_position_id = ARG_save_roberto
 		prerequisite = { focus = ARG_save_roberto }
 		
-		cost = 6
+		cost = 5
 		
 		ai_will_do = {
 			factor = 6
@@ -10642,6 +10603,10 @@ focus_tree = {
 		
 		available = {
 			is_subject = no
+			has_country_leader = {
+				name = "Roberto María Ortiz"
+				ruling_only = yes 
+			}
 		}
 		
 		cancel_if_invalid = yes
@@ -10687,7 +10652,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER  }
 		completion_reward = {
-			add_manpower = 77500
+			add_manpower = 44500
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -11567,6 +11532,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARG_strengthen_the_military
 		mutually_exclusive = { focus = ARG_go_with_the_military_plot }
+		prerequisite = { focus = ARG_strengthen_the_military }
 		
 		cost = 5
 		
@@ -11581,11 +11547,6 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_country_flag = ARG_ramon_coup
-			OR = {
-				has_completed_focus = ARG_roberto_leads_the_way
-				has_completed_focus = ARG_go_back_to_our_liberal_ways
-				#has_completed_focus = ARG_a_new_path
-			}
 		}
 		
 		cancel_if_invalid = yes
@@ -12726,7 +12687,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			create_faction = "The South American Allience"
+			create_faction = "The South American Alliance"
 			custom_effect_tooltip = ARG_invitecountries
 			hidden_effect = {
 				CHL = {

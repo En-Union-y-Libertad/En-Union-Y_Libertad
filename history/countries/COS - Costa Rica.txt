@@ -1,8 +1,5 @@
 ﻿capital = 316
-add_ideas = {
-	monroe_doctrine_idea
-	Central_banana_republic
-}
+add_ideas = monroe_doctrine_idea
 oob = "COS_1936"
 
 # Starting tech
@@ -10,7 +7,6 @@ set_technology = {
 	infantry_weapons = 1
 }
 set_country_flag = monroe_doctrine
-set_variable = { COS_central_american_concession_variable = 0 }
 set_war_support = 0.1
 set_convoys = 10
 
@@ -66,9 +62,8 @@ set_politics = {
 }
 
 set_popularities = {
-	democratic = 93
+	democratic = 98
 	fascism = 2
-	communism = 5
 }
 
 create_country_leader = {
@@ -78,52 +73,8 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = {
-		cos_intellectual_dictator
+		#
 	}
-}
-
-create_country_leader = {
-	name = "Max Koberg Bolandi"
-	desc = "POLITICS_HERBERT_KNOHR_DESC"
-	picture = "gfx/leaders/South America/portrait_UL_South_America_political_2.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		CHL_economist
-	}
-}
-
-create_country_leader = {
-	name = "Manuel Mora Valverde"
-	desc = "POLITICS_MANUEL_MORA_VALVERDE_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_4.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		generic_lawyer
-	}
-}
-
-create_country_leader = {
-	name = "Rafael Calderón Guardia"
-	desc = "POLITICS_RAFAEL_CALDERON_GUARDIA_DESC"
-	picture = "gfx/leaders/COS/portrait_COS_rafael_angel_calderon.dds"
-	expire = "1965.1.1"
-	ideology = centrism
-	traits = {
-		social_revolutionary
-	}
-}
-
-create_corps_commander = {
-	name = "Ricardo Fernández Peralta"
-	portrait_path = "gfx/leaders/COS/portrait_COS_ricardo_fernandez_peralta.dds"
-	traits = { trait_engineer }
-	skill = 2
-    attack_skill = 1
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
 }
 
 1939.1.1 = {
@@ -135,18 +86,18 @@ create_corps_commander = {
 	}
 
 	set_popularities = {
-		democratic = 90
-		communism = 10
+		democratic = 95
+		communism = 5
 	}
 
 	create_country_leader = {
 		name = "León Cortés Castro"
 		desc = "POLITICS_LEON_CORTES_CASTRO_DESC"
-		picture = "gfx/leaders/COS/portrait_COS_leon_cortes_castro.dds"
+		picture = "gfx/leaders/South America/Portrait_South_America_Generic_navy_3.dds"
 		expire = "1965.1.1"
-		ideology = conservatism
+		ideology = liberalism
 		traits = {
-			fascist_sympathies generic_lawyer
+			#
 		}
 	}
 }

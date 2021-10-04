@@ -22,7 +22,6 @@
  ARG_inflation_4_or_less:0 "Currently has §YModerate Inflation§! or §Ybetter§!"
  ARG_inflation_2_or_less:0 "Currently has §YMinimal Inflation§! or §Ybetter§!"
  ARG_inflation_worse_than_3:0 "Currently has §YSlight Inflation§! or §Yworse§!"
- NIC_coup_disband:0 "The Army has Coup'd to prevent the army's disbanding"
  
  
  URG_over_50:0 "Has at least §Y50§! people in prison (currently: [?URG_politicians_arrested|Y0])"
@@ -624,7 +623,7 @@
  TRIGGER_LEGITIMACY:0 "Legitimacy"
  TRIGGER_HAS_RULE:0 "$RULE$"
  TRIGGER_HAS_NOT_RULE:0 "Does not have the rule: $RULE$"
- TRIGGER_HAS_DYMAMIC_MODIFIER:0 "Has Modifier: $NAME|H$ ($NUM|H$ days)"
+ TRIGGER_HAS_DYMAMIC_MODIFIER:0 "Has Modifier: $NAME|H$ ($NUM|H$ days)\n"
  TRIGGER_HAS_NOT_DYMAMIC_MODIFIER:0 "Does not have Modifier: $NAME|H$"
  TRIGGER_HAS_MINES:0 "At least $NUM|H$ mines in $REGION|H$"
  TRIGGER_HAS_NOT_MINES:0 "At most $NUM|H$ mines in $REGION|H$"

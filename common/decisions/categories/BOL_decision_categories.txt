@@ -136,6 +136,17 @@ BOL_dealing_with_toros_schemes = {
 	priority = 25
 	icon = GFX_BOL_toros_scheme
 
+	on_map_area = {
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = BOL_controlled_by_toro }
+			}
+		}
+		name = BOL_states_controlled_by_toro_tt
+		zoom = 150
+	}
+
 	allowed = {
 		original_tag = BOL 
 	}
@@ -161,7 +172,78 @@ BOL_dealing_with_toros_schemes = {
 	}
 }
 
+BOL_tejadas_incompetence = {
+	priority = 50
+	icon = GFX_BOL_tejada_incompetent
+
+	allowed = { original_tag = BOL }
+
+	visible = {
+		has_completed_focus = BOL_victor_of_the_civil_war
+		NOT = {
+			has_country_flag = is_PBC
+		}
+	}
+}
+
 ### Peru-Bolivian Confederation Decisions ###
+
+PBC_nationalism_rising = {
+	priority = 30
+	icon = GFX_PBC_nationalism
+
+	picture = GFX_PBC_nation
+
+	on_map_area = {
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = PBC_BOL_nationalists }
+			}
+		}
+		name = PBC_states_with_bolivian_nationalists
+		zoom = 150
+	}
+
+	on_map_area = {
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = PBC_PRU_nationalists }
+			}
+		}
+		name = PBC_states_with_peruvian_nationalists
+		zoom = 150
+	}
+
+	allowed = {
+		OR = {
+			original_tag = PRU 
+			original_tag = BOL 
+		}
+	}
+
+	visible = {
+		has_country_flag = is_PBC
+		has_country_flag = PBC_nationalists_on_rise
+	}
+}
+
+PBC_reforming_lost_unions = {
+	priority = 20
+	icon = GFX_PBC_reforming_old_nations
+
+	allowed = {
+        OR = {
+            original_tag = BOL 
+            original_tag = PRU 
+        }
+    }
+
+	visible = {
+		has_completed_focus = PBC_prepare_for_our_expansion
+	}
+}
 
 PBC_integrating_all_our_claimed_lands = {
 	priority = 15

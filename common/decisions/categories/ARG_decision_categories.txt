@@ -2,6 +2,25 @@
 ##### ARG ######
 ################
 
+
+ARG_1937_elections = {
+	priority = 15
+	icon = GFX_ARG_elections
+
+	picture = GFX_ARG_elections_picture
+
+	allowed = {
+		original_tag = ARG 
+	}
+
+	visible = {
+		NOT = {
+			has_completed_focus = ARG_drift_back_towards_the_confederation
+		}
+		has_active_mission = ARG_the_1937_elections
+	}
+}
+
 ARG_inflation = {
 	priority = 10
 	icon = ARG_inflationary
@@ -89,7 +108,7 @@ ARG_foreign_investments = {
 	icon = generic_economy
 	
 	allowed = {
-		tag = ARG
+		original_tag = ARG
 	}
 	
 	visible = {
@@ -117,6 +136,12 @@ ARG_ramon_military_coup = {
 	icon = military_operation
 	
 	picture = GFX_decision_cat_picture_fatherland_front
+
+	on_map_area = {
+		targets = { 808 809 810 811 512 }
+		name = ARG_states_military_have_influence_over_tt
+		zoom = 150
+	}
 	
 	allowed = {
 		tag = ARG

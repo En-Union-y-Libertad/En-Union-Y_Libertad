@@ -1,6 +1,42 @@
 spriteTypes = {	
 
 	spriteType = {
+		name = "GFX_col_conservador"
+		texturefile = "gfx/texticons/col_conservador.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_col_liberal"
+		texturefile = "gfx/texticons/col_liberal.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_col_militar"
+		texturefile = "gfx/texticons/col_militar.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_col_cat"
+		texturefile = "gfx/texticons/col_cat.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_col_crist"
+		texturefile = "gfx/texticons/col_crist.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_col_athe"
+		texturefile = "gfx/texticons/col_athe.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_autonomy_texticon"
 		texturefile = "gfx/texticons/autonomy_texticon.dds"
 		legacy_lazy_load = no
@@ -165,6 +201,48 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_pol_power"
 		texturefile = "gfx/texticons/pol_power_20x20.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_CHL_nacista_text"
+		texturefile = "gfx/texticons/CHL_nacista_text.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_CHL_communista_text"
+		texturefile = "gfx/texticons/CHL_communista_text.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_CHL_democratic_text"
+		texturefile = "gfx/texticons/CHL_democratic_text.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_CHL_working_class_text"
+		texturefile = "gfx/texticons/CHL_working_class_txt.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_CHL_upper_class_text"
+		texturefile = "gfx/texticons/CHL_upper_class_txt.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_BOL_bolivia_flag"
+		texturefile = "gfx/texticons/BOL_bolivia_flag.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_PRU_peru_flag"
+		texturefile = "gfx/texticons/PRU_peru_flag.dds"
 		legacy_lazy_load = no
 	}
 

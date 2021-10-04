@@ -281,27 +281,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_navy
 				custom_effect_tooltip = PRU_remove_5_army
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 5 }
 					subtract_from_variable = { PRU_army_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 			custom_effect_tooltip = PRU_civil_liberties
@@ -360,27 +347,14 @@ focus_tree = {
 			add_war_support = 0.05
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 		}		
@@ -470,27 +444,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_10_navy
 				custom_effect_tooltip = PRU_remove_10_army
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 10 }
 					subtract_from_variable = { PRU_army_power = 10 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 		}
@@ -526,27 +487,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 		}
@@ -1610,27 +1558,14 @@ focus_tree = {
 			custom_effect_tooltip = PRU_purchase_foreign_arms_from_other_country
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -1655,27 +1590,14 @@ focus_tree = {
 			custom_effect_tooltip = PRU_unlock_conscription_decisions
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -1813,27 +1735,14 @@ focus_tree = {
 			add_ideas = PRU_rebuilding_the_armada_peruana
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_15_navy
 				custom_effect_tooltip = PRU_remove_15_army
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 15 }
 					subtract_from_variable = { PRU_army_power = 15 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -1930,27 +1839,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_navy
 				custom_effect_tooltip = PRU_remove_5_army
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 5 }
 					subtract_from_variable = { PRU_army_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -1979,27 +1875,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}
 		}
@@ -2029,27 +1912,14 @@ focus_tree = {
 			add_ideas = URG_expanded_consription
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_10_army
 				custom_effect_tooltip = PRU_remove_10_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 10 }
 					subtract_from_variable = { PRU_navy_power = 10 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -2352,27 +2222,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -2460,27 +2317,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -2540,27 +2384,14 @@ focus_tree = {
 			add_manpower = 41500
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -2638,7 +2469,7 @@ focus_tree = {
 
 	focus = {
 		id = PRU_victor_war_of_pacific 
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_PRU_victor_of_war_of_pacific
 		x = 0
 		y = 1
 		relative_position_id = PRU_the_peruvian_blitzkrieg
@@ -4021,6 +3852,20 @@ focus_tree = {
 						division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
 						owner = ROOT
 					}
+					create_unit = {
+						division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+						owner = ROOT
+					}
 				}
 
 				random_other_country = {
@@ -4852,31 +4697,58 @@ focus_tree = {
 
 		available = {
 			ARG = {
-				capital_scope = { is_fully_controlled_by = ROOT }
+				OR = {
+					capital_scope = { is_fully_controlled_by = ROOT }
+					is_subject_of = ROOT
+				}
 			}
 			BRA = {
-				capital_scope = { is_fully_controlled_by = ROOT }
+				OR = {
+					capital_scope = { is_fully_controlled_by = ROOT }
+					is_subject_of = ROOT
+				}
 			}
 			VEN = {
-				capital_scope = { is_fully_controlled_by = ROOT }
+				OR = {
+					capital_scope = { is_fully_controlled_by = ROOT }
+					is_subject_of = ROOT
+				}
 			}
 			COL = {
-				capital_scope = { is_fully_controlled_by = ROOT }
+				OR = {
+					capital_scope = { is_fully_controlled_by = ROOT }
+					is_subject_of = ROOT
+				}
 			}
 			CHL = {
-				capital_scope = { is_fully_controlled_by = ROOT }
+				OR = {
+					capital_scope = { is_fully_controlled_by = ROOT }
+					is_subject_of = ROOT
+				}
 			}
 			BOL = {
-				capital_scope = { is_fully_controlled_by = ROOT }
+				OR = {
+					capital_scope = { is_fully_controlled_by = ROOT }
+					is_subject_of = ROOT
+				}
 			}
 			URG = {
-				capital_scope = { is_fully_controlled_by = ROOT }
+				OR = {
+					capital_scope = { is_fully_controlled_by = ROOT }
+					is_subject_of = ROOT
+				}
 			}
 			PAR = {
-				capital_scope = { is_fully_controlled_by = ROOT }
+				OR = {
+					capital_scope = { is_fully_controlled_by = ROOT }
+					is_subject_of = ROOT
+				}
 			}
 			ECU = {
-				capital_scope = { is_fully_controlled_by = ROOT }
+				OR = {
+					capital_scope = { is_fully_controlled_by = ROOT }
+					is_subject_of = ROOT
+				}
 			}
 		}
 
@@ -5948,27 +5820,14 @@ focus_tree = {
 			add_ideas = URG_expanded_consription
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_10_army
 				custom_effect_tooltip = PRU_remove_10_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 10 }
 					subtract_from_variable = { PRU_navy_power = 10 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -6005,7 +5864,7 @@ focus_tree = {
 		}
 		completion_reward = {	
 			SOV = {
-				country_event = chile.5
+				country_event = { id = generic.2 hours = 8 }
 			}	
 		}
 		cost = 10
@@ -6169,27 +6028,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}	
 		}
@@ -6267,27 +6113,14 @@ focus_tree = {
 			custom_effect_tooltip = PRU_purchase_foreign_arms_from_other_country
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -6308,27 +6141,14 @@ focus_tree = {
 			custom_effect_tooltip = PRU_unlock_conscription_decisions
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -6649,27 +6469,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -6729,27 +6536,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -6801,7 +6595,7 @@ focus_tree = {
 
 	focus = {
 		id = PRU_victor_of_the_second_war_of_the_pacific
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_PRU_victor_of_war_of_pacific
 		x = 0
 		y = 1
 		relative_position_id = PRU_desperate_mobilization
@@ -7335,27 +7129,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -7394,27 +7175,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_navy
 				custom_effect_tooltip = PRU_remove_5_army
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 5 }
 					subtract_from_variable = { PRU_army_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}
 		}
@@ -7671,7 +7439,7 @@ focus_tree = {
 
 	focus = {
 		id = PRU_ask_the_holy_see_for_support   #Liberal Peru
-		icon = "PRU_goal_liberal_path"
+		icon = GFX_PRU_liberal_path
 		prerequisite = { focus = PRU_reject_the_extremists }	
 		relative_position_id = PRU_reject_the_extremists
 		mutually_exclusive = { focus = PRU_communist_peru}		
@@ -8434,19 +8202,7 @@ focus_tree = {
 			hidden_effect = {
 				add_to_variable = { PRU_army_power = 5 }
 				subtract_from_variable = { PRU_navy_power = 5 }
-				set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-				set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-				subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 350 }
-				set_variable = { PRU_factory_output = PRU_army_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 1.5 }
-				set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-				set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-				subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-				divide_temp_variable = { PRU_navy_power_temp = 325 }
-				set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-				set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-				set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+				PRU_set_up_army_navy_rivalry = yes
 			}	
 		}
 	}
@@ -8671,19 +8427,7 @@ focus_tree = {
 			hidden_effect = {
 				add_to_variable = { PRU_navy_power = 5 }
 				subtract_from_variable = { PRU_army_power = 5 }
-				set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-				set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-				subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 350 }
-				set_variable = { PRU_factory_output = PRU_army_power_temp }
-				divide_temp_variable = { PRU_army_power_temp = 1.5 }
-				set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-				set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-				subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-				divide_temp_variable = { PRU_navy_power_temp = 325 }
-				set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-				set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-				set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+				PRU_set_up_army_navy_rivalry = yes
 			}
 		}		
 		cost = 10
@@ -9320,27 +9064,14 @@ focus_tree = {
 			unlock_decision_category_tooltip = south_american_armament
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_10_army
 				custom_effect_tooltip = PRU_remove_10_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 10 }
 					subtract_from_variable = { PRU_navy_power = 10 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 		}
@@ -9375,27 +9106,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_10_navy
 				custom_effect_tooltip = PRU_remove_10_army
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 10 }
 					subtract_from_variable = { PRU_army_power = 10 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}		
 		}
@@ -9490,27 +9208,14 @@ focus_tree = {
 			add_ideas = ARG_modern_dockyard_technology
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_navy
 				custom_effect_tooltip = PRU_remove_5_army
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 5 }
 					subtract_from_variable = { PRU_army_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 		}
@@ -9534,27 +9239,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_navy
 				custom_effect_tooltip = PRU_remove_5_army
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 5 }
 					subtract_from_variable = { PRU_army_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 		}
@@ -9820,27 +9512,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_15_army
 				custom_effect_tooltip = PRU_remove_15_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 15 }
 					subtract_from_variable = { PRU_navy_power = 15 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}
 			}		
 		}
@@ -9894,27 +9573,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_10_army
 				custom_effect_tooltip = PRU_remove_10_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 10 }
 					subtract_from_variable = { PRU_navy_power = 10 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 		}		
@@ -9999,27 +9665,14 @@ focus_tree = {
 			custom_effect_tooltip = PRU_upgrade_conscription
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}			
 		}		
@@ -10108,8 +9761,7 @@ focus_tree = {
 			}	
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_remove_5_army
 				custom_effect_tooltip = PRU_add_5_navy
@@ -10118,19 +9770,7 @@ focus_tree = {
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 5 }
 					subtract_from_variable = { PRU_army_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 
 					if = {
 						limit = { has_idea = PRU_naval_fascist_loyalties }
@@ -10171,8 +9811,7 @@ focus_tree = {
 			}	
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_5_army
 				custom_effect_tooltip = PRU_remove_5_navy
@@ -10181,19 +9820,7 @@ focus_tree = {
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 5 }
 					subtract_from_variable = { PRU_navy_power = 5 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 
 					if = {
 						limit = { has_idea = PRU_naval_democratic_loyalties_2 }
@@ -10237,27 +9864,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_10_army
 				custom_effect_tooltip = PRU_remove_10_navy
 				hidden_effect = {
 					add_to_variable = { PRU_army_power = 10 }
 					subtract_from_variable = { PRU_navy_power = 10 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 		}		
@@ -10379,27 +9993,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_10_navy
 				custom_effect_tooltip = PRU_remove_10_army
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 10 }
 					subtract_from_variable = { PRU_army_power = 10 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 		}		
@@ -10505,27 +10106,14 @@ focus_tree = {
 			}	
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_15_navy
 				custom_effect_tooltip = PRU_remove_15_army
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 15 }
 					subtract_from_variable = { PRU_army_power = 15 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 				}	
 			}	
 		}
@@ -10574,8 +10162,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}	
 				custom_effect_tooltip = PRU_add_10_navy
 				custom_effect_tooltip = PRU_remove_10_army
@@ -10584,19 +10171,7 @@ focus_tree = {
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 10 }
 					subtract_from_variable = { PRU_army_power = 10 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 
 					if = {
 						limit = { has_idea = PRU_divided_army }
@@ -10653,8 +10228,7 @@ focus_tree = {
 			}	
 			if = {
 				limit = {
-					has_variable = PRU_army_power
-					has_variable = PRU_navy_power
+					has_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 				}
 				custom_effect_tooltip = PRU_add_10_navy
 				custom_effect_tooltip = PRU_remove_10_army
@@ -10663,19 +10237,7 @@ focus_tree = {
 				hidden_effect = {
 					add_to_variable = { PRU_navy_power = 10 }
 					subtract_from_variable = { PRU_army_power = 10 }
-					set_temp_variable = { PRU_army_power_temp = PRU_army_power }
-					set_temp_variable = { PRU_navy_power_temp = PRU_navy_power }
-					subtract_from_temp_variable = { PRU_army_power_temp = PRU_navy_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 350 }
-					set_variable = { PRU_factory_output = PRU_army_power_temp }
-					divide_temp_variable = { PRU_army_power_temp = 1.5 }
-					set_variable = { PRU_army_attack_and_defense = PRU_army_power_temp }
-					set_variable = { PRU_military_factory_speed = PRU_army_power_temp }
-					subtract_from_temp_variable = { PRU_navy_power_temp = PRU_army_power_temp }
-					divide_temp_variable = { PRU_navy_power_temp = 325 }
-					set_variable = { PRU_dockyard_output = PRU_navy_power_temp }
-					set_variable = { PRU_ship_attack_and_defense = PRU_navy_power_temp }
-					set_variable = { PRU_dockyard_production_speed = PRU_navy_power_temp }
+					PRU_set_up_army_navy_rivalry = yes
 
 					if = {
 						limit = { 

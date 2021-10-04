@@ -55,6 +55,21 @@ set_research_slots = 3
 add_ideas = CHL_highly_divided_social_classes_idea
 add_ideas = CHL_land_of_mountain
 add_ideas = monroe_doctrine_idea
+set_variable = { CHL_nacista_power = 3 }
+set_variable = { CHL_communists_power = 2 }
+set_variable = { CHL_control_over_nation = 95 }
+set_variable = { CHL_nacista_influence_days = 35 }
+set_variable = { CHL_communist_influencce_days = 35 }
+set_variable = { CHL_fascist_drift = CHL_nacista_power }
+set_variable = { CHL_communist_drift = CHL_communists_power }
+set_variable = { CHL_chance_of_communist = 50 }
+set_variable = { CHL_chance_of_fascist = 50 }
+set_variable = { CHL_days_for_people_to_calm_down = 210 }
+divide_variable = { CHL_fascist_drift = 450 }
+divide_variable = { CHL_communist_drift = 450 }
+hidden_effect = {	
+	add_dynamic_modifier = { modifier = CHL_political_instability }
+}
 country_event = { id = chile.18 days = 1 }
 
 1939.1.1 = {
@@ -66,6 +81,7 @@ country_event = { id = chile.18 days = 1 }
 	
 	#generic focuses
 	complete_national_focus = CHL_democracy_path
+	complete_national_focus = CHL_crush_the_nacistas
 	complete_national_focus = CHL_liberalism
 	complete_national_focus = CHL_central_bank
 	complete_national_focus = CHL_revenue_tax
@@ -130,9 +146,9 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 91
-	communism = 6
-	fascism = 3
+	democratic = 87
+	communism = 7
+	fascism = 6
 }
 
 create_country_leader = {
@@ -148,30 +164,32 @@ create_country_leader = {
 
 1939.1.1 = {
 	set_politics = {
-		ruling_party = democratic
+		ruling_party = communism
 		last_election = "1938.10.25"
 		election_frequency = 48
 		elections_allowed = yes
 	}
 
 	set_popularities = {
-		democratic = 100
+		democratic = 47
+		communism = 49
+		fascism = 4
 	}
 
 	create_country_leader = {
 		name = "Pedro Aguirre Cerda"
 		desc = "POLITICS_PEDRO_AGUIRRE_CERDA_DESC"
-		picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+		picture = "gfx/leaders/CHL/portrait_CHL_pedro_aguirre_cerda.dds"
 		expire = "1965.1.1"
-		ideology = socialism
+		ideology = anti_revisionism
 		traits = {
-			#
+			CHL_leader_of_the_people
 		}
 	}
 }
 
 create_country_leader = {
-	name = "Jorge González von Marées"
+	name = "Jorge Gonzales Von Marées"
 	desc = "POLITICS_JORGE_GONZÁLEZ_VON_MARÉES_DESC"
 	picture = "portrait_chl_jorge_gonzales_von_mares.dds"
 	expire = "1965.1.1"
@@ -184,7 +202,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Carlos Contreras Labarca"
 	desc = "POLITICS_CARLOS_CONTRERAS_LABARCA_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
+	picture = "gfx/leaders/CHL/labarca.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
@@ -195,7 +213,7 @@ create_country_leader = {
 create_corps_commander = {
 	name = "Escudero Oscar Otárola"
 	portrait_path = "gfx/leaders/CHL/portrait_chl_oscar_escudero_otarola.dds"
-	traits = { trait_mountaineer }
+	traits = { trait_CHL_loyalists trait_mountaineer }
 	skill = 4
 	attack_skill = 4
 	defense_skill = 2
@@ -204,11 +222,57 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
+	name = "Carlos Ibáñez del Campo"
+	portrait_path = "gfx/leaders/CHL/Portrait_CHL_Carlos_Ibanez_del_Campo.dds"
+	traits = { trait_CHL_fascist_sympathies trait_mountaineer urban_assault_specialist }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Carlos Fuentes Rabe"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+	traits = { trait_CHL_loyalists hill_fighter urban_assault_specialist }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Oscar Fuentes Pantoja"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
+	traits = { trait_CHL_communist_sympathies winter_specialist }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Alfredo Portales"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+	traits = {  }
+	id = 34119
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal = {
 	name = "Óscar Novoa Fuentes"
 	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
-	traits = { old_guard }
-	skill = 2
-    attack_skill = 3
+	traits = { trait_CHL_communist_sympathies brilliant_strategist old_guard }
+	id = 31111
+	skill = 4
+    attack_skill = 4
     defense_skill = 1
     planning_skill = 2
     logistics_skill = 2
@@ -217,7 +281,8 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Arturo Espinoza Mujica"
 	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
-	traits = { }
+	traits = { trait_CHL_fascist_sympathies }
+	id = 32123
 	skill = 2
     attack_skill = 1
     defense_skill = 2
@@ -225,16 +290,30 @@ create_corps_commander = {
     logistics_skill = 3
 }
 
-create_field_marshal = {
-	name = "Agustín Moreno Ladrón de Guevara"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
-	traits = { brilliant_strategist }
-	skill = 3
-    attack_skill = 3
+create_corps_commander = {
+	name = "Ramon Cañas Montalva"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
+	traits = { trait_CHL_fascist_sympathies trait_CHL_communist_sympathies trait_CHL_loyalists }
+	id = 32124
+	skill = 2
+    attack_skill = 2
     defense_skill = 2
-    planning_skill = 5
+    planning_skill = 1
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Daniel Herrera"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
+	traits = { }
+	id = 34511
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
     logistics_skill = 1
 }
+
 
 ### VARIANTS ###
 # 1936 Start #

@@ -1980,18 +1980,4 @@ on_actions = {
 			}
 		}
 	}
-
-    on_startup = {
-		effect = {
-			NIC = {
-				if = {
-					limit = {
-						has_idea = nic_rebellious_army
-					}
-					country_lock_all_division_template = yes
-				}
-			}
-		}				
-	}
-
 }

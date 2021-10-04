@@ -1,8 +1,5 @@
 ﻿capital = 304
-add_ideas = {
-	monroe_doctrine_idea
-	Central_banana_republic
-}
+add_ideas = monroe_doctrine_idea
 oob = "PAN_1936"
 
 # Starting tech
@@ -10,7 +7,6 @@ set_technology = {
 	infantry_weapons = 1
 }
 set_country_flag = monroe_doctrine
-set_variable = { PAN_central_american_concession_variable = 0 }
 set_war_support = 0.1
 set_convoys = 10
 
@@ -76,76 +72,10 @@ create_country_leader = {
 	desc = "POLITICS_HARMODIO_ARIAS_MADRID_DESC"
 	picture = "GFX_portrait_panama_harmodio_arias_madrid"
 	expire = "1965.1.1"
-	ideology = conservatism
-	traits = { #He negotiated a treaty with the US, which made more of the canal's profit go to the Panamanians and restricted the US military access only to the canal
-		tenacious_negotiator 
-	}
-}
-
-create_country_leader = {
-	name = "Cristóbal Ladislao"
-	desc = "POLITICS_CRISTOBAL_LADISLAO_DESC"
-	picture = "gfx/leaders/PAN/portrait_PAN_Cristobal_Ladislao.dds"
-	expire = "1965.1.1"
-	ideology = marxism
+	ideology = liberalism
 	traits = {
-		marxist_academic
+		#
 	}
-}
-
-create_country_leader = {
-	name = "Arnulfo Arias Madrid"
-	desc = "POLITICS_ARNULFO_ARIAS_MADRID_DESC"
-	picture = "gfx/leaders/PAN/portrait_PAN_Arnulfo_Arias_Madrid.dds"
-	expire = "1965.1.1"
-	ideology = rexism
-	traits = {
-		conservative_nationalist
-	}
-}
-
-create_country_leader = {
-	name = "Enrique A. Jiménez"
-	desc = "POLITICS_ARNULFO_ARIAS_MADRID_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_6.dds"
-	expire = "1965.1.1"
-	ideology = centrism
-	traits = { #Collaborated with the US and tried abolishing the treaty Harmodio Arias Madrid made with the US
-	    eager_collaborator
-	}
-}
-
-create_corps_commander = { 
-	name = "Nicanor de Obarrio"
-	portrait_path = "gfx/leaders/PAN/portrait_PAN_Nicanor_de_Obarrio.dds"
-	traits = { politically_connected }
-	skill = 1
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Manuel Quintero"
-	portrait_path = "gfx/leaders/PAN/portrait_PAN_Manuel_Quintero.dds"
-	traits = { old_guard war_hero }
-	skill = 2
-    attack_skill = 1
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Esteban Huertas"
-	portrait_path = "gfx/leaders/South America/portrait_UL_South_America_Generic_army_1.dds"
-	traits = { brilliant_strategist }
-	skill = 2
-    attack_skill = 2
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 2
 }
 
 1939.1.1 = {
@@ -162,6 +92,17 @@ create_corps_commander = {
 		picture = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
 		expire = "1965.1.1"
 		ideology = liberalism
+		traits = {
+			#
+		}
+	}
+
+	create_country_leader = {
+		name = "July Portocarrero"
+		desc = "POLITICS_JULY_PORTOCARRERO_DESC"
+		picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+		expire = "1965.1.1"
+		ideology = marxism
 		traits = {
 			#
 		}

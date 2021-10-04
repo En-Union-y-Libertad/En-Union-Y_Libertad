@@ -269,7 +269,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Fanny Jabcovsky"
+	name = "Fanny Edelman"
 	desc = "POLITICS_FANNY_JABCOVSKY_DESC"
 	picture = "Portrait_Argentina_Fanny_Jabcovsky.dds"
 	expire = "1965.1.1"
@@ -368,6 +368,17 @@ create_corps_commander = {
     defense_skill = 2
     planning_skill = 4
     logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Basilio Pertiné"
+	portrait_path = "gfx/leaders/ARG/portrait_ARG_Basilio_Pertine.dds"
+	traits = { old_guard cavalry_officer armor_officer }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 1
+    logistics_skill = 3
 }
 
 create_corps_commander = {

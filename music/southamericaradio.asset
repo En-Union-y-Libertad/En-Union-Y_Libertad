@@ -128,3 +128,29 @@ music = {
 	file = "marcha_talacocha.ogg"
 	volume = 1.2
 }
+
+### Colombia
+
+music = {
+	name = "Adiós al Séptimo de Línea"
+	file = "adios_al_septimo.ogg"
+	volume = 1.2
+}
+
+music = {
+	name = "Honores a Popayán"
+	file = "honores_a_popayan.ogg"
+	volume = 1.2
+}
+
+music = {
+	name = "Salud Adorada Bandera"
+	file = "salud_adorada_bandera.ogg"
+	volume = 1.2
+}
+
+music = {
+	name = "Canción de Boyacá"
+	file = "cancion_de_boyaca.ogg"
+	volume = 1.2
+}

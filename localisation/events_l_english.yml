@@ -3308,7 +3308,7 @@
  argentina.21.t:0 "Germany has refused our request to join the Axis"
  argentina.21.d:0 "German diplomats have responded to our request to join the Axis. They told us that they are not willing to accept us into our faction."
  argentina.21.a:0 "Then they shall die alone!"
- argentina.22.t:0 "The September 1937 Elections"
+ argentina.22.t:0 "The 1937 Elections"
  argentina.22.d:0 "The elections are here, after 6 years of Agustin Pedro Justo we now have to elect a new leader to lead Argentina. \n\n There are 2 major parties that stand out in Argentina in these elections, the Concordancia, which is Justo's party, and the Union Civica Radical, which represents democratic ideals and a new path for the nations. \n\n Both parties will at some point lead to different futures for the nation, however one option will be better that the other. \n\n Who wins the elections?"
  argentina.22.a:0 "Concordancia"
  argentina.22.b:0 "Union Civica Radical"
@@ -3467,12 +3467,126 @@
  news.341.a:0 "Wasn't that Continent the most boring one? The Hell is going on!?"
  news.341.b:0 "They will pay with their blood! Mobilize the reserves!"
  news.341.c:0 "The Argentines don't stand a chance!"
+ argentina.71.t:0 "The 1944 San Juan Earthquake"
+ argentina.71.d:0 "Sad news has struck the people of [ROOT.GetName] today, as an earthquake of around 6.7 to 7.8 magnitude struck the province of San Juan. It is estimated that nearly 10,000 people died in this tragedy, and many more may soon come. \n\nNot just that, but the earthquake heavily damage the province's infrastructure and many buildings. The cost of fixing all these damages will be a lot, and it's money that we will have to sacrifice from other parts of the economy to pull off. \n\nAll we can do now is mourn those who died and set new regulations in order to prevent a tragedy like this from ever occuring again."
+ argentina.71.a:0 "May those poor souls rest in peace"
 
  chile.20.t:0 "[FROM.GetName] Wants us to Join the Comintern"
  chile.20.d:0 "Diplomats from [FROM.GetName] have reached out to us in order to ask us if we are willing to join the Comintern. They have also joined the Comintern and they are telling us to also join the Comintern. They are saying the Soviets would be glad to accept us into their faction. \n\nShould we accept this offer?"
  chile.20.a:0 "Sure, we'll gladly join"
  chile.20.b:0 "They don't represent our ideals!"
- 
+
+ chile.21.t:0 "The Formation of the Frente Popular"
+ chile.21.d:0 "News has spread that today marks the very first day of the Frente Popular existing as a political party in Chile. This new party consists of a coalition of most communist parties combining forces into one large major party. The person in charge of thiis new political party is Pedro Aguirre Cerda. \n\nUnfortunately, we have no current intel on how the Fascists will react to this new party being formed, but from what has been seen previously, it won't be pretty. Our government also needs to watch out, as this new party is quickly gaining popularity among the Chilean citizens."
+ chile.21.a:0 "Interesting..."
+
+ chile.22.t:0 "Nacistas Protest the Supression of Their Party"
+ chile.22.d:0 "After various attempts to supress the Nacista political movement, many of its members are protesting this action, and are doing so by taking control of one of our provinces. Such an act shall not be tolerated, and we need to deal with their little act as fast as possible before they get too powerful!"
+ chile.22.a:0 "You will pay for this!"
+
+ chile.23.t:0 "Communnists Protest the Supression of Their Party"
+ chile.23.d:0 "After our various attempts to supress the Communist party, their members have become furious towards our government and decided to show it by occupying one of our provinces by force. This act shall not be taken lightly, and they will be met with brute force!"
+ chile.23.a:0 "You will pay for this!"
+
+ chile.25.t:0 "Nacistas demand Increased Political Representation"
+ chile.25.d:0 "Various political leaders of the Nacista party have come to our headquarters, demanding their party is properly represented among our government and the people. They also stated that if we don't abide by their demands, then they will use force to get what they want. \n\nThe decision lays in our hands, should we abide by their demands or ignore them?"
+ chile.25.a:0 "Accept their demands"
+ chile.25.b:0 "Ignore them"
+
+ chile.26.t:0 "Communists demand Increased Political Representation"
+ chile.26.d:0 "Various political leaders from the Communist party have come to our main headquarters, demanding that their party's recognition is increased throughout our government, and the people as a whole. They claim that their party is more popular than what is being represented by our government, and they will use force if we don't listen to their demands. \n\nWhat should we do, acept or ignore their demands?"
+
+ chile.28.t:0 "Nacistas Increase Their Political Power"
+ chile.28.d:0 "Intel has come to us that after various illegal propaganda campaigns and varying levels of corruption, the Nacistas have increased their political representation in our government. \n\nWe need to watch out, if we allow them to continue doing actions such as these, then only time will tell if we will still be infull control of our nation."
+ chile.28.a:0 "Seems they have some rather nefarious intentions"
+
+ chile.29.t:0 "Communists Increase Their Political Power"
+ chile.29.d:0 "Intel has come to us that after various illegal propaganda campaigns and varying levels of corruption, the Communists have increased their respective political representation in our government. \n\nIf this situation continues, or even escalates, then we will be in serious trouble!"
+ chile.29.a:0 "Yeah those are some very nefarious intentions"
+
+ chile.30.t:0 "Political Debate Sparked Between the Fascists and Communists"
+ chile.30.d:0 "Just in today, various political leaders from both sides got into a hefty argument, with some even going all the way as to fighting. From what our intel tells us, this will lead to a temporary phase of propaganda campaigns targeted against each other. \n\nWhile any outcome may be beneficial to our government, we need to watch out as the Chilean people will not like so much chaos inside our government. Let's just hope things don't get violent."
+ chile.30.a:0 "Let's hope for a lasting peace..."
+
+ chile.31.t:0 "Nacistas Demand that we Close Down the Economy"
+ chile.31.d:0 "Various political leaders from the Fascist party are mdemanding that we close down the economy for foreigners, claiming that Chilean resources are 'made by and only for the Chilean people'. These extreme demands are due to their political movement gaining a  seriousamount of traction, and they know damn well that they have a large enough backing in order to make such insane demands. \n\nThe decision lays in our hands, should we comply or should we simply ignore them?"
+ chile.31.a:0 "Comply with their demands"
+ chile.31.b:0 "Ignore their demands"
+
+ chile.32.t:0 "Nacistas Demand Increased Parliamentary Representation"
+ chile.32.d:0 "After gaining mass popularity across the nation and becomign a major political party in our nation, the Nacistas are demanding they are represented by a much greater margin in our parliament. \n\nTheir power seems to be growing non-stop, and that is very concerning to us. Any more powerful and they will pose a serious threat to our government. \n\nFor now, should we listen to their demands or simply ignore them?"
+ chile.32.a:0 "Cave in to their demands"
+ chile.32.b:0 "They won't get what they want!"
+
+ chile.33.t:0 "Communists Demand the Balancing of our Social Classes"
+ chile.33.d:0 "Ever since the creation of this nation, our social classes have been very disproportionate. Due to various economic policies, this problem has only worsened, and now that the Communists have a stronghold over the political scene of the country, they are demanding that we balance these classes and fast. \n\nThey are giving us a rather strict time limit to do it, however, even they acknowledge the difficulty of the task and offered their help in order to solve this long-lasting issue once and for all. \n\nShould we listen to their demands or ignore them?"
+ chile.33.a:0 "Listen to their demands"
+ chile.33.b:0 "Ignore their demands"
+
+ chile.34.t:0 "Communists are Demanding Increase in Welfare Plans"
+ chile.34.d:0 "After gaining mass popularity among the Chilean people, the Communists are yet again coming to us with a rather extreme demand. Increase our welfare plans, especially to the poor. \n\nThe Communists are trying to abuse their power, and the fact we can't really do much is the absolute worst part. For now,allwe can do iseither listen and abide by their demands, or simply ignore them and hope for the best."
+ chile.34.a:0 "Comply"
+ chile.34.b:0 "Ignore them"
+
+ chile.35.t:0 "Chileans Prepare for the 1938 Elections"
+ chile.35.d:0 "With over a year left till the 1938 elections, the people have already begun preparing for the up and coming elections. The political parties are getting ready as well, hanging posters all around and various political leaders making speeches across the nation. \n\nAlthough most elections are a time to celebrate a new leader, this time around many are worried with the outcome of these elections. Especially due to the agressiveness between the Communists and Fascists within the nation. \n\nAs long as things turn out peaceful, then it will be alright. However, only time will tell if that's truly the case."
+ chile.35.a:0 "Let's hope for peaceful elections"
+
+ chile.36.t:0 "Nacistas win the Elections"
+ chile.36.d:0 "After some very close elections and counting up all the votes, the Nacistas suprised everyone by coming out on top. Whether there was corruption involved or not, we can't tell as of now. \n\nOne thing that is for certain is that their victory is sure to spike tensions across Latin America and most definetly among the Allied powers. \n\nEnough of these damn democrats, it's time Chile becomes the power it deserves to be! Our enemies shall tremble in fear at the mere sight of the Chilean flag!"
+ chile.36.a:0 "Time to truly shine"
+
+ chile.37.t:0 "Frente Popular wins the Elections"
+ chile.37.d:0 "After a very close voting session, the Communists have come out on top. Their victory, whether it was truthful or not, most definetly occured and will shortly take power in Chile. \n\nWhether this will stir tensions in the region or not, we unfortunately don't know yet. However, one thing that si certain is that things will greatly change in South America. \n\nIt's time we bring Chile back up from its ashes and give the people true freedom! Empowerment to the working class!"
+ chile.37.a:0 "Time to show South America what we're made of"
+
+ chile.38.t:0 "Democrats win the Elections Once Again"
+ chile.38.d:0 "After a rather tight voting session, our government has once again come out on top over our opposition and will remain in power for another 4 years. \n\nWhile luck was on our side this time, the same can't be said for the opposition, as they may try to do something to disrupt our second term. Whatever's the case we need to be prepared for anything and not allow anyone to get the best of us!"
+ chile.38.a:0 "Another four years"
+
+ chile.39.t:0 "The Alianza Popular Libertadora was Formed"
+ chile.39.d:0 "news has spread far and wide across the nation that the MNS has dissolved and to take its place is the Alianza Popular Libertadora, (APL) for short. \n\nThe party has also decided to elect Carlos Ibáñez del Campo as leader, the once ex-president of Chile. His authoritarian ideals had stirred controversy in the past, and the same is happening right now, as many from our own government and the Communist party are denouncing his stepping to power once more. \n\nFor now, let's just hope the situation calms down and we can have a peaceful election period."
+ chile.39.a:0 "Yet another party name change?"
+
+ news.349.t:0 "The Seguro Obrero Massacre"
+ news.349.d:0 "Today some sad news came from the country of Chile, as over 80 people lay dead after occupying the Seguro Obrero building in Santiago, Chile. Self-identified as Nacistas, these people occupied not just this building, but several others as a coup attempt in order to take down the current president Arturo Alessandri, and instead place in power Carlos Ibáñez del Campo. The Chilean government responded to this coup attempt with bloodshed, by sending the Carabineros in and opening fire on the Nacistas. 80 people have been confirmed dead so far, but there may be more than that number. \n\nThe situation globally is looking grim, as extreme ideologies are growing all around the planet. The world is quickly burning up, and this massacre shows that South America is also included in this mess."
+ news.349.a:0 "It had to be done"
+ news.349.b:0 "Jesus christ..."
+
+ chile.40.t:0 "The Government has Supressed our Party"
+ chile.40.d:0 "The Chilean government has gone out of their way to surpress our political party. This was an outright illegal action and pretty much a spit on the face to our freedom of speech. \n\nEven though what they did was wrong, we can't go into an uncontrollable rage and overthrow the government as many will die doing such a thing, and wasting away so many lives for something so petty simply isn't smart. \n\nThat doesn't mean that we won't be quiet, soon enough they will regret ever taking those actions!"
+ chile.40.a:0 "They will pay!"
+
+ chile.42.t:0 "Chile is Willing to Pay a Lot for the Patagonia"
+ chile.42.d:0 "Chilean officials have approached us with a very sudden offer. They are willing to pay not only 4 civilian factories, but also various economic benefits for over half a year in exchange for the Patagonia. \n\nShould we accept this offer?"
+ chile.42.a:0 "Yes"
+ chile.42.b:0 "No"
+
+ chile.43.t:0 "Chile Wants Pitcairn Island"
+ chile.43.d:0 "Various Chilean politicians have contacted us, asking for the Pitcairn Island. They claim that they want to use it as a staging ground for an amphibious Japanese invasion, along with infastructural development. \n\nShould we give them the island?"
+ chile.43.a:0 "Yes"
+ chile.43.b:0 "No"
+
+ chile.44.t:0 "The Assasination of Arturo Alessandri"
+ chile.44.d:0 "News has come today that a group of unknown terrorists have assasinated Arturo today. His body was found inside the president's house, and it seems he was ambushed. \n\nThe group has self-identified themselves as Nacistas, chanting 'La guerra va a comenzar! La guerra va a comenzar!' As this news is being written, hundreds and even thousands of people are taking up arms in what will seem to be a clash between the government and the Nacistas. \n\nA civil war will begin, and the blood that will be spilled is going to be immense."
+ chile.44.a:0 "Victoria para el Nacismo!"
+
+ chile.45.t:0 "[ROOT.GetPoliticalEnemy] are Cooperating with the Government!"
+ chile.45.d:0 "News has just now reached us that [ROOT.GetPoliticalEnemy] are cooperating with the government and working against us. They are offering the government supplies, equipment, and even men to fight against us. Our enemy is no longer just the Government, but also [ROOT.GetPoliticalEnemy]. \n\nEither way, we will still win and we still come out of this victorious, no matter the costs!"
+ chile.45.a:0 "These damn bastards will PAY!"
+ CHL_nacismo_enemy:0 "The Nacistas"
+ CHL_communismo_enemy:0 "The Communists"
+
+ chile.48.t:0 "Pedro Aguirre Cerda has Passed Away"
+ chile.48.d:0 "Today marks a sad day for the Chilean people, as the president and leader of the Frente Popular, Pedro Aguirre Cerda, passed away in office. His cause of death was tuberculosis, this was nothing new to Pedro however, as he already knew his health condition was deteriorating. That's why he appointed Jerónimo Méndez as vice president. \n\nBecause of his death, Jerónimo will now step up and take over Pedro's original position and lead the people of Chile until the 1942 elections. What lies next is great challanges for mister Jerónimo, but the people are sure he will pull through."
+ chile.48.a:0 "This is truly a sad day"
+
+ chile.49.t:0 "The 1942 Elections"
+ chile.49.d:0 "As distant as 1942 seemed, it surprised many to realize we're already there, and the elections have just begun. \n\nVarious politicans are running for office, with the most prominent one being Carlos Ibáñez del Campo, who was already president of Chile before, and wants to run for office yet again but as an independent politician. \n\nThese elections are going to get quite hectic, butt in the end the winner of the 1942 elections is..."
+ chile.49.a:0 "Juan Antionio Riós"
+ chile.49.b:0 "Gustavo Ross Santa María"
+ chile.49.c:0 "Carlos Ibáñez del Campo"
+
  uruguay.2.t:0 "Our Officers Have Arrested Some Suspicious Looking People"
  uruguay.2.d:0 "Police officers from our government have arrested people who seemed rather suspicous. The officers claimed these people could not be trusted and were put in jail. \n\nThe news will probably be spread to the people via third-party sources and they will not be happy, but our government will be stronger so it is worth it in the end."
  uruguay.2.a:0 "Interesting, We'll have to wait and see what this leads to"
@@ -3525,7 +3639,7 @@
  uruguay.17.a:0 "Luis Alberto de Herrera"
  uruguay.17.b:0 "Eugenio Gómez"
  
-  #Peru Investment stuff
+ #Peru Investment stuff
  peru.122.t:0 "The Peruvian 1936 Elections"
  peru.122.d:0 "October 11th has come by faster than expected and election day is upon us. Out of all the parties in our country, 4 major parties stand out from the rest. \n\nThe first is the Partido Social Democrata, lead by Luis Antonio Eguiguren and respresents democratic ideals. \nThe next one is Frente Nacional de Derecha, lead by Jorge Prado Ugarteche, and represents similar ideals to that of Oscar. \nThe third option is the Partido Unión Revolucionaria, lead by Luis. A. Flores, and represents ultranationalist fascist ideals. \nThe last option is the Alianza Acción Republicana, lead by Manuel Vicente Villarán, adn represents communist ideals. \n\nAfter a rather close voting session, the winner of the 1936 elections is..."
  peru.122.a:0 "Partido Social Democrata"
@@ -3705,7 +3819,7 @@
  news.343.a:0 "What's gotten into you, South America?"
  news.343.b:0 "It's time we get back our lost lands!"
  news.343.c:0 "These war mongerers will lose just like the first time! VIVA CHILE!"
- news.343.e:0 "We need to help our Chilean brothers! These warmongerers need to be stopped!"
+ news.343.d:0 "We need to help our Chilean brothers! These warmongerers need to be stopped!"
 
  news.344.t:0 "Ecuador and Bolivia Have Joined the Second War of the Pacific"
  news.344.d:0 "News quickly spread of Colombian and Ecuadorian forces crossing the Peruvian border and officially joining Chile on their side of the war. \n\nThe world stands in shock as they see what was once considered a relatively calm continent spiral out of control. \n\nFor now, we just have to wait and see how this all plays out."
@@ -3774,8 +3888,59 @@
 
  news.348.t:0 "Fall of Buenos Aires"
  news.348.d:0 "Military experts are in shock as reports from Buenos Aires confirm that the capital has fallen to advancing Uruguayan troops. \n\nWhile some areas are still under combat, most units of the Argentinian army have retreated to the countryside surrounding the city. \n\nUruguayan troops have begun a victory parade through the 9 de Julio Avenue, with [URG.GetLeader] having flown to participate in it as well. \n\nRumors say that the Argentine government managed to escape through the Ruta 7 towards the Andes, however, experts consider this is a devastating blow to Argentina."
+ news.348.a:0 "What the hell is going on there?"
  news.348.b:0 "Who's the province now?"
- news.348.c:0 "This is outrageous!"
+ news.348.c:0 "They'll Pay! With their blood they'll pay!"
+
+ news.350.t:0 "The Fall of Buenos Aires"
+ news.350.d:0 "Considered the Paris of South America, Buenos Aires is a very powerful city in South America, so it's even more shocking to realize that the city has now fallen under the hands of an outsider. \n\nThe consequences of such a powerful city no longer being in the hands of Argentina is still unknown, what is known however is the drastic changes that will come to the region both economically and politically. In recent years South America has become more and more unstable, and the fall of Buenos Aires only proves how serious the issue is. \n\nWith their economic center gone, the chances of Argentina winning the war seem dim."
+ news.350.a:0 "Does Argentina stand a chance?"
+ news.350.b:0 "Yet another victory for us!"
+
+ news.351.t:0 "The Fall of Sau Paulo"
+ news.351.d:0 "One of Brazil's most important cities has just been take over. To many it still seems unbelievable how such an important city of the South American giant has been occupied, and yet reports from the city and the invader prove it beyond a doubt. Brazil can still fall back to Rio de Janeiro, however, the invaders are already at the doorsteps of that city too. \n\nThe chances of the Brazilian army holding back the invaders seem close to zero. Dark days are coming for the nation of Brazil."
+ news.351.a:0 "Brazil's not lasting"
+ news.351.b:0 "Next up, Rio de Janeiro"
+
+ news.352.t:0 "The Fall of Rio de Janeiro"
+ news.352.d:0 "Rio de Janeiro, a popular site with tourists, investors, and people in general, as well as being a beautiful city is no longer what it once was. Now its fille with bloodshed and chaos as foreign invaders drive the Brazilians out of their own city. \n\nThe current circumstances seem unbeliavable, but local reports confirm it. Rio De Janeiro has fallen, and the current Brazilian war effort doesn't seem enough to halt the invaders. \n\nIt's going to take a miracle for the Brazilians to come back, but we all know that life doesn't always bring miracles."
+ news.352.a:0 "What happened to South America?"
+ news.352.b:0 "The end of the war is near!"
+
+ news.353.t:0 "The Fall of Montevideo"
+ news.353.d:0 "Reports have just come in that the capital of Uruguay, Montevideo, has fallen to external forces. The death count is reaching the thousands as civilians try to escape the city in fear of getting caught in a cross fire. \n\nNow with its capital gone, it will take great sacrifice and ability to keep up with the war, however, it seems highly unlikely that Uruguay will stay afloat in this conflict."
+ news.353.a:0 "They put up a valiant effort"
+ news.353.b:0 "Their resistance was futile!"
+
+ news.354.t:0 "The Fall of Santiago"
+ news.354.d:0 "The once bustling capital of Chile has been reduced to rubbel and chaos as the tides of war flooded the city today. The invaders have officially captured Chile's capital, Santiago, and the city is no longer under Chilean control. \n\nConsidering the dangerous terrain surrounding the city, it's honestly impressive how the invaders were able to pull off such a feat. Military experts from around the world are trying to wrap their heads around what happened to the Chilean defense and how they weren't able to defend such a defendable city. \n\nEither way, the Chileans are on their hind legs, and it will ned a miracle to pull themselves back and come out on top in the war."
+ news.354.a:0 "The heart of South American steel... gone"
+ news.354.b:0 "They should be surrendering anytime now!"
+
+ news.355.t:0 "The Fall of La Paz"
+ news.355.d:0 "The capital of Bolivia, as well as the nation's most important city, has fallen victim to the wrath of war and is now no longer under the control of the Bolivians. The situation is very grim in the nation right now, as countless people are dying and many trying to escape the horrors of the war. \n\nA very sad sight to see, especially when considering Bolivia's unfortunate history when it comes to wars. All the world can do is look from far away and study the conflict, giving out prayers to those who lost their lives."
+ news.355.a:0 "That's rather unfortunate"
+ news.355.b:0 "They never stood a chance!"
+
+ news.356.t:0 "The Fall of Asunción"
+ news.356.d:0 "Paraguay's capital, Asunción, has become victim to the invaders. Reports confirm that the city is no longer under the possesion of the Paraguayan government. \n\nThe Paraguayans put up a valiant effort against the invaders, but in the end the invaders came out victorious and stomped on the Paraguayan defenses in the city. Defense tactics can be studied from this war to better understand the how and why of the fall of this city. \n\nWe shall mourn those who are no longer with us due to this conflict."
+ news.356.a:0 "Asun-what?"
+ news.356.b:0 "Our army can't be stopped!"
+
+ news.357.t:0 "The Fall of Lima"
+ news.357.d:0 "Considering the strategic position of Peru's capital, Lima, it'd be deemed near-impossible to conquer it, the logistics, soldiers needed, morale. Many factors would need to be in play in order for it to succeed, and yet the invaders did just that and took over the nation's capital. \n\nWhile their most important city is gone, the Peruvians are still trying their best to put up a solid defense against the invaders, and we should respect their effort, even if that effort eventually leads to nothing. \n\nThe tactics deployed by the invaders could be studied to enhance our own techniques even further."
+ news.357.a:0 "Another South American capital gone?"
+ news.357.b:0 "Finally, victory at last"
+
+ news.358.t:0 "The Fall of Bogotá"
+ news.358.d:0 "Colombia's capital, Bogotá, has just now been confirmed that it's no longer under Colombian control. Such a large city taken by an outside force still seems unbelievable, and yet local news coverage has proved the unbelievable. \n\nMany families have lost their homes, even more have lost members, and overall the entire nation of Colombia is struggling to maintain itself as the invaders push further and further into their lands. Whether or not they'll pull it back is still up for debate, but with their capital city gone, it seems very unlikely. \n\nOnce more this should be taken as an opportunity to study military tactics, but we need to have compassion to those who lost their lives."
+ news.358.a:0 "Interesting"
+ news.358.b:0 "It's over, this war is finished"
+
+ news.359.t:0 "The Fall of Caracas"
+ news.359.d:0 "The capital city of South America's oil haven, Venezuela, has recently been captured. The invaders knew of the strategic importance of the city, and made sure to use military might to take it. \n\nThousands are dead, and more may come if this war doesn't end. The invaders are showing no mercy as their soldiers and tanks march through the once bustling capital of Venezuela. \n\nWe can only wait and see how this conflict will resolve."
+ news.359.a:0 "Truly a shame"
+ news.359.b:0 "Finally, all this oil shall be ours!"
 
  # Bolivia
 
@@ -3827,15 +3992,486 @@
  perubolivia.1.c:0 "Luis A. Flores"
  perubolivia.1.e:0 "Manuel Prado Ugarteche"
 
- ### Nicaragua ###
- UL_nicaragua.1.t:0 "The Army makes a Coup d'Etat!"
- UL_nicaragua.1.d:0 "Military units under the banner of the Guardia Nacional have begun rising up all throught Nicaragua, with the intent of deposing [Root.GetLeader]'s weak government. A battle on the outskirts of Managua between the forces still loyal to our cause and the forces loyal to the army has begun. As Managua is our only loyal city, the defeat of our forces would mean the collapse of all resistence against the army."
- UL_nicaragua.1.a:0 "The Guardia Nacional is victorious!"
- UL_nicaragua.1.b:0 "The Loyalists hold the line!"
+ perubolivia.2.t:0 "Which City Should be our Capital?"
+ perubolivia.2.d:0 "Now that we are a political entity on the map, we need to find a city to set as our capital. So far we have 3 options: Tacna, Lima, and La Paz. Each one of these cities holds not just historical significance to the Confederation, but also political significance. \n\nOut of these 3 cities, the capital of the Peru-Bolivian Confederation shall be..."
+ perubolivia.2.a:0 "Tacna"
+ perubolivia.2.b:0 "Lima"
+ perubolivia.2.c:0 "La Paz"
 
- ### Costa Rica ###
- costarica.1.t:0 "1936 General Elections"
- costarica.1.d:0 "The elections have begun. While many had expected Ricardo Jimenez to run for re-election, he rejected it emphatically arguing that such a thing went against democracy. As so, the [Root.GetDemocraticParty] has fowarded León Cortés Castro as the candidate for the elections. A staunch conservative, Cortés is considered a very polarizing figure in Costa Rica for his support of Nazism and his anti-semite views. with the opossition labeling him as a 'authoritarian, fascist and tyrant'. \n\nThe main opossition, the Partido Nacional, initially fowarded Julio Acosta, but Acosta eventually resigned due to feeling a lack of support from the party. Eventually, Octavio Béeche Argüello was fowarded for the candidacy. A liberal candidate, he came under attack by the right-wing due to his left-leaning ideals, even being called a communist by his main detractors. \n\nThe last party to run for presidency was a surprise to many. The [Root.GetCommunistParty], led by Manuel Mora Valverde, managed to register as a political party for the first time in Costa Rican history. However, Valverde was not allowed, as candidates have to be older than 30 to run. Instead, he was replaced by known writer, Carlos Luis Sáenz. \n\nThis election is considered very polarizing, with Carlos María Jiménez calling it a choice between 'Cortesism or communism, the extreme right and the extreme left, fascism and sovietism.' \n\nAs votes are being counted, it is obvious that..."
- costarica.1.a:0 "The Partido Republicano won"
- costarica.1.b:0 "The Partido Nacional won"
- costarica.1.c:0 "The [Root.GetCommunistParty] won"
+ perubolivia.3.t:0 "Nationalists are Rising up Across the Nation!"
+ perubolivia.3.d:0 "Peruvian and Bolivian nationalists are rising up in all parts of our new found nation. The strength of these nationalists are pretty strong, and are already forming localized militias in order to take and control of provinces in the Confederation. \n\nIt would seem as if these nationalists have been waiting up until we finished our war of independence to begin rising up. Why this is the case is still a mystery, and there may be hidden plans behind it. \n\nAll what we know now is that this poses a serious threat to our nation and we need to take control of the situation as fast as possible!"
+ perubolivia.3.a:0 "Will we ever be at peace?"
+
+ perubolivia.4.t:0 "Should we disband the Union?"
+ perubolivia.4.d:0 "Our current situation looks very grim. We are at war with both the Peruvian and Bolivian nationalists at the same time, and the current state of our union seems very brittle. \n\nDue to this extreme situation, many have proposed to simply give in to the nations and disband the union once and for all. \n\nConsidering our current situation, should we disband the union and become separate nations once more?"
+ perubolivia.4.a:0 "Yes, we shouldn't cause any more spilled blood"
+ perubolivia.4.b:0 "No, we fought way too much to simply give up!"
+
+ perubolivia.5.t:0 "The Peru-Bolivian Confederation is Inviting us to Their Defense Pact"
+ perubolivia.5.d:0 "Diplomats from the Confederation have recently arrived to our nation, asking us if we want to be part of their defense pact against any external threat. \n\nThey claim that they want to make up for the loss of life during their War of Independence. The diplomats have told our own that the Confederation will intervene in any defensive war we may find ourselves in. \n\nShould we accept their offer?"
+ perubolivia.5.a:0 "Yes, we need their protection"
+ perubolivia.5.b:0 "We're not going to simply put behind all their atrocities!"
+
+ perubolivia.6.t:0 "[FROM.GetName] has Declared War on a Country Within the Defense Pact!"
+ perubolivia.6.d:0 "[FROM.GetName] is currently fighting one of the countries we have invited to the defense pact, and they're not holding back in the slightest. \n\nAs per our promise, we are technically obligated to join in and help out our ally against [FROM.GetName]. \n\nShall we join in and protect them?"
+ perubolivia.6.a:0 "We shall crush these warmongerers!"
+ perubolivia.6.b:0 "We simply can't afford war right now"
+
+ perubolivia.7.t:0 "The Peru-Bolivian Confederation Wants Putumayo for Gurantees"
+ perubolivia.7.d:0 "Diplomats from the Confederation have come to Bogota today to discuss a potential exchange between our nations. The Confederation would be willing to offer their army as support in any defensive conflict we may find ourselves in in exchange for the state of Putumayo. \n\nThe diplomats have told us that they view that state of ours as integral to their nation, and they will be willing to offer their full-fledged support in the event of conflict in exhcnage for it. They also claim that they want to make up for the loss of life during their War of Independence. \n\nShould we accept their offer?"
+ perubolivia.7.a:0 "Yes"
+ perubolivia.7.b:0 "No"
+
+ perubolivia.8.t:0 "The Peru-Bolivian Confederation Wants Chaco for Gurantees"
+ perubolivia.8.d:0 "Diplomats from the Confederation have come to Asunción today to discuss a potential exchange between our nations. The Confederation would be willing to offer their army as support in any defensive conflict we may find ourselves in in exchange for the state of Chaco Boreal. \n\nThe diplomats have told us that they view that state of ours as integral to their nation, and they will be willing to offer their full-fledged support in the event of conflict in exhcnage for it. They also claim that they want to make up for the loss of life during their War of Independence. \n\nShould we accept their offer?"
+
+ perubolivia.9.t:0 "The Peru-Bolivian Confederation is Willing to Purchase our Lands"
+ perubolivia.9.d:0 "Diplomats from the Confederation have come to our nation to offer a proposal: Not only the payment of 1 civilian factory, but also the intervention in any of our defensive wars. \n\nThe diplomats have told us that we possess lands that they value greatly, and they are willing to not only pay, but also offer us protection in exchange for them. \n\nThere is no denying the power that the Confederation holds, so should we accept this offer?"
+
+ ### Colombia events ###
+
+ colombia.1.title:0 "An army leader graduates as a desert expert "
+ colombia.1.desc:0 "After a long period of study and training in the field, one of our army leaders has finally graduated as an expert in desert combat. Without a doubt, this is a great achievement not only for him, but for the entire military training system. \n\nHis new trait will surely be of great help to you in future battles for the homeland."
+ colombia.2.title:0 "An army leader graduates as a marsh expert"
+ colombia.2.desc:0 "After a long period of study and training in the field, one of our army leaders has finally graduated as an expert in marsh combat. Without a doubt, this is a great achievement not only for him, but for the entire military training system. \n\nHis new trait is sure to be of great help to you in future battles for the homeland."
+ colombia.3.title:0 "An army leader graduates as an expert in mountains"
+ colombia.3.desc:0 "After a long period of study and training in the field, one of our army leaders has finally graduated as an expert in combat in the mountains. Without a doubt, this is a great achievement not only for him, but for the entire military training system. \n\nHis new trait will surely be of great help to you in future battles for the homeland."
+ colombia.4.title:0 "An army leader graduates as an expert in hills"
+ colombia.4.desc:0 "After a long period of study and training of the terrain, one of our army leaders has finally graduated as an expert in hill combat. Without a doubt, this is a great achievement not only for him, but for the entire military training system. \n\nHis new trait is sure to be of great help to you in future battles for the homeland."
+ colombia.5.title:0 "An army leader graduates as an expert in jungles"
+ colombia.5.desc:0 "After a long period of study and training in the field, one of our army leaders has finally graduated as an expert in combat in the jungle. Without a doubt, this is a great achievement not only for him, but for the entire military training system. \n\nHis new trait will surely be of great help to you in future battles for the homeland."
+ colombia.6.title:0 "An army leader graduates as a forest expert"
+ colombia.6.desc:0 "After a long period of study and training in the field, one of our army leaders has finally graduated as an expert in combat in forests. Without a doubt, this is a great achievement not only for him, but also for the entire military training system. \n\nHis new trait is sure to be of great help to you in future battles for the homeland."
+ colombia.7.title:0 "An army leader graduates as an expert in urban areas"
+ colombia.7.desc:0 "After a long period of study and training in the field, one of our army leaders has finally graduated as an expert in combat in urban areas. Without a doubt, this is a great achievement not only for him, but for the entire military training system. \n\nHis new trait will surely be of great help to you in future battles for the homeland."
+ colombia.1.a:0 "An example of excellence."
+
+ colombia.9.title:0 "The Tragedy of Fúquene"
+ colombia.9.desc:0 "Today a terrible tragedy has occurred in the Fúquene lagoon, located 120 kilometers north of Bogotá. A boat with overload of passengers sank in the icy waters of the lagoon and at a very distant to shore. Of the 27 people in the boat, 21 drowned. Among the victims are distinguished army officers and several prominent figures of our society. This catastrophe has deeply moved the entire nation and has covered in mourning to very respectable families of the capital."
+ colombia.9.a:0 "A painful event."
+ colombia.10.title:0 "A tragedy was avoided in Fúquene"
+ colombia.10.desc:0 "Today would have gone down in history as a tragic day in Cundinamarca. In the Fúquene lagoon, a motorboat with overload of passengers was about to embark on the icy waters of the lagoon. However, the passengers took longer than expected to board the boat, so the trip was delayed for several minutes. Some time later, a sudden blizzard, accompanied by a torrential rain, prevented them from setting sail. Eventually it was found that the motor of the boat presented failures, so quite possibly, if they had set sail at the scheduled time, they would have been adrift, and the rain would have sunk the boat."
+ colombia.10.a:0 "A warning from destiny..."
+ colombia.11.title:0 "Rojas Pinilla's military mission "
+ colombia.11.desc:0 "The military high command has proposed to send a delegate on behalf of the country to a foreign power or to a focused study center to bring with him key information for the development of the armed forces. After reviewing between Many candidates, finally the management chose lieutenant Gustavo Rojas Pinilla to carry out this task. The only thing that needs to be clarified is where he will be sent."
+ colombia.11.a:0 "Send him to the United States."
+ colombia.11.b:0 "Send him to Germany."
+ colombia.11.c:0 "Send him to the military studies center."
+
+ #colombia.12
+ lideres.protegidos.title:0 "Liberal caudillos are protected by the government"
+ leaders.protegido.desc:0 "After many years of political persecution, the liberal leaders of the eastern part of the country finally received the support and protection of the government to carry out their action without vandalism. The liberal population has appreciated this gesture, which has contributed to the stability of the region."
+ leaders.protected.a:0 "A triumph for the people."
+ #colombia.13
+ bog.oponen.title:0 "Liberal traders oppose to negotiating with conservatives "
+ bog.oponen.desc:0 "The main liberal businessmen, who dominate the market in Cundinamarca, did not accept to collaborate economically with their conservative opponents. They argue that they have no guarantees to negotiate, and that favoritism for the conservatives on the part of other businessmen could cost them their job and their earnings."
+ bog.oponen.a:0 "They're very stubborn..."
+ #colombia.14
+ bog.aceptan.title:0 "Liberal and conservative businessmen negotiate trade agreements"
+ bog.aceptan.desc:0 "After several meetings with the directors of the industrial associations and the leaders of the national companies of Cundinamarca, the government managed to organize both groups, liberals and conservatives, to agree on their mutual collaboration in the market. The liberal industrialists accepted somewhat reluctantly, although they saw with good eyes the profits that could be obtained from synchronizing their companies, putting aside political differences."
+ bog.aceptab.a:0 "A mutual win!"
+ #colombia.15
+ int.acept.title:0 "Liberal mayors take office on Magdalena"
+ int.acept.desc:0 "After a long campaign of institutional restructuring and the direct intervention of [ROOT.GetLeader], the mayors of the main cities of Magdalena were finally able to take office, which was being hampered by the conservative directives of the place. The liberal delegation rejoiced at the news, announcing that it is a victory for the people. "
+ int.acept.a:0 "A triumph for democracy."
+ #colombia.16
+ int.oponen.title:0 "Conservatives reject new mayors in Magdalena "
+ int.oponen.desc:0 "Despite presidential efforts to grant the mayor's office to the liberal elect, it has been impossible to achieve this task. Conservative departmental governors argue that the country has been under a state of siege since 1899, which is why they are constitutionally guaranteed to "remove any subordinate from office if they consider it appropriate." It is more than obvious that these conflicts are of an ideological order, but they are legally supported and there is little that can be done about them. "
+ int.oponen.a:0 "They are bent on obstructing the will of the people."
+ #colombia.17
+ prensa.eliminada.title:0 "The government eliminates subversive press "
+ prensa.eliminada.desc:0 "The extensive operation prepared by the authorities has borne fruit. The ultraconservative newspaper press was finally located in Medellín, from where it was distributed to the entire department, inciting hatred towards the liberals. Multiple people were arrested and the place of the printing house has been put under police custody. The Antioquia Liberal leadership praised the government's work and hopes that with this fact the political violence will diminish."
+ press.removed.a:0 "Excellent."
+ #colombia.18
+ prensa.continua.title:0 "Conservative newspapers continue to circulate"
+ prensa.continua.desc:0 "The police efforts to identify the place of origin of the ultra-conservative press were unsuccessful. Initially, the investigations led to the capture of several suspects, all members of the conservative party, but the documentary evidence proved be insufficient to support serious accusations. The process ended up being shelved and the authorities had no choice but to release those arrested."
+ press.continuous.to:0 "Not for long."
+ #colombia.19
+ conser.arrestados.title:0 "Extremist conservatives gets arrested"
+ conser.arrestados.desc:0 "A military raid throughout Caquetá culminated today with more than a hundred arrests. An extremist conservative organization, which was dedicated to sowing chaos and threatening opponents, was dissolved with the operation. The main leaders will be the first to be presented before a judge, and will have to answer for various crimes. The conservative party, on the other hand, argued that these people have no ties whatsoever with the party, but that they have acted on their own account. they have been questioned by several major newspapers, although a more thorough investigation will be needed to clarify this fact. "
+ conser.arrestados.a:0 "Justice is done."
+ #colombia.20
+ conser.escapan.title:0 "Extremist conservatives escape from operation"
+ conser.escapan.desc:0 "Although a raid was planned in Caquetá against extremists in the region, the situation presented complications from the first moment, until it culminated in total failure. Maybe the senior leaders of extremist societies found out the plan, so they quickly left the place where they were supposed to be today. No public statements have been made about what happened, and are not expected either, since it is obvious that it represents a disgrace for the national institutions."
+ conser.escapan.a:0 "We'll find them."
+ #colombia.21
+ conser.mueren.title:0 "Conservative leaders die in capture operation "
+ conser.mueren.desc:0 "Efforts to identify and arrest the leaders of extremist societies were not as successful as expected. In the middle of the raid the situation became complicated in several points, leading to a crossfire that culminated in the death of almost all the arrested extremist leaders. The conservative party has denounced the government's mismanagement towards these individuals, arguing that the event “corroborates the ineffectiveness of national institutions” and accuses [COL.GetLeader] of inciting the political violence with this type of “excessive actions”."
+ conser.mueren.a:0 "Damn."
+ #colombia.22
+ pol.desman.title:0 "Conservative police dismantled in Nariño"
+ pol.desman.desc:0 "In a meticulously calculated operation by the military high command, the public forces managed to infiltrate and launch a joint attack on the barracks of the conservative paramilitaries in Nariño. The vast majority of these centers were found on the outskirts of Pasto, sheltered in haciendas from where they planned their subversive attacks and stored large caches of weapons. The remnants of this right-wing paramilitary organization are isolated, and they are not expected to represent a major problem while they are captured and prosecuted."
+ pol.desman.a:0 "A whole achievement!"
+ #colombia.23
+ pol.gana.title:0 "Armed forces are defeated by conservative paramilitaries "
+ pol.gana.desc:0 "The careful operation orchestrated by the military high command under presidential order spiraled out of control shortly after it began. The government agents infiltrated in the paramilitary body were discovered and forced to reveal all the information. Consequently, when the authorities raided the haciendas where these activities occurred, the conservative police had already withdrawn, while other members stayed and killed several soldiers before escaping."
+ pol.gana.a:0 "Inconceivable."
+ #colombia.24
+ pol.mueren.title:0 "Confrontation between conservative police and armed forces"
+ pol.mueren.desc:0 "The haciendas that were on the outskirts of Pasto witnessed a brutal combat between the public forces and the so-called Conservative Police. In the struggle, a shot was heard that exploded the whole atmosphere. It is not known where it came from, but the confrontation ended with several dozen deaths on both sides. The military forces ended up stained when this became public, receiving criticism mainly from the clergy. The government has not ruled on the matter, but various political sectors are demanding an explanation about what happened, especially members of the conservative party. "
+ pol.mueren.a:0 "No way..."
+
+ colombia.25.title:0 "Conservative insurrection!"
+ colombia.25.desc:0 "The accumulation of political tension that we had been accumulating finally exploded. In the south of the country a fierce combat has broken out between militias of the Conservative party and the national army. The situation, unfortunately, is clear, the Conservatives rise up in arms. \n\nWe did wrong by allowing their subversive influence to spread throughout the nation, and now they have come under the control of the fearsome Laureano Gómez. Not only are there remnants of the army that rebelled, but the entire chain of command collapsed and it is impossible to make contact or direct any institution in its area of influence. Now there is only one option: to regain order by force. "
+ colombia.25.a:0 "This situation has gotten out of hand..."
+ colombia_25_tt:0 "The §Yconservative§! supporters start a civil war."
+
+ colombia.26.title:0 "Military insurrection!"
+ colombia.26.desc:0 "The renegade generals who viewed the management of [COL.GetLeader] with distrust have acted. The news of the rebellion was accompanied by riots throughout the army. Some were suppressed, while others completed their mission and joined the renegades. Part of the high command has been dissolved, and several ammunition reserves were looted by the rebellious forces. Although the republic has not entered into a generalized chaos, without a doubt this event will bring repercussions on the administration of traditional parties."
+ colombia.26.a:0 "This situation has gotten out of hand..."
+ colombia_26_tt:0 "The §Ymilitary§! start a civil war."
+
+ colombia.27.title:0 "Liberal insurrection!"
+ colombia.27.desc:0 "The liberal opposition turned out to be more violent than we expected. Its leader, Jorge Eliécer Gaitán, alleges that all this time he had tried to do things "peacefully", but the escalation of violence was unbearable. He could not go unnoticed or deal with the parsimony of pacifism. The main liberal leaders met in the north of the country and, with the help of General Alfredo Azuero Arenas, started an armed revolution against the government. There is no certainty about the size or strength of combat of their improvised militia units, but we know that if the rebellion doesn't end soon they will take the capital and will not stop until they control the entire country."
+ colombia.27.a:0 "This situation has gotten out of hand..."
+ colombia_27_tt:0 "The §Yliberal§! supporters start a civil war."
+
+ colombia.28.title:0 "Conservative militias organize across the country"
+ colombia.28.desc:0 "The high command of the armed forces sent worrying news to the presidential cabinet. Throughout the country, conservative paramilitaries have been reported arming themselves and taking control of different populations, mainly in the south. If we don't do something about it, the government could lose control of the situation."
+ colombia.28.a:0 "Let's organize an operation immediately!"
+ colombia.28.b:0 "Seizing their leaders is enough."
+ colombia.28.c:0 "We'll get over it."
+
+ colombia.29.title:0 "Laureano Gómez threatens civil war"
+ colombia.29.desc:0 "The conservative leader Laureano Gómez has made an ultimatum to the government. He affirms that, if the current government does not stop its action and involves the proposals of conservatism in its provisions, its supporters will take up arms and make the republic 'unlivable'. This delicate situation has shaken the entire national cabinet, since the threats are certain and sound quite real. "
+ colombia.29.a:0 "We will have to give in to his demands..."
+ colombia.29.b:0 "Let's change a few things to calm him down."
+ colombia.29.c:0 "We'll see if he dares."
+
+ colombia.31.title:0 "The Bonitto Vega case"
+ colombia.31.desc:0 "The insubordination of General Bonitto Vega as secretary of war is filling the patience of the ministerial cabinet. While the civil power demands punish the general as soon as possible, other sectors, such as the dissident conservative party, affirm that the government only "seek to discredit the Army before public opinion, in favor of a progressively militarized Police loyal to the interests of the incumbent president". Although the debate is tense and opinion is divided, in the end the decision rests on [COL.GetLeader]. "
+ colombia.31.a:0 "Remove General Vega from service."
+ colombia.31.b:0 "It's not such a big deal."
+
+ colombia.32.title:0 "General Villamizar disrespects orders"
+ colombia.32.desc:0 "General Villamizar's insubordination as secretary of war is filling the patience of the ministerial cabinet. It not only disregards the administrative orders it receives, but also openly incites to disobey the government for its "lack of leadership". They suggest that a court-martial be brought forward immediately to punish him with dismissal from office. On the other hand, the other members of the military high command consider that the situation is not so serious, but should be taken as a criticism of the government and not as an act of rebellion. "
+ colombia.32.a:0 "We must establish a council of war!"
+ colombia.32.b:0 "It's not such a big deal."
+
+ colombia.33.title:0 "General Neira shows disloyalty"
+ colombia.33.desc:0 "General Neira's insubordination as secretary of war is filling the patience of the ministerial cabinet. Not only does he disregard the administrative orders he receives, but also openly incites them to disobey the government for its "lack of leadership". They suggest that a court-martial be brought forward immediately to punish him with dismissal from office. On the other hand, the other members of the military high command consider that the situation is not so serious, but should be taken as a criticism of the government and not as an act of rebellion. "
+ colombia.33.a:0 "Remove General Neira from service."
+ colombia.33.b:0 "It's not such a big deal."
+
+ colombia.34.title:0 "The high command disrespects authority"
+ colombia.34.desc:0 "The military high command, preceded by Generals José Joaquín Villamizar, Miguel J. Neira and Eduardo Bonitto Vega, is refusing to present the respective reports to the civil power. The administrative orders have also been ignored and both the congress and the ministerial cabinet suspect that the military is up to something. The advisers suggest punishing this contempt before the situation escalates. For their part, the senior generals argue that the government "does not have the strength required to maintain the order”, and that they are only “doing what politicians don't know how to do”."
+ colombia.34.a:0 "A severe sanction is fair."
+ colombia.34.b:0 "A warning will suffice."
+ colombia.34.c:0 "It's not such a big deal."
+
+ colombia.36.title:0 "The military demand the reinstatement of general Bonitto Vega"
+ colombia.36.desc:0 "The other members of the military leadership have made clear to the executive power their dissatisfaction with the removal of General Vega. They argue that the current government is not in a position to withdraw members of the military high command without congressional authorization, and that it is only "worsening the very serious situation of current public order." \n\nHis strong assertions have not been well received by the ministerial cabinet, who affirm that the military is exceeding its functions, so they give in to their demands it would be synonymous with handing over the power of the institution. The other authorities, on the other hand, foresee the possibility of a military plot against the civil power, although these are inconclusive conjectures. "
+ colombia.36.a:0 "The general has already learned his lesson."
+ colombia.36.b:0 "Vega will remain out of service."
+
+ colombia.37.title:0 "The military demand the reinstatement of general Villamizar"
+ colombia.37.desc:0 "The other members of the military leadership have made clear to the executive power their dissatisfaction with the dismissal of General Villamizar. They argue that the current government is not in a position to withdraw members of the military high command without authorization from the congress, and that it is only "worsening the very serious situation of current public order." \n\nHis strong assertions have not been well received by the ministerial cabinet, who affirm that the military is exceeding its functions, so they give in to their demands it would be synonymous with handing over the power of the institution. The other authorities, on the other hand, foresee the possibility of a military plot against the civil power, although they are inconclusive conjectures. "
+ colombia.37.a:0 "The general has already learned his lesson."
+ colombia.37.b:0 "Villamizar will remain out of service."
+
+ colombia.38.title:0 "The military demand the reinstatement of general Neira"
+ colombia.38.desc:0 "The other members of the military leadership have made clear to the executive power their dissatisfaction with the removal of General Neira. They argue that the current government is not in a position to withdraw members of the military high command without authorization from the congress, and that it is only "worsening the very serious situation of current public order." \n\nHis strong assertions have not been well received by the ministerial cabinet, who affirm that the military is exceeding its functions, so they give in to their demands it would be synonymous with handing over the power of the institution. The other authorities, on the other hand, foresee the possibility of a military plot against the civil power, although they are inconclusive conjectures. "
+ colombia.38.a:0 "The general has already learned his lesson."
+ colombia.38.b:0 "Neira will remain out of service."
+
+ colombia.39.title:0 "The return of the UNIR"
+ colombia.39.desc:0 "Although the Unión Nacional de Izquierda Revolucionaria (UNIR) was dissolved in 1935 to merge with the liberal party, it was obvious that such a link was not going to last long. Jorge Eliécer Gaitán, popular leader and founder of the UNIR, decided to formally reestablish its political movement, now supported by the most radical sectors of liberalism, including, among others, his ideological partner Plinio Mendoza Neira and even the president López Pumarejo. \n\nEnjoying a great reception among the population, the UNIR grows stronger and stronger, concentrating huge popular masses under the leadership of Gaitán. "
+ colombia.39.a:0 "Big changes are coming in Colombia."
+
+ colombia.41.title:0 "The conservatives orchestrate a coup"
+ colombia.41.desc:0 "After organizing a large unit of militants, backed by both a large part of the civilian population and the clerical sector, a powerful conservative assault force was formed that attacked the presidential palace last night with such a decision that the local guard was unable to respond. As expected, [COL.GetLeader] had not foreseen this situation, so isolating him and his cabinet in the presidential office was a fairly simple task. The main leaders of conservatism, Gilberto Alzate Avendaño and Laureano Gómez, were soon in attendance. They were received with a standing ovation from supporters who gathered outside the palace to keep abreast of the situation. \n\nAfter several hours, late at night, [COL.GetLeader] finally agreed to sign the resignation and hand over command of the country to the conservative party. The news spread through the streets, and while party supporters celebrated, inside of the palace there was a battle to choose which of the two leaders would take office: the daring falangist Gilberto Alzate or the staunch traditionalist Laureano Gómez."
+ colombia.41.a:0 "Alzate is the leader that Colombia needs."
+ colombia.41.b:0 "Laureano Gómez is the only one who will stabilize the republic."
+
+ colombia.42.title:0 "[ROOT.GetLeader] resigns from the presidency"
+ colombia.42.desc:0 "Today, the president [ROOT.GetLeader] expressed to the congress the serious “neglect” of the classical liberal directives to the solution of national problems. The disagreements within liberalism, added to the reproaches of the conservative party, divided the public administration and made it impossible to govern. In contrast, he argued that his mandate could not continue under this scenario, and that he should cede command to someone who did enjoy widespread popular support. Thus, [FROM.GetLeader] formally resigned from the presidential command to hand it over to the current mayor of Bogotá (and candidate for the next elections) Jorge Eliécer Gaitán. \n\nGaitán is an illustrious personality, who not only moves the entire colombian people with his eloquence and tenacity, but also that shows real interest in completely reforming the Colombian system. Among a huge celebration by his followers, Gaitán assumed command of the republic and, after an exquisite discourse, the slogan of his campaign was heard in unison: People, for your victory, charge!"
+ colombia.42.a:0 "Gaitán is not a man, he is a people..."
+
+ colombia.43.title:0 "The coup fails!"
+ colombia.43.desc:0 "The militias organized by the conservative party were not effective enough for the coup. The plan was to attack the presidential palace and force [COL.GetLeader] to resign. However, the presidential guard had long enough to notify the army of the situation. The armed forces mobilized and in a matter of minutes the situation was in absolute chaos. Radio stations spread the message quickly and, in anger, hundreds of conservative militants stormed the armories from the police stations and formed large groups of civilians. The onslaught of these divisions was so severe that the opponents, the liberal supporters, also took to the streets with weapons in hand. \n\nThe situation escalated until the two main leaders of the party Conservative, Laureano Gómez and Gilberto Alzate Avendaño, declared that "in the face of the failure of the civilian struggle, only force remains", thus initiating a civil war between conservative supporters and remaining loyals to the [COL.GetLeader] administration. Even in the army itself, hundreds of soldiers deserted to join the conservative ranks. The republic is now in unprecedented disarray."
+ colombia.43.a:0 "Alzate will lead us to victory!"
+ colombia.43.b:0 "We will win under the leadership of Laureano Gómez!"
+
+ COL_grc_rejected:0 "They rejected the proposal"
+
+ colombia.44.title:0 "Colombia seeks our annexation "
+ colombia.44.desc:0 "Lately pan-nationalist rhetoric has been around in Colombia, appealing to the old idea of reforming the old Gran Colombia. Thus, by popular initiative, [COL.GetLeader] has asked our government to reintegrate us into its territory peacefully. Accepting would imply subjugating our independence and autonomy to the government of Bogotá, so it is difficult to conclude whether it would be beneficial or not. It is clear, however, that the current Colombian government tends to be repressive and authoritarian, so perhaps submitting is not the best option at first. "
+ colombia.44.a:0 "We will follow the path of the Colombians."
+ colombia.44.b:0 "The Ecuadorian people will remain free!"
+
+ colombia.45.title:0 "Ecuador rejects annexation!"
+ colombia.45.desc:0 "Claiming that Ecuador's independence is now definitive, [FROM.GetLeader] flatly denied reintegrating their nation into our Gran-Colombian restoration project. Ecuador closed its borders and deployed several units along the way, perhaps anticipating possible military action on our part. "
+ colombia.45.a:0 "It will be by force then..."
+
+ colombia.46.title:0 "Ecuador agrees to our demands"
+ colombia.46.desc:0 "[FROM.GetLeader] received with enthusiasm the proposal that we have put forward. The political movements of the country that sought the reunification of Gran Colombia celebrated the decision and announced that they would collaborate with our government in all the necessary efforts."
+ colombia.46.a:0 "They have chosen well."
+
+ colombia.47.title:0 "Colombia seeks to reintegrate us into their territory"
+ colombia.47.desc:0 "Our small isthmus was part of Colombia a long time ago, but our people decided to separate due to the lack of attention we received from the central government. Now, [COL.GetLeader] proposes that we should rejoin them, to resume the Gran Colombia project. Should we accept?"
+ colombia.47.a:0 "The destiny of Panama is with Colombia."
+ colombia.47.b:0 "Our independence is more valuable than their ambitions!"
+
+ colombia.48.title:0 "Panama refuses to be part of Colombia again!"
+ colombia.48.desc:0 "The decision of [FROM.GetLeader] was precise: Panama would never accept an annexation to Colombia. It evoked the many decades in which the isthmus was under our control and was ignored by current governments. It asserted that the struggle for the independence of Panama was a definitive and irreversible event, and that the people of Panama must prosper on their own. It is obvious that before an invasion of our forces the isthmus will be defenseless. However, the main drawback is that there is no land route to the region, since the Darien gap is an impregnable jungle. "
+ colombia.48.a:0 "They don't know what is good for them."
+
+ colombia.49.title:0 "Panama is about to be annexed"
+ colombia.49.desc:0 "Our request revealed to the Panamanian people the current reality: Panama is a nation in crisis, reduced to being a puppet of the United States. Therefore, when the news of the Gran-Colombian project reached their ears, hundreds of people manifested in the capital of the country and argued that Panama should be reintegrated to Colombia, not only because of the structural and political change that it is experiencing, but because it represents a more promising future than being an enclave of the North Americans. In the face of popular pressure, [FROM.GetLeader] approved the proposal and the annexation process is already underway. "
+ colombia.49.a:0 "They chose the correct option."
+
+ colombia.50.title:0 "Colombia proposes to resume the Gran-Colombian project "
+ colombia.50.desc:0 "[COL.GetLeader] made it clear: since he assumed the presidency of the neighboring country, his interest in reunifying the Gran Colombia. His wishes are finally being materialized, so he notified us about the possibility of unite our two nations to give continuity to the dream of the liberator Simón Bolívar. However, accepting would imply subjugating all our independence and autonomy to the administration of Bogotá, in addition to the always persistent opposition for accepting without further complications that Venezuela cease to exist as a nation. Many have shown their support for the motion, although others have also steadfastly refused to accept. The final decision is in the hands of [VEN.GetLeader]. "
+ colombia.50.a:0 "United we will honor Bolívar's legacy!"
+ colombia.50.b:0 "This is only lust for power.
+
+ colombia.51.title:0 "Venezuela refuses to collaborate in the Gran Colombian project!"
+ colombia.51.desc:0 "After a sharp debate between Venezuelan rulers at the local and national level, [FROM.GetLeader] declared that Venezuela will not be suddenly annexed. They alleged that the common origin that united Colombia and Venezuela was lost long time ago, and that a unification would make the new nation unsustainable in addition to spreading Colombia's political instability to Venezuelan territory. It is not clear if [FROM.GetLeader] has ordered a military withdrawal in order to avoid an invasion by us, but it would not be something to wonder. "
+ colombia.51.a:0 "They are a disgrace to the liberator!"
+
+ colombia.52.title:0 "The Venezuelan government approves our proposal"
+ colombia.52.desc:0 "After a sharp debate between the Venezuelan leaders at the local and national level, the embassy notified us that [FROM.GetName] will collaborate harmoniously in the restoration of Greater Colombia. As was foreseen in our proposal, [FROM.GetLeader] will remain at the head of the new administration in the region, and the bureaucratic procedures necessary for unification will be carried out. "
+ colombia.52.a:0 "The return of Gran Colombia is approaching."
+
+ colombia.53.title:0 "Colombia is willing to purchase Yaguas"
+ colombia.53.desc:0 "Colombian diplomats provided the possibility that we sell them the state of Yaguas. It was once part of Gran Colombia, and although it does not represent a strategic or widely industrialized area, they insist that we give up the land. It may make it a reasonable proposition, but we must consider the cost-benefit of the sale and whether it could be feasible in the long term. Should we accept? "
+ colombia.53.a:0 "An interesting proposal."
+ colombia.53.b:0 "Our land is not for sale."
+
+ colombia.54.title:0 "[FROM.GetName] accepts the sale of Yaguas"
+ colombia.54.desc:0 "Yaguas was part of Gran Colombia and helped it to have a consistent border with the amazon. Therefore, it is very pleasant to know that [FROM.GetName] knew how to recognize it and agreed to cede the territory to us. Not long to reestablish the colombian territory in the south."
+ colombia.54.a:0 "Diplomacy is a subtle art."
+
+ colombia.55.title:0 "[FROM.GetName] rejects Yaguas' proposal"
+ colombia.55.desc:0 "[FROM.GetLeader] had the audacity to deny us the territory of Yaguas. This state was part of Greater Colombia, and without it our new nation will not have a consistent border with the Amazon. They affirm that their sovereignty over the territory is the only one recognized and they do not intend to change it. "
+ colombia.55.a:0 "Then we'll take it ourselves!"
+ colombia.55.b:0 "It's a shame."
+
+ colombia.56.title:0 "Colombia wants to purchase Mapari"
+ colombia.56.desc:0 "Colombian diplomats have informed the government of Colombia's interest in acquiring the state of Mapari. They affirm that they are willing to pay a considerable sum, and that it would be of great help in the reconstruction of their border, Proposed by [COL.GetLeader]. Should we accept this offer? "
+ colombia.56.a:0 "An interesting proposal."
+ colombia.56.b:0 "Our land is not for sale."
+
+ colombia.57.title:0 "[FROM.GetName] accepts Mapari's proposal"
+ colombia.57.desc:0 "[FROM.GetLeader] agrees to sell us Mapari, as long as we pay the agreed price and respect the other limits we have with them. The garrisons of [FROM.GetName] are already being withdrawn and the change of administration has already been notified to the population of the area, who (or at least the majority) see this change with hope. "
+ colombia.57.a:0 "Excellent."
+
+ colombia.58.title:0 "[FROM.GetName] refuses to sell Mapari"
+ colombia.58.desc:0 "[FROM.GetLeader] does not agree with selling us Mapari, as it considers that our ambitions are going too far by interfering with its sovereignty. Therefore, it is possible that they will reinforce the military presence in the area to avoid a possible altercation. The ministerial cabinet regrets that a diplomatic agreement could not be reached, and war is beginning to be seen as a plausible option. "
+ colombia.58.a:0 "It will be ours again, at any cost."
+ colombia.58.b:0 "There is nothing to do."
+
+ colombia.59.title:0 "Colombia wants to negotiate the purchase of Japurá"
+ colombia.59.desc:0 "Through a diplomatic note the Colombian government has notified its interest in the state of Japurá, which is under our control. This territory, which was once part of Gran Colombia, seems to represent part of the national identity of the new republic that [COL.GetLeader] seeks to forge. That is why they have offered to buy the territory, an option that resonates among government advisers as viable in the current tense panorama. "
+ colombia.59.a:0 "An interesting proposal."
+ colombia.59.b:0 "Our land is not for sale."
+
+ colombia.60.title:0 "[FROM.GetName] agrees to sell Japurá"
+ colombia.60.desc:0 "[FROM.GetLeader] deemed it feasible to hand over control of Japurá to us in exchange for the agreed pay. Bureaucratic procedures are already underway and border guards have been mobilized to the resulting dividing line. The population has celebrated this milestone and welcome the future of our nation. "
+ colombia.60.a:0 "Our borders are reestablishing."
+
+ colombia.61.title:0 "[FROM.GetName] does not agree to sell Japurá"
+ colombia.61.desc:0 "[FROM.GetLeader] does not consider it feasible to hand over control of Japurá to us no matter how much we pay. His statement has been finalized and he requests that a similar proposal not be presented again, since the decision is definitive. Public opinion has not looked favorably on this diplomatic failure, but due to the situation of the country there is not much that can be done about it."
+ colombia.61.a:0 "Well, we'll take it from them!"
+ colombia.61.b:0 "It's a shame."
+
+ colombia.62.title:0 "Colombia requests the sale of Guayana Esequiba"
+ colombia.62.desc:0 "Colombian diplomats provided the possibility that we sell the Esquibo territory to them. It may be a reasonable proposal, but we must take into account the amount of resources that the place contains and in cost-benefit of the sale. Should we accept? "
+ colombia.62.a:0 "An interesting proposal."
+ colombia.62.b:0 "Our land is not for sale."
+
+ colombia.63.title:0 "[FROM.GetName] is willing to sell the Essequibo"
+ colombia.63.desc:0 "[FROM.GetName] agreed to give us the esequibo in exchange for an accessible industrial quota. It was not really expected that [FROM.GetName] would agree, but considering the world panorama, it is likely that they would accept due to their inability to hold that territory."
+ colombia.63.a:0 "Our borders are reestablishing."
+
+ colombia.64.title:0 "[FROM.GetName] will not negotiate the sale of the Essequibo"
+ colombia.64.desc:0 "Representatives of [FROM.GetName] have made it clear that the territory of the esequibo will not be sold under any circumstances to our nation, since it is an area of strategic and essential resources. Perhaps anticipating our plans, they have mobilized troops to the border area for their protection. There is not much left to do about it diplomatically. "
+ colombia.64.a:0 "If they insist so much on preserving what is ours..."
+ colombia.64.b:0 "It will stay in their hands then."
+
+ colombia.65.title:0 "The Hispanic Bloc"
+ colombia.65.desc:0 "With the threat of communism and democratic populism looming over the world, the president of Colombia [COL.GetLeader] has proposed that we establish an alliance that could keep our nations stable and secure in the face of conflict. Remembering our common roots, Colombia seeks that this new “Hispanic Bloc” represents the supremacy of the autocratic will. This alliance would not only lead to a powerful union in a warlike context, but also mutual support against any attack. "
+ colombia.65.a:0 "An excellent idea."
+ colombia.65.b:0 "We are not interested in allying ourselves with a backward country."
+ colombia.66.title:0 "The [From.GetAdjective] government agrees to join the Hispanic Bloc."
+ colombia.66.desc:0 "It has been notified that the [From.GetAdjective] government agrees to enter the Hispanic Bloc, in order to face and counterbalance the current world powers. The respective procedures are ongoing, so we hopes that the alliance will be formalized very soon and we will receive the shared intelligence reports. "
+ colombia.66.a:0 "Our alliance will shake the world powers."
+ colombia.67.title:0 "The [From.GetAdjective] government is not interested in joining the Hispanic Bloc."
+ colombia.67.desc:0 "The ambassador of [From.GetName] has made it clear that they are not interested in establishing an alliance with us. He mentions that the global situation does not merit this type of proposal at this time, nor that they are conducive considering the delicate context in which the world finds itself. "
+ colombia.67.a:0 "They may change their minds later."
+
+ colombia.69.title:0 "The 1938 elections"
+ colombia.69.desc:0 "These elections have been historic, since it is the first time (thanks to López Pumarejo's reforms) that voters did not require rental conditions or illustration to vote. As planned, the Conservatives abstained from participating, claiming they had no chance of winning nor democratic guarantees. Therefore, liberal Eduardo Santos won without contenders with a total of 511,947 votes. "
+ colombia.69.a:0 "The people have spoken."
+ colombia.71.title:0 "The 1942 elections"
+ colombia.71.desc:0 "As four years ago, the liberal party was victorious in these elections. Former president López Pumarejo ran again as a candidate and emerged triumphant against another candidate of the liberal dissidence. Although the coming four years are promising, the most entrenched conservatives are threatening the new presidency. Let's hope they do not prosper."
+
+ colombia.72.title:0 "The promotion of Rojas Pinilla"
+ colombia.72.desc:0 "Officer Gustavo Rojas Pinilla is showing exceptional talent and ability to command units. Some attribute it to his knowledge acquired in his military mission, while others only affirm that it's a natural gift. His performance has impressed his superiors, who have unanimously decided to promote him to general. However, for the promotion to take effect, it must be approved by the president [ROOT.GetLeader] as is required by law. "
+ colombia.72.a:0 "He has the approval."
+ colombia.72.b:0 "He's not ready yet."
+
+ colombia.73.title:0 "The opposition question"
+ colombia.73.desc:0 "The focuses of this new conservative state are placed on the old rulers and eternal opponents of the traditionalist doctrine: the liberals. There is no doubt that their management has been extremely popular, but that does not excuse that their reforms were leading Colombia down the path of atheism and anarchy. It was unacceptable. \n\nNow, despite the fact that our coup was a success, the liberals continue to represent a serious problem for the republic. They does not have any kind of power, but they continue to mobilize against the institutional order in the streets. Characters like Jorge Eliécer Gaitán only incite the masses to contradict the government, and if they continue, there will come a point where we will have no control over the country. But considering that his old administration was quite successful, we are left with only two options: either collaborate with them to avoid popular anger, or attack them with such force that they never shall recover."
+ colombia.73.a:0 "It is time for a national reconciliation."
+ colombia_73_a_tt:0 "The §Yliberal subversive influence§! will grow §R25%§! faster, but eliminating it will be easy."
+ colombia.73.b:0 "We will not give the country to those alienated!"
+ colombia_73_b_tt:0 "The §Yliberal subversive influence§! will grow §G35%§! slower, but eliminating it will be hard."
+
+ colombia.74.title:0 "The republic is in disorder"
+ colombia.74.desc:0 "The government of Laureano Gómez has not been popular. The stability of the country seems to be increasingly low, while political violence, either between traditional parties or among ideological fanatics, has reached a point of acuity never seen before, coupled with the constant fear of a inevitable war of unimaginable scales. \n\nThe opposition has blamed Laureano Gómez and his extremist and repressive policies. Surprisingly, these anti-Laureano supporters found an ally in the armed forces. The military had also been questioning the new regime, and led by Gustavo Rojas Pinilla they agreed with the opposition and now seem to be organizing a major rebellion. Perhaps the only way to prevent the country from entering its tenth civil war is cede power to Rojas and the insurgents peacefully... "
+ colombia.74.a:0 "Let's see if they dare!"
+
+ colombia.75.title:0 "The rise of the opposition"
+ colombia.75.desc:0 "What we had foreseen happened, and yet it took us by surprise. The now rebel general Gustavo Rojas Pinilla consolidated enough power among the opposition to lead an armed rebellion. Urgent reports are coming from almost every corner announcing that several military garrisons have risen up and distributed weapons among the civilian population. The chain of command has fallen, the army has been dispersed and government forces are fighting fervently to regain institutional control. Colombia has entered into a bloody war civil."
+ colombia.75.a:0 "Ungrateful traitors!"
+ colombia_75_tt:0 "Supporters of §YGustavo Rojas Pinilla§! will start a civil war."
+
+ colombia.76.title:0 "The opinion coup"
+ colombia.76.desc:0 "The people and the opposition celebrate the fall of the Laureano Gómez regime. In what they have called the "Opinion Coup" (since it has been supported by almost the entire country). General Gustavo Rojas Pinilla assumed the presidency without shedding a single drop of blood. Rojas Pinilla promises to stabilize the country and lead it to a time of glory never seen before under any other regime. It will certainly not be difficult for him, considering that he is not only extraordinarily popular but also adept at holding the army together under his figure."
+ colombia_76_tt:0 "§YComando General de las Fuerzas Armadas§! becomes the ruling party."
+ Colombia.76.a:0 "And so another military regime begins..."
+
+ colombia.77.title:0 "Our forces defeat the Americans"
+ colombia.77.desc:0 "The will of our men has triumphed over US ambitions to seize our territory. The brave army officers led the charge against the US garrisons; such a violent attack proved impossible to repel, and today our forces occupied the canal triumphs. The change of administration has been carried out and the sea crossing is now definitively under our control."
+ colombia.77.a:0 "We take back what belongs to us!"
+
+ colombia.78.title:0 "The army is defeated on the isthmus"
+ colombia.78.desc:0 "The dictator of Colombia [From.GetLeader] has had the audacity to launch a major offensive against our forces in the Panama Canal from nearby bases. Unfortunately they succeded and our confused troops are withdrawing. The attack has impaired our ability to project our strength to the world, which is an international humiliation."
+ colombia.78.a:0 "Unfortunately, we have more pressing issues. An embargo should suffice."
+ colombia.78.b:0 "This deserves more than a warning!"
+
+ colombia.79.title:0 "The army is defeated in the canal"
+ colombia.79.desc:0 "The military offensive did not have the expected success in the canal. The US forces planted a fierce defense, establishing a front that was impossible for us to break. The officers have already ordered the withdrawal and our men have retracted back into the isthmus."
+ colombia.79.a:0 "A little inconvenience, nothing else."
+
+ colombia.80.title:0 "Our forces manage to contain the attack on the canal"
+ colombia.80.desc:0 "The dictator of Colombia [From.GetLeader] has had the audacity to launch a major offensive against our forces in the Panama Canal from nearby bases. Fortunately, our brave soldiers managed to stop their operation and have repelled the invaders. The attack has shown that we are no longer the masters of the continent, which is an international humiliation."
+ colombia.80.a:0 "Unfortunately, we have more pressing issues. An embargo should suffice."
+ colombia.80.b:0 "These actions are unacceptable!"
+
+ colombia.81.title1:0 "[USA.GetName] gives in to pressure on the Panama Canal"
+ colombia.81.title2:0 "Conflicts for the control of the Panama canal"
+ colombia.81.desc1:0 "After an unexpected attack on the Panama Canal, the Colombian forces occupied the surrounding area and dispersed the US forces settled there. [COL.GetLeader] described this event as a total and definitive victory, claiming that all Panamanian territory is finally "in the hands of its rightful owner." \n\nThe international community recognizes that this event is a humiliation for the US forces and may mean the decline of that country. Although [USA.GetLeader] has not made any statements at the moment, it would not be surprising if it responds with severe reprisals against the South American nation."
+ colombia.81.desc2:0 "After an unexpected attack on the Panama Canal, Colombian armed forces attacked the US enclave from nearby military bases. However, the attack did not succeed and was a crushing defeat for the aggressors. Neither [COL.GetLeader] nor [USA.GetLeader] have provided statements in this regard, while international analysts agree that this event will not go unnoticed, so it would not be surprising if the americans respond with severe reprisals against the latin nation."
+ colombia.81.a:0 "We just show our strength!"
+ colombia.81.b:0 "An offense to the sovereignty of the United States."
+ colombia.81.c:0 "Does Colombia pretend to act up without consequences?"
+
+ colombia.82.title:0 "The negotiation about the oil fields"
+ colombia.82.desc:0 "Similar to our Mexican and Venezuelan counterparts, our country is one of the largest oil producers in the region. Our economy depends largely on its extraction, but recent industrialization has shown that the coffers of the nation are not only filled with that so-called “black gold”. \n\nTo stop depending almost exclusively on this export, we have organized a plan to grant concessions to other democratic foreign powers in exchange for support in civil and military production. This will not only benefit us in industrial matters, but it will also support the war cause in defense of democracy during these tough times. The only thing left is to sign the plan and choose who we are going to present it to. "
+ colombia.82.a:0 "American machinery needs Colombian fuel."
+ colombia.82.b:0 "The French army is a little short on oil."
+ colombia.82.c:0 "Our oil will help the British Royal Navy."
+ colombia.82.d:0 "Another major powers need our resources."
+
+ colombia.83.title:0 "Colombia offers the concession of its oil fields"
+ colombia.83.desc:0 "In an unexpected turn of events, the Colombian embassy sent us a plan developed by it [COL.GetLeader] in which it proposed to grant us rights to one of its oil fields in exchange for a simple and modifies industrial quota. Accepting the offer is a tempting option, although if our nation is short on factories we may have to reject it."
+ colombia.83.a:0 "A wonderful proposal!"
+ colombia.83.b:0 "We are not in a position to accept now."
+ COL_oil_concession:0 "They have given us their resources"
+
+ colombia.84.title:0 "[FROM.GetName] accepts the concession"
+ colombia.84.desc:0 "A diplomatic note has informed us that [FROM.GetLeader] showed great interest in the offer of our concession plan and accepted it immediately. The respective procedures are already underway and it is expected that shortly the concession will be formalized and we will receive our industrial quota. "
+ colombia.84.a:0 "Excellent!"
+
+ colombia.85.title:0 "[FROM.GetName] rejects the oil concession"
+ colombia.85.desc:0 "Although we were sure that [FROM.GetName] was going to accept our offer, the news has surprisingly arrived that they have rejected it. They claim that they are not in a position to meet the industrial quota that we ask for in exchange and that we should look for another option."
+ colombia.85.a:0 "It will be for someone else then."
+
+ colombia.86.title:0 "The oligarchs condemn the government of [ROOT.GetLeader]"
+ colombia.86.desc:0 "An urgent report from the Ministry of Finance confirms that the nation has entered a delicate economic and social crisis. Several entrepreneurs and oligarchs decided to withdraw their main industries from the country after knowing that [ROOT.GetLeader] ratified the controversial agrarian reform, expressing that said reform was “unnecessary” and that it went “against national entrepreneurship”. Consequently, the magnates closed their main industries and claimed not to reopen them until the government guaranteed the “fair treatment that they deserve”. If the government does not pronounce on it, it is certain that other oligarchs in the country will take the same decision."
+ colombia.86.a:0 "But it's for the good of the people!"
+
+ colombia.87.title:0 "Trade Unions mobilize against the government"
+ colombia.87.desc:0 "Today worrying news has reached the presidential office. The main trade union organizations in the country were fed up with waiting for the government's collaboration. The anger of these groups reached its peak when they were notified that [ROOT.GetLeader] administration did not sanction the agrarian reform so longed for among the labor union, but continued with a policy that privileges the oligarchs over the workers. Because of this, the union leaders incited their followers to block roads, cut off supplies and organize general strikes throughout the country. They claim that these actions will not stop until the government gives in and reforms the labor law. "
+ colombia.87.a:0 "But it's for the good of the republic!"
+
+ colombia.88.title:0 "The Colombian-American Assistance Treaty"
+ colombia.88.desc:0 "With the fascist and communist threat looming over the western world, the president of Colombia [COL.GetLeader] has proposed that we enter into an alliance that could keep our two nations stable and secure in the face of possible conflict. "
+ colombia.88.a:0 "A strategic alliance."
+ colombia.88.b:0 "We are not interested."
+
+ colombia.89.title:0 "The United States signs the treaty"
+ colombia.89.desc:0 "The US embassy in the capital confirmed that [USA.GetLeader] agreed to ratify the treaty, and that it will enter into force as soon as possible. However, we may only see its effects when we were in an armed conflict."
+ colombia.89.a:0 "Good news!"
+
+ colombia.90.title:0 "United States rejects the treaty"
+ colombia.90.desc:0 "The US embassy in the capital reported that [USA.GetLeader] was not interested in ratifying the assistance treaty, and that it was not willing to accept a similar proposal in these times of war. "
+ colombia.90.a:0 "So we can't count on them..."
+
+ colombia.91.title:0 "The reunification of Gran Colombia"
+ colombia.91.desc:0 "After having recovered all the nations belonging to the old Gran Colombia, the Colombian government at the head of [COL.GetLeader] proclaimed to the international community the official reunification of Gran Colombia. Inspired by political ideas of Simón Bolívar, pan-nationalist propaganda has spread throughout the nation, cementing citizens' confidence in the future of their new homeland. \n\nHowever, this “rebirth of the Bolívar's legacy” has given much to talk about in the American continent. While some argue that instability will make the nascent republic collapse, others consider that external threats are a bigger problem. For now, the future of the Colombian people remains a mystery."
+ colombia.91.a:0 "The world will know what we are capable of!"
+ colombia.91.b:0 "Another power imbalance in the region."
+ colombia.91.c:0 "It won't last long!"
+
+ colombia.92.title:0 "Coup d'etat in Gran Colombia"
+ colombia.92.desc:0 "In response to the collapse of the civil administration in Colombia during the presidency of Laureano Gómez, the two traditional parties of the country supported a rebellion led by general Gustavo Rojas Pinilla. Although this rebellion was close to becoming another civil war for the country, the military finally deposed the government of Laureano Gómez and installed Rojas Pinilla as the new head of state. \n\nThis historic event has been named the 'opinion coup' by analysts, since has been supported by almost every non-Laureanist political sector of the nation. Even though the new government has not given express statements, Rojas Pinilla is expected to stabilize the country and reduce the violent legacy of his predecessor."
+ colombia.92.a:0 "A new era for Colombia!"
+ colombia.92.b:0 "It was to be expected."
+ colombia.92.c:0 "We will defeat them in any case!"
+
+ colombia.93.title:0 "Óscar Benavides rebels against the government!"
+ colombia.93.desc:0 "General Óscar Benavides had been showing tendencies towards insubordination for some time. It was clear that he did not fully agree with the new government that was established after the Constituent Assembly. Today it was finally announced that his rebellion is definitive: Benavides left his position and crossed into Colombia at the time of the declaration of war. Now he is at the service of our enemies, trying to establish a new regime in our nation with their support."
+ colombia.93.a:0 "Traitor!"
+
+ colombia.95.title:0 "The provisional government of Loreto "
+ colombia.95.desc:0 "With Loreto under occupation by our armed forces, general Óscar Benavides has suggested establishing the new peruvian provisional government there. An administrative order has already been established to maintain order, and they have begun to recruit military militias to support the peruvian cause. Benavides has expressed his gratitude to us, and hopes that the relations between the new Peruvian state and our nation will be close and friendly."
+ colombia.95.a:0 "Together we will reestablish order in Peru."
+
+ colombia.96.title:0 "The death of Vásquez Cobo"
+ colombia.96.desc:0 "The republic is in mourning. After suffering several health problems, general Vásquez Cobo, hero of the Colombian-Peruvian war and great opponent of the politicians, died today. His advanced age was not an impediment to lead the coup against the two traditional parties, which were leading the nation to a state of cyclical and perpetual violence. His legacy will live on in the future of the nation and his dedication will never be forgotten by the Colombian people. But now the question is: who will lead the republic? "
+ colombia.96.a:0 "Establishing a Military Junta will keep personal interests out."
+ colombia.96.b:0 "The General Staff will assume the governmental functions."
+ colombia.96.c:0 "General Villamizar must take command."
+ colombia.96.d:0 "General Bonitto Vega is the right leader."
+
+ colombia.97.title1:0 "The army takes control of Japurá"
+ colombia.97.title2:0 "The armed forces occupy Mapari"
+ colombia.97.desc1:0 "The coordinated attack that we have planned on Japurá has been a complete success. The Brazilian forces have withdrawn and have been disorganized while ours have triumphantly occupied the state. There is no need to wait to find out that [BRA.GetLeader] will not react in the best way to this event, but at least the supremacy of our army over theirs has been assured. Japurá will soon be officially reintegrated to Colombia."
+ colombia.97.desc2:0 "The rapid offensive of our troops was a brutal clash between our army and the Brazilian. The resulting combat lasted for a time until ending with our victory and subsequent occupation of Mapari. The commanders of the battalions have received multiple praise for this victory as well as the general in charge of leading the confrontation. Mapari is definitely under Colombian control, as it should be."
+
+ colombia.98.title1:0 "The army is defeated in Japurá"
+ colombia.98.title2:0 "Our forces are defeated in Mapari"
+ colombia.98.desc1:0 "The coordinated attack we have planned on Japurá has been a total failure. The Brazilian forces put up fierce resistance and it was impossible for our soldiers to secure the territory. No need to wait to find out that [BRA .GetLeader] will not react in the best way to this event no matter how successful they are. In the worst-case scenario, a full-scale war could break out between the our nations."
+ colombia.98.desc2:0 "The rapid offensive of our troops was a brutal clash between our army and the Brazilian. The resulting combat lasted for a time, but unfortunately we were unable to take control of Mapari. The commanders of the battalions can't explain how such a planned attack did not have the expected success, while the general in command alludes to various factors of different kinds. The troops have been very demoralized by this defeat, just as public opinion questions the true effectiveness of our army."
+
+ colombia.99.title1:0 "The attack on Japurá is repelled"
+ colombia.99.title2:0 "Colombians withdraw from Mapari"
+ colombia.99.desc1:0 "Colombia has had the audacity to launch a major offensive against our forces in Japurá from nearby bases. It was something we expected knowing the dictatorial ambitions of [COL.GetLeader]. Fortunately, our brave soldiers succeeded stop their operation and have repelled the invaders. This heroic defense has shown that our army continues to be of a higher standard, reinforcing our sovereignty in the region and our national unity."
+ colombia.99.desc2:0 "An unexpected Colombian attack on the garrisons in Mapari forced our men to engage the aggressors. Fortunately, the divisions were strong enough to hold their positions and not even a meter of land ended up under enemy control. [BRA.GetLeader] has praised the work and heroism of the soldiers in the Amazon, but still questions whether it would be appropriate to organize a military response or maintain the statu quo."
+ colombia.99.a:0 "We demonstrate our supremacy."
+ colombia.99.b:0 "It's an act of aggression!"
+
+ colombia.100.title1:0 "Colombian forces occupy Japurá"
+ colombia.100.title2:0 "The Colombian army takes control of Mapari"
+ colombia.100.desc1:0 "Colombia has had the audacity to launch a major offensive against our forces in Japurá from nearby bases. It was something we expected knowing the dictatorial ambitions of [COL.GetLeader]. Unfortunately, our army was unable to repel the attack and the state has fallen into the hands of the Colombians. It seems that our nation is in decline, and it is possible that other nations take advantage of this appearance to gain their own advantage."
+ colombia.100.desc2:0 "An unexpected Colombian attack on the garrisons in Mapari forced our men to engage in combat with the aggressors. Unfortunately, it was impossible to repel the attack and the state has ended up under Colombian occupation. The military officials suggest to finalize a plan attack to drive them back, but considering the outcome of the battle, it is likely to be fruitless."
+ colombia.100.a:0 "Let them have it then."
+ colombia.100.b:0 "That's unheard of!"
+
+ colombia.101.title:0 "Colombia plans to seize our territory in the north "
+ colombia.101.desc:0 "[COL.GetLeader] has had the nerve to claim for his nation the territory that we control in the north and that we just obtained several years ago. If we do not send a defense contingent to the border with Colombia they may seize it without a word, which would be a disservice to our government and to the Brazilian army. "
+ colombia.101.a:0 "We will handle the situation properly."
+
+ colombia.102.title:0 "Exiled Colombian politicians offer their support"
+ colombia.102.desc:0 "After the coup d'etat leaded by Alfredo Vásquez Cobo in Colombia, many politicians had to go into exile due to the imminent takeover of power by the military. However, they remained determined to retake power in their nation and re-establish the previous institutional order. This is their opportunity. Several of those exiles have offered the government to collaborate with us in our struggle, giving us their knowledge about the internal workings of the country to obtain a strategic advantage. Our government advisers doesn't agree about accept or not this offer, as we are uncertain about his intentions or if they are even true."
+ colombia.102.a:0 "We needed that help!"
+ colombia.102.b:0 "We can't trust them"
+
+ colombia.103.title:0 "Politicians in exile are supporting [From.GetName]!"
+ colombia.103.desc:0 "After Alfredo Vásquez Cobo's coup in Colombia, many politicians had to go into exile due to the imminent takeover of power by the military. However, they remained determined to regain control and re-establish the previous institutional order. Now, with the conflict looming over Colombia, these exiles have found their opportunity to act; they have had the audacity to offer themselves to the [From.GetAdjective] government as collaborators to overthrow the new military regime. Now the enemy knows how our government works and it will have a strategic advantage in combat."
+ colombia.103.a:0 "Even from abroad they betray their country!"
+
+ colombia.104.title:0 "Confederate triumph in the war of unification"
+ colombia.104.desc:0 "Our support for the unionist forces has been of great help in their campaign. The triumph of their mission has been well received by the population, and the new Peru-Bolivian Confederation has been officially proclaimed. [PRU.GetLeader] has notified its gratitude to our government, and hopes that the relations between the new nation and ours will be close and rewarding. However, they may be suspicious of our intentions to maintain the hegemony of the region, which could lead to future conflict. But those guesses are inconclusive, and as long as our actions are subtle, there should be no downsides to our work."
+ colombia.104.a:0 "Excellent."
+
+ colombia.105.title:0 "Unionists Prepare for Insurrection!"
+ colombia.105.desc:0 "The moment we least expected has finally arrived. We know that the unionist militias are preparing to take up arms, and there is not much we can do but prepare for the impending civil war. It is very likely that they will count with the military support of the colombians, but the situation does not allow us to deal with them now. We must face the unionists first and then we will take charge of their architects."
+ colombia.105.a:0 "We will crush them!"
+
+ colombia.106.title:0 "The Colombian government supports the subversive militias"
+ colombia.106.desc:0 "Our intelligence reports report that far-right organizations that advocate for the reunification of the Peru-Bolivian Confederation are increasing their activities in the nation. These incidents were previously isolated, but are intensifying due to what appears to be financial support from Colombians. These accusations are delicate, so the absence of conclusive evidence leaves us in an unworkable position. In any case, it is best to prepare before it is too late."
+ colombia.106.a:0 "Who do they think they are?!"

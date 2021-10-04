@@ -24,7 +24,7 @@ country_event = {
                 expire = "1965.1.1"
                 ideology = military_socialism
                 traits = {
-                    ARG_brutal_leader
+                    #
                 }
             }
             remove_ideas = BOL_unstable_republic
@@ -105,7 +105,7 @@ country_event = {
                         expire = "1965.1.1"
                         ideology = liberalism # liberalism, personally, but puppet for military
                         traits = {
-                            #
+                            BOL_tejada_incompetent_leader_1
                         }
                     }
                     if = {
@@ -123,6 +123,12 @@ country_event = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = ROOT
                             }
+                            create_unit = {
+                                division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
+                                owner = ROOT
+                            }
+                        }
+                        random_owned_controlled_state = {
                             create_unit = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = ROOT
@@ -241,7 +247,7 @@ country_event = {
                             expire = "1965.1.1"
                             ideology = military_socialism
                             traits = {
-                                ARG_brutal_leader
+                                #
                             }
                         }
                         if = {
@@ -656,9 +662,8 @@ country_event = {
 			}
 			create_field_marshal = {
                 name = "Germán Busch"
-                portrait_path = "gfx/leaders/BOL/portrait_BOL_german_busch.dds"
+                picture = "portrait_BOL_german_busch.dds"
                 traits = { offensive_doctrine brilliant_strategist }
-                id = 44124
                 skill = 3
                 attack_skill = 3
                 defense_skill = 2
@@ -674,8 +679,7 @@ country_event = {
 			}
 			create_corps_commander = {
                 name = "David Toro"
-                portrait_path = "gfx/leaders/BOL/portrait_BOL_david_toro.dds"
-                id = 44123
+                picture = "portrait_BOL_david_toro.dds"
                 traits = { }
                 skill = 3
                 attack_skill = 3
@@ -1014,7 +1018,7 @@ country_event = {
             expire = "1965.1.1"
             ideology = military_socialism
             traits = {
-                
+                #
             }
         }
         hidden_effect = {
