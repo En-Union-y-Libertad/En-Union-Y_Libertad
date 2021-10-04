@@ -63,8 +63,9 @@ leader_traits = {
 		conscription = 0.01
 		army_defence_factor = 0.10
 		army_morale_Factor = 0.10
+	}	
 
- #generic
+    #generic
 
     generic_army_connections = {
 		random = yes
