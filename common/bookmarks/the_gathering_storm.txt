@@ -549,6 +549,7 @@ bookmarks = {
 			ideas = {
 				CHL_highly_divided_social_classes_idea
 				CHL_land_of_mountain
+				CHL_political_instability_idea
 			}
 			focuses = {
 				CHL_a_new_idea
@@ -607,7 +608,7 @@ bookmarks = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
 		}
-
+		
 		"COL" = {
 			minor = yes 
 			history = "COL_GATHERING_STORM_DESC"

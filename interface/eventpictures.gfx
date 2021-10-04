@@ -6,8 +6,33 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_CHL_chile_21"
+		texturefile = "gfx/event_pictures/CHL_chile_21.dds"
+	}
+
+	spriteType = {
+		name = "GFX_CHL_chile_25"
+		texturefile = "gfx/event_pictures/CHL_chile_25.dds"
+	}
+
+	spriteType = {
+		name = "GFX_CHL_chile_26"
+		texturefile = "gfx/event_pictures/CHL_chile_26.dds"
+	}
+
+	spriteType = {
+		name = "GFX_CHL_chile_31"
+		texturefile = "gfx/event_pictures/CHL_chile_31.dds"
+	}
+
+	spriteType = {
 		name = "GFX_newsevent_342"
 		texturefile = "gfx/event_pictures/newsevent_342.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_349"
+		texturefile = "gfx/event_pictures/news_349.dds"
 	}
 
 	spriteType = {
@@ -18,11 +43,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_346_pic"
 		texturefile = "gfx/event_pictures/news_346_pic.dds"
-	}
-
-	spriteType = {
-		name = "GFX_COS_event_1"
-		texturefile = "gfx/event_pictures/COS_event.1.dds"
 	}
 
 	spriteType = {
@@ -124,6 +144,53 @@ spriteTypes = {
 		name = "GFX_ARG_news_event_338"
 		texturefile = "gfx/event_pictures/ARG_news_event_338.dds"
 	}
+	
+	#Colombia
+
+	spriteType = { 
+		name = "GFX_news_event_rojas_coup"
+		texturefile = "gfx/event_pictures/news_event_rojas_coup.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_news_event_gran_colombia"
+		texturefile = "gfx/event_pictures/news_event_gran_colombia.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_gaitan"
+		texturefile = "gfx/event_pictures/report_event_gaitan.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_rojas_coup"
+		texturefile = "gfx/event_pictures/report_event_rojas_coup.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_tragedy"
+		texturefile = "gfx/event_pictures/report_event_tragedy.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_conference"
+		texturefile = "gfx/event_pictures/report_event_conference.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_news_event_conference_ends"
+		texturefile = "gfx/event_pictures/news_event_conference_ends.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_unir"
+		texturefile = "gfx/event_pictures/report_event_unir.dds"
+	}
+
+	spriteType = { 
+		name = "GFX_report_event_gaitan_muerte"
+		texturefile = "gfx/event_pictures/report_event_gaitan_muerte.dds"
+	}	
 	
 	spriteType = {
 		name = "GFX_report_event_canada_ronnie"
@@ -3006,43 +3073,6 @@ spriteTypes = {
 	spriteType = { 
 		name = "GFX_report_PRU_event_election"
 		texturefile = "gfx/event_pictures/PRU_event_election.dds"
-	}
-
-	#Colombia
-
-	spriteType = { 
-		name = "GFX_report_event_gaitan"
-		texturefile = "gfx/event_pictures/report_event_gaitan.dds"
-	}
-
-	spriteType = { 
-		name = "GFX_report_event_rojas_coup"
-		texturefile = "gfx/event_pictures/report_event_rojas_coup.dds"
-	}
-
-	spriteType = { 
-		name = "GFX_report_event_tragedy"
-		texturefile = "gfx/event_pictures/report_event_tragedy.dds"
-	}
-
-	spriteType = { 
-		name = "GFX_report_event_conference"
-		texturefile = "gfx/event_pictures/report_event_conference.dds"
-	}
-
-	spriteType = { 
-		name = "GFX_news_event_conference_ends"
-		texturefile = "gfx/event_pictures/news_event_conference_ends.dds"
-	}
-
-	spriteType = { 
-		name = "GFX_report_event_unir"
-		texturefile = "gfx/event_pictures/report_event_unir.dds"
-	}
-
-	spriteType = { 
-		name = "GFX_report_event_gaitan_muerte"
-		texturefile = "gfx/event_pictures/report_event_gaitan_muerte.dds"
-	}	
+	}		
 	
 }

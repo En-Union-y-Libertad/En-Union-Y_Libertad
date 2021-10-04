@@ -24,7 +24,7 @@
  FOCUS_FILTER_ARMY_NAVY_RIVALRY:0 "Rivalidad Entre la Armada y el Ejército"
  FOCUS_FILTER_ECONOMIC_GROWTH:0 "Crecimiento económico"
  FOCUS_FILTER_RELIGIOUS_INTERFERENCE:0 "Injerencia Religiosa"
- FOCUS_FILTER_BIPARTISANSHIP:0 "Bipartidismo"
+ FOCUS_FILTER_BIPARTISANSHIP:0 "Bipartidismo y Oposición"
 
 # === [LocEditor:OrphanedKeys] Keys that do not exist in English ===
  FOCUS_FILTER_CIVIC_ADMINISTRATION:0 "Administración civil"

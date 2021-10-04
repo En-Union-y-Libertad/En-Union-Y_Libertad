@@ -3,30 +3,6 @@
  ARG_greater_confederation_DEF:0 "La Gran Confederación Argentina"
  ARG_military_junta:0 "Junta Militar Argentina"
  ARG_military_junta_DEF:0 "La Junta Militar Argentina"
-
- UCO_unified:0 "Estados Unidos de Colombia"
- UCO_unified_DEF:0 "Los Estados Unidos de Colombia"
- UCO_unified_ADJ:0 "de los Estados Unidos de Colombia"
-
- GRC_UNIFIED:0 "Gran Colombia"
- GRC_UNIFIED_DEF:0 "La Gran Colombia"
- GRC_UNIFIED_ADJ:0 "de la Gran Colombia"
-
- COL_gaitan_war:0 "Colombia Gaitanista"
- COL_gaitan_war_DEF:0 "la Colombia Gaitanista"
- COL_gaitan_war_ADJ:0 "de la Colombia Gaitanista"
-
- COL_azul_war:0 "Colombia Tradicionalista"
- COL_azul_war_DF:0 "la Colombia Tradicionalista"
- COL_azul_war_ADJ:0 "de la Colombia Tradicionalista"
-
- COL_militar_gov:0 "Junta Provisional Colombiana"
- COL_militar_gov_DEF:0 "la Junta Provisional Colombiana"
- COL_militar_gov_ADJ:0 "de la Junta Provisional Colombiana"
-
- COL_rojas_pinilla_war:0 "Comando General de Colombia"
- COL_rojas_pinilla_war_DEF:0 "el Comando General de Colombia"
- COL_rojas_pinilla_war_ADJ:0 "del Comando General de Colombia"
  
  CHL_anarchist_global_commune:0 "Comunidad Anrquísta Global"
  CHL_anarchist_global_commune_DEF:0 "La Comunidad Anrquísta Global"
@@ -36,14 +12,16 @@
  BOL_government_DEF:0 "el Gobierno Boliviano"
  BOL_armed_forces_DEF:0 "Las Fuerzas Armadas Bolivianas"
 
- SUL_BRA:0 "Estado Autónomo de Rio Grande do Sul" 
-
  SAU_UNIFIED:0 "Unión Sudamericana"
  SAU_UNIFIED_DEF:0 "la Unión Sudamericana"
 
  PRE_UNIFIED:0 "Imperio Peruano"
  PRE_UNIFIED_DEF:0 "el Imperio Peruano"
  PRE_UNIFIED_ADJ:0 "Imperialistas Peruanos"
+
+ CHL_UNIFIED:0 "República de Chile"
+ CHL_UNIFIED_DEF:0 "la República de Chile"
+ CHL_UNIFIED_ADJ:0 "Chilenos"
 
  INC_UNIFIED:0 "Imperio Inca"
  INC_UNIFIED_DEF:0 "el Imperio Inca"
@@ -53,6 +31,9 @@
  PBC_UNIFIED_communism_DEF:0 "la Comuna Perú-Boliviana"
  PBC_UNIFIED_fascism:0 "Confederación Perú-Boliviana"
  PBC_UNIFIED_fascism_DEF:0 "la Confederación Perú-Boliviana"
+
+ PBC_UNIFYING_fascism:0 "Alianza Unionista"
+ PBC_UNIFYING_fascism_DEF:0 "la Alianza Unionista"
  
  RPE_UNIFIED_neutrality:0 "Imperio Rioplatense"
  RPE_UNIFIED_fascism:0 "Imperio Rioplatense"
@@ -77,6 +58,30 @@
  PRU_military_junta:0 "Junta Militar Peruana"
  PRU_naval_junta_DEF:0 "la Junta Naval Peruana"
  PRU_military_junta_DEF:0 "la Junta Militar Peruana"
+ 
+ UCO_unified:0 "Estados Unidos de Colombia"
+ UCO_unified_DEF:0 "Los Estados Unidos de Colombia"
+ UCO_unified_ADJ:0 "de los Estados Unidos de Colombia"
+
+ GRC_UNIFIED:0 "Gran Colombia"
+ GRC_UNIFIED_DEF:0 "La Gran Colombia"
+ GRC_UNIFIED_ADJ:0 "de la Gran Colombia"
+
+ COL_gaitan_war:0 "Colombia Gaitanista"
+ COL_gaitan_war_DEF:0 "la Colombia Gaitanista"
+ COL_gaitan_war_ADJ:0 "de la Colombia Gaitanista"
+
+ COL_azul_war:0 "Colombia Tradicionalista"
+ COL_azul_war_DF:0 "la Colombia Tradicionalista"
+ COL_azul_war_ADJ:0 "de la Colombia Tradicionalista"
+
+ COL_militar_gov:0 "Junta Provisional Colombiana"
+ COL_militar_gov_DEF:0 "la Junta Provisional Colombiana"
+ COL_militar_gov_ADJ:0 "de la Junta Provisional Colombiana"
+
+ COL_rojas_pinilla_war:0 "Comando General de Colombia"
+ COL_rojas_pinilla_war_DEF:0 "el Comando General de Colombia"
+ COL_rojas_pinilla_war_ADJ:0 "del Comando General de Colombia"
  
  INS_HOL_democratic:0 "Indias Orientales Neerlandesas"
  INS_HOL_democratic_DEF:0 "Las Indias Orientales Neerlandesas"
