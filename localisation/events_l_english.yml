@@ -3928,6 +3928,7 @@
  perubolivia.1.c:0 "Luis A. Flores"
  perubolivia.1.e:0 "Manuel Prado Ugarteche"
 
+<<<<<<< Updated upstream
  perubolivia.2.t:0 "Which City Should be our Capital?"
  perubolivia.2.d:0 "Now that we are a political entity on the map, we need to find a city to set as our capital. So far we have 3 options: Tacna, Lima, and La Paz. Each one of these cities holds not just historical significance to the Confederation, but also political significance. \n\nOut of these 3 cities, the capital of the Peru-Bolivian Confederation shall be..."
  perubolivia.2.a:0 "Tacna"
@@ -4381,3 +4382,43 @@
  colombia.106.title:0 "The Colombian government supports the subversive militias"
  colombia.106.desc:0 "Our intelligence reports report that far-right organizations that advocate for the reunification of the Peru-Bolivian Confederation are increasing their activities in the nation. These incidents were previously isolated, but are intensifying due to what appears to be financial support from Colombians. These accusations are delicate, so the absence of conclusive evidence leaves us in an unworkable position. In any case, it is best to prepare before it is too late."
  colombia.106.a:0 "Who do they think they are?!"
+=======
+ ### Nicaragua ###
+ UL_nicaragua.1.t:0 "The Army makes a Coup d'Etat!"
+ UL_nicaragua.1.d:0 "Military units under the banner of the Guardia Nacional have begun rising up all throught Nicaragua, with the intent of deposing [Root.GetLeader]'s weak government. A battle on the outskirts of Managua between the forces still loyal to our cause and the forces loyal to the army has begun. As Managua is our only loyal city, the defeat of our forces would mean the collapse of all resistence against the army."
+ UL_nicaragua.1.a:0 "The Guardia Nacional is victorious!"
+ UL_nicaragua.1.b:0 "The Loyalists hold the line!"
+
+ ### Costa Rica ###
+ costarica.1.t:0 "1936 General Elections"
+ costarica.1.d:0 "The elections have begun. While many had expected Ricardo Jimenez to run for re-election, he rejected it emphatically arguing that such a thing went against democracy. As so, the [Root.GetDemocraticParty] has fowarded León Cortés Castro as the candidate for the elections. A staunch conservative, Cortés is considered a very polarizing figure in Costa Rica for his support of Nazism and his anti-semite views. with the opossition labeling him as a 'authoritarian, fascist and tyrant'. \n\nThe main opossition, the Partido Nacional, initially fowarded Julio Acosta, but Acosta eventually resigned due to feeling a lack of support from the party. Eventually, Octavio Béeche Argüello was fowarded for the candidacy. A liberal candidate, he came under attack by the right-wing due to his left-leaning ideals, even being called a communist by his main detractors. \n\nThe last party to run for presidency was a surprise to many. The [Root.GetCommunistParty], led by Manuel Mora Valverde, managed to register as a political party for the first time in Costa Rican history. However, Valverde was not allowed, as candidates have to be older than 30 to run. Instead, he was replaced by known writer, Carlos Luis Sáenz. \n\nThis election is considered very polarizing, with Carlos María Jiménez calling it a choice between 'Cortesism or communism, the extreme right and the extreme left, fascism and sovietism.' \n\nAs votes are being counted, it is obvious that..."
+ costarica.1.a:0 "The Partido Republicano won"
+ costarica.1.b:0 "The Partido Nacional won"
+ costarica.1.c:0 "The [Root.GetCommunistParty] won"
+
+ ### Central America ###
+ central.2.t:0 "Panama proposes a Non-Aggression pact"
+ central.2.d:0 "The Panamanian Foreign Ministry has proposed a non-aggression pact between our two nations. This treaty will greatly increase our mutual trade, and help secure prosperity between our nations."
+ central.2.a:0 "We agree to the pact"
+ central.2.b:0 "We refuse the pact"
+ central.3.t:0 "Costa Rica proposes a Non-Aggression pact"
+ central.3.d:0 "The Costa Rican Foreign Ministry has proposed a non-aggression pact between our two nations. This treaty will greatly increase our mutual trade, and help secure prosperity between our nations."
+ central.3.a:0 "We agree to the pact"
+ central.3.b:0 "We refuse the pact"
+ central.4.t:0 "Nicaragua proposes a Non-Aggression pact"
+ central.4.d:0 "The Nicaraguan Foreign Ministry has proposed a non-aggression pact between our two nations. This treaty will greatly increase our mutual trade, and help secure prosperity between our nations."
+ central.4.a:0 "We agree to the pact"
+ central.4.b:0 "We refuse the pact"
+ central.5.t:0 "Honduras proposes a Non-Aggression pact"
+ central.5.d:0 "The Honduran Foreign Ministry has proposed a non-aggression pact between our two nations. This treaty will greatly increase our mutual trade, and help secure prosperity between our nations."
+ central.5.a:0 "We agree to the pact"
+ central.5.b:0 "We refuse the pact"
+ central.6.t:0 "El Salvador proposes a Non-Aggression pact"
+ central.6.d:0 "The Salvadoran Foreign Ministry has proposed a non-aggression pact between our two nations. This treaty will greatly increase our mutual trade, and help secure prosperity between our nations."
+ central.6.a:0 "We agree to the pact"
+ central.6.b:0 "We refuse the pact" 
+ central.7.t:0 "Guatemala proposes a Non-Aggression pact"
+ central.7.d:0 "The Guatemalan Foreign Ministry has proposed a non-aggression pact between our two nations. This treaty will greatly increase our mutual trade, and help secure prosperity between our nations."
+ central.7.a:0 "We agree to the pact"
+ central.7.b:0 "We refuse the pact" 
+>>>>>>> Stashed changes

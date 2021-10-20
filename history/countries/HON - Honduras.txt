@@ -67,7 +67,7 @@ set_politics = {
 	ruling_party = neutrality
 	last_election = "1932.10.28" 
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 set_popularities = {  #Apparently Zuñiga only got 1% of the votes
 	democratic = 1
@@ -82,7 +82,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
-		#
+		HON_strongman_of_tegucigalpa
 	}
 }
 
@@ -93,7 +93,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
-		#
+		veteran_communist
 	}
 }
 
@@ -104,7 +104,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = {
-		#
+		generic_lawyer
 	}
 }
 
@@ -157,7 +157,7 @@ create_navy_leader = {
 		ruling_party = neutrality
 		last_election = "1936.3.28"
 		election_frequency = 48
-		elections_allowed = no #Tiburcío became an "official" dictator
+		elections_allowed = no 
 	}
 	set_popularities = {
 		democratic = 1

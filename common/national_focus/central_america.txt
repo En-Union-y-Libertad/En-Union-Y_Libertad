@@ -1206,12 +1206,7 @@ focus_tree = {
 						delete_unit = {
     						state = 901
     						disband = no
-  						}      
-					}
-				}
-				else_if = {
-					limit = { original_tag = COS }
-					COS = {
+  						}
 						delete_unit = {
     						state = 897
     						disband = no
@@ -1224,11 +1219,6 @@ focus_tree = {
     						state = 896
     						disband = no
   						}
-					}
-				}
-				else_if = {
-					limit = { original_tag = HON }
-					HON = {
 						delete_unit = {
     						state = 312
     						disband = no
@@ -1241,11 +1231,18 @@ focus_tree = {
     						state = 894
     						disband = no
   						}
-					}
-				}
-				else_if = {
-					limit = { original_tag = ELS }
-					ELS = {
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
 						delete_unit = {
     						state = 314
     						disband = no
@@ -1254,11 +1251,6 @@ focus_tree = {
     						state = 898
     						disband = no
   						}
-					}
-				}
-				else_if = {
-					limit = { original_tag = GUA }
-					GUA = {
 						delete_unit = {
     						state = 313
     						disband = no
@@ -1274,7 +1266,347 @@ focus_tree = {
 						delete_unit = {
     					    state = 892
     						disband = no
+  						}            
+					}
+				}
+				else_if = {
+					limit = { original_tag = COS }
+					COS = {
+						delete_unit = {
+    						state = 899
+    						disband = no
   						}
+						delete_unit = {
+    						state = 304
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 895
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 900
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 901
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 897
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 316
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 896
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 314
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 898
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 313
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 890
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 891
+    						disband = no
+  						}
+						delete_unit = {
+    					    state = 892
+    						disband = no
+  						}            
+					}
+				}
+				else_if = {
+					limit = { original_tag = HON }
+					HON = {
+						delete_unit = {
+    						state = 899
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 304
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 895
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 900
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 901
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 897
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 316
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 896
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 314
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 898
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 313
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 890
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 891
+    						disband = no
+  						}
+						delete_unit = {
+    					    state = 892
+    						disband = no
+  						}            
+					}
+				}
+				else_if = {
+					limit = { original_tag = ELS }
+					ELS = {
+						delete_unit = {
+    						state = 899
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 304
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 895
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 900
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 901
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 897
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 316
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 896
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 314
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 898
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 313
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 890
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 891
+    						disband = no
+  						}
+						delete_unit = {
+    					    state = 892
+    						disband = no
+  						}            
+					}
+				}
+				else_if = {
+					limit = { original_tag = GUA }
+					GUA = {
+						delete_unit = {
+    						state = 899
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 304
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 895
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 900
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 901
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 897
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 316
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 896
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 312
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 893
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 894
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 314
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 898
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 313
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 890
+    						disband = no
+  						}
+						delete_unit = {
+    						state = 891
+    						disband = no
+  						}
+						delete_unit = {
+    					    state = 892
+    						disband = no
+  						}            
 					}
 				}
 			}	
@@ -1305,8 +1637,10 @@ focus_tree = {
 		}
 		x = 34
 		y = 3
-
-	}
+        completion_reward = {
+			add_ideas = central_diplomatic_effort_idea
+		}
+	}	
 	focus = {
 		id = central_true_pacifism
 		icon = GFX_focus_smiling_buddha
@@ -1316,6 +1650,9 @@ focus_tree = {
 		}
 		x = 36
 		y = 3
+		completion_reward = {
+			add_ideas = central_pacifist_nation
+		}
 
 	}
 	focus = {
@@ -1383,6 +1720,128 @@ focus_tree = {
 		}
 		x = 36
 		y = 4
+		completion_reward = {
+			IF = {
+				limit = {
+				    tag = PAN
+				}
+				COS = {
+					country_event = { id = central.2 hours = 4 }
+				}
+				NIC = {
+					country_event = { id = central.2 hours = 4 }
+				}
+				HON = {
+					country_event = { id = central.2 hours = 4 }
+				}
+				ELS = {
+					country_event = { id = central.2 hours = 4 }
+				}
+				GUA = {
+					country_event = { id = central.2 hours = 4 }
+				}	
+			}
+			else_if = {
+				limit = {
+				    tag = COS
+				}
+				PAN = {
+					country_event = { id = central.3 hours = 4 }
+				}
+				NIC = {
+					country_event = { id = central.3 hours = 4 }
+				}
+				HON = {
+					country_event = { id = central.3 hours = 4 }
+				}
+				ELS = {
+					country_event = { id = central.3 hours = 4 }
+				}
+				GUA = {
+					country_event = { id = central.3 hours = 4 }
+				}	
+			}
+			else_if = {
+				limit = {
+				    tag = NIC
+				}
+				PAN = {
+					country_event = { id = central.4 hours = 4 }
+				}
+				COS = {
+					country_event = { id = central.4 hours = 4 }
+				}
+				HON = {
+					country_event = { id = central.4 hours = 4 }
+				}
+				ELS = {
+					country_event = { id = central.4 hours = 4 }
+				}
+				GUA = {
+					country_event = { id = central.4 hours = 4 }
+				}	
+			}
+			else_if = {
+				limit = {
+				    tag = HON
+				}
+				PAN = {
+					country_event = { id = central.5 hours = 4 }
+				}
+				COS = {
+					country_event = { id = central.5 hours = 4 }
+				}
+				NIC = {
+					country_event = { id = central.5 hours = 4 }
+				}
+				ELS = {
+					country_event = { id = central.5 hours = 4 }
+				}
+				GUA = {
+					country_event = { id = central.5 hours = 4 }
+				}	
+			}
+			else_if = {
+				limit = {
+				    tag = ELS
+				}
+				PAN = {
+					country_event = { id = central.6 hours = 4 }
+				}
+				NIC = {
+					country_event = { id = central.6 hours = 4 }
+				}
+				HON = {
+					country_event = { id = central.6 hours = 4 }
+				}
+				COS = {
+					country_event = { id = central.6 hours = 4 }
+				}
+				GUA = {
+					country_event = { id = central.6 hours = 4 }
+				}	
+			}
+			else_if = {
+				limit = {
+				    tag = GUA
+				}
+				PAN = {
+					country_event = { id = central.7 hours = 4 }
+				}
+				NIC = {
+					country_event = { id = central.7 hours = 4 }
+				}
+				HON = {
+					country_event = { id = central.7 hours = 4 }
+				}
+				ELS = {
+					country_event = { id = central.7 hours = 4 }
+				}
+				COS = {
+					country_event = { id = central.7 hours = 4 }
+				}	
+			}
+	    }
 
 	}
 	focus = {
@@ -1472,7 +1931,7 @@ focus_tree = {
 	focus = {
 		id = central_international_support
 		icon = GFX_goal_generic_trade
-		cost = 10
+		cost = 0.5
 		prerequisite = {
 			focus = central_non_agression_pact
 			focus = central_public_forces
@@ -1480,10 +1939,75 @@ focus_tree = {
 		prerequisite = {
 			focus = central_fund_police
 		}
+		available = {
+			has_defensive_war = yes
+		}
 		x = 38
 		y = 5
+		completion_reward = {
+			custom_effect_tooltip = central_volunteer_units_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = gw_artillery
+					}	
+					division_template = {
+						name = "Fuerza Voluntaria"
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							artillery_brigade = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							artillery_brigade = { x = 2 y = 2 }
+						}
+					}
+					
+				random_owned_controlled_state = {
+					limit = { is_capital = yes }
+					create_unit = { 
+						division = "name = \"Fuerza Voluntaria\" division_template = \"Fuerza Voluntaria\" start_experience_factor = 0.75" 
+						owner = ROOT
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					not = {
+						has_tech = gw_artillery
+					}
+				}
 
+				division_template = {
+						name = "Fuerza Voluntaria"
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+						}
+					}
+				random_owned_controlled_state = {
+					limit = { is_capital = yes }
+					create_unit = { 
+						division = "name = \"Fuerza Voluntaria\" division_template = \"Fuerza Voluntaria\" start_experience_factor = 0.75" 
+						owner = ROOT
+					}
+				}
+
+			    }	
+			}	
+		}
 	}
+
 	focus = {
 		id = central_army_effort
 		icon = GFX_focus_generic_combined_arms

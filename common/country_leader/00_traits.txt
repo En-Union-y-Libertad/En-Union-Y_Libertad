@@ -89,6 +89,21 @@ leader_traits = {
 		stability_factor = 0.1
 	}
 	
+<<<<<<< Updated upstream
+=======
+	generic_writer = {
+		random = yes
+		stability_factor = 0.05
+	}
+
+	generic_philosopher = {
+		random = yes
+		sprite = 13
+		political_power_factor = 0.1
+		research_speed_factor = 0.05
+	}
+
+>>>>>>> Stashed changes
 	#PERU
 	
 	PBC_socialist_tendencies_1 = {
@@ -236,7 +251,37 @@ leader_traits = {
         local_resources_factor = 0.1
 		production_speed_industrial_complex_factor = 0.1
 		consumer_goods_factor = -0.03		
+<<<<<<< Updated upstream
 	}	
+=======
+	}
+	URG_el_guerrillero = {
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.2	
+	}
+####Costa Rica####
+	COS_intellectual_dictator = {
+		political_power_factor = 0.15
+		political_advisor_cost_factor = 0.1	
+	}
+####El Salvador####	
+	ELS_theosophic_dictator = {
+		stability_factor = -0.2
+		research_speed_factor = -0.15
+		political_power_factor = 0.2
+	}
+####Honduras####		
+	HON_strongman_of_tegucigalpa = { 
+		random = no
+		army_morale_factor = 0.04
+		political_power_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+###########################################################################		
+>>>>>>> Stashed changes
 	
 	dictator = {
 		random = no

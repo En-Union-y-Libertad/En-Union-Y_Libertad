@@ -580,5 +580,40 @@ ideas = {
 				stability_weekly = 0.001
 			}
 		}
+		central_diplomatic_effort_idea = {
+			picture = generic_fortify_the_borders
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+			
+			modifier = {
+				improve_relations_maintain_cost_factor = -1
+				opinion_gain_monthly_factor = 0.5
+			}
+		}
+		central_pacifist_nation = {
+			picture = generic_fortify_the_borders
+
+            allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes 
+			}
+			
+			modifier = {
+				stability_weekly = 0.001
+			}
+		}
     }
 }    

@@ -64,14 +64,15 @@ set_convoys = 5
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = fascism
 	last_election = "1931.2.8"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 30
-	neutrality = 70
+	democratic = 20
+	neutrality = 30
+	fascism = 50
 }
 
 create_country_leader = {
@@ -79,9 +80,9 @@ create_country_leader = {
 	desc = "POLITICS_JORGE_UBICO_DESC"
 	picture = "GFX_portrait_guatemala_jorge_ubico"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = fascism_ideology
 	traits = {
-		#
+		headstrong #Praised by defenders and detractors for his integrity
 	}
 }
 
@@ -92,7 +93,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = {
-		#
+		generic_philosopher
 	}
 }
 
@@ -103,18 +104,18 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
-		#
+		guerilla_warfare_expert
 	}
 }
 
-create_country_leader = {  #Creator of the Guatemalan Nazi Party. Ubico would work in both ideologies so in a possible Guatemalan tree he could become fascist
-	name = "Otto Langmann"
-	desc = "POLITICS_OTTO_LANGMAN_DESC"
+create_country_leader = {  
+	name = "Jacobo Arbenz"
+	desc = "POLITICS_JACOBO_ARBENZ_DESC"
 	picture = "gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
 	expire = "1965.1.1"
-	ideology = nazism
+	ideology = centrism
 	traits = {
-		#
+		generic_army_connections
 	}
 }
 

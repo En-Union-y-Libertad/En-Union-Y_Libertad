@@ -78,7 +78,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
-		#
+		ELS_theosophic_dictator anti_communist
 	}
 }
 
@@ -89,7 +89,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = socialism
 	traits = {
-		#
+		resolute_social_democrat
 	}
 }
 
@@ -100,7 +100,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
-		#
+		ambitious_union_boss
 	}
 }
 
@@ -111,7 +111,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = oligarchism
 	traits = {
-		#
+		divided_interests
 	}
 }
 

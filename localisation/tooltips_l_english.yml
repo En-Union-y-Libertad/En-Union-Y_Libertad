@@ -14,3 +14,4 @@
   central_create_guard_tt:0 "§YThis will spawn a unit of the§! §GGuardia Nacional§!"
   central_create_reserve_tt:0 "§YThis will spawn §Gthree§! unit of reserves"
   central_public_force_tt:0 "§YThis will replace the§! §RGuardia Nacional§! §Ywith a§! §Gbetter§! §Ydivision§!"
+  central_volunteer_units_tt:0 "§YOnce completed, this focus will spawn a§! §GVolunteer unit§! §Yfrom the League of Nations§!"

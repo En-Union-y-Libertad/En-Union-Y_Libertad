@@ -39,8 +39,21 @@
  COL_proselito_del_duce:0 "Proselyte of Il Duce"
  COL_hombre_tempestad:0 "Hombre Tempestad"
  COL_voice_of_the_people:0 "The voice of the people"
+<<<<<<< Updated upstream
  COL_el_general:0 "El General"
  COL_tribuno_del_pueblo:0 "Tribune of the people"
+=======
+ COS_intellectual_dictator:0 "Intellectual Dictator"
+ ELS_theosophic_dictator:0 "Theosophic Dictator"
+ HON_strongman_of_tegucigalpa:0 "Strongman of Tegucigalpa"
+ URG_el_guerrillero:0 "El Guerrillero"
+ generic_army_connections:0 "Army Connections"
+ generic_physician:0 "Physician"
+ generic_lawyer:0 "Lawyer"
+ generic_judge:0 "Judge"
+ generic_writer:0 "Writer"
+ 
+>>>>>>> Stashed changes
  
  cc_leader:0 "General"
  fm_leader:0 "Field Marshal"
