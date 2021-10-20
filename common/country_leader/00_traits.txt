@@ -57,7 +57,6 @@ leader_traits = {
 		army_org_factor = 0.05
 	}
 
-
 	COL_el_general = {
 		random = no
 		conscription = 0.01
