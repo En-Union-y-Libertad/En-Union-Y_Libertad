@@ -1202,7 +1202,7 @@ opinion_modifiers = {
 	BOL_chose_path_of_force = {
 		value = -15
 	}
-
+	
 	COL_grc_rejected = {
 		value = -40
 	}
@@ -1217,5 +1217,9 @@ opinion_modifiers = {
 
 	COL_oil_concession = {
 		value = 75
+	}
+
+	COL_benavides_contacted = {
+		value = -75
 	}
 }

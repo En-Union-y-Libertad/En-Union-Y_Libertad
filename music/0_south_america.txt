@@ -211,3 +211,75 @@ music = {
 		}		
 	}
 }
+
+###	Colombia
+
+music = {
+	song = "Saluda Adorada Bandera - Marcha Militar"
+
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}
+
+music = {
+	song = "Antioqueños al Mar - Marcha Colombiana"
+
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}
+
+music = {
+	song = "Himno a la Infantería Colombiana"
+
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}
+
+music = {
+	song = "Coronel Bedoya - Marcha Militar"
+
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}
+
+music = {
+	song = "El Tiempo - Pasodoble Colombiano"
+
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}
+
+music = {
+	song = "Unter dem Doppeladler (Versión Colombiana)"
+
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}
+
+music = {
+	song = "Adelante - Marcha Colombiana"
+
+	chance = {
+		modifier = {
+			factor = 2
+		}		
+	}
+}

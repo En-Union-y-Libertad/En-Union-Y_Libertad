@@ -1,0 +1,2 @@
+terrain_montevideo = { }
+terrain_buenos_aires = { }

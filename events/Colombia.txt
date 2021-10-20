@@ -3320,6 +3320,7 @@ country_event = {
 						expire = "1965.1.1"
 						ideology = militarism
 						traits = {
+							COL_el_general
 							national_integralist
 						}
 					}
@@ -3409,6 +3410,7 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = militarism
 			traits = {
+				COL_el_general
 				national_integralist
 			}
 		}
@@ -3458,6 +3460,16 @@ country_event = {
 
 			clr_country_flag = azul_a_cargo
 			set_country_flag = mil_a_cargo
+
+			if = {
+				limit = {
+					has_cosmetic_tag = GRC_UNIFIED
+				}
+				news_event = {
+					id = colombia.92
+					days = 1
+				}
+			}
 		}
 	}
 }
@@ -5048,7 +5060,7 @@ news_event = {
 	id = colombia.91
 	title = colombia.91.title
 	desc = colombia.91.desc
-	picture = GFX_news_event_generic_parliament
+	picture = GFX_news_event_gran_colombia
 
 	major = yes
 
@@ -5071,6 +5083,884 @@ news_event = {
 		name = colombia.91.c
 		trigger = {
 			has_war_with = COL
+		}
+	}
+}
+
+#Golpe de estado en la Gran Colombia
+news_event = {
+	id = colombia.92
+	title = colombia.92.title
+	desc = colombia.92.desc
+	picture = GFX_news_event_rojas_coup
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = colombia.92.a
+		trigger = {
+			original_tag = COL
+		}
+	}
+	option = {
+		name = colombia.92.b
+		trigger = {
+			NOT = { original_tag = COL }
+			NOT = { has_war_with = COL }
+		}
+	}
+	option = {
+		name = colombia.92.c
+		trigger = {
+			has_war_with = COL
+		}
+	}
+}
+
+# ¡Óscar Benavides se rebela contra el gobierno!
+country_event = {
+	id = colombia.93
+	title = colombia.93.title
+	desc = colombia.93.desc
+	
+	picture = GFX_report_event_tur_machine_gunners
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colombia.93.a
+		every_unit_leader = {
+			limit = {
+				has_id = 44512
+			}
+			set_nationality = COL
+		}
+	}
+}
+
+# Consolidar el gobierno de Loreto - Trigger (HIDDEN)
+country_event = {
+	id = colombia.94
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		PRU = {
+			exists = yes
+			has_war_with = COL
+		}
+		COL = {
+			exists = yes
+			has_completed_focus = COL_reestablecer_el_orden_en_peru
+			has_war_with = PRU
+			has_full_control_of_state = 491
+		}
+	}
+	
+	immediate = {
+		COL = { country_event = { id = colombia.95 } }
+	}
+	
+	option = {
+		name = colombia.94
+	}
+}
+
+# Consolidar el gobierno de Loreto
+country_event = {
+	id = colombia.95
+	title = colombia.95.title
+	desc = colombia.95.desc
+
+	picture = GFX_report_event_tur_machine_gunners
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = colombia.95.a
+		PRU = {
+			start_civil_war = {
+				ideology = neutrality
+				size = 0
+				capital = 491
+				states = { 491 }
+			}
+		}
+		random_country = {
+			limit = {
+				original_tag = PRU
+				has_government = neutrality
+			}
+			save_event_target_as = peru_benavides_civil_war
+			hidden_effect = {
+				add_ideas = COL_influencia_militarista
+				set_cosmetic_tag = PRU_military_junta
+				COL = {
+					every_unit_leader = {
+						limit = {
+							has_id = 44512
+						}
+						set_nationality = event_target:peru_benavides_civil_war
+					}
+				}
+			}
+			ROOT = {
+				puppet = PREV
+				add_to_war = { 
+				    targeted_alliance = PREV 
+				    enemy = PRU
+				    hostility_reason = asked_to_join
+				}
+			}
+			create_country_leader = {
+				name = "Óscar Benavides"
+				desc = "POLITICS_OSCAR_BENAVIDES_DESC"
+				picture = "GFX_Portrait_peru_oscar_benavides"
+				expire = "1965.1.1"
+				ideology = militarism
+				traits = {
+					#
+				}
+			}
+
+			division_template = { 
+				name = "Milicias Militares" 
+				division_names_group = SPAN_INF_02 
+				is_locked = yes 
+				regiments = { 
+					infantry = { x = 0 y = 0 }  
+					infantry = { x = 0 y = 1 } 
+					infantry = { x = 0 y = 2 } 
+					infantry = { x = 0 y = 3 } 
+					infantry = { x = 0 y = 4 }
+				}
+			}
+			hidden_effect = {
+				491 = {
+					create_unit = {
+						division = "name = \"Milicias Militares\" division_template = \"Milicias Militares\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Milicias Militares\" division_template = \"Milicias Militares\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Milicias Militares\" division_template = \"Milicias Militares\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
+						owner = PREV
+					}
+				}
+			}
+		}
+	}
+}
+
+# La muerte de Vásquez Cobo
+country_event = {
+	id = colombia.96
+	title = colombia.96.title
+	desc = colombia.96.desc
+
+	picture = GFX_report_event_generic_funeral
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = cobo_is_dead
+	}
+	
+	#Junta Militar
+	option = {
+		name = colombia.96.a
+		trigger = {
+			has_completed_focus = COL_el_gabinete_militar
+		}
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Junta Militar de Gobierno"
+			desc = "POLITICS_JUNTA_MILITAR"
+			picture = "gfx/leaders/COL/Portrait_Junta_Militar.dds"
+			expire = "1965.1.1"
+			ideology = militarism
+			traits = {
+				indomitable_perseverance
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					any_unit_leader = {
+						has_id = 10009
+					}
+				}
+				remove_unit_leader = 10009
+			}
+		}
+	}
+
+	#Estado Mayor
+	option = {
+		name = colombia.96.b
+		trigger = {
+			has_completed_focus = COL_estado_mayor_conjunto
+		}
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Estado Mayor"
+			desc = "POLITICS_ESTADO_MAYOR"
+			picture = "gfx/leaders/COL/Portrait_Estado_Mayor.dds"
+			expire = "1965.1.1"
+			ideology = militarism
+			traits = {
+				emergency_powers
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					any_unit_leader = {
+						has_id = 10009
+					}
+				}
+				remove_unit_leader = 10009
+			}
+		}
+	}
+
+	#Villamizar
+	option = {
+		name = colombia.96.c
+		trigger = {
+			any_unit_leader = {
+				has_id = 10003
+			}
+		}
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "José Joaquín Villamizar"
+			desc = "POLITICS_JOSE_JOAQUIN_VILLAMIZAR_DESC"
+			picture = "gfx/leaders/COL/Portrait_Jose_Joaquin_Villamizar.dds"
+			expire = "1965.1.1"
+			ideology = militarism
+			traits = {
+				jefe
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					any_unit_leader = {
+						has_id = 10009
+					}
+				}
+				remove_unit_leader = 10009
+			}
+		}
+	}
+
+	#Vega
+	option = {
+		name = colombia.96.d
+		trigger = {
+			any_unit_leader = {
+				has_id = 10004
+			}
+		}
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Eduardo Bonitto Vega"
+			desc = "POLITICS_EDUARDO_BONITTO_VEGA_DESC"
+			picture = "gfx/leaders/COL/Portrait_Eduardo_Vega.dds"
+			expire = "1965.1.1"
+			ideology = militarism
+			traits = {
+				hawk
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					any_unit_leader = {
+						has_id = 10009
+					}
+				}
+				remove_unit_leader = 10009
+			}
+		}
+	}
+}
+
+# Japura/Mapari Incident - succeeded
+country_event = {
+	id = colombia.97
+
+	title = {
+		text = colombia.97.title1
+		trigger = {
+			COL = {
+				has_country_flag = japura_incident
+			}
+		}
+	}
+	title = {
+		text = colombia.97.title2
+		trigger = {
+			COL = {
+				has_country_flag = mapari_incident
+			}
+		}
+	}
+
+	desc = { 
+		text = colombia.97.desc1
+		trigger = {
+			COL = {
+				has_country_flag = japura_incident
+			}
+		}
+	}
+	desc = { 
+		text = colombia.97.desc2
+		trigger = {
+			COL = {
+				has_country_flag = mapari_incident
+			}
+		}
+	}
+	
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colombia.77.a
+		
+		if = {
+			limit = {
+				COL = {
+					has_country_flag = japura_incident
+				}
+			}
+			transfer_state = 858
+		}
+		else_if = {
+			limit = {
+				COL = {
+					has_country_flag = mapari_incident
+				}
+			}
+			transfer_state = 886
+		}
+
+		add_stability = 0.05
+
+		hidden_effect = {
+			BRA = {
+				country_event = { id = colombia.100 }
+			}
+		}
+	}
+}
+
+# Japura/Mapari Incident - failed
+country_event = {
+	id = colombia.98
+
+	title = {
+		text = colombia.98.title1
+		trigger = {
+			COL = {
+				has_country_flag = japura_incident
+			}
+		}
+	}
+	title = {
+		text = colombia.98.title2
+		trigger = {
+			COL = {
+				has_country_flag = mapari_incident
+			}
+		}
+	}
+
+	desc = { 
+		text = colombia.98.desc1
+		trigger = {
+			COL = {
+				has_country_flag = japura_incident
+			}
+		}
+	}
+	desc = { 
+		text = colombia.98.desc2
+		trigger = {
+			COL = {
+				has_country_flag = mapari_incident
+			}
+		}
+	}
+	
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colombia.79.a
+		
+		add_war_support = -0.05
+		army_experience = 25
+
+		hidden_effect = {
+			BRA = {
+				country_event = { id = colombia.99 }
+			}
+		}
+	}
+}
+
+# Japura/Mapari Incident - failed - BRA gets opportunity to retaliate
+country_event = {
+	id = colombia.99
+	title = {
+		text = colombia.99.title1
+		trigger = {
+			COL = {
+				has_country_flag = japura_incident
+			}
+		}
+	}
+	title = {
+		text = colombia.99.title2
+		trigger = {
+			COL = {
+				has_country_flag = mapari_incident
+			}
+		}
+	}
+
+	desc = { 
+		text = colombia.99.desc1
+		trigger = {
+			COL = {
+				has_country_flag = japura_incident
+			}
+		}
+	}
+	desc = { 
+		text = colombia.99.desc2
+		trigger = {
+			COL = {
+				has_country_flag = mapari_incident
+			}
+		}
+	}
+	
+	picture = GFX_report_event_tur_machine_gunners
+	
+	is_triggered_only = yes
+	
+	option = { #MEH
+		name = colombia.99.a
+				
+		army_experience = 25
+
+		add_opinion_modifier = {
+			target = COL
+			modifier = our_rival
+		}
+		
+		COL = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = our_rival
+			}
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					COL = {
+						has_country_flag = japura_incident
+					}
+				}
+				COL = {
+					clr_country_flag = japura_incident
+				}
+			}
+			else_if = {
+				limit = {
+					COL = {
+						has_country_flag = mapari_incident
+					}
+				}
+				COL = {
+					clr_country_flag = mapari_incident
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = { #WAR
+		name = colombia.99.b
+		
+		army_experience = 25
+		
+		create_wargoal = {
+			type = topple_government
+			target = COL
+		}
+		
+		add_opinion_modifier = {
+			target = COL
+			modifier = our_rival
+		}
+		
+		COL = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = our_rival
+			}
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					COL = {
+						has_country_flag = japura_incident
+					}
+				}
+				COL = {
+					clr_country_flag = japura_incident
+				}
+			}
+			else_if = {
+				limit = {
+					COL = {
+						has_country_flag = mapari_incident
+					}
+				}
+				COL = {
+					clr_country_flag = mapari_incident
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+}
+
+# Japura/Mapari Incident - succeeded - BRA gets opportunity to retaliate
+country_event = {
+	id = colombia.100
+	title = {
+		text = colombia.100.title1
+		trigger = {
+			COL = {
+				has_country_flag = japura_incident
+			}
+		}
+	}
+	title = {
+		text = colombia.100.title2
+		trigger = {
+			COL = {
+				has_country_flag = mapari_incident
+			}
+		}
+	}
+
+	desc = { 
+		text = colombia.100.desc1
+		trigger = {
+			COL = {
+				has_country_flag = japura_incident
+			}
+		}
+	}
+	desc = { 
+		text = colombia.100.desc2
+		trigger = {
+			COL = {
+				has_country_flag = mapari_incident
+			}
+		}
+	}
+	
+	picture = GFX_report_event_tur_machine_gunners
+	
+	is_triggered_only = yes
+	
+	option = { #MEH
+		name = colombia.100.a
+				
+		army_experience = 25
+
+		add_political_power = 100
+
+		add_opinion_modifier = {
+			target = COL
+			modifier = our_rival
+		}
+		
+		COL = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = our_rival
+			}
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					COL = {
+						has_country_flag = japura_incident
+					}
+				}
+				COL = {
+					clr_country_flag = japura_incident
+				}
+			}
+			else_if = {
+				limit = {
+					COL = {
+						has_country_flag = mapari_incident
+					}
+				}
+				COL = {
+					clr_country_flag = mapari_incident
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = { #WAR
+		name = colombia.100.b
+		
+		army_experience = 25
+
+		add_war_support = 0.05
+		
+		create_wargoal = {
+			type = topple_government
+			target = COL
+		}
+		
+		add_opinion_modifier = {
+			target = COL
+			modifier = our_rival
+		}
+		
+		COL = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = our_rival
+			}
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					COL = {
+						has_country_flag = japura_incident
+					}
+				}
+				COL = {
+					clr_country_flag = japura_incident
+				}
+			}
+			else_if = {
+				limit = {
+					COL = {
+						has_country_flag = mapari_incident
+					}
+				}
+				COL = {
+					clr_country_flag = mapari_incident
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+}
+
+# BRA conflict warning
+country_event = {
+	id = colombia.101
+	title = colombia.101.title
+	desc = colombia.101.desc
+	
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colombia.101.a
+		add_ai_strategy = {
+			type = prepare_for_war
+			id = COL
+			value = 100
+		}
+		BRA = {
+			set_country_flag = already_warned
+		}
+	}
+}
+
+# Exiled politicians offer help
+country_event = {
+	id = colombia.102
+	title = colombia.102.title
+	desc = colombia.102.desc
+	
+	picture = GFX_report_event_generic_rally_3
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colombia.102.a
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = COL_politicos_exiliados
+				days = 365
+			}
+		}
+
+		hidden_effect = {
+			COL = {
+				country_event = {
+					id = colombia.103
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 80
+		}
+	}
+
+	option = {
+		name = colombia.102.b
+		add_political_power = 100
+		add_war_support = 0.05
+
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+# Colombia is notified about exiled politicians offering help
+country_event = {
+	id = colombia.103
+	title = colombia.103.title
+	desc = colombia.103.desc
+	
+	picture = GFX_report_event_generic_rally_3
+	
+	is_triggered_only = yes
+
+	option = { #YOU MANIACS!
+		name = colombia.103.a
+		FROM = {
+			add_timed_idea = {
+				idea = COL_politicos_exiliados
+				days = 365
+			}
+		}
+	}
+}
+
+# Colombia is notified about the confederation won the unification war
+country_event = {
+	id = colombia.104
+	title = colombia.104.title
+	desc = colombia.104.desc
+	
+	picture = GFX_report_event_generic_battle
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colombia.104.a
+		activate_mission = COL_revivir_confederacion_war_mission
+		set_variable = { COL_poder_confederacion = 20 }
+		set_country_flag = must_puppet_pbc	
+	}
+}
+
+# Bolivia/Peru is notified about the inminent unification war
+country_event = {
+	id = colombia.105
+	title = colombia.105.title
+	desc = colombia.105.desc
+	
+	picture = GFX_report_event_generic_battle
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colombia.105.a
+		effect_tooltip = {
+			activate_mission = COL_start_confederation_war
+		}
+	}
+}
+
+# Bolivia/Peru is notified about colombia supporting fascist militias
+country_event = {
+	id = colombia.106
+	title = colombia.106.title
+	desc = colombia.106.desc
+	
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+
+	option = {
+		name = colombia.106.a
+		if = {
+			limit = {
+				ROOT = {
+					is_faction_leader = yes
+					is_in_faction_with = COL
+				}
+			}
+			remove_from_faction = COL
+		}
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "COL"			
+				value = -200
+			}
+		}
+		add_opinion_modifier = {
+			target = COL
+			modifier = our_enemy
 		}
 	}
 }

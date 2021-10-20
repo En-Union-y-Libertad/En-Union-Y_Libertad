@@ -28,6 +28,51 @@ on_actions = {
                 news_event = { id = news.347 hours = 6 random = 20 }
             }
         }
+        effect = {
+            #People of Chile get mad from constant wars 
+            if = {
+                limit = {
+                    original_tag = CHL 
+                    CHL = {
+                        OR = {
+                            has_completed_focus = CHL_victory_for_nacismo
+                            has_completed_focus = CHL_abandon_the_compromise
+                        }
+                    }
+                    FROM = {
+                        exists = yes 
+                    }
+                }
+                CHL = {
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_idea = CHL_people_protesting_rapid_expansion_1
+                            }
+                        }
+                        add_ideas = CHL_people_protesting_rapid_expansion_1
+                    }
+                    else_if = {
+                        limit = {
+                            has_idea = CHL_people_protesting_rapid_expansion_1
+                        }
+                        swap_ideas = {
+                            remove_idea = CHL_people_protesting_rapid_expansion_1
+                            add_idea = CHL_people_protesting_rapid_expansion_2
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            has_idea = CHL_people_protesting_rapid_expansion_2
+                        }
+                        swap_ideas = {
+                            remove_idea = CHL_people_protesting_rapid_expansion_2
+                            add_idea = CHL_people_protesting_rapid_expansion_3
+                        }
+                    }
+                }
+            }
+        }
     }
     #ROOT is winner #FROM gets annexed - This will also fire on_annex
     on_civil_war_end = {
@@ -193,6 +238,37 @@ on_actions = {
                 complete_national_focus = ARG_develop_the_capital
             }
         }
+		effect = {
+            #End of the colombian military Civil War
+            if = {
+                limit = { 
+                    FROM = {
+                        original_tag = COL
+                    }
+                    ROOT = {
+                        original_tag = COL 
+                        has_government = neutrality
+                        has_cosmetic_tag = COL_militar_gov
+                    }
+                }
+                ROOT = {
+                    drop_cosmetic_tag = yes
+                    load_focus_tree = {
+                        tree = colombia_focus
+                        keep_completed = no 
+                    }
+                    complete_national_focus = COL_la_revolucion_en_marcha
+                    complete_national_focus = COL_ley_de_movilizacion_militar
+                    complete_national_focus = COL_integrar_la_inversion_militar
+                    complete_national_focus = COL_mantener_los_privilegios_patronales
+                    complete_national_focus = COL_cooperar_con_los_terratenientes
+                    complete_national_focus = COL_expulsar_a_los_politicos
+                    complete_national_focus = COL_derogar_la_constitucion
+                    complete_national_focus = COL_alianza_con_el_movimiento_obrero
+                    complete_national_focus = COL_la_patria_por_encima_de_los_partidos
+                }
+            }
+        }
 
         effect = {
             #End of the colombian liberal Civil War
@@ -230,39 +306,6 @@ on_actions = {
         }
 
         effect = {
-            #End of the colombian military Civil War
-            if = {
-                limit = { 
-                    FROM = {
-                        original_tag = COL
-                    }
-                    ROOT = {
-                        original_tag = COL 
-                        has_government = neutrality
-                        has_cosmetic_tag = COL_militar_gov
-                    }
-                }
-                ROOT = {
-                    drop_cosmetic_tag = yes
-                    load_focus_tree = {
-                        tree = colombia_focus
-                        keep_completed = no 
-                    }
-                    complete_national_focus = COL_la_revolucion_en_marcha
-                    complete_national_focus = COL_ley_de_movilizacion_militar
-                    complete_national_focus = COL_integrar_la_inversion_militar
-                    complete_national_focus = COL_mantener_los_privilegios_patronales
-                    complete_national_focus = COL_cooperar_con_los_terratenientes
-                    complete_national_focus = COL_expulsar_a_los_politicos
-                    complete_national_focus = COL_derogar_la_constitucion
-                    complete_national_focus = COL_la_patria_por_encima_de_los_partidos
-                    complete_national_focus = COL_centralizar_la_banca
-                    complete_national_focus = COL_nacionalizar_las_armerias
-                }
-            }
-        }
-
-        effect = {
             #End of the colombian conservative Civil War
             if = {
                 limit = { 
@@ -285,6 +328,16 @@ on_actions = {
                         keep_completed = no 
                     }
                     complete_national_focus = COL_la_revolucion_en_marcha
+                    complete_national_focus = COL_la_revolucion_en_marcha
+                    complete_national_focus = COL_ley_de_movilizacion_militar
+                    complete_national_focus = COL_integrar_la_inversion_militar
+                    complete_national_focus = COL_mantener_los_privilegios_patronales
+                    complete_national_focus = COL_cooperar_con_los_terratenientes
+                    complete_national_focus = COL_oponerse_al_cambio
+                    complete_national_focus = COL_asegurar_la_poblacion
+                    complete_national_focus = COL_respaldo_clerigal
+                    complete_national_focus = COL_derrocar_a_los_liberales
+                    complete_national_focus = COL_laureanismo
                 }
             }
         }
@@ -312,6 +365,11 @@ on_actions = {
                     complete_national_focus = COL_el_golpe_de_opinion
                 }
             }
+            else = {
+                ROOT = {
+                    drop_cosmetic_tag = yes
+                }
+            }
             if = {
                 limit = { 
                     FROM = {
@@ -328,9 +386,84 @@ on_actions = {
                     set_cosmetic_tag = GRC_UNIFIED
                 }
             }
-            else = {
+        }
+
+        effect = {
+            #End of Peruvian civil war leaded by Benavides
+            if = {
+                limit = {
+                    FROM = {
+                        original_tag = PRU 
+                    }
+                    ROOT = {
+                        original_tag = PRU 
+                        has_government = neutrality
+                        is_puppet_of = COL
+                    }
+                    COL = {
+                        has_completed_focus = COL_reestablecer_el_orden_en_peru
+                    }
+                }
                 ROOT = {
                     drop_cosmetic_tag = yes
+                    load_focus_tree = {
+                        tree = peru_focus
+                        keep_completed = yes
+                    }
+                }
+                COL = {
+                    transfer_state = 887
+                }
+            }
+        }
+    }
+
+    #ROOT is winner, FROM gets annexed.
+    on_annex = { 
+        effect = {
+            #End of the peru-bolivia unification Civil War
+            if = {
+                limit = {
+                    ROOT = {
+                        original_tag = PRU
+                        has_government = fascism
+                        has_country_flag = PBC_unifying_flag
+                    }
+                    FROM = {
+                        original_tag = PRU
+                    }
+                    BOL = {
+                        exists = no
+                    }
+                }
+                ROOT = {
+                    set_cosmetic_tag = PBC_UNIFIED
+                    clr_country_flag = PBC_unifying_flag
+                }
+                COL = {
+                    country_event = { id = colombia.104 hours = 12 }
+                }
+            }
+            else_if = {
+                limit = {
+                    ROOT = {
+                        original_tag = PRU
+                        has_government = fascism
+                        has_country_flag = PBC_unifying_flag
+                    }
+                    FROM = {
+                        original_tag = BOL
+                    }
+                    PRU = {
+                        exists = no
+                    }
+                }
+                ROOT = {
+                    set_cosmetic_tag = PBC_UNIFIED
+                    clr_country_flag = PBC_unifying_flag
+                }
+                COL = {
+                    country_event = { id = colombia.104 hours = 12 }
                 }
             }
         }
@@ -379,16 +512,41 @@ on_actions = {
                 
             }
         }
-		effect = {
-			#Sul puppet of Brazil
-			if = {
-				limit = { 
-					original_tag = SUL  
-					FROM = { original_tag = BRA }
-				}
-				set_cosmetic_tag = SUL_BRA
-			}
-		}
+        effect = { #Check if Vásquez Cobo is going to die
+            if = { 
+                limit = {
+                    date > 1940.1.1
+                    has_completed_focus = COL_expulsar_a_los_politicos
+                    NOT = { has_country_flag = cobo_is_dead }
+                }
+                COL_cobo_may_die_effect = yes
+            }
+        }
+        effect = { #Check if exiled politicians are going to help fight against Colombia
+            if = { 
+                limit = {
+                    has_completed_focus = COL_expulsar_a_los_politicos
+                    has_war = yes
+                    NOT = {
+                        has_country_flag = exiled_politicians_flag
+                    }
+                    any_enemy_country = {
+                        exists = yes
+                        capital_scope = { is_on_continent = south_america }
+                        is_neighbor_of = COL
+                    }
+                }
+                set_country_flag = exiled_politicians_flag
+                random_enemy_country = {
+                    limit = {
+                        exists = yes
+                        capital_scope = { is_on_continent = south_america }
+                        is_neighbor_of = COL
+                    }
+                    country_event = { id = colombia.102 hours = 8 }
+                }
+            }
+        }
     }
 }
 

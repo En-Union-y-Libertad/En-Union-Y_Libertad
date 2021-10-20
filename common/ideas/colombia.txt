@@ -355,7 +355,7 @@ ideas = {
 			}
 
 			on_remove = {
-				add_to_variable = { var = COL_influencia_liberal_days value = 6 }
+				add_to_variable = { var = COL_influencia_liberal_days value = 9 }
 			}
 			
 			removal_cost = -1
@@ -1434,6 +1434,28 @@ ideas = {
 			}
 		}
 
+		COL_estado_laico = {
+		
+			picture = COL_estado_laico
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				industrial_capacity_factory = 0.15
+				conscription_factor = 0.15
+				army_org_factor = 0.10
+			}
+		}
+
 		COL_culto_alzatismo = {
 		
 			picture = COL_culto_alzatismo
@@ -1804,7 +1826,7 @@ ideas = {
 				stability_factor = 0.1
 				political_power_factor = 0.15
 				consumer_goods_factor = -0.03
-				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
 
@@ -2326,7 +2348,7 @@ ideas = {
 			}
 		}
 
-		COL_influencia_militar = {
+		COL_influencia_militarista = {
 		
 			picture = generic_reserve_divisions
 			
@@ -2341,7 +2363,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				neutrality_drift = 0.025
+				neutrality_drift = 0.05
 			}
 		}
 
@@ -2411,7 +2433,7 @@ ideas = {
 
 		COL_sociedad_marcial = {
 
-			picture = picture = HUN_secret_rearmament
+			picture = HUN_secret_rearmament
 			
 			allowed = {
 				always = no
@@ -2427,6 +2449,258 @@ ideas = {
 				conscription = 0.05
 				mobilization_speed = 0.12
 				resistance_damage_to_garrison = -0.1
+			}
+		}
+
+		COL_america_liberada = {
+
+			picture = generic_victors_of_ww1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor= 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		COL_martires_guerra_colombo_peruana = {
+
+			picture = COL_martires_guerra_colombo_peruana
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.05
+			}
+
+			targeted_modifier = {
+				tag = PRU
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.05
+			}
+		}
+
+		COL_compromiso_obrero = {
+
+			picture = generic_deal_with_the_devil
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			on_remove = {
+				add_to_variable = { var = COL_influencia_liberal_days value = 21 }
+			}
+
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.1
+				custom_modifier_tooltip = compromiso_obrero_tt
+			}
+		}
+
+		COL_republica_cristiana = {
+
+			picture = MEX_church_power_5
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				industrial_capacity_factory = 0.15
+				conscription = 0.02
+				party_popularity_stability_factor = 0.1
+			}
+		}
+
+		COL_estatismo = {
+
+			picture = tur_etatism
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				economy_cost_factor = -0.5
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		COL_ministerio_guerra1 = {
+
+			picture = COL_estado_mayor
+
+			name = COL_ministerio_guerra
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.10
+				army_org_factor = 0.05
+			}
+		}
+
+		COL_ministerio_guerra2 = {
+
+			picture = COL_estado_mayor
+
+			name = COL_ministerio_guerra
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.15
+				army_attack_factor = 0.05
+				army_defence_factor= 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		COL_legion_ricaurte = {
+
+			picture = COL_ejercito_conservador
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.15
+				offence = 0.05
+				defence = 0.05
+			}
+		}
+
+		COL_salario_obrero1 = {
+
+			picture = generic_production_bonus
+
+			name = COL_salario_obrero
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		COL_salario_obrero2 = {
+
+			picture = generic_production_bonus
+
+			name = COL_salario_obrero
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				stability_factor = 0.05
+			}
+		}
+
+		COL_politicos_exiliados = {
+
+			picture = COL_oligarquia_insatisfecha
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = COL
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.05
+			}
+
+			targeted_modifier = {
+				tag = COL
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.10	
 			}
 		}
 	}
