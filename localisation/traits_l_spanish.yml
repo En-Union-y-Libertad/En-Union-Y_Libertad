@@ -18,8 +18,10 @@
  CHL_el_jefe:0 "El Jefe"
  CHL_military_leader:0 "Héroe Militar"
  CHL_economist:0 "Economista"
+ CHL_economist_2:0 "Economista"
  PRU_godly_being:0 "Ser Sobrenatural"
  PRU_not_a_real_person:0 "Persona Inexistente"
+ PRU_not_a_real_person_2:0 "Persona Inexistente"
  POLITICS_SUN_GOD_DESC:0 "Inti es el antiguo dios inca del sol. Es venerado como el patrón nacional del Estado Inca. Aunque la mayoría considera a Inti como el dios del sol, es más apropiado verlo como un conjunto de aspectos solares, ya que los incas dividían su identidad según las etapas del sol. Adorado como deidad patrona del Imperio Inca, Pachacuti suele estar relacionado con el origen y la expansión del culto al sol de los incas. La historia más común dice que es el hijo de Viracocha, el dios de la civilización. \n\nSegún el lingüista Rodolfo Cerrón-Palomino, la palabra inti no es de origen quechua, sino un préstamo de la lengua puquina. El préstamo de la lengua puquina explica por qué lenguas genéticamente no relacionadas, como el quechua, el aymara y el mapuche, tienen palabras similares para referirse al Sol. Las similitudes no son sólo lingüísticas sino también simbólicas, ya que en la cosmología mapuche y andina central el Sol (Inti/Antu) y la Luna (Quilla/Cuyen) son esposos".
  PBC_socialist_tendencies_1:0 "Tendencias socialistas"
  PBC_socialist_tendencies_2:0 "Tendencias socialistas"
@@ -41,6 +43,9 @@
  COL_voice_of_the_people:0 "La voz del pueblo"
  COL_el_general:0 "El General"
  COL_tribuno_del_pueblo:0 "Tribuno del pueblo"
+ BOL_father_of_the_falange:0 "Padre de la Falange"
+ EUYL_soldier_recruiter:0 "Reclutador de Soldados"
+ PBC_disorganized_nationalists:0 "Nacionalistas desorganizados"
 
  cc_leader:0 "General"
  fm_leader:0 "Mariscal de campo"

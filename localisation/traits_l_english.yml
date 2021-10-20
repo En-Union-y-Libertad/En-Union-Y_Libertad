@@ -18,8 +18,10 @@
  CHL_el_jefe:0 "El Jefe"
  CHL_military_leader:0 "Military Hero"
  CHL_economist:0 "Economist"
+ CHL_economist_2:0 "Economist"
  PRU_godly_being:0 "Godly Being"
  PRU_not_a_real_person:0 "Not an Actual Person"
+ PRU_not_a_real_person_2:0 "Not an Actual Person"
  POLITICS_SUN_GOD_DESC:0 "Inti is the ancient Incan sun god. He is revered as the national patron of the Inca state. Although most consider Inti the sun god, he is more appropriately viewed as a cluster of solar aspects, since the Inca divided his identity according to the stages of the sun. Worshiped as a patron deity of the Inca Empire, Pachacuti is often linked to the origin and expansion of the Inca Sun Cult. The most common story says that he is the son of Viracocha, the god of civilization. \n\nThe word inti is according to linguist Rodolfo Cerrón-Palomino not of Quechua origin but a loanword from Puquina language. Borrowing from Puquina language explains why genetically unrelated languages such as Quechua, Aymara and Mapuche have similar words for the Sun. Similitudes are not only linguistic but also symbolically as in Mapuche and Central Andean cosmology the Sun (Inti/Antu) and the Moon (Quilla/Cuyen) are spouses."
  PBC_socialist_tendencies_1:0 "Socialist Tendencies"
  PBC_socialist_tendencies_2:0 "Socialist Tendencies"
@@ -39,21 +41,11 @@
  COL_proselito_del_duce:0 "Proselyte of Il Duce"
  COL_hombre_tempestad:0 "Hombre Tempestad"
  COL_voice_of_the_people:0 "The voice of the people"
-<<<<<<< Updated upstream
  COL_el_general:0 "El General"
  COL_tribuno_del_pueblo:0 "Tribune of the people"
-=======
- COS_intellectual_dictator:0 "Intellectual Dictator"
- ELS_theosophic_dictator:0 "Theosophic Dictator"
- HON_strongman_of_tegucigalpa:0 "Strongman of Tegucigalpa"
- URG_el_guerrillero:0 "El Guerrillero"
- generic_army_connections:0 "Army Connections"
- generic_physician:0 "Physician"
- generic_lawyer:0 "Lawyer"
- generic_judge:0 "Judge"
- generic_writer:0 "Writer"
- 
->>>>>>> Stashed changes
+ BOL_father_of_the_falange:0 "Father of the Falange"
+ EUYL_soldier_recruiter:0 "Soldier Recruiter"
+ PBC_disorganized_nationalists:0 "Disorganized Nationalists"
  
  cc_leader:0 "General"
  fm_leader:0 "Field Marshal"
