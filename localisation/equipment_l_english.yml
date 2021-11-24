@@ -3416,6 +3416,13 @@
  BOL_infantry_equipment_3_short:0 "M1 Thompson"
  BOL_motorized_equipment_1:0 " Morris Commercial CDSW 15cwt"
  BOL_motorized_equipment_1_short:0 "CDSW 15cwt"
+
+ BOL_artillery_equipment_1:0 "Canon de 155 C Modele 1917"
+ BOL_artillery_equipment_1_short:0 "Canon de 155 C Modele 1917 Schneider"
+ BOL_artillery_equipment_2:0 "122mm Model 1938 M-30"
+ BOL_artillery_equipment_2_short:0 "122mm M-30"
+ BOL_anti_tank_equipment_2:0 "Cañon M3 37mm AT"
+ BOL_anti_tank_equipment_2_short:0 "M3 37mm AT" 
  
  GER_infantry_equipment_0:0 "Gewehr 98"
  GER_infantry_equipment_0_short:0 "Gewehr 98"
