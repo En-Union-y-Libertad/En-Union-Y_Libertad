@@ -691,5 +691,19 @@ on_actions = {
                 }
             }
         }
+	}
+	
+	on_monthly_BRA = {
+		effect = {
+			if = {
+				limit = {
+					BRA_coffee_plantations_active = yes 
+					NOT = { has_country_flag = BRA_civil_war_active }
+				}
+				BRA_update_opinion_variable = yes 
+				BRA_set_dependency_on_coffee_idea = yes 
+			}
+		}
+	}
 }
 

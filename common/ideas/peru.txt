@@ -2872,4 +2872,145 @@ ideas = {
 			}
 		}
 	}
+
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		faucett = {
+			
+			allowed = {
+				original_tag = PRU
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	naval_manufacturer = {
+			
+		designer = yes
+		
+		PRU_newport_news_shipbuilding = {
+			
+			allowed = {
+				original_tag = PRU
+			}
+
+			available = {
+				has_completed_focus = PRU_work_with_the_americans
+			}
+			
+			picture = newport_news_shipbuilding
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		PRU_sasebo_naval_arsenal = {
+			
+			allowed = {
+				original_tag = PRU
+			}
+
+			available = {
+				has_completed_focus = PRU_work_with_the_japanese
+			}
+
+			picture = sasebo_naval_arsenal
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer } #used for many repairs and conversions
+			
+			equipment_bonus = {
+				
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		PRU_rheinmetall = {
+			
+			allowed = {
+				original_tag = PRU
+			}
+
+			picture = rheinmetall
+
+			available = {
+				has_completed_focus = PRU_learn_from_the_germans
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		PRU_mas = {
+						
+			allowed = {
+				original_tag = PRU
+			}
+
+			picture = mas 
+
+			available = {
+				has_completed_focus = PRU_continue_our_military_relationship_with_the_french
+			}
+						
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		
+		ferreycorp = {
+			
+			allowed = {
+				original_tag = PRU
+			}
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			modifier = {
+				trade_laws_cost_factor = -0.1
+			}
+			
+			traits = { construction_company }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 }

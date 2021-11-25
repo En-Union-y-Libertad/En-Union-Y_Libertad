@@ -25,10 +25,123 @@ ideas = {
 				min_export = 0.2
 			}
 		}
+
+		rural_economy = {
+
+			allowed = {
+				always = no 
+				original_tag = BRA 
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_industrial_complex_factor = -0.7
+				production_speed_arms_factory_factor = -0.7
+				production_speed_dockyard_factor = -0.7
+				industrial_capacity_factory = -0.45
+				industrial_capacity_dockyard = -0.45
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				fuel_gain_factor = -0.3
+				min_export = 0.2
+			}
+
+			allowed_to_remove = {
+				always = no 
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		semi_rural_economy = {
+
+			allowed = {
+				always = no 
+				original_tag = BRA 
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_industrial_complex_factor = -0.55
+				production_speed_arms_factory_factor = -0.55
+				production_speed_dockyard_factor = -0.55
+				industrial_capacity_factory = -0.35
+				industrial_capacity_dockyard = -0.35
+				conversion_cost_civ_to_mil_factor = 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				fuel_gain_factor = -0.3
+				min_export = 0.2
+			}
+
+			allowed_to_remove = {
+				always = no 
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		industrializing_economy = {
+
+			allowed = {
+				always = no 
+				original_tag = BRA 
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
+				production_speed_dockyard_factor = -0.3
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				conversion_cost_civ_to_mil_factor = 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				fuel_gain_factor = -0.3
+				min_export = 0.2
+			}
+
+			allowed_to_remove = {
+				always = no 
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		industrialized_economy = {
+
+			allowed = {
+				always = no 
+				original_tag = BRA 
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = -0.15
+				production_speed_dockyard_factor = -0.15
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				conversion_cost_civ_to_mil_factor = 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				fuel_gain_factor = -0.3
+				min_export = 0.2
+			}
+
+			allowed_to_remove = {
+				OR = {
+					num_of_factories > 50
+					has_war = yes 
+				}
+			}
+
+			cancel_if_invalid = no
+		}
 		
 		undisturbed_isolation = {
-			
-			
 			allowed = {
 				always = no
 			}
@@ -125,6 +238,12 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						original_tag = BRA 
+					}
+					BRA_isnt_industrializing_economy = yes 
+				}
 			}
 		}
 		
@@ -157,6 +276,12 @@ ideas = {
 							has_completed_focus = CHL_achieve_laissez_faire
 						}
 					}
+				}
+				if = {
+					limit = {
+						original_tag = BRA 
+					}
+					BRA_isnt_industrializing_economy = yes 
 				}
 			}
 			on_add = {
@@ -236,6 +361,12 @@ ideas = {
 							has_completed_focus = CHL_achieve_laissez_faire
 						}
 					}
+				}
+				if = {
+					limit = {
+						original_tag = BRA 
+					}
+					BRA_isnt_industrializing_economy = yes 
 				}
 			}
 
@@ -317,7 +448,13 @@ ideas = {
 							has_completed_focus = CHL_achieve_laissez_faire
 						}
 					}
-				}				
+				}	
+				if = {
+					limit = {
+						original_tag = BRA 
+					}
+					BRA_isnt_industrializing_economy = yes 
+				}			
 			}
 		
 			cost = 150
@@ -400,6 +537,12 @@ ideas = {
 						has_completed_focus = CHL_everyone_must_bear_the_torch
 					}
 				}
+				if = {
+					limit = {
+						original_tag = BRA 
+					}
+					BRA_isnt_industrializing_economy = yes 
+				}
 			}
 			on_add = {
 				if = {
@@ -475,11 +618,108 @@ ideas = {
 			
 			cancel_if_invalid = no
 		}
+		
+		new_economic_policy = {
+
+			picture = new_economic_policy
+			
+			allowed = {
+				always = no
+			}
+			allowed_to_remove = {
+				OR = {
+					surrender_progress > 0.75
+					NOT = { has_government = communism }				
+				}
+			}
+	
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15	
+				production_speed_buildings_factor = -0.15 
+				
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+		new_economic_policy_2 = {
+			name = new_economic_policy
+
+			picture = new_economic_policy
+			
+			allowed = {
+				always = no
+			}
+			allowed_to_remove = {
+				OR = {
+					surrender_progress > 0.75
+					NOT = { has_government = communism }				
+				}
+			}
+	
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10	
+				production_speed_buildings_factor = -0.2 
+				global_building_slots_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
 	}
 	
 	trade_laws = { 
 		law = yes
 		use_list_view = yes
+		
+		uncontrolled_exports = {
+			
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = isolation
+		
+			modifier = {
+				min_export = 0.25
+				consumer_goods_factor = 0.05
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 40.0
+				agency_upgrade_time = 0.15
+			}
+			
+			allowed_to_remove = {
+				OR = {
+					has_war = yes
+					has_completed_focus = POL_integrate_gdansk_industries
+					has_completed_focus = POL_expand_gdynia_seaport
+					NOT = {
+						owns_state = 85
+						owns_state = 807
+					}
+					any_owned_state = {
+						NOT = {
+							state = 85
+							state = 807
+						}
+						is_coastal = yes
+					}
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
 		
 		free_trade = {
 

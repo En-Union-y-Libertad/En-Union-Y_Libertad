@@ -387,7 +387,7 @@ defined_text = {
 			NOT = {
 				OR = {
 					has_country_flag = CHL_nacista_friendly
-					has_country_flag = CHL_communist_friendly
+					has_country_flag = CHL_communists_friendly
 				}
 			}
 		}
@@ -399,7 +399,7 @@ defined_text = {
 			has_government = democratic
 			OR = {
 				has_country_flag = CHL_nacista_friendly
-				has_country_flag = CHL_communist_friendly
+				has_country_flag = CHL_communists_friendly
 			}
 		}
 		localization_key = CHL_democrats_control_over_nation
@@ -469,5 +469,171 @@ defined_text = {
 			has_completed_focus = CHL_begin_preperations_for_uprising
 		}
 		localization_key = CHL_nacismo_enemy
+	}
+}
+
+defined_text = {
+	name = GetElectionWinner38
+	text = {
+		trigger = {
+			original_tag = CHL 
+			AND = {
+				check_variable = { CHL_chance_of_f_winning > CHL_chance_of_c_winning }
+				check_variable = { CHL_chance_of_f_winning > CHL_chance_of_d_winning }
+			}
+		}
+		localization_key = CHL_nacista_victors
+	}
+	text = {
+		trigger = {
+			original_tag = CHL 
+			AND = {
+				check_variable = { CHL_chance_of_c_winning > CHL_chance_of_f_winning }
+				check_variable = { CHL_chance_of_c_winning > CHL_chance_of_d_winning }
+			}
+		}
+		localization_key = CHL_frente_popular_victors
+	}
+	text = {
+		trigger = {
+			original_tag = CHL 
+			AND = {
+				check_variable = { CHL_chance_of_d_winning > CHL_chance_of_f_winning }
+				check_variable = { CHL_chance_of_d_winning > CHL_chance_of_c_winning }
+			}
+		}
+		localization_key = CHL_liberals_victors
+	}
+}
+
+defined_text = {
+	name = GetSocialistGov
+	text = {
+		trigger = {
+			original_tag = CHL 
+			NOT = {
+				OR = {
+					has_country_flag = CHL_FP_player
+					has_completed_focus = CHL_cooperate_with_el_frente
+				}
+			}
+		}
+		localization_key = CHL_communists 
+	}
+	text = {
+		trigger = {
+			original_tag = CHL 
+			OR = {
+				has_country_flag = CHL_FP_player
+				has_completed_focus = CHL_cooperate_with_el_frente
+			}
+		}
+		localization_key = CHL_frente
+	}
+}
+
+defined_text = {
+	name = GetPowerSpanish
+	text = {
+		trigger = {
+			original_tag = CHL 
+			NOT = {
+				OR = {
+					has_country_flag = CHL_FP_player
+					has_completed_focus = CHL_cooperate_with_el_frente
+				}
+			}
+		}
+		localization_key = CHL_communists_power
+	}
+	text = {
+		trigger = {
+			original_tag = CHL 
+			OR = {
+				has_country_flag = CHL_FP_player
+				has_completed_focus = CHL_cooperate_with_el_frente
+			}
+		}
+		localization_key = CHL_frente_power
+	}
+}
+
+#### Brazil ####
+
+defined_text = {
+	name = GetCoffeeOpinion
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_coffee_companies_opinion = -2 }
+		}
+		localization_key = BRA_coffee_very_low_opinion
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_coffee_companies_opinion = -1 }
+		}
+		localization_key = BRA_coffee_low_opinion
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_coffee_companies_opinion = 0 }
+		}
+		localization_key = BRA_coffee_neutral_opinion
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_coffee_companies_opinion = 1 }
+		}
+		localization_key = BRA_coffee_high_opinion
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_coffee_companies_opinion = 2 }
+		}
+		localization_key = BRA_coffee_very_high_opinion
+	}
+}
+
+defined_text = {
+	name = GetChanceOfAgreement
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_coffee_companies_opinion = -2 }
+		}
+		localization_key = BRA_0_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_coffee_companies_opinion = -1 }
+		}
+		localization_key = BRA_25_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_coffee_companies_opinion = 0 }
+		}
+		localization_key = BRA_50_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_coffee_companies_opinion = 1 }
+		}
+		localization_key = BRA_75_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_coffee_companies_opinion = 2 }
+		}
+		localization_key = BRA_100_tt
 	}
 }

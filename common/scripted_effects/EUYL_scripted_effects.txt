@@ -268,3 +268,165 @@ PBC_set_up_nationalism_on_rise = {
     set_variable = { PBC_stability_factor = PBC_stab }
     set_variable = { PBC_industrial_factors = PBC_indus }
 }
+
+#Adds one civilian factory 
+EUYL_add_1_civilian = {
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes 
+		}
+	}
+}
+
+#Adds two civilian factories 
+EUYL_add_2_civilian = {
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes 
+		}
+	}
+}
+
+#Adds four civilian factories 
+EUYL_add_4_civilian = {
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes 
+		}
+		set_state_flag = EUYL_taken
+	}
+	random_owned_controlled_state = {
+		limit = { NOT = { has_state_flag = EUYL_taken } }
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes 
+		}
+	}
+	hidden_effect = {
+		random_owned_controlled_state = {
+			limit = { has_state_flag = EUYL_taken }
+			clr_state_flag = EUYL_taken
+		}
+	}
+}
+
+#Adds one military factory 
+EUYL_add_1_military = {
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes 
+		}
+	}
+}
+
+#Adds two military factory 
+EUYL_add_2_military = {
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes 
+		}
+	}
+}
+
+#Adds four military factories 
+EUYL_add_4_military = {
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes 
+		}
+		set_state_flag = EUYL_taken
+	}
+	random_owned_controlled_state = {
+		limit = { NOT = { has_state_flag = EUYL_taken } }
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes 
+		}
+	}
+	hidden_effect = {
+		random_owned_controlled_state = {
+			limit = { has_state_flag = EUYL_taken }
+			clr_state_flag = EUYL_taken
+		}
+	}
+}
+
+#Adds one dockyard 
+EUYL_add_1_dockyard = {
+	random_owned_controlled_state = {
+		limit = { is_coastal = yes }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = dockyard
+			level = 1
+			instant_build = yes 
+		}
+	}
+}
+
+#Adds two dockyards 
+EUYL_add_2_dockyard = {
+	random_owned_controlled_state = {
+		limit = { is_coastal = yes }
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = dockyard
+			level = 2
+			instant_build = yes 
+		}
+	}
+}
+
+#Adds four dockyards 
+EUYL_add_4_dockyard = {
+	random_owned_controlled_state = {
+		limit = { is_coastal = yes }
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = dockyard
+			level = 2
+			instant_build = yes 
+		}
+		set_state_flag = EUYL_taken
+	}
+	random_owned_controlled_state = {
+		limit = { 
+			is_coastal = yes 
+			NOT = { has_state_flag = EUYL_taken } 
+		}
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = dockyard
+			level = 2
+			instant_build = yes 
+		}
+	}
+	hidden_effect = {
+		random_owned_controlled_state = {
+			limit = { has_state_flag = EUYL_taken }
+			clr_state_flag = EUYL_taken
+		}
+	}
+}

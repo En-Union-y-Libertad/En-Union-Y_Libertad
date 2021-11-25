@@ -35,7 +35,7 @@ focus_tree = {
 
         cost = 2
 
-        search_filters = { FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 50
         }
@@ -52,7 +52,7 @@ focus_tree = {
 
         cost = 8
 
-        search_filters = { FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             swap_ideas = {
                 remove_idea = BOL_great_depression
@@ -93,7 +93,7 @@ focus_tree = {
 
         cost = 10
 
-        search_filters = { FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 25
             custom_effect_tooltip = BOL_gain_infrastructure
@@ -179,7 +179,7 @@ focus_tree = {
 
         cost = 5
 
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 50
             if = {
@@ -409,14 +409,7 @@ focus_tree = {
 						}
                     }
                     ROOT = {
-                        random_owned_controlled_state = {
-                            add_extra_state_shared_building_slots = 2
-                            add_building_construction = {
-                                type = industrial_complex
-                                level = 2
-                                instant_build = yes
-                            }
-                        }
+                        EUYL_add_2_civilian = yes 
                     }
                 }
             }
@@ -469,7 +462,7 @@ focus_tree = {
 
         cost = 10
 
-        search_filters = { FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             swap_ideas = {
                 remove_idea = BOL_focused_on_what_were_good_at_1
@@ -488,7 +481,7 @@ focus_tree = {
 
         cost = 5
 
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 75
         }
@@ -508,7 +501,7 @@ focus_tree = {
 
         cost = 3
 
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             if = {
                 limit = { NOT = { has_idea = civilian_economy } }
@@ -600,20 +593,13 @@ focus_tree = {
         mutually_exclusive = { focus = BOL_open_our_wheat_markets }
 
         cost = 6
-
+        search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
         completion_reward = {
             swap_ideas = {
                 remove_idea = BOL_great_depression_2
                 add_idea = BOL_great_depression_3
             }
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes
-                }
-            }
+            EUYL_add_2_civilian = yes 
         }
     }
 
@@ -635,22 +621,9 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 3
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 3
-                    instant_build = yes
-                }
-            }
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes
-                }
-            }
+            EUYL_add_2_civilian = yes 
+            EUYL_add_1_civilian = yes
+            EUYL_add_1_military = yes 
         }
     }
 
@@ -672,22 +645,9 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 3
-                add_building_construction = {
-                    type = arms_factory
-                    level = 3
-                    instant_build = yes
-                }
-            }
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-            }
+            EUYL_add_2_military = yes 
+            EUYL_add_1_military = yes 
+            EUYL_add_1_civilian = yes
         }
     }
 
@@ -707,7 +667,7 @@ focus_tree = {
         mutually_exclusive = { focus = BOL_expand_the_civilian_economy }
         mutually_exclusive = { focus = BOL_expand_our_armories }
 
-        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             random_owned_controlled_state = {
                 add_extra_state_shared_building_slots = 2
@@ -758,7 +718,7 @@ focus_tree = {
 
         cost = 5
 
-        search_filters = { FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             remove_ideas = BOL_great_depression_3
         }
@@ -777,7 +737,7 @@ focus_tree = {
 
         cost = 10
         
-        search_filters = { FOCUS_FILTER_RESEARCH }
+        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_research_slot = 1
         }
@@ -1052,14 +1012,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         completion_reward = {
             custom_effect_tooltip = PRU_purchase_foreign_arms_from_other_country
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_1_military = yes 
         }
     }
 
@@ -1188,14 +1141,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
         completion_reward = {
             remove_ideas = BOL_disbanded_the_army_4
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_1_military = yes 
         }
     }
 
@@ -1241,7 +1187,7 @@ focus_tree = {
             base = 5
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_popularity = {
 				ideology = democratic
@@ -1280,7 +1226,7 @@ focus_tree = {
             }
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 75
         }
@@ -1361,7 +1307,7 @@ focus_tree = {
 
         available = {
             any_neighbor_country = {
-                controls_state = 828
+                controls_state = 909
             }
             NOT = {
                 has_war_with = CHL 
@@ -1371,7 +1317,7 @@ focus_tree = {
         bypass = {
             has_completed_focus = BOL_open_up_our_foreing_policy
             OR = {
-                controls_state = 828
+                controls_state = 909
                 has_war_with = CHL 
             }
         }
@@ -1380,16 +1326,16 @@ focus_tree = {
         completion_reward = {
             random_other_country = {
                 limit = {
-                    controls_state = 828
+                    controls_state = 909
                 }
                 country_event = { id = bolivia.5 hours = 8 }
             }
             custom_effect_tooltip = ARG_iftheyaccept
 			effect_tooltip = {
-                transfer_state = 828
+                transfer_state = 909
                 random_other_country = {
                     limit = {
-                        controls_state = 828
+                        controls_state = 909
                     }
                     ROOT = {
                         give_resource_rights = { receiver = PREV state = 844 }
@@ -1490,7 +1436,7 @@ focus_tree = {
         available = {
             controls_state = 688
             controls_state = 845
-            controls_state = 828
+            controls_state = 909
         }
 
         search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
@@ -1513,7 +1459,7 @@ focus_tree = {
                     instant_build = yes 
                 }
             }
-            828 = {
+            909 = {
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
                     type = dockyard
@@ -1641,15 +1587,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
         completion_reward = {
             navy_experience = 50
-            random_owned_controlled_state = {
-                limit = { is_coastal = yes }
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = dockyard
-                    level = 2
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_2_dockyard = yes
             add_tech_bonus = {
 				name = BOL_learn_from_the_british_navy
 				bonus = 1.0
@@ -1729,39 +1667,11 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes 
-                }
-            }
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_2_civilian = yes 
+            EUYL_add_1_military = yes 
             ENG = {
-                random_owned_controlled_state = {
-                    add_extra_state_shared_building_slots = 2
-                    add_building_construction = {
-                        type = industrial_complex
-                        level = 2
-                        instant_build = yes 
-                    }
-                }
-                random_owned_controlled_state = {
-                    add_extra_state_shared_building_slots = 1
-                    add_building_construction = {
-                        type = arms_factory
-                        level = 1
-                        instant_build = yes 
-                    }
-                }
+                EUYL_add_2_civilian = yes 
+                EUYL_add_1_military = yes 
             }
         }
     }
@@ -1951,22 +1861,8 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes 
-                }
-            }
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_2_civilian = yes 
+            EUYL_add_1_military = yes 
         }
     }
 
@@ -2272,16 +2168,9 @@ focus_tree = {
 
         cost = 10
 
-        search_filters = { FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_2_civilian = yes 
         }
     }
 
@@ -2300,14 +2189,7 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = arms_factory
-                    level = 2
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_2_military = yes 
         }
     }
 
@@ -2326,7 +2208,7 @@ focus_tree = {
             has_war = no
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             custom_effect_tooltip = PRU_invest_unlocked	
         }
@@ -2382,7 +2264,7 @@ focus_tree = {
             factor = 50
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 25
             add_popularity = {
@@ -2412,7 +2294,7 @@ focus_tree = {
             factor = 50
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_popularity = {
 				ideology = communism
@@ -2493,7 +2375,7 @@ focus_tree = {
             has_idea = BOL_went_against_the_civilians
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 75
             unlock_decision_category_tooltip = BOL_regaining_the_trust_of_the_people
@@ -2530,7 +2412,7 @@ focus_tree = {
         cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 25
             unlock_decision_tooltip = BOL_restructure_the_parliament
@@ -2567,16 +2449,9 @@ focus_tree = {
         cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_1_civilian = yes 
             unlock_decision_tooltip = BOL_kickstart_our_economy
         }
     }
@@ -2611,7 +2486,7 @@ focus_tree = {
         cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             random_owned_controlled_state = {
                 add_resource = {
@@ -2654,7 +2529,7 @@ focus_tree = {
         cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_stability = 0.05
             unlock_decision_tooltip = BOL_set_up_a_corporate_style_system
@@ -2692,7 +2567,7 @@ focus_tree = {
         cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_manpower = 27500
             unlock_decision_tooltip = BOL_improve_conditions_of_the_average_worker
@@ -2773,14 +2648,7 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = arms_factory
-                    level = 2
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_2_military = yes 
             add_popularity = {
                 ideology = fascism 
                 popularity = 0.03
@@ -2806,7 +2674,7 @@ focus_tree = {
             has_government = communism
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_popularity = {
 				ideology = communism
@@ -2841,7 +2709,7 @@ focus_tree = {
             factor = 5
         }
 
-        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_ideas = ARG_expanded_worker_rights
         }
@@ -2858,21 +2726,10 @@ focus_tree = {
 
         cost = 8
 
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = arms_factory 
-                    level = 1
-                    instant_build = yes 
-                }
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_1_military = yes 
+            EUYL_add_1_civilian = yes 
         }
     }
 
@@ -2902,7 +2759,7 @@ focus_tree = {
             }
         }
 
-        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_stability = 0.1
             add_research_slot = 1
@@ -2993,7 +2850,7 @@ focus_tree = {
             factor = 5
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             custom_effect_tooltip = BOL_kick_out_toro_tt
             remove_unit_leader = 44123
@@ -3021,7 +2878,7 @@ focus_tree = {
 
         cost = 5
 
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 50
         }
@@ -3043,7 +2900,7 @@ focus_tree = {
             }
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             PAR = { country_event = { id = bolivia.7 hours = 6 }}
             custom_effect_tooltip = ARG_iftheyaccept
@@ -3071,7 +2928,7 @@ focus_tree = {
 
         cost = 10
 
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 75
             add_stability = 0.05
@@ -3112,7 +2969,7 @@ focus_tree = {
             has_civil_war = no 
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 100
             add_stability = -0.05
@@ -3133,7 +2990,7 @@ focus_tree = {
 
         cost = 10
 
-        search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
+        search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_war_support = 0.05
             add_ideas = URG_expanded_consription
@@ -3159,7 +3016,7 @@ focus_tree = {
             factor = 2
         }
 
-        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_stability = 0.05
             add_popularity = {
@@ -3529,7 +3386,7 @@ focus_tree = {
 					has_country_flag = is_in_second_war_of_the_pacific
 				}
 				has_country_flag = PRU_BOL_winner_of_war_of_pacific
-				controls_state = 828
+				controls_state = 909
 			}
 		}
 
@@ -3598,7 +3455,7 @@ focus_tree = {
 					has_country_flag = is_in_second_war_of_the_pacific
 				}
 				has_country_flag = PRU_BOL_winner_of_war_of_pacific
-				controls_state = 828
+				controls_state = 909
 			}
 		}
 
@@ -3684,7 +3541,7 @@ focus_tree = {
                 has_country_flag = PRU_BOL_winner_of_war_of_pacific
                 AND = {
                     has_war = no 
-                    controls_state = 828
+                    controls_state = 909
                 }
             }
 			NOT = {
@@ -3771,39 +3628,11 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 2
-                    instant_build = yes 
-                }
-            }
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_2_civilian = yes 
+            EUYL_add_1_military = yes
             PRU = {
-                random_owned_controlled_state = {
-                    add_extra_state_shared_building_slots = 2
-                    add_building_construction = {
-                        type = industrial_complex
-                        level = 2
-                        instant_build = yes 
-                    }
-                }
-                random_owned_controlled_state = {
-                    add_extra_state_shared_building_slots = 1
-                    add_building_construction = {
-                        type = arms_factory
-                        level = 1
-                        instant_build = yes 
-                    }
-                }
+                EUYL_add_2_civilian = yes 
+                EUYL_add_1_military = yes
             }
         }
     }
@@ -4185,7 +4014,7 @@ focus_tree = {
 
         available = {
             controls_state = 845
-            controls_state = 828
+            controls_state = 909
             controls_state = 688
         }
 
@@ -4209,7 +4038,7 @@ focus_tree = {
                     instant_build = yes 
                 }
             }
-            828 = {
+            909 = {
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
                     type = dockyard
@@ -4243,9 +4072,9 @@ focus_tree = {
         completion_reward = {
             add_political_power = 35
             add_war_support = 0.05
-            add_state_claim = 819
-            add_state_claim = 820
-            add_state_claim = 829
+            add_state_claim = 900
+            add_state_claim = 901
+            add_state_claim = 910
         }
     }
 
@@ -4393,12 +4222,12 @@ focus_tree = {
 
         available = {
             OR = {
-                controls_state = 819
-                controls_state = 820
+                controls_state = 900
+                controls_state = 901
                 controls_state = 688 
                 controls_state = 845
-                controls_state = 828
-                controls_state = 829
+                controls_state = 909
+                controls_state = 910
             }
         }
 
@@ -4777,17 +4606,10 @@ focus_tree = {
 
         cost = 5
 
-        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             add_political_power = 25
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_1_military = yes 
             unlock_decision_category_tooltip = south_american_armament
         }
     }
@@ -4802,7 +4624,7 @@ focus_tree = {
 
         cost = 8
 
-        search_filters = { FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             army_experience = 25
             add_timed_idea = {
@@ -4831,7 +4653,7 @@ focus_tree = {
             has_idea = BOL_losers_in_the_chaco_war
         }
 
-        search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+        search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             swap_ideas = {
                 remove_idea = BOL_losers_in_the_chaco_war
@@ -4850,7 +4672,7 @@ focus_tree = {
 
         cost = 15
 
-        search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+        search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
         completion_reward = {
             remove_ideas = BOL_losers_in_the_chaco_war_2
         }
@@ -4957,14 +4779,7 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = arms_factory
-                    level = 2
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_2_military = yes
         }
     }
 
@@ -4987,14 +4802,7 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_1_military = yes 
             add_ideas = BOL_expanded_army
         }
     }
@@ -5016,16 +4824,9 @@ focus_tree = {
             }
         }
 
-        search_filters = { FOCUS_FILTER_INDUSTRY }
+        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_1_military = yes 
             add_ideas = CHL_expanding_our_numbers
         }
     }
@@ -5132,15 +4933,8 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
             navy_experience = 50
-            random_owned_controlled_state = {
-                limit = { is_coastal = yes }
-                add_extra_state_shared_building_slots = 3
-                add_building_construction = {
-                    type = dockyard
-                    level = 3
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_2_dockyard = yes 
+            EUYL_add_1_dockyard = yes 
         }
     }
 
@@ -5247,15 +5041,7 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY } 
         completion_reward = {
-            random_owned_controlled_state = {
-                limit = { is_coastal = yes }
-                add_extra_state_shared_building_slots = 3
-                add_building_construction = {
-                    type = dockyard
-                    level = 3
-                    instant_build = yes 
-                }
-            }
+            EUYL_add_4_dockyard = yes 
         }
     }
 
@@ -5271,15 +5057,6 @@ focus_tree = {
 
         search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
         completion_reward = {
-            random_owned_controlled_state = {
-                limit = { is_coastal = yes }
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = dockyard
-                    level = 1
-                    instant_build = yes 
-                }
-            }
             add_tech_bonus = {
 				name = BOL_our_navy_restored
 				bonus = 1.0

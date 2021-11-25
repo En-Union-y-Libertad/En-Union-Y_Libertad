@@ -43,9 +43,9 @@ ARG_1937_elections = {
 			factor = 160
 		}
 
-		cost = 20
+		cost = 10
 
-		days_remove = 40
+		days_remove = 35
 
 		complete_effect = {
 			add_stability = -0.01
@@ -87,6 +87,9 @@ ARG_inflation = {
 					has_idea = ARG_inflation_8
 					has_idea = ARG_inflation_9
 				}
+			}
+			NOT = {
+				has_completed_focus = ARG_deal_with_the_inflation
 			}
 		}
 		
@@ -1168,13 +1171,17 @@ ARG_the_argentine_civil_war = {
 		}
 
 		available = {
-			814 = {
+			895 = {
 				is_controlled_by = ROOT
 			}
 			has_army_experience > 10
 		}
 
-		highlight_state_targets = { state = 814 }
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 895
+			}
+		}
 
 		on_map_mode = map_only
 
@@ -1201,7 +1208,7 @@ ARG_the_argentine_civil_war = {
 		}
 		
 		remove_effect = {
-			814 = {
+			895 = {
 				create_unit = {
 					division = "name = \"Federales\" division_template = \"Federales\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
 					owner = ROOT
@@ -1219,13 +1226,17 @@ ARG_the_argentine_civil_war = {
 		}
 
 		available = {
-			814 = {
+			895 = {
 				is_controlled_by = ROOT
 			}
 			has_army_experience > 10
 		}
 
-		highlight_state_targets = { state = 818 }
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 899
+			}
+		}
 
 		on_map_mode = map_only
 
@@ -1252,7 +1263,7 @@ ARG_the_argentine_civil_war = {
 		}
 		
 		remove_effect = {
-			818 = {
+			899 = {
 				create_unit = {
 					division = "name = \"Federales\" division_template = \"Federales\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
 					owner = ROOT
@@ -1276,7 +1287,11 @@ ARG_the_argentine_civil_war = {
 			has_army_experience > 10
 		}
 
-		highlight_state_targets = { state = 510 }
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 510
+			}
+		}
 
 		on_map_mode = map_only
 
@@ -1327,7 +1342,11 @@ ARG_the_argentine_civil_war = {
 			has_army_experience > 10
 		}
 
-		highlight_state_targets = { state = 509 }
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 509
+			}
+		}
 
 		on_map_mode = map_only
 
@@ -1963,19 +1982,19 @@ ARG_ramon_military_coup = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ARG_all_states_were_dealt_with_tt
-				808 = {
+				889 = {
 					has_state_flag = ARG_state_was_dealt_with
 				}
-				809 = {
+				890 = {
 					has_state_flag = ARG_state_was_dealt_with
 				}
-				810 = {
+				891 = {
 					has_state_flag = ARG_state_was_dealt_with
 				}
 				512 = {
 					has_state_flag = ARG_state_was_dealt_with
 				}
-				811 = {
+				892 = {
 					has_state_flag = ARG_state_was_dealt_with
 				}
 			}
@@ -2017,16 +2036,18 @@ ARG_ramon_military_coup = {
 		}
 
 		highlight_states = {
-			state = 808
-			state = 809
-			state = 810
-			state = 811 
-			state = 512
+			highlight_states_trigger = {
+				state = 889
+				state = 890
+				state = 891
+				state = 892 
+				state = 512
+			}
 		}
 
 		state_target = yes 
 
-		targets = { 808 809 810 512 811 }
+		targets = { 889 890 891 512 892 }
 
 		on_map_mode = map_and_decisions_view
 
@@ -2094,14 +2115,7 @@ ARG_five_year_plan = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_industrial_plan_in_progress
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			EUYL_add_1_civilian = yes 
 		}
 	}
 	
@@ -2134,14 +2148,7 @@ ARG_five_year_plan = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_industrial_plan_in_progress
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			EUYL_add_1_military = yes 
 		}
 	}
 	
