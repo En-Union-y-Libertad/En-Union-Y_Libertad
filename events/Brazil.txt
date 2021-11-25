@@ -1,0 +1,505 @@
+###########################
+# Brazil Events
+###########################
+
+add_namespace = brazil
+
+#Coffee Plantations give slight boost to the Brazilian Economy
+country_event = {
+	id = brazil.1
+	title = brazil.1.t
+	desc = brazil.1.d
+	picture = GFX_report_event_tur_industry
+	
+	fire_only_once = no 
+    trigger = {
+        original_tag = BRA 
+        check_variable = { BRA_coffee_companies_opinion > 0 }
+        BRA_coffee_plantations_active = yes 
+    }
+	
+	mean_time_to_happen = { days = 115 }
+
+	option = {
+		name = brazil.1.a
+		if = {
+			limit = { NOT = { has_idea = BRA_economic_boost } }
+			add_timed_idea = {
+				idea = BRA_economic_boost
+				days = 65
+			}
+		}
+		else = {
+			add_stability = 0.01
+		}
+	}
+}
+
+#Urban development destroys one of the plantations 
+country_event = {
+	id = brazil.2
+	title = brazil.2.t 
+	desc = brazil.2.d 
+	picture = GFX_BRA_brazil_2
+
+	fire_only_once = no 
+	trigger = {
+		original_tag = BRA 
+		AND = {
+			check_variable = { BRA_dependency_on_coffee > 39 }
+			check_variable = { BRA_dependency_on_coffee < 95 }
+		}
+		NOT = {
+			has_idea = BRA_rebellious_coffee_plantations_idea
+		}
+		BRA_coffee_plantations_active = yes 
+	}
+
+	mean_time_to_happen = { days = 100 }
+
+	option = {
+		name = brazil.2.a 
+		random_owned_controlled_state = {
+			limit = {
+				OR = {
+					has_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+					has_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+				}
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BRA_small_coffee_plantations } }
+				remove_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+			}
+			else = {
+				remove_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+				add_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+			}
+			custom_effect_tooltip = BRA_coffee_dependency_decreases_5_tt
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes 
+			}
+			hidden_effect = {
+				subtract_from_variable = { BRA_dependency_on_coffee = 5 }
+				BRA_update_opinion_variable = yes 
+				BRA_set_dependency_on_coffee_idea = yes
+			}
+		}
+	}
+}
+
+#Illegal Coffee Plantation set up 
+country_event = {
+	id = brazil.3
+	title = brazil.3.t
+	desc = brazil.3.d
+	picture = GFX_BRA_brazil_3
+	
+	fire_only_once = no 
+    trigger = {
+        original_tag = BRA 
+        check_variable = { BRA_coffee_companies_opinion < 0 }
+		AND = {
+			check_variable = { BRA_dependency_on_coffee < 95 }
+			check_variable = { BRA_dependency_on_coffee > 4 }
+		}
+		NOT = {
+			has_idea = BRA_rebellious_coffee_plantations_idea
+		}
+        BRA_coffee_plantations_active = yes 
+    }
+	
+	mean_time_to_happen = { days = 115 }
+
+	immediate = {
+		add_stability = -0.01
+	}
+
+	option = { #let them do it 
+		name = brazil.3.a 
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 40
+				has_completed_focus = BRA_maintain_our_agriculture
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				AND = {
+					NOT = {
+						has_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+					}
+					OR = {
+						state = 496 
+						state = 499
+						state = 877
+						state = 878
+						state = 500
+						state = 501
+						state = 879
+						state = 503
+						state = 502
+						state = 505
+					}
+				}
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BRA_small_coffee_plantations } }
+				remove_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+				add_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+			}
+			else = {
+				add_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+			}
+			custom_effect_tooltip = BRA_coffee_dependency_increases_5_tt
+			hidden_effect = {
+				add_to_variable = { BRA_dependency_on_coffee = 5 }
+				BRA_update_opinion_variable = yes 
+				BRA_set_dependency_on_coffee_idea = yes
+			}
+		}
+	}
+
+	option = { #prevent them from doing it 
+		name = brazil.3.b 
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 40
+				has_completed_focus = BRA_begin_industrializing_the_nation
+			}
+		}
+		add_stability = -0.02
+		custom_effect_tooltip = BRA_coffee_dependency_decreases_3_tt
+		hidden_effect = {
+			subtract_from_variable = { BRA_dependency_on_coffee = 3 }
+			BRA_update_opinion_variable = yes 
+			BRA_set_dependency_on_coffee_idea = yes
+		}
+	}
+}
+
+#Illegal plantation begins to rebel 
+country_event = {
+	id = brazil.4
+	title = brazil.4.t 
+	desc = brazil.4.d 
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = no 
+	trigger = {
+		original_tag = BRA 
+		BRA_coffee_plantations_active = yes 
+		has_idea = BRA_rebellious_coffee_plantations_idea
+	}
+
+	mean_time_to_happen = { days = 135 }
+
+	option = {
+		name = brazil.4.a 
+		add_stability = -0.01
+		random_owned_controlled_state = {
+			limit = {
+				OR = {
+					state = 496
+					state = 499
+					state = 877
+					state = 878
+					state = 500
+					state = 501
+					state = 879
+					state = 503
+					state = 502
+					state = 505
+				}
+				NOT = {
+					has_dynamic_modifier = { modifier = BRA_rebelling_coffee_plantations }
+				}
+				AND = {
+					infrastructure > 1
+					infrastructure < 5
+				}
+			}
+			add_dynamic_modifier = { modifier = BRA_rebelling_coffee_plantations }
+		}
+	}
+}
+
+#We have stopped the plantations
+country_event = {
+	id = brazil.5 
+	title = brazil.5.t 
+	desc = brazil.5.d 
+	picture = GFX_report_event_spr_anarchists2
+
+	fire_only_once = yes 
+	trigger = {
+		original_tag = BRA 
+		has_country_flag = BRA_rebelling_plantations
+		all_controlled_state = {
+			NOT = {
+				has_dynamic_modifier = { modifier = BRA_rebelling_coffee_plantations }
+			}
+		}
+	}
+
+	immediate = {
+		clr_country_flag = BRA_rebelling_plantations
+	}
+
+	option = {
+		name = brazil.5.a 
+		custom_effect_tooltip = BRA_coffee_dependency_no_longer_exists_tt
+		hidden_effect = {
+			remove_ideas = {
+				BRA_very_slight_dependency_on_coffee
+				BRA_slight_dependency_on_coffee
+				BRA_dependent_on_coffee
+				BRA_very_dependent_on_coffee
+				BRA_extremely_dependent_on_coffee
+			}
+			set_variable = { BRA_dependency_on_coffee = 0 }
+		}
+	}
+}
+
+#Farmers agree to agreement 
+country_event = {
+	id = brazil.6 
+	title = brazil.6.t 
+	desc = brazil.6.d 
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes 
+
+	option = {
+		name = brazil.6.a 
+		hidden_effect = {
+			set_country_flag = BRA_farmers_agreed
+		}
+	}
+}
+
+#Farmers refuse agreement 
+country_event = {
+	id = brazil.7 
+	title = brazil.7.t
+	desc = brazil.7.d 
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes 
+
+	option = {
+		name = brazil.7.a 
+		hidden_effect = {
+			set_country_flag = BRA_farmers_refused
+		}
+	}
+}
+
+#Event that asks player how much they would like to invest 
+country_event = {
+	id = brazil.8
+	title = brazil.8.t 
+	desc = brazil.8.d 
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes 
+
+	option = { #invest 35 political power 
+		name = brazil.8.a 
+		add_political_power = -35
+		random_list = {
+			80 = {
+				EUYL_add_1_military = yes 
+			}
+			15 = {
+				EUYL_add_2_military = yes 
+			}
+			5 = {
+				EUYL_add_4_military = yes 
+			}
+		}
+	}
+
+	option = { #invest 60 political power 
+		name = brazil.8.b 
+		add_political_power = -60 
+		random_list = {
+			60 = {
+				EUYL_add_1_military = yes 
+			}
+			30 = {
+				EUYL_add_2_military = yes 
+			}
+			10 = {
+				EUYL_add_4_military = yes 
+			}
+		}
+	}
+
+	option = { #invest 110 political power 
+		name = brazil.8.c 
+		add_political_power = -110
+		random_list = {
+			35 = {
+				EUYL_add_1_military = yes 
+			}
+			40 = {
+				EUYL_add_2_military = yes 
+			}
+			25 = {
+				EUYL_add_4_military = yes 
+			}
+		}
+	}
+}
+
+#Brazil asks the USA for licenses
+country_event = {
+	id = brazil.9
+	title = brazil.9.t 
+	desc = brazil.9.d 
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes 
+
+	option = { #Accept license request
+		name = brazil.9.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 55
+				has_opinion = {
+					target = BRA
+					value > 50
+				}
+			}
+			modifier = {
+				add = 40
+				OR = {
+					has_equipment = {
+						light_tank_equipment > 400
+					}
+					has_equipment = {
+						medium_tank_equipment > 250
+					}
+					has_equipment = {
+						heavy_tank_equipment > 125
+					}
+				}
+			}
+			modifier = {
+				add = 35
+				num_of_military_factories > 24
+			}
+			modifier = {
+				add = 20
+				has_war = no 
+			}
+			modifier = {
+				add = 5
+				is_in_faction = yes
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "Death or Dishonor"
+			}
+			custom_effect_tooltip = BRA_create_licenses_tt
+			hidden_effect = {
+				create_production_license = {
+					target = FROM
+					equipment = {
+						type = light_tank_equipment_1
+						version = 0
+					}
+					cost_factor = 0
+				}
+				create_production_license = {
+					target = FROM
+					equipment = {
+						type = medium_tank_equipment_1
+						version = 0
+					}
+					cost_factor = 0
+				}
+				create_production_license = {
+					target = FROM
+					equipment = {
+						type = heavy_tank_equipment
+						version = 0
+					}
+					cost_factor = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_equipment = {
+					light_tank_equipment > 250
+				}
+			}
+			send_equipment = {
+				equipment = light_tank_equipment_1
+				amount = 250
+				target = BRA
+			}
+		}
+		if = {
+			limit = {
+				has_equipment = {
+					medium_tank_equipment > 125
+				}
+			}
+			send_equipment = {
+				equipment = medium_tank_equipment_1
+				amount = 125
+				target = BRA
+			}
+		}	
+		if = {
+			limit = {
+				has_equipment = {
+					heavy_tank_equipment > 75
+				}
+			}
+			send_equipment = {
+				equipment = heavy_tank_equipment_1
+				amount = 75
+				target = BRA
+			}
+		}
+		hidden_effect = {
+			BRA = {
+				country_event = { id = peru.16 hours = 6 }
+			}
+		}	
+	}
+
+	option = { #decline license request 
+		name = brazil.9.b 
+		ai_chance = {
+			base = 25
+			modifier = {
+				add = 40
+				has_war = yes 
+			}
+			modifier = {
+				add = 150
+				is_subject = yes 
+			}
+			modifier = {
+				add = 200
+				has_civil_war = yes 
+			}
+		}
+		hidden_effect = {
+			BRA = {
+				country_event = { id = peru.17 hours = 6 }
+			}
+		}
+	}
+}
