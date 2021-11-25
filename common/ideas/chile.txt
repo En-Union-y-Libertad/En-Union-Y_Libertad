@@ -959,8 +959,8 @@ ideas = {
 			}
 		}
 	
-		CHL_laissez_faire = {
-			
+		CHL_laissez_faire_idea = {
+			name = CHL_laissez_faire
 			picture = liberty
 			
 			allowed = {
@@ -980,10 +980,34 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			consumer_goods_factor = -0.05
-			communism_drift = -0.05
-			stability_factor = -0.05
-			political_power_gain = -0.1
+			stability_factor = 0.05
+			political_power_gain = -0.05
+			}
+		}
+
+		CHL_laissez_faire_idea_2 = {
+			name = CHL_laissez_faire
+			picture = liberty
+			
+			allowed = {
+				tag = CHL 
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.05
 			}
 		}
 		
@@ -1026,7 +1050,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 0.25
+				consumer_goods_factor = -0.01
 				political_advisor_cost_factor = -0.25
 			}
 		}
@@ -1054,7 +1078,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 0.25
+				political_power_gain = 0.05
 				civilian_intel_to_others = -20.0
 				navy_intel_to_others = -20	
 				army_intel_to_others = -20
@@ -1108,9 +1132,46 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				democratic_drift = 0.1
-				stability_factor = 0.15
-				political_power_gain = 0.25
+				democratic_drift = 0.03
+				political_power_gain = 0.1
+			}
+		}
+
+		CHL_loan_bailout = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				political_power_factor = 0.1
+			}
+		}
+
+		CHL_welfare = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.1
 			}
 		}
 		
@@ -1163,9 +1224,8 @@ ideas = {
 			
 			removal_cost = -1
 			
-			modifier = {
-				min_export = 0.05	
-				trade_opinion_factor = 0.25
+			modifier = {	
+				trade_opinion_factor = 0.3
 			}		
 		}
 
@@ -1246,9 +1306,230 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription = 0.025
+				conscription = 0.03
 				conscription_factor = 0.075
 				non_core_manpower = 0.05
+			}
+		}
+
+		CHL_expanding_our_military = {
+			picture = mex_politicised_army_2
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.025
+			}
+		}
+
+		CHL_armed_neutrality_idea = {
+			picture = CHL_armed_neutrality
+
+			allowed = {
+				OR = {	
+					original_tag = CHL 
+					original_tag = PRU 
+					original_tag = BOL 
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			available = {
+				has_offensive_war = no 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				conscription = 0.01
+				army_defence_factor = 0.05 
+				join_faction_tension = 1.00
+				#lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 1.0
+				ai_badass_factor = 0.01    
+				ai_get_ally_desire_factor = -100
+			}
+
+			on_remove = {
+				start_civil_war = {
+					ruling_party = ROOT 
+					ideology = democratic
+					size = 0.4
+				}
+			}
+		}
+
+		CHL_goodbye_frente_popular = {
+			picture = CHL_goodbye_fp
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1 
+
+			modifier = {
+				stability_factor = -0.15
+				conscription = 0.005
+				political_power_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+
+		CHL_the_literary_generation_idea_1 = {
+			name = CHL_literary_genneration_ideaa
+			picture = CHL_literary_gen_1
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1 
+
+			modifier = {
+				research_speed_factor = 0.03
+				industry_repair_factor = 0.05
+			}
+		}
+
+		CHL_the_literary_generation_idea_2 = {
+			name = CHL_literary_genneration_ideaa
+			picture = CHL_literary_gen_1
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1 
+
+			modifier = {
+				research_speed_factor = 0.05
+				industry_repair_factor = 0.08
+				stability_factor = 0.03
+			}
+		}
+
+		CHL_the_literary_generation_idea_3 = {
+			name = CHL_literary_genneration_ideaa
+			picture = CHL_literary_gen_1
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1 
+
+			modifier = {
+				research_speed_factor = 0.1
+				industry_repair_factor = 0.1
+				stability_factor = 0.05 
+			}
+		}
+
+		CHL_patagonian_march = {
+			picture = ast_volunteer_defence_corps
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			available = {
+				has_war_with = ARG 
+			}
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = ARG 
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		CHL_recently_exploited_capital = {
+			picture = generic_goods_red_bonus
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_industrial_complex_factor = -0.05
+			}
+		}
+
+		CHL_british_loans_idea = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+
+			on_remove = {
+				add_timed_idea = {
+					idea = CHL_paying_for_british_loans
+					days = 30
+				}
+			}
+		}
+
+		CHL_paying_for_british_loans = {
+			picture = generic_goods_red_bonus
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
 			}
 		}
 		
@@ -1825,14 +2106,470 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				non_core_manpower = 0.25
-				planning_speed = 0.1
-				max_planning = 0.25
-				army_org_factor = 0.25
-				army_attack_factor = 0.1
+				non_core_manpower = 0.05
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
 			}	
-		
 		}	
+
+		CHL_state_of_near_anarchy = {
+			picture = generic_purge
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			available = {
+				has_civil_war = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.01
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05 
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		CHL_communists_political_power = {
+			picture = CHL_political_cooperation
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+
+		CHL_welfare_plans = {
+			picture = generic_goods_red_bonus 
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		CHL_increased_private_property_rights = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		CHL_seized_transportation = {
+			picture = FRA_motorized_focus
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			available = {
+				has_civil_war = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.1
+			}
+		}
+
+		CHL_securing_our_defenses = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			available = {
+				has_civil_war = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_defence_factor = 0.05
+			}
+		}
+
+		CHL_mass_mobilization_1 = {
+			name = CHL_mass_mobilization
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.02
+			}
+		}
+
+		CHL_mass_mobilization_2 = {
+			name = CHL_mass_mobilization
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.035
+			}
+		}
+
+		CHL_mass_mobilization_3 = {
+			name = CHL_mass_mobilization
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+			}
+		}
+
+		CHL_mass_mobilization_4 = {
+			name = CHL_mass_mobilization
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.065
+			}
+		}
+
+		CHL_mass_mobilization_5 = {
+			name = CHL_mass_mobilization
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = CHL 
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.08
+			}
+		}
+
+		CHL_people_protesting_rapid_expansion_1 = {
+			picture = chi_war_of_resistance
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				stability_factor = -0.03
+				war_support_factor = -0.05
+			}
+		}
+
+		CHL_people_protesting_rapid_expansion_2 = {
+			picture = chi_war_of_resistance2
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.1
+			}
+		}
+
+		CHL_people_protesting_rapid_expansion_3 = {
+			picture = chi_war_of_resistance3
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.2
+				generate_wargoal_tension = 0.8
+			}
+		}
+
+		CHL_very_hostile_council = {
+			picture = CHL_very_angry_council
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				war_support_factor = -0.2
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		CHL_hostile_council = {
+			picture = CHL_angry_council
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				war_support_factor = -0.05
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		CHL_future_of_anarchy = {
+			picture = spr_torchbearers_of_tomorrow
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		CHL_continued_with_the_compromise = {
+			picture = generic_constitutional_guarantee
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				generate_wargoal_tension = 0.8
+				annex_cost_factor = 0.2
+			}
+		}
+
+		CHL_winter_clothing = {
+			picture = chi_army_corruption3
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				winter_attrition_factor = -0.2
+				army_speed_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		CHL_sent_food_to_british = {
+			picture = hol_caved_to_the_british
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		CHL_de_stabilized_government = {
+			picture = CHL_political_instability
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		CHL_political_instability_idea = {
+			picture = CHL_political_instability
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.05
+				fascism_drift = 0.01
+				communism_drift = 0.01
+			}
+		}
+
+		CHL_boosted_soldier_morale = {
+			picture = infantry_bonus 
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			available = {
+				has_civil_war = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {	
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		CHL_equal_education_idea = {
+			picture = generic_research_bonus
+
+			allowed = { original_tag = CHL }
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.03
+			}
+		}
 	}
 
 	political_advisor = {
@@ -1885,6 +2622,10 @@ ideas = {
 
 			allowed = {
 				original_tag = CHL
+			}
+
+			available = {
+				has_government = fascism
 			}
 			
 			traits = { war_industrialist }
@@ -2013,7 +2754,7 @@ ideas = {
 			}
 		}
 	}
-
+	
 	air_chief = {
 
 		CHL_dario_mujica_gamboa = {
@@ -2581,6 +3322,7 @@ ideas = {
 			
 			on_add = {
 				random_owned_controlled_state = {
+					limit = { is_coastal = yes }
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard
@@ -2620,6 +3362,162 @@ ideas = {
 					}
 				}
 			}
-			
 		}
+	}
+
+	industrial_concern = {
+
+		CHL_central_bank_company = {
+			picture = chile_central
+
+			cost = 50
+
+			allowed = { original_tag = CHL }
+
+			available = { has_completed_focus = CHL_central_bank }
+
+			traits = { central_bank }
+		}
+	}
+	
+	hidden_ideas = {
+		
+		CHL_friendly_lower_class = {
+			allowed = {
+				always = no 
+			}
+			
+			available = {
+				check_variable = { CHL_lower_class_opinion = 1 } #friendly
+			}
+			
+			cancel = {
+				NOT = {
+					check_variable = { CHL_lower_class_opinion = 1 } #friendly
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		
+		CHL_hostile_lower_class = {
+			allowed = {
+				always = no 
+			}
+			
+			available = {
+				check_variable = { CHL_lower_class_opinion = -1 } #hostile
+			}
+			
+			cancel = {
+				NOT = {
+					check_variable = { CHL_lower_class_opinion = -1 } #hostile
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		
+		CHL_friendly_middle_class = {
+			allowed = {
+				always = no 
+			}
+			
+			available = {
+				check_variable = { CHL_middle_class_opinion = 1 } #friendly
+			}
+			
+			cancel = {
+				NOT = {
+					check_variable = { CHL_middle_class_opinion = 1 } #friendly
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		CHL_hostile_middle_class = {
+			allowed = {
+				always = no 
+			}
+			
+			available = {
+				check_variable = { CHL_middle_class_opinion = -1 } #hostile
+			}
+			
+			cancel = {
+				NOT = {
+					check_variable = { CHL_middle_class_opinion = -1 } #hostile
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.02
+			}
+		}
+		
+		CHL_friendly_upper_class = {
+			allowed = {
+				always = no 
+			}
+			
+			available = {
+				check_variable = { CHL_upper_class_opinion = 1 } #friendly
+			}
+			
+			cancel = {
+				NOT = {
+					check_variable = { CHL_upper_class_opinion = 1 } #friendly
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.06
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		CHL_hostile_upper_class = {
+			allowed = {
+				always = no 
+			}
+			
+			available = {
+				check_variable = { CHL_upper_class_opinion = -1 } #hostile
+			}
+			
+			cancel = {
+				NOT = {
+					check_variable = { CHL_upper_class_opinion = -1 } #hostile
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.06
+				production_speed_buildings_factor = -0.05
+			}
+		}
+	}
 }

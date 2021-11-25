@@ -57,3 +57,37 @@ COL_is_laureanist_state = {
 		}
 	}
 }
+
+ARG_fm_monopoly = {
+	custom_trigger_tooltip = {
+		tooltip = ARG_fm_is_a_monopoly_tt
+		AND = {
+			has_idea = ARG_fm_air
+			has_idea = ARG_fm
+			has_idea = ARG_fm_material
+		}
+	}
+}
+
+BRA_isnt_industrializing_economy = {
+	custom_trigger_tooltip = {
+		tooltip = BRA_not_industrializing_tt
+		NOT = {
+			OR = {
+				has_idea = rural_economy
+				has_idea = semi_rural_economy
+				has_idea = industrializing_economy
+			}
+		}
+	}
+}
+
+BRA_coffee_plantations_active = {
+	OR = {
+		has_idea = BRA_very_slight_dependency_on_coffee
+		has_idea = BRA_slight_dependency_on_coffee
+		has_idea = BRA_dependent_on_coffee
+		has_idea = BRA_very_dependent_on_coffee
+		has_idea = BRA_extremely_dependent_on_coffee
+	}
+}

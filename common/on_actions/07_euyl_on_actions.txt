@@ -1,6 +1,46 @@
 #FROM is war target
 on_actions = {
 	on_declare_war = {
+        effect = {
+            if = {
+                limit = {
+                    ROOT = {
+                        exists = yes 
+                        NOT = {
+                            has_idea = EUYL_defense_pact
+                        }
+                        NOT = {
+                            OR = {
+                                original_tag = BOL 
+                                original_tag = PRU 
+                            }
+                        }
+                    }
+                    FROM = {
+                        exists = yes 
+                        has_idea = EUYL_defense_pact
+                        NOT = {
+                            OR = {
+                                original_tag = BOL 
+                                original_tag = PRU 
+                            }
+                        }
+                    }
+                }
+                random_country = {
+                    limit = {
+                        AND = {
+                            OR = {
+                                original_tag = PRU 
+                                original_tag = BOL 
+                            }
+                            has_country_flag = is_PBC
+                        }
+                    }
+                    country_event = { id = perubolivia.6 hours = 8 }
+                }
+            }
+        }
 		effect = {
             #Peru starts the war against Ecuador 
 			if = {
@@ -47,7 +87,10 @@ on_actions = {
                     if = {
                         limit = {
                             NOT = {
-                                has_idea = CHL_people_protesting_rapid_expansion_1
+                                OR = {
+                                    has_idea = CHL_people_protesting_rapid_expansion_1
+                                    has_idea = CHL_people_protesting_rapid_expansion_2
+                                }
                             }
                         }
                         add_ideas = CHL_people_protesting_rapid_expansion_1
@@ -238,6 +281,126 @@ on_actions = {
                 complete_national_focus = ARG_develop_the_capital
             }
         }
+        effect = {
+            #End of Chilean Civil War (Communist Victory)
+            if = {
+                limit = {
+                    FROM = {
+                        original_tag = CHL 
+                        NOT = {
+                            OR = {
+                                has_completed_focus = CHL_cooperate_with_el_frente
+                                has_completed_focus = CHL_communist_path
+                            }
+                        }
+                    }
+                    ROOT = {
+                        original_tag = CHL 
+                        has_government = communism
+                        is_ai = yes 
+                    }
+                }
+                load_focus_tree = {
+                    tree = chile_focus
+                    keep_completed = no 
+                }
+                unlock_national_focus = CHL_communist_path
+                unlock_national_focus = CHL_offer_cooperation_with_the_social_classes
+                unlock_national_focus = CHL_legalize_labor_unions
+                unlock_national_focus = CHL_strengthen_the_workers
+                unlock_national_focus = CHL_return_to_the_pcch
+                unlock_national_focus = CHL_begin_preperations_for_uprising
+                unlock_national_focus = CHL_create_the_pan_american_highway
+                unlock_national_focus = CHL_befriend_middle_class
+                unlock_national_focus = CHL_de_stabilize_the_government
+                unlock_national_focus = CHL_offer_work_to_the_poor
+                unlock_national_focus = CHL_promise_the_poor_rights
+                unlock_national_focus = CHL_arm_up_the_people
+                unlock_national_focus = CHL_win_over_loyalty_of_some_generals
+                unlock_national_focus = CHL_march_over_the_national_congress
+                unlock_national_focus = CHL_CHL_mobilize_all_our_reserves
+                unlock_national_focus = CHL_focus_on_arms_production
+                unlock_national_focus = CHL_boost_soldier_morale
+                unlock_national_focus = CHL_establish_the_regime
+                remove_dynamic_modifier = { modifier = CHL_political_instability }
+                add_dynamic_modifier = { modifier = CHL_political_instability }
+                set_country_flag = CHL_communists_friendly
+                set_variable = { CHL_nacista_power = 7 }
+                set_variable = { CHL_communists_power = 29 }
+                set_variable = { CHL_nacista_influence_days = 35 }
+                set_variable = { CHL_communist_influencce_days = 35 }
+                set_variable = { CHL_fascist_drift = CHL_nacista_power }
+                set_variable = { CHL_communist_drift = CHL_communists_power }
+                set_variable = { CHL_chance_of_communist = 50 }
+                set_variable = { CHL_chance_of_fascist = 50 }
+                set_variable = { CHL_days_for_people_to_calm_down = 210 }
+                divide_variable = { CHL_fascist_drift = 450 }
+                divide_variable = { CHL_communist_drift = 450 }
+                set_temp_variable = { CHL_100_per = 100 }
+                set_temp_variable = { CHL_combined_power = CHL_communists_power }
+                add_to_temp_variable = { CHL_combined_power = CHL_nacista_power }
+                subtract_from_temp_variable = { CHL_100_per = CHL_combined_power }
+                set_variable = { CHL_control_over_nation = CHL_100_per }
+            }
+        }
+        effect = {
+            #End of Chilean Civil War (Nacista Victory)
+            if = {
+                limit = { 
+                    FROM = {
+                        original_tag = CHL 
+                        NOT = {
+                            has_completed_focus = CHL_side_with_the_nacistas
+                        }
+                    }
+                    ROOT = {
+                        original_tag = CHL 
+                        has_government = fascism
+                        is_ai = yes 
+                    }
+                }
+                load_focus_tree = {
+                    tree = chile_focus
+                    keep_completed = no 
+                }
+                unlock_national_focus = CHL_democracy_path
+                unlock_national_focus = CHL_revenue_tax
+                unlock_national_focus = CHL_central_bank
+                unlock_national_focus = CHL_side_with_the_nacistas
+                unlock_national_focus = CHL_take_over_various_government_positions
+                unlock_national_focus = CHL_take_over_via_blood
+                unlock_national_focus = CHL_supress_the_communists
+                unlock_national_focus = CHL_disband_communist_generals
+                unlock_national_focus = CHL_gather_support
+                unlock_national_focus = CHL_convince_neutral_generals
+                unlock_national_focus = CHL_secure_santiago
+                unlock_national_focus = CHL_assasinate_arturo
+                unlock_national_focus = CHL_seize_the_national_highways
+                unlock_national_focus = CHL_switch_to_a_military_economy
+                unlock_national_focus = CHL_infliltrate_the_enemy
+                unlock_national_focus = CHL_mobilize_militias
+                unlock_national_focus = CHL_victory_for_nacismo
+                remove_dynamic_modifier = { modifier = CHL_political_instability }
+                add_dynamic_modifier = { modifier = CHL_political_instability }
+                set_country_flag = CHL_nacista_friendly
+                set_variable = { CHL_communists_power = 7 }
+                set_variable = { CHL_nacista_power = 29 }
+                set_variable = { CHL_nacista_influence_days = 35 }
+                set_variable = { CHL_communist_influencce_days = 35 }
+                set_variable = { CHL_fascist_drift = CHL_nacista_power }
+                set_variable = { CHL_communist_drift = CHL_communists_power }
+                set_variable = { CHL_chance_of_communist = 50 }
+                set_variable = { CHL_chance_of_fascist = 50 }
+                set_variable = { CHL_days_for_people_to_calm_down = 210 }
+                divide_variable = { CHL_fascist_drift = 450 }
+                divide_variable = { CHL_communist_drift = 450 }
+                set_temp_variable = { CHL_100_per = 100 }
+                set_temp_variable = { CHL_combined_power = CHL_communists_power }
+                add_to_temp_variable = { CHL_combined_power = CHL_nacista_power }
+                subtract_from_temp_variable = { CHL_100_per = CHL_combined_power }
+                set_variable = { CHL_control_over_nation = CHL_100_per }
+            }
+        }
 		effect = {
             #End of the colombian military Civil War
             if = {
@@ -365,11 +528,6 @@ on_actions = {
                     complete_national_focus = COL_el_golpe_de_opinion
                 }
             }
-            else = {
-                ROOT = {
-                    drop_cosmetic_tag = yes
-                }
-            }
             if = {
                 limit = { 
                     FROM = {
@@ -416,9 +574,8 @@ on_actions = {
                 }
             }
         }
-    }
-
-    #ROOT is winner, FROM gets annexed.
+	}
+	#ROOT is winner, FROM gets annexed.
     on_annex = { 
         effect = {
             #End of the peru-bolivia unification Civil War
@@ -497,19 +654,6 @@ on_actions = {
                 }
                 set_country_flag = crisis_social_flag
                 COL_may_have_social_crisis = yes
-                }
-                complete_national_focus = ARG_infamous_decade
-                complete_national_focus = ARG_focus_economy
-                complete_national_focus = ARG_make_an_effort_to_control_the_inflation
-                complete_national_focus = ARG_support_our_growing_industry
-                complete_national_focus = ARG_reduce_public_expense
-                complete_national_focus = ARG_rapidly_mobilize
-                complete_national_focus = ARG_raise_military_salary
-                complete_national_focus = ARG_spread_military_propganda
-                complete_national_focus = ARG_idolize_war_heroes
-                complete_national_focus = ARG_restrict_the_usage_of_the_dollar
-                complete_national_focus = ARG_develop_the_capital
-                
             }
         }
         effect = { #Check if Vásquez Cobo is going to die
@@ -547,6 +691,19 @@ on_actions = {
                 }
             }
         }
-    }
+	}
+	
+	on_monthly_BRA = {
+		effect = {
+			if = {
+				limit = {
+					BRA_coffee_plantations_active = yes 
+					NOT = { has_country_flag = BRA_civil_war_active }
+				}
+				BRA_update_opinion_variable = yes 
+				BRA_set_dependency_on_coffee_idea = yes 
+			}
+		}
+	}
 }
 

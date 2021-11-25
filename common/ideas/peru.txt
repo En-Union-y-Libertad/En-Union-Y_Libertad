@@ -301,7 +301,7 @@ ideas = {
 			picture = generic_foreign_capital
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -329,7 +329,7 @@ ideas = {
 			picture = generic_fortify_the_borders
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -360,7 +360,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -390,7 +390,7 @@ ideas = {
 			picture = SPR_seize_the_gold_reserves
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -420,7 +420,7 @@ ideas = {
 			picture = SPR_seize_the_gold_reserves
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -452,7 +452,7 @@ ideas = {
 			picture = SPR_seize_the_gold_reserves
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -481,7 +481,7 @@ ideas = {
 			picture = PRU_strengthened_currency_ic
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -506,7 +506,7 @@ ideas = {
 			picture = PRU_industrial_expansion
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -757,7 +757,7 @@ ideas = {
 			picture = SPR_anti_fascist_crusade
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -783,7 +783,7 @@ ideas = {
 			picture = what_is_our_nation
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -812,7 +812,7 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -836,7 +836,7 @@ ideas = {
 			picture = president
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -868,7 +868,7 @@ ideas = {
 			picture = parliament
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -898,7 +898,7 @@ ideas = {
 			picture = parliament
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -929,7 +929,7 @@ ideas = {
 			picture = both_world
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -954,7 +954,7 @@ ideas = {
 			picture = both_world
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -981,7 +981,7 @@ ideas = {
 			picture = navy_american
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -1007,7 +1007,7 @@ ideas = {
 			picture = navy_american
 
 			allowed = { 
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -1042,7 +1042,7 @@ ideas = {
 			picture = navy_fascist
 
 			allowed = { 
-				original_tag = PRU
+				always = no
 			}
 
 			available = {
@@ -1077,7 +1077,7 @@ ideas = {
 			picture = pathetic_navy
 
 			allowed = { 
-				original_tag = PRU
+				always = no
 			}
 
 			available = {
@@ -1117,7 +1117,7 @@ ideas = {
 			picture = pathetic_navy
 
 			allowed = { 
-				original_tag = PRU
+				always = no
 			}
 
 			available = {
@@ -1157,7 +1157,7 @@ ideas = {
 			picture = PRU_rebellious_navy 
 
 			allowed = {
-				original_tag = PRU
+				always = no
 			}
 
 			available = {
@@ -1191,7 +1191,7 @@ ideas = {
 			picture = PRU_rebellious_navy 
 
 			allowed = {
-				original_tag = PRU
+				always = no
 			}
 
 			available = {
@@ -1225,7 +1225,7 @@ ideas = {
 			picture = PRU_rebellious_army 
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -1251,7 +1251,7 @@ ideas = {
 			picture = PRU_rebellious_army 
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -1632,7 +1632,7 @@ ideas = {
 			picture = FRA_national_mobilization_focus
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -1660,7 +1660,7 @@ ideas = {
 			picture = spr_unify_the_london_bureau
 			
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -1687,7 +1687,7 @@ ideas = {
 			picture = ARG_soviet_aid
 
 			allowed = {
-				original_tag = PRU
+				always = no
 			}
 
 			available = {
@@ -1857,7 +1857,7 @@ ideas = {
 			picture = generic_local_self_management
 
 			allowed = {
-				original_tag = PRU
+				always = no
 			}
 
 			available = {
@@ -1881,7 +1881,7 @@ ideas = {
 			picture = PRU_industrial_expansion
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -1906,7 +1906,7 @@ ideas = {
 			picture = ast_all_in
 
 			allowed = {
-				original_tag = PRU
+				always = no
 			}
 
 			available = {
@@ -1935,7 +1935,7 @@ ideas = {
 			picture = man_five_year_plan_industry
 
 			allowed = {
-				original_tag = PRU
+				always = no
 			}
 
 			available = {
@@ -1959,7 +1959,7 @@ ideas = {
 			picture = generic_coastal_defense_ships2
 
 			allowed = {
-				original_tag = PRU
+				always = no
 			}
 
 			available = {
@@ -1983,7 +1983,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -2028,7 +2028,7 @@ ideas = {
 
 			allowed = {
 				OR = {
-					original_tag = PRU 
+					always = no 
 					original_tag = CHL 
 				}
 			}
@@ -2079,7 +2079,7 @@ ideas = {
 			picture = generic_infantry_bonus
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -2106,7 +2106,7 @@ ideas = {
 			picture = generic_infantry_bonus
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			available = {
@@ -2134,7 +2134,7 @@ ideas = {
 
 			allowed = {
 				OR = {
-					original_tag = PRU 
+					always = no 
 					original_tag = BOL 
 				}
 			}
@@ -2198,7 +2198,7 @@ ideas = {
 			picture = PRU_rebel_native
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2221,7 +2221,7 @@ ideas = {
 			picture = PRU_rebel_native
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2244,7 +2244,7 @@ ideas = {
 			picture = PRU_rebel_native
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2267,7 +2267,7 @@ ideas = {
 			picture = PRU_rebel_native
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2290,7 +2290,7 @@ ideas = {
 			picture = PRU_rebel_native
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2313,7 +2313,7 @@ ideas = {
 			picture = PRU_warrior_of_sun
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2333,7 +2333,7 @@ ideas = {
 			picture = PRU_warrior_of_sun
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2353,7 +2353,7 @@ ideas = {
 			picture = PRU_warrior_of_sun
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2373,7 +2373,7 @@ ideas = {
 			picture = man_five_year_plan_industry
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2392,7 +2392,7 @@ ideas = {
 			picture = man_five_year_plan_industry
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2411,7 +2411,7 @@ ideas = {
 			picture = PRU_atahualpa_legacy
 
 			allowed = {
-				original_tag = PRU 
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -2447,10 +2447,11 @@ ideas = {
 			available = {
 				OR = {
 					is_in_faction_with = PRU
+					is_in_faction_with = CHL
 					if = {
 						limit = {
 							OR = {
-								original_tag = PRU 
+								always = no 
 								original_tag = BOL 
 							}
 						}
@@ -2497,7 +2498,7 @@ ideas = {
 					if = {
 						limit = {
 							OR = {
-								original_tag = PRU 
+								always = no 
 								original_tag = BOL 
 							}
 						}
@@ -2568,6 +2569,16 @@ ideas = {
 			}
 			
 			traits = { compassionate_gentleman }
+		}
+
+		PRU_manuel_vicente = {
+			picture = generic_political_advisor_south_america_2
+
+			allowed = {
+				original_tag = PRU
+			}
+
+			traits = { EUYL_soldier_recruiter }
 		}
 	}
 
@@ -2732,8 +2743,6 @@ ideas = {
 				original_tag = PRU
 			}
 			
-
-			
 			traits = { army_chief_defensive_2 }
 			
 			ai_will_do = {
@@ -2748,8 +2757,6 @@ ideas = {
 			allowed = {
 				original_tag = PRU
 			}
-			
-
 			
 			traits = { army_chief_drill_2 }
 			
@@ -2840,7 +2847,6 @@ ideas = {
 				original_tag = PRU
 			}
 			
-
 			
 			traits = { navy_chief_decisive_battle_2 }
 			
@@ -2860,6 +2866,147 @@ ideas = {
 
 			
 			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		faucett = {
+			
+			allowed = {
+				original_tag = PRU
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	naval_manufacturer = {
+			
+		designer = yes
+		
+		PRU_newport_news_shipbuilding = {
+			
+			allowed = {
+				original_tag = PRU
+			}
+
+			available = {
+				has_completed_focus = PRU_work_with_the_americans
+			}
+			
+			picture = newport_news_shipbuilding
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		PRU_sasebo_naval_arsenal = {
+			
+			allowed = {
+				original_tag = PRU
+			}
+
+			available = {
+				has_completed_focus = PRU_work_with_the_japanese
+			}
+
+			picture = sasebo_naval_arsenal
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer } #used for many repairs and conversions
+			
+			equipment_bonus = {
+				
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		PRU_rheinmetall = {
+			
+			allowed = {
+				original_tag = PRU
+			}
+
+			picture = rheinmetall
+
+			available = {
+				has_completed_focus = PRU_learn_from_the_germans
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		PRU_mas = {
+						
+			allowed = {
+				original_tag = PRU
+			}
+
+			picture = mas 
+
+			available = {
+				has_completed_focus = PRU_continue_our_military_relationship_with_the_french
+			}
+						
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		
+		ferreycorp = {
+			
+			allowed = {
+				original_tag = PRU
+			}
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			modifier = {
+				trade_laws_cost_factor = -0.1
+			}
+			
+			traits = { construction_company }
 			
 			ai_will_do = {
 				factor = 1

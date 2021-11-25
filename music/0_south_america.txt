@@ -212,11 +212,11 @@ music = {
 	}
 }
 
-###	Colombia
+### Colombia 
 
 music = {
-	song = "Saluda Adorada Bandera - Marcha Militar"
-
+	song = "Adiós al Séptimo de Línea"
+	
 	chance = {
 		modifier = {
 			factor = 2
@@ -225,8 +225,8 @@ music = {
 }
 
 music = {
-	song = "Antioqueños al Mar - Marcha Colombiana"
-
+	song = "Honores a Popayán"
+	
 	chance = {
 		modifier = {
 			factor = 2
@@ -235,8 +235,8 @@ music = {
 }
 
 music = {
-	song = "Himno a la Infantería Colombiana"
-
+	song = "Salud Adorada Bandera"
+	
 	chance = {
 		modifier = {
 			factor = 2
@@ -245,38 +245,8 @@ music = {
 }
 
 music = {
-	song = "Coronel Bedoya - Marcha Militar"
-
-	chance = {
-		modifier = {
-			factor = 2
-		}		
-	}
-}
-
-music = {
-	song = "El Tiempo - Pasodoble Colombiano"
-
-	chance = {
-		modifier = {
-			factor = 2
-		}		
-	}
-}
-
-music = {
-	song = "Unter dem Doppeladler (Versión Colombiana)"
-
-	chance = {
-		modifier = {
-			factor = 2
-		}		
-	}
-}
-
-music = {
-	song = "Adelante - Marcha Colombiana"
-
+	song = "Canción de Boyacá"
+	
 	chance = {
 		modifier = {
 			factor = 2

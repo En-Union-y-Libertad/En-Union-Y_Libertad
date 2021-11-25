@@ -546,9 +546,9 @@ country_event = {
 		hidden_effect = {
 			FROM = {
 				add_state_claim = 846
-				add_state_claim = 819
-				add_state_claim = 820
-				add_state_claim = 828
+				add_state_claim = 900
+				add_state_claim = 901
+				add_state_claim = 909
 			}
 		}
 	}
@@ -741,10 +741,10 @@ country_event = {
 				}
 				create_country_leader = {
 					name = "Congreso de Tacna"
-					desc = "POLITICS_OSCAR_BENAVIDES_DESC"
+					desc = "POLITICS_CONGRESS_TACNA_DESC"
 					picture = "gfx/leaders/PRU/PBC_portrait_congreso_de_tacna.dds"
 					expire = "1965.1.1"
-					ideology = socialism
+					ideology = leninism
 					traits = {
 						PRU_not_a_real_person
 					}
@@ -753,7 +753,7 @@ country_event = {
 			else = {
 				create_country_leader = {
 					name = "Congreso de Tacna"
-					desc = "POLITICS_OSCAR_BENAVIDES_DESC"
+					desc = "POLITICS_CONGRESS_TACNA_DESC"
 					picture = "gfx/leaders/PRU/PBC_portrait_congreso_de_tacna.dds"
 					expire = "1965.1.1"
 					ideology = gen_nazism
@@ -1246,7 +1246,21 @@ country_event = {
 	trigger = {
 		has_country_flag = is_PBC
 		has_country_flag = is_in_second_war_of_confederation
-		has_war = yes 
+		NOT = {
+			has_country_flag = PBC_negotiating_peace_talks
+		}
+		OR = {
+			has_war_with = CHL 
+			has_war_with = ARG 
+			has_war_with = ECU 
+			has_war_with = COL 
+		}
+		NOT = {
+			OR = {
+				has_war_with = BOA 
+				has_war_with = PRA 
+			}
+		}
 		CHL = {
 			if = { 
 				limit = {
@@ -1256,8 +1270,8 @@ country_event = {
 				CHL = {
 					OR = {
 						has_capitulated = yes 
-						casualties > 54999
-						surrender_progress > 0.29
+						casualties > 65999
+						surrender_progress > 0.34
 					}
 				}
 			}
@@ -1271,8 +1285,8 @@ country_event = {
 				ARG = {
 					OR = {
 						has_capitulated = yes 
-						casualties > 54999
-						surrender_progress > 0.29
+						casualties > 65999
+						surrender_progress > 0.34
 					}
 				}
 			}
@@ -1286,8 +1300,8 @@ country_event = {
 				ECU = {
 					OR = {
 						has_capitulated = yes 
-						casualties > 54999
-						surrender_progress > 0.29
+						casualties > 65999
+						surrender_progress > 0.34
 					}
 				}
 			}
@@ -1301,8 +1315,8 @@ country_event = {
 				COL = {
 					OR = {
 						has_capitulated = yes 
-						casualties > 54999
-						surrender_progress > 0.29
+						casualties > 65999
+						surrender_progress > 0.34
 					}
 				}
 			}
@@ -1320,13 +1334,13 @@ country_event = {
 			base = 80 
 			modifier = {
 				add = 30 
-				828 = {
+				909 = {
 					is_controlled_by = ROOT
 				}
 			}
 			modifier = {
 				add = 30
-				829 = {
+				910 = {
 					is_controlled_by = ROOT
 				}
 			}
@@ -1513,6 +1527,7 @@ country_event = {
 	option = {
 		name = peru.10.a 
 		set_country_flag = PBC_winner_of_war_of_independence
+		clr_country_flag = is_in_second_war_of_confederation
 		every_enemy_country = {
 			every_owned_state = {
 				limit = { 
@@ -1664,7 +1679,7 @@ country_event = {
 						original_tag = CHL 
 					}
 				}
-				transfer_state = 829
+				transfer_state = 910
 			}
 			if = {
 				limit = { 
@@ -1677,7 +1692,7 @@ country_event = {
 			}
 			if = {
 				limit = { original_tag = BOL }
-				transfer_state = 828
+				transfer_state = 909
 			}
 		}
 		if = {
@@ -2179,11 +2194,13 @@ country_event = {
 			}
 			modifier = {
 				add = 40 
-				num_divisions > 24
+				FROM = {
+					num_divisions > 24
+				}
 			}
 		}
 		FROM = {
-			transfer_state = 829
+			transfer_state = 910
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -2216,6 +2233,12 @@ country_event = {
 				has_opinion = {
 					target = FROM
 					value < 0
+				}
+			}
+			modifier = {
+				add = 500  #Anarchists wouldn't be willing to give away their lands what-so-ever
+				CHL = {
+					has_government = neutrality
 				}
 			}
 		}
@@ -2264,7 +2287,7 @@ country_event = {
 			leave_faction = yes
 		}
 		FROM = {
-			transfer_state = 829
+			transfer_state = 910
 			add_to_faction = ROOT 
 			give_guarantee = ROOT
 			country_event = peru.16
@@ -2274,6 +2297,12 @@ country_event = {
 	option = { #decline 
 		ai_chance = {
 			base = 50
+			modifier = {
+				add = 500  #Anarchists wouldn't be willing to give away their lands what-so-ever
+				CHL = {
+					has_government = neutrality
+				}
+			}
 		}
 		FROM = {
 			country_event = peru.17 
@@ -2542,8 +2571,272 @@ country_event = {
 		set_country_flag = PRU_stabilized_army_navy
 		remove_dynamic_modifier = { modifier = PRU_army_navy_rivalry_idea }
 		hidden_effect = {
+			set_variable = { PRU_army_power = 0 }
+			set_variable = { PRU_navy_power = 0 }
 			clear_variable = PRU_navy_power
 			clear_variable = PRU_army_power
+		}
+	}
+}
+
+#Event that notifies a player the Peruvian civil war launched 
+country_event = {
+	id = peru.30
+	title = peru.30.t 
+	desc = peru.30.d 
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes 
+
+	option = {
+		name = peru.30.a 
+		start_civil_war = {
+			ruling_party = fascism
+			ideology = ROOT 
+			size = PRU_size_of_government
+			keep_unit_leaders = {
+				44511
+			}
+		}
+
+		remove_unit_leader = 44512
+
+		set_country_flag = PRU_has_civil_war_fascism
+
+		hidden_effect = {
+			every_owned_state = {
+				set_state_flag = is_owned_by_PRU 
+			}
+			division_template = { 
+				name = "Milicias" 
+				division_names_group = SPAN_INF_02 
+				is_locked = yes 
+				regiments = { 
+					infantry = { x = 0 y = 0 }  
+					infantry = { x = 0 y = 1 } 
+					infantry = { x = 0 y = 2 } 
+					infantry = { x = 0 y = 3 } 
+				}
+			}	
+			division_template = {
+				name = "División de Infanteria Peruana" 
+				division_names_group = SPAN_INF_02 
+				is_locked = no 
+				regiments = { 
+					infantry = { x = 0 y = 0 }  
+					infantry = { x = 0 y = 1 } 
+					infantry = { x = 0 y = 2 } 
+					infantry = { x = 0 y = 3 } 
+					infantry = { x = 0 y = 4 } 
+					infantry = { x = 1 y = 0 } 
+					infantry = { x = 1 y = 1 } 
+					infantry = { x = 1 y = 2 } 
+					infantry = { x = 1 y = 3 } 
+					infantry = { x = 1 y = 4 } 
+				}
+				support = {
+					artillery = { x = 0 y = 0 } 
+				}
+			}
+			delete_unit_template_and_units = {
+				division_template = "División de Infanteria"
+				disband = yes
+			}
+			delete_unit_template_and_units = {
+				division_template = "División de Caballería"
+				disband = yes
+			}
+
+			every_state = {
+				limit = {
+					is_core_of = PRU  
+					has_state_flag = PRU_state_is_fascist
+				}
+				clr_state_flag = is_owned_by_PRU
+				ROOT = {
+					transfer_state = PREV 
+				}
+			}
+
+			every_controlled_state = {
+				limit = {
+					has_state_flag = PRU_state_is_fascist
+				}
+				create_unit = {
+					division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+					owner = ROOT
+				}
+			}
+
+			random_owned_controlled_state = {
+				if = {
+					limit = { check_variable = { PRU_size_of_government < 0.5} }
+					create_unit = {
+						division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+						owner = ROOT
+					}
+				}
+				else = {
+					create_unit = {
+						division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+						owner = ROOT
+					}
+				}
+			}
+
+			random_other_country = {
+				limit = {
+					original_tag = PRU 
+					has_civil_war = yes 
+				}
+				every_state = {
+					limit = {
+						is_core_of = PRU
+						has_state_flag = is_owned_by_PRU 
+						NOT = {
+							has_state_flag = PRU_state_is_fascist
+						}
+					}
+					PREV = {
+						transfer_state = PREV 
+					}
+				}
+				division_template = { 
+					name = "Milicias" 
+					division_names_group = SPAN_INF_02 
+					is_locked = yes 
+					regiments = { 
+						infantry = { x = 0 y = 0 }  
+						infantry = { x = 0 y = 1 } 
+						infantry = { x = 0 y = 2 } 
+						infantry = { x = 0 y = 3 } 
+					}
+				}	
+				division_template = {
+					name = "División de Infanteria Peruana" 
+					division_names_group = SPAN_INF_02 
+					is_locked = no 
+					regiments = { 
+						infantry = { x = 0 y = 0 }  
+						infantry = { x = 0 y = 1 } 
+						infantry = { x = 0 y = 2 } 
+						infantry = { x = 0 y = 3 } 
+						infantry = { x = 0 y = 4 } 
+						infantry = { x = 1 y = 0 } 
+						infantry = { x = 1 y = 1 } 
+						infantry = { x = 1 y = 2 } 
+						infantry = { x = 1 y = 3 } 
+						infantry = { x = 1 y = 4 } 
+					}
+					support = {
+						artillery = { x = 0 y = 0 } 
+					}
+				}
+				every_controlled_state = {
+					limit = {
+						NOT = {
+							has_state_flag = PRU_state_is_fascist
+						}
+					}
+					create_unit = {
+						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+						owner = PREV
+					}
+				}
+
+				random_owned_controlled_state = {
+					 if = {
+						limit = { check_variable = { PRU_size_of_government < 0.5} }
+						create_unit = {
+							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							owner = PREV
+						}
+					}
+					else = {
+						create_unit = {
+							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							owner = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Event that notifies players there was a coup 
+country_event = {
+	id = peru.31
+	title = peru.31.t 
+	desc = peru.31.d 
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes 
+
+	option = {
+		name = peru.31.a 
+		set_politics = {
+			ruling_party = fascism
+		}
+		set_country_flag = PRU_had_peaceful_coup
+		add_timed_idea = {
+			idea = PRU_aftermath_of_coup
+			days = 140
+		}
+		hidden_effect = {
+			country_event = { id = peru.24 hours = 8 }
 		}
 	}
 }

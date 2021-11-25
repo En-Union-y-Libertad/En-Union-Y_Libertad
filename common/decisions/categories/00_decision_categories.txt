@@ -370,7 +370,7 @@ south_american_armament = {
 		}
 		if = {
 			limit = {
-				original_tag = COL
+				original_tag = COL 
 			}
 			has_completed_focus = COL_ley_de_movilizacion_militar
 		}

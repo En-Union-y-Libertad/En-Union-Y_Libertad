@@ -530,7 +530,7 @@ news_event = {
 	id = conference.6
 	title = conference.6.title
 	desc = conference.6.desc
-	picture = GFX_news_event_conference_ends
+	picture = GFX_news_event_canada_patriation
 	
 	major = yes
 	

@@ -46,6 +46,18 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "Milicias"
+	division_names_group = SPAN_INF_02 
+
+	regiments = { 
+		infantry = { x = 0 y = 0 }  
+		infantry = { x = 0 y = 1 } 
+		infantry = { x = 0 y = 2 } 
+		infantry = { x = 0 y = 3 } 
+	}
+}
+
 units = {
 	##### Ejército de Chile #####
 	division= {	# "1era División del Ejercito"

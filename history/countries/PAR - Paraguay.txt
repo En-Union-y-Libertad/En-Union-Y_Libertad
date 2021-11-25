@@ -2,6 +2,26 @@
 add_ideas = monroe_doctrine_idea
 oob = "PAR_1936"
 
+recruit_character = PAR_rafael_franco
+recruit_character = PAR_emilio_melgarejo
+recruit_character = PAR_francisco_daza
+recruit_character = PAR_manuel_de_la_cruz
+recruit_character = PAR_manuel_t_aponte
+recruit_character = PAR_hector_velasquez
+recruit_character = PAR_jesus_g_arraza
+recruit_character = PAR_juan_stefanich
+recruit_character = PAR_juan_manuel_frutos
+recruit_character = PAR_isaias_baez_allende
+recruit_character = PAR_vicente_almonacid
+recruit_character = PAR_alfred_stroessner_matiauda
+recruit_character = PAR_amancio_pampliega
+recruit_character = PAR_hernan_rojas_baltassare
+recruit_character = PAR_higenio_morinigo_martinez
+recruit_character = PAR_juan_natalicio_gonzalez
+recruit_character = PAR_remigio_bastia_martin
+recruit_character = PAR_francisco_esculies
+recruit_character = PAR_riccardo_odriosola
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -69,39 +89,18 @@ set_popularities = {
 	communism = 75
 }
 
-create_country_leader = {
-	name = "Eusebio Ayala"
-	desc = "POLITICS_EUSEBIO_AYALA_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
+#create_country_leader = {
+#	name = "Eusebio Ayala"
+#	desc = "POLITICS_EUSEBIO_AYALA_DESC"
+#	picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+#	expire = "1965.1.1"
+#	ideology = liberalism
+#	traits = {
+#		#
+#	}
+#}
 
-create_country_leader = {
-	name = "Eusebio Ayala"
-	desc = "POLITICS_EUSEBIO_AYALA_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Higinio Morinigo"
-	desc = "POLITICS_HIGINIO_MORINIGO_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_3.dds"
-	expire = "1965.1.1"
-	ideology = falangism
-	traits = {
-		#
-	}
-}
-
+# Rafael Franco technically comes to and loses power slightly after/before the bookmarks, but is the go-to choice for a socialist leader
 create_country_leader = {
 	name = "Rafael Franco"
 	desc = "POLITICS_RAFAEL_FRANCO_DESC"
@@ -113,87 +112,9 @@ create_country_leader = {
 	}
 }
 
-create_field_marshal = {
-	name = "José Félix Estigarribia"
-	portrait_path = "gfx/leaders/PAR/portrait_PAR_jose_felix_estigarribia.dds"
-	traits = { brilliant_strategist trait_reckless war_hero }
-	skill = 3
-    attack_skill = 3
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 3
-}
-
-
-create_corps_commander = {
-	name = "Luis Irrazábal"
-	portrait_path = "gfx/leaders/PAR/portrait_PAR_Luis_Irrazabal.dds"
-	traits = { war_hero }
-	skill = 2
-    attack_skill = 2
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Higinio Morinigo"
-	portrait_path = "gfx/leaders/PAR/portrait_PAR_Higinio_Morinigo.dds"
-	traits = { politically_connected media_personality }
-	id = 6061
-	skill = 1
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Carlos Fernandez"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
-	traits = { infantry_officer }
-	skill = 1
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_navy_leader = {
-	name = "Norberto Jara Román"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_2.dds"
-	traits = { bold }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 1
-}
-create_navy_leader = { 
-	name = "José Bozzano"
-	portrait_path = "gfx/leaders/PAR/portrait_PAR_Jose_Bozzano.dds"
-	traits = { spotter }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-
-create_navy_leader = { 
-	name = "Manuel T. Aponte"
-	portrait_path = "gfx/leaders/PAR/portrait_PAR_Manuel_T_Aponte.dds"
-	traits = { spotter }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 2
-}
-
 1939.1.1 = {
 	set_politics = {
-		ruling_party = fascism
+		ruling_party = neutrality
 		last_election = "1938.1.1"
 		election_frequency = 48
 		elections_allowed = no
@@ -201,15 +122,15 @@ create_navy_leader = {
 	set_popularities = {
 		democratic = 20
 		communism = 30
-		fascism = 50
+		neutrality = 50
 	}
 
 	create_country_leader = {
 		name = "Higinio Morinigo"
 		desc = "POLITICS_HIGINIO_MORINIGO_DESC"
-		picture = "gfx/leaders/PAR/portrait_PAR_Higinio_Morinigo.dds"
+		picture = "gfx/leaders/South America/Portrait_South_America_Generic_3.dds"
 		expire = "1965.1.1"
-		ideology = falangism
+		ideology = despotism
 		traits = {
 			#
 		}

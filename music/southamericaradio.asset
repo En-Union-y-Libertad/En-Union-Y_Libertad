@@ -132,43 +132,25 @@ music = {
 ### Colombia
 
 music = {
-	name = "Saluda Adorada Bandera - Marcha Militar"
-	file = "saluda_adorada_bandera.ogg"
+	name = "Adiós al Séptimo de Línea"
+	file = "adios_al_septimo.ogg"
 	volume = 1.2
 }
 
 music = {
-	name = "Antioqueños al Mar - Marcha Colombiana"
-	file = "antioquenos_al_mar.ogg"
-	volume = 0.7
+	name = "Honores a Popayán"
+	file = "honores_a_popayan.ogg"
+	volume = 1.2
 }
 
 music = {
-	name = "Himno a la Infantería Colombiana"
-	file = "himno_a_la_infanteria.ogg"
-	volume = 1.0
+	name = "Salud Adorada Bandera"
+	file = "salud_adorada_bandera.ogg"
+	volume = 1.2
 }
 
 music = {
-	name = "Coronel Bedoya - Marcha Militar"
-	file = "coronel_bedoya.ogg"
-	volume = 1.0
-}
-
-music = {
-	name = "El Tiempo - Pasodoble Colombiano"
-	file = "el_tiempo.ogg"
-	volume = 0.80
-}
-
-music = {
-	name = "Unter dem Doppeladler (Versión Colombiana)"
-	file = "unter_dem_doppeladler.ogg"
-	volume = 1.0
-}
-
-music = {
-	name = "Adelante - Marcha Colombiana"
-	file = "adelante_marcha.ogg"
-	volume = 1.5
+	name = "Canción de Boyacá"
+	file = "cancion_de_boyaca.ogg"
+	volume = 1.2
 }

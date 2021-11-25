@@ -17,10 +17,10 @@ country_event = {
 	trigger = {
 		ROOT = {
 			has_country_flag = ARG_civil_war_confederation
-			807 = {
+			888 = {
 				is_controlled_by = ROOT
 			}
-			823 = {
+			904 = {
 				is_controlled_by = ROOT
 			}
 		}
@@ -30,7 +30,7 @@ country_event = {
 		name = argentina.1.a
 		ai_chance = { base = 80 }
 		ARG = {
-			set_capital = 807
+			set_capital = { state = 888 }
 		}
 	}
 	
@@ -38,7 +38,7 @@ country_event = {
 		name = argentina.1.b
 		ai_chance = { base = 20 }
 		ARG = {
-			set_capital = 823
+			set_capital = { state = 904 }
 		}
 	}
 }
@@ -391,7 +391,7 @@ country_event = {
 		} 
 		ARG = {
 			country_event = { id = argentina.14 }
-			transfer_state = 826
+			transfer_state = 907
 		}
 	}
 	
@@ -467,7 +467,7 @@ country_event = {
 		} 
 		ARG = {
 			country_event = { id = argentina.17 }
-			transfer_state = 825
+			transfer_state = 906
 		}
 	}
 	
@@ -580,16 +580,7 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	trigger = {
-		date > 1937.9.1
-		has_government = neutrality
-		has_completed_focus = ARG_infamous_decade
-		NOT = {
-			has_country_flag = ARG_started_1939
-		}
-	}
-	
-	mean_time_to_happen = { days = 2 }
+	is_triggered_only = yes 
 	
 	option = { #concordancia
 		name = argentina.22.a 
@@ -653,7 +644,7 @@ country_event = {
 		name = argentina.23.a 
 		ai_chance = { base = 100 }
 		ARG = {
-			822 = {
+			903 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -1257,15 +1248,21 @@ country_event = {
 	
 	option = {
 		name = argentina.51.a
-		effect_tooltip = {
-			unlock_national_focus = ARG_defy_the_military_plot
-		}
 		if = {
 			limit = { has_country_flag = ARG_elected_concordancia }
 				add_days_mission_timeout = {
 				mission = ARG_robertos_renounce
 				days = -100
 			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ARG_save_roberto
+				}
+			}
+			custom_effect_tooltip = ARG_unlock_march_decisions_tt
+			set_country_flag = ARG_capable_of_countering_coup
 		}
 				
 		hidden_effect = {
@@ -1322,7 +1319,7 @@ country_event = {
 				ideology = neutrality
 				size = 0.25
 				states = {
-					811 512 810 809 808
+					892 512 891 890 889
 				}
 			}
 			
@@ -1415,7 +1412,7 @@ country_event = {
 							owner = ROOT
 						}
 					}
-					812 = {
+					893 = {
 						create_unit = {
 							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 							owner = ROOT
@@ -1470,7 +1467,7 @@ country_event = {
 							artillery = { x = 0 y = 0 }
 						}
 					}
-					811 = {
+					892 = {
 						create_unit = {
 							division = "name = \"Militares\" division_template = \"Militares\" start_experience_factor = 1 start_equipment_factor = 1.0" 
 							owner = PREV
@@ -1892,76 +1889,7 @@ country_event = {
 	
 	option = {
 		name = argentina.66.a 
-		if = {
-			limit = { has_idea = ARG_inflation_1 }
-			swap_ideas = {
-				remove_idea = ARG_inflation_1
-				add_idea = ARG_inflation_2
-			}
-		}
-		else_if = {
-			limit = { has_idea = ARG_inflation_2 }
-			swap_ideas = {
-				remove_idea = ARG_inflation_2
-				add_idea = ARG_inflation_3
-			}
-		}
-		else_if = {
-			limit = { has_idea = ARG_inflation_2 }
-			swap_ideas = {
-				remove_idea = ARG_inflation_2
-				add_idea = ARG_inflation_3
-			}
-		}
-		else_if = {
-			limit = { has_idea = ARG_inflation_3 }
-			swap_ideas = {
-				remove_idea = ARG_inflation_3
-				add_idea = ARG_inflation_4
-			}
-		}
-		else_if = {
-			limit = { has_idea = ARG_inflation_4 }
-			swap_ideas = {
-				remove_idea = ARG_inflation_4
-				add_idea = ARG_inflation_5
-			}
-		}
-		else_if = {
-			limit = { has_idea = ARG_inflation_5 }
-			swap_ideas = {
-				remove_idea = ARG_inflation_5
-				add_idea = ARG_inflation_6
-			}
-		}
-		else_if = {
-			limit = { has_idea = ARG_inflation_6 }
-			swap_ideas = {
-				remove_idea = ARG_inflation_6
-				add_idea = ARG_inflation_7
-			}
-		}
-		else_if = {
-			limit = { has_idea = ARG_inflation_7 }
-			swap_ideas = {
-				remove_idea = ARG_inflation_7
-				add_idea = ARG_inflation_8
-			}
-		}
-		else_if = {
-			limit = { has_idea = ARG_inflation_8 }
-			swap_ideas = {
-				remove_idea = ARG_inflation_8
-				add_idea = ARG_inflation_9
-			}
-		}
-		else_if = {
-			limit = { has_idea = ARG_inflation_9 }
-			swap_ideas = {
-				remove_idea = ARG_inflation_9
-				add_idea = ARG_inflation_10
-			}
-		}
+		ARG_increase_inflation = yes 
 	}
 }
 	
@@ -2131,6 +2059,60 @@ country_event = {
 }	
 		
 		
-		
+#1944 San Juan Earthquake
+country_event = {
+	id = argentina.71
+	title = argentina.71.t 
+	desc = argentina.71.d 
+	picture = GFX_ARG_argentina_71
+
+	fire_only_once = yes 
+
+	trigger = {
+		date > 1944.1.12
+		897 = {
+			is_fully_controlled_by = ROOT 
+		}
+	}
+
+	option = {
+		name = argentina.71.a 
+		add_manpower = -1500
+		if = {
+			limit = {
+				897 = {
+					infrastructure > 1
+				}
+			}
+			897 = {
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+			}
+		}
+		else = {
+			897 = {
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				897 = {
+					industrial_complex > 0
+				}
+			}
+			897 = {
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+			}
+		}
+	}
+}
 		
 		

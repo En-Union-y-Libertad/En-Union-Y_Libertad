@@ -1,3 +1,63 @@
+ARG_1937_elections = {
+	ARG_the_1937_elections = {
+		priority = 50
+		icon = generic_political_rally
+
+		allowed = {
+			original_tag = ARG 
+		}
+
+		available = {
+			has_completed_focus = ARG_drift_back_towards_the_confederation
+		}
+
+		days_mission_timeout = 680
+
+		fire_only_once = yes 
+
+		activation = {
+			is_subject = no 
+		}
+
+		is_good = yes 
+
+		timeout_effect = {
+			country_event = argentina.22
+		}
+	}
+
+	ARG_pressure_the_parties_for_faster_elections = {
+		priority = 10
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			original_tag = ARG 
+		}
+
+		visible = {
+			has_completed_focus = ARG_infamous_decade
+			has_active_mission = ARG_the_1937_elections
+		}
+
+		ai_will_do = {
+			factor = 160
+		}
+
+		cost = 10
+
+		days_remove = 35
+
+		complete_effect = {
+			add_stability = -0.01
+			add_days_mission_timeout = {
+				mission = ARG_the_1937_elections
+				days = -45
+			}
+		}
+	}
+}
+
+
 ARG_inflation = {
 	
 	ARG_inflationary_crisis = {
@@ -28,6 +88,9 @@ ARG_inflation = {
 					has_idea = ARG_inflation_9
 				}
 			}
+			NOT = {
+				has_completed_focus = ARG_deal_with_the_inflation
+			}
 		}
 		
 		visible = {
@@ -51,76 +114,7 @@ ARG_inflation = {
 			hidden_effect = {
 				subtract_from_variable = { ARG_inflationary_period_days = 5 }
 			}
-			if = {
-				limit = { has_idea = ARG_inflation_1 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_1
-					add_idea = ARG_inflation_2
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_2 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_2
-					add_idea = ARG_inflation_3
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_2 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_2
-					add_idea = ARG_inflation_3
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_3 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_3
-					add_idea = ARG_inflation_4
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_4 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_4
-					add_idea = ARG_inflation_5
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_5 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_5
-					add_idea = ARG_inflation_6
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_6 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_6
-					add_idea = ARG_inflation_7
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_7 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_7
-					add_idea = ARG_inflation_8
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_8 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_8
-					add_idea = ARG_inflation_9
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_9 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_9
-					add_idea = ARG_inflation_10
-				}
-			}
+			ARG_increase_inflation = yes 
 		}
 	}
 	
@@ -163,69 +157,7 @@ ARG_inflation = {
 		remove_effect = {
 			clr_country_flag = ARG_trying_to_control_inflation
 			add_popularity = { ideology = communism popularity = 0.02 }
-			if = {
-				limit = { has_idea = ARG_inflation_10 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_10
-					add_idea = ARG_inflation_9
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_9 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_9
-					add_idea = ARG_inflation_8
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_8 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_8
-					add_idea = ARG_inflation_7
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_7 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_7
-					add_idea = ARG_inflation_6
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_6 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_6
-					add_idea = ARG_inflation_5
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_5 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_5
-					add_idea = ARG_inflation_4
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_4 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_4
-					add_idea = ARG_inflation_3
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_3 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_3
-					add_idea = ARG_inflation_2
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_2 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_2
-					add_idea = ARG_inflation_1
-				}
-			}
+			ARG_lower_inflation = yes 
 		}
 	}
 	
@@ -267,69 +199,7 @@ ARG_inflation = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_trying_to_control_inflation
-			if = {
-				limit = { has_idea = ARG_inflation_10 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_10
-					add_idea = ARG_inflation_9
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_9 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_9
-					add_idea = ARG_inflation_8
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_8 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_8
-					add_idea = ARG_inflation_7
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_7 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_7
-					add_idea = ARG_inflation_6
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_6 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_6
-					add_idea = ARG_inflation_5
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_5 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_5
-					add_idea = ARG_inflation_4
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_4 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_4
-					add_idea = ARG_inflation_3
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_3 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_3
-					add_idea = ARG_inflation_2
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_2 }
-				swap_ideas = {
-					remove_idea = ARG_inflation_2
-					add_idea = ARG_inflation_1
-				}
-			}
+			ARG_lower_inflation = yes 
 		}
 	}
 	
@@ -511,34 +381,6 @@ ARG_inflation = {
 		
 		remove_effect = {
 			if = {
-				limit = { has_idea = ARG_inflation_10 }
-				remove_ideas = ARG_inflation_10
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_9 }
-				remove_ideas = ARG_inflation_9
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_8 }
-				remove_ideas = ARG_inflation_8
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_7 }
-				remove_ideas = ARG_inflation_7
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_6 }
-				remove_ideas = ARG_inflation_6
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_5 }
-				remove_ideas = ARG_inflation_5
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_4 }
-				remove_ideas = ARG_inflation_4
-			}
-			else_if = {
 				limit = { has_idea = ARG_inflation_3 }
 				remove_ideas = ARG_inflation_3
 			}
@@ -561,6 +403,7 @@ ARG_robertos_deteriorating_health_condition = {
 	ARG_robertos_renounce = {
 		priority = 10
 		icon = generic_political_discourse
+		priority = 100
 		
 		allowed = {
 			tag = ARG
@@ -609,7 +452,7 @@ ARG_robertos_deteriorating_health_condition = {
 			}
 		}
 		
-		cost = 40
+		cost = 20
 		
 		modifier = {
 			political_power_factor =  -0.05
@@ -620,7 +463,7 @@ ARG_robertos_deteriorating_health_condition = {
 		ai_will_do = {
 			factor = 135
 			modifier = {
-				has_political_power < 50
+				has_political_power < 20
 				factor = 0
 			}
 		}
@@ -663,7 +506,7 @@ ARG_robertos_deteriorating_health_condition = {
 			}
 		}
 		
-		cost = 60
+		cost = 35
 		
 		fire_only_once = no
 		
@@ -674,7 +517,7 @@ ARG_robertos_deteriorating_health_condition = {
 		ai_will_do = {
 			factor = 135
 			modifier = {
-				has_political_power < 50
+				has_political_power < 20
 				factor = 0
 			}
 		}
@@ -717,7 +560,7 @@ ARG_robertos_deteriorating_health_condition = {
 			}
 		}
 		
-		cost = 80
+		cost = 50
 		
 		fire_only_once = no
 		
@@ -728,7 +571,7 @@ ARG_robertos_deteriorating_health_condition = {
 		ai_will_do = {
 			factor = 135
 			modifier = {
-				has_political_power < 50
+				has_political_power < 20
 				factor = 0
 			}
 			modifier = {
@@ -775,7 +618,7 @@ ARG_robertos_deteriorating_health_condition = {
 			}
 		}
 		
-		cost = 110
+		cost = 75
 		
 		fire_only_once = no
 		
@@ -786,7 +629,7 @@ ARG_robertos_deteriorating_health_condition = {
 		ai_will_do = {
 			factor = 135
 			modifier = {
-				has_political_power < 50
+				has_political_power < 20
 				factor = 0
 			}
 			modifier = {
@@ -834,12 +677,12 @@ ARG_robertos_deteriorating_health_condition = {
 			}
 		}
 		
-		cost = 35
+		cost = 20
 		
 		fire_only_once = no
 		
 		ai_will_do = {
-			factor = 100
+			factor = 130
 		}
 
 		days_remove = 32
@@ -880,12 +723,12 @@ ARG_robertos_deteriorating_health_condition = {
 			}
 		}
 		
-		cost = 55
+		cost = 30
 		
 		fire_only_once = no
 		
 		ai_will_do = {
-			factor = 100
+			factor = 130
 		}
 
 		days_remove = 44
@@ -926,7 +769,7 @@ ARG_robertos_deteriorating_health_condition = {
 			}
 		}
 		
-		cost = 75
+		cost = 45
 		
 		fire_only_once = no
 		
@@ -976,7 +819,7 @@ ARG_robertos_deteriorating_health_condition = {
 			}
 		}
 		
-		cost = 105
+		cost = 65
 		
 		fire_only_once = no
 		
@@ -1328,13 +1171,17 @@ ARG_the_argentine_civil_war = {
 		}
 
 		available = {
-			814 = {
+			895 = {
 				is_controlled_by = ROOT
 			}
 			has_army_experience > 10
 		}
 
-		highlight_state_targets = { state = 814 }
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 895
+			}
+		}
 
 		on_map_mode = map_only
 
@@ -1361,7 +1208,7 @@ ARG_the_argentine_civil_war = {
 		}
 		
 		remove_effect = {
-			814 = {
+			895 = {
 				create_unit = {
 					division = "name = \"Federales\" division_template = \"Federales\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
 					owner = ROOT
@@ -1379,13 +1226,17 @@ ARG_the_argentine_civil_war = {
 		}
 
 		available = {
-			814 = {
+			895 = {
 				is_controlled_by = ROOT
 			}
 			has_army_experience > 10
 		}
 
-		highlight_state_targets = { state = 818 }
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 899
+			}
+		}
 
 		on_map_mode = map_only
 
@@ -1412,7 +1263,7 @@ ARG_the_argentine_civil_war = {
 		}
 		
 		remove_effect = {
-			818 = {
+			899 = {
 				create_unit = {
 					division = "name = \"Federales\" division_template = \"Federales\" start_experience_factor = 0.5 start_equipment_factor = 1.0" 
 					owner = ROOT
@@ -1436,7 +1287,11 @@ ARG_the_argentine_civil_war = {
 			has_army_experience > 10
 		}
 
-		highlight_state_targets = { state = 510 }
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 510
+			}
+		}
 
 		on_map_mode = map_only
 
@@ -1487,7 +1342,11 @@ ARG_the_argentine_civil_war = {
 			has_army_experience > 10
 		}
 
-		highlight_state_targets = { state = 509 }
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 509
+			}
+		}
 
 		on_map_mode = map_only
 
@@ -1809,20 +1668,39 @@ ARG_the_great_coup = {
 
 ARG_foreign_investments = {
 
-	ARG_invest_in_america = {
-		priority = 10
+	ARG_invest_in_FROM = {
 		icon = generic_construction
-		
-		available = {
-			NOT = {
-				USA = { has_war_with = ROOT }
-				has_country_flag = ARG_investment_in_progress
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ITA
+					original_tag = BRA
+					original_tag = JAP 
+					original_tag = SOV 
+					original_tag = GER 
+					original_tag = ENG 
+					original_tag = FRA 
+					original_tag = USA
+				}
+				exists = yes 
 			}
 		}
 		
-		cost = 100
+		available = {
+			FROM = {
+				NOT = {
+					has_war_with = ROOT 
+				}
+				NOT = {
+					has_country_flag = invested_in_ARG
+				}
+				has_capitulated = no 
+			}
+			is_subject = no 
+		}
 		
-		fire_only_once = yes
+		cost = 100
 		
 		modifier = {
 			consumer_goods_factor =  0.1
@@ -1837,502 +1715,24 @@ ARG_foreign_investments = {
 		
 		complete_effect = {
 			set_country_flag = ARG_investment_in_progress
-		}
-		
-		remove_effect = {
-			clr_country_flag = ARG_investment_in_progress
-			set_country_flag = ARG_invested_america
-			if = {
-				limit = {
-					has_completed_focus = ARG_demand_repay_from_investment
-				}
-				random_list = {
-					85 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = industrial_complex
-								level = 1
-								instant_build = yes
-							}
-						}
-					}
-					15 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-								type = industrial_complex
-								level = 2
-								instant_build = yes
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	ARG_invest_in_france = {
-		priority = 10
-		icon = generic_construction
-		
-		allowed = {
-			tag = ARG
-		}
-		
-		available = {
-			NOT = {
-				FRA = { has_war_with = ROOT }
-				has_country_flag = ARG_investment_in_progress
-			}
-		}
-		
-		cost = 100
-		
-		fire_only_once = yes
-		
-		modifier = {
-			consumer_goods_factor =  0.1
-			political_power_factor =  -0.1
-		}
-		
-		ai_will_do = {
-			factor = 120
-		}
-		
-		days_remove = 75
-		
-		complete_effect = {
-			set_country_flag = ARG_investment_in_progress
-		}
-		
-		remove_effect = {
-			clr_country_flag = ARG_investment_in_progress
-			set_country_flag = ARG_invested_france
-			if = {
-				limit = {
-					has_completed_focus = ARG_demand_repay_from_investment
-				}
-				random_list = {
-					85 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = industrial_complex
-								level = 1
-								instant_build = yes
-							}
-						}
-					}
-					15 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-								type = industrial_complex
-								level = 2
-								instant_build = yes
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	ARG_invest_in_the_UK = {
-		priority = 10
-		icon = generic_construction
-		
-		available = {
-			NOT = {
-				ENG = { has_war_with = ROOT }
-				has_country_flag = ARG_investment_in_progress
-			}
 		}
 
-		cost = 100
-		
-		fire_only_once = yes
-		
-		modifier = {
-			consumer_goods_factor =  0.1
-			political_power_factor =  -0.1
-		}
-		
-		ai_will_do = {
-			factor = 120
-		}
-		
-		days_remove = 75
-		
-		complete_effect = {
-			set_country_flag = ARG_investment_in_progress
-		}
-		
-		remove_effect = {
-			clr_country_flag = ARG_investment_in_progress
-			set_country_flag = ARG_invested_in_uk
-			if = {
-				limit = {
-					has_completed_focus = ARG_demand_repay_from_investment
-				}
-				random_list = {
-					85 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = industrial_complex
-								level = 1
-								instant_build = yes
-							}
-						}
-					}
-					15 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-								type = industrial_complex
-								level = 2
-								instant_build = yes
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	ARG_invest_in_germany = {
-		priority = 10
-		icon = generic_construction
-		
-		allowed = {
-			tag = ARG
-		}
-		
-		available = {
+		visible = {
 			NOT = {
-				GER = { has_war_with = ROOT }
 				has_country_flag = ARG_investment_in_progress
 			}
-		}
-		
-		cost = 100
-		
-		fire_only_once = yes
-		
-		modifier = {
-			consumer_goods_factor =  0.1
-			political_power_factor =  -0.1
-		}
-		
-		ai_will_do = {
-			factor = 120
-		}
-		
-		days_remove = 75
-		
-		complete_effect = {
-			set_country_flag = ARG_investment_in_progress
+			FROM = {
+				NOT = {
+					has_country_flag = invested_in_ARG
+				}
+			}
 		}
 		
 		remove_effect = {
 			clr_country_flag = ARG_investment_in_progress
-			set_country_flag = ARG_invested_germany
-			if = {
-				limit = {
-					has_completed_focus = ARG_demand_repay_from_investment
-				}
-				random_list = {
-					85 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = industrial_complex
-								level = 1
-								instant_build = yes
-							}
-						}
-					}
-					15 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-								type = industrial_complex
-								level = 2
-								instant_build = yes
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	ARG_invest_in_soviet_union = {
-		priority = 10
-		icon = generic_construction
-		
-		allowed = {
-			tag = ARG
-		}
-		
-		available = {
-			NOT = {
-				SOV = { has_war_with = ROOT }
-				has_country_flag = ARG_investment_in_progress
-			}
-		}
-
-		cost = 100
-		
-		fire_only_once = yes
-		
-		modifier = {
-			consumer_goods_factor =  0.1
-			political_power_factor =  -0.1
-		}
-		
-		ai_will_do = {
-			factor = 120
-		}
-		
-		days_remove = 75
-		
-		complete_effect = {
-			set_country_flag = ARG_investment_in_progress
-		}
-		
-		remove_effect = {
-			clr_country_flag = ARG_investment_in_progress
-			set_country_flag = ARG_invested_soviet_union
-			if = {
-				limit = {
-					has_completed_focus = ARG_demand_repay_from_investment
-				}
-				random_list = {
-					85 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = industrial_complex
-								level = 1
-								instant_build = yes
-							}
-						}
-					}
-					15 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-								type = industrial_complex
-								level = 2
-								instant_build = yes
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	ARG_invest_in_japan = {
-		priority = 10
-		icon = generic_construction
-		
-		allowed = {
-			tag = ARG
-		}
-		
-		available = {
-			NOT = {
-				JAP = { has_war_with = ROOT }
-				has_country_flag = ARG_investment_in_progress
-			}
-		}
-		
-		cost = 100
-		
-		fire_only_once = yes
-		
-		modifier = {
-			consumer_goods_factor =  0.1
-			political_power_factor =  -0.1
-		}
-		
-		ai_will_do = {
-			factor = 120
-		}
-		
-		days_remove = 75
-		
-		complete_effect = {
-			set_country_flag = ARG_investment_in_progress
-		}
-		
-		remove_effect = {
-			clr_country_flag = ARG_investment_in_progress
-			set_country_flag = ARG_invested_japan
-			if = {
-				limit = {
-					has_completed_focus = ARG_demand_repay_from_investment
-				}
-				random_list = {
-					85 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = industrial_complex
-								level = 1
-								instant_build = yes
-							}
-						}
-					}
-					15 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-								type = industrial_complex
-								level = 2
-								instant_build = yes
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	ARG_invest_in_brazil = {
-		priority = 10
-		icon = generic_construction
-		
-		allowed = {
-			tag = ARG
-		}
-		
-		available = {
-			NOT = {
-				BRA = { has_war_with = ROOT }
-				has_country_flag = ARG_investment_in_progress
-			}
-		}
-		
-		cost = 100
-		
-		fire_only_once = yes
-		
-		modifier = {
-			consumer_goods_factor =  0.1
-			political_power_factor =  -0.1
-		}
-		
-		ai_will_do = {
-			factor = 120
-		}
-		
-		days_remove = 75
-		
-		complete_effect = {
-			set_country_flag = ARG_investment_in_progress
-		}
-		
-		remove_effect = {
-			clr_country_flag = ARG_investment_in_progress
-			set_country_flag = ARG_invested_brazil
-			if = {
-				limit = {
-					has_completed_focus = ARG_demand_repay_from_investment
-				}
-				random_list = {
-					85 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = industrial_complex
-								level = 1
-								instant_build = yes
-							}
-						}
-					}
-					15 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-								type = industrial_complex
-								level = 2
-								instant_build = yes
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	ARG_invest_in_italy = {
-		priority = 10
-		icon = generic_construction
-		
-		allowed = {
-			tag = ARG
-		}
-		
-		available = {
-			NOT = {
-				ITA = { has_war_with = ROOT }
-				has_country_flag = ARG_investment_in_progress
-			}
-		}
-		
-		cost = 100
-		
-		fire_only_once = yes
-		
-		modifier = {
-			consumer_goods_factor =  0.1
-			political_power_factor =  -0.1
-		}
-		
-		ai_will_do = {
-			factor = 120
-		}
-		
-		days_remove = 75
-		
-		complete_effect = {
-			set_country_flag = ARG_investment_in_progress
-		}
-		
-		remove_effect = {
-			clr_country_flag = ARG_investment_in_progress
-			set_country_flag = ARG_invested_italy
-			if = {
-				limit = {
-					has_completed_focus = ARG_demand_repay_from_investment
-				}
-				random_list = {
-					85 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = industrial_complex
-								level = 1
-								instant_build = yes
-							}
-						}
-					}
-					15 = {
-						random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-								type = industrial_complex
-								level = 2
-								instant_build = yes
-							}
-						}
-					}
-				}
+			custom_effect_tooltip = ARG_invest_in_countries_economy_tt
+			FROM = {
+				set_country_flag = invested_in_ARG
 			}
 		}
 	}
@@ -2375,41 +1775,7 @@ ARG_debt_repayments = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_debt_repayment_in_progress
-			if = {
-				limit = { has_idea = ARG_accepted_debt_repayments }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments
-					add_idea = ARG_accepted_debt_repayments_2 
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_2 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_2
-					add_idea = ARG_accepted_debt_repayments_3
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_3 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_3
-					add_idea = ARG_accepted_debt_repayments_4
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_4 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_4
-					add_idea = ARG_accepted_debt_repayments_5
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_5
-					add_idea = ARG_accepted_debt_repayments_6
-				}
-				clr_country_flag = ARG_pay_debt
-			}
+			ARG_pay_off_debt_slightly = yes 
 		}
 	}
 	
@@ -2448,41 +1814,7 @@ ARG_debt_repayments = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_debt_repayment_in_progress
-			if = {
-				limit = { has_idea = ARG_accepted_debt_repayments }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments
-					add_idea = ARG_accepted_debt_repayments_2 
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_2 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_2
-					add_idea = ARG_accepted_debt_repayments_3
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_3 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_3
-					add_idea = ARG_accepted_debt_repayments_4
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_4 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_4
-					add_idea = ARG_accepted_debt_repayments_5
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_5
-					add_idea = ARG_accepted_debt_repayments_6
-				}
-				clr_country_flag = ARG_pay_debt
-			}
+			ARG_pay_off_debt_slightly = yes 
 		}
 	}
 	
@@ -2521,41 +1853,7 @@ ARG_debt_repayments = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_debt_repayment_in_progress
-			if = {
-				limit = { has_idea = ARG_accepted_debt_repayments }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments
-					add_idea = ARG_accepted_debt_repayments_2 
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_2 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_2
-					add_idea = ARG_accepted_debt_repayments_3
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_3 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_3
-					add_idea = ARG_accepted_debt_repayments_4
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_4 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_4
-					add_idea = ARG_accepted_debt_repayments_5
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_5
-					add_idea = ARG_accepted_debt_repayments_6
-				}
-				clr_country_flag = ARG_pay_debt
-			}
+			ARG_pay_off_debt_slightly = yes 
 		}
 	}
 	
@@ -2594,41 +1892,7 @@ ARG_debt_repayments = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_debt_repayment_in_progress
-			if = {
-				limit = { has_idea = ARG_accepted_debt_repayments }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments
-					add_idea = ARG_accepted_debt_repayments_2 
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_2 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_2
-					add_idea = ARG_accepted_debt_repayments_3
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_3 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_3
-					add_idea = ARG_accepted_debt_repayments_4
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_4 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_4
-					add_idea = ARG_accepted_debt_repayments_5
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_5
-					add_idea = ARG_accepted_debt_repayments_6
-				}
-				clr_country_flag = ARG_pay_debt
-			}
+			ARG_pay_off_debt_slightly = yes 
 		}
 	}
 	
@@ -2667,41 +1931,7 @@ ARG_debt_repayments = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_debt_repayment_in_progress
-			if = {
-				limit = { has_idea = ARG_accepted_debt_repayments }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments
-					add_idea = ARG_accepted_debt_repayments_2 
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_2 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_2
-					add_idea = ARG_accepted_debt_repayments_3
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_3 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_3
-					add_idea = ARG_accepted_debt_repayments_4
-				}
-			}
-			else_if = {
-				limit = { has_idea = ARG_accepted_debt_repayments_4 }
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_4
-					add_idea = ARG_accepted_debt_repayments_5
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = ARG_accepted_debt_repayments_5
-					add_idea = ARG_accepted_debt_repayments_6
-				}
-				clr_country_flag = ARG_pay_debt
-			}
+			ARG_pay_off_debt_slightly = yes 
 		}
 	}
 }
@@ -2710,7 +1940,7 @@ ARG_ramon_military_coup = {
 	
 	ARG_the_possible_coup = {
 		
-		priority = 10
+		priority = 20
 		icon = generic_ignite_civil_war
 		
 		allowed = {
@@ -2740,6 +1970,116 @@ ARG_ramon_military_coup = {
 		timeout_effect = {
 			country_event = argentina.52
 			clr_country_flag = ARG_ramon_coup
+		}
+	}
+
+	ARG_shut_down_the_coup = {
+		priority = 10
+		icon = oppression
+
+		allowed = { original_tag = ARG }
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ARG_all_states_were_dealt_with_tt
+				889 = {
+					has_state_flag = ARG_state_was_dealt_with
+				}
+				890 = {
+					has_state_flag = ARG_state_was_dealt_with
+				}
+				891 = {
+					has_state_flag = ARG_state_was_dealt_with
+				}
+				512 = {
+					has_state_flag = ARG_state_was_dealt_with
+				}
+				892 = {
+					has_state_flag = ARG_state_was_dealt_with
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			has_country_flag = ARG_capable_of_countering_coup
+			has_active_mission = ARG_the_possible_coup
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = ARG_coup_will_be_shut_down_tt
+			clr_country_flag = ARG_ramon_coup
+			add_stability = -0.03
+		}
+	}
+
+	ARG_march_in_the_province_of_FROM = {
+		icon = eng_blackshirt_march
+
+		allowed = { original_tag = ARG }
+
+		visible = { 
+			has_country_flag = ARG_capable_of_countering_coup
+			has_active_mission = ARG_the_possible_coup
+			FROM = {
+				NOT = {
+					has_state_flag = ARG_state_was_dealt_with
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 180
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 889
+				state = 890
+				state = 891
+				state = 892 
+				state = 512
+			}
+		}
+
+		state_target = yes 
+
+		targets = { 889 890 891 512 892 }
+
+		on_map_mode = map_and_decisions_view
+
+		target_trigger = {
+			FROM = {
+				is_fully_controlled_by = ROOT 
+				NOT = {
+					has_state_flag = ARG_state_was_dealt_with
+				}
+			}
+		}
+
+		available = {
+			divisions_in_state = {
+				size > 3
+				state = FROM
+			}
+		}
+
+		cost = 10
+
+		days_remove = 70
+
+		modifier = {
+			weekly_manpower = -450
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = ARG_state_will_be_dealt_with_tt
+			FROM = {
+				set_state_flag = ARG_state_was_dealt_with
+			}
 		}
 	}
 }
@@ -2775,14 +2115,7 @@ ARG_five_year_plan = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_industrial_plan_in_progress
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			EUYL_add_1_civilian = yes 
 		}
 	}
 	
@@ -2815,14 +2148,7 @@ ARG_five_year_plan = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_industrial_plan_in_progress
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			EUYL_add_1_military = yes 
 		}
 	}
 	

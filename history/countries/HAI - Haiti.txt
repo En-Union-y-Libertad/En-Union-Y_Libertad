@@ -6,6 +6,29 @@ oob = "HAI_1936"
 set_technology = {
 	infantry_weapons = 1
 }
+
+recruit_character = HAI_sténio_vincent
+recruit_character = HAI_jacques_roumain
+recruit_character = HAI_vilbrum_soulouque
+recruit_character = HAI_jacques_soulouque
+recruit_character = HAI_emilie_lescot
+recruit_character = HAI_pascale_b_g_guillaume
+recruit_character = HAI_charles_h_forbin
+recruit_character = HAI_andre_sainte_frederic
+recruit_character = HAI_paul_magloire
+recruit_character = HAI_georges_leger
+recruit_character = HAI_belmeau_max_pierre
+recruit_character = HAI_franck_lavaud
+recruit_character = HAI_andre_dumont
+recruit_character = HAI_antoine_levelt
+recruit_character = HAI_ernst_severe
+recruit_character = HAI_g_edouard_roy
+recruit_character = HAI_raymond_gassner
+recruit_character = HAI_luis_dabtes_bellegarde
+recruit_character = HAI_demosthenes_calixte
+recruit_character = HAI_louis_dejoie
+
+
 set_country_flag = monroe_doctrine
 set_war_support = 0.1
 set_convoys = 5
@@ -13,6 +36,7 @@ set_convoys = 5
 1939.1.1 = {
 
 	add_political_power = 1198
+	add_command_power = 100
 	
 	#generic focuses
 	complete_national_focus = army_effort
@@ -67,82 +91,3 @@ set_politics = {
 set_popularities = {
 	democratic = 100
 }
-
-create_country_leader = {
-	name = "Sténio Vincent"
-	desc = "POLITICS_STENIO_VINCENT_DESC"
-	picture = "GFX_portrait_haiti_stenio_vincent"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Jacques Roumain"
-	desc = "POLITICS_JACQUES_ROUMAIN_DESC"
-	picture = "gfx/leaders/Africa/Portrait_South_Africa_Political_Leader_Generic.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Franck Lavaud"
-	desc = "POLITICS_FRANCK_LAVAUD_DESC"
-	picture = "gfx/leaders/HAI/portrait_HAI_franck_lavaud.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "François Duvalier"
-	desc = "POLITICS_FRANCOIS_DUVALIER_DESC"
-	picture = "gfx/leaders/HAI/Portrait_South_Africa_Political_Leader_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Franck Lavaud"
-	portrait_path = "gfx/leaders/HAI/portrait_HAI_franck_lavaud.dds"
-	traits = { }
-	skill = 2
-    attack_skill = 1
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Paul Magloire"
-	portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
-	traits = { }
-	skill = 2
-    attack_skill = 2
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Antoine Levelt"
-	portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_2.dds"
-	traits = {  }
-	skill = 1
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 1
-}
-
-

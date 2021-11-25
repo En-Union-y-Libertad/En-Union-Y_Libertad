@@ -3197,7 +3197,7 @@ south_american_armament = {
 
 		custom_cost_text = SAU_cost_15_command
 
-		days_remove = 60
+		days_remove = 140
 
 		days_re_enable = 70
 
@@ -3275,7 +3275,7 @@ south_american_armament = {
 
 		custom_cost_text = SAU_cost_25_command
 
-		days_remove = 80
+		days_remove = 180
 
 		days_re_enable = 80
 
@@ -3358,7 +3358,7 @@ south_american_armament = {
 
 		custom_cost_text = SAU_cost_45_command
 
-		days_remove = 90
+		days_remove = 250
 
 		days_re_enable = 100
 

@@ -261,7 +261,10 @@ ideas = {
 			picture = generic_artillery_regiments
 			
 			allowed = {
-				tag = ARG
+				OR = {
+					original_tag = ARG
+					original_tag = BRA
+				}
 			}
 			
 			available = {
@@ -1292,11 +1295,7 @@ ideas = {
 			picture = generic_infantry_bonus
 			
 			allowed = {
-				OR = {
-					original_tag = ARG
-					original_tag = GER
-					original_tag = CHL
-				}
+				always = no 
 			}
 			
 			available = {
@@ -1312,7 +1311,7 @@ ideas = {
 			modifier = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
-				command_power_gain = 0.5
+				conscription = 0.01
 				max_command_power = 25
 				training_time_factor = -0.15
 			}
@@ -1349,6 +1348,7 @@ ideas = {
 				OR = {
 					original_tag = ARG 
 					original_tag = CHL 
+					original_tag = BRA
 				}
 			}
 
@@ -2243,23 +2243,6 @@ ideas = {
 			}
 		}
 		
-		ARG_banco_central_argentino_2 = {
-			picture = ARG_bancocentral
-			
-			allowed = { tag = ARG }
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				political_power_factor = 0.15
-				consumer_goods_factor = 0.05
-			}
-		}
-		
 		ARG_recently_subsidized_industry = {
 			picture = generic_central_management
 			
@@ -2845,7 +2828,7 @@ ideas = {
 			traits = { war_industrialist }
 		}
 		
-		ARG_leopoldo_melo = {
+		ARG_enzo_bordabehere = {
 			
 			picture = ARG_minister_enzo_bordabehere
 			
@@ -3059,7 +3042,7 @@ ideas = {
 			
 			picture = ARG_fm_company
 			
-			cost = 150
+			cost = 100
 			
 			allowed = {
 				original_tag = ARG
@@ -3076,6 +3059,35 @@ ideas = {
 			}
 
 		}	
+
+		ARG_porsche = {
+
+			picture = porsche
+
+			allowed = {
+				original_tag = ARG
+			}
+
+			available = {
+				has_completed_focus = ARG_invite_german_tank_designers
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			equipment_bonus = {
+				cat_heavy_armor = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			
+			traits = { heavy_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	
 	materiel_manufacturer = {
@@ -3088,6 +3100,8 @@ ideas = {
 				original_tag = ARG
 			}
 			
+			cost = 100
+			
 			picture = ARG_fm_company
 			
 			research_bonus = {
@@ -3095,24 +3109,6 @@ ideas = {
 			}
 			
 			traits = { infantry_equipment_manufacturer }
-			
-			modifier = {
-			}
-		}
-
-		ARG_fundiciones_santini = {  #Manufacturer of the Ñandú
-			
-			allowed = {
-				original_tag = ARG
-			}
-			
-			picture = generic_motorized_equipment_manufacturer_3
-			
-			research_bonus = {
-				motorized_equipment = 0.15
-			}
-			
-			traits = { motorized_equipment_manufacturer }
 			
 			modifier = {
 			}
@@ -3129,6 +3125,8 @@ ideas = {
 				original_tag = ARG
 			}
 			
+			cost = 100
+			
 			picture = ARG_fm_company
 			
 			research_bonus = {
@@ -3139,6 +3137,34 @@ ideas = {
 			
 			modifier = {
 			}
+		}
+
+		ARG_fadea = {
+
+			allowed = {
+				original_tag = ARG 
+			}
+
+			cost = 150
+
+			picture = ARG_fadea_icon
+
+			research_bonus = {
+				air_equipment = 0.1
+			}
+
+			equipment_bonus = {
+				CAS_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+
+			traits = { CAS_manufacturer }
 		}
 	}
 	
@@ -3223,43 +3249,41 @@ ideas = {
 				factor = 1
 			}
 		}
-
-		ARG_UIA = {
-			picture = ARG_UIA
-
+		
+		ARG_fm_industrial = {
+			picture = ARG_fm_company
+			
+			cost = 200
+			
 			allowed = {
-				original_tag = ARG
+				original_tag = ARG 
 			}
 			
-			research_bonus = {
-				industry = 0.15
+			available = {
+				ARG_fm_monopoly = yes 
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+				industrial_capacity_factory = 0.05
+				political_power_factor = -0.05
+			}
+			
+			traits = { industrial_monopoly }
+		}
+
+		ARG_central_bank_company = {
+			picture = banco_central_argentino
+
+			cost = 50
+
+			allowed = { original_tag = ARG }
+
+			available = { has_completed_focus = CHL_central_bank }
+
+			traits = { central_bank }
+		}
 				
-			}
-			ai_will_do = {
-				factor = 2
-			}
-			
-			traits = { industrial_concern }
-		}
-
-		ARG_fapesa = {
-			
-			picture = ARG_fapesa
-
-			allowed = {
-				original_tag = ARG
-			}
-			
-			research_bonus = {
-				electronics = 0.15
-			}
-
-			ai_will_do = {
-				factor = 1
-			}
-			
-			traits = { electronics_concern }
-		}
 	}
 
 	theorist = {

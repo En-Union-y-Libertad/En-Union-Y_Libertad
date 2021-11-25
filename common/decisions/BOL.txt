@@ -53,6 +53,7 @@ BOL_the_1936_coup_d_etat =  {
 
         visible = {
             has_completed_focus = BOL_side_with_the_people
+            has_active_mission = BOL_the_great_coup
         }
 
         ai_will_do = {
@@ -94,6 +95,7 @@ BOL_the_1936_coup_d_etat =  {
 
         visible = {
             has_completed_focus = BOL_side_with_the_people
+            has_active_mission = BOL_the_great_coup
         }
 
         ai_will_do = {
@@ -134,6 +136,7 @@ BOL_the_1936_coup_d_etat =  {
 
         visible = {
             has_completed_focus = BOL_side_with_the_people
+            has_active_mission = BOL_the_great_coup
         }
 
         ai_will_do = {
@@ -157,7 +160,7 @@ BOL_the_1936_coup_d_etat =  {
         }
     }
 
-    BOL_conscript_a_militia_regiment_in_oruro = {
+    BOL_conscript_a_militia_regiment_in_FROM = {
         icon = generic_military
 
 		allowed = {
@@ -170,15 +173,21 @@ BOL_the_1936_coup_d_etat =  {
 
         visible = {
             has_completed_focus = BOL_militarize_the_people_in_our_provinces
+            has_active_mission = BOL_the_great_coup
+            FROM = {
+                NOT = {
+                    has_state_flag = BOL_conscripted_militia
+                }
+            }
         }
 
-		highlight_state_targets = { state = 841 }
+        state_target = yes 
 
-		on_map_mode = map_only
+        targets = { 840 841 302 844 }
 
-		cost = 25
+		on_map_mode = map_and_decisions_view
 
-		fire_only_once = yes
+		cost = 20
 
 		days_remove = 15
 		
@@ -191,136 +200,7 @@ BOL_the_1936_coup_d_etat =  {
 		
 		remove_effect = {
             custom_effect_tooltip = BOL_spawn_with_extra_militia
-			841 = {
-                set_state_flag = BOL_conscripted_militia
-            }
-            hidden_effect = {
-                add_to_variable = { BOL_civilian_army_divisions = 1 }
-            }
-		}
-    }
-
-    BOL_conscript_a_militia_regiment_in_chuquisaca = {
-        icon = generic_military
-
-		allowed = {
-			original_tag = BOL
-		}
-
-		available = {
-			has_completed_focus = BOL_militarize_the_people_in_our_provinces
-		}
-
-        visible = {
-            has_completed_focus = BOL_militarize_the_people_in_our_provinces
-        }
-
-		highlight_state_targets = { state = 843 }
-
-		on_map_mode = map_only
-
-		cost = 25
-
-		fire_only_once = yes
-
-		days_remove = 15
-		
-		ai_will_do = {
-			factor = 100
-		}
-
-		complete_effect = {
-		}
-		
-		remove_effect = {
-            custom_effect_tooltip = BOL_spawn_with_extra_militia
-			843 = {
-                set_state_flag = BOL_conscripted_militia
-            }
-            hidden_effect = {
-                add_to_variable = { BOL_civilian_army_divisions = 1 }
-            }
-		}
-    }
-
-    BOL_conscript_a_militia_regiment_in_tarija = {
-        icon = generic_military
-
-		allowed = {
-			original_tag = BOL
-		}
-
-		available = {
-			has_completed_focus = BOL_militarize_the_people_in_our_provinces
-		}
-
-        visible = {
-            has_completed_focus = BOL_militarize_the_people_in_our_provinces
-        }
-
-		highlight_state_targets = { state = 826 }
-
-		on_map_mode = map_only
-
-		cost = 25
-
-		fire_only_once = yes
-
-		days_remove = 15
-		
-		ai_will_do = {
-			factor = 100
-		}
-
-		complete_effect = {
-		}
-		
-		remove_effect = {
-            custom_effect_tooltip = BOL_spawn_with_extra_militia
-			826 = {
-                set_state_flag = BOL_conscripted_militia
-            }
-            hidden_effect = {
-                add_to_variable = { BOL_civilian_army_divisions = 1 }
-            }
-		}
-    }
-
-    BOL_conscript_a_militia_regiment_in_potosi = {
-        icon = generic_military
-
-		allowed = {
-			original_tag = BOL
-		}
-
-		available = {
-			has_completed_focus = BOL_militarize_the_people_in_our_provinces
-		}
-
-        visible = {
-            has_completed_focus = BOL_militarize_the_people_in_our_provinces
-        }
-
-		highlight_state_targets = { state = 840 }
-
-		on_map_mode = map_only
-
-		cost = 25
-
-		fire_only_once = yes
-
-		days_remove = 15
-		
-		ai_will_do = {
-			factor = 100
-		}
-
-		complete_effect = {
-		}
-		
-		remove_effect = {
-            custom_effect_tooltip = BOL_spawn_with_extra_militia
-			840 = {
+			FROM = {
                 set_state_flag = BOL_conscripted_militia
             }
             hidden_effect = {
@@ -354,62 +234,7 @@ BOL_regaining_the_trust_of_the_people = {
         }
 
         remove_effect = {
-            if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians
-                    add_idea = BOL_went_against_the_civilians_2
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_2
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_2 
-                    add_idea = BOL_went_against_the_civilians_3
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_3
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_3 
-                    add_idea = BOL_went_against_the_civilians_4
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_4
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_4 
-                    add_idea = BOL_went_against_the_civilians_5
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_5
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_5
-                    add_idea = BOL_went_against_the_civilians_6
-                }
-            }
-            else = {
-                add_stability = 0.05
-                random_owned_controlled_state = {
-                    add_extra_state_shared_building_slots = 1
-                    add_building_construction = {
-                        type = industrial_complex
-                        level = 1
-                        instant_build = yes 
-                    }
-                }
-            }
+            BOL_weaken_went_against_civilian = yes 
         }
     }
 
@@ -437,62 +262,7 @@ BOL_regaining_the_trust_of_the_people = {
         }
 
         remove_effect = {
-            if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians
-                    add_idea = BOL_went_against_the_civilians_2
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_2
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_2 
-                    add_idea = BOL_went_against_the_civilians_3
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_3
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_3 
-                    add_idea = BOL_went_against_the_civilians_4
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_4
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_4 
-                    add_idea = BOL_went_against_the_civilians_5
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_5
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_5
-                    add_idea = BOL_went_against_the_civilians_6
-                }
-            }
-            else = {
-                add_stability = 0.05
-                random_owned_controlled_state = {
-                    add_extra_state_shared_building_slots = 1
-                    add_building_construction = {
-                        type = industrial_complex
-                        level = 1
-                        instant_build = yes 
-                    }
-                }
-            }
+            BOL_weaken_went_against_civilian = yes 
         }
     }
 
@@ -521,62 +291,7 @@ BOL_regaining_the_trust_of_the_people = {
         }
 
         remove_effect = {
-            if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians
-                    add_idea = BOL_went_against_the_civilians_2
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_2
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_2 
-                    add_idea = BOL_went_against_the_civilians_3
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_3
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_3 
-                    add_idea = BOL_went_against_the_civilians_4
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_4
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_4 
-                    add_idea = BOL_went_against_the_civilians_5
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_5
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_5
-                    add_idea = BOL_went_against_the_civilians_6
-                }
-            }
-            else = {
-                add_stability = 0.05
-                random_owned_controlled_state = {
-                    add_extra_state_shared_building_slots = 1
-                    add_building_construction = {
-                        type = industrial_complex
-                        level = 1
-                        instant_build = yes 
-                    }
-                }
-            }
+            BOL_weaken_went_against_civilian = yes 
         }
     }
 
@@ -604,62 +319,7 @@ BOL_regaining_the_trust_of_the_people = {
         }
 
         remove_effect = {
-            if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians
-                    add_idea = BOL_went_against_the_civilians_2
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_2
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_2 
-                    add_idea = BOL_went_against_the_civilians_3
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_3
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_3 
-                    add_idea = BOL_went_against_the_civilians_4
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_4
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_4 
-                    add_idea = BOL_went_against_the_civilians_5
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_5
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_5
-                    add_idea = BOL_went_against_the_civilians_6
-                }
-            }
-            else = {
-                add_stability = 0.05
-                random_owned_controlled_state = {
-                    add_extra_state_shared_building_slots = 1
-                    add_building_construction = {
-                        type = industrial_complex
-                        level = 1
-                        instant_build = yes 
-                    }
-                }
-            }
+            BOL_weaken_went_against_civilian = yes 
         }
     }
 
@@ -687,62 +347,7 @@ BOL_regaining_the_trust_of_the_people = {
         }
 
         remove_effect = {
-            if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians
-                    add_idea = BOL_went_against_the_civilians_2
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_2
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_2 
-                    add_idea = BOL_went_against_the_civilians_3
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_3
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_3 
-                    add_idea = BOL_went_against_the_civilians_4
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_4
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_4 
-                    add_idea = BOL_went_against_the_civilians_5
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = BOL_went_against_the_civilians_5
-                }
-                swap_ideas = {
-                    remove_idea = BOL_went_against_the_civilians_5
-                    add_idea = BOL_went_against_the_civilians_6
-                }
-            }
-            else = {
-                add_stability = 0.05
-                random_owned_controlled_state = {
-                    add_extra_state_shared_building_slots = 1
-                    add_building_construction = {
-                        type = industrial_complex
-                        level = 1
-                        instant_build = yes 
-                    }
-                }
-            }
+            BOL_weaken_went_against_civilian = yes 
         }
     }
 }
@@ -829,6 +434,938 @@ BOL_foreign_arms_purchasing = {
 ### Peru-Bolivian Confederation Decisions ###
 #############################################
 
+PBC_nationalism_rising = {
+
+    PBC_nationalism_rising_in_bolivia = {
+        icon = generic_civil_support
+
+        allowed = {
+            OR = {
+                original_tag = PRU 
+                original_tag = BOL 
+            }
+        }
+
+        available = {
+            hidden_trigger = { always = no }
+            #will later add something idk prolly a focus lol
+        }
+
+        activation = {
+            has_dynamic_modifier = { modifier = PBC_nationalism_on_the_rise }
+        }
+
+        fire_only_once = no 
+
+        days_mission_timeout = PBC_time_it_takes_to_take_state_BOL
+
+        cancel_trigger = {
+            NOT = {
+                has_dynamic_modifier = { modifier = PBC_nationalism_on_the_rise }
+            }
+        }
+
+        timeout_effect = {
+            custom_effect_tooltip = PBC_bolivian_nationalists_take_state_tt
+            custom_effect_tooltip = PBC_take_bolivians_8_less_tt
+            hidden_effect = {
+                random_owned_controlled_state = {
+                    limit = {
+                        is_core_of = BOL 
+                        NOT = {
+                            OR = {
+                                is_core_of = PAR 
+                                is_core_of = CHL 
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = { modifier = PBC_BOL_nationalists }
+                        }
+                    }
+                    add_dynamic_modifier = { modifier = PBC_BOL_nationalists }
+                }
+                add_to_variable = { PBC_BOL_states_controlled_by_nationalists = 1 }
+                add_to_variable = { PBC_total_states_controlled_by_nationalists = 1 }
+                if = {
+                    limit = {
+                        check_variable = { PBC_time_it_takes_to_take_state_BOL > 34 }
+                    }
+                    subtract_from_variable = { PBC_time_it_takes_to_take_state_BOL = 8 }
+                }
+                PBC_set_up_nationalism_on_rise = yes 
+            }
+        }
+    }
+
+    PBC_nationalism_rising_in_peru = {
+        icon = generic_civil_support
+
+        allowed = {
+            OR = {
+                original_tag = PRU 
+                original_tag = BOL 
+            }
+        }
+
+        available = {
+            hidden_trigger = { always = no }
+            #will later add something idk prolly a focus lol
+        }
+
+        activation = {
+            has_dynamic_modifier = { modifier = PBC_nationalism_on_the_rise }
+        }
+
+        fire_only_once = no 
+
+        days_mission_timeout = PBC_time_it_takes_to_take_state_PRU
+
+        cancel_trigger = {
+            NOT = {
+                has_dynamic_modifier = { modifier = PBC_nationalism_on_the_rise }
+            }
+        }
+
+        timeout_effect = {
+            custom_effect_tooltip = PBC_peruvian_nationalists_take_state_tt
+            custom_effect_tooltip = PBC_take_peruvians_8_less_tt
+            hidden_effect = {
+                random_owned_controlled_state = {
+                    limit = {
+                        is_core_of = PRU 
+                        NOT = {
+                            OR = {
+                                is_core_of = ECU 
+                                is_core_of = CHL 
+                            }
+                        }
+                        NOT = {
+                            has_dynamic_modifier = { modifier = PBC_PRU_nationalists }
+                        }
+                    }
+                    add_dynamic_modifier = { modifier = PBC_PRU_nationalists }
+                }
+                add_to_variable = { PBC_PRU_states_controlled_by_nationalists = 1 }
+                add_to_variable = { PBC_total_states_controlled_by_nationalists = 1 }
+                if = {
+                    limit = {
+                        check_variable = { PBC_time_it_takes_to_take_state_PRU > 34 }
+                    }
+                    subtract_from_variable = { PBC_time_it_takes_to_take_state_PRU = 10 }
+                }
+                PBC_set_up_nationalism_on_rise = yes 
+            }
+        }
+    }
+
+    PBC_retake_control_of_FROM = {
+        icon = oppression
+
+        allowed = {
+            OR = {
+                original_tag = BOL 
+                original_tag = PRU 
+            }
+        }
+
+        ai_will_do = {
+            factor = 200
+        }
+
+        cost = PBC_cost_to_retake_state
+
+        days_remove = PBC_days_to_retake_state
+
+        on_map_mode = map_and_decisions_view
+
+        state_target = yes 
+
+        target_array = controlled_states
+
+        target_trigger = {
+            FROM = {
+                is_fully_controlled_by = ROOT 
+                OR = {
+                    has_dynamic_modifier = { modifier = PBC_PRU_nationalists }
+                    has_dynamic_modifier = { modifier = PBC_BOL_nationalists }
+                }
+            }
+        }
+
+        available = {
+            has_civil_war = no 
+            divisions_in_state = {
+				size > 2
+				state = FROM
+			}
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = PBC_retaking_state
+                }
+            }
+        }
+
+        modifier = {
+            weekly_manpower = -350
+        }
+
+        visible = {
+            has_dynamic_modifier = { modifier = PBC_nationalism_on_the_rise }
+            FROM = {
+                OR = {
+                    has_dynamic_modifier = { modifier = PBC_PRU_nationalists }
+                    has_dynamic_modifier = { modifier = PBC_BOL_nationalists }
+                }
+            }
+            has_completed_focus = PBC_calm_down_the_nationalists
+            NOT = {
+                has_country_flag = PBC_retaking_state
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = PBC_retaking_state
+        }
+
+        remove_effect = {
+            clr_country_flag = PBC_retaking_state
+            if = {
+                limit = { 
+                    FROM = {
+                        has_dynamic_modifier = { modifier = PBC_BOL_nationalists } 
+                    }
+                }
+                FROM = {
+                    remove_dynamic_modifier = { modifier = PBC_BOL_nationalists }
+                }
+                custom_effect_tooltip = PBC_take_bolivians_8_more_tt
+                hidden_effect = {
+                    subtract_from_variable = { PBC_BOL_states_controlled_by_nationalists = 1 }
+                    subtract_from_variable = { PBC_total_states_controlled_by_nationalists = 1 }
+                    add_to_variable = { PBC_time_it_takes_to_take_state_BOL = 8 }
+                    PBC_set_up_nationalism_on_rise = yes 
+                }
+            }
+            else_if = {
+                limit = { 
+                    FROM = {
+                        has_dynamic_modifier = { modifier = PBC_PRU_nationalists } 
+                    }
+                }
+                FROM = {
+                    remove_dynamic_modifier = { modifier = PBC_PRU_nationalists }
+                }
+                custom_effect_tooltip = PBC_take_peruvians_8_more_tt
+                hidden_effect = {
+                    subtract_from_variable = { PBC_PRU_states_controlled_by_nationalists = 1 }
+                    subtract_from_variable = { PBC_total_states_controlled_by_nationalists = 1 }
+                    add_to_variable = { PBC_time_it_takes_to_take_state_PRU = 10 }
+                    PBC_set_up_nationalism_on_rise = yes 
+                }
+            }
+        }
+    }
+
+    PBC_bolivian_nationalists_planning_uprising = {
+        priority = 100
+        icon = generic_nationalism
+
+        allowed = {
+            OR = {
+                original_tag = PRU 
+                original_tag = BOL 
+            }
+        }
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PBC_bol_control_less_than_4_tt
+                check_variable = { PBC_BOL_states_controlled_by_nationalists < 4 }
+            }
+        }
+
+        is_good = no 
+
+        days_mission_timeout = 70
+
+        fire_only_once = no 
+
+        activation = { 
+            has_dynamic_modifier = { modifier = PBC_nationalism_on_the_rise }
+            check_variable = { PBC_BOL_states_controlled_by_nationalists > 3 }
+        }
+
+        cancel_trigger = {
+            NOT = {
+                has_dynamic_modifier = { modifier = PBC_nationalism_on_the_rise }
+            }
+        }
+
+        timeout_effect = {
+            custom_effect_tooltip = BOL_start_civil_war_tt
+            hidden_effect = {
+                every_state = {
+                    limit = {
+                        is_core_of = BOL 
+                        has_dynamic_modifier = { modifier = PBC_BOL_nationalists }
+                    }
+                    BOA = {
+                        transfer_state = PREV 
+                        add_state_core = PREV
+                    }
+                    remove_dynamic_modifier = { modifier = PBC_BOL_nationalists }
+                }
+                declare_war_on = {
+                    target = BOA 
+                    type = annex_everything
+                }
+                set_temp_variable = { temp = PBC_BOL_states_controlled_by_nationalists }
+                set_variable = { PBC_BOL_states_controlled_by_nationalists = 0 }
+                subtract_from_variable = { PBC_total_states_controlled_by_nationalists = temp }
+                multiply_temp_variable = { temp = 8 }
+                add_to_variable = { PBC_time_it_takes_to_take_state_BOL = temp }
+               PBC_set_up_nationalism_on_rise = yes 
+
+                BOA = {
+                    division_template = { 
+                        name = "Milicias Bolivianas" 
+                        division_names_group = SPAN_INF_02 
+                        is_locked = yes 
+                        regiments = { 
+                            infantry = { x = 0 y = 0 }  
+                            infantry = { x = 0 y = 1 } 
+                            infantry = { x = 0 y = 2 } 
+                        }
+                    }
+
+                    division_template = { 
+                        name = "División de Infanteria Nacionalista Boliviana" 
+                        division_names_group = SPAN_INF_02 
+                        is_locked = yes 
+                        regiments = { 
+                            infantry = { x = 0 y = 0 }  
+                            infantry = { x = 0 y = 1 } 
+                            infantry = { x = 0 y = 2 } 
+                            infantry = { x = 1 y = 0 } 
+                            infantry = { x = 1 y = 1 } 
+                            infantry = { x = 1 y = 2 } 
+                        }
+                        support = {
+                            artillery = { x = 0 y = 0 }
+                        }
+                    }
+                    retire_country_leader = yes 
+                    create_country_leader = {
+                        name = "Armed Civilians"
+                        desc = "POLITICS_ARMED_CIVILIANS_DESC"
+                        picture = "gfx/leaders/South America/EUYL_armed_civilians.dds"
+                        expire = "1965.1.1"
+                        ideology = gen_nazism
+                        traits = {
+                            PBC_disorganized_nationalists
+                        }
+                    }
+                    random_owned_controlled_state = {
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Boliviana\" division_template = \"División de Infanteria Nacionalista Boliviana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Boliviana\" division_template = \"División de Infanteria Nacionalista Boliviana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Boliviana\" division_template = \"División de Infanteria Nacionalista Boliviana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Boliviana\" division_template = \"División de Infanteria Nacionalista Boliviana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                    }
+                    random_owned_controlled_state = {
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Boliviana\" division_template = \"División de Infanteria Nacionalista Boliviana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Bolivianas\" division_template = \"Milicias Bolivianas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Bolivianas\" division_template = \"Milicias Bolivianas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Bolivianas\" division_template = \"Milicias Bolivianas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                    }
+                    random_owned_controlled_state = {
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Boliviana\" division_template = \"División de Infanteria Nacionalista Boliviana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Bolivianas\" division_template = \"Milicias Bolivianas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Bolivianas\" division_template = \"Milicias Bolivianas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Bolivianas\" division_template = \"Milicias Bolivianas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = BOA
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    PBC_peruvians_nationalists_planning_uprising = {
+        priority = 100
+        icon = generic_nationalism
+
+        allowed = {
+            OR = {
+                original_tag = PRU 
+                original_tag = BOL 
+            }
+        }
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = PBC_pru_control_less_than_4_tt
+                check_variable = { PBC_PRU_states_controlled_by_nationalists < 5 }
+            } 
+        }
+
+        is_good = no 
+
+        days_mission_timeout = 70
+
+        fire_only_once = no 
+
+        activation = { 
+            has_dynamic_modifier = { modifier = PBC_nationalism_on_the_rise }
+            check_variable = { PBC_PRU_states_controlled_by_nationalists > 4 }
+        }
+
+        cancel_trigger = {
+            NOT = {
+                has_dynamic_modifier = { modifier = PBC_nationalism_on_the_rise }
+            }
+        }
+
+        timeout_effect = {
+            custom_effect_tooltip = PRU_start_civil_war_tt
+            hidden_effect = {
+                every_state = {
+                    limit = {
+                        is_core_of = PRU 
+                        has_dynamic_modifier = { modifier = PBC_PRU_nationalists }
+                    }
+                    PRA = {
+                        transfer_state = PREV 
+                        add_state_core = PREV
+                    }
+                    remove_dynamic_modifier = { modifier = PBC_PRU_nationalists }
+                }
+                declare_war_on = {
+                    target = PRA 
+                    type = annex_everything
+                }
+                set_variable = { PBC_PRU_states_controlled_by_nationalists = 0 }
+                set_temp_variable = { temp = PBC_PRU_states_controlled_by_nationalists }
+                set_variable = { PBC_PRU_states_controlled_by_nationalists = 0 }
+                subtract_from_variable = { PBC_total_states_controlled_by_nationalists = temp }
+                multiply_temp_variable = { temp = 10 }
+                add_to_variable = { PBC_time_it_takes_to_take_state_PRU = temp }
+                PBC_set_up_nationalism_on_rise = yes 
+                PRA = {
+                    division_template = { 
+                        name = "Milicias Peruanas" 
+                        division_names_group = SPAN_INF_02 
+                        is_locked = yes 
+                        regiments = { 
+                            infantry = { x = 0 y = 0 }  
+                            infantry = { x = 0 y = 1 } 
+                            infantry = { x = 0 y = 2 } 
+                        }
+                    }
+
+                    division_template = { 
+                        name = "División de Infanteria Nacionalista Peruana" 
+                        division_names_group = SPAN_INF_02 
+                        is_locked = yes 
+                        regiments = { 
+                            infantry = { x = 0 y = 0 }  
+                            infantry = { x = 0 y = 1 } 
+                            infantry = { x = 0 y = 2 } 
+                            infantry = { x = 1 y = 0 } 
+                            infantry = { x = 1 y = 1 } 
+                            infantry = { x = 1 y = 2 } 
+                        }
+                        support = {
+                            artillery = { x = 0 y = 0 }
+                        }
+                    }
+                    retire_country_leader = yes 
+                    create_country_leader = {
+                        name = "Armed Civilians"
+                        desc = "POLITICS_ARMED_CIVILIANS_DESC"
+                        picture = "gfx/leaders/South America/EUYL_armed_civilians.dds"
+                        expire = "1965.1.1"
+                        ideology = gen_nazism
+                        traits = {
+                            PBC_disorganized_nationalists
+                        }
+                    }
+                    random_owned_controlled_state = {
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Peruana\" division_template = \"División de Infanteria Nacionalista Peruana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Peruana\" division_template = \"División de Infanteria Nacionalista Peruana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Peruana\" division_template = \"División de Infanteria Nacionalista Peruana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Peruana\" division_template = \"División de Infanteria Nacionalista Peruana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                    }
+                    random_owned_controlled_state = {
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Peruana\" division_template = \"División de Infanteria Nacionalista Peruana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Peruanas\" division_template = \"Milicias Peruanas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Peruanas\" division_template = \"Milicias Peruanas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Peruanas\" division_template = \"Milicias Peruanas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                    }
+                    random_owned_controlled_state = {
+                        create_unit = {
+                            division = "name = \"División de Infanteria Nacionalista Peruana\" division_template = \"División de Infanteria Nacionalista Peruana\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Peruanas\" division_template = \"Milicias Peruanas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Peruanas\" division_template = \"Milicias Peruanas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                        create_unit = {
+                            division = "name = \"Milicias Peruanas\" division_template = \"Milicias Peruanas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+                            owner = PRA
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+PBC_reforming_lost_unions = {
+
+    PBC_reform_gran_colombia = {
+        icon = form_gran
+
+        ai_will_do = {
+            base = 35
+        }
+
+        visible = {
+            has_completed_focus = PBC_prepare_for_our_expansion
+            NOT = {
+                has_country_flag = PBC_reformed_gran_colombia
+            }
+        }
+
+        available = {
+            has_completed_focus = PBC_reform_the_gran_colombia
+            AND = {
+                OR = {
+                    COL = {
+                        capital_scope = { is_fully_controlled_by = ROOT }
+                    }
+                    COL = {
+                        is_subject_of = ROOT 
+                    }
+                }
+                OR = {
+                    ECU = {
+                        capital_scope = { is_fully_controlled_by = ROOT }
+                    }
+                    ECU = {
+                        is_subject_of = ROOT 
+                    }
+                }
+                OR = {
+                    VEN = {
+                        capital_scope = { is_fully_controlled_by = ROOT }
+                    }
+                    VEN = {
+                        is_subject_of = ROOT 
+                    }
+                }
+                OR = {
+                    PAN = {
+                        capital_scope = { is_fully_controlled_by = ROOT }
+                    }
+                    PAN = {
+                        is_subject_of = ROOT 
+                    }
+                }
+            }
+            COL = {
+                has_civil_war = no 
+            }
+        }
+
+        cost = 40
+
+        days_remove = 150
+
+        fire_only_once = yes 
+
+        modifier = {
+            political_power_gain = -0.1
+            consumer_goods_factor = 0.05
+        }
+
+        remove_effect = {
+            add_stability = 0.05
+            add_war_support = 0.05
+            if = {
+                limit = {
+                    COL = {
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                puppet = COL
+            }
+            COL = {
+                set_cosmetic_tag = GCO_UNIFIED
+                transfer_state = 306
+                transfer_state = 486
+                transfer_state = 850
+                transfer_state = 849
+                transfer_state = 493
+                transfer_state = 848
+                transfer_state = 851
+                transfer_state = 852
+                transfer_state = 853
+                transfer_state = 854
+                transfer_state = 305
+                transfer_state = 857
+                transfer_state = 856
+                transfer_state = 304
+                transfer_state = 489
+                transfer_state = 864
+                transfer_state = 863
+                transfer_state = 868
+                transfer_state = 307
+                transfer_state = 488
+                transfer_state = 860
+                transfer_state = 865
+                transfer_state = 867
+                transfer_state = 869
+                transfer_state = 866
+                every_controlled_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = VEN 
+                            is_core_of = ECU 
+                        }
+                    }
+                    add_core_of = PREV
+                }
+            }
+            if = {
+                limit = {
+                    has_government = fascism
+                }
+                COL = {
+                    set_politics = {
+                        ruling_party = fascism
+                    }
+                    add_popularity = { ideology = fascism popularity = 0.4 }
+                }
+            }
+            else = {
+                COL = {
+                    set_politics = {
+                        ruling_party = communism
+                    }
+                    add_popularity = { ideology = communism popularity = 0.4 }
+                }
+            }
+            set_country_flag = PBC_reformed_gran_colombia
+        }
+    }
+
+    PBC_reform_viceroyalty_of_rio_de_la_plata = {
+        icon = form_rio_de_plata
+
+        ai_will_do = {
+            base = 35
+        }
+
+        visible = {
+            has_completed_focus = PBC_prepare_for_our_expansion
+            NOT = {
+                has_country_flag = PBC_reformed_viceroyalty
+            }
+        }
+
+        available = {
+            has_completed_focus = PBC_reform_the_viceroyalty_of_rio_de_la_plata
+            AND = {
+                OR = {
+                    ARG = {
+                        capital_scope = { is_fully_controlled_by = ROOT }
+                    }
+                    ARG = {
+                        is_subject_of = ROOT 
+                    }
+                }
+                OR = {
+                    URG = {
+                        capital_scope = { is_fully_controlled_by = ROOT }
+                    }
+                    URG = {
+                        is_subject_of = ROOT 
+                    }
+                }
+                OR = {
+                    CHL = {
+                        capital_scope = { is_fully_controlled_by = ROOT }
+                    }
+                    CHL = {
+                        is_subject_of = ROOT 
+                    }
+                }
+            }
+            ARG = {
+                has_civil_war = no 
+            }
+        }
+
+        cost = 40
+
+        days_remove = 150
+
+        fire_only_once = yes 
+
+        modifier = {
+            political_power_gain = -0.1
+            consumer_goods_factor = 0.05
+        }
+
+        remove_effect = {
+            add_stability = 0.05
+            add_war_support = 0.05
+            if = {
+                limit = {
+                    ARG = {
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                puppet = ARG
+            }
+            ARG = {
+                set_cosmetic_tag = VRP_UNIFIED
+                transfer_state = 888
+                transfer_state = 278
+                transfer_state = 904
+                transfer_state = 510
+                transfer_state = 905
+                transfer_state = 509
+                transfer_state = 902
+                transfer_state = 899
+                transfer_state = 508
+                transfer_state = 903
+                transfer_state = 898
+                transfer_state = 895
+                transfer_state = 894
+                transfer_state = 896
+                transfer_state = 897
+                transfer_state = 511
+                transfer_state = 893
+                transfer_state = 892
+                transfer_state = 512
+                transfer_state = 891
+                transfer_state = 890
+                transfer_state = 889
+                transfer_state = 847
+                transfer_state = 300
+                transfer_state = 908
+                transfer_state = 506
+                transfer_state = 914
+                transfer_state = 279
+                transfer_state = 885
+                transfer_state = 913
+                transfer_state = 911
+                transfer_state = 912
+                transfer_state = 507
+                every_controlled_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = CHL 
+                            is_core_of = URG 
+                        }
+                    }
+                    add_core_of = PREV
+                }
+            }
+            if = {
+                limit = {
+                    has_government = fascism
+                }
+                ARG = {
+                    set_politics = {
+                        ruling_party = fascism
+                    }
+                    add_popularity = { ideology = fascism popularity = 0.4 }
+                }
+            }
+            else = {
+                ARG = {
+                    set_politics = {
+                        ruling_party = communism
+                    }
+                    add_popularity = { ideology = communism popularity = 0.4 }
+                }
+            }
+            set_country_flag = PBC_reformed_viceroyalty
+        }
+    }
+
+    PBC_reform_the_republic_of_central_america = {
+        icon = form_central_america
+
+        ai_will_do = {
+            base = 35 
+        }
+
+        visible = {
+            has_completed_focus = PBC_prepare_for_our_expansion
+            NOT = {
+                has_country_flag = PBC_reformed_central_america
+            }
+        }
+
+        available = {
+            AND = {
+                OR = {
+                    controls_state = 316
+                    COS = { is_subject_of = ROOT }
+                }
+                OR = {
+                    controls_state = 317
+                    NIC = { is_subject_of = ROOT }
+                }
+                OR = {
+                    controls_state = 312
+                    HON = { is_subject_of = ROOT }
+                }
+                OR = {
+                    controls_state = 314
+                    ELS = { is_subject_of = ROOT }
+                }
+                OR = {
+                    controls_state = 313
+                    GUA = { is_subject_of = ROOT }
+                }
+            }
+            HON = {
+                has_civil_war = no 
+            }
+        }
+
+        cost = 40
+
+        days_remove = 150
+
+        modifier = {
+            political_power_gain = -0.1
+            consumer_goods_factor = 0.05
+        }
+
+        fire_only_once = yes 
+
+        remove_effect = {
+            add_stability = 0.05
+            add_war_support = 0.05
+            if = {
+                limit = {
+                    HON = {
+                        NOT = { is_subject_of = ROOT }
+                    }
+                }
+                puppet = HON
+            }
+            HON = {
+                set_cosmetic_tag = RCA_UNIFIED
+                transfer_state = 316
+                transfer_state = 317
+                transfer_state = 312
+                transfer_state = 314
+                transfer_state = 313
+                every_controlled_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = GUA 
+                            is_core_of = ELS 
+                            is_core_of = NIC 
+                            is_core_of = COS 
+                        }
+                    }
+                    add_core_of = PREV
+                }
+            }
+            if = {
+                limit = {
+                    has_government = fascism
+                }
+                HON = {
+                    set_politics = {
+                        ruling_party = fascism
+                    }
+                    add_popularity = { ideology = fascism popularity = 0.4 }
+                }
+            }
+            else = {
+                HON = {
+                    set_politics = {
+                        ruling_party = communism
+                    }
+                    add_popularity = { ideology = communism popularity = 0.4 }
+                }
+            }
+            set_country_flag = PBC_reformed_central_america
+        }
+    }
+}
+
 PBC_integrating_all_our_claimed_lands = {
 
     PBC_integrating_our_territory = {
@@ -859,6 +1396,10 @@ PBC_integrating_all_our_claimed_lands = {
 			FROM = {
 				is_owned_by = ROOT
 				NOT = { is_core_of = ROOT }
+                OR = {
+                    is_core_of = PRU 
+                    is_core_of = BOL 
+                }
 			}
 		}
 
@@ -1405,6 +1946,30 @@ PBC_maneging_the_confederation = {
         }
     }
 
+    PBC_choose_our_new_capital = {
+        icon = generic_decision
+
+        ai_will_do = {
+            factor = 70 
+        }
+
+        available = {
+            controls_state = 303
+            controls_state = 302
+            controls_state = 915
+        }
+
+        visible = {
+            has_completed_focus = PBC_maneging_the_new_nation
+        }
+
+        fire_only_once = yes 
+
+        complete_effect = {
+            country_event = perubolivia.2
+        }
+    }
+
     PBC_focus_on_stabilizing_the_nation = {
         icon = eng_propaganda_campaigns
 
@@ -1629,6 +2194,10 @@ BOL_south_american_investment = {
                     has_war_with = ROOT
                 }
                 num_of_civilian_factories > 7
+                if = {
+                    limit = { original_tag = CHL }
+                    NOT = { has_government = neutrality }
+                }
 			}
 		}
 		
@@ -1708,6 +2277,10 @@ BOL_dealing_with_toros_schemes = {
         on_map_mode = map_and_decisions_view
 
         target_array = controlled_states
+
+        cancel_trigger = {
+            has_completed_focus = BOL_imprison_toro
+        }
 
         target_trigger = {
             FROM = {
@@ -2033,7 +2606,7 @@ BOL_getting_our_sweet_revenge = {
 
         state_target = yes 
 
-        targets = { 819 820 688 828 829 845 }
+        targets = { 900 901 688 909 910 845 }
 
         target_trigger = {
             FROM = {
@@ -2151,5 +2724,244 @@ BOL_getting_our_sweet_revenge = {
 				add_core_of = ROOT
 			}
 		}
+    }
+}
+
+BOL_tejadas_incompetence = {
+
+    BOL_learn_to_lead_the_army = {
+        icon = generic_army_support
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        available = {
+            has_country_leader = {
+                name = "José Luis Tejada Sorzano"
+                ruling_only = yes 
+            }
+            has_completed_focus = BOL_victor_of_the_civil_war
+            has_army_manpower = { size > 129999 }
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = BOL_teaching_tejada
+                }
+            }
+        }
+
+        visible = {
+            OR = {
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_1
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_2
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_3
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_5
+            }
+        }
+
+        cost = 50 
+
+        days_remove = 25
+
+        fire_only_once = yes 
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = BOL_teaching_tejada
+            }
+        }
+
+        remove_effect = {
+            if = {
+                limit = { has_country_leader_with_trait = BOL_tejada_incompetent_leader_1 }
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_1
+                    add = BOL_tejada_incompetent_leader_4
+                }
+            }
+            else_if = {
+                limit = { has_country_leader_with_trait = BOL_tejada_incompetent_leader_2 }
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_2
+                    add = BOL_tejada_incompetent_leader_6
+                }
+            }
+            else_if = {
+                limit = { has_country_leader_with_trait = BOL_tejada_incompetent_leader_3 }
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_3
+                    add = BOL_tejada_incompetent_leader_7
+                }
+            }
+            else = {
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_5
+                    add = BOL_tejada_incompetent_leader_8
+                }
+            }
+            hidden_effect = {
+                clr_country_flag = BOL_teaching_tejada
+            }
+        }
+    }
+
+    BOL_learn_to_manage_the_economy = {
+        icon = generic_factory
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        available = {
+            has_country_leader = {
+                name = "José Luis Tejada Sorzano"
+                ruling_only = yes 
+            }
+            has_completed_focus = BOL_victor_of_the_civil_war
+            num_of_factories > 20
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = BOL_teaching_tejada
+                }
+            }
+        }
+
+        visible = {
+            OR = {
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_1
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_2
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_4
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_6
+            }
+        }
+
+        cost = 50
+
+        days_remove = 25
+
+        fire_only_once = yes 
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = BOL_teaching_tejada
+            }
+        }
+
+        remove_effect = {
+            if = {
+                limit = { has_country_leader_with_trait = BOL_tejada_incompetent_leader_1 }
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_1
+                    add = BOL_tejada_incompetent_leader_3
+                }
+            }
+            else_if = {
+                limit = { has_country_leader_with_trait = BOL_tejada_incompetent_leader_2 }
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_2
+                    add = BOL_tejada_incompetent_leader_5
+                }
+            }
+            else_if = {
+                limit = { has_country_leader_with_trait = BOL_tejada_incompetent_leader_4 }
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_4
+                    add = BOL_tejada_incompetent_leader_7
+                }
+            }
+            else = {
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_6
+                    add = BOL_tejada_incompetent_leader_8
+                }
+            }
+            hidden_effect = {
+                clr_country_flag = BOL_teaching_tejada
+            }
+        }
+    }
+
+    BOL_learn_to_manage_the_population = {
+        icon = generic_nationalism
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        available = {
+            has_country_leader = {
+                name = "José Luis Tejada Sorzano"
+                ruling_only = yes 
+            }
+            has_completed_focus = BOL_victor_of_the_civil_war
+            if = {
+                limit = { has_completed_focus = BOL_a_path_of_diplomacy }
+                democratic > 0.64
+            }
+            if = {
+                limit = { has_completed_focus = BOL_a_path_of_force }
+                neutrality > 0.64
+            }
+            has_stability > 0.49
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = BOL_teaching_tejada
+                }
+            }
+        }
+
+        visible = {
+            OR = {
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_1
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_3
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_4
+                has_country_leader_with_trait = BOL_tejada_incompetent_leader_7
+            }
+        }
+
+        cost = 50
+
+        days_remove = 25
+
+        fire_only_once = yes 
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = BOL_teaching_tejada
+            }
+        }
+
+        remove_effect = {
+            if = {
+                limit = { has_country_leader_with_trait = BOL_tejada_incompetent_leader_1 }
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_1
+                    add = BOL_tejada_incompetent_leader_2
+                }
+            }
+            else_if = {
+                limit = { has_country_leader_with_trait = BOL_tejada_incompetent_leader_3 }
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_3
+                    add = BOL_tejada_incompetent_leader_5
+                }
+            }
+            else_if = {
+                limit = { has_country_leader_with_trait = BOL_tejada_incompetent_leader_4 }
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_4
+                    add = BOL_tejada_incompetent_leader_6
+                }
+            }
+            else = {
+                swap_ruler_traits = {
+                    remove = BOL_tejada_incompetent_leader_7
+                    add = BOL_tejada_incompetent_leader_8
+                }
+            }
+            hidden_effect = {
+                clr_country_flag = BOL_teaching_tejada
+            }
+        }
     }
 }

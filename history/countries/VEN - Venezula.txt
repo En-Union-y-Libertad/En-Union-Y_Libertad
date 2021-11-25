@@ -1,4 +1,4 @@
-﻿capital = 863
+﻿capital = 307
 add_ideas = monroe_doctrine_idea
 oob = "VEN_1936"
 
@@ -10,11 +10,35 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 }
+
+recruit_character = VEN_eleazar_lópez_contreras
+recruit_character = VEN_juan_bautista_fuenmayor
+recruit_character = VEN_luis_figueroa
+recruit_character = VEN_patricio_franco
+recruit_character = VEN_isaias_medina_angarita
+recruit_character = VEN_humberto_santabria_villa
+recruit_character = VEN_carlos_molina_talavayo
+recruit_character = VEN_roberto_de_luca_varesano
+recruit_character = VEN_carlos_garcia_mendoza
+recruit_character = VEN_miguel_diaz_fraile
+recruit_character = VEN_victor_sanchez_croes
+recruit_character = VEN_antonio_casas_gonzalez
+recruit_character = VEN_carlos_ramos_diaz
+recruit_character = VEN_david_lopez_henriques
+recruit_character = VEN_jose_polares_pavon
+recruit_character = VEN_tomas_contreras_villalobos
+recruit_character = VEN_carlos_delgado_chalbaud
+recruit_character = VEN_manuel_diaz_rodriguez
+recruit_character = VEN_romulo_gallegos_freire
+recruit_character = VEN_isidoro_ruiz_tuerro
+
+
 set_country_flag = monroe_doctrine
 
 1939.1.1 = {
 
 	add_political_power = 1198
+	add_command_power = 100
 	
 	#generic focuses
 	complete_national_focus = army_effort
@@ -62,57 +86,13 @@ set_country_flag = monroe_doctrine
 
 set_convoys = 10
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = fascism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
 	democratic = 5
-	neutrality = 80
+	fascism = 80
 	communism = 15
-}
-
-create_country_leader = {
-	name = "Eleazar López Contreras"
-	desc = "POLITICS_ELEAZAR_LOPEZ_CONTRERAS_DESC"
-	picture = "Portrait_Venezuela_Elezar_Lopez_Contreras.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Juan Bautista Fuenmayor"
-	desc = "POLITICS_JUAN_BAUTISTA_FUENMAYOR_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Rafael Caldera"
-	desc = "POLITICS_RAFAEL_CALDERA_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Enrique Parra Bozo"
-	desc = "POLITICS_ENRIQUE_PARRA_BOZO_DESC"
-	picture = "gfx/leaders/South America/portrait_UL_South_America_political_2.dds"
-	expire = "1965.1.1"
-	ideology = falangism
-	traits = {
-		#
-	}
 }

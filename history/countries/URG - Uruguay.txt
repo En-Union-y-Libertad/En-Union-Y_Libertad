@@ -1,5 +1,37 @@
 ﻿capital = 847
 
+recruit_character = URG_gabriel_terra_c
+recruit_character = URG_alfredo_baldomir_c
+recruit_character = URG_pedro_sicco_c
+recruit_character = URG_cesarreo_l_barisso_c
+recruit_character = URG_tydeo_borges_c
+recruit_character = URG_angel_cambior_c
+recruit_character = URG_arturo_juambeltz_c
+recruit_character = URG_julia_arevalo_de_roche_c
+recruit_character = URG_emilio_frugoni_c
+recruit_character = URG_horacio_arredondo_c
+recruit_character = URG_pedro_manini_rios_c
+recruit_character = URG_julius_dalldorf_c
+recruit_character = URG_rodney_arismendi_c
+recruit_character = URG_serafino_mazzolini_c
+recruit_character = URG_vittorio_amato_masso_c
+recruit_character = URG_ernesto_sanchez_elizondo_c
+recruit_character = URG_hector_lopez_camara_c
+recruit_character = URG_eleazar_diaz_caminate_c
+recruit_character = URG_teo_bucardi_ramos_c
+recruit_character = URG_cosme_alvarez_berisso_c
+recruit_character = URG_valentin_gomez_c
+recruit_character = URG_carlos_jackson_urribe_c
+recruit_character = URG_jorge_eloi_mendoza_c
+recruit_character = URG_cantido_quintio_reyes_c
+recruit_character = URG_enrico_amancias_rodriguez_c
+recruit_character = URG_manuel_heinz_azpurua_c
+recruit_character = URG_a_martin_de_la_flores_c
+recruit_character = URG_carlos_neves_ochoa_c
+recruit_character = URG_rafael_marques_ayala_c
+recruit_character = URG_luis_alberta_de_herrera_c
+recruit_character = URG_eugenio_gomez_c
+
 oob = "URG_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -15,12 +47,10 @@ set_technology = {
 	tech_engineers = 1
 	tech_mountaineers = 1
 	early_fighter = 1
-	gwtank = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	CAS1 = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -107,7 +137,6 @@ set_convoys = 45
 		tech_mountaineers = 1
 		early_fighter = 1
 		gwtank = 1
-		CAS1 = 1
 		infantry_weapons = 1
 		infantry_weapons1 = 1
 		infantry_weapons2 = 1
@@ -148,10 +177,10 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = yes
 }
-set_popularities = { 
-	democratic = 40
-	fascism = 1
-	neutrality = 56
+set_popularities = {
+	democratic = 41
+	fascism = 4
+	neutrality = 52
 	communism = 3
 }
 
@@ -178,8 +207,8 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Julius Dallorf"
-	desc = "POLITICS_JULIUS DALLORF_DESC"
+	name = "Julius Dalldorf"
+	desc = "POLITICS_JULIUS_DALLORF_DESC"
 	picture = "portrait_urg_julius_dalldorf.dds"
 	expire = "1965.1.1"
 	ideology = gen_nazism
@@ -199,108 +228,6 @@ create_country_leader = {
 	}
 }
 
-create_field_marshal = {
-	name = "Pedro Sicco"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
-	traits = { defensive_doctrine old_guard }
-	skill = 2
-    attack_skill = 1
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Cesáreo L. Berisso"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
-	traits = { brilliant_strategist }
-	skill = 2
-    attack_skill = 3
-    defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_corps_commander = {  #He was Chief of Police and brother-in-law of Gabriel Terra when he became a general
-	name = "Alfredo Baldomir Ferrari"
-	portrait_path = "gfx/leaders/URG/URG_alfredo_baldomir_general.dds"
-	traits = { harsh_leader politically_connected }
-	ID = 1934
-	skill = 3
-    attack_skill = 2
-    defense_skill = 4
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {  
-	name = "Arturo B. Ríos"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Generic_land_1.dds"
-	traits = {  }
-	ID = 1935
-	skill = 3
-    attack_skill = 4
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Tydeo Borges"
-	portrait_path = "gfx/leaders/URG/portrait_urg_tydeo_larre_borges.dds"
-	traits = { }
-	skill = 2
-    attack_skill = 2
-    defense_skill = 3
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Alfredo R. Campos"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Generic_land_3.dds"
-	traits = { trait_engineer }
-	skill = 2
-    attack_skill = 3
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Angel Cambior"
-	portrait_path = "gfx/leaders/URG/r56_portrait_URG_Angel_Camblor.dds"
-	traits = { urban_assault_specialist }
-	skill = 1
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Eduardo Zubía"
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Generic_land_1.dds"
-	traits = { trait_engineer }
-	skill = 1
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_navy_leader = {
-	name = "Arturo Juambeltz"
-	portrait_path = "gfx/leaders/South America/Portrait_UL_South_America_Generic_navy_1.dds"
-	traits = { gunnery_expert }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
-
-
 1939.1.1 = {
 	set_politics = {
 		ruling_party = neutrality
@@ -308,33 +235,6 @@ create_navy_leader = {
 		election_frequency = 48
 		elections_allowed = no
 	}
-	set_popularities = {  #According to election results
-		democratic = 35
-		fascism = 1
-		neutrality = 61
-		communism = 3
-	}
-	create_country_leader = {
-		name = "Juan José de Arteaga"
-		desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
-		picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
-		expire = "1965.1.1"
-		ideology = conservatism
-		traits = {
-
-		}
-	}
-	create_country_leader = {
-		name = "Alfredo Baldomir Ferrari"
-		desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
-		picture = "portrait_urg_alfredo_baldomir.dds"
-		expire = "1965.1.1"
-		ideology = despotism
-		traits = {
-			generic_army_connections #He was still a general
-			fascist_sympathies
-		}
-	}		
 }
 
 ### VARIANTS ###

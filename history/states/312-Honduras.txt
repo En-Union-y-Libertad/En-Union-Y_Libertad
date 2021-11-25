@@ -17,17 +17,26 @@ state={
 				naval_base = 1
 
 			}
+			8017 = {
+				naval_base = 1
+
+			}
+
 		}
 		add_core_of = HON
 		victory_points = {
-			12865 5
+			12865 3 
 		}
+		victory_points = {
+			8017 3 
+		}
+
 	}
 
 	provinces={
-		12865 14540 
+		2031 8017 12865 14540 14541 14542 14544 14545 14547 14551 14552 
 	}
-	manpower=431892
+	manpower=859761
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=town
 }

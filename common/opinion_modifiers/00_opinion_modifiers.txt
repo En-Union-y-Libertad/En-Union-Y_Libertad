@@ -1218,7 +1218,11 @@ opinion_modifiers = {
 	COL_oil_concession = {
 		value = 75
 	}
-
+	
+	EUYL_defense_pact_call_refused = {
+		value = -75
+	}
+	
 	COL_benavides_contacted = {
 		value = -75
 	}

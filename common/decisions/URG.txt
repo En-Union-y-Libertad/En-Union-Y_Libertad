@@ -46,19 +46,7 @@ URG_prisoners_of_the_terra_dictatorship = {
 			custom_effect_tooltip = URG_politicians_being_arrested
 			hidden_effect = {
 				add_to_variable = { URG_politicians_arrested = 2 }
-				set_temp_variable = { URG_terra_democracy = 43 }
-				set_temp_variable = { URG_stability_made_terra = 0.115 }
-				set_temp_variable = { URG_the_politicans_arrested = URG_politicians_arrested }
-				set_temp_variable = { URG_support_for_terra = -0.12 }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.005 }
-				subtract_from_temp_variable = { URG_stability_made_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_stability = URG_stability_made_terra }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.8 }
-				add_to_temp_variable = { URG_support_for_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_support = URG_support_for_terra }
-				subtract_from_temp_variable = { URG_terra_democracy = URG_politicians_arrested }
-				multiply_temp_variable = { URG_terra_democracy = 0.007 }
-				set_variable = { URG_democracy_from_terra = URG_terra_democracy }
+				URG_set_up_prisoners_modifier = yes 
 			}
 		}
 	}
@@ -108,19 +96,7 @@ URG_prisoners_of_the_terra_dictatorship = {
 			custom_effect_tooltip = URG_politicians_being_set_free
 			hidden_effect = {
 				subtract_from_variable = { URG_politicians_arrested = 2 }
-				set_temp_variable = { URG_terra_democracy = 43 }
-				set_temp_variable = { URG_stability_made_terra = 0.115 }
-				set_temp_variable = { URG_the_politicans_arrested = URG_politicians_arrested }
-				set_temp_variable = { URG_support_for_terra = -0.12 }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.005 }
-				subtract_from_temp_variable = { URG_stability_made_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_stability = URG_stability_made_terra }
-				multiply_temp_variable = { URG_the_politicans_arrested = 0.8 }
-				add_to_temp_variable = { URG_support_for_terra = URG_the_politicans_arrested }
-				set_variable = { URG_terra_support = URG_support_for_terra }
-				subtract_from_temp_variable = { URG_terra_democracy = URG_politicians_arrested }
-				multiply_temp_variable = { URG_terra_democracy = 0.007 }
-				set_variable = { URG_democracy_from_terra = URG_terra_democracy }
+				URG_set_up_prisoners_modifier = yes 
 			}
 		}
 	}
@@ -253,6 +229,12 @@ URG_dealing_with_the_protestors = {
 				has_country_flag = URG_dealing_with_protestors
 			}
 		}
+
+		visible = {
+			300 = {
+				has_dynamic_modifier = { modifier = URG_terra_loyalities }
+			}
+		}
 		
 		cost = 75
 		
@@ -286,6 +268,12 @@ URG_dealing_with_the_protestors = {
 			has_completed_focus = URG_march_to_the_capital
 			NOT = {
 				has_country_flag = URG_dealing_with_protestors
+			}
+		}
+
+		visible = {
+			847 = {
+				has_dynamic_modifier = { modifier = URG_terra_loyalities }
 			}
 		}
 		
@@ -323,6 +311,12 @@ URG_dealing_with_the_protestors = {
 				has_country_flag = URG_dealing_with_protestors
 			}
 		}
+
+		visible = {
+			908 = {
+				has_dynamic_modifier = { modifier = URG_terra_loyalities }
+			}
+		}
 		
 		cost = 75
 		
@@ -342,7 +336,7 @@ URG_dealing_with_the_protestors = {
 		
 		remove_effect = {
 			clr_country_flag = URG_dealing_with_protestors
-			827 = { remove_dynamic_modifier = { modifier = URG_terra_loyalities } }
+			908 = { remove_dynamic_modifier = { modifier = URG_terra_loyalities } }
 			add_stability = 0.05
 		}
 	}
@@ -361,7 +355,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = UFC_currently_investing
+				has_country_flag = URG_guiding_company
 			}
 		}
 		
@@ -374,19 +368,12 @@ URG_guide_the_companies = {
 		days_remove = 80
 		
 		complete_effect = {
-			set_country_flag = UFC_currently_investing
+			set_country_flag = URG_guiding_company
 		}
 		
 		remove_effect = {
-			clr_country_flag = UFC_currently_investing
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			clr_country_flag = URG_guiding_company
+			EUYL_add_1_civilian = yes 
 		}
 	}
 	
@@ -401,7 +388,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = UFC_currently_investing
+				has_country_flag = URG_guiding_company
 			}
 		}
 		
@@ -414,19 +401,12 @@ URG_guide_the_companies = {
 		days_remove = 145
 		
 		complete_effect = {
-			set_country_flag = UFC_currently_investing
+			set_country_flag = URG_guiding_company
 		}
 		
 		remove_effect = {
-			clr_country_flag = UFC_currently_investing
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
+			clr_country_flag = URG_guiding_company
+			EUYL_add_2_civilian = yes 
 		}
 	}
 	
@@ -441,7 +421,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = UFC_currently_investing
+				has_country_flag = URG_guiding_company
 			}
 		}
 		
@@ -454,19 +434,12 @@ URG_guide_the_companies = {
 		days_remove = 65
 		
 		complete_effect = {
-			set_country_flag = UFC_currently_investing
+			set_country_flag = URG_guiding_company
 		}
 		
 		remove_effect = {
-			clr_country_flag = UFC_currently_investing
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			clr_country_flag = URG_guiding_company
+			EUYL_add_1_military = yes 
 		}
 	}
 	
@@ -481,7 +454,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = UFC_currently_investing
+				has_country_flag = URG_guiding_company
 			}
 		}
 		
@@ -494,19 +467,12 @@ URG_guide_the_companies = {
 		days_remove = 110
 		
 		complete_effect = {
-			set_country_flag = UFC_currently_investing
+			set_country_flag = URG_guiding_company
 		}
 		
 		remove_effect = {
-			clr_country_flag = UFC_currently_investing
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
+			clr_country_flag = URG_guiding_company
+			EUYL_add_2_military = yes 
 		}
 	}
 	
@@ -521,7 +487,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = UFC_currently_investing
+				has_country_flag = URG_guiding_company
 			}
 		}
 		
@@ -534,19 +500,12 @@ URG_guide_the_companies = {
 		days_remove = 60
 		
 		complete_effect = {
-			set_country_flag = UFC_currently_investing
+			set_country_flag = URG_guiding_company
 		}
 		
 		remove_effect = {
-			clr_country_flag = UFC_currently_investing
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
+			clr_country_flag = URG_guiding_company
+			EUYL_add_1_dockyard = yes 
 		}
 	}
 	
@@ -561,7 +520,7 @@ URG_guide_the_companies = {
 		
 		available = {
 			NOT = {
-				has_country_flag = UFC_currently_investing
+				has_country_flag = URG_guiding_company
 			}
 		}
 		
@@ -574,11 +533,11 @@ URG_guide_the_companies = {
 		days_remove = 40
 		
 		complete_effect = {
-			set_country_flag = UFC_currently_investing
+			set_country_flag = URG_guiding_company
 		}
 		
 		remove_effect = {
-			clr_country_flag = UFC_currently_investing
+			clr_country_flag = URG_guiding_company
 			random_owned_controlled_state = {
 				add_building_construction = {
 					type = infrastructure
@@ -600,7 +559,7 @@ URG_march_to_argentina_capital = {
 		allowed = { tag = URG } 
 		
         available = {                        
-            controls_state = 807            
+            controls_state = 888            
         }
 		
         activation = {                       
@@ -648,25 +607,25 @@ URG_form_liga_federal_category = {
 		
 		available = {
 			hidden_trigger  = {
-				controls_state = 827
+				controls_state = 908
 				controls_state = 300
 			}
 			controls_state = 502
-			controls_state = 824
-			controls_state = 823
+			controls_state = 905
+			controls_state = 904
 			controls_state = 510
-			controls_state = 813
-			controls_state = 814
+			controls_state = 894
+			controls_state = 895
 		}
 		
 		complete_effect = {
 			set_cosmetic_tag = LGA_federal
 			502 = { add_core_of = ROOT }
-			824 = { add_core_of = ROOT }
-			823 = { add_core_of = ROOT }
+			905 = { add_core_of = ROOT }
+			904 = { add_core_of = ROOT }
 			510 = { add_core_of = ROOT }
-			813 = { add_core_of = ROOT }
-			814 = { add_core_of = ROOT }	
+			894 = { add_core_of = ROOT }
+			895 = { add_core_of = ROOT }	
 			hidden_effect = {
 				add_ideas = {
 					URG_economic_instability

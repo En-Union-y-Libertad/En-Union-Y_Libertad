@@ -10,19 +10,6 @@
 	}
 }
 
-division_template = {   #The Blandengues de Artigas are divided into 5 regiments
-	name = "Brigada de Caballería"		
-	division_names_group = SPAN_CAVB_01
-
-	regiments = {
-		cavalry = { x = 0 y = 0 }
-		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
-		cavalry = { x = 1 y = 0 }
-		cavalry = { x = 1 y = 1 }
-	}
-}
-
 
 units = {
 	##### Ejercito de Uruguay #####
@@ -48,34 +35,9 @@ units = {
 		start_equipment_factor = 0.3
 
 	}
-
-	division= {	 #Blandengues de Artigas
-		name = "Regimiento de Caballería 'Blandengues de Artigas'"
-		location = 10362 # Montevideo
-		division_template = "Brigada de Caballería"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
-
-	}
 }
 
-air_wings = {  #An airforce was used for the first time in Uruguay on 1935 on a revolution against Terra
-	847 = { 
-		# Fighter Air Group -- ARME Montevideo
-		fighter_equipment_0 =  {
-			owner = "URG" 
-			amount = 5
-		}
-	}
-	847 = { 
-		CAS_equipment_1 =  {
-			owner = "URG" 
-			amount = 2
-		}
-	}
-}
-
-
+##### No notable Air Forces #####
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
