@@ -1,45 +1,23 @@
 ﻿capital = 312
-add_ideas = monroe_doctrine_idea
+add_ideas = {
+	monroe_doctrine_idea
+	Central_banana_republic
+}
 oob = "HON_1936"
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
 }
-
-recruit_character = HON_tiburcio_carías_andino
-recruit_character = HON_lorenzo_ferrera
-recruit_character = HON_pedro_figueroa
-recruit_character = HON_lisandro_machado
-recruit_character = HON_oswaldo_lopez_arellano
-recruit_character = HON_carlos_vaupel_comeza
-recruit_character = HON_neto_britto
-recruit_character = HON_jose_zuniga_huete
-recruit_character = HON_teodore_alberto
-recruit_character = HON_rufio_villegas
-recruit_character = HON_carlos_molina_dejonje
-recruit_character = HON_didier_masson
-recruit_character = HON_miguel_angel_sevilla
-recruit_character = HON_raimundo_stochler_garcia
-recruit_character = HON_juan_b_valladares
-recruit_character = HON_francisco_s_tapio_toro
-recruit_character = HON_enrique_doll_rojas
-recruit_character = HON_gustavo_schmidt
-recruit_character = HON_carlos_alberto_ucles
-recruit_character = HON_roberto_michelleti_bain
-recruit_character = HON_orlando_rodriguez_jimino
-recruit_character = HON_abraham_williams_calderon
-recruit_character = HON_hernan_fernandez_silva
-
-
 set_country_flag = monroe_doctrine
+set_variable = { HON_central_american_concession_variable = 0 }
 set_war_support = 0.1
+set_stability = 0.2
 set_convoys = 10
 
 1939.1.1 = {
 
 	add_political_power = 1198
-	add_command_power = 100
 	
 	#generic focuses
 	complete_national_focus = army_effort
@@ -86,20 +64,103 @@ set_convoys = 10
 }
 
 set_politics = {
-	ruling_party = democratic
-	last_election = "1932.10.28"
+	ruling_party = neutrality
+	last_election = "1932.10.28" 
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
-set_popularities = {
-	democratic = 100
+set_popularities = {  #Apparently Zuñiga only got 1% of the votes
+	democratic = 1
+	neutrality = 98
+	communism = 1
+}
+
+create_country_leader = { 
+	name = "Tiburcio Carías Andino"
+	desc = "POLITICS_TIBURCIO_CARIAS_ANDINO_DESC"
+	picture = "GFX_portrait_honduras_portrait_tiburcio_carias_andino"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		HON_strongman_of_tegucigalpa
+	}
+}
+
+create_country_leader = {
+	name = "Manuel Calix Herrera"
+	desc = "POLITICS_MANUEL_CALIX_HERRERA_DESC"
+	picture = "gfx/leaders/South America/portrait_UL_South_America_political_young.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		veteran_communist
+	}
+}
+
+create_country_leader = {
+	name = "José Ángel Zúñiga"
+	desc = "POLITICS_JOSE_ANGEL_ZUÑIGA_DESC"
+	picture = "gfx/leaders/South America/portrait_UL_South_America_political_3.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		generic_lawyer
+	}
+}
+
+create_field_marshal = {
+	name = "Tiburcio Carías Andino"
+	GFX = "GFX_portrait_honduras_portrait_tiburcio_carias_andino"
+	traits = { old_guard politically_connected }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Abel Villanueva Villacorta"
+	portrait_path = "gfx/leaders/HON/portrait_HON_abel_villanueva_villacorta.dds"
+	traits = { trait_cautious }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Mateo Ortega"
+	portrait_path = "gfx/leaders/South America/portrait_UL_South_America_Generic_army_1.dds"
+	traits = { jungle_rat }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_navy_leader = {
+	name = "Abraham Williams Calderón"
+	portrait_path = "gfx/leaders/South America/Portrait_UL_South_America_Generic_navy_1.dds"
+	traits = { bold }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 2
 }
 
 1939.1.1 = {
 	set_politics = {
-		ruling_party = democratic
+		ruling_party = neutrality
 		last_election = "1936.3.28"
 		election_frequency = 48
-		elections_allowed = yes
+		elections_allowed = no 
+	}
+	set_popularities = {
+		democratic = 1
+		neutrality = 99
 	}
 }
