@@ -5,10 +5,6 @@ characters={
 		portraits={
 			civilian={
 				large="GFX_portrait_uruguay_portrait_gabriel_terra"
-				small="gfx/interface/ideas/gabriel_terra.dds"
-			}
-			army={
-				large="GFX_portrait_uruguay_portrait_gabriel_terra"
 			}
 		}
 		country_leader={
@@ -26,55 +22,13 @@ characters={
 		
 		portraits={
 			civilian={
-				large="gfx/leaders/URG/Portrait_Uruguay_Luis_Alberto_De_Herrera.dds"
-			}
-			army={
-				large="gfx/leaders/URG/Portrait_Uruguay_Luis_Alberto_De_Herrera.dds"
+				large="GFX_Portrait_South_America_Generic_2"
 			}
 		}
 		country_leader={
 			desc = "POLITICS_LUIS_ALBERTO_DE_HERRERA_DESC"
 			expire = "1965.1.1"
-			ideology = conservatism
-		}
-	}
-
-	URG_basilio_munoz_c = {
-		name="Basilio Muñoz"
-		
-		portraits={
-			civilian={
-				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_political_1.dds"
-			}
-			army={
-				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_political_1.dds"
-			}
-		}
-	}
-
-	URG_emilio_frugoni_c = {
-		name="Emilio Frugoni"
-		
-		portraits={
-			civilian={
-				large="gfx/leaders/URG/Portrait_Uruguay_Emilio_Frugoni.dds"
-			}
-			army={
-				large="gfx/leaders/URG/Portrait_Uruguay_Emilio_Frugoni.dds"
-			}
-		}
-	}
-
-	URG_luis_batlle_berres_c = {
-		name="Luis Batlle Berres"
-		
-		portraits={
-			civilian={
-				large="gfx/leaders/URG/portrait_urg_Luis_Batlle_Berres.dds"
-			}
-			army={
-				large="gfx/leaders/URG/portrait_urg_Luis_Batlle_Berres.dds"
-			}
+			ideology = liberalism
 		}
 	}
 	
@@ -83,7 +37,7 @@ characters={
 		
 		portraits={
 			civilian={
-				large="gfx/leaders/URG/portrait_URG_eugenio_gomez.dds"
+				large="gfx/leaders/South America/Portrait_South_America_Generic_4.dds"
 			}
 		}
 		country_leader={
@@ -98,51 +52,45 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = URG_alfredo_baldomir
-			allowed  = {
-				original_tag  = URG
-			}
-			available = {
-				NOT = { has_idea = URG_alfredo_baldomir_army }
-			}
-			traits  = {
-				war_industrialist 
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = URG_alfredo_baldomir_army
-			allowed  = {
-				original_tag  = URG
-			}
-			available = {
-				NOT = { has_idea = URG_alfredo_baldomir }
-			}
-			traits  = {
-				army_chief_old_guard
-			}
+			ledger  = army 
+				allowed  = {
+					original_tag  = ARG
+				}
+				research_bonus  = {
+					land_doctrine  = 0.075
+				}
+				traits  = {
+					war_industrialist 
+				}
 		}
 		portraits={
 			army={
-				large="gfx/leaders/URG/URG_alfredo_baldomir_general.dds"
-				small="gfx/interface/ideas/alfredo_baldomir_army.dds"
+				small="gfx/interface/ideas/alfredo_baldomir.dds"
 			}
 			civilian={
 				large="gfx/leaders/URG/portrait_urg_alfredo_baldomir.dds"
 			}
 		}
-		
 		country_leader={
 			desc="POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
 			expire = "1965.1.1"
-			ideology = centrism
+			ideology = despotism
 			traits = {
 				retired_officer
 				fascist_sympathies
 			}
 		}
-
+		
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/URG/portrait_urg_alfredo_baldomir.dds"
+			}
+		}
 		corps_commander={
-			traits = { harsh_leader politically_connected }
+			traits = { harsh_leader }
 			skill = 3
 			attack_skill = 4
 			defense_skill = 2
@@ -151,35 +99,23 @@ characters={
 		}
 	}
 	
-	URG_pedro_sicco_c = {
+	URG_pedro_sicco_c={
 		name="Pedro Sicco"
 		portraits={
 			army={
-				large="gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
-				small="GFX_idea_generic_army_south_america_5"
+				small=""
 			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = URG_pedro_sicco_idea
-			allowed = {
-					original_tag = URG
-				}
-			traits = {
-				army_chief_defensive_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
 			}
 		}
 		field_marshal={
 			traits = { defensive_doctrine old_guard }
 			skill = 2
 			attack_skill = 1
-			defense_skill = 3
+			defense_skill = 2
 			planning_skill = 2
-			logistics_skill = 2
+			logistics_skill = 3
 		}
 	}
 	
@@ -187,7 +123,9 @@ characters={
 		name="Cesáreo L. Berisso"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_5"
+				small=""
+			}
+			army={
 				large="gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
 			}
 		}
@@ -199,27 +137,13 @@ characters={
 			planning_skill = 3
 			logistics_skill = 2
 		}
-		advisor={
-			slot = air_chief
-			idea_token = URG_cesarreo_l_barisso
-			allowed = {
-					original_tag = URG
-				}
-			traits = {
-				air_chief_ground_support_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 	
 	URG_tydeo_borges_c={
-		name="Tydeo Larre Borges"
+		name="Tydeo Borges"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_5"
+				small=""
 			}
 			army={
 				large="gfx/leaders/URG/portrait_urg_tydeo_larre_borges.dds"
@@ -232,169 +156,25 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 		}
-		advisor={
-			slot = high_command
-			idea_token = URG_tydeo_borges
-			allowed = {
-					original_tag = URG
-				}
-			traits = {
-				air_close_air_support_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 	
 	URG_angel_cambior_c={
-		name="Ángel Camblor"
+		name="Angel Cambior"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_5"
+				small=""
 			}
 			army={
 				large="gfx/leaders/URG/r56_portrait_URG_Angel_Camblor.dds"
 			}
 		}
 		corps_commander={
-			traits = { camouflage_expert }
+			traits = { urban_assault_specialist }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-		}
-		advisor={
-			slot = high_command
-			idea_token = URG_angel_camblor
-			allowed = {
-					original_tag = URG
-				}
-			traits = {
-				army_concealment_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	URG_oscar_diego_gestido_c={
-		name="Óscar Diego Gestido"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_south_america_5"
-			}
-			army={
-				large="gfx/leaders/URG/portrait_URG_Oscar_Diego_Gestido.dds"
-			}
-		}
-		corps_commander={
-			traits = { bearer_of_artillery }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}
-		advisor={
-			slot = high_command
-			idea_token = URG_oscar_diego_gestido_infantry
-			allowed = {
-				original_tag = URG
-			}
-			available = {
-				NOT = { has_idea = URG_oscar_diego_gestido_quartermaster }
-			}
-			traits = {
-				army_infantry_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-
-		advisor={
-			slot = political_advisor
-			idea_token = URG_oscar_diego_gestido_quartermaster
-			allowed  = {
-				original_tag  = URG
-			}
-			available = {
-				NOT = { has_idea = URG_oscar_diego_gestido_infantry }
-			}
-			traits  = {
-				quartermaster_general
-			}
-		}
-	}
-
-	URG_arturo_campos_c={
-		name="Arturo R. Campos"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_south_america_5"
-				large="gfx/leaders/URG/portrait_URG_Alfredo_R_Campos.dds"
-			}
-		}
-		corps_commander={
-			traits = { offensive_doctrine }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 2
-		}
-		advisor={
-			slot = army_chief
-			idea_token = URG_arturo_campos
-			allowed = {
-					original_tag = URG
-				}
-			traits = {
-				army_chief_offensive_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	URG_arturo_rios_c={
-		name="Arturo B. Rios"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_south_america_5"
-				large="gfx/leaders/USA/Portrait_USA_Generic_land_1.dds"
-			}
-		}
-		corps_commander={
-			traits = {  }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 1
-		}
-		advisor={
-			slot = theorist
-			idea_token = URG_arturo_rios
-			ledger = army
-			allowed = {
-					original_tag = URG
-				}
-			traits = {
-				military_theorist
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
 		}
 	}
 	
@@ -402,126 +182,19 @@ characters={
 		name="Arturo Juambeltz"
 		portraits={
 			army={
-				small="GFX_idea_generic_navy_south_america_4"
+				small=""
+			}
+			army={
 				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_navy_1.dds"
 			}
 		}
-		navy_leader={
+		navy_leader = {
 			traits = { gunnery_expert }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
 			maneuvering_skill = 2
 			coordination_skill = 2
-			legacy_id=-1
-		}
-		advisor={
-			slot = theorist
-			idea_token = URG_arturo_juambeltz
-			ledger = navy
-			allowed = {
-					original_tag = URG
-				}
-			traits = {
-				naval_theorist
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	URG_luis_tuya_c={
-		advisor={
-			slot = theorist
-			idea_token = URG_luis_tuya
-			ledger = air
-			allowed = {
-				original_tag = URG
-			}
-			traits = {
-				air_warfare_theorist
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name="Luis Tuya"
-		portraits={
-			army={
-				small="GFX_idea_generic_air_south_america_1"
-			}
-		}
-	}
-
-	URG_federico_garcia_c={
-		advisor={
-			slot = high_command
-			idea_token = URG_federico_garcia
-			allowed = {
-					original_tag = URG
-				}
-			traits = {
-				navy_capital_ship_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name="Federico García"
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_south_america_1"
-			}
-		}
-	}
-
-	URG_juan_viera_c={
-		advisor={
-			slot = high_command
-			idea_token = URG_juan_viera
-			allowed = {
-				original_tag = URG
-			}
-			traits = {
-				air_air_superiority_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name="Juan C. Viera"
-		portraits={
-			army={
-				small="GFX_idea_generic_air_south_america_1"
-			}
-		}
-	}
-
-	URG_angel_adami_c={
-		advisor={
-			slot = high_command
-			idea_token = URG_juan_viera
-			allowed = {
-				original_tag = URG
-			}
-			traits = {
-				air_air_superiority_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name="Juan C. Viera"
-		portraits={
-			army={
-				small="GFX_idea_generic_air_south_america_1"
-			}
 		}
 	}
 	
@@ -530,11 +203,11 @@ characters={
 			slot = political_advisor
 			idea_token = URG_julia_arevalo_de_roche
 			allowed  = {
-				original_tag  = URG
-			}
-			traits  = {
-				communist_revolutionary 
-			}
+					original_tag  = URG
+				}
+				traits  = {
+					communist_revolutionary 
+				}
 		}
 		name="Julia Arevalo de Roche"
 		portraits={
@@ -615,9 +288,6 @@ characters={
 			civilian={
 				large="gfx/leaders/URG/portrait_urg_julius_dalldorf.dds"
 			}
-			army={
-				large="gfx/leaders/URG/portrait_urg_julius_dalldorf.dds"
-			}
 		}
 		country_leader={
 			desc="POLITICS_JULIUS_DALLORF_DESC"
@@ -637,16 +307,12 @@ characters={
 			traits  = {
 				captain_of_industry 
 			}
-			on_add = {
-				add_popularity = { ideology = communism popularity = 0.05 }
-			}
 		}
 		
 		name="Rodney Arismendi"
 		portraits={
-			civilian={
+			army={
 				small="GFX_idea_rodney_arismendi"
-				large="GFX_idea_rodney_arismendi"
 			}
 		}
 	}
@@ -661,9 +327,6 @@ characters={
 			traits  = {
 				connected_citizen 
 			}
-			on_add = {
-				add_popularity = { ideology = fascism popularity = 0.05 }
-			}
 		}
 		
 		name="Serafino Mazzolini"
@@ -673,81 +336,341 @@ characters={
 			}
 		}
 	}
-
-	URG_juan_battione_c={
-		name="Juan Battione"
+	
+	URG_vittorio_amato_masso_c={
+		advisor={
+			slot = theorist
+			idea_token = URG_vittorio_amato_masso
+			ledger  = air 
+				allowed  = {
+					original_tag  = URG
+				}
+				research_bonus  = {
+					land_doctrine  = 0.100
+				}
+				traits  = {
+					military_theorist 
+				}
+		}
+		name="Vittorio Amato Masso"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_3"
+			}
+		}
+	}
+	
+	URG_ernesto_sanchez_elizondo_c={
+		advisor={
+			slot = theorist
+			idea_token = URG_ernesto_sanchez_elizondo
+			ledger  = air 
+				allowed  = {
+					original_tag  = URG
+				}
+				research_bonus  = {
+					air_doctrine  = 0.100
+				}
+				traits  = {
+					air_warfare_theorist 
+				}
+		}
+		name="Ernesto Sanchez Elizondo"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+	}
+	
+	URG_hector_lopez_camara_c={
+		advisor={
+			slot = high_command
+			idea_token = URG_hector_lopez_camara
+			ledger  = army 
+				allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					army_logistics_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Hector Lopes Camara"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_2"
+			}
+		}
+	}
+	
+	URG_eleazar_diaz_caminate_c={
+		advisor={
+			slot = high_command
+			idea_token = URG_eleazar_diaz_caminate
+			ledger  = army 
+				allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					army_concealment_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Eleazar Diaz Caminate"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_1"
+			}
+		}
+	}
+	
+	URG_teo_bucardi_ramos_c={
+		advisor={
+			slot = high_command
+			idea_token = URG_teo_bucardi_ramos
+			ledger  = army 
+				allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					army_commando_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Teo Bucardi Ramos"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_3"
+			}
+		}
+	}
+	
+	URG_cosme_alvarez_berisso_c={
+		advisor={
+			slot = high_command
+			idea_token = URG_cosme_alvarez_berisso
+			ledger  = air 
+				allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					air_air_superiority_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Cosme Alvarez Berisso"
+		portraits={
+			army={
+				small="GFX_idea_tydeo_borges"
+			}
+		}
+	}
+	
+	URG_valentin_gomez_c={
+		advisor={
+			slot = high_command
+			idea_token = URG_valentin_gomez
+			ledger  = air 
+				allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					air_strategic_bombing_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Valentin Gomez"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_3"
+			}
+		}
+	}
+	
+	URG_carlos_jackson_urribe_c={
+		advisor={
+			slot = high_command
+			idea_token = URG_carlos_jackson_urribe
+			ledger  = navy 
+				allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					navy_capital_ship_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Carlos Jackson Urribe"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_2"
+			}
+		}
+	}
+	
+	URG_jorge_eloi_mendoza_c={
+		advisor={
+			slot = army_chief
+			idea_token = URG_jorge_eloi_mendoza
+			allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					army_chief_defensive_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Jorge Eloi Meondoza"
+		portraits={
+			army={
+				small="GFX_idea_south_america_generic_5"
+			}
+		}
+	}
+	
+	URG_cantido_quintio_reyes_c={
+		advisor={
+			slot = army_chief
+			idea_token = URG_cantido_quintio_reyes
+			allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					army_chief_morale_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Cantido Quintio Reyes"
+		portraits={
+			army={
+				small="GFX_idea_south_america_generic_5"
+			}
+		}
+	}
+	
+	URG_enrico_amancias_rodriguez_c={
+		advisor={
+			slot = army_chief
+			idea_token = URG_enrico_amancias_rodriguez
+			allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					army_chief_drill_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Enrico Amancias Rodriguez"
+		portraits={
+			army={
+				small="GFX_idea_south_america_generic_land_3"
+			}
+		}
+	}
+	
+	URG_manuel_heinz_azpurua_c={
+		advisor={
+			slot = air_chief
+			idea_token = URG_manuel_heinz_azpurua
+			allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					air_chief_ground_support_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Manuel Heinz Azpurua"
+		portraits={
+			army={
+				small="GFX_idea_south_america_generic_2"
+			}
+		}
+	}
+	
+	URG_a_martin_de_la_flores_c={
+		advisor={
+			slot = air_chief
+			idea_token = URG_a_martin_de_la_flores
+			allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					air_chief_night_operations_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="A. Martin de la Flores"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_2"
+			}
+		}
+	}
+	
+	URG_carlos_neves_ochoa_c={
+		advisor={
+			slot = navy_chief
+			idea_token = URG_carlos_neves_ochoa
+			allowed  = {
+					original_tag  = URG
+				}
+				traits  = {
+					navy_chief_commerce_raiding_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Carlos Neves Ochoa"
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_south_america_2"
-				large="gfx/leaders/South America/Portrait_South_America_Generic_navy_2.dds"
-			}
-		}
-		navy_leader={
-			traits = { blue_water_expert }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			maneuvering_skill = 1
-			coordination_skill = 1
-			legacy_id=-1
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = URG_juan_battione
-			allowed = {
-					original_tag = URG
-				}
-			traits = {
-				navy_fleet_logistics_1
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
-
-	URG_domingo_mendivil_c={
-		name="Domingo Mendívil"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_south_america_2"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = URG_domingo_mendivil
-			allowed = {
-					original_tag = URG
-				}
-			traits = {
-				army_artillery_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-	URG_atilio_frigerio_c={
-		name="Atilio Frigerio"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_south_america_2"
-			}
-		}
+	
+	URG_rafael_marques_ayala_c={
 		advisor={
 			slot = navy_chief
-			idea_token = URG_atilio_frigerio
-			allowed = {
-					original_tag = URG
+			idea_token = URG_rafael_marques_ayala
+			allowed  = {
+					original_tag  = URG
 				}
-			traits = {
-				navy_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
+				traits  = {
+					navy_chief_naval_aviation_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="Rafael Marques Ayala"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_3"
 			}
 		}
 	}

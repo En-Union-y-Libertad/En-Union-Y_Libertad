@@ -189,6 +189,11 @@ focus_tree = {
 		prerequisite = { focus = URG_strengthen_the_ANCAP }
 		
 		cost = 10
+
+		available = {
+			controls_state = 847
+			controls_state = 908
+		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -198,6 +203,11 @@ focus_tree = {
 		completion_reward = {
 			EUYL_add_1_civilian = yes 
 			EUYL_add_1_military = yes 
+			build_railway = {
+				level = 1
+				start_state = ROOT.capital
+				target_state = 908
+			}
 		}
 	}
 	
@@ -471,16 +481,6 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = { ideology = fascism popularity = 0.1 }
 			set_politics = { ruling_party = fascism }
-			add_corps_commander_role = {
-				character = "URG_julius_dalldorf_c"
-				traits={ old_guard politically_connected harsh_leader }
-				skill=3
-				attack_skill=1
-				defense_skill=3
-				planning_skill=3
-				logistics_skill=3
-				legacy_id=0
-			}
 			custom_effect_tooltip = URG_terra_displeased
 			hidden_effect = { 
 				country_event = { id = uruguay.5 hours = 6 } 
@@ -671,10 +671,11 @@ focus_tree = {
 	focus = {
 		id = URG_reform_the_constitution
 		icon = GFX_URG_new_constitution 
-		x = 0
+		x = -2
 		y = 1
-		relative_position_id = URG_allow_free_elections
-		prerequisite = { focus = URG_allow_free_elections }
+		relative_position_id = URG_open_our_markets
+		prerequisite = { focus = URG_open_our_markets }
+		mutually_exclusive = { focus = URG_rule_with_an_iron_fist }
 		
 		cost = 10
 		
@@ -688,7 +689,29 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 100
+			custom_effect_tooltip = URG_up_to_10_free
+			hidden_effect = {
+				random_list = {
+					20 = {
+						subtract_from_variable = { URG_politicians_arrested = 2 }
+					}
+					20 = {
+						subtract_from_variable = { URG_politicians_arrested = 4 }
+					}
+					20 = {
+						subtract_from_variable = { URG_politicians_arrested = 6 }
+					}
+					20 = {
+						subtract_from_variable = { URG_politicians_arrested = 8 }
+					}
+					20 = {
+						subtract_from_variable = { URG_politicians_arrested = 10 }
+					}
+				}
+				subtract_from_variable = { URG_politicians_arrested = 3 }
+				URG_set_up_prisoners_modifier = yes 
+			}
 		}
 	}
 	
@@ -699,7 +722,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = URG_open_our_markets
 		prerequisite = { focus = URG_open_our_markets }
-		mutually_exclusive = { focus = URG_allow_free_elections }
+		mutually_exclusive = { focus = URG_reform_the_constitution }
 		
 		cost = 10
 		
@@ -750,11 +773,10 @@ focus_tree = {
 	focus = {
 		id = URG_allow_free_elections
 		icon = GFX_URG_allow_elections 
-		x = -2
+		x = 0
 		y = 1
-		relative_position_id = URG_open_our_markets
-		prerequisite = { focus = URG_open_our_markets }
-		mutually_exclusive = { focus = URG_rule_with_an_iron_fist }
+		relative_position_id = URG_reform_the_constitution
+		prerequisite = { focus = URG_reform_the_constitution }
 		
 		cost = 10
 		
@@ -776,8 +798,8 @@ focus_tree = {
 		icon = GFX_focus_generic_the_giant_wakes 
 		x = 1
 		y = 1
-		relative_position_id = URG_reform_the_constitution
-		prerequisite = { focus = URG_reform_the_constitution }
+		relative_position_id = URG_allow_free_elections
+		prerequisite = { focus = URG_allow_free_elections }
 		
 		cost = 10
 		
@@ -794,8 +816,8 @@ focus_tree = {
 		icon = GFX_focus_research 
 		x = -1
 		y = 1
-		relative_position_id = URG_reform_the_constitution
-		prerequisite = { focus = URG_reform_the_constitution }
+		relative_position_id = URG_allow_free_elections
+		prerequisite = { focus = URG_allow_free_elections }
 		
 		cost = 10
 		
@@ -2076,13 +2098,6 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 20
 			EUYL_add_1_military = yes 
-			add_tech_bonus = {
-				name = infantry_artillery_bonus
-				bonus = 1.0
-				uses = 2
-				category = infantry_weapons
-				category = artillery
-			}
 		}
 	}
 	
@@ -2363,22 +2378,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			custom_effect_tooltip = URG_terra_supporters_rise_up
-			URG_luis_alberta_de_herrera_c = { 
-				remove_country_leader_role = {
-					ideology = conservatism
-				}
-			}	
-			add_country_leader_role = {
-				character = URG_basilio_munoz_c
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = liberalism
-					traits = {
-						URG_el_guerrillero
-					}
-				}
-				promote_leader = yes
-			}
 			start_civil_war = {
 				ruling_party = democratic
 				ideology = neutrality
@@ -2608,10 +2607,6 @@ focus_tree = {
 		relative_position_id = URG_invest_in_our_companies
 		prerequisite = { focus = URG_invest_in_our_companies }
 		mutually_exclusive = { focus = URG_keep_our_ecconomy_the_way_it_is }
-
-		available = {
-			has_country_leader = { ruling_only = yes name = "Luis Alberto de Herrera" }
-		}	
 		
 		cost = 10
 		
@@ -2631,12 +2626,6 @@ focus_tree = {
 		relative_position_id =  URG_invest_in_our_companies
 		prerequisite = { focus = URG_invest_in_our_companies }
 		mutually_exclusive = { focus = URG_privatize_our_industry }
-
-		available = {
-			NOT = {	
-				has_country_leader = { ruling_only = yes name = "Luis Alberto de Herrera" }
-			}	 
-		}
 		
 		cost = 10
 		

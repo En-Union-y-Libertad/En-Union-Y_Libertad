@@ -169,14 +169,20 @@ country_event = {
 	option = {
 		name = uruguay.7.b 
 		ai_chance = { base = 50 }
+		retire_country_leader = yes
 		clr_country_flag = URG_terra
 		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
-		URG_gabriel_terra_c = { 
-			remove_country_leader_role = {
-				ideology = despotism
+		create_country_leader = {
+			name = "Alfredo Baldomir Ferrari"
+			desc = "POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
+			picture = "portrait_urg_alfredo_baldomir.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				retired_officer
+				fascist_sympathies
 			}
-		}	
-		promote_character = URG_alfredo_baldomir_c
+		}
 	}
 }
 
@@ -563,14 +569,6 @@ country_event = {
 		ai_chance = { base = 35 }
 		add_war_support = 0.15
 		complete_national_focus = URG_the_will_of_the_people
-		show_effect_tooltip = URG_extraordinary_elections_tt
-		hidden_effect = {
-			country_event = { id = uruguay.18 days = 90 }
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = yes
-			}
-		}
 	}
 	
 	option = {
@@ -583,100 +581,6 @@ country_event = {
 			elections_allowed = no 
 		}
 		complete_national_focus = URG_a_new_path
-	}
-}
-
-### Against Terra - Elections
-
-country_event = {
-	id = uruguay.18
-	title = uruguay.18.t 
-	desc = uruguay.18.d 
-	picture = GFX_report_event_generic_parliament 
-	
-	is_triggered_only = yes 
-	
-	option = {
-		name = uruguay.18.a 
-		ai_chance = {
-			base = 33
-		}
-		retire_country_leader = yes
-		clr_country_flag = URG_terra
-		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
-		URG_basilio_munoz_c = { 
-			remove_country_leader_role = {
-				ideology = liberalism
-			}
-		}	
-		add_country_leader_role = {
-			character = URG_luis_batlle_berres_c
-			country_leader = {
-				expire = "1965.1.1"
-				ideology = liberalism
-				traits = {
-				}
-			}
-				promote_leader = yes
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = URG_partido_colorado_long
-			name = URG_partido_colorado
-		}
-	}
-	
-	option = {
-		name = uruguay.18.b 
-		ai_chance = { base = 34 }
-		clr_country_flag = URG_terra
-		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
-		URG_basilio_munoz_c = { 
-			remove_country_leader_role = {
-				ideology = liberalism
-			}
-		}
-		add_country_leader_role = {
-			character = URG_emilio_frugoni_c
-			country_leader = {
-				expire = "1965.1.1"
-				ideology = socialism
-				traits = {
-				}
-			}
-				promote_leader = yes
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = URG_partido_socialista_long
-			name = URG_partido_socialista
-		}
-	}
-
-	option = {
-		name = uruguay.18.c 
-		ai_chance = {
-			base = 33
-		}
-		retire_country_leader = yes
-		clr_country_flag = URG_terra
-		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
-		URG_basilio_munoz_c = { 
-			remove_country_leader_role = {
-				ideology = liberalism
-			}
-		}	
-		add_country_leader_role = {
-			character = URG_luis_alberta_de_herrera_c
-			country_leader = {
-				expire = "1965.1.1"
-				ideology = conservatism
-				traits = {
-				}
-			}
-				promote_leader = yes
-		}
-		add_stability = -0.05
 	}
 }
 			

@@ -306,7 +306,8 @@ ideas = {
 			}
 		}
 	}
-
+	
+	
 	industrial_concern = {
 		
 		URG_ancap_concern = {
