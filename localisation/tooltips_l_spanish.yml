@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_spanish:
   URG_available_ancap:0 "§YANCAP§! will be available as an §YIndustrial Company§!"
   central_usa_depose_companies_tt:0 "§RThis will anger the§! §GUnited States§! §Rand can lead to an intervention§!"
   central_communist_depose_companies_tt:0 "§RIf this focus isn't completed within 2 years of becoming communist, a civil war will trigger§!"
@@ -15,4 +15,4 @@
   central_create_reserve_tt:0 "§YThis will spawn §Gthree§! unit of reserves"
   central_public_force_tt:0 "§YThis will replace the§! §RGuardia Nacional§! §Ywith a§! §Gbetter§! §Ydivision§!"
   central_volunteer_units_tt:0 "§YOnce completed, this focus will spawn a§! §GVolunteer unit§! §Yfrom the League of Nations§!"
-  URG_extraordinary_elections_tt:0 "Extaordinary elections will be scheduled in 90 days."
+  URG_extraordinary_elections_tt:0 "Se planificaran elecciones extraordinarias en 90 días."

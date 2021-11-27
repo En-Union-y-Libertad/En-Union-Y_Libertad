@@ -3623,9 +3623,14 @@
  uruguay.16.a:0 "God Damn You Brazil..."
  uruguay.17.t:0 "Who Should Lead Our Nation?"
  uruguay.17.d:0 "With the civil war in full swing and our nation in chaos, one questions is raised up above any other, who should lead the country? \n\nImprisoning Terra has caused the new state that was be created to be near anarchy, and we need a strong leader as soon as possible. Due to his imprisonment, democratic and communist ideals to spread to all the Uruguayan people who are against Terra. \n\nThis may be the last time the people decide who the nation will be led by, so we have to make the right decision and fast. After a rushed election, the winner is..."
- uruguay.17.a:0 "Luis Alberto de Herrera"
- uruguay.17.b:0 "Eugenio Gómez"
- 
+ uruguay.17.a:0 "Basilio Muñoz will lead for now."
+ uruguay.17.b:0 "Eugenio Gómez."
+ uruguay.18.t:0 "[GetYear] Elections"
+ uruguay.18.d:0 "Despite the situation that led the parties to form the coalition, pressure from all democratic sectors of the country had been mounting on [URG.GetLeader], demanding the return of free elections, with some radicals even claiming that [URG.GetLeader] is seeking to keep power to himself and, caving under the pressure, [URG.GetLeader] had scheduled elections for [GetYear]. \n\nEven with the situation in the country being far from stable, it seems [URG.GetLeader] has delivered on his promise and, today, voters had to decide between voting for either Emilio Frugoni, Luis Batlle Berres or Luis Alberto de Herrera. While Frugoni and Batlle enjoy relative popularity amongst the population, Luis Alberto de Herrera is seen by most liberals as a traitor to the country, only being defended by those who supported Terra. However, all candidates enjoy from a good voter base, giving them all a chance to win this important election. \n\nOn [GetDateText], as votes are being counted, it's all but obvious that..."
+ uruguay.18.a:0 "Luis Batlle Berres won the elections!"
+ uruguay.18.b:0 "Emilio Frugoni won the elections!"
+ uruguay.18.c:0 "Luis Alberto de Herrera won the elections!"
+
   #Peru Investment stuff
  peru.122.t:0 "The Peruvian 1936 Elections"
  peru.122.d:0 "October 11th has come by faster than expected and election day is upon us. Out of all the parties in our country, 4 major parties stand out from the rest. \n\nThe first is the Partido Social Democrata, lead by Luis Antonio Eguiguren and respresents democratic ideals. \nThe next one is Frente Nacional de Derecha, lead by Jorge Prado Ugarteche, and represents similar ideals to that of Oscar. \nThe third option is the Partido Unión Revolucionaria, lead by Luis. A. Flores, and represents ultranationalist fascist ideals. \nThe last option is the Alianza Acción Republicana, lead by Manuel Vicente Villarán, adn represents communist ideals. \n\nAfter a rather close voting session, the winner of the 1936 elections is..."
