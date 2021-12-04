@@ -1356,4 +1356,165 @@ URG_purchasing_british_ships = {
 		}
 	}
 }
+
+URG_renovation_efforts = {
+	URG_renovate_cerro_fortress = {
+		icon = generic_naval
+
+		allowed = {
+			original_tag = URG 
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = URG_renovation_in_progress
+			}
+		}
+
+		available = {
+			has_idea = URG_horacio_arredondo
+		}
+
+		cost = 100
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			set_country_flag = URG_renovation_in_progress
+		}
+
+		remove_effect = {
+			clr_country_flag = URG_renovation_in_progress
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 10362
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker = 1 
+				level = 3
+				province = 13246
+				instant_build = yes
+			}
+			hidden_effect = {
+				set_country_flag = URG_cerro_renovated
+			}
+		}
+	}
+	URG_renovate_san_miguel_fortress = {
+		icon = generic_naval
+
+		allowed = {
+			original_tag = URG 
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = URG_renovation_in_progress
+			}
+		}
+
+		available = {
+			has_idea = URG_horacio_arredondo
+		}
+
+		cost = 100
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			set_country_flag = URG_renovation_in_progress
+		}
+
+		remove_effect = {
+			clr_country_flag = URG_renovation_in_progress
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 13247
+				instant_build = yes
+			}
+			hidden_effect = {
+				set_country_flag = URG_san_miguel_renovated
+			}
+		}
+	}
+	URG_renovate_santa_teresa_fortress = {
+		icon = generic_naval
+
+		allowed = {
+			original_tag = URG 
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = URG_renovation_in_progress
+			}
+		}
+
+		available = {
+			has_idea = URG_horacio_arredondo
+		}
+
+		cost = 100
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		complete_effect = {
+			set_country_flag = URG_renovation_in_progress
+		}
+
+		remove_effect = {
+			clr_country_flag = URG_renovation_in_progress
+			add_building_construction = {
+				type = bunker 
+				level = 2
+				province = 13246
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker = 1 
+				level = 2
+				province = 13246
+				instant_build = yes
+			}
+			hidden_effect = {
+				set_country_flag = URG_santa_teresa_renovated
+			}
+		}
+	}
+	URG_finish_renovations = {
+		icon = generic_naval
+
+		allowed = {
+			original_tag = URG 
+		}
+
+		available = {
+			has_country_flag = URG_cerro_renovated
+			has_country_flag = URG_san_miguel_renovated
+			has_country_flag = URG_santa_teresa_renovated
+			has_idea = URG_horacio_arredondo
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = 0.1
+			hidden_effect = {
+				set_country_flag = URG_finished_renovations
+			}
+		}
+	}
+}	
+
 	

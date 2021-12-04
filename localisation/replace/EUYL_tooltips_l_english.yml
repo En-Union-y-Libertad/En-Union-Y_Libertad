@@ -1,2 +1,7 @@
 ﻿l_english:
   URG_available_ancap:0 "§YANCAP§! will be available as an §YIndustrial Company§!"
+  URG_renovation_in_progress:0 "A fortress is under renovation"
+  URG_cerro_renovated:0 "The Fortaleza del Cerro has been renovated"
+  URG_san_miguel_renovated:0 "The Fortaleza de San Miguel has been renovated"
+  URG_santa_teresa_renovated:0 "The Fortaleza de Santa Teresa has been renovated"
+  URG_horacio_arredondo_tt:0 "Hiring Arredondo will allow the renovation of old colonial forts"  

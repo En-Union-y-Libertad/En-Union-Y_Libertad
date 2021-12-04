@@ -1317,7 +1317,11 @@
  URG_march_to_argentina_capital_desc:0 "Buenos Aires es el corazón del país, es lo que mantiene a la nación a flote. Si somos capaces de capturarla en poco tiempo, los argentinos estarán destrozados y la victoria estará garantizada."
  URG_capture_buenos_aires:0 "Capturar Buenos Aires"
  URG_capture_buenos_aires_desc:0 "¡La capital está a la vista! Una buena ofensiva y estará bajo nuestro control en poco tiempo".
- 
+ URG_renovation_efforts:0 "Esfuerzos de Renovación"
+ URG_renovate_cerro_fortress:0 "Renovar la Fortaleza del Cerro"
+ URG_renovate_san_miguel_fortress:0 "Renovar la Fortaleza de San Miguel"
+ URG_renovate_santa_teresa_fortress:0 "Renovar la Fortaleza de Santa Teresa"
+ URG_finish_renovations:0 "Finalizar las Renovaciones"
  
  form_rioplatense_empire_category:0 "Hacer realidad las Ambiciones Rioplatenses"
  form_rioplatense_empire_category_desc:0 "Con la voluntad de unir plenamente a todo el pueblo rioplatense bajo un solo país, lo haremos y lo conseguiremos. Todo el pueblo rioplatense estará unido y afrontaremos juntos cualquier amenaza."

@@ -5,10 +5,30 @@ characters={
 		portraits={
 			civilian={
 				large="GFX_portrait_uruguay_portrait_gabriel_terra"
-				small="gfx/interface/ideas/gabriel_terra.dds"
 			}
 			army={
 				large="GFX_portrait_uruguay_portrait_gabriel_terra"
+				small="gfx/interface/ideas/idea_URG_gabriel_terra.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = URG_gabriel_terra_idea
+			allowed  = {
+				original_tag  = URG
+			}
+			available = {
+				OR = {
+					NOT = {
+						has_country_leader = { ruling_only = yes name = "Alfredo Baldomir" }
+					}
+					NOT = {
+						has_country_leader = { ruling_only = yes name = "Luis Alberto de Herrera" }
+					}
+				}
+			}
+			traits  = {
+				financial_expert
 			}
 		}
 		country_leader={
@@ -78,21 +98,6 @@ characters={
 		}
 	}
 	
-	URG_eugenio_gomez_c = {
-		name="Eugenio Gómez"
-		
-		portraits={
-			civilian={
-				large="gfx/leaders/URG/portrait_URG_eugenio_gomez.dds"
-			}
-		}
-		country_leader={
-			desc = "POLITICS_EUGENIO_GOMEZ_DESC"
-			expire = "1965.1.1"
-			ideology = marxism
-		}
-	}
-	
 	URG_alfredo_baldomir_c = {
 		name="Alfredo Baldomir"
 		advisor={
@@ -156,7 +161,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
-				small="GFX_idea_generic_army_south_america_5"
+				small="GFX_idea_generic_army_south_america_4"
 			}
 		}
 		advisor={
@@ -187,7 +192,7 @@ characters={
 		name="Cesáreo L. Berisso"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_5"
+				small="gfx/interface/ideas/cesareo_l_berisso.dds"
 				large="gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
 			}
 		}
@@ -219,7 +224,7 @@ characters={
 		name="Tydeo Larre Borges"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_5"
+				small="gfx/interface/ideas/tydeo_borges.dds"
 			}
 			army={
 				large="gfx/leaders/URG/portrait_urg_tydeo_larre_borges.dds"
@@ -286,7 +291,7 @@ characters={
 		name="Óscar Diego Gestido"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_5"
+				small="gfx/interface/ideas/oscar_diego_gestido.dds"
 			}
 			army={
 				large="gfx/leaders/URG/portrait_URG_Oscar_Diego_Gestido.dds"
@@ -451,7 +456,7 @@ characters={
 		name="Luis Tuya"
 		portraits={
 			army={
-				small="GFX_idea_generic_air_south_america_1"
+				small="gfx/interface/ideas/luis_tuya.dds"
 			}
 		}
 	}
@@ -532,8 +537,11 @@ characters={
 			allowed  = {
 				original_tag  = URG
 			}
+			available = {
+				has_government = communism
+			}
 			traits  = {
-				communist_revolutionary 
+				red_suffragette
 			}
 		}
 		name="Julia Arevalo de Roche"
@@ -576,8 +584,11 @@ characters={
 			allowed  = {
 				original_tag  = URG
 			}
+			modifier = {
+				custom_modifier_tooltip = URG_horacio_arredondo_tt
+			}
 			traits  = {
-				popular_figurehead 
+				linchpin_of_infrastructure
 			}
 		}
 		
@@ -585,6 +596,74 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_horacio_arredondo"
+			}
+		}
+	}
+
+	URG_augusto_cesar_bado_c={
+		advisor={
+			slot = political_advisor
+			idea_token = URG_augusto_cesar_bado
+			allowed  = {
+				original_tag  = URG
+			}
+			traits  = {
+				captain_of_industry
+			}
+		}
+		
+		name="Augusto César Bado"
+		portraits={
+			army={
+				small="gfx/interface/ideas/augusto_cesar_bado.dds"
+			}
+		}
+	}
+
+	URG_juana_de_ibarbourou_c={
+		advisor={
+			slot = political_advisor
+			idea_token = URG_juana_de_ibarbourou
+			allowed  = {
+				original_tag  = URG
+			}
+			traits  = {
+				popular_figurehead
+			}
+		}
+		
+		name="Juana de Ibarbourou"
+		portraits={
+			army={
+				small="gfx/interface/ideas/juana_de_ibarbourou.dds"
+			}
+		}
+	}
+
+	URG_hugo_fernandez_artucio_c={
+		advisor={
+			slot = political_advisor
+			idea_token = URG_hugo_fernandez_artucio
+			allowed  = {
+				original_tag  = URG
+			}
+			traits  = {
+				anti_fascist_agent
+			}
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			on_add = {
+				add_popularity = { ideology = communism popularity = 0.05 }
+			}
+		}
+		
+		name="Hugo Fernández Artucio"
+		portraits={
+			army={
+				small="gfx/interface/ideas/hugo_fernandez_artucio.dds"
 			}
 		}
 	}
@@ -617,6 +696,17 @@ characters={
 			}
 			army={
 				large="gfx/leaders/URG/portrait_urg_julius_dalldorf.dds"
+				small="gfx/interface/ideas/julius_dalldorf.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = URG_julius_dalldorf_idea
+			allowed  = {
+				original_tag  = URG
+			}
+			traits  = {
+				fascist_militia_leader
 			}
 		}
 		country_leader={
@@ -625,6 +715,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+
 	}
 	
 	URG_rodney_arismendi_c={
@@ -634,11 +725,11 @@ characters={
 			allowed  = {
 				original_tag  = URG
 			}
+			available = {	
+				has_government = communism
+			}	
 			traits  = {
-				captain_of_industry 
-			}
-			on_add = {
-				add_popularity = { ideology = communism popularity = 0.05 }
+				silent_mule
 			}
 		}
 		
@@ -650,6 +741,54 @@ characters={
 			}
 		}
 	}
+
+	URG_alfeo_brum_c={
+		advisor={
+			slot = political_advisor
+			idea_token = URG_alfeo_brum
+			allowed  = {
+				original_tag  = URG
+			}
+			traits  = {
+				democratic_reformer
+			}
+		}
+		
+		name="Alfeo Brum"
+		portraits={
+			army={
+				small="gfx/interface/ideas/alfeo_brum.dds"
+			}
+		}
+	}
+
+	URG_eugenio_gomez_c = {
+		name="Eugenio Gómez"
+		
+		portraits={
+			civilian={
+				large="gfx/leaders/URG/portrait_URG_eugenio_gomez.dds"
+			}
+			army={
+				small="gfx/interface/ideas/eugenio_gomez.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = URG_eugenio_gomez_idea
+			allowed  = {
+				original_tag  = URG
+			}
+			traits = {
+				communist_revolutionary
+			}
+		}
+		country_leader={
+			desc = "POLITICS_EUGENIO_GOMEZ_DESC"
+			expire = "1965.1.1"
+			ideology = marxism
+		}
+	}
 	
 	URG_serafino_mazzolini_c={
 		advisor={
@@ -659,10 +798,7 @@ characters={
 				original_tag  = URG
 			}
 			traits  = {
-				connected_citizen 
-			}
-			on_add = {
-				add_popularity = { ideology = fascism popularity = 0.05 }
+				fascist_demagogue
 			}
 		}
 		
@@ -711,7 +847,7 @@ characters={
 		name="Domingo Mendívil"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_2"
+				small="GFX/interface/ideas/domingo_mendivil.dds"
 			}
 		}
 		advisor={
