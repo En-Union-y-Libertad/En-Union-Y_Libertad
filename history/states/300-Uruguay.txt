@@ -14,11 +14,16 @@ state={
 			industrial_complex = 2
 			dockyard = 1
 			air_base = 1
-
+			4457 = {
+				naval_base = 2
+			}	
+			13236 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = URG
 		victory_points = {
-			13236 3 
+			13236 1 
 		}
 		
 		victory_points = {
@@ -26,11 +31,11 @@ state={
 		}
 		
 		victory_points = {
-			13271 2
+			13271 3
 		}
 		
 		victory_points = {
-			13253 1
+			13250 5
 		}
 
 	}

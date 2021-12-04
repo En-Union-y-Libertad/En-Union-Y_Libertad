@@ -112,6 +112,7 @@ set_convoys = 45
 	complete_national_focus = URG_roosevelts_visit_to_uruguay
 	complete_national_focus = URG_open_our_markets
 	complete_national_focus = URG_build_up_our_industry
+	complete_national_focus = URG_allow_free_elections
 	
 	country_event = { id = uruguay.4 days = 1 }
 	
@@ -181,17 +182,6 @@ set_popularities = {
 	communism = 3
 }
 
-create_country_leader = {
-	name = "Gabriel Terra"
-	desc = "POLITICS_GABRIEL_TERRA_DESC"
-	picture = "GFX_portrait_uruguay_portrait_gabriel_terra"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		fascist_sympathies
-	}
-}
-
 
 1939.1.1 = {
 	set_politics = {
@@ -200,6 +190,13 @@ create_country_leader = {
 		election_frequency = 48
 		elections_allowed = no
 	}
+
+        URG_gabriel_terra_c = { 
+		remove_country_leader_role = {
+			ideology = despotism
+		}
+	}
+	promote_character = URG_alfredo_baldomir_c
 }
 
 ### VARIANTS ###
