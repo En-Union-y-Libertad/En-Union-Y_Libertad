@@ -560,7 +560,23 @@ country_event = {
 	
 	option = {
 		name = uruguay.17.a 
-		ai_chance = { base = 35 }
+		ai_chance = { base = 67 }
+		URG_consejo_de_estado_provisorio_c = { 
+			remove_country_leader_role = {
+				ideology = liberalism
+			}
+		}
+		add_country_leader_role = {
+			character = URG_basilio_munoz_c
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = liberalism
+					traits = {
+						URG_el_guerrillero
+					}
+				}
+			promote_leader = yes
+		}
 		add_war_support = 0.15
 		complete_national_focus = URG_the_will_of_the_people
 		show_effect_tooltip = URG_extraordinary_elections_tt
@@ -575,7 +591,7 @@ country_event = {
 	
 	option = {
 		name = uruguay.17.b 
-		ai_chance = { base = 35 }
+		ai_chance = { base = 33 }
 		add_popularity = { ideology = communism popularity = 0.25 }
 		add_war_support = 0.15
 		set_politics = {
@@ -601,7 +617,6 @@ country_event = {
 		ai_chance = {
 			base = 33
 		}
-		retire_country_leader = yes
 		clr_country_flag = URG_terra
 		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
 		URG_basilio_munoz_c = { 
@@ -615,6 +630,7 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = liberalism
 				traits = {
+					URG_torchbearer_of_batllism
 				}
 			}
 				promote_leader = yes
@@ -642,6 +658,7 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = socialism
 				traits = {
+					URG_reformist_socialist
 				}
 			}
 				promote_leader = yes
@@ -672,9 +689,15 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = conservatism
 				traits = {
+					URG_herrerist
 				}
 			}
 				promote_leader = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = URG_partido_nacional_long
+			name = URG_partido_nacional
 		}
 		add_stability = -0.05
 	}

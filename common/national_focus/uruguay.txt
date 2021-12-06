@@ -205,8 +205,9 @@ focus_tree = {
 			EUYL_add_1_military = yes
 			build_railway = {
 				level = 1
-				start_state = ROOT.capital
-				target_state = 908
+				path = { 13250 13253 12496 13259 13267 13269 13273 13275 }
+				start_province = 10362
+				target_province = 13278
 			} 
 		}
 	}
@@ -2379,15 +2380,20 @@ focus_tree = {
 				}
 			}	
 			add_country_leader_role = {
-				character = URG_basilio_munoz_c
+				character = URG_consejo_de_estado_provisorio_c
 				country_leader = {
 					expire = "1965.1.1"
 					ideology = liberalism
 					traits = {
-						URG_el_guerrillero
+
 					}
 				}
 				promote_leader = yes
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = URG_anti_terristas_long
+				name = URG_anti_terristas
 			}
 			start_civil_war = {
 				ruling_party = democratic
@@ -2400,7 +2406,7 @@ focus_tree = {
 			hidden_effect = {
 				clr_country_flag = URG_terra
 				remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
-				country_event = { id = uruguay.17 days = 1 }
+				country_event = { id = uruguay.17 days = 180 }
 				division_template = { 
 					name = "Nacionales" 
 					division_names_group = SPAN_INF_02 

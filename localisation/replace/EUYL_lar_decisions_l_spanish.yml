@@ -1322,6 +1322,8 @@
  URG_renovate_san_miguel_fortress:0 "Renovar la Fortaleza de San Miguel"
  URG_renovate_santa_teresa_fortress:0 "Renovar la Fortaleza de Santa Teresa"
  URG_finish_renovations:0 "Finalizar las Renovaciones"
+ URG_work_with_the_PCU:0 "Concesiones al PCU"
+ URG_work_with_the_PCU_desc:0 "Emilio Frugoni tiene mucha historia con la Partido Comunista. El Partido Comunista anteriormente pertenecia al Partido Socialista, pero el partido se dividió en dos tras la Revolución de Octubre en la Unión Soviética, ya que la postura de Frugoni siempre había sido una de reformismo pacífico y muy opuesta a revoluciones sangrientas, algo con lo que la mayoría de los ex miembros de su partido no estaban de acuerdo. Esta mayoría quería que el PSU se uniera a la Internacional Comunista que recién habia sido formada para ayudar a liberar a los trabajadores. Todo esto condujo a la ruptura del partido en 1920, cuando Frugoni y sus seguidores fueron expulsados del nuevo Partido Comunista. \n\nPero a pesar de todo esto, ambos partidos comparten un objetivo similar en mente, y con la reciente crisis política en Uruguay tras el sangriento derrocamiento de Gabriel Terra, Frugoni puede intentar hacer concesiones a los comunistas para crear una coalición para estabilizar su debíl posición como presidente."
  
  form_rioplatense_empire_category:0 "Hacer realidad las Ambiciones Rioplatenses"
  form_rioplatense_empire_category_desc:0 "Con la voluntad de unir plenamente a todo el pueblo rioplatense bajo un solo país, lo haremos y lo conseguiremos. Todo el pueblo rioplatense estará unido y afrontaremos juntos cualquier amenaza."

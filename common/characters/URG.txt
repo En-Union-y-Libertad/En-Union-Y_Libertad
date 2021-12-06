@@ -19,12 +19,8 @@ characters={
 			}
 			available = {
 				OR = {
-					NOT = {
-						has_country_leader = { ruling_only = yes name = "Alfredo Baldomir" }
-					}
-					NOT = {
-						has_country_leader = { ruling_only = yes name = "Luis Alberto de Herrera" }
-					}
+					has_country_leader = { ruling_only = yes name = "Alfredo Baldomir" }
+					has_country_leader = { ruling_only = yes name = "Luis Alberto de Herrera" }
 				}
 			}
 			traits  = {
@@ -46,16 +42,19 @@ characters={
 		
 		portraits={
 			civilian={
-				large="gfx/leaders/URG/Portrait_Uruguay_Luis_Alberto_De_Herrera.dds"
+				large="gfx/leaders/URG/portrait_urg_Luis_Alberto_De_Herrera.dds"
 			}
 			army={
-				large="gfx/leaders/URG/Portrait_Uruguay_Luis_Alberto_De_Herrera.dds"
+				large="gfx/leaders/URG/portrait_urg_Luis_Alberto_De_Herrera.dds"
 			}
 		}
 		country_leader={
 			desc = "POLITICS_LUIS_ALBERTO_DE_HERRERA_DESC"
 			expire = "1965.1.1"
 			ideology = conservatism
+			traits = {
+				URG_herrerist
+			}
 		}
 	}
 
@@ -64,10 +63,27 @@ characters={
 		
 		portraits={
 			civilian={
-				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_political_1.dds"
+				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_Political_1.dds"
 			}
 			army={
-				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_political_1.dds"
+				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_Political_1.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = URG_basilio_munoz
+			allowed  = {
+				original_tag  = URG
+			}
+			available = {
+				NOT = { 
+					has_country_leader = { ruling_only = yes name = "Alfredo Baldomir" } 
+				}
+				has_completed_focus = URG_the_will_of_the_people
+			}
+			traits  = {
+				URG_el_guerrillero 
 			}
 		}
 	}
@@ -77,10 +93,23 @@ characters={
 		
 		portraits={
 			civilian={
-				large="gfx/leaders/URG/Portrait_Uruguay_Emilio_Frugoni.dds"
+				large="gfx/leaders/URG/portrait_urg_Emilio_Frugoni.dds"
 			}
 			army={
-				large="gfx/leaders/URG/Portrait_Uruguay_Emilio_Frugoni.dds"
+				large="gfx/leaders/URG/portrait_urg_Emilio_Frugoni.dds"
+			}
+		}
+	}
+
+	URG_consejo_de_estado_provisorio_c = {
+		name="Consejo de Estado Provisorio"
+		
+		portraits={
+			civilian={
+				large="gfx/leaders/URG/portrait_palacio_legislativo.dds"
+			}
+			army={
+				large="gfx/leaders/URG/portrait_palacio_legislativo.dds"
 			}
 		}
 	}
@@ -538,7 +567,10 @@ characters={
 				original_tag  = URG
 			}
 			available = {
-				has_government = communism
+				OR = {
+					has_government = communism
+					has_country_flag = URG_communist_coalition
+				}	
 			}
 			traits  = {
 				red_suffragette
@@ -725,8 +757,11 @@ characters={
 			allowed  = {
 				original_tag  = URG
 			}
-			available = {	
-				has_government = communism
+			available = {
+				OR = {
+					has_government = communism
+					has_country_flag = URG_communist_coalition
+				}	
 			}	
 			traits  = {
 				silent_mule
@@ -738,6 +773,58 @@ characters={
 			civilian={
 				small="GFX_idea_rodney_arismendi"
 				large="GFX_idea_rodney_arismendi"
+			}
+		}
+	}
+
+	URG_jose_lazarraga_c={
+		advisor={
+			slot = political_advisor
+			idea_token = URG_jose_lazarraga
+			allowed  = {
+				original_tag  = URG
+			}
+			available = {
+				OR = {
+					has_government = communism
+					has_country_flag = URG_communist_coalition
+				}	
+			}	
+			traits  = {
+				ambitious_union_boss
+			}
+		}
+		
+		name="José Lazarraga"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/jose_lazarraga.dds"
+			}
+		}
+	}
+
+	URG_paulina_luisi_c={
+		advisor={
+			slot = political_advisor
+			idea_token = URG_paulina_luisi
+			allowed  = {
+				original_tag  = URG
+			}
+			available = {
+				OR = {
+					has_government = communism
+					has_country_flag = URG_communist_coalition
+				}	
+			}	
+			traits  = {
+				revolutionary_culture_minister
+			}
+		}
+		
+		name="Paulina Luisi"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/paulina_luisi.dds"
 			}
 		}
 	}
@@ -886,5 +973,5 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
+	}	
 }

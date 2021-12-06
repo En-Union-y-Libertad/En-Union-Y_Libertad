@@ -31,6 +31,9 @@ recruit_character = URG_augusto_cesar_bado_c
 recruit_character = URG_juana_de_ibarbourou_c
 recruit_character = URG_hugo_fernandez_artucio_c
 recruit_character = URG_alfeo_brum_c
+recruit_character = URG_jose_lazarraga_c
+recruit_character = URG_paulina_luisi_c
+recruit_character = URG_consejo_de_estado_provisorio_c
 
 oob = "URG_1936"
 if = {

@@ -157,6 +157,8 @@
  URG_renovate_san_miguel_fortress:0 "Renovate the Fortaleza de San Miguel"
  URG_renovate_santa_teresa_fortress:0 "Renovate the Fortaleza de Santa Teresa"
  URG_finish_renovations:0 "Finish the Renovations"
+ URG_work_with_the_PCU:0 "Concessions to the PCU"
+ URG_work_with_the_PCU_desc:0 "Emilio Frugoni has a lot of history with the PCU. Formely part of the Partido Socialista, the party split into two following the October Revolution in the Soviet Union, as Frugoni's stance had always been one of peaceful reformism and opposed to bloody revolutions, something which the majority of his former party members disagreed with. This majority wanted the PSU to join the newly formed Communist International and help liberate the workers. This all led to the split up of the party in 1920, with Frugoni and his followers being kicked out of the new Partido Comunista. \n\nBut despite all of this, both parties share a similar goal in mind, and with the recent political crisis in Uruguay following the bloody overthrowing of Gabriel Terra, Frugoni may be able to make concessions to the communists in order to creating a coalition to stabilize his rocky position as president."
 
  CHL_purchasing_foreign_planes:0 "Purchasing Foreign Planes"
  CHL_purchasing_foreign_planes_desc:0 "There are many great powers out there who have very modern planes, and those are planes we would very much like to have in our arsenal. With such high quality aircraft at our disposal, our enemies will cower in fear!"

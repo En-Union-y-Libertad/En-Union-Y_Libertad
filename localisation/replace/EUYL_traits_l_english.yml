@@ -47,6 +47,10 @@
  EUYL_soldier_recruiter:0 "Soldier Recruiter"
  PBC_disorganized_nationalists:0 "Disorganized Nationalists"
  central_bank:0 "Central Bank"
+ URG_el_guerrillero:0 "El Guerrillero"
+ URG_torchbearer_of_batllism:0 "Torchbearer of Batllism"
+ URG_reformist_socialist:0 "Reformist Socialist"
+ URG_herrerist:0 "Herrerist"
  
  cc_leader:0 "General"
  fm_leader:0 "Field Marshal"
