@@ -108,6 +108,14 @@
  COL_rojas_pinilla_war:0 "Comando General de Colombia"
  COL_rojas_pinilla_war_DEF:0 "el Comando General de Colombia"
  COL_rojas_pinilla_war_ADJ:0 "del Comando General de Colombia"
+
+
+ URG_anarchism:0 "Comuna Anarco-Batllista"
+ URG_anarchism_DEF:0 "la Comuna Anarco-Batllista"
+ URG_anarchism_ADJ:0 "de la Comuna Anarco-Batllista"
+
+ BLZ_UK_neutrality:0 "British Honduras"
+ BLZ_UK_neutrality_DEF:0 "British Honduras"
  
  INS_HOL_democratic:0 "Indias Orientales Neerlandesas"
  INS_HOL_democratic_DEF:0 "Las Indias Orientales Neerlandesas"

@@ -1,49 +1,35 @@
+
 state={
 	id=300
 	name="STATE_300"
-	resources={
-		oil=2.000
-		steel=7.000
-	}
 
 	history={
 		owner = URG
 		buildings = {
 			infrastructure = 3
-			arms_factory = 1
 			industrial_complex = 2
-			dockyard = 1
 			air_base = 1
-			4457 = {
-				naval_base = 2
-			}	
-			13236 = {
-				naval_base = 1
-			}
 		}
 		add_core_of = URG
 		victory_points = {
-			13236 1 
+			13238 1 
 		}
-		
 		victory_points = {
-			4457 1
+			13252 2
 		}
-		
 		victory_points = {
-			13271 3
+			13237 3
 		}
-		
 		victory_points = {
-			13250 5
+			13259 2
 		}
-
 	}
 
 	provinces={
-		1641 13240 13249 13250 1654 4457 10347 12336 12481 12496 13236 13239 13244 13245 13246 13247 13248 13251 13252 13253 13254 13255 13256 13257 13258 13259 13260 13261 13262 13263 13266 13268 13271 
+		12496 13237 13238 13249 13250 13252 13253 13254 13256 13257 13259 13260 13262 
 	}
-	manpower=405321
+	manpower=505495
 	buildings_max_level_factor=1.000
 	state_category=city
+	local_supplies=0.000
 }

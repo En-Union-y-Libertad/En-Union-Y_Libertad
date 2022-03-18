@@ -249,6 +249,10 @@ ideologies = {
 			centrism = {
 			}
 
+			authoritarian_democracy = {
+				
+			}
+
 			theocracy = {
 				can_be_randomly_selected = no
 			} 
@@ -256,6 +260,7 @@ ideologies = {
 			independent = {
 				can_be_randomly_selected = no 
 			}
+
 
 			#Quote's addition
 			militarism = {

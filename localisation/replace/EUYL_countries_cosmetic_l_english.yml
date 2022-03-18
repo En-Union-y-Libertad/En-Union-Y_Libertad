@@ -110,6 +110,21 @@
  COL_rojas_pinilla_war_DEF:0 "the General Command of Colombia"
  COL_rojas_pinilla_war_ADJ:0 "of the General Command of Colombia"
 
+ URG_anarchism:0 "Anarcho-Batllist Commune"
+ URG_anarchism_DEF:0 "the Anarcho-Batllist Commune"
+ URG_anarchism_ADJ:0 "Anarcho-Batllist"
+
+ ARG_anarchist:0 "Anarchist Argentina"
+ ARG_anarchist_DEF:0 "Anarchist Argentina"
+ ARG_anarchist_ADJ:0 "Argentinian"
+
+ PAT_anarchist:0 "Patagonian Anarchist Front"
+ PAT_anarchist_DEF:0 "the Patagonian Anarchist Front"
+ PAT_anarchist_ADJ:0 "Patagonian"
+
+ BLZ_UK_neutrality:0 "British Honduras"
+ BLZ_UK_neutrality_DEF:0 "British Honduras"
+
  INS_HOL_democratic:0 "Dutch East Indies"
  INS_HOL_democratic_DEF:0 "the Dutch East Indies"
  INS_subject:0 "$OVERLORDADJ$ East Indies"

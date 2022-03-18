@@ -5,25 +5,21 @@ state={
 
 	history={
 		add_core_of = BLZ
-		owner = ENG
+		owner = BLZ
 		victory_points = {
-			2077 1 
+			14612 1
 		}
 		buildings = {
-			infrastructure = 4
-			2077 = {
-				naval_base = 1
-
-			}
-
+			infrastructure = 2
+			industrial_complex = 1
 		}
-
 	}
 
 	provinces={
-		2077 14555 
+		2077 14611 14612 
 	}
-	manpower=51000
+	manpower=31542
 	buildings_max_level_factor=1.000
 	state_category=pastoral
+	local_supplies=0.000
 }

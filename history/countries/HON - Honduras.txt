@@ -8,9 +8,9 @@ set_technology = {
 }
 
 recruit_character = HON_tiburcio_carías_andino
-recruit_character = HON_lorenzo_ferrera
+recruit_character = HON_alfonso_guillen_zelaya
 recruit_character = HON_pedro_figueroa
-recruit_character = HON_lisandro_machado
+recruit_character = HON_jose_angel_zuniga
 recruit_character = HON_oswaldo_lopez_arellano
 recruit_character = HON_carlos_vaupel_comeza
 recruit_character = HON_neto_britto
@@ -30,6 +30,8 @@ recruit_character = HON_roberto_michelleti_bain
 recruit_character = HON_orlando_rodriguez_jimino
 recruit_character = HON_abraham_williams_calderon
 recruit_character = HON_hernan_fernandez_silva
+recruit_character = HON_camilo_r_reina
+recruit_character = HON_rufino_solis_juarez
 
 
 set_country_flag = monroe_doctrine
@@ -86,20 +88,38 @@ set_convoys = 10
 }
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality
 	last_election = "1932.10.28"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 set_popularities = {
-	democratic = 100
+	democratic = 34
+	neutrality = 65
+	communism = 1
 }
 
 1939.1.1 = {
 	set_politics = {
-		ruling_party = democratic
+		ruling_party = neutrality
 		last_election = "1936.3.28"
 		election_frequency = 48
-		elections_allowed = yes
+		elections_allowed = no
 	}
 }
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Rufino Solis Juarez"
+		GFX = "gfx/leaders/Europe/portrait_europe_generic_operative_male_2.dds"
+		traits = { operative_commando }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { HON }
+	}
+}	
+
+	

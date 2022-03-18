@@ -1,0 +1,32 @@
+state={
+	id=917
+	name="STATE_917"
+	resources = {
+		steel=5.000
+	}
+
+	history={
+		owner = URG
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = URG
+		victory_points = {
+			13275 2
+		}
+		victory_points = {
+			13278 2
+		}
+		victory_points = {
+			13267 1
+		}
+	}
+	provinces={
+		1613 1626 13246 13267 13273 13275 13276 13278 
+	}
+	manpower=168286
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

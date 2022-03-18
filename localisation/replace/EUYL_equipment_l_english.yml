@@ -3951,6 +3951,17 @@
  ARG_modern_tank_equipment_1:0 "Tanque Argentino Mediano"
  ARG_modern_tank_equipment_1_short:0 "TAM"
 
+ GUA_infantry_equipment_0:0 "CZ Model 1924 Mauser Short Rifle"
+ GUA_infantry_equipment_0_short:0 "CZ Model 1924"
+ GUA_infantry_equipment_0_desc:0 "Lacking the means to viably produce small arms, Guatemala chose the vz .24 rifle as its standardized long-range gun in 1924, creating a contract with Zbrojovka Brno to create the weapons in Czechoslovakia and finish them in Guatemala. They saw considerable use until 1973, when Guatemala began shifting to automatic weaponry."
+ GUA_infantry_equipment_3:0 "M1 Carbine"
+ GUA_infantry_equipment_3_short:0 "M1 Carbine"
+ GUA_infantry_equipment_3_desc:0 "The M1 carbine is a lightweight semi-automatic carbine that was a standard firearm for the U.S. military during World War II, the Korean War and the Vietnam War. The M1 carbine was produced in several variants and was widely used by paramilitary and police forces around the world, and also became a popular civilian firearm after World War II, and despite having a similar name and physical outward appearance, the M1 carbine is not a carbine version of the M1 Garand rifle."
+ GUA_artillery_equipment_1:0 "Rock Island Arsenal M101"
+ GUA_artillery_equipment_1_short:0 "M101"
+ GUA_anti_air_equipment_1:0 "Bofors 40mm"
+ GUA_anti_air_equipment_1_short:0 "Bofors 40mm"
+
 
  tank_armor_upgrade:0 "Armor"
  tank_armor_upgrade_desc:0 "Better armor than your enemies can penetrate is a huge advantage to your divisions but is probably going to slow you down."

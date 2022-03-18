@@ -10,6 +10,7 @@ state={
 
 		}
 		add_core_of = ARG
+		add_core_of = PAT
 		victory_points = {
 			10953 1 
 		}
