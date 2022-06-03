@@ -52,7 +52,7 @@ characters={
 				small=""
 			}
 			army={
-				large="gfx/leaders/CHL/Oscar_Escudero_Otarola_Ptr.png"
+				large="gfx/leaders/CHL/portrait_chl_oscar_escudero_otarola.dds"
 			}
 		}
 		corps_commander={
@@ -72,7 +72,7 @@ characters={
 				small="GFX_idea_CHL_carlos_fuente"
 			}
 			army={
-				large="gfx/leaders/CHL/Carlos_Fuentes_Rabe_Ptr.png"
+				large="gfx/leaders/CHL/Carlos_Fuentes_Rabe.dds"
 			}
 		}
 		
@@ -133,7 +133,7 @@ characters={
 				small="GFX_idea_CHL_arturo_espinoza"
 			}
 			army={
-				large="gfx/leaders/CHL/Arturo_Espinoza_Mujica_Ptr.png"
+				large="gfx/leaders/CHL/Arturo_Espinoza_Mujica.dds"
 			}
 		}
 		corps_commander={
@@ -195,7 +195,7 @@ characters={
 				small=""
 			}
 			army={
-				large="gfx/leaders/CHL/Bartolome_Blanche_Espejo_V3_Ptr.png"
+				large="gfx/leaders/CHL/Bartolome_Blanche_Espejo.dds"
 			}
 		}
 		corps_commander={
@@ -215,7 +215,7 @@ characters={
 				small="gfx/interface/ideas/idea_south_america_generic_land_1.dds"
 			}
 			army={
-				large="gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
+				large="gfx/leaders/CHL/Oscar_Fuentes_Pantoja.dds"
 			}
 		}
 		corps_commander={
@@ -415,7 +415,7 @@ characters={
 		name="Juan Antonio Riós"
 		portraits={
 			civilian={
-				large="gfx/leaders/CHL/portrait_CHL_Jaun_Antonio_Riós.dds"
+				large="gfx/leaders/CHL/portrait_CHL_Juan_Antonio_Riós.dds"
 			}
 		}
 		country_leader={
