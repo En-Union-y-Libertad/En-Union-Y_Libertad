@@ -16,7 +16,7 @@ focus_tree = {
 			add = 10
 			tag = CHL
 		}
-	}
+	}	
 	
 	initial_show_position = {
 		x = 0
@@ -337,7 +337,7 @@ focus_tree = {
 		x = 6
 		y = 0
 		
-		cost = 4
+		cost = 2
 		
 		ai_will_do = {
 			factor = 3
@@ -374,8 +374,14 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.03
+			if = {
+				limit = { has_completed_focus = CHL_support_the_radicals }
+				add_political_power = 50
+			}
+			else = {
+				add_political_power = 25
+				add_stability = 0.03
+			}
 		}
 	}
 	
@@ -408,7 +414,7 @@ focus_tree = {
 		relative_position_id = CHL_aftermath_of_the_great_depression
 		prerequisite = { focus = CHL_aftermath_of_the_great_depression }
 		
-		cost = 8
+		cost = 6
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -427,7 +433,7 @@ focus_tree = {
 		relative_position_id = CHL_aftermath_of_the_great_depression
 		prerequisite = { focus = CHL_aftermath_of_the_great_depression }
 		
-		cost = 8
+		cost = 6
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -495,7 +501,7 @@ focus_tree = {
 			focus = CHL_invest_more_in_the_military
 		}
 		
-		cost = 10
+		cost = 8
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -513,6 +519,51 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			build_railway = {
+				level = 1
+				start_state = ROOT.capital
+				target_state = 912
+			}
+		}
+	}
+
+	focus = {
+		id = CHL_efficient_railway_building
+		icon = GFX_ARG_efficient_tansport
+		x = -1
+		y =  1
+		relative_position_id = CHL_industrialize_the_nation
+		prerequisite = { focus = CHL_industrialize_the_nation }
+
+		cost = 7
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = CHL_efficient_railway_production_idea
+		}
+	}
+
+	focus = {
+		id = CHL_modernize_our_trains
+		icon = GFX_CHL_modernize_trains
+		x = 1
+		y = 1
+		relative_position_id = CHL_industrialize_the_nation
+		prerequisite = { focus = CHL_industrialize_the_nation }
+
+		cost = 10
+
+		available = {
+			has_railway_level = {
+				state = ROOT.capital 
+				level = 5
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			EUYL_add_2_civilian = yes 
+			add_ideas = ARG_focus_on_trains_1
 		}
 	}
 	
@@ -520,9 +571,12 @@ focus_tree = {
 		id = CHL_invest_in_the_education
 		icon = GFX_focus_research
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = CHL_industrialize_the_nation
-		prerequisite = { focus = CHL_industrialize_the_nation }
+		prerequisite = { 
+			focus = CHL_modernize_our_trains
+			focus = CHL_efficient_railway_building
+		}
 		
 		cost = 10
 		
@@ -1049,7 +1103,7 @@ focus_tree = {
 		id = CHL_new_mining_techniques
 		icon = GFX_goal_generic_construction2 
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = CHL_invest_in_the_education
 		prerequisite = {
 			focus = CHL_the_chilean_military_economy
@@ -1116,7 +1170,7 @@ focus_tree = {
 				set_country_flag = CHL_communists_friendly
 			}
 		}		
-		cost = 8	
+		cost = 5	
 		search_filters = {FOCUS_FILTER_POLITICAL}
 	}	
 
@@ -1489,6 +1543,9 @@ focus_tree = {
 					#
 				}
 			}
+			hidden_effect = {
+				clr_country_flag = CHL_FP_player
+			}
 		}
 
 		#this focus brings Labarca to power instead of Pedro
@@ -1526,6 +1583,9 @@ focus_tree = {
 			custom_effect_tooltip = CHL_communists_hostile_tt
 			clr_country_flag = CHL_communists_friendly
 			add_stability = -0.03
+			hidden_effect = {
+				clr_country_flag = CHL_FP_player
+			}
 		}
 	}
 	
@@ -3799,7 +3859,7 @@ focus_tree = {
 		}
 		x = 48
 		y = 0
-		cost = 8	
+		cost = 5
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 	}	
@@ -3927,7 +3987,7 @@ focus_tree = {
 		relative_position_id = CHL_expand_the_welfare_plans
 		prerequisite = { focus = CHL_expand_the_welfare_plans }
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 3
@@ -4067,6 +4127,7 @@ focus_tree = {
 			custom_effect_tooltip = CHL_communists_hostile_tt
 			custom_effect_tooltip = CHL_government_hostile_tt
 			custom_effect_tooltip = CHL_increase_nacista_by_2_good
+			remove_ideas = democratic_influence
 			hidden_effect = {
 				set_country_flag = CHL_nacista_friendly
 				add_to_variable = { CHL_nacista_power = 2 }
@@ -4157,7 +4218,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = CHL_add_10_days_communism_tt
 			hidden_effect = {
-				add_to_variable = { CHL_communist_influencce_days = 10 }
+				add_to_variable = { CHL_communist_influence_days = 10 }
 				set_temp_variable = { CHL_temp_power = 100 }
 				set_temp_variable = { CHL_power_subtraction = CHL_nacista_power }
 				add_to_temp_variable = { CHL_power_subtraction = CHL_communists_power }
@@ -5064,9 +5125,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = CHL_switch_to_a_military_economy
-		prerequisite = { focus = CHL_switch_to_a_military_economy }
-		prerequisite = { focus = CHL_infliltrate_the_enemy }
-		prerequisite = { focus = CHL_seize_the_national_highways }
+		prerequisite = { 
+			focus = CHL_switch_to_a_military_economy 
+			focus = CHL_infliltrate_the_enemy
+			focus = CHL_seize_the_national_highways
+		}
 
 		cost = 10
 
@@ -5672,6 +5735,7 @@ focus_tree = {
 				has_war_with = ARG 
 			}
 			ARG = {
+				is_in_faction = no 
 				OR = {
 					has_government = communism
 					has_government = fascism 
@@ -5848,7 +5912,11 @@ focus_tree = {
 			has_completed_focus = CHL_build_up_the_military
 			OR = {
 				is_in_faction_with = ARG
-				has_war_with = ARG 
+				has_war_with = ARG
+				ARG = {
+					is_subject_of = ROOT 
+				} 
+				controls_state = 888
 			}
 		}
 		
@@ -5900,6 +5968,7 @@ focus_tree = {
 		available = {
 			PRU = {
 				is_in_faction = no 
+				has_government = ROOT
 			}
 			NOT = {
 				has_war_with = PRU
@@ -6021,6 +6090,10 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_war_with = VEN 
+			}
+			VEN = {
+				is_in_faction = no 
+				has_government = ROOT
 			}
 		}
 		
@@ -7094,12 +7167,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_tech_bonus = {
-				name = CHL_build_up_the_dockyards
-				bonus = 1.0
-				uses = 1
-				category = naval_doctrine
-			}
+			navy_experience = 75
 			EUYL_add_2_dockyard = yes 
 		}
 	}
@@ -7750,6 +7818,7 @@ focus_tree = {
 			}
 			PAR = {
 				is_in_faction = no 
+				has_government = ROOT
 			}
 			NOT = {
 				has_war_with = PAR 
@@ -8814,12 +8883,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			EUYL_add_1_military = yes 
-			add_tech_bonus = {
-				name = CHL_learn_from_the_second_world_war
-				bonus = 1.0
-				uses = 2
-				category = land_doctrine
-			}
+			army_experience = 75
 		}
 	}
 
@@ -8884,7 +8948,7 @@ focus_tree = {
 			focus = CHL_crush_the_communists
 		}
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 8
@@ -9102,7 +9166,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = CHL_crush_the_communists
-		cost = 5
+		cost = 2
 		search_filters = {FOCUS_FILTER_POLITICAL}		
 	}	
 
@@ -9123,7 +9187,7 @@ focus_tree = {
 			add_political_power = 35
 		}
 		relative_position_id = CHL_make_an_effort_to_stabilize_the_nation
-		cost = 6	
+		cost = 4
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }		
 	}
 	
@@ -9154,7 +9218,7 @@ focus_tree = {
 		relative_position_id = CHL_freer_people
 		prerequisite = { focus = CHL_freer_people }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 5
@@ -9248,7 +9312,7 @@ focus_tree = {
 		relative_position_id = CHL_freer_market
 		prerequisite = { focus = CHL_freer_market }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 5
@@ -9417,7 +9481,7 @@ focus_tree = {
 			custom_effect_tooltip = CHL_decrease_nacista_by_1
 			custom_effect_tooltip = CHL_decrease_comunista_by_1
 			hidden_effect = {
-				add_to_variable = { CHL_communist_influencce_days = 5 }
+				add_to_variable = { CHL_communist_influence_days = 5 }
 				add_to_variable = { CHL_nacista_influence_days = 5 }
 				if = {
 					limit = { 
@@ -9736,12 +9800,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = CHL_learn_british_naval_tactics
-				bonus = 1.0
-				uses = 2
-				category = naval_doctrine
-			}
+			navy_experience = 125
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -10069,6 +10128,11 @@ focus_tree = {
 			}
 			ECU = {
 				is_subject = no 
+				is_in_faction = no 
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
 			}
 		}
 
@@ -10138,6 +10202,7 @@ focus_tree = {
 				has_war_with = ARG 
 			}
 			ARG = {
+				is_in_faction = no 
 				OR = {
 					has_government = democratic
 					has_government = neutrality 
@@ -10795,11 +10860,12 @@ focus_tree = {
 			custom_effect_tooltip = CHL_for_every_40_tungsten_tt
 			if = {
 				limit = {
-					has_resources_amount = {
-                        resource = tungsten
-                        amount > 119
-                        state = 302
-                    }
+					302 = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 119
+						}
+					}
 				}
 				random_owned_controlled_state = {
 					limit = { is_core_of = ROOT }
@@ -10808,6 +10874,34 @@ focus_tree = {
 						type = industrial_complex
 						level = 2
 						instant_build = yes 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					302 = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 79
+						}
 					}
 				}
 				random_owned_controlled_state = {
@@ -10831,38 +10925,12 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					has_resources_amount = {
-                        resource = tungsten
-                        amount > 79
-                        state = 302
-                    }
-				}
-				random_owned_controlled_state = {
-					limit = { is_core_of = ROOT }
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes 
+					302 = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 39
+						}
 					}
-				}
-				random_owned_controlled_state = {
-					limit = { is_core_of = ROOT }
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes 
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_resources_amount = {
-                        resource = tungsten
-                        amount > 39
-                        state = 302
-                    }
 				}
 				random_owned_controlled_state = {
 					limit = { is_core_of = ROOT }
@@ -11308,12 +11376,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			add_tech_bonus = {
-				name = CHL_keep_up_with_the_south_american_naval_race
-				bonus = 1.0
-				uses = 1
-				category = naval_doctrine
-			}
+			navy_experience = 100
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -11626,6 +11689,7 @@ focus_tree = {
 			army_experience = 20
 			add_ideas = CHL_ejercito_chileno
 			unlock_decision_category_tooltip = south_american_armament
+			unlock_decision_tooltip = CHL_recruit_young_officers
 		}
 	}
 	
@@ -11867,12 +11931,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = CHL_adjust_our_tactics
-				bonus = 1.0
-				uses = 2
-				category = land_doctrine
-			}
+			army_experience = 75
 		}
 	}
 	
@@ -11949,12 +12008,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = CHL_a_modern_army
-				bonus = 1.0
-				uses = 1
-				category = land_doctrine
-			}
+			army_experience = 50
 			add_ideas = ARG_quality
 		}
 	}
@@ -12167,12 +12221,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = CHL_professional_chilean_pilots
-				bonus = 1.0
-				uses = 2
-				category = air_doctrine
-			}
+			air_experience = 150
 			add_ideas = CHL_professional_pilots
 		}
 	}
@@ -12261,13 +12310,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			air_experience = 50
-			add_tech_bonus = {
-				name = CHL_a_modern_air_force
-				bonus = 1.0
-				uses = 2
-				category = air_doctrine
-			}
+			air_experience = 150
 			add_ideas = CHL_a_modern_air_force
 		}
 	}

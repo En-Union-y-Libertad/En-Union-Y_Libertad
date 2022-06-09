@@ -35,7 +35,8 @@ add_ideas = {
 	BOL_losers_in_the_chaco_war
 	BOL_unstable_republic
 	BOL_great_depression
-	BOL_sea_access_loss
+	BOL_sea_access_loss	
+	BOL_servicio_militar_obligatorio
 }
 
 add_ideas = monroe_doctrine_idea
@@ -146,16 +147,6 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Óscar Únzaga de la Vega"
-	desc = "POLITICS_OSCAR_UNZAGA_DESC"
-	picture = "gfx/leaders/BOL/portrait_BOL_Oscar_Unzaga.dds"
-	expire = "1965.1.1"
-	ideology = gen_nazism
-	traits = {
-		BOL_father_of_the_falange
-	}
-}
 
 1939.1.1 = {
 	set_politics = {

@@ -29,7 +29,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		x = 1
 		y = 0
-		cost = 5
+		cost = 3
 	
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -39,7 +39,7 @@ focus_tree = {
 			901 = {
 				if = {
 					limit = { 
-						infrastructure < 10
+						infrastructure < 5
 						is_controlled_by = ROOT 
 					}
 					add_building_construction = {
@@ -52,7 +52,7 @@ focus_tree = {
 			900 = {
 				if = {
 					limit = { 
-						infrastructure < 10
+						infrastructure < 5
 						is_controlled_by = ROOT 
 					}
 					add_building_construction = {
@@ -166,31 +166,18 @@ focus_tree = {
 					}
 				}
 			}
-			902 = {
-				if = {
-					limit = { 
-						infrastructure < 10
-						is_controlled_by = ROOT 
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
 		}
 	}
 	
 	focus = {
 		id = ARG_invest_in_our_mining_industry
 		icon = GFX_goal_generic_construction2 
-		x = -2
+		x = 1
 		y = 1
 		relative_position_id = ARG_modernize_ruta_40
 		prerequisite = { focus = ARG_modernize_ruta_40 }
 		
-		cost = 10
+		cost = 8
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -205,13 +192,13 @@ focus_tree = {
 	focus = {
 		id = ARG_industrialize_the_pampas
 		icon = GFX_goal_generic_construct_infrastructure  #change to custom
-		x = 1
+		x = -1
 		y = 1
 		
 		prerequisite = { focus = ARG_modernize_ruta_40 }
 		
 		
-		cost = 6
+		cost = 4
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -253,19 +240,169 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			901 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+		}
+	}
+
+	focus = {
+		id = ARG_establish_ferrocarriles_argentinos
+		icon = GFX_ARG_ferrocarriles
+		x = -2
+		y = 1
+		relative_position_id = ARG_industrialize_the_pampas
+		prerequisite = { focus = ARG_industrialize_the_pampas }
+
+		cost = 5
+
+		available = {
+			exists = yes 
+			has_civil_war = no 
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			build_railway = {
+				level = 1
+				start_state = ROOT.capital
+				target_state = 510
+			}
+			custom_effect_tooltip = EUYL_available_as_industrial_concern_tt
+			show_ideas_tooltip = ARG_ferrocarriles_argentinos
+		}
+	}
+
+	focus = {
+		id = ARG_expand_our_railways_in_the_patagonia
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
+		y = 1
+		relative_position_id = ARG_establish_ferrocarriles_argentinos
+		prerequisite = { focus = ARG_establish_ferrocarriles_argentinos }
+
+		cost = 6
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					can_build_railway = {
+						start_state = 512
+						target_state = 890
+						build_only_on_allied = yes 
+					}
+				}
+				build_railway = {
+					level = 2
+					start_state = 512
+					target_state = 890
 				}
 			}
-			900 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+			if = {
+				limit = {
+					can_build_railway = {
+						start_state = 511
+						target_state = 890
+						build_only_on_allied = yes 
+					}
 				}
+				build_railway = {
+					level = 2
+					start_state = 511
+					target_state = 890
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ARG_focus_on_armored_trains
+		icon = GFX_ARG_armored_trains
+		x = -1
+		y = 1
+		relative_position_id = ARG_expand_our_railways_in_the_patagonia
+		prerequisite = { focus = ARG_expand_our_railways_in_the_patagonia }
+
+		cost = 7
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			EUYL_add_1_military = yes 
+			add_ideas = ARG_focus_on_trains_1
+		}
+	}
+
+	focus = {
+		id = ARG_build_railways_in_the_north
+		icon = GFX_goal_generic_construct_civilian
+		x = 1
+		y = 1
+		relative_position_id = ARG_expand_our_railways_in_the_patagonia
+		prerequisite = { focus = ARG_expand_our_railways_in_the_patagonia }
+
+		cost = 6
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					can_build_railway = {
+						start_state = 508
+						target_state = 510
+						build_only_on_allied = yes 
+					}
+				}
+				build_railway = {
+					level = 2
+					start_state = 508
+					target_state = 510
+				}
+			}
+			if = {
+				limit = {
+					can_build_railway = {
+						start_state = 508
+						target_state = 901
+						build_only_on_allied = yes 
+					}
+				}
+				build_railway = {
+					level = 2
+					start_state = 508
+					target_state = 901
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ARG_modern_railway_system
+		icon = GFX_ARG_modernize_train
+		x = -1
+		y = 1
+		relative_position_id = ARG_build_railways_in_the_north
+		prerequisite = { focus = ARG_build_railways_in_the_north }
+		prerequisite = { focus = ARG_focus_on_armored_trains }
+
+		cost = 10
+
+		available = {
+			OR = {
+				has_railway_level = {
+					state = ROOT.capital 
+					level = 5
+				}
+				has_railway_level = {
+					state = 278
+					level = 5
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			EUYL_add_2_civilian = yes 
+			swap_ideas = {
+				remove_idea = ARG_focus_on_trains_1
+				add_idea = ARG_focus_on_trains_2
 			}
 		}
 	}
@@ -273,13 +410,13 @@ focus_tree = {
 	focus = {
 		id = ARG_industrialize_the_north
 		icon = GFX_goal_generic_construct_infrastructure  #change to custom
-		x = 0
+		x = -1
 		y = 2
 		
 		prerequisite = { focus = ARG_industrialize_the_pampas }
 		
 		
-		cost = 10
+		cost = 6
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -340,7 +477,7 @@ focus_tree = {
 		prerequisite = { focus = ARG_industrialize_the_north }
 		
 		
-		cost = 10
+		cost = 8
 		
 		available = {
 			has_tech = excavation2
@@ -361,12 +498,6 @@ focus_tree = {
 			901 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				
-				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
@@ -383,19 +514,24 @@ focus_tree = {
 	focus = {
 		id = ARG_industrialize_the_south
 		icon = GFX_goal_generic_construct_infrastructure #temporary, change later
-		x = 2
+		x = 1
 		y = 2
 		
 		prerequisite = { focus = ARG_industrialize_the_pampas }
 		
 		
-		cost = 10
+		cost = 6
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			build_railway = {
+				level = 1
+				start_state = ROOT.capital 
+				target_state = 512
+			}
 			512 = {
 				add_building_construction = {
 					type = infrastructure
@@ -443,7 +579,7 @@ focus_tree = {
 	focus = {
 		id = ARG_exploit_la_vaca_muerta
 		icon = GFX_ARG_vaca_muerta 
-		x = 3
+		x = 2
 		y = 3
 		
 		prerequisite = { focus = ARG_industrialize_the_south }
@@ -553,11 +689,29 @@ focus_tree = {
 			add_ideas = ARG_improved_mining_techniques
 		}
 	}
+
+	focus = {
+		id = ARG_efficient_resource_transportation
+		icon = GFX_ARG_efficient_tansport
+		x = -2
+		y = 2
+		relative_position_id = ARG_improve_mining
+		prerequisite = { focus = ARG_improve_mining }
+		prerequisite = { focus =  ARG_modern_railway_system }
+
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			EUYL_add_1_civilian = yes 
+			add_ideas = ARG_efficient_resource_transportation_idea
+		}
+	}
 	
 	focus = {
 		id = ARG_focus_economy
 		icon = GFX_focus_generic_industry_3
-		x = 5
+		x = 7
 		y = 0
 		
 		cost = 2
@@ -587,16 +741,53 @@ focus_tree = {
 			add_ideas = ARG_industrial_expansionism
 		}
 	}
+
+	focus = {
+		id = ARG_construct_the_general_paz
+		icon = GFX_ARG_construct_general_paz
+		x = -3
+		y = 1
+		relative_position_id = ARG_focus_economy
+		prerequisite = { focus = ARG_focus_economy }
+
+		cost = 4
+
+		available = {
+			controls_state = 888
+			controls_state = 278
+		}
+
+		cancel_if_invalid = yes 
+		continue_if_invalid = no 
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			add_stability = 0.03
+			888 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes 
+				}
+			}
+			278 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
 	
 	focus = {
 		id = ARG_develop_the_capital
 		icon = GFX_ARG_develop_capital
-		x = 4
-		y = 1
+		x = 5
+		y = 2
 		
-		prerequisite = { focus = ARG_focus_economy }
+		prerequisite = { focus = ARG_construct_the_general_paz }
 		
-		cost = 6
+		cost = 5
 		
 		available = {
 			888 = {
@@ -644,10 +835,10 @@ focus_tree = {
 	focus = {
 		id = ARG_develop_northern_patagonia
 		icon = GFX_goal_generic_construct_civ_factory #temporary
-		x = 4
+		x = 3
 		y = 2
 		
-		prerequisite = { focus = ARG_develop_the_capital } 
+		prerequisite = { focus = ARG_construct_the_general_paz } 
 		
 		
 		cost = 8
@@ -698,7 +889,7 @@ focus_tree = {
 	focus = {
 		id = ARG_reduce_public_expense
 		icon = GFX_goal_generic_consumer_goods #low chance of changing
-		x = 6
+		x = 7
 		y = 1
 		
 		prerequisite = { focus = ARG_focus_economy }
@@ -727,7 +918,7 @@ focus_tree = {
 	focus = {
 		id = ARG_make_an_effort_to_control_the_inflation
 		icon = GFX_goal_generic_construction 
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = ARG_focus_economy
 		prerequisite = { focus = ARG_focus_economy }
@@ -1011,7 +1202,7 @@ focus_tree = {
 	focus = {
 		id = ARG_restrict_circulation_currency
 		icon = GFX_ARG_restrict_circulation_currency
-		x = 6
+		x = 7
 		y = 2
 		prerequisite = { focus = ARG_reduce_public_expense }
 		
@@ -1052,7 +1243,7 @@ focus_tree = {
 	focus = {
 		id = ARG_establish_patriotic_loan
 		icon = GFX_ARG_patriotic_loan
-		x = 6
+		x = 7
 		y = 3
 		
 		prerequisite = { focus = ARG_restrict_circulation_currency }
@@ -1082,6 +1273,7 @@ focus_tree = {
 		y = 4
 		
 		prerequisite = { focus = ARG_develop_northern_patagonia }
+		prerequisite = { focus = ARG_develop_the_capital }
 		
 		
 		cost = 10
@@ -1144,7 +1336,7 @@ focus_tree = {
 	focus = {
 		id = ARG_deal_with_depression
 		icon = GFX_ARG_end_of_depression
-		x = 6
+		x = 7
 		y = 4
 		prerequisite = { focus = ARG_establish_patriotic_loan }
 		
@@ -1206,7 +1398,7 @@ focus_tree = {
 	focus = {
 		id = ARG_rapidly_mobilize
 		icon = GFX_focus_generic_combined_arms #low chance
-		x = 14
+		x = 15
 		y = 0
 		
 		prerequisite = { }
@@ -1462,13 +1654,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			air_experience = 25
-			add_tech_bonus = {
-				name = ARG_air_doctrine
-				bonus = 1.0
-				uses = 1
-				category = air_doctrine
-			}
+			air_experience = 75
 		}
 	}
 	
@@ -1550,17 +1736,36 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-				name = ARG_strive_to_make_our_own_tanks
-				bonus = 1.0
-				uses = 1
-				technology = basic_medium_tank
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_tech_bonus = {
+					name = ARG_strive_to_make_our_own_tanks
+					bonus = 1.0
+					uses = 1
+					technology = basic_medium_tank_chassis
+				}
+				add_tech_bonus = {
+					name = ARG_strive_to_make_our_own_tanks
+					bonus = 3.0
+					uses = 1
+					technology = improved_medium_tank_chassis
+				}
 			}
-			add_tech_bonus = {
-				name = ARG_strive_to_make_our_own_tanks
-				bonus = 3.0
-				uses = 1
-				technology = improved_medium_tank
+			else = {
+				add_tech_bonus = {
+					name = ARG_strive_to_make_our_own_tanks
+					bonus = 1.0
+					uses = 1
+					technology = basic_medium_tank
+				}
+				add_tech_bonus = {
+					name = ARG_strive_to_make_our_own_tanks
+					bonus = 3.0
+					uses = 1
+					technology = improved_medium_tank
+				}
 			}
 		}
 	}
@@ -1587,12 +1792,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-				name = ARG_improve_our_tactics
-				bonus = 1.0
-				uses = 1
-				category = land_doctrine
-			}
+			army_experience = 50
 		}
 	}
 
@@ -1988,7 +2188,8 @@ focus_tree = {
 	focus = {
 		id = ARG_infamous_decade
 		icon = GFX_ARG_infamous_decade
-		x = 24
+
+		x = 23
 		y = 0
 		relative_position_id = ARG_rapidly_mobilize
 		mutually_exclusive = { focus = ARG_drift_back_towards_the_confederation }
@@ -1997,7 +2198,7 @@ focus_tree = {
 			factor = 280
 		}
 		
-		cost = 8
+		cost = 6
 		
 		available = {
 			is_subject = no
@@ -2275,8 +2476,8 @@ focus_tree = {
 			start_civil_war = {
 				ruling_party = fascism
 				ideology = ROOT
-				size = 0.5
-				capital = 904
+				size = 0.45
+				capital = 888
 				states = {
 					278 888 893 896 511 892 512 891 890 889
 				}
@@ -2606,7 +2807,7 @@ focus_tree = {
 			country_event = argentina.53
 			add_political_power = 100
 			hidden_effect = { 
-				news_event = { id = news.337 days = 2} 
+				news_event = { id = news.360 days = 2} 
 				clr_country_flag = ARG_civil_war_confederation
 			}
 		}
@@ -4294,8 +4495,10 @@ focus_tree = {
 			PRU = {
 				has_government = fascism
 				is_subject = no
+				is_in_faction = no 
 			}
 			has_government = fascism
+			NOT = { has_war_with = PRU }
 		}
 		
 		bypass = {
@@ -4439,8 +4642,11 @@ focus_tree = {
 		available = {
 			VEN = {
 				has_government = fascism
+				is_in_faction = no 
+				is_subject = no
 			}
 			has_completed_focus = ARG_create_our_own_axis
+			NOT = { has_war_with = VEN }
 		}
 		
 		bypass = {
@@ -4563,8 +4769,10 @@ focus_tree = {
 			DOM = {
 				has_government = fascism
 				is_in_faction = no
+				is_subject = no 
 			}
 			has_completed_focus = ARG_create_our_own_axis
+			NOT = { has_war_with = DOM }
 		}
 		
 		bypass = {
@@ -4606,8 +4814,10 @@ focus_tree = {
 			ELS = {
 				has_government = fascism
 				is_in_faction = no
+				is_subject = no 
 			}
 			has_completed_focus = ARG_create_our_own_axis
+			NOT = { has_war_with = ELS }
 		}
 		
 		bypass = {
@@ -5917,12 +6127,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = ARG_continue_the_doctrine
-				bonus = 2.0
-				uses = 3
-				category = land_doctrine
-			}
+			army_experience = 100
 		}
 	}
 	
@@ -6167,12 +6372,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = ARG_improve_pilot_training
-				bonus = 1.5
-				uses = 2
-				category = air_doctrine
-			}
+			air_experience = 125
 		}
 	}
 	
@@ -7328,12 +7528,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = ARG_learn_american_war_tactics
-				bonus = 1.0
-				uses = 2
-				category = land_doctrine
-			}
+			army_experience = 75
 			custom_effect_tooltip = ARG_ifinvestedamerica
 			effect_tooltip = {
 				random_owned_controlled_state = {
@@ -7402,6 +7597,8 @@ focus_tree = {
 		available = {
 			CHL = {
 				is_subject = no
+				is_in_faction = no 
+				has_government = ROOT
 				NOT = {
 					has_war_with = ROOT
 				}
@@ -7448,6 +7645,7 @@ focus_tree = {
 		available = {
 			URG = {
 				is_subject = no
+				is_in_faction = no 
 				NOT = {
 					has_war_with = ROOT
 				}
@@ -7535,6 +7733,11 @@ focus_tree = {
 		available = {
 			COL = {
 				is_subject = no
+				is_in_faction = no 
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
 				NOT = {
 					has_war_with = ROOT
 				}
@@ -7653,10 +7856,7 @@ focus_tree = {
 							is_in_faction_with = ROOT 
 						}
 					}
-					OR = {
-						has_government = neutrality
-						has_government = democratic
-					}
+					has_government = neutrality
 				}
 				add_opinion_modifier = { target = ARG modifier = ARG_against_us }
 			}
@@ -7838,12 +8038,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = ARG_deal_with_the_devil
-				bonus = 1.0
-				uses = 1
-				category = land_doctrine
-			}
+			army_experience = 50
 			GER = {	country_event = { id = argentina.33 days = 1 } }
 			custom_effect_tooltip = ARG_iftheyaccept
 			effect_tooltip = {
@@ -7895,103 +8090,20 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = ARG_removefascismfromcontinent
 			hidden_effect = {
-				if = { 
-					limit = { 
-						PAR = {
-							has_government = fascism 
+				every_other_country = {
+					limit = {
+						capital_scope = { is_on_continent = south_america }
+						has_government = fascism
+						NOT = {
+							is_in_faction_with = ROOT 
+							has_war_with = ROOT
 						}
 					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = PAR
-					}
-				}
-				if = { 
-					limit = { 
-						URG = {
-							has_government = fascism 
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
 						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = URG
-					}
-				}
-				if = { 
-					limit = { 
-						CHL = {
-							has_government = fascism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = CHL
-					}
-				}
-				if = { 
-					limit = { 
-						BRA = {
-							has_government = fascism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = BRA
-					}
-				}
-				if = { 
-					limit = { 
-						PRU = {
-							has_government = fascism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = PRU
-					}
-				}
-				if = { 
-					limit = { 
-						BOL = {
-							has_government = fascism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = BOL
-					}
-				}
-				if = { 
-					limit = { 
-						ECU = {
-							has_government = fascism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = ECU
-					}
-				}
-				if = { 
-					limit = { 
-						COL = {
-							has_government = fascism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = COL
-					}
-				}
-				if = { 
-					limit = { 
-						VEN = {
-							has_government = fascism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = VEN
 					}
 				}
 			}
@@ -8057,103 +8169,20 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = ARG_removecommunismfromcontinent
 			hidden_effect = {
-				if = { 
-					limit = { 
-						PAR = {
-							has_government = communism 
+				every_other_country = {
+					limit = {
+						capital_scope = { is_on_continent = south_america }
+						has_government = communism
+						NOT = {
+							is_in_faction_with = ROOT 
+							has_war_with = ROOT
 						}
 					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = PAR
-					}
-				}
-				if = { 
-					limit = { 
-						URG = {
-							has_government = communism 
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
 						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = URG
-					}
-				}
-				if = { 
-					limit = { 
-						CHL = {
-							has_government = communism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = CHL
-					}
-				}
-				if = { 
-					limit = { 
-						BRA = {
-							has_government = communism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = BRA
-					}
-				}
-				if = { 
-					limit = { 
-						PRU = {
-							has_government = communism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = PRU
-					}
-				}
-				if = { 
-					limit = { 
-						BOL = {
-							has_government = communism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = BOL
-					}
-				}
-				if = { 
-					limit = { 
-						ECU = {
-							has_government = communism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = ECU
-					}
-				}
-				if = { 
-					limit = { 
-						COL = {
-							has_government = communism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = COL
-					}
-				}
-				if = { 
-					limit = { 
-						VEN = {
-							has_government = communism 
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = VEN
 					}
 				}
 			}
@@ -8615,12 +8644,37 @@ focus_tree = {
 			}
 		}
 	}
-		
+
+	focus = {
+		id = ARG_focus_on_foreign_immigration
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = ARG_infamous_decade
+		prerequisite = { focus = ARG_infamous_decade }
+
+		cost = 8
+
+		available = {
+			has_war = no 
+			exists = yes 
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			custom_effect_tooltip = ARG_cost_to_attract_immigrants_reduced_tt
+			hidden_effect = {
+				subtract_from_variable = { EUYL_cost_many_immigrants = 35 }
+				subtract_from_variable = { EUYL_cost_some_immigrants = 20 }
+				subtract_from_variable = { EUYL_cost_few_immigrants = 10 }
+			}
+		}
+	}
 	
 	focus = {
 		id = ARG_help_out_the_spanish
 		icon = GFX_focus_generic_befriend_republican_spain_focus
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = ARG_infamous_decade
 		prerequisite = { focus = ARG_infamous_decade }
@@ -8674,18 +8728,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_SPA_CIVIL_WAR }
 		completion_reward = {
-			add_tech_bonus = {
-				name = ARG_study_the_spanish_civil_war
-				bonus = 1.0
-				uses = 2
-				category = land_doctrine
-			}
-			add_tech_bonus = {
-				name = ARG_study_the_spanish_civil_war
-				bonus = 1.0
-				uses = 1
-				category = air_doctrine
-			}
+			army_experience = 50
 		}
 	}
 	
@@ -10799,8 +10842,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ARG_take_in_spanish_immigrants
-		icon = GFX_focus_spr_war_of_independence
+		id = ARG_take_in_spanish_immigrants #attract italian immigrants 
+		icon = GFX_ARG_attract_italian_immigrants_icon
 		x = 0
 		y = 1
 		relative_position_id = ARG_build_the_military_hospital
@@ -10810,8 +10853,9 @@ focus_tree = {
 		
 		available = {
 			is_subject = no
-			SPR = {
-				has_civil_war = no
+			has_war = no 
+			ITA = {
+				exists = yes 
 			}
 		}
 		
@@ -10821,8 +10865,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			add_manpower = 35000
-			add_stability = 0.05
+			unlock_decision_tooltip = ARG_attract_italian_immigrants
 		}
 	}
 	
@@ -11296,10 +11339,6 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.03
 			add_manpower = -15000
-			add_days_mission_timeout = {
-				mission = ARG_the_possible_coup
-				days = -15
-			}
 		}
 	}
 	
@@ -11327,7 +11366,7 @@ focus_tree = {
 			add_war_support = 0.05
 			add_days_mission_timeout = {
 				mission = ARG_the_possible_coup
-				days = -10
+				days = -5
 			}
 		}
 	}
@@ -11354,10 +11393,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			add_stability = -0.02
-			add_days_mission_timeout = {
-				mission = ARG_the_possible_coup
-				days = -15
-			}
 		}
 	}
 	
@@ -11387,7 +11422,7 @@ focus_tree = {
 			add_political_power = 75
 			add_days_mission_timeout = {
 				mission = ARG_the_possible_coup
-				days = -10
+				days = -5
 			}
 		}
 	}
@@ -11609,13 +11644,7 @@ focus_tree = {
 				technology = advanced_medium_tank
 				technology = mechanised_infantry
 			}
-			add_tech_bonus = {
-				name = ARG_invite_german_intellectuals
-				bonus = 1.0
-				uses = 1
-				category = land_doctrine
-			}
-			army_experience = 10
+			army_experience = 75
 		}
 	}
 	
@@ -11656,13 +11685,7 @@ focus_tree = {
 				name = ARG_invite_italian_intellectuals
 				category = bb_tech
 			}
-			add_tech_bonus = {
-				name = ARG_invite_italian_intellectuals
-				bonus = 1.0
-				uses = 1
-				category = naval_doctrine
-			}
-			navy_experience = 20
+			navy_experience = 80
 		}
 	}
 	
@@ -12384,9 +12407,9 @@ focus_tree = {
 		id = ARG_the_second_cisplatine_war_focus
 		icon = GFX_ARG_second_cisplatine
 		x = 0
-		y = 1
+		y = 4
 
-		relative_position_id = ARG_spanish_argentine_economic_cooperation
+		relative_position_id = ARG_infamous_decade
 		
 		
 		cost = 5
@@ -12404,6 +12427,10 @@ focus_tree = {
 				has_idea = ARG_the_second_cisplatine_war
 				has_idea = ARG_the_second_cisplatine_war_2 
 			}
+		}
+
+		allow_branch = {
+			has_country_flag = ARG_is_in_cisplatine_war
 		}
 		
 		cancel_if_invalid = yes

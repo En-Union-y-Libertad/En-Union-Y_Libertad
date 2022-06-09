@@ -9,6 +9,7 @@ add_ideas = {
 	PRU_divided_army
 	PRU_naval_democratic_loyalties
 	PRU_fiat_currency_instability_1
+	extensive_conscription
 }
 
 set_variable = { PRU_army_power = 5 }
@@ -21,22 +22,22 @@ set_variable = { PRU_dockyard_output = -0.02}
 set_variable = { PRU_ship_attack_and_defense = -0.01 }
 set_variable = { PRU_dockyard_production_speed = -0.01 }
 
-recruit_character = PRU_Óscar_benavides
+
+recruit_character = PRU_Oscar_benavides
+recruit_character = PRU_mariano_melgar
 recruit_character = PRU_manuel_prado_ugarteche
 recruit_character = PRU_jorge_del_prado_chávez
 recruit_character = PRU_josé_luis_bustamante_y_rivero
-recruit_character = PRU_luis_a._flores
+recruit_character = PRU_luis_a_flores
 recruit_character = PRU_eloy_ureta_montehermoso
 recruit_character = PRU_miguel_monteza_tafur
 recruit_character = PRU_antonio_rodríguez_ramírez
-recruit_character = PRU_oscar_r._benavides
-recruit_character = PRU_manuel_a._odria
+recruit_character = PRU_manuel_a_odria
 recruit_character = PRU_luis_vinatea_almonte
-recruit_character = PRU_antonio_silva_santisteba
 recruit_character = PRU_felipe_de_la_barra
-recruit_character = PRU_roque_a._saldías
+recruit_character = PRU_roque_a_saldías
 recruit_character = PRU_armando_figueroa_roggero
-recruit_character = PRU_josé_r._alzamora
+recruit_character = PRU_josé_r_alzamora
 recruit_character = PRU_federico_corrico
 recruit_character = PRU_rafael_escardo
 recruit_character = PRU_alberto_lopez_flores
@@ -60,6 +61,58 @@ recruit_character = PRU_fernando_m_quesada_blanco
 recruit_character = PRU_eduardo_montero_rojas
 recruit_character = PRU_jose_bustamante_y_rivero
 recruit_character = PRU_romulo_frias
+recruit_character = PRU_antonio_silva_santiesteban
+recruit_character = PRU_jose_de_la_riva_aguero
+recruit_character = PRU_pachacutec_2
+recruit_character = PRU_pachacutec_2_general
+recruit_character = PRU_apu_panchau
+recruit_character = PRU_Cesar_Atahualpa
+recruit_character = PRU_eloy_ureta_montehermoso_leader
+recruit_character = PRU_carlos_Miro
+recruit_character = PRU_eudocio_ravines
+recruit_character = PRU_ricardo_perez_godoy_general
+recruit_character = PRU_nicolas_lindley_lopez
+recruit_character = PRU_ernesto_montagne_markholz
+recruit_character = PRU_Justo_Pumacahua
+recruit_character = PRU_Mateo_Sahuaraural
+recruit_character = PRU_Amadeo_Quispe
+
+PRU_manuel_a_odria = {
+	set_character_flag = PRU_urrista
+}
+
+PRU_eloy_ureta_montehermoso = {
+	set_character_flag = PRU_urrista
+}
+
+PRU_ernesto_montagne_markholz = {
+	set_character_flag = PRU_urrista
+}
+
+PRU_Amadeo_Quispe = {
+	set_character_flag = PRU_inca 
+}
+
+PRU_Mateo_Sahuaraural = {
+	set_character_flag = PRU_inca
+}
+
+PRU_Justo_Pumacahua = {
+	set_character_flag = PRU_inca
+}
+
+PRU_Cesar_Atahualpa = {
+	set_character_flag = PRU_inca
+}
+
+PRU_pachacutec_2 = {
+	set_character_flag = PRU_inca 
+}
+
+PRU_pachacutec_2_general = {
+	set_character_flag = PRU_inca 
+}
+
 
 set_war_support = 0.2
 
@@ -85,6 +138,7 @@ set_technology = {
 	cv_early_fighter = 1
 	early_bomber = 1
 	CAS1 = 1
+	basic_train = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -214,49 +268,6 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Jorge del Prado Chávez"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "gfx/leaders/PRU/portrait_per_communist.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Manuel Prado Ugarteche"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "gfx/leaders/PRU/portrait_per_liberal.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "José Luis Bustamante y Rivero"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "gfx/leaders/PRU/portrait_per_socialist.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Luis A. Flores"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "gfx/leaders/PRU/portrait_PRU_luis_a_flores.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
 
 1939.1.1 = {
 	set_country_flag = PRU_started_1939

@@ -1,5 +1,317 @@
-political_actions = {
+foreing_immigration = {
 
+	EUYL_take_in_war_refugees = {
+		icon = GFX_EUYL_attract_refugees
+
+		priority = 15
+
+		target_trigger = {
+			FROM = {
+				exists = yes 
+				OR = {
+					has_civil_war = yes 
+					has_war = yes 
+				}
+				surrender_progress > 0.4
+			}
+		}
+
+		available = {
+			exists = yes 
+			has_war = no 
+			has_stability > 0.5
+			has_navy_size = {
+				size > 10
+				type = convoy
+			}
+		}
+
+		visible = { 
+			NOT = { has_country_flag = EUYL_attracting_refugees }
+			capital_scope = { is_on_continent = south_america }
+			is_subject = no 
+			if = {
+				limit = {
+					has_government = communism
+				}
+				FROM = {
+					NOT = { has_government = fascism}
+				}
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				FROM = {
+					NOT = { has_government = communism }
+				}
+			}
+		}
+
+		cost = EUYL_cost_take_in_refugees 
+
+		days_remove = 100
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy 
+				amount = -10
+			}
+			hidden_effect = { set_country_flag = EUYL_attracting_refugees }
+		}
+
+		remove_effect = {
+			clr_country_flag = EUYL_attracting_refugees
+		}
+
+		modifier = {
+			political_power_factor = -0.1
+			monthly_population = 1
+		}
+	}
+	
+	EUYL_attract_many_immigrants = {
+		priority = 10
+		icon = eng_blackshirt_march
+		
+		available = {
+			has_war = no 
+			OR = {
+				AND = {
+					has_stability > 0.65
+					num_of_factories > 19
+				}
+				AND = {
+					has_stability > 0.4
+					num_of_factories > 29
+				}
+				AND = {
+					has_stability > 0.25
+					num_of_factories > 39
+				}
+			}
+			has_navy_size = {
+				size > 15
+				type = convoy
+			}
+			if = {
+				limit = { 
+					NOT = {
+						original_tag = ARG 
+					}
+				}
+				has_government = democratic
+			}
+			else = {
+				OR = {
+					has_government = democratic
+					has_government = peronism
+					has_government = neutrality
+				}
+			}
+		}
+		
+		fire_only_once = no
+
+		modifier = {
+			monthly_population = 1.5
+			consumer_goods_factor = 0.1
+			stability_factor = -0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy 
+				amount = -15
+			}
+		}
+
+		days_remove = 365
+		
+		cost = EUYL_cost_many_immigrants 
+		
+		ai_will_do = {
+			base = 15
+			modifier = {
+				add = 25
+				has_manpower < 5000
+			}
+		}
+	}
+	
+	EUYL_attract_some_immigrants = {
+		priority = 8
+		icon = GFX_EUYL_some_immigration
+		
+		available = {
+			has_war = no 
+			OR = {
+				AND = {
+					has_stability > 0.55
+					num_of_factories > 15
+				}
+				AND = {
+					has_stability > 0.35
+					num_of_factories > 24
+				}
+				AND = {
+					has_stability > 0.2
+					num_of_factories > 34
+				}
+			}
+			has_navy_size = {
+				size > 10
+				type = convoy
+			}
+			if = {
+				limit = { 
+					NOT = {
+						original_tag = ARG 
+					}
+				}
+				has_government = democratic
+			}
+			else = {
+				OR = {
+					has_government = democratic
+					has_government = peronism
+					has_government = neutrality
+				}
+			}
+		}
+		
+		fire_only_once = no
+
+		modifier = {
+			monthly_population = 1.0
+			consumer_goods_factor = 0.075
+			stability_factor = -0.075
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy 
+				amount = -10
+			}
+		}
+
+		days_remove = 365
+		
+		cost = EUYL_cost_some_immigrants
+		
+		ai_will_do = {
+			base = 15
+			modifier = {
+				add = 25
+				has_manpower < 5000
+			}
+		}
+	}
+
+	EUYL_attract_a_few_immigrants = {
+		priority = 6
+		icon = GFX_EUYL_little_immigration
+		
+		available = {
+			has_war = no 
+			OR = {
+				AND = {
+					has_stability > 0.45
+					num_of_factories > 12
+				}
+				AND = {
+					has_stability > 0.3
+					num_of_factories > 19
+				}
+				AND = {
+					has_stability > 0.1
+					num_of_factories > 29
+				}
+			}
+			has_navy_size = {
+				size > 5
+				type = convoy
+			}
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy 
+				amount = -5
+			}
+		}
+
+		modifier = {
+			monthly_population = 0.5
+			consumer_goods_factor = 0.05
+		}
+
+		days_remove = 365
+		
+		cost = EUYL_cost_few_immigrants 
+		
+		ai_will_do = {
+			base = 15
+			modifier = {
+				add = 25
+				has_manpower < 5000
+			}
+		}
+	}	
+
+	ARG_attract_italian_immigrants = {
+		priority = 25
+		icon = GFX_EUYL_attract_refugees
+
+		target_trigger = {
+			FROM = {
+				exists = yes 
+				original_tag = ITA 
+			}
+		}
+
+		available = {
+			exists = yes 
+			has_war = no 
+			has_navy_size = {
+				size > 10
+				type = convoy
+			}
+		}
+
+		visible = {
+			original_tag = ARG 
+			has_completed_focus = ARG_take_in_spanish_immigrants
+		}
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_factor = -0.05
+			monthly_population = 0.25
+		}
+
+		days_remove = 240
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = convoy 
+				amount = -10
+			}
+		}
+
+		remove_effect = {
+			add_manpower = 35000
+		}
+
+	}
+
+}
+
+political_actions = {
 	
 	targeted_race_for_the_bomb = {
 
@@ -167,140 +479,6 @@ political_actions = {
 				factor = 0
 				original_tag = SPR
 				NOT = { has_global_flag = spanish_civil_war }
-			}
-		}
-	}
-	
-	expand_slightly_our_population = {
-		priority = 10
-		icon = eng_blackshirt_march
-		
-		available = {
-			has_war = no 
-			has_stability > 0.4
-		}
-		
-		visible = {
-			OR = {
-				tag = CHL 
-				tag = ARG
-				tag = BRA
-				tag = URG
-				tag = PAR
-				tag = PRU
-				tag = BOL
-				tag = ECU
-				tag = COL
-				tag = VEN
-			}
-		}
-		
-		fire_only_once = no
-
-		modifier = {
-			monthly_population = 0.5
-			consumer_goods_factor = 0.05
-		}
-
-		days_remove = 365
-		
-		cost = 50 
-		
-		ai_will_do = {
-			base = 15
-			modifier = {
-				add = 25
-				has_manpower < 5000
-			}
-		}
-	}	
-	
-	expand_our_population = {
-		priority = 8
-		icon = eng_blackshirt_march
-		
-		available = {
-			has_war = no 
-			has_stability > 0.4
-		}
-		
-		visible = {
-			OR = {
-				tag = CHL 
-				tag = ARG
-				tag = BRA
-				tag = URG
-				tag = PAR
-				tag = PRU
-				tag = BOL
-				tag = ECU
-				tag = COL
-				tag = VEN
-			}
-		}
-		
-		fire_only_once = no
-
-		modifier = {
-			monthly_population = 0.75
-			consumer_goods_factor = 0.075
-			stability_factor = -0.05
-		}
-
-		days_remove = 365
-		
-		cost = 100 
-		
-		ai_will_do = {
-			base = 15
-			modifier = {
-				add = 25
-				has_manpower < 5000
-			}
-		}
-	}
-	
-	expand_massively_our_population = {
-		priority = 6
-		icon = eng_blackshirt_march
-		
-		available = {
-			has_war = no 
-			has_stability > 0.4
-		}
-		
-		visible = {
-			OR = {
-				tag = CHL 
-				tag = ARG
-				tag = BRA
-				tag = URG
-				tag = PAR
-				tag = PRU
-				tag = BOL
-				tag = ECU
-				tag = COL
-				tag = VEN
-			}
-		}
-		
-		fire_only_once = no
-
-		modifier = {
-			monthly_population = 1.0
-			consumer_goods_factor = 0.1
-			stability_factor = -0.1
-		}
-
-		days_remove = 365
-		
-		cost = 150
-		
-		ai_will_do = {
-			base = 15
-			modifier = {
-				add = 25
-				has_manpower < 5000
 			}
 		}
 	}
@@ -1346,6 +1524,270 @@ operations = {
 			}
 		}
 	}
+	### EUYL ###
+	EUYL_disband_militia_regiments = {
+		priority = 20
+		icon = generic_army_support
+		
+		allowed = {
+			OR = {
+				original_tag = BRA 
+				original_tag = PRU 
+				original_tag = ARG 
+				original_tag = URG 
+				original_tag = CHL 
+				original_tag = BOL 
+				original_tag = COL 
+				original_tag = ECU 
+				original_tag = PAR 
+				original_tag = VEN
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1	
+		}
+		
+		available = {
+			exists = yes 
+			is_subject = no 
+			has_capitulated = no 
+			has_civil_war = no
+			if = { #to make sure the civil wars work properly
+				limit = { original_tag = CHL }
+				date > 1939.12.30
+			}
+		}
+		
+		visible = {
+			OR = {
+				has_template = "Milicias"
+				has_template = "Loyalists"
+				has_template = "Militares"
+				has_template = "Comunistas"
+				has_template = "Milicias del Ejército"
+				has_template = "Anarqúistas"
+				has_template = "Nacionales"
+				has_template = "Milicias Leales"
+			}
+		}
+		
+		fire_only_once = no 
+		
+		cost = 25
+		
+		days_remove = 35
+		
+		remove_effect = {
+			if = {
+				limit = { has_template = "Milicias" }
+				delete_unit_template_and_units = {
+					division_template = "Milicias"
+					disband = yes
+				}
+			}
+			if = {
+				limit = { has_template = "Loyalists" }
+				delete_unit_template_and_units = {
+					division_template = "Loyalists"
+					disband = yes
+				}
+			}
+			if = {
+				limit = { has_template = "Militares" }
+				delete_unit_template_and_units = {
+					division_template = "Militares"
+					disband = yes
+				}
+			}
+			if = {
+				limit = { has_template = "Comunistas" }
+				delete_unit_template_and_units = {
+					division_template = "Comunistas"
+					disband = yes
+				}
+			}
+			if = {
+				limit = { has_template = "Milicias del Ejército" }
+				delete_unit_template_and_units = {
+					division_template = "Milicias del Ejército"
+					disband = yes
+				}
+			}
+			if = {
+				limit = { has_template = "Anarqúistas" }
+				delete_unit_template_and_units = {
+					division_template = "Anarqúistas"
+					disband = yes
+				}
+			}
+			if = {
+				limit = { has_template = "Nacionales" }
+				delete_unit_template_and_units = {
+					division_template = "Nacionales"
+					disband = yes
+				}
+			}
+			if = {
+				limit = { has_template = "Milicias Leales" }
+				delete_unit_template_and_units = {
+					division_template = "Milicias Leales"
+					disband = yes
+				}
+			}
+		}
+	}
+	
+	EUYL_scrap_the_obligatory_military_service = {
+		icon = generic_military
+		
+		allowed = {
+			OR = {
+				original_tag = ARG 
+				original_tag = BOL 
+			}
+		}
+		
+		available = {
+			exists = yes 
+			has_war = no 
+			is_subject = no 
+			has_capitulated = no 
+		}
+		
+		visible = {
+			if = {
+				limit = { original_tag = ARG }
+				has_idea = ARG_servicio_militar_obligatorio
+			}
+			if = {
+				limit = { original_tag = BOL }
+				has_idea = BOL_servicio_militar_obligatorio
+			}
+		}
+		
+		days_remove = 100
+		
+		modifier = {
+			war_support_weekly = -0.005
+		}
+		
+		remove_effect = {
+			if = {
+				limit = { original_tag = ARG }
+				remove_ideas = ARG_servicio_militar_obligatorio
+			}
+			if = {
+				limit = { original_tag = BOL }
+				remove_ideas = BOL_servicio_militar_obligatorio
+			}
+		}
+	}
+
+	CHL_recall_peter_hansen = {
+		icon = eng_trade_unions_support
+
+		allowed = { original_tag = CHL }
+
+		available = {
+			GER = {
+				OR = {
+					has_civil_war = yes 
+					NOT = { has_government = fascism}
+				}
+			}
+			has_government = fascism 
+		}
+
+		visible = {
+			exists = yes 
+			is_subject = no 
+		}
+
+		cost = 50 
+		fire_only_once = yes 
+		days_remove = 20
+
+		remove_effect = {
+			custom_effect_tooltip = CHL_peter_hansen_available_as_general_and_advisor_tt
+			hidden_effect = {
+				CHL_peter_hansen = {
+					clr_character_flag = CHL_living_in_germany
+				}
+			}
+		}
+	}
+
+	CHL_deal_with_rebellion_in_FROM = {
+		icon = oppression
+
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		target_array = controlled_states
+
+		on_map_mode = map_and_decisions_view
+
+		target_trigger = {
+			FROM = {
+				is_fully_controlled_by = ROOT 
+				is_core_of = ROOT 
+				is_demilitarized_zone = yes 
+			}
+		}
+
+		available = {
+			hidden_trigger = {
+				has_manpower > 999
+			}
+		}
+
+		visible = {
+			NOT = { has_dynamic_modifier = { modifier = CHL_political_instability } }
+			FROM = {
+				OR = {
+					has_dynamic_modifier = { modifier = CHL_organized_nacista_rebellion }
+					has_dynamic_modifier = { modifier = CHL_organized_communist_rebellion }
+				}
+			}
+		}
+
+		custom_cost_trigger = {
+			has_manpower > 999
+		}
+
+		custom_cost_text = CHL_manpower_1000_tt
+
+		days_remove = 60
+
+		modifier = {
+			weekly_manpower = -20
+		}
+
+		complete_effect = {
+			add_stability = -0.01
+			hidden_effect = {
+				add_manpower = -1000
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				set_demilitarized_zone = no 
+				if = {
+					limit = { has_dynamic_modifier = { modifier = CHL_organized_nacista_rebellion } }
+					remove_dynamic_modifier = { modifier = CHL_organized_nacista_rebellion }
+				}
+				else = {
+					remove_dynamic_modifier = { modifier = CHL_organized_communist_rebellion }
+				}
+			}
+		}
+	}
+			
 }
 
 special_projects = {
@@ -3190,9 +3632,9 @@ south_american_armament = {
 		}
 
 		custom_cost_trigger = {
-			has_political_power > 25
-			command_power > 15
-			has_army_experience > 5
+			has_political_power > 24
+			command_power > 19
+			has_army_experience > 34
 		}
 
 		custom_cost_text = SAU_cost_15_command
@@ -3208,9 +3650,9 @@ south_american_armament = {
 			    amount = -200
 			}
 			hidden_effect = {
-				add_command_power = -15
+				add_command_power = -20
 				add_political_power = -25
-				army_experience = -5
+				army_experience = -35
 			}
 		}
 
@@ -3268,9 +3710,9 @@ south_american_armament = {
 		}
 
 		custom_cost_trigger = {
-			has_political_power > 50
-			command_power > 25
-			has_army_experience > 10
+			has_political_power > 49
+			command_power > 29
+			has_army_experience > 49
 		}
 
 		custom_cost_text = SAU_cost_25_command
@@ -3288,7 +3730,7 @@ south_american_armament = {
 			hidden_effect = {
 				add_command_power = -25
 				add_political_power = -50
-				army_experience = -10
+				army_experience = -50
 			}
 		}
 
@@ -3326,6 +3768,55 @@ south_american_armament = {
 		}
 	}
 
+	SOA_hide_show_conscript_divison_decisions = {	
+		priority = 100
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = SOA_hide_decisions }
+				custom_effect_tooltip = SOA_will_show_decisions_tt
+				clr_country_flag = SOA_hide_decisions
+			}
+			else = {
+				custom_effect_tooltip = SOA_will_hide_decisions_tt
+				set_country_flag = SOA_hide_decisions
+			}
+		}
+	}
+
+	CHL_recruit_young_officers = {
+		icon = eng_trade_unions_support
+		priority = 90
+		
+		visible = { 
+			original_tag = CHL
+			has_completed_focus = CHL_ejercito_de_chile 
+		}
+		
+		available = { 
+			has_civil_war = no 
+			exists = yes 
+		}
+		
+		fire_only_once = yes 
+		
+		cost = 50
+		
+		complete_effect = {
+			custom_effect_tooltip = CHL_pinochet_carlos_rene_available_generals_tt
+			hidden_effect = {
+				CHL_rene_schneider = {
+					set_character_flag = CHL_promoted
+				}
+				CHL_augusto_pinochet = {
+					set_character_flag = CHL_promoted
+				}
+				CHL_carlos_prats = {
+					set_character_flag = CHL_promoted
+				}
+			}
+		}
+	}
+
 	SOA_conscript_proper_divison = {
 		icon = generic_army_support
 
@@ -3351,9 +3842,9 @@ south_american_armament = {
 		}
 
 		custom_cost_trigger = {
-			has_political_power > 80
-			command_power > 45
-			has_army_experience > 20
+			has_political_power > 79
+			command_power > 44
+			has_army_experience > 74
 		}
 
 		custom_cost_text = SAU_cost_45_command
@@ -3371,7 +3862,7 @@ south_american_armament = {
 			hidden_effect = {
 				add_command_power = -45
 				add_political_power = -80
-				army_experience = -20
+				army_experience = -75
 			}
 		}
 
@@ -3457,6 +3948,7 @@ south_american_armament = {
 			NOT = {
 				original_tag = PRU
 			}
+			NOT = { has_country_flag = SOA_hide_decisions }
 			FROM = {
 				is_fully_controlled_by = ROOT
 				NOT = {
@@ -3512,10 +4004,8 @@ conference_cat = {
 		}
 		
 		timeout_effect = {
-			ROOT = {
-				country_event = { id = conference.1 hours = 8 }
-				set_country_flag = conference1_ready
-			} 
+			country_event = { id = conference.1 hours = 8 }
+			set_country_flag = conference1_ready
 		}
 		complete_effect = {
 			
@@ -3546,10 +4036,8 @@ conference_cat = {
 		}
 
 		timeout_effect = {
-			ROOT = {
-				country_event = { id = conference.2 hours = 8 }
-				set_country_flag = conference2_ready
-			}
+			country_event = { id = conference.2 hours = 8 }
+			set_country_flag = conference2_ready
 		}
 		complete_effect = {
 			
@@ -3580,10 +4068,8 @@ conference_cat = {
 		}
 
 		timeout_effect = {
-			ROOT = {
-				country_event = { id = conference.3 hours = 8 }
-				set_country_flag = conference3_ready
-			}
+			country_event = { id = conference.3 hours = 8 }
+			set_country_flag = conference3_ready
 		}
 		complete_effect = {
 			
@@ -3615,9 +4101,7 @@ conference_cat = {
 		}
 
 		timeout_effect = {
-			ROOT = {
-				country_event = { id = conference.4 hours = 8 }
-			}
+			country_event = { id = conference.4 hours = 8 }
 		}
 		complete_effect = {
 			

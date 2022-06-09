@@ -25,8 +25,6 @@ ideas = {
 			modifier = {
 			consumer_goods_factor = 0.05
 			}
-
-
 		}
 
 		PRU_purchasing_2 = {
@@ -2320,6 +2318,10 @@ ideas = {
 				always = yes 
 			}
 
+			available = {
+				has_civil_war = yes 
+			}
+
 			removal_cost = -1
 
 			modifier = {
@@ -2340,6 +2342,10 @@ ideas = {
 				always = yes 
 			}
 
+			available = {
+				has_civil_war = yes 
+			}
+
 			removal_cost = -1
 
 			modifier = {
@@ -2358,6 +2364,10 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes 
+			}
+
+			available = {
+				has_civil_war = yes 
 			}
 
 			removal_cost = -1
@@ -2431,33 +2441,11 @@ ideas = {
 			picture = generic_economic_increase 
 
 			allowed = {
-				OR = {
-					tag = ARG
-					tag = BRA
-					tag = COL
-					tag = BOL
-					tag = URG
-					tag = PRU 
-					tag = ECU 
-					tag = PAR 
-					tag = VEN
-				}
+				always = no 
 			}
 
 			available = {
-				OR = {
-					is_in_faction_with = PRU
-					is_in_faction_with = CHL
-					if = {
-						limit = {
-							OR = {
-								always = no 
-								original_tag = BOL 
-							}
-						}
-						is_in_faction = yes 
-					}
-				}
+				is_in_faction = yes 
 				NOT = {
 					has_country_flag = is_PBC 
 				}
@@ -2479,32 +2467,11 @@ ideas = {
 			picture = generic_manpower_bonus
 
 			allowed = {
-				OR = {
-					tag = ARG
-					tag = BRA
-					tag = COL
-					tag = BOL
-					tag = URG
-					tag = PRU 
-					tag = ECU 
-					tag = PAR 
-					tag = VEN
-				}
+				always = no 
 			}
 
 			available = {
-				OR = {
-					is_in_faction_with = PRU
-					if = {
-						limit = {
-							OR = {
-								always = no 
-								original_tag = BOL 
-							}
-						}
-						is_in_faction = yes 
-					}
-				}
+				is_in_faction = yes 
 				NOT = {
 					has_country_flag = is_PBC
 				}
@@ -2523,355 +2490,82 @@ ideas = {
 			}
 		}
 		
-	}
-
-	political_advisor = {
-
-		PRU_armando_reveredo_iglesias = {
-
-			picture = generic_political_advisor_south_america_1
+		PRU_civil_war_f_idea = {
+			name =  PRU_civil_war 
+			picture = PRU_guerra_civil_f
 			
 			allowed = {
-				original_tag = PRU
+				always = no 
 			}
 			
-			traits = { war_industrialist }
-		}
-
-		PRU_oscar_miro_quesada = {
-
-			picture = generic_political_advisor_south_america_2
-				
-			allowed = {
-				original_tag = PRU
+			available = {
+				has_civil_war = yes
 			}
 			
-			traits = { silent_workhorse }
-		}
-
-		PRU_reynaldo_vinatea = {
-
-			picture = generic_political_advisor_south_america_1
-			
-			allowed = {
-				original_tag = PRU
+			cancel = {
 			}
 			
-			traits = { ideological_crusader }
-		}
-
-		PRU_jose_bustamante_y_rivero = {
-
-			picture = generic_political_advisor_south_america_3
-			
-			allowed = {
-				original_tag = PRU
+			allowed_civil_war = {
+				always = yes
 			}
 			
-			traits = { compassionate_gentleman }
-		}
-
-		PRU_manuel_vicente = {
-			picture = generic_political_advisor_south_america_2
-
-			allowed = {
-				original_tag = PRU
-			}
-
-			traits = { EUYL_soldier_recruiter }
-		}
-	}
-
-	theorist = {
-
-		PRU_luis_ramirez_ortiz = {
-			ledger = army
-					
-			picture = generic_army_south_america_1
-
-			allowed = {
-				original_tag = PRU
-			}
-			
-			research_bonus = {
-				land_doctrine = 0.10
-			}
-			
-			traits = { military_theorist }
-		}
-
-		PRU_romulo_frias = {
-			ledger = air
-					
-			picture = generic_air_south_america_1
-				
-			allowed = {
-				original_tag = PRU
-			}
-			
-			research_bonus = {
-				air_doctrine = 0.10
-			}
-			
-			traits = { air_warfare_theorist }
-		}
-
-		PRU_ernesto_scroth = {
-			ledger = navy
-					
-					
-			allowed = {
-				original_tag = PRU
-			}
-			
-			picture = generic_political_advisor_south_america_1
-			
-			research_bonus = {
-				naval_doctrine = 0.10
-			}
-			
-			traits = { naval_theorist }
-		}
-	}
-
-	high_command = {
-
-		PRU_eloy_g_ureta = {
-			ledger = army
-
-			picture = generic_army_south_america_1
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-			traits = { army_logistics_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		PRU_rafael_escardo = {
-			ledger = army
-
-			picture = generic_army_south_america_2
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-			traits = { army_infantry_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		PRU_eduardo_montero_rojas = {
-			ledger = army
-
-			picture = generic_army_south_america_4
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-			traits = { army_armored_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		PRU_luis_navarrete = {
-			ledger = air
-
-			picture = generic_navy_south_america_1
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-			traits = { navy_carrier_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		PRU_fernando_m_quesada_blanco = {
-			ledger = air
-
-			picture = generic_air_south_america_1
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-			traits = { air_strategic_bombing_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		PRU_alberto_lopez_flores = {
-			ledger = air
-
-			picture = generic_air_south_america_1
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-			traits = { air_airborne_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	# MILITARY
-	army_chief = {
-
-		PRU_oscar_benavides_larrea = {
-			
-			picture = generic_army_south_america_2
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-			traits = { army_chief_defensive_2 }
-			
-			ai_will_do = {
-				factor = 1
+			modifier = {
+				surrender_limit = 1
+				max_surrender_limit_offset = 0.00
 			}
 		}
 		
-		PRU_oscar_gilardi = {
-			
-			picture = generic_army_south_america_5
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-			traits = { army_chief_drill_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		PRU_vladimiro_lopez_trigoso = {
-			
-			picture = generic_army_south_america_3
+		INC_our_war_of_independence = { 
+			picture = INC_war_of_independence
 			
 			allowed = {
-				original_tag = PRU
+				always = no 
 			}
 			
-
+			available = {
+				has_civil_war = yes
+			}
 			
-			traits = { army_chief_offensive_2 }
+			cancel = {
+			}
 			
-			ai_will_do = {
-				factor = 1
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				surrender_limit = 1
+				max_surrender_limit_offset = 0.05
 			}
 		}
-
-		PRU_manuel_odria_amoretti = {
-			
-			picture = generic_army_south_america_2
+		
+		PRU_civil_war_d_idea = {
+			name =  PRU_civil_war 
+			picture = PRU_guerra_civil_d
 			
 			allowed = {
-				original_tag = PRU
+				always = no 
 			}
 			
-
+			available = {
+				has_civil_war = yes
+			}
 			
-			traits = { army_chief_organizational_2 }
+			cancel = {
+			}
 			
-			ai_will_do = {
-				factor = 1
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				surrender_limit = 1
+				max_surrender_limit_offset = 0.05
 			}
 		}
+		
 	}
 
-	air_chief = {
-
-		PRU_paul_de_beaudiez = {
-			
-			picture = generic_air_south_america_3
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-
-			
-			traits = { air_chief_safety_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		PRU_eduardo_cantabria_gomez = {
-			
-			picture = generic_air_south_america_2
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-
-			
-			traits = { air_chief_reform_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-
-	navy_chief = {
-
-		PRU_alberto_roque_saldias = {
-			
-			picture = generic_navy_south_america_2
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-			
-			traits = { navy_chief_decisive_battle_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		PRU_felipe_tudela = {
-			
-			picture = generic_navy_south_america_3
-			
-			allowed = {
-				original_tag = PRU
-			}
-			
-
-			
-			traits = { navy_chief_commerce_raiding_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
 
 	aircraft_manufacturer = {
 			

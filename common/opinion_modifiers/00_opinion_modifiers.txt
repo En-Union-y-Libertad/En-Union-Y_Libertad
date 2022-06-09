@@ -1226,4 +1226,24 @@ opinion_modifiers = {
 	COL_benavides_contacted = {
 		value = -75
 	}
+
+	invested_in_country = {
+		value = 15
+	}
+
+	NOT_invested_in_country = {
+		value = -15
+	}
+
+	BRA_brazilian_civil_war_commitment = {
+		value = 35
+	}
+
+	BRA_cotton_trade = {
+		value = 25 
+	}
+
+	BRA_resource_rights = {
+		value = 30
+	}
 }

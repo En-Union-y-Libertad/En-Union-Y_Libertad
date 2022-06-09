@@ -63,6 +63,18 @@ country_event = {
 					OR = {
 						is_subject = yes 
 						has_war = yes 
+						has_civil_war = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				BRA = {
+					OR = {
+						has_idea = BRA_scars_of_the_1930_revolution_1
+						has_idea = BRA_scars_of_the_1930_revolution_2
+						has_idea = BRA_scars_of_the_1930_revolution_3
+						has_idea = BRA_scars_of_the_1930_revolution_4
 					}
 				}
 			}
@@ -83,9 +95,16 @@ country_event = {
 	
 	option = { #dont step in
 		name = argentina.2.b
-		ai_chance = { base = 0 }
+		ai_chance = { 
+			base = 10
+			modifier = {
+				factor = 150
+				check_variable = { BRA_playing_as_congress = 1 } #checks if brazil is being controlled by congress
+			}
+		}
 		BRA = {
-			add_political_power = -75
+			add_political_power = -20
+			add_war_support = -0.01
 		}
 	}
 }
@@ -187,17 +206,28 @@ country_event = {
 		name = argentina.5.a
 		ai_chance = { base = 98 }
 		white_peace = ARG
-		ARG = { 
-			country_event = { id = argentina.7 }
-		}
+		#ARG = { 
+		#	country_event = { id = argentina.7 }
+		#}
 	}
+
+	option = { #accept and annex misiones 
+		name = argentina.5.c 
+		trigger = {
+			tag = BZE 
+		}
+		ai_chance = { base = 135 }
+		white_peace = ARG 
+		transfer_state = 905
+	}
+	
 	
 	option = { #not accept
 		name = argentina.5.b 
 		ai_chance = { base = 2 }
-		ARG = {
-			country_event = { id = argentina.8 }
-		}
+		#ARG = {
+		#	country_event = { id = argentina.8 }
+		#}
 		add_political_power = -50
 	}
 }
@@ -399,9 +429,9 @@ country_event = {
 		name = argentina.13.b 
 		ai_chance = { base = 20 }
 		effect_tooltip = {
-			ARG = {
+			FROM = {
 				create_wargoal = {
-					target = PREV
+					target = ROOT
 					type = annex_everything
 				}
 			}
@@ -435,11 +465,9 @@ country_event = {
 	
 	option = {
 		name = argentina.15.a
-		ARG = {
-			create_wargoal = {
-				target = PREV
-				type = annex_everything
-			}
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
 		}
 	}
 }
@@ -475,14 +503,14 @@ country_event = {
 		name = argentina.16.b 
 		ai_chance = { base = 35 }
 		effect_tooltip = {
-			ARG = {
+			FROM = {
 				create_wargoal = {
-					target = PREV
+					target = ROOT
 					type = annex_everything
 				}
 			}
 		}
-		ARG = {
+		FROM = {
 			country_event = { id = argentina.18 }
 		}
 	}
@@ -511,11 +539,9 @@ country_event = {
 	
 	option = {
 		name = argentina.18.a 
-		ARG = {
-			create_wargoal = {
-				target = PREV
-				type = annex_everything
-			}
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
 		}
 	}
 }
@@ -586,6 +612,19 @@ country_event = {
 		name = argentina.22.a 
 		ai_chance = { 
 			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ARG_ai_behavior 
+						option = ARG_DEMOCRATIC_AZULES
+					}
+					has_game_rule = {
+						rule = ARG_ai_behavior 
+						option = ARG_DEMOCRATIC_GRISES
+					}
+				}
+			}
 		}
 		ARG = {
 			add_timed_idea = { idea = ARG_concordancia_elected days = 90 }
@@ -616,6 +655,13 @@ country_event = {
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ARG_ai_behavior 
+					option = ARG_PERONIST
+				}
 			}
 		}
 		ARG = {
@@ -1236,6 +1282,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		original_tag = ARG
 		date > 1942.1.12
 		OR = {
 			has_completed_focus = ARG_save_roberto
@@ -1257,8 +1304,9 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
-					has_completed_focus = ARG_save_roberto
+				OR = {
+					has_completed_focus = ARG_union_civica_radical
+					has_completed_focus = ARG_a_new_path
 				}
 			}
 			custom_effect_tooltip = ARG_unlock_march_decisions_tt
@@ -1986,6 +2034,12 @@ country_event = {
 					has_war_with = BOL 
 					has_war_with = PRU 
 				}
+				NOT = {
+					OR = {
+						original_tag = PRU 
+						original_tag = BOL
+					}
+				}
 			}
 			country_event = { id = generic.5 random = 6 }
 		}
@@ -2043,7 +2097,7 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = gen_nazism
 			traits = {
-				ARG_brutal_leader_2
+				ARG_ruthless_leader
 			}
 		}
 		set_party_name = {

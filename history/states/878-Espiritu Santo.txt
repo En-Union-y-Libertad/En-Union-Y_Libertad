@@ -15,8 +15,10 @@ state={
 			10999 = {
 				naval_base = 1
 			}
+			arms_factory = 1
 		}
 		add_core_of = BRA
+		add_core_of = DRJ
 	}
 	provinces={
 		2153 8196 10999 13879 13914 

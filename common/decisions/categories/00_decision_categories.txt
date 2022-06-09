@@ -400,3 +400,19 @@ conference_cat = {
 		has_country_flag = conference
 	}
 }
+
+#Foreign immigrants
+
+foreing_immigration = {
+	priority = 5
+	icon = GFX_EUYL_foreing_immigration
+	allowed = {
+		AND = {
+			exists = yes 
+			capital_scope = { is_on_continent = south_america }
+		}
+	}
+	visible = {
+		has_war = no 
+	}
+}

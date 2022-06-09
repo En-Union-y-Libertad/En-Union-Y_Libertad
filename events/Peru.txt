@@ -13,6 +13,7 @@ country_event = {
 	picture = GFX_PRU_1936_election
 
 	is_triggered_only = yes 
+	fire_only_once = yes 
 
 	option = { #luis antonio eguiguren/partido social democrata 
 		name = peru.122.a 
@@ -88,7 +89,109 @@ country_event = {
 		add_stability = -0.05
 		add_political_power = -35
 		custom_effect_tooltip = PRU_union_revolucionaria_may_try_something_tt
+		hidden_effect = {
+			if = {
+				limit = { 
+					OR = {
+						has_government = fascism 
+						is_historical_focus_on = yes 
+					}
+				}
+			}
+			else = {
+				set_temp_variable = { PRU_chance_of_coup_attempt = 0 }
+				set_temp_variable = { PRU_nothing = 100 }
+				if = {
+					limit = { has_stability < 0.5 }
+					add_to_temp_variable = { PRU_chance_of_coup_attempt = 10 }
+				}
+				if = {
+					limit = { has_stability > 0.25 }
+					add_to_temp_variable = { PRU_chance_of_coup_attempt = 25 }
+				}
+				if = {
+					limit = { has_war_support < 0.3 }
+					add_to_temp_variable = { PRU_chance_of_coup_attempt = 10 }
+				}
+				if = {
+					limit = { fascism > 0.15 }
+					add_to_temp_variable = { PRU_chance_of_coup_attempt = 10 }
+				}
+				if = {
+					limit = { fascism > 0.3 }
+					add_to_temp_variable = { PRU_chance_of_coup_attempt = 20 }
+				}
+				if = {
+					limit = {
+						AND = {
+							GER = { has_government = fascism }
+							ITA = { has_government = fascism }
+							JAP = { has_government = fascism }
+						}
+					}
+					add_to_temp_variable = { PRU_chance_of_coup_attempt = 10 }
+				}
+				if = {
+					limit = {
+						OR = {
+							USA = { has_government = fascism }
+							ENG = { has_government = fascism }
+							FRA = { has_government = fascism }
+						}
+					}
+					add_to_temp_variable = { PRU_chance_of_coup_attempt = 15 }
+				}
+				if = {
+					limit = { threat > 0.2 }
+					add_to_temp_variable = { PRU_chance_of_coup_attempt = 10 }
+				}
+				if = {
+					limit = { 
+						any_neighbor_country = {
+							has_government = fascism
+						}
+					}
+					add_to_temp_variable = { PRU_chance_of_coup_attempt = 15 }
+				}
+				if = {
+					limit = { check_variable = { PRU_army_power > 14 } }
+					add_to_temp_variable = { PRU_chance_of_coup_attempt = 15 }
+				}
+				clamp_variable = {
+					var = PRU_chance_of_coup_attempt
+					min = 0
+					max = 100
+				}
+				subtract_from_temp_variable = { PRU_nothing = PRU_chance_of_coup_attempt }
+				random_list = {
+					PRU_chance_of_coup_attempt = {
+						country_event = { id = peru.80 days = 14 }
+					}
+					PRU_nothing = {
+					
+					}
+				}
+			}
+		}
 	}
+}
+
+#Fascist party begins planning a coup 
+country_event = {
+	id = peru.80 
+	title = peru.254.t 
+	desc = peru.254.d 
+	picture = GFX_report_event_generic_army 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = peru.254.a 
+		custom_effect_tooltip = PRU_fascists_take_over_states_tt
+		set_country_flag = PRU_fascist_coup_attempt
+		unlock_decision_category_tooltip = PRU_coup_attempt_fascists
+	}
+	
 }
 
 #Peru Requests Investment!
@@ -106,22 +209,15 @@ country_event = {
 		ai_chance = {
 			base = 50
 			modifier = {
-				add = -5
+				add = 5
 				has_opinion = {
-					target = PRU
-					value > 25
-				}
-			}
-			modifier = {
-				add = -10
-				has_opinion = {
-					target = PRU
+					target = FROM
 					value > 75
 				}
 			}
 		}
 
-		PRU = { country_event = { id = peru.128 days = 10 } }	
+		FROM = { country_event = { id = peru.128 days = 10 } }	
 	}
 	
 	option = {
@@ -129,22 +225,22 @@ country_event = {
 		ai_chance = {
 			base = 40
 			modifier = {
-				add = -5
+				add = 5
 				has_opinion = {
-					target = PRU
+					target = FROM
 					value > 25
 				}
 			}
 			modifier = {
-				add = -10
+				add = 10
 				has_opinion = {
-					target = PRU
+					target = FROM
 					value > 75
 				}
 			}
 		}
 	
-		PRU = { country_event = { id = peru.129 days = 10 } }		
+		FROM = { country_event = { id = peru.129 days = 10 } }		
 	}
 	
 	option = {
@@ -154,20 +250,20 @@ country_event = {
 			modifier = {
 				add = 10
 				has_opinion = {
-					target = PRU
+					target = FROM
 					value > 25
 				}
 			}
 			modifier = {
 				add = 25
 				has_opinion = {
-					target = PRU
+					target = FROM
 					value > 75
 				}
 			}
 		}
 	
-		PRU = { country_event = { id = peru.130 days = 10 } }		
+		FROM = { country_event = { id = peru.130 days = 10 } }		
 	}	
 	
 	option = {
@@ -177,7 +273,7 @@ country_event = {
 			modifier = {
 				add = 20
 				has_opinion = {
-					target = PRU
+					target = FROM
 					value < -10
 				}
 			}
@@ -188,12 +284,12 @@ country_event = {
 			modifier = {
 				add = 50
 				has_opinion = {
-					target = PRU
+					target = FROM
 					value < -75
 				}
 			}
 		}
-		PRU = { country_event = { id = peru.127 days = 1 } }
+		FROM = { country_event = { id = peru.127 days = 1 } }
 	}
 
 	
@@ -1954,6 +2050,13 @@ country_event = {
 
 	option = { #take it back by force 
 		name = peru.17.a 
+		trigger = {
+			OR = {
+				has_government = communism
+				has_government = fascism
+				has_cosmetic_tag = HSPAM
+			}
+		}
 		create_wargoal = {
 			type = annex_everything
 			target = FROM 
@@ -1962,7 +2065,7 @@ country_event = {
 
 	option = { #let them go 
 		name = peru.17.b 
-		add_war_support = -0.03
+		add_war_support = -0.01
 	}
 }
 
@@ -2488,30 +2591,12 @@ country_event = {
 
 	is_triggered_only = yes 
 
-	option = { #choose Juan Velasco Alvarado
-		name = peru.28.a 
-		ai_chance = {
-			base = 10
-		}
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Juan Velasco Alvarado"
-			desc = ""
-			picture = "gfx/leaders/PRU/PRU_juan_velasco_alvarado.dds"
-			expire = "1965.1.1"
-			ideology = theocracy
-			traits = {
-				CHL_military_leader
-			}
-		}
-	}
-
 	option = { #choose Jose luis bustamante
 		name = peru.28.b 
 		ai_chance = {
 			base = 10
 		}
-		retire_country_leader = yes
+		retire_country_leader = yes 
 		create_country_leader = {
 			name = "José Luis Bustamante y Rivero"
 			desc = ""
@@ -2519,13 +2604,50 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = theocracy
 			traits = {
-				CHL_economist
+				CHL_military_leader
+			}
+		}
+	}
+	
+	option = { #choose Pachacutec the II
+		name = peru.28.e 
+		ai_chance = {
+			base = 15
+		}
+		retire_country_leader = yes 
+		create_country_leader = {
+			name = "Pachacutec II"
+			desc = ""
+			picture = "gfx/leaders/PRU/PRU_Pachacutec_II.png"
+			expire = "1965.1.1"
+			ideology = theocracy
+			traits = {
+				driver_of_the_faithful
 			}
 		}
 	}
 
-	option = { #leave the sun god as leader
+	option = { #sun god as leader
 		name = peru.28.c  
+		ai_chance = {
+			base = 5
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Apu-punchau"
+			desc = "POLITICS_SUN_GOD_DESC"
+			picture = "gfx/leaders/PRU/INC_sun_god_portrait.dds"
+			expire = "1965.1.1"
+			ideology = theocracy
+			traits = {
+				PRU_godly_being
+				PRU_not_a_real_person
+			}
+		}
+	}
+	
+	option = { #keep current leader
+		name = peru.28.f
 		ai_chance = {
 			base = 5
 		}
@@ -2594,19 +2716,15 @@ country_event = {
 			ruling_party = fascism
 			ideology = ROOT 
 			size = PRU_size_of_government
-			keep_unit_leaders = {
-				44511
+			states = all 
+			states_filter = {
+				NOT = { has_state_flag = PRU_state_is_fascist }
 			}
 		}
-
-		remove_unit_leader = 44512
 
 		set_country_flag = PRU_has_civil_war_fascism
 
 		hidden_effect = {
-			every_owned_state = {
-				set_state_flag = is_owned_by_PRU 
-			}
 			division_template = { 
 				name = "Milicias" 
 				division_names_group = SPAN_INF_02 
@@ -2618,6 +2736,7 @@ country_event = {
 					infantry = { x = 0 y = 3 } 
 				}
 			}	
+			add_ideas = PRU_civil_war_f_idea
 			division_template = {
 				name = "División de Infanteria Peruana" 
 				division_names_group = SPAN_INF_02 
@@ -2647,21 +2766,7 @@ country_event = {
 				disband = yes
 			}
 
-			every_state = {
-				limit = {
-					is_core_of = PRU  
-					has_state_flag = PRU_state_is_fascist
-				}
-				clr_state_flag = is_owned_by_PRU
-				ROOT = {
-					transfer_state = PREV 
-				}
-			}
-
 			every_controlled_state = {
-				limit = {
-					has_state_flag = PRU_state_is_fascist
-				}
 				create_unit = {
 					division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
 					owner = ROOT
@@ -2717,20 +2822,9 @@ country_event = {
 					original_tag = PRU 
 					has_civil_war = yes 
 				}
-				every_state = {
-					limit = {
-						is_core_of = PRU
-						has_state_flag = is_owned_by_PRU 
-						NOT = {
-							has_state_flag = PRU_state_is_fascist
-						}
-					}
-					PREV = {
-						transfer_state = PREV 
-					}
-				}
+				add_ideas = PRU_civil_war_d_idea
 				division_template = { 
-					name = "Milicias" 
+					name = "Milicias Leales" 
 					division_names_group = SPAN_INF_02 
 					is_locked = yes 
 					regiments = { 
@@ -2741,7 +2835,7 @@ country_event = {
 					}
 				}	
 				division_template = {
-					name = "División de Infanteria Peruana" 
+					name = "División de Infanteria Peruana Leales" 
 					division_names_group = SPAN_INF_02 
 					is_locked = no 
 					regiments = { 
@@ -2761,21 +2855,16 @@ country_event = {
 					}
 				}
 				every_controlled_state = {
-					limit = {
-						NOT = {
-							has_state_flag = PRU_state_is_fascist
-						}
-					}
 					create_unit = {
-						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+						division = "name = \"Milicias Leales\" division_template = \"Milicias Leales\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
 						owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+						division = "name = \"Milicias Leales\" division_template = \"Milicias Leales\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
 						owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
+						division = "name = \"Milicias Leales\" division_template = \"Milicias Leales\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
 						owner = PREV
 					}
 				}
@@ -2784,29 +2873,29 @@ country_event = {
 					 if = {
 						limit = { check_variable = { PRU_size_of_government < 0.5} }
 						create_unit = {
-							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							division = "name = \"División de Infanteria Peruana Leales\" division_template = \"División de Infanteria Peruana Leales\" start_experience_factor = 0.2 start_equipment_factor = 1" 
 							owner = PREV
 						}
 						create_unit = {
-							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							division = "name = \"División de Infanteria Peruana Leales\" division_template = \"División de Infanteria Peruana Leales\" start_experience_factor = 0.2 start_equipment_factor = 1" 
 							owner = PREV
 						}
 						create_unit = {
-							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							division = "name = \"División de Infanteria Peruana Leales\" division_template = \"División de Infanteria Peruana Leales\" start_experience_factor = 0.2 start_equipment_factor = 1" 
 							owner = PREV
 						}
 						create_unit = {
-							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							division = "name = \"División de Infanteria Peruana Leales\" division_template = \"División de Infanteria Peruana Leales\" start_experience_factor = 0.2 start_equipment_factor = 1" 
 							owner = PREV
 						}
 					}
 					else = {
 						create_unit = {
-							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							division = "name = \"División de Infanteria Peruana Leales\" division_template = \"División de Infanteria Peruana Leales\" start_experience_factor = 0.2 start_equipment_factor = 1" 
 							owner = PREV
 						}
 						create_unit = {
-							division = "name = \"División de Infanteria Peruana\" division_template = \"División de Infanteria Peruana\" start_experience_factor = 0.2 start_equipment_factor = 1" 
+							division = "name = \"División de Infanteria Peruana Leales\" division_template = \"División de Infanteria Peruana Leales\" start_experience_factor = 0.2 start_equipment_factor = 1" 
 							owner = PREV
 						}
 					}
@@ -2838,5 +2927,161 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = peru.24 hours = 8 }
 		}
+	}
+}
+
+#Player chooses whether or not to have Ureta or Flores lead the nation 
+country_event = {
+	id = peru.32
+	title = peru.32.t 
+	desc = peru.32.d 
+	picture = GFX_PRU_event_32
+
+	is_triggered_only = yes 
+
+	option = { #Eloy Ureta
+		name = peru.32.a 
+		ai_chance = {
+			base = 5
+		}
+		retire_character = PRU_luis_a_flores
+		promote_character = PRU_eloy_ureta_montehermoso_leader
+	}
+
+	option = { #Luis stays president lol
+		name  = peru.32.b 
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+#Czechoslovakia gets Peruvian request to purchase tanks 
+country_event = {
+	id = peru.33 
+	title = peru.33.t 
+	desc = peru.33.d 
+	picture = GFX_report_event_tank_factory
+
+	is_triggered_only = yes 
+
+	option = { #give them proper light tanks 
+		name = peru.33.a 
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 30
+				has_opinion = {
+					target = FROM
+					value > 49
+				}
+			}
+			modifier = {
+				add = 50
+				has_opinion = {
+					target = FROM
+					value > 79
+				}
+			}
+			modifier = {
+				add = 40
+				has_war = no 
+			}
+		}
+		FROM = {
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 1 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			country_event = { id = peru.16 hours = 4 }
+		}
+		if = { 
+			limit = { has_dlc = "No Step Back" }
+			send_equipment = {
+				equipment = light_tank_chassis_2
+				amount = 150
+				target = FROM
+			}
+		}
+		else = {
+			send_equipment = {
+				equipment = light_tank_equipment_2
+				amount = 150
+				target = FROM
+			}
+		}
+		add_offsite_building = { 
+			type = industrial_complex 
+			level = 1
+		}
+	}
+
+	option = { #give them ok-ish light tanks 
+		name = peru.33.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 30
+				has_opinion = {
+					target = FROM
+					value > 49
+				}
+			}
+			modifier = {
+				add = 50
+				has_opinion = {
+					target = FROM
+					value > 79
+				}
+			}
+			modifier = {
+				add = 40
+				has_war = no 
+			}
+		}
+		FROM = {
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 1 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			country_event = { id = peru.16 hours = 4 }
+		}
+		if = { 
+			limit = { has_dlc = "No Step Back" }
+			send_equipment = {
+				equipment = light_tank_chassis_1
+				amount = 150
+				target = FROM
+			}
+		}
+		else = {
+			send_equipment = {
+				equipment = light_tank_equipment_1
+				amount = 150
+				target = FROM
+			}
+		}
+		add_offsite_building = { 
+			type = industrial_complex 
+			level = 1
+		}
+	}
+
+	option = { #decline
+		name = peru.33.c
+		ai_chance = {
+			base = 15
+			modifier = {
+				add = 100
+				has_war = yes #most countries won't be willing to give away their equipment whilst at war lol
+			}
+		}
+		FROM = { country_event = { id = peru.17 hours = 4 } }
 	}
 }

@@ -473,7 +473,7 @@ SOV_factory_worker_militias_raised = { #STATE MODIFIER
 	local_resources_factor = -0.5
 }
 
-SOV_civilian_labor_in_defense = { #STATE MODIFIER
+SOV_civilian_labor_in_defense_mod = { #STATE MODIFIER
 	enable = { always = yes }
 
 	icon = GFX_modifiers_SOV_civilian_labor_in_defense
@@ -1368,4 +1368,161 @@ BRA_rebelling_coffee_plantations = {
 	state_production_speed_buildings_factor = -0.25
 	local_building_slots_factor = -0.4
 	local_factories = -0.3
+}
+
+BRA_brazilian_political_crisis = { #National Spirit
+	enable = { always = yes }
+
+	icon = GFX_idea_BRA_political_crisis
+
+	stability_factor = BRA_crisis_stability_factor
+	political_power_factor = BRA_crisis_political_factor
+	political_advisor_cost_factor = BRA_crisis_advisor_cost
+	fascism_drift = BRA_crisis_integralist_influence
+	neutrality_drift = BRA_crisis_vargas_influence
+	democratic_drift = BRA_crisis_congress_influence
+}
+
+BRA_brazilian_economy = { #National Spirit
+	enable = { always = yes }
+
+	icon = GFX_idea_BRA_the_brazilian_economy
+
+	production_speed_industrial_complex_factor = BRA_civilian_factory_boost
+	production_speed_arms_factory_factor = BRA_military_factory_boost
+	production_speed_dockyard_factor = BRA_dockyard_construction_boost
+	industrial_capacity_factory = BRA_industrial_capacity_factory_speed
+	industrial_capacity_dockyard = BRA_industrial_capacity_dockyard_speed
+	production_speed_infrastructure_factor = BRA_infrastructure_construction_speed
+	production_speed_rail_way_factor = BRA_railway_construction_speed
+	production_speed_supply_node_factor = BRA_supply_node_construction_speed
+}
+
+BRA_protests = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_col_strikes
+
+	local_building_slots_factor = -0.3
+	local_factories = -0.3
+	state_production_speed_buildings_factor = -0.25
+}
+
+BRA_subversive_communist_activity_in_state = {
+	enable = {  always = yes }
+
+	icon = GFX_idea_BRA_subversive_communist
+
+	state_production_speed_rail_way_factor = -0.2
+	state_production_speed_infrastructure_factor = -0.2
+	state_production_speed_buildings_factor = -0.05
+}
+
+BRA_integralists_occupation = { #Will be used for both regular protesting and civil war preperations 
+	enable = { always = yes }
+
+	icon = GFX_BRA_integralist_occupation
+
+	recruitable_population_factor = -0.25
+	state_production_speed_buildings_factor = -0.2
+	army_speed_factor_for_controller = -0.1
+}
+
+BRA_democratic_influence_in_state = {
+	enable = { always = yes }
+
+	icon = GFX_BRA_democratic_occupation
+
+	army_speed_factor_for_controller = -0.05
+	local_manpower = -0.2
+}
+
+BRA_sao_paulo_seperatist_movement = {
+	enable = { always = yes }
+
+	icon = GFX_BRA_sao_seperatist_movement
+
+	recruitable_population_factor = -0.05
+	state_production_speed_buildings_factor = -0.05
+	local_resources_factor = -0.1
+	army_speed_factor_for_controller = -0.15
+}
+
+BRA_soviet_civil_war_repayment = {
+	enable = { always = yes }
+
+	icon = GFX_BRA_SOV_war_repayment
+
+	consumer_goods_factor = BRA_SOV_consumer_goods
+	local_resources_factor = BRA_SOV_local_resources_factor
+}
+
+BRA_post_civil_war_resistance = {
+	enable = { always = yes }
+
+	icon = GFX_BRA_post_civ_res
+
+	recruitable_population_factor = -0.15
+	state_production_speed_buildings_factor = -0.1
+	local_resources_factor = -0.1
+	local_manpower = -0.15
+}
+
+BRA_post_civil_war_social_crisis = {
+	enable = { always = yes }
+
+	icon = GFX_BRA_post_civil_war_resistance_icon
+
+	political_power_factor = -0.1
+	stability_factor = BRA_post_civil_war_stabilitty
+	production_speed_buildings_factor = BRA_post_civil_war_buildings
+	production_speed_infrastructure_factor = BRA_post_civil_war_infrastructure
+	production_speed_rail_way_factor = BRA_post_civil_war_rail_way
+}
+
+BRA_monarchist_influence = {
+	enable = { always = yes }
+
+	icon = GFX_BRA_monarchist_influence
+
+	army_speed_factor_for_controller = -0.05
+}
+
+BRA_integralist_police_force = {
+	enable = { always = yes }
+
+	icon = GFX_idea_bul_zveno
+
+	political_power_factor = BRA_integralist_police_force_pp_gain
+	conscription = BRA_integralist_police_force_conscription
+	drift_defence_factor = BRA_integralist_police_force_drift_defense
+	stability_factor = BRA_integralist_police_force_stability
+}
+
+BRA_ongoing_integration_campaign = {
+	enable = { always = yes }
+
+	icon = GFX_BRA_integrate_campaign
+
+	resistance_decay = 0.15
+	compliance_growth = 0.15
+}
+
+BRA_army_expansion = {
+	enable = { always = yes }
+
+	icon = GFX_idea_chi_army_corruption3
+
+	conscription = BRA_army_expansion_conscription
+	stability_factor = BRA_army_expansion_stability
+}
+
+BRA_portugal_nationalists = {
+	enable = { always = yes }
+
+	icon = GFX_BRA_portuguese_nationalists
+
+	local_building_slots_factor = -0.1
+	local_factories = -0.1
+	state_production_speed_buildings_factor = -0.15
 }

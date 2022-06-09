@@ -366,9 +366,9 @@ ARG_inflation = {
 			has_completed_focus = ARG_deal_with_the_inflation
 		}
 		
-		cost = 120
+		cost = 80
 		
-		days_remove = 100
+		days_remove = 75
 		
 		modifier = {
 			consumer_goods_factor = 0.05
@@ -380,17 +380,20 @@ ARG_inflation = {
 		}
 		
 		remove_effect = {
-			if = {
-				limit = { has_idea = ARG_inflation_3 }
-				remove_ideas = ARG_inflation_3
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_2 }
-				remove_ideas = ARG_inflation_2
-			}
-			else_if = {
-				limit = { has_idea = ARG_inflation_1 }
-				remove_ideas = ARG_inflation_1
+			effect_tooltip = { remove_ideas = ARG_inflation_1 }
+			hidden_effect = {
+				remove_ideas = {
+					ARG_inflation_1
+					ARG_inflation_2
+					ARG_inflation_3
+					ARG_inflation_4
+					ARG_inflation_5
+					ARG_inflation_6
+					ARG_inflation_7
+					ARG_inflation_8
+					ARG_inflation_9
+					ARG_inflation_10
+				}
 			}
 		}
 	}
@@ -1686,6 +1689,10 @@ ARG_foreign_investments = {
 				exists = yes 
 			}
 		}
+
+		visible = {
+			original_tag = ARG
+		}
 		
 		available = {
 			FROM = {
@@ -1733,6 +1740,82 @@ ARG_foreign_investments = {
 			custom_effect_tooltip = ARG_invest_in_countries_economy_tt
 			FROM = {
 				set_country_flag = invested_in_ARG
+			}
+		}
+	}
+
+	BRA_invest_in_FROM = {
+		icon = generic_construction
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ITA
+					original_tag = BRA
+					original_tag = JAP 
+					original_tag = SOV 
+					original_tag = GER 
+					original_tag = ENG 
+					original_tag = FRA 
+					original_tag = USA
+				}
+				exists = yes 
+			}
+		}
+
+		visible = {
+			original_tag = BRA
+		}
+		
+		available = {
+			FROM = {
+				NOT = {
+					has_war_with = ROOT 
+				}
+				NOT = {
+					has_country_flag = invested_in_BRA
+				}
+				has_capitulated = no 
+			}
+			is_subject = no 
+		}
+		
+		cost = 100
+		
+		modifier = {
+			consumer_goods_factor =  0.1
+			political_power_factor =  -0.1
+		}
+		
+		ai_will_do = {
+			factor = 120
+		}
+		
+		days_remove = 75
+		
+		complete_effect = {
+			set_country_flag = ARG_investment_in_progress
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = ARG_investment_in_progress
+			}
+			FROM = {
+				NOT = {
+					has_country_flag = invested_in_BRA
+				}
+			}
+		}
+		
+		remove_effect = {
+			clr_country_flag = ARG_investment_in_progress
+			custom_effect_tooltip = ARG_invest_in_countries_economy_tt
+			FROM = {
+				set_country_flag = invested_in_BRA
+			}
+			hidden_effect = {
+				add_to_variable = { BRA_num_countries_invested = 1 }
 			}
 		}
 	}
@@ -1953,7 +2036,7 @@ ARG_ramon_military_coup = {
 			}
 		}
 
-		days_mission_timeout = 320
+		days_mission_timeout = 240
 		
 		is_good = no
 		
@@ -1961,6 +2044,27 @@ ARG_ramon_military_coup = {
 		
 		activation = {
 			has_country_flag = ARG_ramon_coup
+		}
+		
+		cancel_trigger = {
+			OR = {
+				has_civil_war = yes 
+				NOT = {
+					controls_state = 889
+				}
+				NOT = {
+					controls_state = 890
+				}
+				NOT = {
+					controls_state = 891
+				}
+				NOT = {
+					controls_state = 512
+				}
+				NOT = {
+					controls_state = 892
+				}
+			}
 		}
 		
 		visible = {
@@ -2005,7 +2109,12 @@ ARG_ramon_military_coup = {
 		}
 
 		visible = {
-			has_country_flag = ARG_capable_of_countering_coup
+			NOT = {
+				OR = {
+					has_completed_focus = ARG_subsidize_key_industries
+					has_completed_focus = ARG_drift_back_towards_the_confederation
+				}
+			}
 			has_active_mission = ARG_the_possible_coup
 		}
 
@@ -2022,7 +2131,12 @@ ARG_ramon_military_coup = {
 		allowed = { original_tag = ARG }
 
 		visible = { 
-			has_country_flag = ARG_capable_of_countering_coup
+			NOT = {
+				OR = {
+					has_completed_focus = ARG_subsidize_key_industries
+					has_completed_focus = ARG_drift_back_towards_the_confederation
+				}
+			}
 			has_active_mission = ARG_the_possible_coup
 			FROM = {
 				NOT = {
@@ -2064,6 +2178,18 @@ ARG_ramon_military_coup = {
 			divisions_in_state = {
 				size > 3
 				state = FROM
+			}
+		}
+		
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = EUYL_has_3_divisions_tt
+				NOT = {
+					divisions_in_state = {
+						size > 2
+						state = FROM 
+					}
+				}
 			}
 		}
 

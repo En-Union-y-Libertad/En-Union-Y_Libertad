@@ -558,6 +558,24 @@ defined_text = {
 	}
 }
 
+defined_text = {
+	name = GetPeruSituation
+	text = {
+		trigger = {
+			original_tag = PRU 
+			has_civil_war = yes 
+		}
+		localization_key = PRU_civil_war_situation
+	}
+	text = {
+		trigger = {
+			original_tag = PRU 
+			has_civil_war = no 
+		}
+		localization_key = PRU_peaceful_coup_situation
+	}
+}
+
 #### Brazil ####
 
 defined_text = {
@@ -635,5 +653,377 @@ defined_text = {
 			check_variable = { BRA_coffee_companies_opinion = 2 }
 		}
 		localization_key = BRA_100_tt
+	}
+}
+
+defined_text = {
+	name = GetVargasOpinion
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_playing_as_vargas = 1 } 
+		}
+		localization_key = BRA_playing_as_them_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_vargas = 1 } }
+				has_country_flag = BRA_hostile_vargas
+			}
+		}
+		localization_key = BRA_hostile_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_vargas = 1 } }
+				has_country_flag = BRA_neutral_vargas
+			}
+		}
+		localization_key = BRA_neutral_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_vargas = 1 } }
+				has_country_flag = BRA_friendly_vargas
+			}
+		}
+		localization_key = BRA_friendly_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_vargas = 1 } }
+				has_country_flag = BRA_elections_occured
+			}
+		}
+		localization_key = BRA_not_in_office_anymore_tt
+	}
+}
+
+defined_text = {
+	name = GetCongressOpinion
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_playing_as_congress = 1 } 
+		}
+		localization_key = BRA_playing_as_them_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_congress = 1 } }
+				has_country_flag = BRA_hostile_congress
+			}
+		}
+		localization_key = BRA_hostile_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_congress = 1 } }
+				has_country_flag = BRA_neutral_congress
+			}
+		}
+		localization_key = BRA_neutral_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_congress = 1 } }
+				has_country_flag = BRA_friendly_congress
+			}
+		}
+		localization_key = BRA_friendly_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_congress = 1 } }
+				has_country_flag = BRA_congress_shutdown
+			}
+		}
+		localization_key = BRA_shutdown_tt
+	}
+}
+
+defined_text = {
+	name = GetIntegralistOpinion
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_playing_as_integralists = 1 } 
+		}
+		localization_key = BRA_playing_as_them_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_integralists = 1 } }
+				has_country_flag = BRA_hostile_integralists
+			}
+		}
+		localization_key = BRA_hostile_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_integralists = 1 } }
+				has_country_flag = BRA_neutral_integralists
+			}
+		}
+		localization_key = BRA_neutral_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				NOT = { check_variable = { BRA_playing_as_integralists = 1 } }
+				has_country_flag = BRA_friendly_integralists
+			}
+		}
+		localization_key = BRA_friendly_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			has_country_flag = BRA_integralists_shutdown
+		}
+		localization_key = BRA_shutdown_tt
+	}
+}
+
+defined_text = {
+	name = GetCommunist
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_playing_as_communists = 1 }
+		}
+		localization_key = BRA_playing_as_them_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_playing_as_communists = 0 }
+		}
+		localization_key = BRA_subversive_activity_tt
+	}
+}
+
+defined_text = {
+	name = GetCommunistActivity
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_communist_subversive_activity = 1 }
+		}
+		localization_key = BRA_low_activity_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_communist_subversive_activity = 2 }
+		}
+		localization_key = BRA_medium_activity_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_communist_subversive_activity = 3 }
+		}
+		localization_key = BRA_high_activity_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_communist_subversive_activity = 4 }
+		}
+		localization_key = BRA_very_high_activity_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			has_country_flag = BRA_communists_shutdown
+		}
+		localization_key = BRA_shutdown_tt
+	}
+}
+
+defined_text = {
+	name = GetDictatorshipProgress
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_playing_as_vargas = 1 }
+		}
+		localization_key = BRA_good_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			NOT = { check_variable = { BRA_playing_as_vargas = 1 } }
+		}
+		localization_key = BRA_bad_tt
+	}
+}
+
+defined_text = {
+	name = GetGoodBadVargas
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_playing_as_vargas = 1 }
+		}
+		localization_key = BRA_good_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			NOT = { check_variable = { BRA_playing_as_vargas = 1 } }
+		}
+		localization_key = BRA_bad_tt
+	}
+}
+
+defined_text = {
+	name = GetGoodBadIntegralist
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_playing_as_integralists = 1 }
+		}
+		localization_key = BRA_good_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			NOT = { check_variable = { BRA_playing_as_integralists = 1 } }
+		}
+		localization_key = BRA_bad_tt
+	}
+}
+
+defined_text = {
+	name = GetGoodBadCongress
+	text = {
+		trigger = {
+			original_tag = BRA 
+			check_variable = { BRA_playing_as_congress = 1 }
+		}
+		localization_key = BRA_good_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			NOT = { check_variable = { BRA_playing_as_congress = 1 } }
+		}
+		localization_key = BRA_bad_tt
+	}
+}
+
+defined_text = {
+	name = GetTypeOfRevolt
+	text = {
+		trigger = {
+			original_tag = BRA 
+			has_country_flag = BRA_active_communist_revolt
+			AND = {
+				NOT = {
+					has_completed_focus = BRA_hide_weapons_inside_the_plantations
+				}
+				NOT = {
+					has_completed_focus = BRA_work_in_secret_with_coffee_farmers
+				}
+			}
+		}
+		localization_key = BRA_nothing_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				has_country_flag = BRA_active_communist_revolt
+				NOT = { has_completed_focus = BRA_hide_weapons_inside_the_plantations }
+			}
+		}
+		localization_key = BRA_farmers_agreement_tt
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			AND = {
+				has_country_flag = BRA_active_communist_revolt
+				has_completed_focus = BRA_hide_weapons_inside_the_plantations
+			}
+		}
+		localization_key = BRA_farmers_and_weapons_hidden_tt
+	}
+}
+
+defined_text = {
+	name = GetIfMonarchist
+	text = {
+		trigger = {
+			original_tag = BRA 
+			NOT = { tag = BZE }
+		}
+		localization_key = BRA_regular_cisplatine_icon
+	}
+	text = {
+		trigger = {
+			original_tag = BRA 
+			tag = BZE 
+		}
+		localization_key = BRA_monarchist_cisplatine
+	}
+}
+
+defined_text = {
+	name = GetInfluenceStrength
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { BRA_influence_strength = 0 }
+			}
+		}
+		localization_key = BRA_none_tt
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { BRA_influence_strength = 1 }
+			}
+		}
+		localization_key = BRA_weak_tt
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { BRA_influence_strength = 2 }
+			}
+		}
+		localization_key = BRA_medium_tt
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = { BRA_influence_strength = 3 }
+			}
+		}
+		localization_key = BRA_strong_tt
 	}
 }

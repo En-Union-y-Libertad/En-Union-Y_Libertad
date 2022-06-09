@@ -278,6 +278,45 @@ characters={
 			legacy_id=-1
 		}
 	}
+	ARG_carlos_von_der = {
+		name = "Carlos von der Becke"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARG/ARG_carlos_von_der_becke.png"
+			}
+		}
+		corps_commander = {
+			traits = {}
+			skill = 2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	ARG_rodolfo_freude = {
+		name = "Rodolfo Freude"
+		portraits = {
+			army = {
+				small = "GFX_ARG_rodolfo_freude"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ARG_rodolfo_f
+			allowed = {
+				original_tag = ARG
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = {
+				head_of_intelligence 
+			}
+		}
+	}
 	ARG_juan_carlos_onganía={
 		name="Juan Carlos Onganía"
 		portraits={

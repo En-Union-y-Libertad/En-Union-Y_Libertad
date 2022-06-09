@@ -600,5 +600,21 @@ bookmarks = {
 				COL_tratado_de_asistencia_colombo_americano
 			}
 		}
+		
+		"BRA" = {
+			minor = yes 
+			history = "BRA_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				BRA_scars_of_the_1930_revolution_3
+				BRA_minimum_wage_established
+				industrializing_economy
+			}
+			focuses = {
+				BRA_establish_the_FAB
+				BRA_establish_the_mercosur
+				BRA_the_germans_and_brazilians_united
+			}
+		}
 	}
 }
