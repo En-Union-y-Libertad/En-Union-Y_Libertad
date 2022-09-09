@@ -614,17 +614,55 @@ form_united_central_america_category = {
 				original_tag = NIC
 				original_tag = COS
 				original_tag = BLZ
+				original_tag = MKO
+				original_tag = GNC
 			}
 			has_dlc = "Waking the Tiger"
 		}
 
 		available = {
 			is_subject = no
-			controls_state = 313
-			controls_state = 314
-			controls_state = 312
-			controls_state = 317
-			controls_state = 316
+			# Guatemala
+			custom_trigger_tooltip = {
+				tooltip = form_central_america_guatemala_required_states_tt
+				controls_state = 313
+				controls_state = 920
+				controls_state = 921
+				controls_state = 922
+				controls_state = 923
+			}
+			# El Salvador
+			custom_trigger_tooltip = {
+				tooltip = form_central_america_el_salvador_required_states_tt
+				controls_state = 314
+				controls_state = 924
+			}
+			# Honduras
+			custom_trigger_tooltip = {
+				tooltip = form_central_america_honduras_required_states_tt
+				controls_state = 312
+				controls_state = 925
+				controls_state = 926
+				controls_state = 927
+				controls_state = 928
+			}
+			# Nicaragua
+			custom_trigger_tooltip = {
+				tooltip = form_central_america_nicaragua_required_states_tt
+				controls_state = 317
+				controls_state = 929
+				controls_state = 930
+				controls_state = 931
+				controls_state = 932
+				controls_state = 933
+			}
+			# Costa Rica
+			custom_trigger_tooltip = {
+				tooltip = form_central_america_costa_rica_required_states_tt
+				controls_state = 316
+				controls_state = 934
+				controls_state = 935
+			}	
 		}
 
 		visible = {
@@ -634,19 +672,39 @@ form_united_central_america_category = {
 				original_tag = HON
 				original_tag = NIC
 				original_tag = COS
+				original_tag = BLZ
+				original_tag = GNC
+				original_tag = MKO
 			}
 			NOT = { has_global_flag = form_united_central_america_flag }
 		}
 
 		complete_effect = {
 			set_cosmetic_tag = USC_UNIFIED
-			313 = { add_core_of = ROOT }
-			314 = { add_core_of = ROOT }
-			312 = { add_core_of = ROOT }
-			317 = { add_core_of = ROOT }
-			316 = { add_core_of = ROOT }
-			311 = { add_core_of = ROOT }
+			custom_effect_tooltip = form_central_american_coring_states_tt
 			hidden_effect = {
+				313 = { add_core_of = ROOT }
+				314 = { add_core_of = ROOT }
+				312 = { add_core_of = ROOT }
+				317 = { add_core_of = ROOT }
+				316 = { add_core_of = ROOT }
+				311 = { add_core_of = ROOT }
+				920 = { add_core_of = ROOT }
+				921 = { add_core_of = ROOT }
+				922 = { add_core_of = ROOT }
+				923 = { add_core_of = ROOT }
+				924 = { add_core_of = ROOT }
+				925 = { add_core_of = ROOT }
+				926 = { add_core_of = ROOT }
+				927 = { add_core_of = ROOT }
+				928 = { add_core_of = ROOT }
+				929 = { add_core_of = ROOT }
+				930 = { add_core_of = ROOT }
+				931 = { add_core_of = ROOT }
+				932 = { add_core_of = ROOT }
+				933 = { add_core_of = ROOT }
+				934 = { add_core_of = ROOT }
+				935 = { add_core_of = ROOT }
 				news_event = { id = wtt_news.59 hours = 6 }
 				set_global_flag = form_united_central_america_flag
 			}

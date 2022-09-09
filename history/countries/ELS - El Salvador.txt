@@ -1,5 +1,9 @@
 ﻿capital = 314
 add_ideas = monroe_doctrine_idea
+add_timed_idea = {
+	idea = ELS_legacy_of_the_1932_massacre
+	days = 730
+}
 oob = "ELS_1936"
 
 # Starting tech
@@ -9,27 +13,30 @@ set_technology = {
 }
 
 recruit_character = ELS_maximiliano_hernández_martínez
-recruit_character = ELS_victoriano_ubico
-recruit_character = ELS_benito_ubico
-recruit_character = ELS_bartolomé_vasconcelos
-recruit_character = ELS_hector_escobar_serrano
-recruit_character = ELS_milton_andrade_cabrera
-recruit_character = ELS_humbert_aberle
-recruit_character = ELS_horacio_carnejo_ibanez
-recruit_character = ELS_osmin_aguirre_y_salinas
-recruit_character = ELS_reinaldo_galindo_pohl
-recruit_character = ELS_mauro_espinola_castro
-recruit_character = ELS_jose_angel_castillo
-recruit_character = ELS_manuel_de_jesus_cordova
-recruit_character = ELS_augustin_farabundo_marti
-recruit_character = ELS_manuel_jose_maria_lemus_lopez
-recruit_character = ELS_raul_rodolfi_sanchez
-recruit_character = ELS_ricardo_abrego_abrego
-recruit_character = ELS_humberto_costa
-recruit_character = ELS_oscar_a_bolanos
+recruit_character = ELS_arturo_araujo
+recruit_character = ELS_miguel_marmol
+recruit_character = ELS_oscar_osorio_hernandez
+recruit_character = ELS_jorge_melendez_ramirez
+recruit_character = ELS_jose_gustavo_guerrero
+recruit_character = ELS_jose_arturo_castellanos
+recruit_character = ELS_luis_alfaro_duran
+recruit_character = ELS_abel_cuenca
+recruit_character = ELS_julio_enrique_avila
+recruit_character = ELS_joaquin_castro_canizales
+recruit_character = ELS_antonio_novoa_hernandez
+recruit_character = ELS_modesto_ramirez
+recruit_character = ELS_andres_ignacio_menendez
+recruit_character = ELS_osmin_aguirre_salinas
+recruit_character = ELS_daniel_canas_infante
+recruit_character = ELS_joaquin_valdez
+recruit_character = ELS_fidel_cristino_garay
+recruit_character = ELS_salvador_pena_trejo
 recruit_character = ELS_salvador_castaneda_castro
-recruit_character = ELS_jose_maria_cuellar
-
+recruit_character = ELS_mauro_espinola_castro
+recruit_character = ELS_victor_alfredo_lara
+recruit_character = ELS_carlos_gavidia
+recruit_character = ELS_humberto_aberle
+recruit_character = ELS_enseigne_charles_sarrat
 
 set_country_flag = monroe_doctrine
 set_war_support = 0.1
@@ -87,7 +94,10 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	fascism = 100
+	fascism = 55
+	communism = 5
+	democratic = 17
+	neutrality = 23
 }
 
 1939.1.1 = {

@@ -1,4 +1,4 @@
-﻿capital = 311
+﻿capital = 942
 
 oob = "BLZ_1936"
 
@@ -11,28 +11,33 @@ set_technology = {
 
 set_convoys = 5
 
-recruit_character = MKO_alan_burns
-recruit_character = MKO_antonio_soberanis_gomez
+recruit_character = BLZ_alan_burns
+recruit_character = BLZ_antonio_soberanis_gomez
+recruit_character = BLZ_democratic_guy
 recruit_character = BLZ_communist_guy
+recruit_character = BLZ_fascist_guy
+recruit_character = BLZ_robert_sidney_turton
+recruit_character = BLZ_george_cadle_price
+recruit_character = BLZ_floss_casasola
+recruit_character = BLZ_gwendolyn_lizarraga
+recruit_character = BLZ_arthur_wolffsohn
+recruit_character = BLZ_marion_m_ganey
+recruit_character = BLZ_edward_dunn
+recruit_character = BLZ_philip_goldson
 recruit_character = BLZ_aa2
 recruit_character = BLZ_ar
 recruit_character = BLZ_acd2
 recruit_character = BLZ_acr
-recruit_character = BLZ_coi
 recruit_character = BLZ_acas
 recruit_character = BLZ_awt
-recruit_character = BLZ_pot
 recruit_character = BLZ_nccr
 recruit_character = BLZ_aco2
-recruit_character = BLZ_democratic_guy
 recruit_character = BLZ_ncs
 recruit_character = BLZ_acgs
 recruit_character = BLZ_ncm
 recruit_character = BLZ_mt
 recruit_character = BLZ_nt
 recruit_character = BLZ_ai2
-recruit_character = BLZ_fascist_guy
-recruit_character = BLZ_stc
 
 
 1939.1.1 = {
@@ -90,8 +95,8 @@ set_popularities = {
 		elections_allowed = yes
 	}
 	set_popularities = {
-		democratic = 33
-		neutrality = 66
+		democratic = 13
+		neutrality = 86
 		communism = 1
 	}
 }

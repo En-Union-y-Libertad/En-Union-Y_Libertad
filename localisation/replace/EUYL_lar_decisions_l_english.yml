@@ -953,6 +953,16 @@
  PBC_reform_the_republic_of_central_america:0 "Reform the Republic of Central America"
  PBC_unlock_democratic_reformer_tt:0 "Unlocks the §YDemocratic Reformer§! as a political advisor"
 
+ # Central America #
+
+ form_central_america_belize_required_states_tt:0 "Controls all §YBelizean§! states."
+ form_central_america_guatemala_required_states_tt:0 "Controls all §YGuatemalan§! states."
+ form_central_america_el_salvador_required_states_tt:0 "Controls all §YSalvadoran§! states."
+ form_central_america_honduras_required_states_tt:0 "Controls all §YHonduran§! states."
+ form_central_america_nicaragua_required_states_tt:0 "Controls all §YNicaraguan§! states."
+ form_central_america_costa_rica_required_states_tt:0 "Controls all §YCosta Rican§! states."
+ form_central_american_coring_states_tt:0 "Gain cores on all §YCentral American§! states."
+
  ARG_sharpen_air_safety_regulations:0 "Sharpen Air Safety Regulations"
  ARG_sharpen_air_safety_regulations_desc:0 "With more rigid safety regulations in place, we can prevent some of the more common causes for catastrophic accidents, including those with airships. \n\n§RFailure to sharpen the safety regulations may result in an accident in the near future.§!"
  ARG_sharpen_our_air_safety:0 "Sharpen our Air Safety Regulations"

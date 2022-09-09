@@ -3962,6 +3962,18 @@
  GUA_anti_air_equipment_1:0 "Bofors 40mm"
  GUA_anti_air_equipment_1_short:0 "Bofors 40mm"
 
+ CUB_infantry_equipment_0:0 "Springfield Model 1903"
+ CUB_infantry_equipment_0_short:0 "M1903"
+ CUB_infantry_equipment_0_desc:0 "The M1903 Springfield, officially the United States Rifle, Caliber .30-06, Model 1903, is an American five-round magazine-fed, bolt-action service repeating rifle, used primarily during the first half of the 20th century. The M1903 was first used in combat during the Philippine–American War, and it was officially adopted by the United States as the standard infantry rifle on June 19, 1903, where it saw service in World War I, and was replaced by the faster-firing semi-automatic eight-round M1 Garand starting in 1936. In the 1920s and the 1930s, M1903s were delivered to US allies in Central America, such as Cuba, Costa Rica and Nicaragua."
+ CUB_infantry_equipment_1:0 "M1 Garand"
+ CUB_infantry_equipment_1_short:0 "M1 Garand"
+ CUB_infantry_equipment_1_desc:0 "The M1 Garand or M1 Rifle is a semi-automatic rifle that was the United States' service rifle during World War II and the Korean War. The rifle is chambered for the .30-06 Springfield cartridge and is named after its Canadian-American designer, John Garand. It was the first standard-issue autoloading rifle for the United States. The M1 replaced the bolt-action M1903 Springfield as the U.S.' service rifle in 1936, and was itself replaced by the selective-fire M14 rifle on March 26, 1958."
+ CUB_infantry_equipment_2:0 "Pistolet-Pulemyot Shpagina 41"
+ CUB_infantry_equipment_2_short:0 "PPSh-41"
+ CUB_infantry_equipment_2_desc:0 "The PPSh-41 (Pistolét-pulemyót Shpágina, lit. 'Shpagin's machine-pistol') is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. The PPSh is a magazine-fed selective-fire submachine gun using an open bolt, blowback action. Made largely of stamped steel, it can be loaded with either a box or drum magazine and fires the 7.62×25mm Tokarev pistol round. The PPSh saw extensive combat use during World War II and the Korean War. "
+ CUB_infantry_equipment_3:0 "M1 Carbine"
+ CUB_infantry_equipment_3_short:0 "M1 Carbine"
+ CUB_infantry_equipment_3_desc:0 "The M1 carbine is a lightweight semi-automatic carbine that was a standard firearm for the U.S. military during World War II, the Korean War and the Vietnam War. The M1 carbine was produced in several variants and was widely used by paramilitary and police forces around the world, and also became a popular civilian firearm after World War II, and despite having a similar name and physical outward appearance, the M1 carbine is not a carbine version of the M1 Garand rifle."
 
  tank_armor_upgrade:0 "Armor"
  tank_armor_upgrade_desc:0 "Better armor than your enemies can penetrate is a huge advantage to your divisions but is probably going to slow you down."

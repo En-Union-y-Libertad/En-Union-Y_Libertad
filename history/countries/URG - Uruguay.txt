@@ -34,6 +34,12 @@ recruit_character = URG_alfeo_brum_c
 recruit_character = URG_jose_lazarraga_c
 recruit_character = URG_paulina_luisi_c
 recruit_character = URG_consejo_de_estado_provisorio_c
+recruit_character = URG_carlos_vaz_ferreira_c
+recruit_character = URG_andres_martinez_trueba_c
+recruit_character = URG_consejo_nacional_de_gobierno_c
+recruit_character = URG_virginia_bolten_c
+recruit_character = URG_collapsed_government_c
+recruit_character = URG_adolfo_agorio_c
 
 oob = "URG_1936"
 if = {
@@ -50,6 +56,7 @@ set_technology = {
 	tech_engineers = 1
 	tech_mountaineers = 1
 	early_fighter = 1
+	CAS1 = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	gw_artillery = 1
@@ -75,24 +82,12 @@ if = {
 set_country_flag = monroe_doctrine
 set_country_flag = URG_terra
 
-set_variable = {
-	var = URG_politicians_arrested
-	value = 43
-}
-
 set_variable = { URG_debt_to_britain = 0 }
-
-set_variable = { URG_terra_stability = -0.1 }
-set_variable = { URG_terra_support = 0.05 }
-set_variable = { URG_democracy_from_terra = 0 }
-
-hidden_effect = { #NATIONAL SPIRIT
-	add_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
-}
 
 set_war_support = 0.16
 
-add_ideas = URG_the_terra_dictatorship_idea
+add_ideas = URG_legacy_of_batlle_idea
+add_ideas = URG_welfare_state
 add_ideas = URG_debt_to_the_british
 add_ideas = monroe_doctrine_idea
 country_event = { id = uruguay.4 days = 1 }
@@ -201,7 +196,7 @@ set_popularities = {
 
         URG_gabriel_terra_c = { 
 		remove_country_leader_role = {
-			ideology = despotism
+			ideology = authoritarian_democracy
 		}
 	}
 	promote_character = URG_alfredo_baldomir_c

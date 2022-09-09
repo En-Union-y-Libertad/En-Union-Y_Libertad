@@ -2087,25 +2087,6 @@
  PAR_hector_velasquez:0 "Héctor Velasquez"
  PAR_jesus_g_arraza:0 "Jesus G. Arraza"
  PAR_juan_stefanich:0 "Juan Stefanich"
- CUB_generic_fascist_demagogue:0 "Juan Martines-Villera"
- CUB_generic_democratic_reformer:0 "Miguel Campa y Caraveda"
- CUB_generic_communist_revolutionary:0 "Antonio G. Holmes"
- CUB_carlos_prio:0 "Carlos Prio"
- CUB_gerardo_machado:0 "Gerardo Machado"
- CUB_eugenio_molinet_castro:0 "Eugenio Molinet Castro"
- CUB_salvador_castaneda_castro:0 "Salvador Castaneda Castro"
- CUB_fulgencio_batista:0 "Fulgencio Batista"
- CUB_palaez_menendez:0 "Palaez Menendez"
- CUB_domingo_r_del_toro:0 "Domingo R. del Toro"
- CUB_rodrigo_a_fuentes:0 "Rodrigo A. Fuentes"
- CUB_sandalio_junco:0 "Sandalio Junco"
- CUB_juan_blas_hernandez:0 "Juan Blas Hernandez"
- CUB_fidel_castro:0 "Fidél Castro"
- CUB_enrique_c_rolas:0 "Enrique C. Rolas"
- CUB_angel_gonzalez:0 "Angel Gonzalez"
- CUB_eduardo_chibas:0 "Eduardo Chibas"
- CUB_julio_sanguily:0 "Julio Sanguily"
- CUB_sergio_carbo:0 "Sergio Carbo"
  GXC_generic_fascist_demagogue:0 "Zhao Ping"
  GXC_generic_democratic_reformer:0 "Kau Wencheng"
  GXC_generic_communist_revolutionary:0 "Liang Tao"
@@ -3423,3 +3404,19 @@
  tragedy_tt:0 "He died in the tragedy of Fúquene"
 
  conf_inter_final:0 "Inter-American Conference"
+
+ ### El Salvador ###
+
+ ELS_legacy_of_the_1932_massacre:0 "Legacy of the 1932 Massacre"
+
+ ### Cuba ###
+
+ CUB_expanded_sugar_plantations:0 "Expanded Sugar Plantations"
+ CUB_increased_sugar_exports_idea:0 "Increased Sugar Exports"
+ CUB_sugar_empire:0 "Sugar Empire"
+ CUB_stable_currency:0 "Stable Currency"
+ CUB_increased_tourism:0 "Increased Tourism"
+ CUB_allied_plantation_owners:0 "Allied Plantation Owners"
+ CUB_suppressed_strikes:0 "Strikes Supressed"
+ CUB_work_reforms:0 "Work Reforms"
+ CUB_industrial_cuba:0 "Industralized Cuba"

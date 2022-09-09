@@ -1173,6 +1173,13 @@
  PBC_reform_the_republic_of_central_america:0 "Reformar la República de Centroamérica"
  PBC_unlock_democratic_reformer_tt:0 "Desbloquea al §YAdvisor Democratico§! como asesor político"
 
+ form_central_america_belize_required_states_tt:0 "Controla todos los estados §Ybeliceños§!."
+ form_central_america_guatemala_required_states_tt:0 "Controla todos los estados §Yguatemaltecos§!."
+ form_central_america_el_salvador_required_states_tt:0 "Controla todos los estados §Ysalvadoreños§!."
+ form_central_america_honduras_required_states_tt:0 "Controla todos los estados §Yhondureños§!."
+ form_central_america_nicaragua_required_states_tt:0 "Controla todos los estados §Ynicaragüenses§!."
+ form_central_america_costa_rica_required_states_tt:0 "Controla todos los estados §Ycostarricenses§!."
+ form_central_american_coring_states_tt:0 "Gana territorios esenciales en todos los estados §Ycentroamericanos§!."
 
  ARG_the_argentine_civil_war:0 "La Guerra Civil Argentina"
  ARG_the_argentine_civil_war_desc:0 "Con la guerra civil en pleno apogeo, necesitamos usar nuestro apoyo a los militares para nuestra ventaja, dándonos impulsos temporales en nuestro ataque, defensa, organización y velocidad. No sólo eso, también podemos comprar armas de potencias fascistas extranjeras para ayudarnos en nuestra guerra civil y deshacernos de estas escorias de Unitario de una vez por todas."
