@@ -1,0 +1,93 @@
+﻿capital = 935
+add_ideas = monroe_doctrine_idea
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+}
+
+recruit_character = GNC_francisco_vargas
+recruit_character = GNC_aa2
+recruit_character = GNC_awt
+recruit_character = GNC_coi
+recruit_character = GNC_stc
+recruit_character = GNC_acgs
+recruit_character = GNC_nccr
+recruit_character = GNC_ncs
+recruit_character = GNC_nt
+recruit_character = GNC_communist_guy
+recruit_character = GNC_acr
+recruit_character = GNC_pot
+recruit_character = GNC_aco2
+recruit_character = GNC_mt
+recruit_character = GNC_ar
+recruit_character = GNC_fascist_guy
+recruit_character = GNC_acd2
+recruit_character = GNC_ncm
+recruit_character = GNC_ai2
+recruit_character = GNC_acas
+recruit_character = GNC_democratic_guy
+
+set_country_flag = monroe_doctrine
+set_war_support = 0.5
+set_convoys = 10
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	add_command_power = 100
+	
+	set_technology = {
+		interwar_artillery = 1
+		infantry_weapons1 = 1
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_silos = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.2.14"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 93
+	fascism = 1
+	communism = 6
+	neutrality = 0
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.2.9"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+}

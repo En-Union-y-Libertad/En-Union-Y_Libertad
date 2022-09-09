@@ -6249,5 +6249,23 @@ spriteTypes = {
 		name = "GFX_COL_motorized_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/USA_motorized_equipment_1.dds"
 	}
-	
+
+	### Cuba ###
+
+	SpriteType = {
+		name = "GFX_CUB_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CUB_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/usa_advanced_infantry_weapons.dds"
+	}	
+	SpriteType = {
+		name = "GFX_CUB_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/usa_basic_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_CUB_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/usa_infantry_weapons1.dds"
+	}
 }

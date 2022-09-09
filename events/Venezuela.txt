@@ -1,0 +1,62 @@
+###########################
+# Venezuelan Events
+###########################
+
+add_namespace = venezuela
+
+#event that will trigger
+
+country_event = {
+	id = venezuela.1
+	title = venezuela.1.t
+	picture = GFX_VEN_event_1
+	desc = venezuela.1.d
+	
+	option = {
+		name = venezuela.1.a
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		
+		set_party_name = {
+			ideology = neutrality
+			long_name = VEN_contreras_long
+			name = VEN_contreras
+		}
+	}
+	option = {
+		name = venezuela.1.b
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes 
+		}
+		add_country_leader_role = {
+			character = VEN_nestor_luis_perez
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = liberalism
+			}
+				promote_leader = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = VEN_perez_long
+			name = VEN_perez
+		}
+		add_popularity = { ideology = democratic popularity = 0.5 }
+	}
+}

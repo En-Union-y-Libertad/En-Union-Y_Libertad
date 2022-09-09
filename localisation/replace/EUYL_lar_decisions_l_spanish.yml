@@ -1173,6 +1173,13 @@
  PBC_reform_the_republic_of_central_america:0 "Reformar la República de Centroamérica"
  PBC_unlock_democratic_reformer_tt:0 "Desbloquea al §YAdvisor Democratico§! como asesor político"
 
+ form_central_america_belize_required_states_tt:0 "Controla todos los estados §Ybeliceños§!."
+ form_central_america_guatemala_required_states_tt:0 "Controla todos los estados §Yguatemaltecos§!."
+ form_central_america_el_salvador_required_states_tt:0 "Controla todos los estados §Ysalvadoreños§!."
+ form_central_america_honduras_required_states_tt:0 "Controla todos los estados §Yhondureños§!."
+ form_central_america_nicaragua_required_states_tt:0 "Controla todos los estados §Ynicaragüenses§!."
+ form_central_america_costa_rica_required_states_tt:0 "Controla todos los estados §Ycostarricenses§!."
+ form_central_american_coring_states_tt:0 "Gana territorios esenciales en todos los estados §Ycentroamericanos§!."
 
  ARG_the_argentine_civil_war:0 "La Guerra Civil Argentina"
  ARG_the_argentine_civil_war_desc:0 "Con la guerra civil en pleno apogeo, necesitamos usar nuestro apoyo a los militares para nuestra ventaja, dándonos impulsos temporales en nuestro ataque, defensa, organización y velocidad. No sólo eso, también podemos comprar armas de potencias fascistas extranjeras para ayudarnos en nuestra guerra civil y deshacernos de estas escorias de Unitario de una vez por todas."
@@ -1317,8 +1324,18 @@
  URG_march_to_argentina_capital_desc:0 "Buenos Aires es el corazón del país, es lo que mantiene a la nación a flote. Si somos capaces de capturarla en poco tiempo, los argentinos estarán destrozados y la victoria estará garantizada."
  URG_capture_buenos_aires:0 "Capturar Buenos Aires"
  URG_capture_buenos_aires_desc:0 "¡La capital está a la vista! Una buena ofensiva y estará bajo nuestro control en poco tiempo".
- 
- 
+ URG_renovation_efforts:0 "Esfuerzos de Renovación"
+ URG_renovate_cerro_fortress:0 "Renovar la Fortaleza del Cerro"
+ URG_renovate_san_miguel_fortress:0 "Renovar la Fortaleza de San Miguel"
+ URG_renovate_santa_teresa_fortress:0 "Renovar la Fortaleza de Santa Teresa"
+ URG_finish_renovations:0 "Finalizar las Renovaciones"
+ URG_work_with_the_PCU:0 "Concesiones al PCU"
+ URG_work_with_the_PCU_desc:0 "Emilio Frugoni tiene mucha historia con la Partido Comunista. El Partido Comunista anteriormente pertenecia al Partido Socialista, pero el partido se dividió en dos tras la Revolución de Octubre en la Unión Soviética, ya que la postura de Frugoni siempre había sido una de reformismo pacífico y muy opuesta a revoluciones sangrientas, algo con lo que la mayoría de los ex miembros de su partido no estaban de acuerdo. Esta mayoría quería que el PSU se uniera a la Internacional Comunista que recién habia sido formada para ayudar a liberar a los trabajadores. Todo esto condujo a la ruptura del partido en 1920, cuando Frugoni y sus seguidores fueron expulsados del nuevo Partido Comunista. \n\nPero a pesar de todo esto, ambos partidos comparten un objetivo similar en mente, y con la reciente crisis política en Uruguay tras el sangriento derrocamiento de Gabriel Terra, Frugoni puede intentar hacer concesiones a los comunistas para crear una coalición para estabilizar su debíl posición como presidente."
+ URG_undermine_berres:0 "Debilitar la presidencia de Batlle"
+ URG_undermine_berres_desc:0 "A pesar de que solo ha gobernado la nación durante un breve período de tiempo, el apoyo de Batlle Berres tanto dentro como fuera del partido sigue creciendo, lo que preocupa considerablemente a sus oponentes políticos. \n\nSin embargo, uno de estos oponentes políticos, Andrés Martínez Trueba, también ve una oportunidad para ganar poder en el partido, al hacer que los demás oponentes se enfrenten entre ellos mismos y contra Batlle."
+ URG_support_berres:0 "Apoyar a la presidencia de Batlle"
+ URG_support_berres_desc:0 "Habiendo ganado recientemente las elecciones extraordinarias, Batlle Berres ya ha causado una muy buena impresión entre las masas y los miembros de su partido, incluso creando su propia corriente política basada en el batllismo, llamado neobatllismo. \n\nPero a pesar de todo esto, todavía hay políticos empeñados en dificultar su presidencia, sintiéndose amenazados por su creciente poder y apoyo. Sin embargo, gracias a sus conexiones tanto dentro como fuera del partido, Batlle ha sido informado de la situación, y lo único que le queda es actuar contra sus adversarios."
+
  form_rioplatense_empire_category:0 "Hacer realidad las Ambiciones Rioplatenses"
  form_rioplatense_empire_category_desc:0 "Con la voluntad de unir plenamente a todo el pueblo rioplatense bajo un solo país, lo haremos y lo conseguiremos. Todo el pueblo rioplatense estará unido y afrontaremos juntos cualquier amenaza."
  form_rioplatense_empire:0 "Formar el Imperio Rioplatense"

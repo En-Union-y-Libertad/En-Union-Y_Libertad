@@ -1,0 +1,22 @@
+ideas = {
+	country = {
+		ELS_legacy_of_the_1932_massacre = {
+			picture = ELS_legacy_of_1932_massacre
+			
+			allowed = { tag = ELS }
+			
+			allowed_civil_war = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.05
+				consumer_goods_factor = -0.05
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				recruitable_population_factor = -0.25
+				industrial_capacity_factory = -0.15
+			}
+		}
+	}	
+}

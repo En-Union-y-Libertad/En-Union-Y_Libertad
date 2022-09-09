@@ -21,6 +21,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_URG_event_30"
+		texturefile = "gfx/event_pictures/URG_event_30.dds"
+	}
+
+	spriteType = {
 		name = "GFX_ARG_argentina_71"
 		texturefile = "gfx/event_pictures/ARG_argentina_71.dds"
 	}
@@ -216,6 +221,29 @@ spriteTypes = {
 		name = "GFX_report_event_gaitan_muerte"
 		texturefile = "gfx/event_pictures/report_event_gaitan_muerte.dds"
 	}	
+
+	# Haiti #
+
+	spriteType = {
+		name = "GFX_HAI_event_1"
+		texturefile = "gfx/event_pictures/HAI_event_1.dds"
+	}
+
+	# Dominican Republic #
+
+	spriteType = {
+		name = "GFX_DOM_event_1"
+		texturefile = "gfx/event_pictures/DOM_event_1.dds"
+	}
+
+	# Venezuela #
+
+	spriteType = {
+		name = "GFX_VEN_event_1"
+		texturefile = "gfx/event_pictures/VEN_event_1.dds"
+	}
+
+	# Vanilla #
 	
 	spriteType = {
 		name = "GFX_report_event_canada_ronnie"

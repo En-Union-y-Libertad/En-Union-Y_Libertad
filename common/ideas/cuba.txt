@@ -1,0 +1,149 @@
+ideas = {
+	country = {
+		CUB_expanded_sugar_plantations = {
+			picture = idea_generic_agrarian_society
+			
+			allowed = { tag = CUB }
+			
+			allowed_civil_war = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.025
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				recruitable_population_factor = -0.05
+			}
+		}
+		CUB_increased_sugar_exports_idea = {
+			picture = generic_flexible_foreign_policy
+			
+			allowed = { tag = CUB }
+			
+			allowed_civil_war = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				war_support_factor = -0.1
+				recruitable_population_factor = -0.05
+			}
+		}
+		CUB_sugar_empire = {
+			picture = generic_foreign_capital
+			
+			allowed = { tag = CUB }
+			
+			allowed_civil_war = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				war_support_factor = -0.1
+				recruitable_population_factor = -0.1
+			}
+		}
+		CUB_stable_currency = {
+			picture = generic_economic_increase
+			
+			allowed = { tag = CUB }
+			
+			allowed_civil_war = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.025
+				political_power_gain = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		CUB_increased_tourism = {
+			picture = generic_foreign_capital
+			
+			allowed = { tag = CUB }
+			
+			allowed_civil_war = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.025
+				political_power_gain = 0.1
+				improve_relations_maintain_cost_factor = -0.25
+			}
+		}
+		CUB_allied_plantation_owners = {
+			picture = generic_agrarian_society
+			
+			allowed = { tag = CUB }
+			
+			allowed_civil_war = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				fascism_drift = 0.01
+				neutrality_drift = 0.01
+			}
+		}
+		CUB_suppressed_strikes = {
+			picture = POL_the_peasants_strike
+			
+			allowed = { tag = CUB }
+			
+			allowed_civil_war = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.05
+				war_support_factor = -0.1
+				communism_drift = -0.05
+				democratic_drift = -0.01
+				industrial_capacity_factory = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		CUB_work_reforms = {
+			picture = FRA_factory_strikes
+			
+			allowed = { tag = CUB }
+			
+			allowed_civil_war = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.2
+				democratic_drift = 0.01
+				communism_drift = 0.01
+			}
+		}
+		CUB_industrial_cuba = {
+			picture = man_five_year_plan_industry
+			
+			allowed = { tag = CUB }
+			
+			allowed_civil_war = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				recruitable_population_factor = 0.15
+				global_building_slots_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+	}	
+}

@@ -705,5 +705,16 @@ on_actions = {
 			}
 		}
 	}
+
+    on_EUYL_abandon_colony_BLZ = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = BLZ
+				}
+				EUYL_abandon_colony_BLZ = yes
+			}
+        }
+    }     
 }
 

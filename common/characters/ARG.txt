@@ -30,6 +30,18 @@ characters={
 			id=-1
 		}
 	}
+	ARG_gino_gatti_c = {
+		name="Gino Gatti"
+		
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_Political_1.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_Political_1.dds"
+			}
+		}
+	}
 	ARG_fanny_edelman={
 		name="Fanny Edelman"
 		portraits={

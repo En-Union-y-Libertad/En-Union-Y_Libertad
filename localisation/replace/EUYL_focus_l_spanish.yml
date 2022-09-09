@@ -4035,9 +4035,10 @@
  URG_join_the_germans_desc:0 "Aunque parezca una estupidez, coopear con los alemanes podría llevarnos bastante lejos. Incluso con nuestros diferentes ideales, podemos hacer que algo funcione."
  URG_join_the_soviets:0 "Únete a los soviéticos"
  URG_join_the_soviets_desc:0 "Los soviéticos pueden ser una gran ayuda tanto militar como económica. Con nuestros ideales similares, debería ser pan comido entrar en el Commintern."
-
-
-
+ URG_anarchist_takeover:0 "Revolución Anarquista"
+ URG_seize_the_means_of_production:0 "Tomar el Control de los Medios de Producción"
+ URG_seize_CUTCSA:0 "Apoderarse de CUTCSA"
+ URG_legacy_of_batlle:0 "El Legado de Batlle"
 
  # Peru
  PRU_repairing_the_nation:0 "Reparar la nación"

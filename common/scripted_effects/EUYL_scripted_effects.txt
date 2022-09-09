@@ -430,3 +430,32 @@ EUYL_add_4_dockyard = {
 		}
 	}
 }
+
+EUYL_abandon_colony_BLZ = {
+	if = {
+		limit = {
+			is_subject = yes
+			original_tag = BLZ
+		}
+		set_cosmetic_tag = BLZ_UK
+	}
+	else_if = {
+		limit = {
+			original_tag = BLZ
+			has_government = neutrality
+			is_subject = no
+		}
+		drop_cosmetic_tag = yes
+		retire_country_leader = yes
+	}
+	else_if = {
+		limit = {
+			original_tag = BLZ
+			is_subject = no
+			NOT = {
+				has_government = neutrality
+			}	
+		}
+		drop_cosmetic_tag = yes
+	}
+}		

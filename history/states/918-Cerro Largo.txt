@@ -1,0 +1,27 @@
+
+state={
+	id=918
+	name="STATE_918"
+
+	history={
+		owner = URG
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = URG
+		victory_points = {
+			13268 2 
+		}
+
+	}
+
+	provinces={
+		1641 12481 13263 13268 13271 14609 
+	}
+	manpower=90561
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

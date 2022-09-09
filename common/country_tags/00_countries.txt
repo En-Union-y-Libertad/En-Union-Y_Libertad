@@ -239,3 +239,7 @@ KHI = "countries/Khiva.txt"
 UDM = "countries/Udmurtia.txt"
 CHU = "countries/Chuvashia.txt"
 MEL = "countries/Mariel.txt"
+PAT = "countries/Patagonia.txt"
+MKO = "countries/Moskito.txt"
+GNC = "countries/Guanacaste.txt"
+

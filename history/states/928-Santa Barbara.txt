@@ -1,0 +1,24 @@
+state={
+	id=928
+	name="STATE_928"
+
+	history={
+		owner = HON
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = HON
+		victory_points = {
+			14589 5
+		}
+	}
+
+	provinces={
+		14542 14544 14584 14589 
+	}
+	manpower=197379
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -3071,6 +3071,14 @@
  URG_debt_repayment_in_progress:0 "Devolución de la deuda en curso"
  URG_ancap_concern:0 "ANCAP"
  URG_ancap_concern_desc:0 "ANCAP (abreviatura de Administración Nacional de Combustibles, Alcohol y Portland) es una industria petrolera creada en 1931 por Gabriel Terra. A pesar del tipo de industria que es, también se centra en el control de los monopolios de las industrias del alcahol y los combustibles. Esta industria cambiará dependiendo de las decisiones que tomemos con nuestro gobierno".
+ URG_udelar:0 "UDELAR"
+ URG_udelar_desc:0 "La Universidad de la República (UDELAR) es la universidad pública del Uruguay y la mas importante del país."
+ URG_udelar:0 "UDELAR"
+ URG_udelar_desc:0 "The Universidad de la República (UDELAR) is the public university of Uruguay and the most important one in the country."
+ URG_PESMA:0 "PESMA"
+ URG_CIACA:0 "CIACA"
+ URG_SCRA:0 "SCRA"
+ URG_Ford:0 "Ford Motors Uruguay"
  URG_debt_to_the_british:0 "Deuda con los británicos"
  URG_debt_to_the_british_desc:0 "Debido a nuestras diversas expansiones industriales en las últimas décadas, hemos acumulado una deuda que hay que devolver a los británicos. Los británicos esperan que paguemos esta deuda, y con el mundo calentándose a nuestro alrededor, sólo podemos esperar que no se derrame sangre con este problema y que seamos capaces de pagarla pacíficamente. \N - Esta idea se eliminará cuando se haya pagado toda la deuda con los británicos".
  URG_terra_loyalities:0 "Leales a Terra"
@@ -3095,6 +3103,9 @@
  URG_ute_desc:0 "La Administración Nacional de Usinas y Trasmisiones Eléctricas,​ más conocida por sus siglas UTE, es la compañía estatal de producción y abastecimiento de energía eléctrica de Uruguay. Fue creada el 21 de octubre de 1912, cuando se promulgó una ley que dio origen a esta empresa pública,​ en el marco del impulso reformista y de modernización de los sucesivos gobiernos batllistas."
  URG_aserradero_oriental:0 "Aserradero Oriental"
  URG_ancap_trait:0 "Compañía Estatal" 
+ URG_political_deadlock:0 "Callejón sin Salida Político"
+ URG_anarcho_batllism_1:0 "Anarco-Batllismo"
+ URG_anarcho_batllism_2:0 "Anarco-Batllismo"
  
  
  # Bolivia
@@ -3440,3 +3451,7 @@
  BRA_scars_of_the_1930_revolution:0 "Cicatrices de la revolución de 1930"
  BRA_scars_of_the_1930_revolution_desc:0 "La Revolución de 1930 está todavía en la memoria muy reciente de la mayoría de los brasileños. La sangre y el caos político que surgió de ella no se olvidarán tan rápido y nuestro pueblo sigue cansado de que ocurra algo similar."
  BRA_economic_boost:0 "Impulso económico"
+
+ ### El Salvador ###
+
+ ELS_legacy_of_the_1932_massacre:0 "Legado de la Masacre de 1932"

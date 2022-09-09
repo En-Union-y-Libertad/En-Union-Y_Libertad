@@ -829,3 +829,15 @@ CHU = {
 	color = rgb { 191 128 64 }
 	color_ui = rgb { 134 89 45 }
 }
+PAT = {
+	color = rgb { 149 45 102 }
+	color_ui = rgb { 194 59 133 }
+}
+MKO = {
+	color = rgb { 130 191 189 }
+	color_ui = rgb { 130 191 189 }
+}
+GNC = {
+	color = rgb { 174 160 93 }
+	color_ui = rgb { 174 160 93 }
+}
