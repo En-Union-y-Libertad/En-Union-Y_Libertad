@@ -246,6 +246,16 @@ opinion_modifiers = {
 	ger_chi_diplomacy_focus = {
 		value = 15
 	}
+	
+	SOV_chose_NATO_neutrality = { 
+		value = 30
+		decay = 1
+	}
+	
+	SOV_joined_NATO = { 
+		value = -30
+		decay = 1
+	}
 
 	supported_the_chinese = {
 		value = -15
@@ -1245,5 +1255,15 @@ opinion_modifiers = {
 
 	BRA_resource_rights = {
 		value = 30
+	}
+
+	ARG_roca_runciman_other_country = {
+		value = -40
+		trade =  yes 
+	}
+
+	ARG_roca_runciman_england = {
+		value = 100
+		trade = yes 
 	}
 }

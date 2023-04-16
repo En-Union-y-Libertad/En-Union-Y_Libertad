@@ -185,10 +185,10 @@ BRA_set_up_political_crisis = {
 		set_temp_variable = { BRA_crisis_fascist = BRA_integralist_influence }
 		if = {
 			limit = { check_variable = { BRA_playing_as_integralists = 1 } } #checks if the player is currently the Integralists 
-			divide_temp_variable = { BRA_crisis_fascist = 1050 }
+			divide_temp_variable = { BRA_crisis_fascist = 550 }
 		}
 		else = {
-			divide_temp_variable = { BRA_crisis_fascist = 800 }
+			divide_temp_variable = { BRA_crisis_fascist = 600 }
 		}
 		set_variable = {BRA_crisis_integralist_influence = BRA_crisis_fascist}
 
@@ -196,10 +196,10 @@ BRA_set_up_political_crisis = {
 		set_temp_variable = { BRA_crisis_democratic = BRA_congress_influence }
 		if = {
 			limit = { check_variable = { BRA_playing_as_congress = 1 } } #checks if the player is currently the Congress 
-			divide_temp_variable = { BRA_crisis_democratic = 1050 }
+			divide_temp_variable = { BRA_crisis_democratic = 550 }
 		}
 		else = {
-			divide_temp_variable = { BRA_crisis_democratic = 800 }
+			divide_temp_variable = { BRA_crisis_democratic = 600 }
 		}
 		set_variable = {BRA_crisis_congress_influence = BRA_crisis_democratic}
 
@@ -207,10 +207,10 @@ BRA_set_up_political_crisis = {
 		set_temp_variable = { BRA_crisis_neutrality = BRA_vargas_influence }
 		if = {
 			limit = { check_variable = { BRA_playing_as_vargas = 1 } } #checks if player is playing as Vargas
-			divide_temp_variable = { BRA_crisis_neutrality = 1050 }
+			divide_temp_variable = { BRA_crisis_neutrality = 550 }
 		}
 		else = {
-			divide_temp_variable = { BRA_crisis_neutrality = 800 }
+			divide_temp_variable = { BRA_crisis_neutrality = 600 }
 		}
 		set_variable = { BRA_crisis_vargas_influence = BRA_crisis_neutrality }
         clamp_variable = {
@@ -592,6 +592,42 @@ BRA_get_chances_of_spies_countering_communists = {
 		subtract_from_temp_variable = { BRA_chance_succeed = 5 }
 		add_to_temp_variable = { BRA_chance_fail = 5 }
 		hidden_effect = { clr_country_flag = BRA_spies_succesfully_countered }
+	}
+	if = {
+		limit = {
+			has_dlc = "La Resistance"
+		}
+		if = {
+			limit = {
+				has_intelligence_agency = yes
+			}
+			add_to_temp_variable = { BRA_chance_succeed = 25 }
+			subtract_from_temp_variable = { BRA_chance_fail = 25 }
+		}
+	}
+	if = {
+		limit = {
+			FROM = {
+				divisions_in_state = {
+					size > 5
+					state = PREV
+				}
+			}
+		}
+		add_to_temp_variable = { BRA_chance_succeed = 25 }
+		subtract_from_temp_variable = { BRA_chance_fail = 25 }
+	}
+	if = {
+		limit = {
+			FROM = {
+				divisions_in_state = {
+					size > 9
+					state = PREV
+				}
+			}
+		}
+		add_to_temp_variable = { BRA_chance_succeed = 25 }
+		subtract_from_temp_variable = { BRA_chance_fail = 25 }
 	}
 	clamp_variable = {
 		var = BRA_chance_succeed
@@ -1299,6 +1335,11 @@ BRA_start_integralist_uprising = {
 			}
 		}
 		IBR = {
+			set_country_flag = {
+				flag = BRA_recently_spawned
+				days = 14
+				value = 1
+			}
 			every_character = {
 				limit = { NOT = { has_character_flag = BRA_integralist } }
 				IBR = { retire_character = PREV }
@@ -1316,6 +1357,17 @@ BRA_start_integralist_uprising = {
 				target = BRA 
 				type = civil_war
 			}
+			if = {
+				limit = {
+					NOT = {
+						is_guaranteed_by = USA
+					}
+				}
+				USA = {
+					give_guarantee = PREV
+				}
+			}
+			set_rule = { can_join_factions = no }
 			add_civil_war_target = BRA
 			add_ideas = BRA_civil_war_integralists
 			add_ideas = BRA_poorly_trained_militias_3
@@ -1392,8 +1444,9 @@ BRA_start_integralist_uprising = {
 				}
 			}
 			every_controlled_state = {
-				limit = { 
-					is_fully_controlled_by = PREV 
+				create_unit = {
+					division = "name = \"Milícias Integralistas\" division_template = \"Milícia\" start_experience_factor = 0.1 start_equipment_factor = 0.95" 
+					owner = PREV
 				}
 				create_unit = {
 					division = "name = \"Milícias Integralistas\" division_template = \"Milícia\" start_experience_factor = 0.1 start_equipment_factor = 0.95" 
@@ -1682,6 +1735,11 @@ BRA_start_communist_civil_war = {
 		set_nationality = BRC 
 	}
 	BRC = {
+		set_country_flag = {
+			flag = BRA_recently_spawned
+			days = 14
+			value = 1
+		}
 		every_character = {
 			limit = { NOT = { has_character_flag = BRA_communist } }
 			BRC = { retire_character = PREV }
@@ -1726,7 +1784,14 @@ BRA_start_communist_civil_war = {
 			create_intelligence_agency = yes 
 			upgrade_intelligence_agency = upgrade_anti_partisan
 		}
+		USA = {
+			give_guarantee = PREV
+		}
 		every_controlled_state = {
+			create_unit = {
+				division = "name = \"Milícias Comunistas\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
+				owner = PREV
+			}
 			create_unit = {
 				division = "name = \"Milícias Comunistas\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
 				owner = PREV
@@ -1739,13 +1804,6 @@ BRA_start_communist_civil_war = {
 				limit = { check_variable = { BRA_communist_popularity > 0.35 } }
 				create_unit = {
 					division = "name = \"Milícias Comunistas\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
-					owner = PREV
-				}
-			}
-			if = {
-				limit = { BRC = { check_variable = { BRA_farmers_agreement_to_uprising > 35 } } }
-				create_unit = {
-					division = "name = \"Milícias Leais\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
 					owner = PREV
 				}
 			}
@@ -1802,11 +1860,60 @@ BRA_start_communist_civil_war = {
 		}
 		if = {
 			limit = { 
-				controls_state = 878
+				controls_state = 956
 			}
-			878 = {
+			956 = {
 				create_unit = {
 					division = "name = \"Divisão de Infantaria\" division_template = \"Divisão de Infantaria\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
+					owner = PREV
+				}
+			}
+		}
+		if = {
+			limit = { 
+				controls_state = 496
+			}
+			496 = {
+				create_unit = {
+					division = "name = \"Divisão de Infantaria\" division_template = \"Divisão de Infantaria\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Divisão de Infantaria\" division_template = \"Divisão de Infantaria\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
+					owner = PREV
+				}
+			}
+		}
+		if = {
+			limit = { 
+				controls_state = 499
+			}
+			499 = {
+				create_unit = {
+					division = "name = \"Divisão de Infantaria\" division_template = \"Divisão de Infantaria\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Divisão de Infantaria\" division_template = \"Divisão de Infantaria\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Milícias Comunistas\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
+					owner = PREV
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = BRA_weakened_spot
+			}
+			every_controlled_state = {
+				create_unit = {
+					division = "name = \"Milícias Comunistas\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Milícias Comunistas\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
 					owner = PREV
 				}
 			}
@@ -2084,6 +2191,7 @@ BRA_start_communist_civil_war = {
 				give_guarantee = PREV
 			}
 		}
+		set_rule = { can_join_factions = no }
 	}
 	set_temp_variable = { BRA_communism = party_popularity@communism }
 	multiply_temp_variable = { BRA_communism = -1 }
@@ -2348,6 +2456,28 @@ BRA_start_imperialist_civil_war = {
 		limit = { has_idea = BRA_brazilian_mining_industry_1 }
 		BZE = { add_ideas = BRA_brazilian_mining_industry_1 }
 	}
+	if = {
+		limit = {
+			has_global_flag = BRA_integralist_mobilized_economy
+		}
+		add_ideas = war_economy
+		every_controlled_state = {
+			limit = { has_dynamic_modifier = { modifier = BRA_small_coffee_plantations } }
+			remove_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+		}
+		every_controlled_state = {
+			limit = { has_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations } }
+			remove_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+		}
+		remove_ideas = {
+			BRA_very_slight_dependency_on_coffee
+			BRA_slight_dependency_on_coffee
+			BRA_dependent_on_coffee
+			BRA_very_dependent_on_coffee
+			BRA_extremely_dependent_on_coffee
+		}
+		clr_global_flag = BRA_integralist_mobilized_economy
+	}
 	### GENERIC VARIABLE SET UP ###
 	set_temp_variable = { BRC_dependency_on_coffee = BRA_dependency_on_coffee }
 	set_temp_variable = { BRC_coffee_companies_opinion = BRA_coffee_companies_opinion }
@@ -2408,6 +2538,11 @@ BRA_start_imperialist_civil_war = {
 		set_nationality = BZE 
 	}
 	BZE = {
+		set_country_flag = {
+			flag = BRA_recently_spawned
+			days = 14
+			value = 1
+		}
 		set_party_name = {
 			ideology = neutrality
 			long_name = BRA_monarchy_party_long
@@ -2540,7 +2675,7 @@ BRA_start_imperialist_civil_war = {
 			create_country_leader = {
 				name = "Prince Pedro Henrique de Orléans-Braganza"
 				desc = "POLITICS_PEDRO_HENRIQUE_DESC"
-				picture = "gfx/leaders/BRA/portrait_bra_prince_pedro_hernique_de_orleans_e_braganza.png"
+				picture = "gfx/leaders/BRA/BRA_pedro_henrique_EUYL.png"
 				expire = "1965.1.1"
 				ideology = monarchism
 				traits = {
@@ -2588,6 +2723,14 @@ BRA_start_imperialist_civil_war = {
 		}
 		BZE = { change_tag_from = BRA }
 	}
+	if = {
+		limit = {
+			BRA = { has_government = fascism }
+		}
+		BRA = {
+			complete_national_focus = BRA_integralism_shall_rule
+		}
+	}
 	every_state = {
 		limit = { has_dynamic_modifier = { modifier = BRA_monarchist_influence } }
 		remove_dynamic_modifier = { modifier = BRA_monarchist_influence }
@@ -2606,6 +2749,7 @@ BRA_start_imperialist_civil_war = {
 				give_guarantee = PREV
 			}
 		}
+		set_rule = { can_join_factions = no }
 	}
 	random_other_country = {
 		limit = {

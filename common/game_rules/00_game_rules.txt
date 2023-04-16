@@ -587,6 +587,322 @@ allow_scorched_earth = {
 #  #  #      #  # #   #  # #  #  # #   #  #  # #  # 
 #  # ###     ###  ### #  # #  #   #   ###  ##  #  # 
 
+
+#### EUYL ####
+
+ARG_ai_behavior = {
+	name = "ARG_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_HISTORICAL_ARG_AI_DESC"
+	}
+	option = {
+		name = ARG_DEMOCRATIC_AZULES
+		text = "RULE_OPTION_ARG_DEMOCRATIC_AZULES"
+		desc = "RULE_ARG_DEMOCRATIC_AZULES_DESC"
+	}
+	option = {
+		name = ARG_DEMOCRATIC_GRISES
+		text = "RULE_OPTION_ARG_DEMOCRATIC_GRISES"
+		desc = "RULE_ARG_DEMOCRATIC_GRISES_DESC"
+	}
+	option = {
+		name = ARG_COMMUNIST
+		text = "RULE_OPTION_ARG_COMMUNIST"
+		desc = "RULE_OPTION_ARG_COMMUNIST_DESC"
+	}
+	option = {
+		name = ARG_FASCIST
+		text = "RULE_OPTION_ARG_FASCIST"
+		desc = "RULE_OPTION_ARG_FASCIST_DESC"
+	}
+	option = {
+		name = ARG_PERONIST
+		text = "RULE_OPTION_ARG_PERONIST"
+		desc = "RULE_OPTION_ARG_PERONIST_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+BRA_ai_behavior = {
+	name = "BRA_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_HISTORICAL_BRA_AI_DESC"
+	}
+	option = {
+		name = BRA_COMMUNIST
+		text = "RULE_OPTION_BRA_COMMUNIST"
+		desc = "RULE_OPTION_BRA_COMMUNIST_DESC"
+	}
+	option = {
+		name = BRA_SOCIAL_DEMOCRACY_CIVIL_WAR
+		text = "RULE_OPTION_BRA_SOCIAL_DEMOCRACY_CIVIL_WAR"
+		desc = "RULE_OPTION_BRA_SOCIAL_DEMOCRACY_CIVIL_WAR_DESC"
+	}
+	option = {
+		name = BRA_SOCIAL_DEMOCRACY_ELECTIONS
+		text = "RULE_OPTION_BRA_SOCIAL_DEMOCRACY_ELECTIONS"
+		desc = "RULE_OPTION_BRA_SOCIAL_DEMOCRACY_ELECTIONS_DESC"
+	}
+	option = {
+		name = BRA_FASCIST_CIVIL_WAR
+		text = "RULE_OPTION_BRA_FASCIST_CIVIL_WAR"
+		desc = "RULE_OPTION_BRA_FASCIST_CIVIL_WAR_DESC"
+	}
+	option = {
+		name = BRA_FASCIST_ELECTIONS
+		text = "RULE_OPTION_BRA_FASCIST_ELECTIONS"
+		desc = "RULE_OPTION_BRA_FASCIST_ELECTIONS_DESC"
+	}
+	option = {
+		name = BRA_DEMOCRATIC
+		text = "RULE_OPTION_BRA_DEMOCRATIC"
+		desc = "RULE_OPTION_BRA_DEMOCRATIC_DESC"
+	}
+	option = {
+		name = BRA_MONARCHIST
+		text = "RULE_OPTION_BRA_MONARCHIST"
+		desc = "RULE_OPTION_BRA_MONARCHIST_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+CHL_ai_behavior = {
+	name = "CHL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_HISTORICAL_CHL_AI_DESC"
+	}
+	option = {
+		name = CHL_ANARCHIST
+		text = "RULE_OPTION_CHL_ANARCHIST"
+		desc = "RULE_OPTION_CHL_ANARCHIST_DESC"
+	}
+	option = {
+		name = CHL_COMMUNIST
+		text = "RULE_OPTION_CHL_COMMUNIST"
+		desc = "RULE_OPTION_CHL_COMMUNIST_DESC"
+	}
+	option = {
+		name = CHL_LIBERALISM
+		text = "RULE_OPTION_CHL_LIBERALISM"
+		desc = "RULE_OPTION_CHL_LIBERALISM_DESC"
+	}
+	option = {
+		name = CHL_FASCIST_CIVIL_WAR
+		text = "RULE_OPTION_CHL_FASCIST_CIVIL_WAR"
+		desc = "RULE_OPTION_CHL_FASCIST_CIVIL_WAR_DESC"
+	}
+	option = {
+		name = CHL_FASCIST_COUP
+		text = "RULE_OPTION_CHL_FASCIST_COUP"
+		desc = "RULE_OPTION_CHL_FASCIST_COUP_DESC"
+	}
+	option = {
+		name = CHL_FASCIST_ELECTIONS
+		text = "RULE_OPTION_CHL_FASCIST_ELECTIONS"
+		desc = "RULE_OPTION_CHL_FASCIST_ELECTIONS_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+COL_ai_behavior = {
+	name = "COL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_HISTORICAL_COL_AI_DESC"
+	}
+	option = {
+		name = COL_COMMUNIST
+		text = "RULE_OPTION_COL_COMMUNIST"
+		desc = "RULE_OPTION_COL_COMMUNIST_DESC"
+	}
+	option = {
+		name = COL_NON_ALLIGNED
+		text = "RULE_OPTION_COL_NON_ALLIGNED"
+		desc = "RULE_OPTION_COL_NON_ALLIGNED_DESC"
+	}
+	option = {
+		name = COL_ALZATISM
+		text = "RULE_OPTION_COL_ALZATISM"
+		desc = "RULE_OPTION_COL_ALZATISM_DESC"
+	}
+	option = {
+		name = COL_LAUREANISM
+		text = "RULE_OPTION_COL_LAUREANISM"
+		desc = "RULE_OPTION_COL_LAUREANISM_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+PRU_ai_behavior = {
+	name = "PRU_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_HISTORICAL_PRU_AI_DESC"
+	}
+	option = {
+		name = PRU_COMMUNIST
+		text = "RULE_OPTION_PRU_COMMUNIST"
+		desc = "RULE_OPTION_PRU_COMMUNIST_DESC"
+	}
+	option = {
+		name = PRU_FASCIST
+		text = "RULE_OPTION_PRU_FASCIST"
+		desc = "RULE_OPTION_PRU_FASCIST_DESC"
+	}
+	option = {
+		name = PRU_INCA
+		text = "RULE_OPTION_PRU_INCA"
+		desc = "RULE_OPTION_PRU_INCA_DESC"
+	}
+	option = {
+		name = PRU_PERU_BOLIVIA_CONFEDERATION
+		text = "RULE_OPTION_PRU_PERU_BOLIVIA_CONFEDERATION"
+		desc = "RULE_OPTION_PRU_PERU_BOLIVIA_CONFEDERATION_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+BOL_ai_behavior = {
+	name = "BOL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_HISTORICAL_BOL_AI_DESC"
+	}
+	option = {
+		name = BOL_FALANGIST
+		text = "RULE_OPTION_BOL_FALANGIST"
+		desc = "RULE_OPTION_BOL_FALANGIST_DESC"
+	}
+	option = {
+		name = BOL_DEMOCRATIC
+		text = "RULE_OPTION_BOL_DEMOCRATIC"
+		desc = "RULE_OPTION_BOL_DEMOCRATIC_DESC"
+	}
+	option = {
+		name = BOL_TEJADA_DICTATORSHIP
+		text = "RULE_OPTION_BOL_TEJADA_DICTATORSHIP"
+		desc = "RULE_OPTION_BOL_TEJADA_DICTATORSHIP_DESC"
+	}
+	option = {
+		name = BOL_PERU_BOLIVIA_CONFEDERATION
+		text = "RULE_OPTION_BOL_PERU_BOLIVIA_CONFEDERATION"
+		desc = "RULE_OPTION_BOL_PERU_BOLIVIA_CONFEDERATION_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+URG_ai_behavior = {
+	name = "URG_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_HISTORICAL_URG_AI_DESC"
+	}
+	option = {
+		name = URG_TERRA_DICTATORSHIP
+		text = "RULE_OPTION_URG_TERRA_DICTATORSHIP"
+		desc = "RULE_OPTION_URG_TERRA_DICTATORSHIP_DESC"
+	}
+	option = {
+		name = URG_FASCIST
+		text = "RULE_OPTION_URG_FASCIST"
+		desc = "RULE_OPTION_URG_FASCIST_DESC"
+	}
+	option = {
+		name = URG_LIBERAL_DEMOCRACY
+		text = "RULE_OPTION_URG_LIBERAL_DEMOCRACY"
+		desc = "RULE_OPTION_URG_LIBERAL_DEMOCRACY_DESC"
+	}
+	option = {
+		name = URG_COMMUNIST
+		text = "RULE_OPTION_URG_COMMUNIST"
+		desc = "RULE_OPTION_URG_COMMUNIST_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+#### EUYL ####
+
+
 GER_ai_behavior = {
 	name = "GER_AI_BEHAVIOR"
 	required_dlc = "Waking the Tiger"
@@ -724,10 +1040,40 @@ ITA_ai_behavior = {
 		desc = "RULE_FASCIST_HISTORICAL_ITA_AI_DESC" 
 		allow_achievements = yes
 	}
+	#option = { #TODO_Manu: Kill this
+	#	name = FASCIST_ALTERNATE
+	#	text = "RULE_OPTION_FASCIST_ALTERNATE"
+	#	desc = "RULE_FASCIST_ALTERNATE_ITA_AI_DESC"
+	#}
 	option = {
-		name = FASCIST_ALTERNATE
-		text = "RULE_OPTION_FASCIST_ALTERNATE"
-		desc = "RULE_FASCIST_ALTERNATE_ITA_AI_DESC"
+		name = ALT_FASCIST_BALBO
+		text = "RULE_OPTION_ALT_FASCIST_BALBO"
+		desc = "RULE_ALT_FASCIST_BALBO_ITA_AI_DESC"
+	}
+	option = {
+		name = ALT_FASCIST_GRANDI
+		text = "RULE_OPTION_ALT_FASCIST_GRANDI"
+		desc = "RULE_ALT_FASCIST_GRANDI_ITA_AI_DESC"
+	}
+	option = {
+		name = ITA_MONARCHIST_ROMAN_EMPIRE
+		text = "RULE_OPTION_ITA_MONARCHIST_ROMAN_EMPIRE"
+		desc = "RULE_OPTION_ITA_MONARCHIST_ROMAN_EMPIRE_AI_DESC"
+	}
+	option = {
+		name = ITA_CHRISTIAN_DEMOCRACY
+		text = "RULE_OPTION_ITA_CHRISTIAN_DEMOCRACY"
+		desc = "RULE_OPTION_ITA_CHRISTIAN_DEMOCRACY_AI_DESC"
+	}
+	option = {
+		name = ITA_COMMUNIST_PLAN
+		text = "RULE_OPTION_ITA_COMMUNIST_PLAN"
+		desc = "RULE_OPTION_ITA_COMMUNIST_PLAN_AI_DESC"
+	}
+	option = {
+		name = ITA_DEMOCRATIC_PLAN
+		text = "RULE_OPTION_ITA_DEMOCRATIC_PLAN"
+		desc = "RULE_OPTION_ITA_DEMOCRATIC_PLAN_AI_DESC"
 	}
 	option = {
 		name = RANDOM
@@ -1858,12 +2204,10 @@ EST_ai_behavior = {
 	}
 }
 
-
-#### EUYL ####
-
-ARG_ai_behavior = {
-	name = "ARG_AI_BEHAVIOR"
+ETH_ai_behavior = {
+	name = "ETH_AI_BEHAVIOR"
 	group = "RULE_GROUP_AI_BEHAVIOR"
+	required_dlc = "By Blood Alone"
 	default = {
 		name = DEFAULT
 		text = "RULE_OPTION_DEFAULT"
@@ -1872,43 +2216,51 @@ ARG_ai_behavior = {
 	option = {
 		name = HISTORICAL
 		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_HISTORICAL_ARG_AI_DESC"
+		desc = "RULE_HISTORICAL_ETH_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
-		name = ARG_DEMOCRATIC_AZULES
-		text = "RULE_OPTION_ARG_DEMOCRATIC_AZULES"
-		desc = "RULE_ARG_DEMOCRATIC_AZULES_DESC"
+		name = IMPERIAL
+		text = "RULE_OPTION_ETH_IMPERIAL"
+		desc = "RULE_ETH_IMPERIAL_AI_DESC"
+		allow_achievements = no
 	}
 	option = {
-		name = ARG_DEMOCRATIC_GRISES
-		text = "RULE_OPTION_ARG_DEMOCRATIC_GRISES"
-		desc = "RULE_ARG_DEMOCRATIC_GRISES_DESC"
+		name = STALINIST
+		text = "RULE_OPTION_ETH_STALINIST"
+		desc = "RULE_OPTION_ETH_STALINIST_desc"
+		allow_achievements = no
 	}
 	option = {
-		name = ARG_COMMUNIST
-		text = "RULE_OPTION_ARG_COMMUNIST"
-		desc = "RULE_OPTION_ARG_COMMUNIST_DESC"
-	}
+		name = ANARCHIST
+		text = "RULE_OPTION_ETH_ANARCHIST"
+		desc = "RULE_OPTION_ETH_ANARCHIST_desc"
+		allow_achievements = no
+	}	
 	option = {
-		name = ARG_FASCIST
-		text = "RULE_OPTION_ARG_FASCIST"
-		desc = "RULE_OPTION_ARG_FASCIST_DESC"
-	}
+		name = Collaborationist
+		text = "RULE_OPTION_ETH_COLLABORATIONIST"
+		desc = "RULE_OPTION_ETH_COLLABORATIONIST_desc"
+		allow_achievements = no
+	}	
 	option = {
-		name = ARG_PERONIST
-		text = "RULE_OPTION_ARG_PERONIST"
-		desc = "RULE_OPTION_ARG_PERONIST_DESC"
-	}
+		name = Independent_Fascist
+		text = "RULE_OPTION_ETH_INDEPENDENT_FASCIST"
+		desc = "RULE_OPTION_ETH_INDEPENDENT_FASCIST_desc"
+		allow_achievements = no
+	}	
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = no
 	}
 }
 
-BRA_ai_behavior = {
-	name = "BRA_AI_BEHAVIOR"
+SWI_ai_behavior = {
+	name = "SWI_AI_BEHAVIOR"
 	group = "RULE_GROUP_AI_BEHAVIOR"
+	required_dlc = "By Blood Alone"
 	default = {
 		name = DEFAULT
 		text = "RULE_OPTION_DEFAULT"
@@ -1917,262 +2269,40 @@ BRA_ai_behavior = {
 	option = {
 		name = HISTORICAL
 		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_HISTORICAL_BRA_AI_DESC"
+		desc = "RULE_HISTORICAL_SWI_AI_DESC"
+		allow_achievements = yes
 	}
 	option = {
-		name = BRA_COMMUNIST
-		text = "RULE_OPTION_BRA_COMMUNIST"
-		desc = "RULE_OPTION_BRA_COMMUNIST_DESC"
+		name = SWI_ALLIED_DEMOCRATIC
+		text = "RULE_OPTION_SWI_ALLIED_DEMOCRATIC"
+		desc = "RULE_OPTION_SWI_ALLIED_DEMOCRATIC_AI_DESC"
+		allow_achievements = no
 	}
 	option = {
-		name = BRA_SOCIAL_DEMOCRACY_CIVIL_WAR
-		text = "RULE_OPTION_BRA_SOCIAL_DEMOCRACY_CIVIL_WAR"
-		desc = "RULE_OPTION_BRA_SOCIAL_DEMOCRACY_CIVIL_WAR_DESC"
+		name = SWI_EXPANSIONIST_DEMOCRATIC
+		text = "RULE_OPTION_SWI_EXPANSIONIST_DEMOCRATIC"
+		desc = "RULE_OPTION_SWI_EXPANSIONIST_DEMOCRATIC_AI_DESC"
+		allow_achievements = no
 	}
 	option = {
-		name = BRA_SOCIAL_DEMOCRACY_ELECTIONS
-		text = "RULE_OPTION_BRA_SOCIAL_DEMOCRACY_ELECTIONS"
-		desc = "RULE_OPTION_BRA_SOCIAL_DEMOCRACY_ELECTIONS_DESC"
+		name = SWI_IMPERIAL
+		text = "RULE_OPTION_SWI_IMPERIAL"
+		desc = "RULE_OPTION_IMPERIAL_SWI_AI_DESC"
+		allow_achievements = no
 	}
 	option = {
-		name = BRA_FASCIST_CIVIL_WAR
-		text = "RULE_OPTION_BRA_FASCIST_CIVIL_WAR"
-		desc = "RULE_OPTION_BRA_FASCIST_CIVIL_WAR_DESC"
-	}
-	option = {
-		name = BRA_FASCIST_ELECTIONS
-		text = "RULE_OPTION_BRA_FASCIST_ELECTIONS"
-		desc = "RULE_OPTION_BRA_FASCIST_ELECTIONS_DESC"
-	}
-	option = {
-		name = BRA_DEMOCRATIC
-		text = "RULE_OPTION_BRA_DEMOCRATIC"
-		desc = "RULE_OPTION_BRA_DEMOCRATIC_DESC"
-	}
-	option = {
-		name = BRA_MONARCHIST
-		text = "RULE_OPTION_BRA_MONARCHIST"
-		desc = "RULE_OPTION_BRA_MONARCHIST_DESC"
+		name = SWI_FASCIST
+		text = "RULE_OPTION_SWI_FASCIST"
+		desc = "RULE_OPTION_SWI_FASCIST_AI_DESC"
+		allow_achievements = no
 	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
-	}
+		allow_achievements = no
+	} 
 }
-
-CHL_ai_behavior = {
-	name = "CHL_AI_BEHAVIOR"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-	default = {
-		name = DEFAULT
-		text = "RULE_OPTION_DEFAULT"
-		desc = "RULE_OPTION_DEFAULT_AI_DESC"
-	}
-	option = {
-		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_HISTORICAL_CHL_AI_DESC"
-	}
-	option = {
-		name = CHL_ANARCHIST
-		text = "RULE_OPTION_CHL_ANARCHIST"
-		desc = "RULE_OPTION_CHL_ANARCHIST_DESC"
-	}
-	option = {
-		name = CHL_COMMUNIST
-		text = "RULE_OPTION_CHL_COMMUNIST"
-		desc = "RULE_OPTION_CHL_COMMUNIST_DESC"
-	}
-	option = {
-		name = CHL_LIBERALISM
-		text = "RULE_OPTION_CHL_LIBERALISM"
-		desc = "RULE_OPTION_CHL_LIBERALISM_DESC"
-	}
-	option = {
-		name = CHL_FASCIST_CIVIL_WAR
-		text = "RULE_OPTION_CHL_FASCIST_CIVIL_WAR"
-		desc = "RULE_OPTION_CHL_FASCIST_CIVIL_WAR_DESC"
-	}
-	option = {
-		name = CHL_FASCIST_COUP
-		text = "RULE_OPTION_CHL_FASCIST_COUP"
-		desc = "RULE_OPTION_CHL_FASCIST_COUP_DESC"
-	}
-	option = {
-		name = CHL_FASCIST_ELECTIONS
-		text = "RULE_OPTION_CHL_FASCIST_ELECTIONS"
-		desc = "RULE_OPTION_CHL_FASCIST_ELECTIONS_DESC"
-	}
-	option = {
-		name = RANDOM
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_OPTION_RANDOM_AI_DESC"
-	}
-}
-
-COL_ai_behavior = {
-	name = "COL_AI_BEHAVIOR"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-	default = {
-		name = DEFAULT
-		text = "RULE_OPTION_DEFAULT"
-		desc = "RULE_OPTION_DEFAULT_AI_DESC"
-	}
-	option = {
-		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_HISTORICAL_COL_AI_DESC"
-	}
-	option = {
-		name = COL_COMMUNIST
-		text = "RULE_OPTION_COL_COMMUNIST"
-		desc = "RULE_OPTION_COL_COMMUNIST_DESC"
-	}
-	option = {
-		name = COL_NON_ALLIGNED
-		text = "RULE_OPTION_COL_NON_ALLIGNED"
-		desc = "RULE_OPTION_COL_NON_ALLIGNED_DESC"
-	}
-	option = {
-		name = COL_ALZATISM
-		text = "RULE_OPTION_COL_ALZATISM"
-		desc = "RULE_OPTION_COL_ALZATISM_DESC"
-	}
-	option = {
-		name = COL_LAUREANISM
-		text = "RULE_OPTION_COL_LAUREANISM"
-		desc = "RULE_OPTION_COL_LAUREANISM_DESC"
-	}
-	option = {
-		name = RANDOM
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_OPTION_RANDOM_AI_DESC"
-	}
-}
-
-PRU_ai_behavior = {
-	name = "PRU_AI_BEHAVIOR"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-	default = {
-		name = DEFAULT
-		text = "RULE_OPTION_DEFAULT"
-		desc = "RULE_OPTION_DEFAULT_AI_DESC"
-	}
-	option = {
-		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_HISTORICAL_PRU_AI_DESC"
-	}
-	option = {
-		name = PRU_COMMUNIST
-		text = "RULE_OPTION_PRU_COMMUNIST"
-		desc = "RULE_OPTION_PRU_COMMUNIST_DESC"
-	}
-	option = {
-		name = PRU_FASCIST
-		text = "RULE_OPTION_PRU_FASCIST"
-		desc = "RULE_OPTION_PRU_FASCIST_DESC"
-	}
-	option = {
-		name = PRU_INCA
-		text = "RULE_OPTION_PRU_INCA"
-		desc = "RULE_OPTION_PRU_INCA_DESC"
-	}
-	option = {
-		name = PRU_PERU_BOLIVIA_CONFEDERATION
-		text = "RULE_OPTION_PRU_PERU_BOLIVIA_CONFEDERATION"
-		desc = "RULE_OPTION_PRU_PERU_BOLIVIA_CONFEDERATION_DESC"
-	}
-	option = {
-		name = RANDOM
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_OPTION_RANDOM_AI_DESC"
-	}
-}
-
-BOL_ai_behavior = {
-	name = "BOL_AI_BEHAVIOR"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-	default = {
-		name = DEFAULT
-		text = "RULE_OPTION_DEFAULT"
-		desc = "RULE_OPTION_DEFAULT_AI_DESC"
-	}
-	option = {
-		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_HISTORICAL_BOL_AI_DESC"
-	}
-	option = {
-		name = BOL_FALANGIST
-		text = "RULE_OPTION_BOL_FALANGIST"
-		desc = "RULE_OPTION_BOL_FALANGIST_DESC"
-	}
-	option = {
-		name = BOL_DEMOCRATIC
-		text = "RULE_OPTION_BOL_DEMOCRATIC"
-		desc = "RULE_OPTION_BOL_DEMOCRATIC_DESC"
-	}
-	option = {
-		name = BOL_TEJADA_DICTATORSHIP
-		text = "RULE_OPTION_BOL_TEJADA_DICTATORSHIP"
-		desc = "RULE_OPTION_BOL_TEJADA_DICTATORSHIP_DESC"
-	}
-	option = {
-		name = BOL_PERU_BOLIVIA_CONFEDERATION
-		text = "RULE_OPTION_BOL_PERU_BOLIVIA_CONFEDERATION"
-		desc = "RULE_OPTION_BOL_PERU_BOLIVIA_CONFEDERATION_DESC"
-	}
-	option = {
-		name = RANDOM
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_OPTION_RANDOM_AI_DESC"
-	}
-}
-
-URG_ai_behavior = {
-	name = "URG_AI_BEHAVIOR"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-	default = {
-		name = DEFAULT
-		text = "RULE_OPTION_DEFAULT"
-		desc = "RULE_OPTION_DEFAULT_AI_DESC"
-	}
-	option = {
-		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_HISTORICAL_URG_AI_DESC"
-	}
-	option = {
-		name = URG_TERRA_DICTATORSHIP
-		text = "RULE_OPTION_URG_TERRA_DICTATORSHIP"
-		desc = "RULE_OPTION_URG_TERRA_DICTATORSHIP_DESC"
-	}
-	option = {
-		name = URG_FASCIST
-		text = "RULE_OPTION_URG_FASCIST"
-		desc = "RULE_OPTION_URG_FASCIST_DESC"
-	}
-	option = {
-		name = URG_LIBERAL_DEMOCRACY
-		text = "RULE_OPTION_URG_LIBERAL_DEMOCRACY"
-		desc = "RULE_OPTION_URG_LIBERAL_DEMOCRACY_DESC"
-	}
-	option = {
-		name = URG_COMMUNIST
-		text = "RULE_OPTION_URG_COMMUNIST"
-		desc = "RULE_OPTION_URG_COMMUNIST_DESC"
-	}
-	option = {
-		name = RANDOM
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_OPTION_RANDOM_AI_DESC"
-	}
-}
-
-#### EUYL ####
-
 
 
  ##   ##  #   # ###      ## ### ### #  # ###  
@@ -2344,6 +2474,36 @@ raj_fragmentation_status = {
 		name = RAJ_FRAGMENTED
 		text = "RULE_OPTION_RAJ_FRAGMENTED"
 		desc = "RULE_OPTION_RAJ_FRAGMENTED_DESC"
+	}
+}
+eth_fragmentation_status = {
+	name = "ETH_FRAGMENTATION_STATUS" 
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = ETH_FRAGMENTED
+		text = "RULE_OPTION_ETH_FRAGMENTED"
+		desc = "RULE_OPTION_ETH_FRAGMENTED_DESC"
+	}
+}
+ita_fragmentation_status = {
+	name = "ITA_FRAGMENTATION_STATUS" 
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = ITA_FRAGMENTED 
+		text = "RULE_OPTION_ITA_FRAGMENTED"
+		desc = "RULE_OPTION_ITA_FRAGMENTED_DESC"
 	}
 }
 

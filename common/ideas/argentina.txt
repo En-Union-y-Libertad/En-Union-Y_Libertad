@@ -6,35 +6,235 @@ ideas = {
 
 	country = {
 	
-		ARG_servicio_militar_obligatorio = {
-			picture = ARG_servicio_militar_ob
-			
+		### Argentina Rework ###
+		ARG_corrupt_politicans_rebelling = {
+			picture = ARG_polit_fight
+
 			allowed = {
-				original_tag = ARG 
+				always = no 
 			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			available = {
-				OR = {
-					NOT = { has_government = democratic }
-					NOT = {
-						OR = {
-							has_idea = service_by_requirement
-							has_idea = all_adults_serve
-							has_idea = scraping_the_barrel
-						}
-					}
-				}						
-			}
-			
+
+			allowed_civil_war = { always = no }
+
 			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.35
+			}
+		}
+	
+		ARG_burnt_out_army = {
+			picture = ARG_burnt_out_army
+			
+			allowed = { always = no }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost =  -1
+			
+			modifier = {
+				political_power_factor = -0.2
+				army_attack_factor = -0.25
+				army_defence_factor = -0.25
+				army_speed_factor = -0.1
+				war_support_factor = -0.25
+			}
+		}
+		
+		ARG_disorganized_army_1 = {
+			name = ARG_disorganized_army
+			picture = ARG_burnt_out_army
+			
+			allowed = { always = no }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost =  -1
 			
 			modifier = {
 				stability_factor = -0.1
-				conscription = 0.035
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_speed_factor = -0.1
+			}
+		}
+		
+		ARG_disorganized_army_2 = {
+			name = ARG_disorganized_army
+			picture = ARG_burnt_out_army
+			
+			allowed = { always = no }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost =  -1
+			
+			modifier = {
+				stability_factor = -0.05
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_speed_factor = -0.05
+			}
+		}
+		
+		#Ejercito Revolucionario del Pueblo
+		ARG_ERP = {
+			picture = ARG_soldado_argentino
+			
+			allowed = { always = no }
+			
+			allowed_civil_war = { always = yes }
+			
+			removal_cost =  -1
+			
+			modifier = {
+				war_support_factor = 0.05
+				communism_drift = 0.03
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = -0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+	
+		ARG_high_inflation_risk = {
+			picture = ARG_high_risk
+
+			allowed = { 
+				always = no 
+			}
+
+			available = {
+				NOT = {
+					OR = {
+						has_idea = ARG_inflation_1
+						has_idea = ARG_inflation_2
+						has_idea = ARG_inflation_3
+						has_idea = ARG_inflation_4
+						has_idea = ARG_inflation_5
+						has_idea = ARG_inflation_6
+						has_idea = ARG_inflation_7
+						has_idea = ARG_inflation_8
+						has_idea = ARG_inflation_9
+						has_idea = ARG_inflation_10
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				custom_modifier_tooltip = ARG_monthly_high_risk_tt
+			}
+		}
+
+		ARG_medium_inflation_risk = {
+			picture = ARG_medium_risk
+
+			allowed = { 
+				always = no 
+			}
+
+			available = {
+				NOT = {
+					OR = {
+						has_idea = ARG_inflation_1
+						has_idea = ARG_inflation_2
+						has_idea = ARG_inflation_3
+						has_idea = ARG_inflation_4
+						has_idea = ARG_inflation_5
+						has_idea = ARG_inflation_6
+						has_idea = ARG_inflation_7
+						has_idea = ARG_inflation_8
+						has_idea = ARG_inflation_9
+						has_idea = ARG_inflation_10
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				custom_modifier_tooltip = ARG_monthly_medium_risk_tt
+			}
+		}
+
+		ARG_low_inflation_risk = {
+			picture = ARG_low_risk
+
+			allowed = { 
+				always = no 
+			}
+
+			available = {
+				NOT = {
+					OR = {
+						has_idea = ARG_inflation_1
+						has_idea = ARG_inflation_2
+						has_idea = ARG_inflation_3
+						has_idea = ARG_inflation_4
+						has_idea = ARG_inflation_5
+						has_idea = ARG_inflation_6
+						has_idea = ARG_inflation_7
+						has_idea = ARG_inflation_8
+						has_idea = ARG_inflation_9
+						has_idea = ARG_inflation_10
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				custom_modifier_tooltip = ARG_monthly_low_risk_tt
+			}
+		}
+		
+		ARG_juremos_con_gloria_morir_idea = {
+			picture = ARG_gloria_morir
+
+			allowed = { original_tag = ARG }
+
+			allowed_civil_war = { always = yes }
+
+			available = {
+				exists = yes 
+				is_subject = no 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				conscription_factor = 0.05
+				industrial_capacity_factory = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+				war_support_factor = 0.15
+			}
+		}
+		
+		ARG_early_mobilization = {
+			picture = eng_imperial_conscription
+
+			allowed = { always = no }
+
+			allowed_civil_war = {always = yes }
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
 			}
 		}
 		
@@ -42,7 +242,7 @@ ideas = {
 			picture = chi_hyper_inflation
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -62,7 +262,7 @@ ideas = {
 			picture = chi_hyper_inflation
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -82,7 +282,7 @@ ideas = {
 			picture = chi_hyper_inflation2
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -102,7 +302,7 @@ ideas = {
 			picture = chi_hyper_inflation2
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -122,7 +322,7 @@ ideas = {
 			picture = chi_hyper_inflation3
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -142,7 +342,7 @@ ideas = {
 			picture = chi_hyper_inflation3
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -162,7 +362,7 @@ ideas = {
 			picture = chi_hyper_inflation4
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -182,7 +382,7 @@ ideas = {
 			picture = chi_hyper_inflation4
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -203,7 +403,7 @@ ideas = {
 			picture = chi_hyper_inflation5
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -224,7 +424,7 @@ ideas = {
 			picture = chi_hyper_inflation5
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -245,7 +445,7 @@ ideas = {
 			picture = generic_exploit_mines
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -263,7 +463,7 @@ ideas = {
 			picture = generic_artillery_regiments
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -357,7 +557,7 @@ ideas = {
 			picture = generic_air_bonus
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -410,7 +610,7 @@ ideas = {
 			picture = generic_coastal_defense_ships2
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -435,7 +635,7 @@ ideas = {
 			picture = generic_coastal_defense_ships2
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -464,7 +664,7 @@ ideas = {
 			picture = generic_coastal_defense_ships2
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -490,7 +690,7 @@ ideas = {
 			
 			allowed = {
 				OR = {
-					original_tag = ARG 	
+					tag = ARG	
 					tag = PRU			
 				}
 			}
@@ -516,7 +716,7 @@ ideas = {
 			picture = generic_naval_manufacturer_1
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -539,10 +739,9 @@ ideas = {
 		ARG_increased_submarine_output = {
 			allowed = {
 				OR = {
-					original_tag = ARG 
+					tag = ARG
 					tag = CHL 
 					original_tag = BOL
-					original_tag = BRA
 				}
 			}
 
@@ -564,9 +763,8 @@ ideas = {
 		ARG_increased_destroyer_output = {
 			allowed = {
 				OR = {
-					original_tag = ARG 
+					tag = ARG
 					tag = CHL 
-					original_tag = BRA
 				}
 			}
 
@@ -610,7 +808,7 @@ ideas = {
 			picture = ast_volunteer_defence_corps
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 
 			available = {
@@ -631,7 +829,7 @@ ideas = {
 			picture = ast_volunteer_defence_corps
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -662,7 +860,7 @@ ideas = {
 			picture = usa_great_depression
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -686,7 +884,36 @@ ideas = {
 			}
 		}
 		
-		ARG_workers_in_the_armed_forces = {
+		ARG_workers_in_the_armed_forces_1 = {
+			name = ARG_workers_in_the_armed_forces
+			picture = eng_imperial_conscription
+			
+			allowed = {
+				OR = {	
+					original_tag = ARG
+					original_tag = CHL
+				}
+			}
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		
+		ARG_workers_in_the_armed_forces_2 = {
+			name = ARG_workers_in_the_armed_forces
 			picture = eng_imperial_conscription
 			
 			allowed = {
@@ -790,7 +1017,7 @@ ideas = {
 			picture = ARG_soviet_aid
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -810,7 +1037,7 @@ ideas = {
 			picture = ARG_soviet_aid
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -830,7 +1057,7 @@ ideas = {
 			picture = ARG_drift_back_towards_the_confederation
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -853,7 +1080,7 @@ ideas = {
 			picture = ARG_shadow_of_peron
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -869,7 +1096,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				peronism_drift = 0.03
+				political_power_factor = -0.05
 			}
 		}
 		
@@ -877,7 +1104,7 @@ ideas = {
 			picture = ARG_shadow_of_peron
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -893,7 +1120,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				peronism_drift = 0.05
+			stability_factor = -0.02
+				political_power_factor = -0.07
 			}
 		}
 		
@@ -901,7 +1129,7 @@ ideas = {
 			picture = ARG_purge_peronist
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -917,7 +1145,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				peronism_drift = -0.25
+				stability_factor = -0.1
 			}
 		}
 		
@@ -925,7 +1153,7 @@ ideas = {
 			picture = ARG_shadow_of_peron
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -941,7 +1169,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				peronism_drift = 0.1
+				stability_factor = 0.01
+				political_power_factor = -0.02
 			}
 		}
 		
@@ -949,7 +1178,7 @@ ideas = {
 			picture = ARG_shadow_of_peron
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -965,9 +1194,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				peronism_drift = 0.1
 				industrial_capacity_factory = 0.05
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.05
 				stability_factor = 0.05
 			}
 		}
@@ -976,7 +1204,7 @@ ideas = {
 			picture = ARG_federalized_economy
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 				has_government = fascism
 				has_completed_focus = ARG_federalize_the_economy
 			}
@@ -1006,7 +1234,7 @@ ideas = {
 			picture = ARG_viva_la_confederacion
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1031,7 +1259,7 @@ ideas = {
 			picture = ARG_viva_la_confederacion
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1058,7 +1286,7 @@ ideas = {
 			picture = ARG_viva_la_confederacion
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1087,7 +1315,7 @@ ideas = {
 			picture = ARG_viva_la_confederacion
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1117,7 +1345,7 @@ ideas = {
 			picture = ARG_viva_la_confederacion
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1144,7 +1372,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -1162,7 +1390,7 @@ ideas = {
 			picture = ARG_opened_borders
 			
 			allowed = {
-				always = no 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -1181,7 +1409,7 @@ ideas = {
 			picture = ARG_liberal_war_machine
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -1201,7 +1429,7 @@ ideas = {
 			picture = ARG_liberal_war_machine
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -1222,7 +1450,7 @@ ideas = {
 			picture = man_five_year_plan_industry
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -1242,7 +1470,7 @@ ideas = {
 			picture = generic_spy_coup #low possibility of changing
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -1252,6 +1480,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				political_power_factor = -0.15
 				political_advisor_cost_factor = 0.3
 				trade_laws_cost_factor = 0.3
 				mobilization_laws_cost_factor = 0.3
@@ -1263,7 +1492,7 @@ ideas = {
 			picture = ARG_reform_parliament
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			
@@ -1282,7 +1511,7 @@ ideas = {
 			picture = ARG_workers_in_parliament
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -1303,7 +1532,7 @@ ideas = {
 			picture = ARG_distrust_of_military 
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1356,7 +1585,7 @@ ideas = {
 			
 			allowed = {
 				OR = {
-					original_tag = ARG 
+					tag = ARG
 					original_tag = BOL 
 					original_tag = PRU 
 				}
@@ -1403,7 +1632,7 @@ ideas = {
 			picture = FRA_motorized_focus
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 
 			allowed_civil_war = {
@@ -1465,7 +1694,7 @@ ideas = {
 			picture = ARG_armada
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 
 			allowed_civil_war = {
@@ -1489,7 +1718,7 @@ ideas = {
 			picture = ARG_give_brazil_fight
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 				
 			}
 			
@@ -1520,7 +1749,7 @@ ideas = {
 			allowed = {
 				OR = {
 					tag = CHL 
-					original_tag = ARG  
+					tag = ARG 
 				}
 			}
 			
@@ -1538,7 +1767,7 @@ ideas = {
 			picture = generic_infantry_bonus
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -1556,7 +1785,7 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -1572,7 +1801,7 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			allowed = {
-				original_tag = ARG  
+				tag = ARG 
 			}
 			
 			allowed_civil_war = {
@@ -1592,7 +1821,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1621,10 +1850,9 @@ ideas = {
 			
 			allowed = {
 				OR = {
-					original_tag = ARG 
+					tag = ARG
 					tag = CHL 
 					original_tag = BOL
-					original_tag = BRA
 				}
 			}
 			
@@ -1647,7 +1875,7 @@ ideas = {
 			picture = ARG_give_brazil_fight
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1676,7 +1904,7 @@ ideas = {
 			
 			allowed = {
 				OR = {
-					original_tag = ARG 
+					tag = ARG
 					tag = URG
 					original_tag = PRU 
 					original_tag = BOL 
@@ -1703,7 +1931,7 @@ ideas = {
 			picture = ARG_death_to_the_unitarios
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1727,7 +1955,7 @@ ideas = {
 			picture = ARG_death_to_the_federales
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1751,7 +1979,7 @@ ideas = {
 			picture = ARG_distrust_of_military 
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1777,7 +2005,7 @@ ideas = {
 			picture = ARG_distrust_of_military 
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1803,7 +2031,7 @@ ideas = {
 			picture = ARG_distrust_of_military 
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1829,7 +2057,7 @@ ideas = {
 			picture = ARG_distrust_of_military 
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1855,7 +2083,7 @@ ideas = {
 			picture = ARG_distrust_of_military 
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1881,7 +2109,7 @@ ideas = {
 			picture = ARG_distrust_of_military 
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1905,7 +2133,7 @@ ideas = {
 			picture = usa_great_depression_3 
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1935,7 +2163,7 @@ ideas = {
 			allowed = {
 				OR = {
 					tag = CHL
-					original_tag = ARG 
+					tag = ARG
 					tag = URG
 				}
 			}
@@ -1961,7 +2189,7 @@ ideas = {
 			picture = ARG_industrial_expansion
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -1985,7 +2213,7 @@ ideas = {
 			picture = generic_goods_red_bonus #low chance of change
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -2009,7 +2237,7 @@ ideas = {
 			picture = ARG_the_patriotic_loan
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			available = {
@@ -2034,7 +2262,7 @@ ideas = {
 		ARG_air_dominance = {
 			picture = generic_air_bonus
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			allowed_civil_war = {
 				always = yes
@@ -2282,7 +2510,7 @@ ideas = {
 			picture = generic_central_management
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = { always = yes }
@@ -2328,7 +2556,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = { always = yes }
@@ -2345,7 +2573,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = { always = yes }
@@ -2362,7 +2590,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = { always = yes }
@@ -2514,7 +2742,7 @@ ideas = {
 			picture = ARG_economic_cooperation
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 				tag = SPR
 				ARG = {
 					NOT = {
@@ -2537,10 +2765,10 @@ ideas = {
 		}
 		
 		ARG_hospital_militar_central = {
-			picture = generic_infantry_bonus
+			picture = ARG_built_hospital
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2557,10 +2785,10 @@ ideas = {
 		}
 		
 		ARG_accepted_debt_repayments = {
-			picture = generic_foreign_capital
+			picture = ARG_accepted_payment
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2571,15 +2799,14 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.12
-				political_power_factor = -0.15
 			}
 		}
 		
 		ARG_accepted_debt_repayments_2 = {
-			picture = generic_foreign_capital
+			picture = ARG_accepted_payment
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2590,15 +2817,14 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.09
-				political_power_factor = -0.12
 			}
 		}
 		
 		ARG_accepted_debt_repayments_3 = {
-			picture = generic_foreign_capital
+			picture = ARG_accepted_payment
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2609,15 +2835,14 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.06
-				political_power_factor = -0.1
 			}
 		}
 		
 		ARG_accepted_debt_repayments_4 = {
-			picture = generic_foreign_capital
+			picture = ARG_accepted_payment
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2628,15 +2853,14 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.03
-				political_power_factor = -0.07
 			}
 		}
 		
 		ARG_accepted_debt_repayments_5 = {
-			picture = generic_foreign_capital
+			picture = ARG_accepted_payment
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2646,15 +2870,15 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_factor = -0.05
+				consumer_goods_factor = 0.00
 			}
 		}
 		
 		ARG_accepted_debt_repayments_6 = {
-			picture = generic_foreign_capital
+			picture = ARG_accepted_payment
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2665,7 +2889,6 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.03
-				political_power_factor = -0.03
 			}
 		}
 		
@@ -2673,7 +2896,7 @@ ideas = {
 			picture = SPR_disbanded_army
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2693,7 +2916,7 @@ ideas = {
 			picture = SPR_disbanded_army
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2712,7 +2935,7 @@ ideas = {
 			picture = ARG_viva_patria
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2731,7 +2954,7 @@ ideas = {
 			picture = ast_volunteer_defence_corps	
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 				has_civil_war = yes
 			}
 			
@@ -2750,7 +2973,7 @@ ideas = {
 			picture = german_advisors
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2771,7 +2994,7 @@ ideas = {
 			picture = generic_exploit_mines
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -2790,7 +3013,7 @@ ideas = {
 			picture = generic_disjointed_gov
 			
 			allowed = {
-				original_tag = ARG 
+				tag = ARG
 			}
 			
 			allowed_civil_war = {
@@ -3110,7 +3333,7 @@ ideas = {
 
 			allowed = { original_tag = ARG }
 
-			available = { has_completed_focus = CHL_central_bank }
+			available = { has_completed_focus = ARG_establish_the_central_bank }
 
 			traits = { central_bank }
 		}

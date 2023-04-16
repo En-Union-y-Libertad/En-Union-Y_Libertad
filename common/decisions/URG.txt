@@ -155,7 +155,7 @@ URG_prisoners_of_the_terra_dictatorship = {
 			check_variable = { URG_politicians_arrested < 81 }
 		}
 		
-		cost = 10
+		cost = 25
 		
 		fire_only_once = no
 		
@@ -172,19 +172,6 @@ URG_prisoners_of_the_terra_dictatorship = {
 			modifier = {
 				has_completed_focus = URG_go_with_terra
 				factor = 125
-			}
-			modifier = {
-				add = 75
-				OR = {
-					has_game_rule = {
-						rule = URG_ai_behavior 
-						option = URG_FASCIST
-					}
-					has_game_rule = {
-						rule = URG_ai_behavior 
-						option = URG_TERRA_DICTATORSHIP
-					}
-				}
 			}
 		}
 		
@@ -218,7 +205,7 @@ URG_prisoners_of_the_terra_dictatorship = {
 			has_country_flag = URG_terra
 		}
 		
-		cost = 10
+		cost = 25
 		
 		fire_only_once = no
 		
@@ -235,19 +222,6 @@ URG_prisoners_of_the_terra_dictatorship = {
 			modifier = {
 				has_completed_focus = URG_go_against_terra
 				factor = 125
-			}
-			modifier = {
-				add = 75
-				OR = {
-					has_game_rule = {
-						rule = URG_ai_behavior 
-						option = URG_LIBERAL_DEMOCRACY
-					}
-					has_game_rule = {
-						rule = URG_ai_behavior 
-						option = URG_COMMUNIST
-					}
-				}
 			}
 		}
 		
@@ -297,6 +271,12 @@ URG_repaying_the_debt_to_britain = {
 		complete_effect = {
 			set_country_flag = URG_debt_repayment_in_progress
 		}
+
+		cancel_trigger = {
+			NOT = {
+				has_active_mission = URG_pay_the_british_debt
+			}
+		}
 		
 		remove_effect = {
 			clr_country_flag = URG_debt_repayment_in_progress
@@ -334,6 +314,12 @@ URG_repaying_the_debt_to_britain = {
 		complete_effect = {
 			set_country_flag = URG_debt_repayment_in_progress
 		}
+
+		cancel_trigger = {
+			NOT = {
+				has_active_mission = URG_pay_the_british_debt
+			}
+		}
 		
 		remove_effect = {
 			clr_country_flag = URG_debt_repayment_in_progress
@@ -370,6 +356,12 @@ URG_repaying_the_debt_to_britain = {
 		
 		complete_effect = {
 			set_country_flag = URG_debt_repayment_in_progress
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_active_mission = URG_pay_the_british_debt
+			}
 		}
 		
 		remove_effect = {
@@ -1522,4 +1514,661 @@ URG_purchasing_british_ships = {
 		}
 	}
 }
+
+
+URG_political_actions = {
+	URG_pay_the_british_debt = {
+		priority = 150
+		icon = gre_investment_decisions
+
+		is_good = no 
+
+		days_mission_timeout = 900
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = URG_repayed_the_debt_to_the_british_tt
+				check_variable = { URG_debt_to_britain > 99 }
+			}
+		}
+
+		cancel_trigger = {
+			ENG = {
+				exists = no 
+			}
+		}
+
+		activation = { always = no }
+
+		allowed = { original_tag = URG }
+
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = URG_debt_to_the_british
+				add_idea = URG_lingering_british_debt
+			}
+		}
+
+		complete_effect = {
+			add_stability = 0.01
+			add_political_power = 10
+		}
+	}
+
+	URG_blancos_in_opposition = {
+		icon = generic_ignite_civil_war
+		priority = 100
+		
+		is_good = no
+		
+		days_mission_timeout = 100
+
+		available = {
+			power_balance_value = {
+				id = URG_nacional_colorado_bop
+				value > -0.4
+			}
+		}
+		
+		activation = {
+			always = no 
+		}
+
+		allowed = {
+			original_tag = URG
+		}
+
+		cancel_trigger = {
+			NOT = {
+				OR = {
+					has_idea = URG_blancos_in_opposition0
+					has_idea = URG_blancos_in_opposition1
+					has_idea = URG_blancos_in_opposition2
+				}
+			}
+		}
+		
+		timeout_effect = {
+			URG_increase_blanco_opposition = yes
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					URG_blancos_in_opposition0
+					URG_blancos_in_opposition1
+					URG_blancos_in_opposition2
+				}
+			}
+		}
+	}
+
+	URG_colorados_in_opposition = {
+		icon = generic_ignite_civil_war
+		priority = 100
+		
+		is_good = no
+		
+		days_mission_timeout = 100
+
+		available = {
+			power_balance_value = {
+				id = URG_nacional_colorado_bop
+				value < 0.4
+			}
+		}
+		
+		activation = {
+			always = no 
+		}
+
+		allowed = {
+			original_tag = URG
+		}
+
+		cancel_trigger = {
+			NOT = {
+				OR = {
+					has_idea = URG_colorados_in_opposition0
+					has_idea = URG_colorados_in_opposition1
+					has_idea = URG_colorados_in_opposition2
+				}
+			}
+		}
+		
+		timeout_effect = {
+			URG_increase_colorado_opposition = yes
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					URG_colorados_in_opposition0
+					URG_colorados_in_opposition1
+					URG_colorados_in_opposition2
+				}
+			}
+		}
+	}
+
+	URG_stabilization_effort = {
+		priority = 50
+		icon = eng_trade_unions_support
+
+		cost = 25
+
+		visible = {
+			OR = {
+				has_active_mission = URG_colorados_in_opposition
+				has_active_mission = URG_blancos_in_opposition
+			}
+			has_stability < 0.75
+		}
+
+		days_remove = 50
+
+		modifier = {
+			political_power_factor = -0.15
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+		}
+	}
+
+	URG_concession_to_the_blancos_party = {
+		icon = GFX_decision_generic_army_support
+		priority = 40
+
+		available = {
+			AND = {
+				has_idea = URG_blancos_in_opposition0
+				has_stability > 0.75
+			}
+		}
+
+		allowed = {
+			original_tag = URG
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		visible = {
+			has_idea = URG_blancos_in_opposition0
+			has_active_mission = URG_blancos_in_opposition
+		}
+		fire_only_once = no
+
+		days_remove = 40
+
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_active_mission = URG_blancos_in_opposition
+			}
+		}
+
+		remove_effect = {
+			remove_ideas = URG_blancos_in_opposition0
+			URG_move_5_nacionales = yes 
+		}
+	}
+	URG_concession_to_the_blancos_party1 = {
+		icon = GFX_decision_generic_army_support
+		priority = 40
+
+		available = {
+			has_idea = URG_blancos_in_opposition1
+		}
+
+		allowed = {
+			original_tag = URG
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		visible = {
+			has_idea = URG_blancos_in_opposition1
+			has_active_mission = URG_blancos_in_opposition
+		}
+		fire_only_once = no
+
+		days_remove = 40
+
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_active_mission = URG_blancos_in_opposition
+			}
+		}
+
+		remove_effect = {
+			URG_reduce_blanco_opposition = yes
+			URG_move_5_nacionales = yes 
+		}
+	}
+	URG_concession_to_the_blancos_party2 = {
+		icon = GFX_decision_generic_army_support
+		priority = 40
+
+		available = {
+			has_idea = URG_blancos_in_opposition2
+		}
+
+		allowed = {
+			original_tag = URG
+		}
+
+		cost = 80
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		visible = {
+			has_idea = URG_blancos_in_opposition2
+			has_active_mission = URG_blancos_in_opposition
+		}
+		fire_only_once = no
+
+		days_remove = 40
+
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_active_mission = URG_blancos_in_opposition
+			}
+		}
+
+		remove_effect = {
+			URG_reduce_blanco_opposition = yes
+			URG_move_5_nacionales = yes 
+		}
+	}
+
+	URG_concession_to_the_colorados_party = {
+		icon = GFX_decision_generic_army_support
+		priority = 40
+
+		available = {
+			AND = {
+				has_idea = URG_colorados_in_opposition0
+				has_stability > 0.75
+			}
+		}
+
+		allowed = {
+			original_tag = URG
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		visible = {
+			has_idea = URG_colorados_in_opposition0
+			has_active_mission = URG_colorados_in_opposition
+		}
+		fire_only_once = no
+
+		days_remove = 40
+
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_active_mission = URG_colorados_in_opposition
+			}
+		}
+
+		remove_effect = {
+			URG_reduce_colorado_opposition = yes
+			URG_move_5_colorado = yes 
+		}
+	}
+	URG_concession_to_the_colorados_party1 = {
+		icon = GFX_decision_generic_army_support
+		priority = 40
+
+		available = {
+			has_idea = URG_colorados_in_opposition1
+		}
+
+		allowed = {
+			original_tag = URG
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		visible = {
+			has_idea = URG_colorados_in_opposition1
+			has_active_mission = URG_colorados_in_opposition
+		}
+		fire_only_once = no
+
+		days_remove = 40
+
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_active_mission = URG_colorados_in_opposition
+			}
+		}
+
+		remove_effect = {
+			URG_reduce_colorado_opposition = yes
+			URG_move_5_colorado = yes 
+		}
+	}
+	URG_concession_to_the_colorados_party2 = {
+		icon = GFX_decision_generic_army_support
+		priority = 40
+
+		available = {
+			has_idea = URG_blancos_in_opposition2
+		}
+
+		allowed = {
+			original_tag = URG
+		}
+
+		cost = 80
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		visible = {
+			has_idea = URG_blancos_in_opposition2
+			has_active_mission = URG_colorados_in_opposition
+		}
+		fire_only_once = no
+
+		days_remove = 40
+
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_active_mission = URG_colorados_in_opposition
+			}
+		}
+		
+		remove_effect = {
+			URG_reduce_colorado_opposition = yes
+			URG_move_5_colorado = yes 
+		}
+	}
+
+	URG_work_with_the_PCU = {
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = URG 
+		}
+
+		cost = 75
+		
+		available = {
+			has_country_leader = { ruling_only = yes name = "Emilio Frugoni" }
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			consumer_goods_factor = 0.05
+		}
+
+		days_remove = 180
+
+		fire_only_once = yes
+
+		remove_effect = {
+			add_stability = -0.1
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			custom_effect_tooltip = URG_work_with_the_PCU_tt
+			hidden_effect = {
+				set_country_flag = URG_communist_coalition
+			}
+		}
+	}
+
+	URG_support_berres = {
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = URG 
+		}
+
+		cost = 75
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Luis Batlle Berres" }
+			NOT = {
+				has_decision = URG_undermine_berres
+				has_idea = URG_andres_martinez_trueba
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.05
+			EUYL_add_1_civilian = yes
+		}
+	}
+
+	URG_undermine_berres = {
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = URG 
+		}
+		
+		cost = 75
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Luis Batlle Berres" }
+			NOT = {
+				has_decision = URG_support_berres
+			}
+			has_idea = URG_andres_martinez_trueba
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.1
+			add_political_power = -50
+			custom_effect_tooltip = URG_may_lead_to_undesired_consequences_tt
+			hidden_effect = {
+				set_country_flag = URG_undermined_berres_flag
+				URG = {
+					country_event = { id = uruguay.19 days = 30 }
+				}
+			}
+		}
+	}
+}
+
+URG_divide_argentina_cat = {
+	URG_divide_argentina = {
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = URG 
+		}
+
+		visible = {
+			has_completed_focus = URG_liberate_argentinian_workers
+		}
+
+		available = {
+			966 = {
+				controller = {
+					OR = {
+						is_in_faction_with = URG
+						is_puppet_of = URG
+						tag = URG
+					}
+				}
+			}
+			ARG = {
+				OR = {
+					NOT = {	
+						country_exists = ARG
+					}	
+					is_puppet_of = CHL
+					is_puppet_of = URG
+				}
+			}		
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						is_in_faction_with = CHL
+					}
+				}
+				URG = {
+					country_event = { id = uruguay.26 hours = 1 }
+				}
+			}
+			else_if = {
+				limit = {
+					is_in_faction_with = CHL
+				}
+				URG = {
+					country_event = { id = uruguay.27 hours = 1 }
+				}
+			}
+		}
+	}
+}
+
+URG_BoP_nacional_colorado = {
+	URG_support_the_colorados = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		visible = {
+			has_civil_war = no 
+		}
+
+		available = {
+			has_civil_war = no 
+			custom_trigger_tooltip = {
+				tooltip = URG_not_supporting_any_side_tt
+				NOT = { has_country_flag = URG_supporting_side }
+			}
+		}
+
+		fire_only_once = no 
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 35
+
+		days_remove = 50
+
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		complete_effect = {
+			random_list = {
+				50 = {
+					URG_move_10_colorado = yes 
+				}
+				50 = {
+					URG_move_20_colorado = yes
+				}
+			}
+			set_country_flag = URG_supporting_side
+		}
+		remove_effect = {
+			clr_country_flag = URG_supporting_side
+		}
+	}
+	URG_appease_the_nacionales = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		visible = {
+			has_civil_war = no 
+		}
+
+		available = {
+			has_civil_war = no
+			custom_trigger_tooltip = {
+				tooltip = URG_not_supporting_any_side_tt
+				NOT = { has_country_flag = URG_supporting_side }
+			}
+		}
+
+		fire_only_once = no 
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 35
+
+		days_remove = 50
+
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		complete_effect = {
+			random_list = {
+				50 = {
+					URG_move_10_nacionales = yes 
+				}
+				50 = {
+					URG_move_20_nacionales = yes
+				}
+			}
+			set_country_flag = URG_supporting_side
+		}
+		remove_effect = {
+			clr_country_flag = URG_supporting_side
+		}
+	}
+}
+
 	

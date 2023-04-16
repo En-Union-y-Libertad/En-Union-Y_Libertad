@@ -20,16 +20,36 @@ set_country_flag = BRA_original_country # will be used to decipher Vargas's Fact
 505 = {
 	set_state_flag = BRA_democratic_influence_state
 }
-882 = {
+960 = {
 	set_state_flag = BRA_democratic_influence_state
 }
-880 = {
+958 = {
 	set_state_flag = BRA_democratic_influence_state
 }
 504 = {
 	set_state_flag = BRA_democratic_influence_state
 }
 
+hidden_effect = {
+	USA = {
+		give_guarantee = SAO 
+		give_guarantee = BRC 
+		give_guarantee = BUS 
+		give_guarantee = IBR 
+		give_guarantee = BZE
+	}
+}
+
+set_country_flag = {
+	flag = recently_started_game
+	days = 40
+	value = 1
+}
+
+set_variable = { BRA_cost_to_stop_commies = 40 }
+
+set_variable = { BRA_chance_for_compromise = 0 }
+set_variable = { BRA_chance_for_no_compromise = 100 }
 
 #Coffee mechanic 
 set_variable = { BRA_dependency_on_coffee = 55 }
@@ -40,7 +60,7 @@ set_variable = { BRA_coffee_companies_opinion = 0 }
 501 = {
 	add_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
 }
-878 = {
+956 = {
 	add_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
 }
 500 = {
@@ -57,13 +77,13 @@ BRA_update_opinion_variable = yes
 498 = {
 	add_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
 }
-874 = {
+952 = {
 	add_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
 }
-875 = {
+953 = {
 	add_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
 }
-878 = {
+956 = {
 	add_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
 }
 500 = {
@@ -121,7 +141,7 @@ set_variable = { BRA_progress_to_a_civil_war = 0 } #Integralist / Congress route
 set_variable = { BRA_communist_civil_war_strength = 0.1 } #Communist Civil War Strength 
 set_variable = { BRA_integralist_civil_war_strength = 0.2 } #Integralist Civil War Strength
 
-set_variable = { BRA_cost_to_disband_the_police_force = 40 } #will increase the more you increase your police brutality
+set_variable = { BRA_cost_to_disband_the_police_force = 30 } #will increase the more you increase your police brutality
 
 #Cost to deal with protestors 
 set_variable = { BRA_cost_to_deal_with_protestors = 35 }
@@ -219,6 +239,11 @@ create_dynamic_country = {
 BRC = { load_focus_tree = brazil_focus }
 BZE = { load_focus_tree = brazil_focus }
 IBR = { load_focus_tree = brazil_focus }
+
+BRC = {
+	set_variable = { BRA_chance_for_compromise = 0 }
+	set_variable = { BRA_chance_for_no_compromise = 100 }
+}
 
 oob = "BRA_1936"
 
@@ -485,14 +510,30 @@ BRA_aurelio_de_lira_traves = {
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
 	tech_support = 1		
 	tech_engineers = 1
 	gw_artillery = 1
 	interwar_antiair = 1
 	gwtank = 1
-	early_fighter = 1
-	CAS1 = 1
 	basic_train = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "BRA_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			early_bombs = 1
+		}
+	else = {
+		set_air_oob = "BRA_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
 }
 if = {
 	limit = {
@@ -526,75 +567,6 @@ if = {
 	set_naval_oob = "BRA_1936_naval"	
 }
 set_country_flag = monroe_doctrine
-
-1939.1.1 = {
-
-	add_political_power = 1198
-	
-	#generic focuses
-	#complete_national_focus = army_effort
-	#complete_national_focus = equipment_effort
-	#complete_national_focus = motorization_effort
-	#complete_national_focus = aviation_effort
-	#complete_national_focus = naval_effort
-	#complete_national_focus = large_navy
-	#complete_national_focus = industrial_effort
-	#complete_national_focus = construction_effort
-	#complete_national_focus = production_effort
-	
-	oob = "BRA_1939"
-	set_technology = {
-		interwar_artillery = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		
-
-		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
-
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		fuel_silos = 1
-		oil_processing = 1
-		improved_oil_processing = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-	}
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-			basic_submarine = 1
-			basic_destroyer = 1
-		}
-		set_naval_oob = "BRA_1939_naval_legacy"
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		set_technology = {
-			basic_ship_hull_light = 1
-		}
-		set_naval_oob = "BRA_1939_naval"
-	}
-}
 
 set_politics = {
 	ruling_party = neutrality
@@ -653,27 +625,80 @@ set_convoys = 40
 	complete_national_focus = BRA_slow_path_to_industrialize
 	complete_national_focus = BRA_the_brazilian_mining_industry
 	complete_national_focus = BRA_the_path_to_estado_novo
-	unlock_national_focus = BRA_solidify_control_over_the_state
-	unlock_national_focus = BRA_political_censorship_vargas
-	unlock_national_focus = BRA_censor_the_integralists
-	unlock_national_focus = BRA_preperations_for_the_self_coup
-	unlock_national_focus = BRA_enact_the_cohen_plan
-	unlock_national_focus = BRA_strengthen_the_police_force
-	unlock_national_focus = BRA_shut_down_the_integralists
-	unlock_national_focus = BRA_sign_the_decree_law
-	unlock_national_focus = BRA_the_war_on_communism_vargas
-	unlock_national_focus = BRA_disband_various_communist_poltiicans
-	unlock_national_focus = BRA_spread_anti_communist_propaganda
-	unlock_national_focus = BRA_imprison_prestes
-	unlock_national_focus = BRA_officialy_establish_the_estado_novo
-	unlock_national_focus = BRA_internal_management
-	unlock_national_focus = BRA_make_up_for_the_lack_of_congress
-	unlock_national_focus = BRA_harsher_punishment_for_the_protestors
-	unlock_national_focus = BRA_establish_the_department_of_press_and_propaganda
-	unlock_national_focus = BRA_cleanse_the_political_sphere
+	complete_national_focus = BRA_solidify_control_over_the_state
+	complete_national_focus = BRA_political_censorship_vargas
+	complete_national_focus = BRA_censor_the_integralists
+	complete_national_focus = BRA_preperations_for_the_self_coup
+	complete_national_focus = BRA_enact_the_cohen_plan
+	complete_national_focus = BRA_strengthen_the_police_force
+	complete_national_focus = BRA_shut_down_the_integralists
+	complete_national_focus = BRA_sign_the_decree_law
+	complete_national_focus = BRA_the_war_on_communism_vargas
+	complete_national_focus = BRA_disband_various_communist_poltiicans
+	complete_national_focus = BRA_spread_anti_communist_propaganda
+	complete_national_focus = BRA_imprison_prestes
+	complete_national_focus = BRA_officialy_establish_the_estado_novo
+	complete_national_focus = BRA_internal_management
+	complete_national_focus = BRA_make_up_for_the_lack_of_congress
+	complete_national_focus = BRA_harsher_punishment_for_the_protestors
+	complete_national_focus = BRA_establish_the_department_of_press_and_propaganda
+	complete_national_focus = BRA_cleanse_the_political_sphere
 	complete_national_focus = BRA_forcas_armadas_brasileiras
 	complete_national_focus = BRA_invest_in_the_army
 	complete_national_focus = BRA_keep_the_people_at_ease
+
+	oob = "BRA_1939"
+	set_technology = {
+		interwar_artillery = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+			basic_submarine = 1
+			basic_destroyer = 1
+		}
+		set_naval_oob = "BRA_1939_naval_legacy"
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+			basic_ship_hull_light = 1
+		}
+		set_naval_oob = "BRA_1939_naval"
+	}
 }
 
 if = {

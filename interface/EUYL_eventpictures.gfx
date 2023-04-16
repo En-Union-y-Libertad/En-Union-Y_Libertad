@@ -26,6 +26,41 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ARG_military_displeased"
+		texturefile = "gfx/event_pictures/ARG_military_displeased.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_buenos_aires"
+		texturefile = "gfx/event_pictures/ARG_buenos_aires.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_ALN_formation"
+		texturefile = "gfx/event_pictures/ARG_ALN_formation.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_military_coup"
+		texturefile = "gfx/event_pictures/ARG_military_coup.png"
+	}
+	
+	spriteType = {
+		name = "GFX_ARG_argentina_temp"
+		texturefile = "gfx/event_pictures/ARG_argentina_temp.png"
+	}
+
+	spriteType = {
+		name = "GFX_Arg_argentinarework18"
+		texturefile = "gfx/event_pictures/Arg_argentinarework18.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_argentinarework10"
+		texturefile = "gfx/event_pictures/ARG_argentinarework10.png"
+	}
+
+	spriteType = {
 		name = "GFX_BRA_vargas_interfere_civil_war"
 		texturefile = "gfx/event_pictures/BRA_vargas_interfere_civil_war.png"
 	}

@@ -118,6 +118,12 @@ ideas = {
 			}
 
 			available = {
+				any_core_state = {
+					OR = {
+						has_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+						has_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+					}
+				}
 			}
 
 			cancel = {
@@ -145,6 +151,12 @@ ideas = {
 			}
 
 			available = {
+				any_core_state = {
+					OR = {
+						has_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+						has_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+					}
+				}
 			}
 
 			cancel = {
@@ -170,6 +182,12 @@ ideas = {
 			}
 
 			available = {
+				any_core_state = {
+					OR = {
+						has_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+						has_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+					}
+				}
 			}
 
 			cancel = {
@@ -198,6 +216,12 @@ ideas = {
 			}
 
 			available = {
+				any_core_state = {
+					OR = {
+						has_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+						has_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+					}
+				}
 			}
 
 			cancel = {
@@ -226,6 +250,12 @@ ideas = {
 			}
 
 			available = {
+				any_core_state = {
+					OR = {
+						has_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+						has_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+					}
+				}
 			}
 
 			cancel = {
@@ -649,7 +679,7 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -666,7 +696,7 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				heavy_fighter_equipment = {
+				large_plane_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -683,7 +713,7 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -700,7 +730,7 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -717,7 +747,7 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				strat_bomber_equipment = {
+				medium_plane_fighter_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -734,7 +764,7 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				nav_bomber_equipment = {
+				small_plane_naval_bomber_airframe = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -760,7 +790,7 @@ ideas = {
 
 			modifier = {
 				political_power_gain = -0.05
-				stability_weekly = -0.005
+				stability_factor = -0.03
 			}
 		}
 
@@ -783,7 +813,7 @@ ideas = {
 
 			modifier = {
 				political_power_gain = -0.1
-				stability_weekly = -0.01
+				stability_factor = -0.05
 			}
 		}
 
@@ -950,9 +980,9 @@ ideas = {
 
 			modifier = {
 				surrender_limit = 1
-				max_surrender_limit_offset = 0.05
-				ai_get_ally_desire_factor = -300
-				ai_join_ally_desire_factor = -300
+				max_surrender_limit_offset = 0.1
+				ai_get_ally_desire_factor = -1000
+				ai_join_ally_desire_factor = -1000
 			}
 		}
 
@@ -966,15 +996,54 @@ ideas = {
 
 			available = { 
 				has_global_flag = BRA_civil_war_in_progress
+				OR = {
+					has_full_control_of_state = 500
+					has_full_control_of_state = 501
+					controls_state = 505
+					controls_state = 504
+					controls_state = 496
+					controls_state = 955
+				}
+			}
+
+			on_remove = {
+				if = {
+					limit = {
+						has_global_flag = BRA_civil_war_in_progress
+					}
+					add_ideas = BRA_civil_war_vargas_2
+				}
 			}
 
 			removal_cost = -1
 
 			modifier = {
 				surrender_limit = 1
-				max_surrender_limit_offset = 0.15
-				ai_get_ally_desire_factor = -300
-				ai_join_ally_desire_factor = -300
+				max_surrender_limit_offset = 0.25
+				ai_get_ally_desire_factor = -1000
+				ai_join_ally_desire_factor = -1000
+			}
+		}
+
+		BRA_civil_war_vargas_2 = {
+			name = BRA_civil_war 
+			picture = BRA_civil_war_vargas
+			
+			allowed = { always = no }
+
+			allowed_civil_war = { always = no }
+
+			available = { 
+				has_global_flag = BRA_civil_war_in_progress
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 1
+				max_surrender_limit_offset = 0.6
+				ai_get_ally_desire_factor = -1000
+				ai_join_ally_desire_factor = -1000
 			}
 		}
 
@@ -994,9 +1063,9 @@ ideas = {
 
 			modifier = {
 				surrender_limit = 1
-				max_surrender_limit_offset = 0.05
-				ai_get_ally_desire_factor = -300
-				ai_join_ally_desire_factor = -300
+				max_surrender_limit_offset = 0.1
+				ai_get_ally_desire_factor = -1000
+				ai_join_ally_desire_factor = -1000
 			}
 		}
 
@@ -1016,9 +1085,9 @@ ideas = {
 
 			modifier = {
 				surrender_limit = 1
-				max_surrender_limit_offset = 0.05
-				ai_get_ally_desire_factor = -300
-				ai_join_ally_desire_factor = -300
+				max_surrender_limit_offset = 0.1
+				ai_get_ally_desire_factor = -1000
+				ai_join_ally_desire_factor = -1000
 			}
 		}
 
@@ -1038,9 +1107,9 @@ ideas = {
 
 			modifier = {
 				surrender_limit = 1
-				max_surrender_limit_offset = 0.05
-				ai_get_ally_desire_factor = -300
-				ai_join_ally_desire_factor = -300
+				max_surrender_limit_offset = 0.1
+				ai_get_ally_desire_factor = -1000
+				ai_join_ally_desire_factor = -1000
 			}
 		}
 
@@ -1258,7 +1327,7 @@ ideas = {
 		}
 
 		BRA_women_in_the_army_idea = {
-			picture = GFX_idea_MEX_politicised_army_2
+			picture = generic_infantry_bonus
 
 			allowed = {
 				always = no 
@@ -1841,6 +1910,12 @@ ideas = {
 
 			allowed_civil_war = { always = yes }
 
+			available = {
+				NOT = {
+					has_war_with = BZE
+				}
+			}
+
 			removal_cost = -1
 
 			modifier = {
@@ -1859,6 +1934,12 @@ ideas = {
 			allowed = { always = no }
 
 			allowed_civil_war = { always = yes }
+
+			available = {
+				NOT = {
+					has_war_with = BZE
+				}
+			}
 
 			removal_cost = -1
 
@@ -1880,6 +1961,12 @@ ideas = {
 			allowed_civil_war = { always = yes }
 
 			available = {
+				NOT = {
+					has_war_with = BZE
+				}
+			}
+
+			available = {
 				has_civil_war = yes 
 				has_active_mission = BRA_impending_imperial_uprising
 			}
@@ -1897,7 +1984,7 @@ ideas = {
 
 		BRA_the_imperial_army_1 = {
 			name = BRA_the_imperial_army 
-			picture = GFX_BRA_imperial_army
+			picture = BRA_second_cisplatine_imperial
 
 			allowed = { always = no }
 
@@ -2506,7 +2593,15 @@ ideas = {
 
 			available = {
 				has_completed_focus = BRA_the_brazilian_mining_industry
-				has_idea = industrialized_economy
+				custom_trigger_tooltip = {
+					tooltip = BRA_better_than_industrializing_tt
+					NOT = {
+						OR = {
+							has_idea = rural_economy
+							has_idea = semi_rural_economy
+						}
+					}
+				}
 			}
 			
 			research_bonus = {
@@ -2536,7 +2631,15 @@ ideas = {
 			allowed = { original_tag = BRA }
 
 			available = { 
-				has_idea = industrialized_economy
+				custom_trigger_tooltip = {
+					tooltip = BRA_better_than_industrializing_tt
+					NOT = {
+						OR = {
+							has_idea = rural_economy
+							has_idea = semi_rural_economy
+						}
+					}
+				}
 			}
 
 			research_bonus = {

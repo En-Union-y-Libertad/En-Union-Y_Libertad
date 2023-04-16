@@ -6,9 +6,13 @@
  ARG_greater_confederation_ADJ:0 "Gran Confederación Argentina"
  ARG_military_junta_ADJ:0 "Junta Militar Argentina"
  
- CHL_anarchist_global_commune:0 "Comunidad Anrquísta Global"
- CHL_anarchist_global_commune_DEF:0 "La Comunidad Anrquísta Global"
- CHL_anarchist_global_commune_ADJ:0 "Comunidad Anrquísta Global"
+ CHL_anarchist_global_commune:0 "Comunidad Anarquísta Global"
+ CHL_anarchist_global_commune_DEF:0 "La Comunidad Anarquísta Global"
+ CHL_anarchist_global_commune_ADJ:0 "Comunidad Anarquísta Global"
+ 
+ ARG_la_plata:0 "Commune of La Plata"
+ ARG_la_plata_DEF:0 "the Commune of La Plata"
+ ARG_la_plata_ADJ:0 "Platense"
 
  BOL_government:0 "Gobierno Boliviano"
  BOL_armed_forces:0 "Las Fuerzas Armadas Bolivianas"
@@ -24,6 +28,10 @@
  RBR_UNIFIED:0 "República de Brasil"
  RBR_UNIFIED_DEF:0 "la República de Brasil"
  RBR_UNIFIED_ADJ:0 "Brasileño"
+
+ GBO:0 "Gran Bolivia"
+ GBO_DEF:0 "la Gran Bolivia"
+ GBO_ADJ:0 "Boliviano"
 
  PRE_UNIFIED:0 "Imperio Peruano"
  PRE_UNIFIED_DEF:0 "el Imperio Peruano"
@@ -140,6 +148,18 @@
  BRA_FASCIST:0 "Brasil Integralista"
  BRA_FASCIST_DEF:0 "Brasil Integralista"
  BRA_FASCIST_ADJ:0 "de Brasil Integralista"
+
+ URG_anarchism:0 "Comuna Anarco-Batllista"
+ URG_anarchism_DEF:0 "la Comuna Anarco-Batllista"
+ URG_anarchism_ADJ:0 "Anarco-Batllista"
+
+ URG_GLOBAL:0 "Consejo Anarquista Global"
+ URG_GLOBAL_DEF:0 "el Consejo Anarquista Global"
+ URG_GLOBAL_ADJ:0 "Consejo Anarquista Global"
+
+ ARG_anarchist:0 "Argentina Anarquista"
+ ARG_anarchist_DEF:0 "Argentina Anarquista"
+ ARG_anarchist_ADJ:0 "Argentino"
 
  INS_HOL_democratic:0 "Indias Orientales Neerlandesas"
  INS_HOL_democratic_DEF:0 "Las Indias Orientales Neerlandesas"

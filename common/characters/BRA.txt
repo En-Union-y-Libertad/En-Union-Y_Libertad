@@ -109,7 +109,7 @@ characters={
 				BRA_heir_of_the_throne 
 			}
 			on_add = {
-				set_country_flag = BRA_pedro_henrique_advisor
+				ROOT = { set_country_flag = BRA_pedro_henrique_advisor }
 			}
 			ai_will_do = {
 				factor = 1
@@ -140,7 +140,13 @@ characters={
 
 	BRA_pedro_gastao_orleans = {
 		name = "Prince Pedro Gastão of Orléans-Braganza"
+		portraits = {
+			army = {
+				small = "GFX_BRA_pedro_gastao_idea_icon"
+			}
+		}
 		advisor = {
+			cost = 75
 			slot = political_advisor
 			idea_token = BRA_pedro_gastao
 			allowed  = {
@@ -160,7 +166,7 @@ characters={
 				factor = 1
 			}
 			on_add = {
-				set_country_flag = BRA_pedro_gastao_appointed
+				ROOT = { set_country_flag = BRA_pedro_gastao_appointed }
 			}
 		}
 	}
@@ -739,7 +745,7 @@ characters={
 				popular_figurehead 
 			}
 			on_add = {
-				set_country_flag = BRA_appointed_vargas
+				BRA = { set_country_flag = BRA_appointed_vargas }
 			}
 			ai_will_do = {
 				factor = 1
@@ -783,7 +789,7 @@ characters={
 				minister_of_education 
 			}
 			on_add = {
-				set_country_flag = BRA_plinio_appointed
+				BRA = { set_country_flag = BRA_plinio_appointed }
 			}
 			ai_will_do = {
 				factor = 1
@@ -899,7 +905,7 @@ characters={
 				communist_revolutionary
 			}
 			on_add = {
-				add_popularity = { ideology = communism popularity = 0.03 }
+				ROOT = { add_popularity = { ideology = communism popularity = 0.03 } }
 			}
 		}
 		corps_commander={
@@ -926,7 +932,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=peronist
+			ideology=peronism
 			expire="1954.1.1.12"
 			id=-1
 		}
@@ -968,8 +974,11 @@ characters={
 				original_tag = BRA 
 			}
 			available = {
-				BRA_getulio_vargas = {
-					is_country_leader = no 
+				NOT = {
+					has_country_leader = {
+						name = "Getúlio Vargas"
+   						ruling_only = yes
+					}
 				}
 			}
 		}
@@ -1073,11 +1082,13 @@ characters={
 				}
 			}
 			on_add = {
-				random_owned_controlled_state = {
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
+				BRA = {
+					random_owned_controlled_state = {
+						add_building_construction = {
+							type = air_base
+							level = 1
+							instant_build = yes
+						}
 					}
 				}
 			}
@@ -1394,9 +1405,11 @@ characters={
 				EUYL_collectivization_expert 
 			}
 			on_add = {
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.05
+				ROOT = {
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.05
+					}
 				}
 			}
 		}

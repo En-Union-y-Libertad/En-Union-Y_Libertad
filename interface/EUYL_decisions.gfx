@@ -24,6 +24,51 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_URG_political_actions_icon"
+		texturefile = "gfx/interface/decisions/URG_political_actions_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_URG_bop_decision_icon"
+		texturefile = "gfx/interface/decisions/URG_bop_decision_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_manage_army"
+		texturefile = "gfx/interface/decisions/ARG_manage_army.png"
+	}
+	
+	spriteType = {
+		name = "GFX_ARG_unify_la_plata"
+		texturefile = "gfx/interface/decisions/ARG_unify_la_plata.png"
+	}
+
+	spriteType = {
+		name = "GFX_UCRA_secure_state"
+		texturefile = "gfx/interface/decisions/UCRA_secure_state.png"
+	}
+
+	spriteType = {
+		name = "GFX_PS_secure_state"
+		texturefile = "gfx/interface/decisions/PS_secure_state.png"
+	}
+
+	spriteType = {
+		name = "GFX_UCR_secure_state"
+		texturefile = "gfx/interface/decisions/UCR_secure_state.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_left_spy"
+		texturefile = "gfx/interface/decisions/ARG_left_spy.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_right_spy"
+		texturefile = "gfx/interface/decisions/ARG_right_spy.png"
+	}
+
+	spriteType = {
 		name = "GFX_BRA_coffee_dependency"
 		texturefile = "gfx/interface/decisions/BRA_coffee_dependency.dds"
 	}
@@ -36,6 +81,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_BRA_imperial_management_icon"
 		texturefile = "gfx/interface/decisions/BRA_imperial_management_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_infamous_decade_icon"
+		texturefile = "gfx/interface/decisions/ARG_infamous_decade_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_infamous_decade_picture"
+		texturefile = "gfx/interface/decisions/ARG_infamous_decade_picture.png"
 	}
 
 	spriteType = {

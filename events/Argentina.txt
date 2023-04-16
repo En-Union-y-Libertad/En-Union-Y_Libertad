@@ -3,9 +3,223 @@
 ###########################
 
 add_namespace = argentina
+add_namespace = argentina.rework
+
+#Inflation strikes our nation 
+country_event = {
+	id = argentina.rework.10 
+	title = argentina.rework.10.t 
+	desc = argentina.rework.10.d 
+	picture = GFX_ARG_argentinarework10
+
+	is_triggered_only = yes 
+
+	option = {
+		name = argentina.rework.10.a 
+		add_political_power = 25
+		effect_tooltip = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = ARG_high_inflation_risk
+						has_idea = ARG_medium_inflation_risk
+					}
+				}
+				remove_ideas = {
+					ARG_high_inflation_risk
+					ARG_medium_inflation_risk
+					ARG_low_inflation_risk
+				}
+				add_ideas = ARG_inflation_4
+			}
+			else = {
+				remove_ideas = {
+					ARG_high_inflation_risk
+					ARG_medium_inflation_risk
+					ARG_low_inflation_risk
+				}
+				add_ideas = ARG_inflation_3
+			}
+		}
+		mark_focus_tree_layout_dirty = yes 
+	}
+}
+
+#Argentines offer to take up arms to defend the country 
+country_event = {
+	id = argentina.rework.18
+	title = argentina.rework.18.t 
+	desc = argentina.rework.18.d 
+	picture = GFX_Arg_argentinarework18
+
+	trigger = {
+		original_tag = ARG 
+		OR = {
+			AND = {
+				has_offensive_war = yes 
+				surrender_progress > 0.15
+			}
+			has_defensive_war = yes 
+		}
+		has_completed_focus = ARG_juremos_con_gloria_morir
+		has_civil_war = no 
+		is_subject = no  
+		has_capitulated = no 
+		exists = yes 
+	}
+
+	mean_time_to_happen = { days = 10 }
+	
+	fire_only_once = yes 
+
+	option = { #Every Argentine to the frontlines!
+		name = argentina.rework.18.a
+		custom_effect_tooltip = ARG_militias_will_form_across_the_country_tt
+		hidden_effect = {
+			division_template = { 
+				name = "Milicias Argentinas" 
+				division_names_group = SPAN_INF_02 
+				is_locked = yes 
+				regiments = { 
+					infantry = { x = 0 y = 0 }  
+					infantry = { x = 0 y = 1 } 
+					infantry = { x = 0 y = 2 } 
+					infantry = { x = 0 y = 3 } 
+				}
+			}
+			division_template = { 
+				name = "Gauchos" 
+				division_names_group = SPAN_INF_02 
+				is_locked = yes 
+				regiments = { 
+					cavalry = { x = 0 y = 0 }  
+					cavalry = { x = 0 y = 1 } 
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 976 977 978 979 973 }
+				limit = { 
+					is_core_of = ROOT 
+					is_fully_controlled_by = ROOT
+				}
+				create_unit = {
+					division = "name = \"Gauchos\" division_template = \"Gauchos\" start_experience_factor = 0.02 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 976 977 978 979 973 }
+				limit = { 
+					is_core_of = ROOT 
+					is_fully_controlled_by = ROOT
+				}
+				create_unit = {
+					division = "name = \"Gauchos\" division_template = \"Gauchos\" start_experience_factor = 0.02 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Gauchos\" division_template = \"Gauchos\" start_experience_factor = 0.02 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 976 977 978 979 973 }
+				limit = { 
+					is_core_of = ROOT 
+					is_fully_controlled_by = ROOT
+				}
+				create_unit = {
+					division = "name = \"Gauchos\" division_template = \"Gauchos\" start_experience_factor = 0.02 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT 
+					is_fully_controlled_by = ROOT 
+				}
+				create_unit = {
+					division = "name = \"Milicias Argentinas\" division_template = \"Milicias Argentinas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Milicias Argentinas\" division_template = \"Milicias Argentinas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT 
+					is_fully_controlled_by = ROOT 
+				}
+				create_unit = {
+					division = "name = \"Milicias Argentinas\" division_template = \"Milicias Argentinas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Milicias Argentinas\" division_template = \"Milicias Argentinas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT 
+					is_fully_controlled_by = ROOT 
+				}
+				create_unit = {
+					division = "name = \"Milicias Argentinas\" division_template = \"Milicias Argentinas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Milicias Argentinas\" division_template = \"Milicias Argentinas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+					owner = ROOT
+				}
+			}
+			if = {
+				limit = {
+					has_war_support > 0.75
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT 
+						is_fully_controlled_by = ROOT 
+					}
+					create_unit = {
+						division = "name = \"Milicias Argentinas\" division_template = \"Milicias Argentinas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Milicias Argentinas\" division_template = \"Milicias Argentinas\" start_experience_factor = 0.05 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 976 977 978 979 973 }
+					limit = { 
+						is_core_of = ROOT 
+						is_fully_controlled_by = ROOT
+					}
+					create_unit = {
+						division = "name = \"Gauchos\" division_template = \"Gauchos\" start_experience_factor = 0.02 start_equipment_factor = 1.0" 
+						owner = ROOT
+					}
+				}
+			}
+			
+		}
+	}
+
+	option = { #no thank you but the offer is appreciated 
+		name = argentina.rework.18.b
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+		}
+		add_manpower = 27500
+	}
+}
 
 #choose capital
-
 country_event = {
 	id = argentina.1
 	title = argentina.1.t
@@ -17,10 +231,10 @@ country_event = {
 	trigger = {
 		ROOT = {
 			has_country_flag = ARG_civil_war_confederation
-			888 = {
+			966 = {
 				is_controlled_by = ROOT
 			}
-			904 = {
+			982 = {
 				is_controlled_by = ROOT
 			}
 		}
@@ -30,7 +244,7 @@ country_event = {
 		name = argentina.1.a
 		ai_chance = { base = 80 }
 		ARG = {
-			set_capital = { state = 888 }
+			set_capital = { state = 966 }
 		}
 	}
 	
@@ -38,7 +252,7 @@ country_event = {
 		name = argentina.1.b
 		ai_chance = { base = 20 }
 		ARG = {
-			set_capital = { state = 904 }
+			set_capital = { state = 982 }
 		}
 	}
 }
@@ -145,6 +359,9 @@ country_event = {
 			has_idea = ARG_the_second_cisplatine_war_2
 		}
 		503 = {
+			is_controlled_by = ROOT
+		}
+		502 = {
 			is_fully_controlled_by = ROOT
 		}
 	}
@@ -185,9 +402,13 @@ country_event = {
 		ai_chance = {
 			base = 1
 		}
-		add_political_power = -100
-		add_stability = -0.35
-		add_war_support = -0.5
+		add_political_power = -50
+		add_stability = -0.1
+		add_war_support = -0.2
+		add_timed_idea = {
+			idea = ARG_burnt_out_army
+			days = 365
+		}
 	}
 }
 
@@ -218,17 +439,27 @@ country_event = {
 		}
 		ai_chance = { base = 135 }
 		white_peace = ARG 
-		transfer_state = 905
+		transfer_state = 983
 	}
 	
 	
 	option = { #not accept
 		name = argentina.5.b 
-		ai_chance = { base = 2 }
+		ai_chance = { 
+			base = 2 
+			modifier = {
+				factor = 0
+				surrender_progress > 0.1
+			}
+		}
 		#ARG = {
 		#	country_event = { id = argentina.8 }
 		#}
 		add_political_power = -50
+		add_timed_idea = {
+			idea = ARG_burnt_out_army
+			days = 365
+		}
 	}
 }
 
@@ -421,7 +652,7 @@ country_event = {
 		} 
 		ARG = {
 			country_event = { id = argentina.14 }
-			transfer_state = 907
+			transfer_state = 985
 		}
 	}
 	
@@ -495,7 +726,7 @@ country_event = {
 		} 
 		ARG = {
 			country_event = { id = argentina.17 }
-			transfer_state = 906
+			transfer_state = 984
 		}
 	}
 	
@@ -609,22 +840,9 @@ country_event = {
 	is_triggered_only = yes 
 	
 	option = { #concordancia
-		name = argentina.22.a 
+		name = "Concordancia"
 		ai_chance = { 
 			base = 50
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = ARG_ai_behavior 
-						option = ARG_DEMOCRATIC_AZULES
-					}
-					has_game_rule = {
-						rule = ARG_ai_behavior 
-						option = ARG_DEMOCRATIC_GRISES
-					}
-				}
-			}
 		}
 		ARG = {
 			add_timed_idea = { idea = ARG_concordancia_elected days = 90 }
@@ -649,19 +867,12 @@ country_event = {
 	}
 	
 	option = { #union civica radical
-		name = argentina.22.b
+		name = "Union Civica Radical"
 		ai_chance = { 
 			base = 50
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = ARG_ai_behavior 
-					option = ARG_PERONIST
-				}
 			}
 		}
 		ARG = {
@@ -690,7 +901,7 @@ country_event = {
 		name = argentina.23.a 
 		ai_chance = { base = 100 }
 		ARG = {
-			903 = {
+			981 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -1138,18 +1349,7 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	trigger = {
-		date > 1939.2.5
-		OR = {
-			has_completed_focus = ARG_save_roberto
-			has_completed_focus = ARG_union_civica_radical
-		}
-		NOT = {
-			has_country_flag = ARG_started_1939
-		}
-	}
-	
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes 
 	
 	option = {
 		name = argentina.45.a
@@ -1169,7 +1369,13 @@ country_event = {
 	
 	option = {
 		name = argentina.46.a
-		add_ideas = ARG_shadow_of_peron
+		clr_country_flag = ARG_peron_has_left
+		set_global_flag = ARG_peron_returned_from_italy
+		hidden_effect = {
+			ARG_juan_domingo_peron = {
+				clr_character_flag = ARG_in_italy
+			}
+		}
 	}
 }
 
@@ -1187,7 +1393,7 @@ country_event = {
 		name = argentina.47.a
 		clr_country_flag = ARG_elected_concordancia
 		retire_country_leader = yes
-		set_politics = { ruling_party = peronism }
+		promote_character = ARG_juan_domingo_peron
 		add_ideas = ARG_shadow_of_peron
 		if = {
 			limit = {
@@ -1367,7 +1573,7 @@ country_event = {
 				ideology = neutrality
 				size = 0.25
 				states = {
-					892 512 891 890 889
+					970 512 969 968 967
 				}
 			}
 			
@@ -1389,65 +1595,7 @@ country_event = {
 			}
 			
 			hidden_effect = {
-				
-				if = {
-					limit = { has_completed_focus = ARG_roberto_leads_the_way }
-					retire_country_leader = yes
-					create_country_leader = {
-						name = "Ramón Castillo"
-						desc = "POLITICS_ROBERTO_MARIA_ORTIZ_DESC"
-						picture = "Portrait_Ramon_Castillo.dds" 
-						expire = "1965.1.1"
-						ideology = despotism
-						traits = {
-							ARG_expert_commercialist_3
-							ARG_brutal_leader_3
-						}
-					}
-				}
-				else_if = {
-					limit = { has_completed_focus = ARG_go_back_to_our_liberal_ways }
-					retire_country_leader = yes
-					create_country_leader = {
-						name = "Marcelo T. de Alvear"
-						desc = "POLITICS_MARCELO_ALVEAR_DESC"
-						picture = "Portrait_Marcelo_T_de_Alvear.dds"
-						expire = "1965.1.1"
-						ideology = socialism
-						traits = {
-							#
-						}
-					}
-				}
-				else_if = {
-					limit = { has_completed_focus = ARG_a_new_path }
-					retire_country_leader = yes
-					create_country_leader = {
-						name = "Fanny Jabcovsky"
-						desc = "POLITICS_FANNY_JABCOVSKY_DESC"
-						picture = "Portrait_Argentina_Fanny_Jabcovsky.dds"
-						expire = "1965.1.1"
-						ideology = marxism
-						female = yes
-						traits = {
-							ARG_first_female_ruler
-						}
-					}
-				}
-				
-				division_template = { 
-					name = "Loyalists" 
-					division_names_group = SPAN_INF_02 
-					is_locked = yes 
-					regiments = { 
-						infantry = { x = 0 y = 0 }  
-						infantry = { x = 0 y = 1 } 
-						infantry = { x = 0 y = 2 } 
-						infantry = { x = 0 y = 3 } 
-						infantry = { x = 0 y = 4 }
-					}
-				}
-				
+				retire_character = ARG_pedro_pablo_ramirez
 				if = {
 					limit = { has_completed_focus = ARG_maintain_the_loyalist_support }
 					511 = {
@@ -1460,7 +1608,7 @@ country_event = {
 							owner = ROOT
 						}
 					}
-					893 = {
+					971 = {
 						create_unit = {
 							division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
 							owner = ROOT
@@ -1515,7 +1663,7 @@ country_event = {
 							artillery = { x = 0 y = 0 }
 						}
 					}
-					892 = {
+					970 = {
 						create_unit = {
 							division = "name = \"Militares\" division_template = \"Militares\" start_experience_factor = 1 start_equipment_factor = 1.0" 
 							owner = PREV
@@ -1887,12 +2035,30 @@ country_event = {
 	trigger = {
 		date > 1936.1.12
 		original_tag = ARG
-		NOT = {
-			has_completed_focus = ARG_deal_with_the_inflation
+		OR = {
+			has_idea = ARG_inflation_1
+			has_idea = ARG_inflation_2
+			has_idea = ARG_inflation_3
+			has_idea = ARG_inflation_4
+			has_idea = ARG_inflation_5
+			has_idea = ARG_inflation_6
+			has_idea = ARG_inflation_7
+			has_idea = ARG_inflation_8
+			has_idea = ARG_inflation_9
+			has_idea = ARG_inflation_10
 		}
 	}
 	
-	mean_time_to_happen = { days = 180 }
+	mean_time_to_happen = { 
+		days = 180 
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_idea = ARG_inflation_1
+				has_idea = ARG_inflation_2
+			}
+		}
+	}
 	
 	immediate = {
 		random_list = {
@@ -1971,7 +2137,18 @@ country_event = {
 	
 	option = {
 		name = argentina.67.b 
-		ai_chance = { base = 55 }
+		ai_chance = { 
+			base = 55 
+			modifier = {
+				factor = 0
+				has_civil_war = yes 
+			}
+			modifier = {
+				factor = 0
+				original_tag = BRA 
+				has_global_flag = BRA_civil_war_in_progress
+			}
+		}
 		declare_war_on = {
 			target = ARG
 			type = annex_everything
@@ -2124,21 +2301,23 @@ country_event = {
 
 	trigger = {
 		date > 1944.1.12
-		897 = {
+		975 = {
 			is_fully_controlled_by = ROOT 
 		}
 	}
 
 	option = {
 		name = argentina.71.a 
-		add_manpower = -1500
+		975 = {
+			add_manpower = -8561
+		}
 		if = {
 			limit = {
-				897 = {
+				975 = {
 					infrastructure > 1
 				}
 			}
-			897 = {
+			975 = {
 				damage_building = {
 					type = infrastructure
 					damage = 2
@@ -2146,7 +2325,7 @@ country_event = {
 			}
 		}
 		else = {
-			897 = {
+			975 = {
 				damage_building = {
 					type = infrastructure
 					damage = 1
@@ -2155,17 +2334,37 @@ country_event = {
 		}
 		if = {
 			limit = {
-				897 = {
+				975 = {
 					industrial_complex > 0
 				}
 			}
-			897 = {
+			975 = {
 				damage_building = {
 					type = industrial_complex
 					damage = 1
 				}
 			}
 		}
+	}
+}
+
+#Event to choose communist leader 
+country_event = {
+	id = argentina.temp
+	title = argentina.temp.t
+	desc = argentina.temp.d 
+	picture = GFX_ARG_argentina_temp
+	
+	is_triggered_only = yes 
+	
+	option = { #Liborio Justo
+		name = argentina.temp.a 
+		promote_character = ARG_liborio_justo
+	}
+	
+	option = { #Fanny Edelman
+		name = argentina.temp.b 
+		promote_character = ARG_fanny_edelman
 	}
 }
 		

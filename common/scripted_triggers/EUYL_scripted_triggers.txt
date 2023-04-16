@@ -19,11 +19,11 @@ COL_is_laureanist_state = {
 
 		#306 - Cundinamarca
 		#486 - Meta
-		#854 - Caquetá
-		#850 - Nariño
-		#849 - Antioquia
+		#932 - Caquetá
+		#928 - Nariño
+		#927 - Antioquia
 		#493 - Magdalena
-		#851 - Arauca
+		#929 - Arauca
 		
 		OR = {
 			AND = {
@@ -35,15 +35,15 @@ COL_is_laureanist_state = {
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 			AND = {
-				state = 854
+				state = 932
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 			AND = {
-				state = 850
+				state = 928
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 			AND = {
-				state = 849
+				state = 927
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 			AND = {
@@ -51,7 +51,7 @@ COL_is_laureanist_state = {
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 			AND = {
-				state = 851
+				state = 929
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 		}
@@ -89,6 +89,21 @@ BRA_coffee_plantations_active = {
 		has_idea = BRA_dependent_on_coffee
 		has_idea = BRA_very_dependent_on_coffee
 		has_idea = BRA_extremely_dependent_on_coffee
+	}
+}
+
+ARG_is_suffering_from_inflation = {
+	OR = {
+		has_idea = ARG_inflation_1
+		has_idea = ARG_inflation_2
+		has_idea = ARG_inflation_3
+		has_idea = ARG_inflation_4
+		has_idea = ARG_inflation_5
+		has_idea = ARG_inflation_6
+		has_idea = ARG_inflation_7
+		has_idea = ARG_inflation_8
+		has_idea = ARG_inflation_9
+		has_idea = ARG_inflation_10
 	}
 }
 

@@ -9,6 +9,10 @@
  CHL_anarchist_global_commune:0 "Global Anarchist Commune"
  CHL_anarchist_global_commune_DEF:0 "the Global Anarchist Commune"
  CHL_anarchist_global_commune_ADJ:0 "Global Anarchist Commune"
+ 
+ ARG_la_plata:0 "Commune of La Plata"
+ ARG_la_plata_DEF:0 "the Commune of La Plata"
+ ARG_la_plata_ADJ:0 "Platense"
 
  BOL_government:0 "Bolivian Government"
  BOL_armed_forces:0 "Bolivian Armed Forces"
@@ -20,6 +24,10 @@
  SAU_UNIFIED:0 "Union of South American Socialist Republics"
  SAU_UNIFIED_DEF:0 "the Union of South American Socialist Republics"
  SAU_UNIFIED_ADJ:0 "USASR"
+
+ GBO:0 "Greater Bolivia"
+ GBO_DEF:0 "Greater Bolivia"
+ GBO_ADJ:0 "Bolivian"
 
  GCO_UNIFIED_communism:0 "Commune of Gran Colombia"
  GCO_UNIFIED_fascism:0 "Gran Colombia"
@@ -141,6 +149,18 @@
  COL_rojas_pinilla_war:0 "General Command of Colombia"
  COL_rojas_pinilla_war_DEF:0 "the General Command of Colombia"
  COL_rojas_pinilla_war_ADJ:0 "of the General Command of Colombia"
+
+ URG_anarchism:0 "Anarcho-Batllist Commune"
+ URG_anarchism_DEF:0 "the Anarcho-Batllist Commune"
+ URG_anarchism_ADJ:0 "Anarcho-Batllist"
+
+ URG_GLOBAL:0 "Global Anarchist Council"
+ URG_GLOBAL_DEF:0 "the Global Anarchist Council"
+ URG_GLOBAL_ADJ:0 "Global Anarchist Council"
+
+ ARG_anarchist:0 "Anarchist Argentina"
+ ARG_anarchist_DEF:0 "Anarchist Argentina"
+ ARG_anarchist_ADJ:0 "Argentinian"
 
  INS_HOL_democratic:0 "Dutch East Indies"
  INS_HOL_democratic_DEF:0 "the Dutch East Indies"

@@ -4,7 +4,7 @@
 
 
 ARG_1937_elections = {
-	priority = 15
+	priority = 20
 	icon = GFX_ARG_elections
 
 	picture = GFX_ARG_elections_picture
@@ -21,8 +21,33 @@ ARG_1937_elections = {
 	}
 }
 
+ARG_territorial_management = {
+	priority = 15
+
+	icon = GFX_decision_category_spr_the_seeds_of_revolution
+
+	allowed = { original_tag = ARG }
+
+	on_map_area = {
+		target_array = owned_states
+		target_trigger = {
+			FROM = {
+                has_state_flag = ARG_original_state_not_yet_integrated
+			}
+		}
+		name = ARG_national_territories_tt
+		zoom = 150
+	}
+
+	visible = {
+		any_controlled_state = {
+			has_state_flag = ARG_original_state_not_yet_integrated
+		}
+	}
+}
+
 ARG_inflation = {
-	priority = 10
+	priority = 20
 	icon = ARG_inflationary
 	
 	allowed = { original_tag = ARG }
@@ -41,6 +66,15 @@ ARG_inflation = {
 			has_idea = ARG_inflation_10
 		}
 	}
+}
+
+ARG_managing_the_army = {
+	priority = 12
+	icon = GFX_ARG_manage_army
+
+	allowed = { original_tag = ARG }
+
+	visible = { exists = yes }
 }
 
 ARG_robertos_deteriorating_health_condition = {
@@ -77,18 +111,18 @@ ARG_the_argentine_civil_war = {
 	}
 }
 
-ARG_peron_left_argentina = {
-	priority = 10
-	icon = ARG_peron_departure
-	
-	allowed = {
-		tag = ARG 
-	}
-	
-	visible = {
-		has_country_flag = ARG_peron_has_left
-	}
-}
+#ARG_peron_left_argentina = {
+#	priority = 10
+#	icon = ARG_peron_departure
+#	
+#	allowed = {
+#		tag = ARG 
+#	}
+#	
+#	visible = {
+#		has_country_flag = ARG_peron_has_left
+#	}
+#}
 
 ARG_the_great_coup = {
 	priority = 10
@@ -108,10 +142,7 @@ ARG_foreign_investments = {
 	icon = generic_economy
 	
 	allowed = {
-		OR = {
-			original_tag = ARG
-			original_tag = BRA 
-		}
+		original_tag = ARG
 	}
 	
 	visible = {
@@ -141,7 +172,7 @@ ARG_ramon_military_coup = {
 	picture = GFX_decision_cat_picture_fatherland_front
 
 	on_map_area = {
-		targets = { 889 890 891 892 512 }
+		targets = { 967 968 969 970 512 }
 		name = ARG_states_military_have_influence_over_tt
 		zoom = 150
 	}
@@ -172,62 +203,8 @@ ARG_integrate_our_territories = {
 	priority = 10
 	icon = eng_move_to_secure_the_dominions
 	
-	allowed = {
-		OR = {
-			original_tag = ARG
-			original_tag = CHL
-			original_tag = PRU 
-		}
-	}
-	
 	visible = {
-		if = {
-			limit = {
-				original_tag = ARG 
-			}
-			OR = {
-				has_completed_focus = ARG_reorganize_our_new_territories
-				has_completed_focus = ARG_integrate_our_conquered_lands
-			}
-		}
-		if = {
-			limit = {
-				original_tag = CHL 
-			}
-			has_completed_focus = CHL_establish_the_global_commune
-		}
-		if = {
-			limit = {
-				original_tag = PRU 
-			}
-			NOT = {
-				has_country_flag = is_PBC 
-			}
-			OR = {
-				has_completed_focus = PRU_proclaim_the_union_of_south_america
-				has_completed_focus = PRU_bring_everyone_under_the_sun
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					original_tag = BOL 
-					original_tag = PRU 
-				}
-				has_country_flag = is_PBC 
-				has_cosmetic_tag = PBC_UNIFIED
-			}
-			has_completed_focus = PBC_integrate_our_newly_conquered_lands
-		}
-		if = {
-			limit = { 
-				original_tag = BRA 
-			}
-			OR = {
-				has_completed_focus = BRA_the_union_of_south_american_socialist_republics
-				has_completed_focus = BRA_unite_hispanoamerica
-			}
-		}
+		has_country_flag = EUYL_can_integrate
 	}
 }
 

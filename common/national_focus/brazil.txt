@@ -35,14 +35,10 @@ focus_tree = {
 		x = 8
 		y = 0
 		
-		cost = 2
+		cost = 1
 
 		ai_will_do = {
-            factor = 5
-			modifier = {
-				factor = 17
-				has_completed_focus = BRA_manipulate_behind_the_scenes
-			}
+            factor = 75
         }
 
 		available = {
@@ -58,11 +54,18 @@ focus_tree = {
 			EUYL_add_1_civilian = yes 
 			add_political_power = 50
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_invest_in_our_economy
-				}
-				BZE = {
-					unlock_national_focus = BRA_invest_in_our_economy
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_invest_in_our_economy
+					}
+					BZE = {
+						unlock_national_focus = BRA_invest_in_our_economy
+					}
 				}
 			}
 		}
@@ -76,14 +79,10 @@ focus_tree = {
 		relative_position_id = BRA_invest_in_our_economy
 		prerequisite = { focus = BRA_invest_in_our_economy }
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
-            factor = 5
-			modifier = {
-				factor = 17
-				has_completed_focus = BRA_manipulate_behind_the_scenes
-			}
+            factor = 75
         }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -111,11 +110,18 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_pave_the_roads
-				}
-				BZE = {
-					unlock_national_focus = BRA_pave_the_roads
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_pave_the_roads
+					}
+					BZE = {
+						unlock_national_focus = BRA_pave_the_roads
+					}
 				}
 			}
 		}
@@ -147,6 +153,9 @@ focus_tree = {
 		bypass = {
 			has_completed_focus = BRA_pave_the_roads
 			NOT = {
+				has_completed_focus = BRA_maintain_our_agriculture
+			}
+			NOT = {
 				OR = {
 					has_idea = rural_economy
 					has_idea = semi_rural_economy
@@ -170,11 +179,18 @@ focus_tree = {
 				subtract_from_variable = { BRA_dependency_on_coffee = 10 }
 				BRA_update_opinion_variable = yes 
 				BRA_set_dependency_on_coffee_idea = yes
-				BRC = {
-					unlock_national_focus = BRA_begin_industrializing_the_nation
-				}
-				BZE = {
-					unlock_national_focus = BRA_begin_industrializing_the_nation
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_begin_industrializing_the_nation
+					}
+					BZE = {
+						unlock_national_focus = BRA_begin_industrializing_the_nation
+					}
 				}
 			}
 		}
@@ -192,6 +208,9 @@ focus_tree = {
 
 		available = {
 			has_idea = semi_rural_economy
+			NOT = {
+				has_completed_focus = BRA_maintain_our_agriculture
+			}
 		}
 
 		bypass = {
@@ -227,11 +246,18 @@ focus_tree = {
 				subtract_from_variable = { BRA_dependency_on_coffee = 10 }
 				BRA_update_opinion_variable = yes 
 				BRA_set_dependency_on_coffee_idea = yes
-				BRC = {
-					unlock_national_focus = BRA_construct_factories_for_an_army
-				}
-				BZE = {
-					unlock_national_focus = BRA_construct_factories_for_an_army
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_construct_factories_for_an_army
+					}
+					BZE = {
+						unlock_national_focus = BRA_construct_factories_for_an_army
+					}
 				}
 			}
 		}
@@ -247,15 +273,28 @@ focus_tree = {
 
 		cost = 8
 
+		available = {
+			NOT = {
+				has_completed_focus = BRA_maintain_our_agriculture
+			}
+		}
+
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			EUYL_add_2_military = yes 
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_expand_our_arsenal
-				}
-				BZE = {
-					unlock_national_focus = BRA_expand_our_arsenal
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_expand_our_arsenal
+					}
+					BZE = {
+						unlock_national_focus = BRA_expand_our_arsenal
+					}
 				}
 			}
 		}
@@ -295,11 +334,11 @@ focus_tree = {
 						OR = {
 							state = 496
 							state = 499
-							state = 877
-							state = 878
+							state = 955
+							state = 956
 							state = 500
 							state = 501
-							state = 879
+							state = 957
 							state = 503
 							state = 502
 							state = 505
@@ -317,11 +356,18 @@ focus_tree = {
 				add_to_variable = { BRA_dependency_on_coffee = 5 }
 				BRA_update_opinion_variable = yes 
 				BRA_set_dependency_on_coffee_idea = yes
-				BRC = {
-					unlock_national_focus = BRA_maintain_our_agriculture
-				}
-				BZE = {
-					unlock_national_focus = BRA_maintain_our_agriculture
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_maintain_our_agriculture
+					}
+					BZE = {
+						unlock_national_focus = BRA_maintain_our_agriculture
+					}
 				}
 			}
 		}
@@ -329,7 +375,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_work_out_an_agreement_with_farmers
-		icon = GFX_BRA_work_with_farmers
+		icon = GFX_URG_agricultural_economy
 		x = 0
 		y = 1
 		relative_position_id = BRA_maintain_our_agriculture
@@ -420,11 +466,18 @@ focus_tree = {
 						country_event = { id = brazil.7 hours = 6 }
 					}
 				}
-				BRC = {
-					unlock_national_focus = BRA_work_out_an_agreement_with_farmers
-				}
-				BZE = {
-					unlock_national_focus = BRA_work_out_an_agreement_with_farmers
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_work_out_an_agreement_with_farmers
+					}
+					BZE = {
+						unlock_national_focus = BRA_work_out_an_agreement_with_farmers
+					}
 				}
 			}
 		}
@@ -451,6 +504,17 @@ focus_tree = {
 			has_active_mission = BRA_industrialize_the_economy_mission
 		}
 
+		bypass = {
+			has_completed_focus = BRA_maintain_our_agriculture
+			NOT = {
+				OR = {
+					has_idea = rural_economy
+					has_idea = semi_rural_economy
+					has_idea = industrializing_economy
+				}
+			}
+		}
+
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			add_days_mission_timeout = {
@@ -459,11 +523,18 @@ focus_tree = {
 			}
 			EUYL_add_1_civilian = yes 
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_try_to_delay_our_industrialization
-				}
-				BZE = {
-					unlock_national_focus = BRA_try_to_delay_our_industrialization
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_try_to_delay_our_industrialization
+					}
+					BZE = {
+						unlock_national_focus = BRA_try_to_delay_our_industrialization
+					}
 				}
 			}
 		}
@@ -502,11 +573,18 @@ focus_tree = {
 			unlock_decision_tooltip = BRA_industrialize_our_economy_1
 			EUYL_add_1_civilian = yes 
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_slow_path_to_industrialize
-				}
-				BZE = {
-					unlock_national_focus = BRA_slow_path_to_industrialize
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_slow_path_to_industrialize
+					}
+					BZE = {
+						unlock_national_focus = BRA_slow_path_to_industrialize
+					}
 				}
 			}
 		}
@@ -550,7 +628,7 @@ focus_tree = {
 			focus = BRA_maintain_our_agriculture
 		}
 
-		cost = 4
+		cost = 2
 
 		available = {
 			is_subject = no 
@@ -562,11 +640,18 @@ focus_tree = {
 			custom_effect_tooltip = EUYL_available_as_industrial_concern_tt
 			show_ideas_tooltip = BRA_vale_company
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_the_brazilian_mining_industry
-				}
-				BZE = {
-					unlock_national_focus = BRA_the_brazilian_mining_industry
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_the_brazilian_mining_industry
+					}
+					BZE = {
+						unlock_national_focus = BRA_the_brazilian_mining_industry
+					}
 				}
 			}
 		}
@@ -580,17 +665,11 @@ focus_tree = {
 		relative_position_id = BRA_the_brazilian_mining_industry
 		prerequisite = { focus = BRA_the_brazilian_mining_industry }
 
-		cost = 6
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			EUYL_add_1_military = yes 
-			hidden_effect = {
-				every_other_country = {
-					limit = { original_tag = BRA }
-					unlock_national_focus = BRA_expand_the_armys_arsenal
-				}
-			}
 		}
 	}
 
@@ -602,7 +681,7 @@ focus_tree = {
 		relative_position_id = BRA_expand_the_armys_arsenal
 		prerequisite = { focus = BRA_expand_the_armys_arsenal }
 
-		cost = 7
+		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
@@ -631,7 +710,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_small_local_factories }
 		prerequisite = { focus = BRA_industrialize_the_amazons }
 
-		cost = 8
+		cost = 6
 
 		available = {
 			NOT = {
@@ -669,7 +748,7 @@ focus_tree = {
 			controls_state = 496
 			controls_state = 497
 			controls_state = 495
-			controls_state = 878
+			controls_state = 956
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -692,7 +771,7 @@ focus_tree = {
 					amount = 14
 				}
 			}
-			878 = {
+			956 = {
 				add_resource = {
 					type = oil 
 					amount = 6
@@ -709,7 +788,7 @@ focus_tree = {
 		relative_position_id = BRA_support_private_rubber_companies
 		prerequisite = { focus = BRA_support_private_rubber_companies }
 
-		cost = 10
+		cost = 5
 
 		available = {
 			exists = yes 
@@ -724,7 +803,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 25
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = BRA_FNM
 		}
@@ -765,14 +844,14 @@ focus_tree = {
 					has_idea = rural_economy
 				}
 			}
-			controls_state = 871
+			controls_state = 949
 			controls_state = 495
 			controls_state = 280
-			controls_state = 886
-			controls_state = 858
-			controls_state = 861
-			controls_state = 862
-			controls_state = 870
+			controls_state = 964
+			controls_state = 936
+			controls_state = 939
+			controls_state = 940
+			controls_state = 948
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -781,17 +860,17 @@ focus_tree = {
 				limit = {
 					can_build_railway = {
 						start_state = 280
-						target_state = 871
+						target_state = 949
 						build_only_on_allied = yes 
 					}
 				}
 				build_railway = {
 					level = 2
 					start_state = 280
-					target_state = 871
+					target_state = 949
 				}
 			}
-			871 = {
+			949 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -812,35 +891,35 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-			886 = {
+			964 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes 
 				}
 			}
-			858 = {
+			936 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes 
 				}
 			}
-			861 = {
+			939 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes 
 				}
 			}
-			862 = {
+			940 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes 
 				}
 			}
-			870 = {
+			948 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -864,11 +943,11 @@ focus_tree = {
 		relative_position_id = BRA_industrialize_the_amazons
 		prerequisite = { focus = BRA_industrialize_the_amazons }
 
-		cost = 8
+		cost = 6
 
 		available = {
 			controls_state = 495
-			controls_state = 871
+			controls_state = 949
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -892,12 +971,12 @@ focus_tree = {
 		relative_position_id = BRA_industrialize_the_amazons
 		prerequisite = { focus = BRA_industrialize_the_amazons }
 
-		cost = 8
+		cost = 6
 
 		available = {
 			controls_state = 501
-			controls_state = 879
-			controls_state = 906
+			controls_state = 957
+			controls_state = 984
 			controls_state = 503
 			controls_state = 502
 		}
@@ -911,14 +990,14 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-			879 = {
+			957 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes 
 				}
 			}
-			906 = {
+			984 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -965,7 +1044,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_expand_our_roads_in_the_south }
 		prerequisite = { focus = BRA_establish_rubber_plantations }
 
-		cost = 10
+		cost = 7.2
 
 		available = {
 			has_idea = BRA_brazilian_mining_industry_1
@@ -1020,12 +1099,12 @@ focus_tree = {
 
 		available = {
 			controls_state = 497
-			controls_state = 873
-			controls_state = 876
+			controls_state = 951
+			controls_state = 954
 			controls_state = 498
-			controls_state = 874
-			controls_state = 875
-			controls_state = 878
+			controls_state = 952
+			controls_state = 953
+			controls_state = 956
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1036,13 +1115,13 @@ focus_tree = {
 					level = 2
 				}
 			}
-			873 = {
+			951 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 				}
 			}
-			876 = {
+			954 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1054,19 +1133,19 @@ focus_tree = {
 					level = 2
 				}
 			}
-			874 = {
+			952 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 				}
 			}
-			875 = {
+			953 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 				}
 			}
-			878 = {
+			956 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1116,7 +1195,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_open_up_investments_in_the_civilian_market }
 		prerequisite = { focus = BRA_an_industry_for_the_people }
 
-		cost = 8
+		cost = 7.2
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -1177,9 +1256,11 @@ focus_tree = {
 			has_stability > 0.49
 			custom_trigger_tooltip = {
 				tooltip = BRA_better_than_industrializing_tt
-				OR = {
-					has_idea = industrializing_economy
-					has_idea = industrialized_economy
+				NOT = {
+					OR = {
+						has_idea = rural_economy
+						has_idea = semi_rural_economy
+					}
 				}
 			}
 		}
@@ -1199,7 +1280,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_invest_in_the_arms_industry }
 		prerequisite = { focus = BRA_expand_the_armys_arsenal }
 
-		cost = 8
+		cost = 7.2
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -1222,17 +1303,11 @@ focus_tree = {
 		relative_position_id = BRA_the_brazilian_mining_industry
 		prerequisite = { focus = BRA_the_brazilian_mining_industry }
 
-		cost = 6
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			EUYL_add_1_civilian = yes 
-			hidden_effect = {
-				every_other_country = {
-					limit = { original_tag = BRA }
-					unlock_national_focus = BRA_an_industry_for_the_people
-				}
-			}
 		}
 	}
 
@@ -1249,10 +1324,13 @@ focus_tree = {
 
 		available = {
 			has_idea = industrializing_economy
+			NOT = {
+				has_completed_focus = BRA_maintain_our_agriculture
+			}
 		}
 
 		bypass = {
-			has_completed_focus = BRA_pave_the_roads
+			has_completed_focus = BRA_begin_industrializing_the_nation
 			NOT = {
 				OR = {
 					has_idea = rural_economy
@@ -1305,11 +1383,18 @@ focus_tree = {
 				}
 				BRA_update_opinion_variable = yes 
 				BRA_set_dependency_on_coffee_idea = yes
-				BRC = {
-					unlock_national_focus = BRA_industrialize_fully_our_economy
-				}
-				BZE = {
-					unlock_national_focus = BRA_industrialize_fully_our_economy
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_industrialize_fully_our_economy
+					}
+					BZE = {
+						unlock_national_focus = BRA_industrialize_fully_our_economy
+					}
 				}
 			}
 			add_ideas = BRA_rebellious_coffee_plantations_idea
@@ -1347,7 +1432,7 @@ focus_tree = {
 		relative_position_id = BRA_an_industry_for_the_people
 		prerequisite = { focus = BRA_an_industry_for_the_people }
 
-		cost = 8
+		cost = 5
 
 		available = {
 			controls_state = 501
@@ -1384,7 +1469,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_expand_our_industry_in_the_south }
 		prerequisite = { focus = BRA_industrialize_the_amazons }
 
-		cost = 10
+		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
@@ -1404,7 +1489,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = EUYL_available_as_industrial_concern_tt
 			show_ideas_tooltip = BRA_csn
-			add_political_power = 45
+			add_political_power = 25
 			random_owned_controlled_state = {
 				add_resource = {
 					type = steel
@@ -1497,13 +1582,13 @@ focus_tree = {
 
 		available = {
 			controls_state = 495
-			controls_state = 871
-			controls_state = 878
+			controls_state = 949
+			controls_state = 956
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			878 = {
+			956 = {
 				add_resource = {
 					type = oil 
 					amount = 16
@@ -1531,7 +1616,6 @@ focus_tree = {
 
 		available = {
 			exists = yes 
-			has_civil_war = no 
 			is_subject = no 
 			NOT = { has_completed_focus = BRA_manipulate_behind_the_scenes }
 		}
@@ -1543,11 +1627,18 @@ focus_tree = {
 			navy_experience = 10
 			air_experience = 20
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_forcas_armadas_brasileiras
-				}
-				BZE = {
-					unlock_national_focus = BRA_forcas_armadas_brasileiras
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_forcas_armadas_brasileiras
+					}
+					BZE = {
+						unlock_national_focus = BRA_forcas_armadas_brasileiras
+					}
 				}
 			}
 		}
@@ -1572,11 +1663,18 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 75
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_forca_aerea
-				}
-				BZE = {
-					unlock_national_focus = BRA_forca_aerea
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_forca_aerea
+					}
+					BZE = {
+						unlock_national_focus = BRA_forca_aerea
+					}
 				}
 			}
 		}
@@ -1870,7 +1968,7 @@ focus_tree = {
 		relative_position_id = BRA_forcas_armadas_brasileiras
 		prerequisite = { focus = BRA_forcas_armadas_brasileiras }
 
-		cost = 8
+		cost = 5
 
 		available = {
 			any_controlled_state = {
@@ -1882,11 +1980,18 @@ focus_tree = {
 		completion_reward = {
 			EUYL_add_2_dockyard = yes 
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_expand_our_naval_arsenal
-				}
-				BZE = {
-					unlock_national_focus = BRA_expand_our_naval_arsenal
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_expand_our_naval_arsenal
+					}
+					BZE = {
+						unlock_national_focus = BRA_expand_our_naval_arsenal
+					}
 				}
 			}
 		}
@@ -1907,11 +2012,18 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = BRA_improved_naval_equipment
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_produce_better_naval_equipment
-				}
-				BZE = {
-					unlock_national_focus = BRA_produce_better_naval_equipment
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_produce_better_naval_equipment
+					}
+					BZE = {
+						unlock_national_focus = BRA_produce_better_naval_equipment
+					}
 				}
 			}
 		}
@@ -1932,11 +2044,18 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = BRA_cheaper_naval_equipment
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_produce_cheaper_naval_equipment
-				}
-				BZE = {
-					unlock_national_focus = BRA_produce_cheaper_naval_equipment
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_produce_cheaper_naval_equipment
+					}
+					BZE = {
+						unlock_national_focus = BRA_produce_cheaper_naval_equipment
+					}
 				}
 			}
 		}
@@ -2267,7 +2386,6 @@ focus_tree = {
         }
 
 		available = {
-			has_idea = BRA_scars_of_the_1930_revolution_1
 			exists = yes 
 			has_civil_war = no 
 		}
@@ -2288,11 +2406,18 @@ focus_tree = {
 			}
 			add_political_power = 50
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_invest_in_the_army
-				}
-				BZE = {
-					unlock_national_focus = BRA_invest_in_the_army
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_invest_in_the_army
+					}
+					BZE = {
+						unlock_national_focus = BRA_invest_in_the_army
+					}
 				}
 			}
 		}
@@ -2362,6 +2487,7 @@ focus_tree = {
 				has_war = no 
 			}
 			exists = yes 
+			has_civil_war = no 
 		}
 		
 
@@ -2419,23 +2545,27 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			if = {
-				limit = { has_idea = BRA_scars_of_the_1930_revolution_2 }
-				swap_ideas = {
-					remove_idea = BRA_scars_of_the_1930_revolution_2
-					add_idea = BRA_scars_of_the_1930_revolution_3
-				}
+			swap_ideas = {
+				remove_idea = BRA_scars_of_the_1930_revolution_2
+				add_idea = BRA_scars_of_the_1930_revolution_3
 			}
 			else = {
 				add_political_power = 25
 				EUYL_add_1_military = yes 
 			}
 			hidden_effect = {
-				BRC = {
-					unlock_national_focus = BRA_keep_the_people_at_ease
-				}
-				BZE = {
-					unlock_national_focus = BRA_keep_the_people_at_ease
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = BRA_civil_war_in_progress
+						}
+					}
+					BRC = {
+						unlock_national_focus = BRA_keep_the_people_at_ease
+					}
+					BZE = {
+						unlock_national_focus = BRA_keep_the_people_at_ease
+					}
 				}
 			}
 		}
@@ -2603,12 +2733,9 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			if = {
-				limit = { has_idea = BRA_scars_of_the_1930_revolution_3 }
-				swap_ideas = {
-					remove_idea = BRA_scars_of_the_1930_revolution_3
-					add_idea = BRA_scars_of_the_1930_revolution_4
-				}
+			swap_ideas = {
+				remove_idea = BRA_scars_of_the_1930_revolution_3
+				add_idea = BRA_scars_of_the_1930_revolution_4
 			}
 			else = {
 				add_political_power = 25
@@ -2641,10 +2768,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_war_support = 0.03
-			if = {
-				limit = { has_idea = BRA_scars_of_the_1930_revolution_4 }
-				remove_ideas = BRA_scars_of_the_1930_revolution_4
-			}
+			remove_ideas = BRA_scars_of_the_1930_revolution_4
 			else = {
 				add_war_support = 0.05
 				add_political_power = 35
@@ -2705,13 +2829,17 @@ focus_tree = {
             factor = 50
         }
 
-		cost = 3
+		cost = 2
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		#will activate an elections mission timeout ## Already does that silly old me ##
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 125
+			custom_effect_tooltip = BRA_time_to_increase_progress_decrease_by_10_days_tt
 			custom_effect_tooltip = BRA_other_parties_will_try_to_bring_you_down_tt
+			hidden_effect = {
+				subtract_from_variable = { BRA_days_to_make_progress = 10 }
+			}
 		}
 	}
 
@@ -2723,7 +2851,7 @@ focus_tree = {
 		relative_position_id = BRA_the_path_to_estado_novo
 		prerequisite = { focus = BRA_the_path_to_estado_novo }
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
             factor = 15
@@ -2754,7 +2882,7 @@ focus_tree = {
 		relative_position_id = BRA_solidify_control_over_the_state
 		prerequisite = { focus = BRA_solidify_control_over_the_state }
 
-		cost = 7.2
+		cost = 6
 
 		available = {
 			has_country_leader = {
@@ -2824,7 +2952,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_political_censorship_vargas}
 		mutually_exclusive = { focus = BRA_censor_the_integralists }
 
-		cost = 8
+		cost = 5
 
 		ai_will_do = {
             factor = 15
@@ -3016,7 +3144,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
             factor = 5
@@ -3031,6 +3159,10 @@ focus_tree = {
 			custom_effect_tooltip = BRA_progress_dictatorship_decrease_10_tt
 			custom_effect_tooltip = BRA_vargas_stop_incrementing_progress_tt
             subtract_from_variable = { BRA_progress_to_dictatorship = 10 }
+			add_days_mission_timeout = {
+				mission = BRA_the_1938_elections
+				days = 15
+			}
             hidden_effect = {
                 clamp_variable = {
                     var = BRA_progress_to_dictatorship
@@ -3062,7 +3194,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_cut_back_on_our_censorship }
 		mutually_exclusive = { focus = BRA_cooperate_with_plinio }
 
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
             factor = 5
@@ -3095,7 +3227,7 @@ focus_tree = {
 		relative_position_id = BRA_an_era_of_democracy
 		prerequisite = { focus = BRA_an_era_of_democracy }
 
-		cost = 8
+		cost = 7.2
 
 		ai_will_do = {
             factor = 5
@@ -3141,7 +3273,7 @@ focus_tree = {
 		relative_position_id = BRA_convince_washington_to_come_back 
 		prerequisite = { focus = BRA_convince_washington_to_come_back }
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
             factor = 5
@@ -3215,7 +3347,7 @@ focus_tree = {
 		relative_position_id = BRA_freedom_of_the_press
 		prerequisite = { focus = BRA_freedom_of_the_press }
 
-		cost = 10
+		cost = 5
 
 		available = {
 			has_government = democratic
@@ -3334,8 +3466,12 @@ focus_tree = {
 
 		cost = 5
 
+		ai_will_do = {
+            factor = 75
+        }
+
 		available = {
-			has_civil_war = no 
+			exists = yes 
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3360,7 +3496,11 @@ focus_tree = {
 		relative_position_id = BRA_follow_liberal_ideals
 		prerequisite = { focus = BRA_follow_liberal_ideals }
 
-		cost = 8
+		cost = 6
+
+		ai_will_do = {
+            factor = 75
+        }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -3386,11 +3526,15 @@ focus_tree = {
 		prerequisite = { focus = BRA_open_our_markets }
 		mutually_exclusive = { focus = BRA_the_congress_shall_lead }
 
-		cost = 8
+		cost = 5
+
+		ai_will_do = {
+            factor = 75
+        }
 
 		available = {
 			has_government = democratic
-			has_civil_war = no 
+			exists = yes 
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3409,7 +3553,11 @@ focus_tree = {
 		prerequisite = { focus = BRA_open_our_markets }
 		mutually_exclusive = { focus = BRA_let_the_people_choose_the_leader }
 
-		cost = 8
+		cost = 5
+
+		ai_will_do = {
+            factor = 75
+        }
 
 		available = {
 			has_government = democratic
@@ -3437,7 +3585,11 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = BRA_look_beyond_south_america }
 
-		cost = 5
+		cost = 10
+
+		available = {
+			has_civil_war = no 
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -3650,7 +3802,7 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = BRA_focus_on_south_america }
 
-		cost = 7.2
+		cost = 10
 
 		available = {
 			has_war = no
@@ -3693,7 +3845,7 @@ focus_tree = {
 			focus = BRA_focus_on_south_america
 		}
 
-		cost = 10
+		cost = 5
 
 		available = {
 			has_government = democratic
@@ -3748,6 +3900,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_cooperation_with_the_west
 		prerequisite = { focus = BRA_cooperation_with_the_west }
+
+		cost = 10
 
 		available = {
 			POR = {
@@ -3883,7 +4037,7 @@ focus_tree = {
 						exists = yes 
 						has_civil_war = no 
 						NOT = { has_war_with = ROOT }
-						has_full_control_of_state = 859
+						has_full_control_of_state = 937
 						has_full_control_of_state = 687
 					}
 				}
@@ -3892,7 +4046,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = ARG_iftheyaccept
 				effect_tooltip = {
-					transfer_state = 859
+					transfer_state = 937
 					transfer_state = 687
 					random_owned_controlled_state = {
 						limit = { industrial_complex > 1 }
@@ -3985,8 +4139,8 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { has_dlc = "Man the Guns"}
-				give_resource_rights = { receiver = ENG state = 876 }
-				give_resource_rights = { receiver = ENG state = 874 }
+				give_resource_rights = { receiver = ENG state = 954 }
+				give_resource_rights = { receiver = ENG state = 952 }
 			}
 			else = {
 				ENG = {
@@ -4013,10 +4167,10 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_full_control_of_state = 859
+					has_full_control_of_state = 937
 					has_full_control_of_state = 687
 				}
-				859 = {
+				937 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -4124,7 +4278,7 @@ focus_tree = {
 				is_in_faction_with = USA
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			if = {
 				limit = { has_idea = monroe_doctrine_idea }
@@ -4211,7 +4365,7 @@ focus_tree = {
 			focus = BRA_mutual_military_buildup
 		}
 
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
@@ -4248,7 +4402,7 @@ focus_tree = {
 			focus = BRA_mutual_military_buildup
 		}
 
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
@@ -4285,13 +4439,84 @@ focus_tree = {
 		}
 		prerequisite = { focus = BRA_war_on_fascism }
 
+		cost = 10
+
 		available = {
-			all_country = {
-				capital_scope = { is_on_continent = south_america }
+			NOT = {
+				OR = {
+					has_government = fascism 
+					has_government = communism
+				}
+			}
+			CHL = {
 				NOT = {
 					OR = {
-						has_government = fascism
-						has_government = communism 
+						has_government = fascism 
+						has_government = communism
+					}
+				}
+			}
+			URG = {
+				NOT = {
+					OR = {
+						has_government = fascism 
+						has_government = communism
+					}
+				}
+			}
+			ARG = {
+				NOT = {
+					OR = {
+						has_government = fascism 
+						has_government = communism
+					}
+				}
+			}
+			PAR = {
+				NOT = {
+					OR = {
+						has_government = fascism 
+						has_government = communism
+					}
+				}
+			}
+			PRU = {
+				NOT = {
+					OR = {
+						has_government = fascism 
+						has_government = communism
+					}
+				}
+			}
+			BOL = {
+				NOT = {
+					OR = {
+						has_government = fascism 
+						has_government = communism
+					}
+				}
+			}
+			ECU = {
+				NOT = {
+					OR = {
+						has_government = fascism 
+						has_government = communism
+					}
+				}
+			}
+			COL = {
+				NOT = {
+					OR = {
+						has_government = fascism 
+						has_government = communism
+					}
+				}
+			}
+			VEN = {
+				NOT = {
+					OR = {
+						has_government = fascism 
+						has_government = communism
 					}
 				}
 			}
@@ -4376,9 +4601,23 @@ focus_tree = {
 						has_civil_war = no 
 						NOT = { has_war_with = ROOT }
 						is_subject = no 
+						has_capitulated = no 
 					}
-					country_event = { id = brazil.86 hours = 6 }
+					country_event = { id = brazil.86 days = 1 random = 12 random_days = 3 }
 				}
+				every_other_country = {
+					limit = {
+						is_subject_of = ROOT 
+						has_civil_war = no 
+					}
+					ROOT = {
+						annex_country = {
+							target = PREV 
+							transfer_troops = yes 
+						}
+					}
+				}
+				set_country_flag = EUYL_can_integrate
 			}
 		}
 	}
@@ -4424,7 +4663,7 @@ focus_tree = {
 
 		#will unlock decisions for the respective party to gain popularity 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
             factor = 7
@@ -4489,7 +4728,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_cut_back_on_our_censorship }
 		mutually_exclusive = { focus = BRA_an_era_of_democracy }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
             factor = 5
@@ -4665,7 +4904,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = BRA_cooperation_with_the_church }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
             factor = 5
@@ -4691,7 +4930,7 @@ focus_tree = {
 		relative_position_id = BRA_solidify_control_over_the_state
 		prerequisite = { focus = BRA_solidify_control_over_the_state }
 
-		cost = 6
+		cost = 2
 
 		ai_will_do = {
             factor = 15
@@ -4704,12 +4943,13 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = BRA_progress_to_dctatorship_over_20_tt
+				check_variable = { BRA_progress_to_dictatorship > 20 }
 			}
 		}
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 35
 			add_stability = -0.03
 			custom_effect_tooltip = BRA_increase_progress_by_5_tt
 			add_to_variable = { BRA_progress_to_dictatorship = 5 }
@@ -4727,25 +4967,30 @@ focus_tree = {
 			focus = BRA_political_cooperation_with_plinio 
 		}
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
             factor = 5
         }
 
 		available = {
-			has_country_leader = {
-				character = BRA_getulio_vargas
-				ruling_only = yes
-			}
 			communism < 0.3
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			unlock_decision_tooltip = BRA_send_spies_to_subverb_communist_activity_in_FROM
+			custom_effect_tooltip = BRA_cost_to_stop_commies_halfed_tt
+			add_political_power = 25
+			add_days_mission_timeout = {
+				mission = BRA_the_1938_elections
+				days = 10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
 			hidden_effect = {
-				set_country_flag = BRA_able_to_stop_communists
+				subtract_from_variable = { BRA_cost_to_stop_commies = 25 }
 			}
 		}
 	}
@@ -4758,17 +5003,13 @@ focus_tree = {
 		relative_position_id = BRA_the_war_on_communism_vargas
 		prerequisite = { focus = BRA_the_war_on_communism_vargas }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
             factor = 5
         }
 
 		available = {
-			has_country_leader = {
-				character = BRA_getulio_vargas
-				ruling_only = yes
-			}
 			custom_trigger_tooltip = {
 				tooltip = BRA_subversive_activity_not_very_high_tt
 				NOT = { check_variable = { BRA_communist_subversive_activity = 4 } }
@@ -4779,6 +5020,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			add_stability = -0.01
+			add_popularity = {
+				ideology = communism
+				popularity = -0.04
+			}
 			random_character = {
 				limit = { has_character_flag = BRA_communist }
 				ROOT = { retire_character = PREV }
@@ -4799,24 +5044,21 @@ focus_tree = {
 		relative_position_id = BRA_the_war_on_communism_vargas
 		prerequisite = { focus = BRA_the_war_on_communism_vargas }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
             factor = 5
         }
 
 		available = {
-			has_country_leader = {
-				character = BRA_getulio_vargas
-				ruling_only = yes
-			}
+			has_civil_war = no 
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
-				popularity = -0.05
+				popularity = -0.1
 			}
 		}
 	}
@@ -4830,26 +5072,23 @@ focus_tree = {
 		prerequisite = { focus = BRA_spread_anti_communist_propaganda }
 		prerequisite = { focus = BRA_disband_various_communist_poltiicans }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
             factor = 5
         }
 
 		available = {
-			has_country_leader = {
-				character = BRA_getulio_vargas
-				ruling_only = yes
-			}
 			custom_trigger_tooltip = {
 				tooltip = BRA_subversive_activity_is_low_tt
 				check_variable = { BRA_communist_subversive_activity = 1 }
 			}
-			communism < 0.08
+			communism < 0.15
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
+			add_political_power = 40
 			country_event = brazil.32
 		}
 	}
@@ -4863,7 +5102,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_political_censorship_vargas }
 		mutually_exclusive = { focus = BRA_political_cooperation_with_plinio }
 
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
             factor = 15
@@ -4883,10 +5122,15 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			custom_effect_tooltip = BRA_decrease_integralists_by_4_tt
+			add_political_power = 25
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			custom_effect_tooltip = BRA_decrease_integralists_by_10_tt
 			custom_effect_tooltip = BRA_integralists_occupy_random_state_tt
 			hidden_effect = {
-				subtract_from_variable = { BRA_integralist_influence = 4 }
+				subtract_from_variable = { BRA_integralist_influence = 10 }
 				BRA_set_up_political_crisis = yes 
 				random_owned_controlled_state = {
 					limit = {
@@ -4913,7 +5157,7 @@ focus_tree = {
 		relative_position_id = BRA_political_censorship_vargas
 		prerequisite = { focus = BRA_political_censorship_vargas }
 
-		cost = 7.2
+		cost = 2
 
 		ai_will_do = {
             factor = 5
@@ -4932,8 +5176,16 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			add_political_power = 40
+			add_political_power = 100
 			BRA_increment_progress_to_dictatorship = yes 
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			add_days_mission_timeout = {
+				mission = BRA_the_1938_elections
+				days = 45
+			}
 		}
 	}
 
@@ -4945,7 +5197,7 @@ focus_tree = {
 		relative_position_id = BRA_enact_the_cohen_plan
 		prerequisite = { focus = BRA_enact_the_cohen_plan }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
             factor = 5
@@ -4958,9 +5210,9 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = BRA_congress_influence_less_than_5_tt
-				check_variable = { BRA_congress_influence < 5 }
+				check_variable = { BRA_congress_influence < 15 }
 			}
-			democratic < 0.1
+			democratic < 0.15
 			has_country_flag = BRA_people_convinced
 			has_country_flag = BRA_army_convinced
 			has_country_flag = BRA_parliament_convinced
@@ -4968,6 +5220,11 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
+			add_political_power = 40
+			add_days_mission_timeout = {
+				mission = BRA_the_1938_elections
+				days = 15
+			}
 			BRA_clear_congress_opinion = yes 
 			set_country_flag = BRA_congress_shutdown
 			custom_effect_tooltip = BRA_congress_shutdown_tt
@@ -4985,7 +5242,7 @@ focus_tree = {
 		relative_position_id = BRA_preperations_for_the_self_coup
 		prerequisite = { focus = BRA_preperations_for_the_self_coup }
 
-		cost = 8
+		cost = 5
 
 		ai_will_do = {
             factor = 5
@@ -5008,6 +5265,18 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
 			if = {
                 limit = { has_idea = BRA_police_brutality_1 }
                 swap_ideas = {
@@ -5033,6 +5302,13 @@ focus_tree = {
 				}
 			}
 			BRA_increment_progress_to_dictatorship = yes 
+			custom_effect_tooltip = BRA_integralist_influence_decrease_by_4_tt
+			custom_effect_tooltip = BRA_congress_influence_decrease_by_4_tt
+            hidden_effect = {
+                subtract_from_variable = { BRA_integralist_influence = 4 }
+				subtract_from_variable = { BRA_congress_influence = 4 }
+				BRA_set_up_political_crisis = yes 
+            }
 		}
 	}
 
@@ -5045,7 +5321,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_strengthen_the_police_force }
 		prerequisite = { focus = BRA_censor_the_integralists }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
             factor = 5
@@ -5058,9 +5334,9 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = BRA_integralist_influence_below_5_tt
-				check_variable = { BRA_integralist_influence < 5 }
+				check_variable = { BRA_integralist_influence < 15 }
 			}
-			fascism < 0.08
+			fascism < 0.15
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
@@ -5082,7 +5358,7 @@ focus_tree = {
 		relative_position_id = BRA_preperations_for_the_self_coup
 		prerequisite = { focus = BRA_preperations_for_the_self_coup }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
             factor = 4
@@ -5098,7 +5374,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 25
 			custom_effect_tooltip = BRA_modify_crisis_by_5_stability_tt
 			hidden_effect = {
 				add_to_variable = { BRA_crisis_stability_factor = 0.05 }
@@ -5117,7 +5393,7 @@ focus_tree = {
 		relative_position_id = BRA_mediate_the_effects_of_the_political_crisis
 		prerequisite = { focus = BRA_mediate_the_effects_of_the_political_crisis }
 
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
             factor = 3
@@ -5134,6 +5410,8 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 75
+			custom_effect_tooltip = BRA_decrease_congress_by_15_tt
+			custom_effect_tooltip = BRA_decrease_integralists_by_10_tt
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.07
@@ -5158,6 +5436,21 @@ focus_tree = {
 					is_advisor = yes 
 				}
 				ROOT = { retire_character = PREV }
+			}
+			hidden_effect = {
+				subtract_from_variable = { BRA_congress_influence = 15 }
+				subtract_from_variable = { BRA_integralist_influence = 10 }
+				clamp_variable = {
+					var = BRA_congress_influence
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = BRA_integralist_influence
+					min = 0
+					max = 100
+				}
+				BRA_set_up_political_crisis = yes 
 			}
 		}
 	}
@@ -5188,7 +5481,16 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
 			custom_effect_tooltip = BRA_set_of_decisions_unlock_convice_tt
+			add_days_mission_timeout = {
+				mission = BRA_the_1938_elections
+				days = 25
+			}
 		}
 	}
 
@@ -5201,7 +5503,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_shut_down_the_integralists }
 		prerequisite = { focus = BRA_imprison_prestes }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
             factor = 5
@@ -5218,6 +5520,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = -0.03
+			add_days_mission_timeout = {
+				mission = BRA_the_1938_elections
+				days = 50
+			}
 			BRA_increment_progress_to_dictatorship = yes
 		}
 	}
@@ -5886,10 +6192,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			EUYL_add_1_civilian = yes 
-			custom_effect_tooltip = BRA_petrobras_75_cheaper_tt
-			hidden_effect = {
-				subtract_from_variable = { BRA_cost_for_petrobras = 75 }
-			}
+			add_political_power = 75
 		}
 	}
 
@@ -6421,8 +6724,9 @@ focus_tree = {
 
 		completion_reward = { #will start imminent civil war mechanism 
 			unlock_decision_category_tooltip = BRA_imminent_civil_war
+			unlock_decision_tooltip = BRA_launch_the_civil_war
 			custom_effect_tooltip = BRA_put_race_against_time_tt
-			add_political_power = 110
+			add_political_power = 125
 			hidden_effect = {
 				set_variable = { BRA_playing_as_vargas = 0 }
 				set_variable = { BRA_playing_as_integralists = 1 }
@@ -6435,10 +6739,10 @@ focus_tree = {
 				BRA_clear_integralist_opinion = yes 
 				set_country_flag = BRA_hostile_vargas
 				set_country_flag = BRA_integralist_player_planning_uprising
-				879 = {
+				957 = {
 					add_dynamic_modifier = { modifier = BRA_integralists_occupation }
 				}
-				881 = {
+				959 = {
 					add_dynamic_modifier = { modifier = BRA_integralists_occupation }
 				}
 				503 = {
@@ -6476,10 +6780,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_days_mission_timeout = {
-				mission = BRA_estado_novo_mission_enemy
-				days = 30
-			}
+			add_political_power = 5
 			custom_effect_tooltip = BRA_slight_chance_of_vargas_finding_out_tt
 			hidden_effect = {
 				random_list = {
@@ -6524,6 +6825,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR }
 		completion_reward = {
+			add_political_power = 50
 			custom_effect_tooltip = BRA_civil_war_progress_increase_10_tt
 			add_ideas = BRA_integralist_protests_1
 			unlock_decision_tooltip = BRA_strengthen_our_protests
@@ -6541,7 +6843,7 @@ focus_tree = {
 		relative_position_id = BRA_organize_integralist_protests
 		prerequisite = { focus = BRA_organize_integralist_protests}
 
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
             factor = 20
@@ -6560,7 +6862,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			add_political_power = 40
+			add_political_power = 50
 			custom_effect_tooltip = BRA_progress_to_civil_war_increase_5_tt
 			custom_effect_tooltip = BRA_gain_support_in_sao_paulo_tt
 			unlock_decision_tooltip = BRA_let_the_voice_of_integralism_be_heard_in_FROM
@@ -6646,13 +6948,20 @@ focus_tree = {
 		continue_if_invalid = no 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR }
 		completion_reward = {
-			add_political_power = 40
+			add_political_power = 35
 			custom_effect_tooltip = BRA_progress_to_civil_war_increase_5_tt
+			custom_effect_tooltip = BRA_army_support_increase_5_tt
 			custom_effect_tooltip = BRA_gain_3_proper_divisions_at_start_civil_war_tt
 			hidden_effect = {
+				add_to_variable = { BRA_current_army_support = 5 }
 				add_to_variable = { BRA_progress_to_a_civil_war = 5 }
 				clamp_variable = {
                     var = BRA_current_army_support
+                    min = 0 
+                    max = 100
+                }
+				clamp_variable = {
+                    var = BRA_progress_to_a_civil_war
                     min = 0 
                     max = 100
                 }
@@ -6668,7 +6977,7 @@ focus_tree = {
 		relative_position_id = BRA_the_integralist_army
 		prerequisite = { focus = BRA_the_integralist_army }
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
             factor = 20
@@ -6703,7 +7012,15 @@ focus_tree = {
 			}
 			add_political_power = 75
 			hidden_effect = {
+				set_country_flag = {
+                    flag = BRA_recently_spawned
+                    days = 14
+                    value = 1
+                }
+				set_rule = { can_join_factions = no }
+				set_global_flag = BRA_integralist_civil_war_already_triggered
 				set_global_flag = BRA_civil_war_in_progress
+				clr_country_flag = BRA_integralist_player_planning_uprising
 				remove_dynamic_modifier = { modifier = BRA_brazilian_political_crisis }
 				start_civil_war = {
 					ruling_party = fascism
@@ -6747,34 +7064,30 @@ focus_tree = {
 					limit = { has_dynamic_modifier = { modifier = BRA_integralists_occupation } }
 					set_state_flag = BRA_fascist_state
 				}
-				random_other_country = { #gotta test this (please work)
-					limit = { 
-						original_tag = BRA 
-						has_civil_war = yes
-					}
-					every_controlled_state = {
-						limit = {
-							is_core_of = BRA  
-							has_dynamic_modifier = { modifier = BRA_integralists_occupation }
-						}
-						set_state_controller_to = ROOT
-						set_state_owner_to = ROOT
-					}
-					ROOT = {
-						every_controlled_state = {
-							limit = {
-								is_core_of = BRA 
-								NOT = { has_dynamic_modifier = { modifier = BRA_integralists_occupation } }
-							}
-							set_state_controller_to = PREV.PREV
-						}
-					}
-				}
+				#random_other_country = { #gotta test this (please work)
+				#	limit = { 
+				#		original_tag = BRA 
+				#		has_civil_war = yes
+				#	}
+				#	every_controlled_state = {
+				#		limit = {
+				#			is_core_of = BRA  
+				#			has_dynamic_modifier = { modifier = BRA_integralists_occupation }
+				#		}
+				#		set_state_controller_to = ROOT
+				#		set_state_owner_to = ROOT
+				#	}
+				#	ROOT = {
+				#		every_controlled_state = {
+				#			limit = {
+				#				is_core_of = BRA 
+				#				NOT = { has_dynamic_modifier = { modifier = BRA_integralists_occupation } }
+				#			}
+				#			set_state_controller_to = PREV.PREV
+				#		}
+				#	}
+				#}
 				every_controlled_state = {
-					limit = { 
-						is_fully_controlled_by = ROOT
-						has_dynamic_modifier = { modifier = BRA_integralists_occupation }
-					}
 					create_unit = {
                         division = "name = \"Milícias Integralistas\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
                         owner = ROOT
@@ -6813,19 +7126,34 @@ focus_tree = {
 							owner = ROOT
 						}
 					}
-					if = {
-						limit = { 
-							check_variable = { BRA_integralist_influence > 49 }
-						}
+				}
+				if = {
+					limit = { 
+						check_variable = { BRA_integralist_influence > 39 }
+					}
+					every_controlled_state = {
 						create_unit = {
 							division = "name = \"Milícias Integralistas\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
 							owner = ROOT
 						}
 					}
-					if = {
-						limit = {
-							check_variable = { BRA_integralist_influence > 64 }
+				}
+				if = {
+					limit = {
+						check_variable = { BRA_integralist_influence > 54 }
+					}
+					every_controlled_state = {
+						create_unit = {
+							division = "name = \"Divisão de Infantaria\" division_template = \"Divisão de Infantaria\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
+							owner = ROOT
 						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { BRA_integralist_influence > 64 }
+					}
+					every_controlled_state = {
 						create_unit = {
 							division = "name = \"Divisão de Infantaria\" division_template = \"Divisão de Infantaria\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
 							owner = ROOT
@@ -6864,46 +7192,81 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 						type = infantry_equipment
 						amount = 1500
-						producer = GER 
+						producer = ITA 
 					}
 					add_equipment_to_stockpile = {
 						type = artillery_equipment
 						amount = 500
-						producer = GER
+						producer = ITA
 					}
 				}
 				if = {
 					limit = { has_completed_focus = BRA_discuss_potential_german_volunteers }
 					random_owned_controlled_state = {
 						create_unit = {
-							division = "name = \"Deutscher Freiwilliger\" division_template = \"German Volunteers\" start_experience_factor = 0.25 start_equipment_factor = 1" 
+							division = "name = \"Divisione di Infanteria\" division_template = \"Italian Volunteers\" start_experience_factor = 0.25 start_equipment_factor = 1" 
 							owner = ROOT
 						}
 						create_unit = {
-							division = "name = \"Deutscher Freiwilliger\" division_template = \"German Volunteers\" start_experience_factor = 0.25 start_equipment_factor = 1" 
-							owner = ROOT
-						}
-					}
-					random_owned_controlled_state = {
-						create_unit = {
-							division = "name = \"Deutscher Freiwilliger\" division_template = \"German Volunteers\" start_experience_factor = 0.25 start_equipment_factor = 1" 
-							owner = ROOT
-						}
-						create_unit = {
-							division = "name = \"Deutscher Freiwilliger\" division_template = \"German Volunteers\" start_experience_factor = 0.25 start_equipment_factor = 1" 
+							division = "name = \"Divisione di Infanteria\" division_template = \"Italian Volunteers\" start_experience_factor = 0.25 start_equipment_factor = 1" 
 							owner = ROOT
 						}
 					}
 					random_owned_controlled_state = {
 						create_unit = {
-							division = "name = \"Deutscher Freiwilliger\" division_template = \"German Volunteers\" start_experience_factor = 0.25 start_equipment_factor = 1" 
+							division = "name = \"Divisione di Infanteria\" division_template = \"Italian Volunteers\" start_experience_factor = 0.25 start_equipment_factor = 1" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"Divisione di Infanteria\" division_template = \"Italian Volunteers\" start_experience_factor = 0.25 start_equipment_factor = 1" 
 							owner = ROOT
 						}
 					}
 					random_owned_controlled_state = {
 						create_unit = {
-							division = "name = \"Deutsches Panzerkorp\" division_template = \"German Volunteer Tank Korp\" start_experience_factor = 0.25 start_equipment_factor = 1" 
+							division = "name = \"Divisione di Infanteria\" division_template = \"Italian Volunteers\" start_experience_factor = 0.25 start_equipment_factor = 1" 
 							owner = ROOT
+						}
+					}
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"Divisione Serbatoi\" division_template = \"Italian Volunteer Tank Korp\" start_experience_factor = 0.25 start_equipment_factor = 1" 
+							owner = ROOT
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_dlc = "No Step Back"
+							}
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_tech = basic_medium_tank
+								}
+							}
+							hidden_effect = { set_technology = { basic_light_tank = 1 } }
+						}
+						add_equipment_to_stockpile = { 
+							type = light_tank_equipment_1 
+							amount = 500 
+							producer = ITA
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								NOT = {
+									has_tech = basic_light_tank_chassis
+								}
+							}
+							hidden_effect = { set_technology = { basic_light_tank_chassis = 1 } }
+						}
+						add_equipment_to_stockpile = { 
+							type = light_tank_chassis_1 
+							amount = 500 
+							producer = ITA
 						}
 					}
 				}
@@ -6936,6 +7299,7 @@ focus_tree = {
 						tree = brazil_focus
 						keep_completed = no 
 					}
+					set_rule = { can_join_factions = no }
 					unlock_national_focus = BRA_the_path_to_estado_novo
 					unlock_national_focus = BRA_solidify_control_over_the_state
 					unlock_national_focus = BRA_political_censorship_vargas
@@ -6952,6 +7316,7 @@ focus_tree = {
 					unlock_national_focus = BRA_imprison_prestes
 					unlock_national_focus = BRA_sign_the_decree_law
 					unlock_national_focus = BRA_officialy_establish_the_estado_novo
+					unlock_national_focus = BRA_invest_in_our_economy
 				}
 				every_state = {
 					limit = { has_state_flag = BRA_democratic_influence_state }
@@ -6960,7 +7325,10 @@ focus_tree = {
 				activate_mission = BRA_impending_democratic_insurrection
 				every_country = {
 					limit = { original_tag = BRA }
-					BRA_mark_focus_tree_layout_dirty = yes 
+					BRA_mark_focus_tree_layout_dirty = yes
+					USA = {
+						give_guarantee = PREV
+					} 
 				}
 				news_event = { id = news.361 days = 2 }
 				every_state = {
@@ -6974,9 +7342,9 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #Contact the Italians
 		id = BRA_contact_the_germans_for_help
-		icon = GFX_focus_chi_mission_to_germany
+		icon = GFX_focus_befriend_italy
 		x = -1
 		y = 1
 		relative_position_id = BRA_let_our_voices_be_heard
@@ -6990,9 +7358,9 @@ focus_tree = {
 
 		available = {
 			NOT = {
-				has_war_with = GER 
+				has_war_with = ITA 
 			}
-			GER = { 
+			ITA = { 
 				exists = yes 
 				has_civil_war = no 
 				has_government = fascism
@@ -7005,12 +7373,13 @@ focus_tree = {
 				tooltip = BRA_army_support_over_50_tt
 				check_variable = { BRA_current_army_support > 45 }
 			}
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 25
-			GER = { country_event = { id = brazil.67 hours = 6 } }
+			ITA = { country_event = { id = brazil.67 hours = 6 } }
 			hidden_effect = {
 				BZE = {
 					unlock_national_focus = BRA_contact_the_germans_for_help
@@ -7019,7 +7388,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #Secure Italian weaponry
 		id = BRA_secure_german_weaponry
 		icon = GFX_BRA_german_weaponry
 		x = 1
@@ -7059,12 +7428,12 @@ focus_tree = {
 						add_equipment_to_stockpile = {
 							type = infantry_equipment
 							amount = 1500
-							producer = GER 
+							producer = ITA 
 						}
 						add_equipment_to_stockpile = {
 							type = artillery_equipment
 							amount = 500
-							producer = GER
+							producer = ITA
 						}
 					}
 					hidden_effect = {
@@ -7080,7 +7449,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { #Italian volunteers 
 		id = BRA_discuss_potential_german_volunteers
 		icon = GFX_BRA_german_volunteers
 		x = -1
@@ -7089,7 +7458,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_contact_the_germans_for_help }
 		prerequisite = { focus = BRA_the_jews_are_our_common_enemy }
 
-		cost = 7.2
+		cost = 10
 
 		ai_will_do = {
             factor = 10
@@ -7104,6 +7473,7 @@ focus_tree = {
 				tooltip = BRA_integralists_not_shutdown_tt
 				NOT = { has_country_flag = BRA_integralists_shutdown }
 			}
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		select_effect = {
@@ -7111,7 +7481,7 @@ focus_tree = {
 				every_country = {
 					limit = { original_tag = BRA }
 					division_template = { 
-						name = "German Volunteers" 
+						name = "Italian Volunteers" 
 						division_names_group = SPAN_INF_02 
 						is_locked = yes 
 						regiments = { 
@@ -7129,7 +7499,7 @@ focus_tree = {
 						}
 					}
 					division_template = { 
-						name = "German Volunteer Tank Korp" 
+						name = "Italian Volunteer Tank Korp" 
 						division_names_group = SPAN_INF_02 
 						is_locked = yes 
 						regiments = { 
@@ -7178,7 +7548,7 @@ focus_tree = {
 				tooltip = BRA_integralists_not_shutdown_tt
 				NOT = { has_country_flag = BRA_integralists_shutdown }
 			}
-			has_civil_war = no 
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		cancel_if_invalid = yes 
@@ -7209,7 +7579,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_gain_the_armys_support }
 		mutually_exclusive = { focus = BRA_plinio_to_victory }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
             factor = 10
@@ -7220,7 +7590,7 @@ focus_tree = {
 				tooltip = BRA_integralists_not_shutdown_tt
 				NOT = { has_country_flag = BRA_integralists_shutdown }
 			}
-			has_civil_war = no 
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		cancel_if_invalid = yes 
@@ -7253,7 +7623,7 @@ focus_tree = {
 		relative_position_id = BRA_follow_barrosos_principals
 		prerequisite = { focus = BRA_follow_barrosos_principals }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
             factor = 8
@@ -7264,7 +7634,7 @@ focus_tree = {
 				tooltip = BRA_integralists_not_shutdown_tt
 				NOT = { has_country_flag = BRA_integralists_shutdown }
 			}
-			has_civil_war = no 
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		cancel_if_invalid = yes 
@@ -7289,7 +7659,7 @@ focus_tree = {
 		relative_position_id = BRA_the_jews_are_our_common_enemy
 		prerequisite = { focus = BRA_the_jews_are_our_common_enemy }
 
-		cost = 7.2
+		cost = 6
 
 		ai_will_do = {
             factor = 8
@@ -7300,7 +7670,7 @@ focus_tree = {
 				tooltip = BRA_integralists_not_shutdown_tt
 				NOT = { has_country_flag = BRA_integralists_shutdown }
 			}
-			has_civil_war = no 
+			NOT = { has_global_flag = BRA_civil_war_in_progress } 
 		}
 
 		cancel_if_invalid = yes 
@@ -7331,7 +7701,7 @@ focus_tree = {
 		relative_position_id = BRA_arm_up_the_industrial_workers
 		prerequisite = { focus = BRA_arm_up_the_industrial_workers }
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
             factor = 15
@@ -7346,12 +7716,14 @@ focus_tree = {
 				tooltip = BRA_army_support_over_65_tt
 				check_variable = { BRA_current_army_support > 65 }
 			}
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		cancel_if_invalid = yes 
 		continue_if_invalid = no 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
+			add_political_power = 40
 			custom_effect_tooltip = BRA_every_industrial_province_control_tt
 			hidden_effect = {
 				every_controlled_state = {
@@ -7380,7 +7752,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_gain_the_armys_support }
 		mutually_exclusive = { focus = BRA_follow_barrosos_principals }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
             factor = 10
@@ -7391,7 +7763,7 @@ focus_tree = {
 				tooltip = BRA_integralists_not_shutdown_tt
 				NOT = { has_country_flag = BRA_integralists_shutdown }
 			}
-			has_civil_war = no 
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		cancel_if_invalid = yes 
@@ -7399,7 +7771,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = 0.05
-			add_political_power = 10
+			add_political_power = 15
 			custom_effect_tooltip = BRA_civil_war_progress_increase_10_tt
 			add_trait = {
 				character = BRA_plinio_salgado
@@ -7418,7 +7790,7 @@ focus_tree = {
 	focus = {
 		id = BRA_confiscate_stockpiled_weapons
 		icon = GFX_goal_generic_small_arms
-		x = -2
+		x = -4
 		y = 1
 		relative_position_id = BRA_follow_barrosos_principals
 		prerequisite = {
@@ -7426,14 +7798,14 @@ focus_tree = {
 			focus = BRA_plinio_to_victory
 		}
 
-		cost = 8
+		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = BRA_integralists_not_shutdown_tt
 				NOT = { has_country_flag = BRA_integralists_shutdown }
 			}
-			has_civil_war = no 
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		cancel_if_invalid = yes 
@@ -7459,12 +7831,15 @@ focus_tree = {
 	focus = {
 		id = BRA_seek_cooperation_with_prestes #try to assasinate prestes 
 		icon = GFX_BRA_assasinate_prestes
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = BRA_plinio_to_victory
-		prerequisite = { focus = BRA_plinio_to_victory }
+		prerequisite = { 
+			focus = BRA_plinio_to_victory 
+			focus = BRA_follow_barrosos_principals
+		}
 
-		cost = 4
+		cost = 8
 
 		ai_will_do = {
             factor = 8
@@ -7481,7 +7856,7 @@ focus_tree = {
 				tooltip = BRA_integralists_not_shutdown_tt
 				NOT = { has_country_flag = BRA_integralists_shutdown }
 			}
-			has_civil_war = no 
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7496,15 +7871,15 @@ focus_tree = {
 					limit = { 
 						check_variable = { BRA_communist_subversive_activity = 4 }
 					}
-					set_temp_variable = { BRA_chance_assasinate_prestes = 20 }
-					set_temp_variable = { BRA_chance_NOT_assasinate_prestes = 80 }
+					set_temp_variable = { BRA_chance_assasinate_prestes = 10 }
+					set_temp_variable = { BRA_chance_NOT_assasinate_prestes = 90 }
 				}
 				else_if = {
 					limit = { 
 						check_variable = { BRA_communist_subversive_activity = 3 }
 					}
-					set_temp_variable = { BRA_chance_assasinate_prestes = 40 }
-					set_temp_variable = { BRA_chance_NOT_assasinate_prestes = 60 }
+					set_temp_variable = { BRA_chance_assasinate_prestes = 35 }
+					set_temp_variable = { BRA_chance_NOT_assasinate_prestes = 65 }
 				}
 				else = {
 					set_temp_variable = { BRA_chance_assasinate_prestes = 50 }
@@ -7528,10 +7903,10 @@ focus_tree = {
 	focus = {
 		id = BRA_farmers_to_arms
 		icon = GFX_BRA_hide_weapons_in_plantation
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = BRA_seek_cooperation_with_prestes
-		prerequisite = { focus = BRA_seek_cooperation_with_prestes }
+		prerequisite = { focus = BRA_confiscate_stockpiled_weapons }
 
 		cost = 6
 
@@ -7548,7 +7923,7 @@ focus_tree = {
 				tooltip = BRA_coffee_plantations_not_hostile_tt
 				check_variable = { BRA_coffee_companies_opinion > -1 }
 			}
-			has_civil_war = no 
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		cancel_if_invalid = yes 
@@ -7577,10 +7952,10 @@ focus_tree = {
 	focus = {
 		id = BRA_learn_subversive_techniques_from_the_communists #coerce prestes's followers 
 		icon = GFX_BRA_spread_supp
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = BRA_seek_cooperation_with_prestes
-		prerequisite = { focus = BRA_seek_cooperation_with_prestes }
+		prerequisite = { focus = BRA_confiscate_stockpiled_weapons }
 
 		cost = 6
 
@@ -7593,7 +7968,7 @@ focus_tree = {
 				tooltip = BRA_integralists_not_shutdown_tt
 				NOT = { has_country_flag = BRA_integralists_shutdown }
 			}
-			has_civil_war = no 
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		cancel_if_invalid = yes 
@@ -7622,14 +7997,14 @@ focus_tree = {
 
 	focus = {
 		id = BRA_try_to_convince_plantations #convince the plantations 
-		icon = GFX_BRA_work_with_farmers
+		icon = GFX_URG_agricultural_economy
 		x = -1
 		y = 1
 		relative_position_id = BRA_farmers_to_arms
 		prerequisite = { focus = BRA_farmers_to_arms }
 		prerequisite = { focus = BRA_learn_subversive_techniques_from_the_communists }
 
-		cost = 8
+		cost = 7.2
 		
 		ai_will_do = {
             factor = 15
@@ -7648,13 +8023,14 @@ focus_tree = {
 				tooltip = BRA_army_support_over_60_tt
 				check_variable = { BRA_current_army_support > 60 }
 			}
-			has_civil_war = no 
+			NOT = { has_global_flag = BRA_civil_war_in_progress }
 		}
 
 		cancel_if_invalid = yes 
 		continue_if_invalid = no 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
+			add_political_power = 15
 			custom_effect_tooltip = BRA_we_will_control_every_state_with_plantation_integralist_tt
 			hidden_effect = {
 				every_controlled_state = {
@@ -7717,9 +8093,22 @@ focus_tree = {
 			}
 			add_ideas = war_economy
 			custom_effect_tooltip = BRA_switiching_war_economy_will_cause_serious_consequences_tt
+			custom_effect_tooltip = BRA_mobilizing_eceonomy_will_destroy_plantations_tt
 			hidden_effect = {
-				BZE = {
-					unlock_national_focus = BRA_mobilize_the_economy
+				every_controlled_state = {
+					limit = { has_dynamic_modifier = { modifier = BRA_small_coffee_plantations } }
+					remove_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+				}
+				every_controlled_state = {
+					limit = { has_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations } }
+					remove_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+				}
+				remove_ideas = {
+					BRA_very_slight_dependency_on_coffee
+					BRA_slight_dependency_on_coffee
+					BRA_dependent_on_coffee
+					BRA_very_dependent_on_coffee
+					BRA_extremely_dependent_on_coffee
 				}
 			}
 		}
@@ -7734,7 +8123,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_mobilize_the_economy }
 		mutually_exclusive = { focus = BRA_focus_on_supply_build_up }
 
-		cost = 7.2
+		cost = 6
 
 		ai_will_do = {
             factor = 2
@@ -7746,12 +8135,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			EUYL_add_4_military = yes 
-			hidden_effect = {
-				BZE = {
-					unlock_national_focus = BRA_focus_on_military_expansion
-				}
-			}
+			EUYL_add_2_military = yes 
 		}
 	}
 
@@ -7782,21 +8166,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			501 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes 
 				}
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes 
-				}
-			}
-			hidden_effect = {
-				BZE = {
-					unlock_national_focus = BRA_sieze_the_paulista_factories
 				}
 			}
 		}
@@ -7869,7 +8248,6 @@ focus_tree = {
         }
 
 		available = { 
-			has_completed_focus = BRA_integralism_shall_rule
 			OR = {
 				has_civil_war = yes 
 				has_government = fascism
@@ -7906,6 +8284,14 @@ focus_tree = {
 			has_global_flag = BRA_civil_war_in_progress
 		}
 
+		bypass = {
+			has_war_with = BZE 
+			has_government = fascism
+			hidden_trigger = {
+				has_global_flag = player_chose_imperialist
+			}
+		}
+
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_war_support = 0.05
@@ -7920,7 +8306,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRA_integralism_shall_rule
-		prerequisite = { focus = BRA_integralism_shall_rule}
+		prerequisite = { 
+			focus = BRA_integralism_shall_rule
+		}
 
 		cost = 3
 
@@ -7930,7 +8318,8 @@ focus_tree = {
 
 		available = {
 			has_global_flag = BRA_civil_war_in_progress
-			has_war_with = SAO 
+			has_global_flag = BRA_paulista_revolt
+			controls_state = 501
 		}
 
 		bypass = {
@@ -7941,7 +8330,13 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			add_ideas = BRA_crush_the_paulistas
+			if = {
+				limit = {
+					has_global_flag = BRA_paulista_revolt
+				}
+				unlock_decision_tooltip = BRA_obliterate_the_paulistas
+			}
+			else = { add_ideas = BRA_crush_the_paulistas }
 		}
 	}
 
@@ -7962,7 +8357,10 @@ focus_tree = {
 
 		available = {
 			has_global_flag = BRA_civil_war_in_progress
-			has_global_flag = paulistas_revolted
+			OR = {
+				has_global_flag = paulistas_revolted
+				has_global_flag = paulistas_pacified
+			}
 			controls_state = 501
 		}
 
@@ -8115,10 +8513,10 @@ focus_tree = {
 			custom_effect_tooltip = BRA_take_control_of_3_states_tt #pernambunco and two other close state 
 			hidden_effect = {
 				set_global_flag = player_chose_imperialist
-				874 = {
+				952 = {
 					add_dynamic_modifier = { modifier = BRA_monarchist_influence }
 				}
-				875 = {
+				953 = {
 					add_dynamic_modifier = { modifier = BRA_monarchist_influence }
 				}
 				498 = {
@@ -8485,7 +8883,7 @@ focus_tree = {
 			focus = BRA_integralism_shall_rule
 		}
 
-		cost = 7.2
+		cost = 3
 
 		ai_will_do = {
             factor = 5
@@ -8498,11 +8896,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			BRA_improve_militia_training = yes 
-			hidden_effect = {
-				BZE = {
-					unlock_national_focus = BRA_learn_from_the_frontlines
-				}
-			}
 		}
 	}
 
@@ -8564,11 +8957,6 @@ focus_tree = {
 		completion_reward = {
 			BRA_improve_militia_training = yes 
 			add_war_support = 0.05
-			hidden_effect = {
-				BZE = {
-					unlock_national_focus = BRA_new_training_techniques
-				}
-			}
 		}
 	}
 
@@ -8580,7 +8968,7 @@ focus_tree = {
 		relative_position_id = BRA_learn_from_the_frontlines
 		prerequisite = { focus = BRA_learn_from_the_frontlines }
 
-		cost = 7.2
+		cost = 6
 
 		ai_will_do = {
             factor = 2
@@ -8608,11 +8996,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			BRA_improve_militia_training = yes 
-			unlock_decision_tooltip = BRA_try_to_get_aid_from_FROM
-			hidden_effect = {
-				BZE = {
-					unlock_national_focus = BRA_ask_for_foreign_aid
-				}
+			custom_effect_tooltip = BRA_unlock_decision_help_from_others_tt
+			hidden_effect = {	
+				unlock_decision_tooltip = BRA_try_to_get_aid_from_FROM
 			}
 		}
 	}
@@ -8651,11 +9037,6 @@ focus_tree = {
                 }
 			}
 			unlock_decision_tooltip = BRA_mobilize_a_militia_in_FROM
-			hidden_effect = {
-				BZE = {
-					unlock_national_focus = BRA_everyone_to_war
-				}
-			}
 		}
 	}
 
@@ -8775,7 +9156,7 @@ focus_tree = {
 		#will randomly start small insurrections across the country 
 		#will be stronger if portugal is helping 
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
             factor = 7
@@ -8888,10 +9269,11 @@ focus_tree = {
 
 		available = {
 			has_civil_war = no 
+			has_global_flag = BRA_civil_war_concluded
 			BRA_is_the_empire_of_brazil = yes 
 		}
 
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
             factor = 7
@@ -8922,7 +9304,7 @@ focus_tree = {
 		relative_position_id = BRA_officialy_establish_the_empire
 		prerequisite = { focus = BRA_officialy_establish_the_empire }
 
-		cost = 3
+		cost = 2
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
@@ -9268,7 +9650,7 @@ focus_tree = {
 		relative_position_id = BRA_promote_ultra_nationalism
 		prerequisite = { focus = BRA_promote_ultra_nationalism }
 
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
             factor = 5
@@ -9330,7 +9712,7 @@ focus_tree = {
 		relative_position_id = BRA_the_march_to_buenos_aires
 		prerequisite = { focus = BRA_the_march_to_buenos_aires }
 
-		cost = 7.2
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP}
 		completion_reward = {
@@ -9342,14 +9724,17 @@ focus_tree = {
 	focus = {
 		id = BRA_push_through_the_north
 		icon = GFX_ARG_secure_the_north
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = BRA_form_jungle_regiments
-		prerequisite = { focus = BRA_form_jungle_regiments }
+		prerequisite = { 
+			focus = BRA_form_jungle_regiments 
+			focus = BRA_african_buildup
+		}
 		will_lead_to_war_with = COL
 		will_lead_to_war_with = VEN
 		
-		cost = 8
+		cost = 5
 		
 		bypass = {
 			has_completed_focus = BRA_the_march_to_buenos_aires
@@ -9390,7 +9775,7 @@ focus_tree = {
 		relative_position_id = BRA_push_through_the_north
 		prerequisite = { 
 			focus = BRA_push_through_the_north 
-			focus = BRA_target_france
+
 		}
 
 		cost = 10
@@ -9414,7 +9799,7 @@ focus_tree = {
 		available = {
 			num_of_factories > 99
 			has_army_manpower = { size > 599999 }
-			controls_state = 112
+			controls_state = 925
 			controls_state = 41 
 			controls_state = 16
 		}
@@ -9446,7 +9831,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_the_european_theater
 		prerequisite = { focus = BRA_the_european_theater }
-		prerequisite = { focus = BRA_push_through_the_north }
 
 		cost = 10
 
@@ -9505,7 +9889,7 @@ focus_tree = {
 		relative_position_id = BRA_the_march_to_buenos_aires
 		prerequisite = { focus = BRA_the_march_to_buenos_aires}
 
-		cost = 6
+		cost = 2
 
 		available = {
 			has_army_experience > 25
@@ -9560,7 +9944,7 @@ focus_tree = {
 						owner = ROOT
 					}
 				}
-				892 = {
+				970 = {
 					create_unit = {
 						division = "name = \"Destacamento da Montanha do Santa Catarina\" division_template = \"Destacamento da Montanha do Sul\" start_equipment_factor = 1.0" 
 						owner = ROOT
@@ -9636,7 +10020,7 @@ focus_tree = {
 		}
 		will_lead_to_war_with = LIB
 
-		cost = 5
+		cost = 2
 
 		available = {
 			LIB = {
@@ -9685,7 +10069,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 7.2
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
@@ -9714,7 +10098,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_set_our_eyes_on_africa }
 		mutually_exclusive = { focus = BRA_integrate_liberia_into_the_empire }
 
-		cost = 7.2
+		cost = 5
 
 		available = {
 			OR = {
@@ -9785,7 +10169,7 @@ focus_tree = {
 			focus = BRA_integrate_liberia_into_the_empire
 		}
 
-		cost = 8
+		cost = 7.2
 
 		available = {
 			OR = {
@@ -9828,7 +10212,7 @@ focus_tree = {
 		will_lead_to_war_with = PAN 
 		will_lead_to_war_with = COS
 		
-		cost = 10
+		cost = 5
 		
 		available = {
 			is_subject = no
@@ -9876,7 +10260,7 @@ focus_tree = {
 		will_lead_to_war_with = ELS 
 		will_lead_to_war_with = NIC
 
-		cost = 10
+		cost = 7.2
 
 		available = {
 			NOT = {
@@ -9943,7 +10327,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_invest_in_the_imperial_army }
 		will_lead_to_war_with = PAR
 
-		cost = 5
+		cost = 3
 
 		available = {
 			NOT = {
@@ -10182,11 +10566,12 @@ focus_tree = {
 		relative_position_id = BRA_internal_imperial_management
 		prerequisite = { focus = BRA_internal_imperial_management }
 
-		cost = 10
+		cost = 7.2
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			EUYL_add_4_civilian = yes 
+			BRA_improve_civil_war_recession = yes 
+			EUYL_add_2_civilian = yes 
 		}
 	}
 
@@ -10196,10 +10581,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRA_internal_imperial_management
-		prerequisite = { focus = BRA_expand_our_school_system }
-		prerequisite = { focus = BRA_internal_imperial_management }
+		prerequisite = { 
+			focus = BRA_expand_our_school_system 
+			focus = BRA_internal_imperial_management
+		}
 
-		cost = 10
+		cost = 7.2
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -10245,7 +10632,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
@@ -10691,7 +11078,7 @@ focus_tree = {
 		#the name will be a scripted loc 
 		#will depend on whether the player had civil war or not 
 
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
             factor = 3
@@ -10699,7 +11086,6 @@ focus_tree = {
 
 		available = {
 			has_civil_war = no 
-			has_government = fascism
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -10725,7 +11111,7 @@ focus_tree = {
 		#the name will be a scripted loc 
 		#will depend on whether the player had civil war or not 
 
-		cost = 6
+		cost = 5
 
 		ai_will_do = {
             factor = 2
@@ -10757,6 +11143,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			BRA_improve_civil_war_recession = yes 
 			add_ideas = BRA_expanded_school_systems
 		}
 	}
@@ -10808,7 +11195,7 @@ focus_tree = {
 
 		#will give a temporary debuff but improve the post civil war economic debuff 
 
-		cost = 6
+		cost = 5
 
 		ai_will_do = {
             factor = 2
@@ -10838,7 +11225,7 @@ focus_tree = {
 
 		#will also imrpove slightly the economic debuff 
 
-		cost = 7.2
+		cost = 6
 
 		ai_will_do = {
             factor = 2
@@ -10878,7 +11265,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_invite_the_best_economists }
 		prerequisite = { focus = BRA_nationalize_our_industry }
 
-		cost = 8
+		cost = 7.2
 
 		ai_will_do = {
             factor = 2
@@ -10952,7 +11339,6 @@ focus_tree = {
 		cost = 7.2 
 
 		available = {
-			has_government = fascism
 			has_stability > 0.6
 		}
 
@@ -11009,7 +11395,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_secure_brazil_completely }
 		mutually_exclusive = { focus = BRA_expand_aggresively }
 
-		cost = 7.2
+		cost = 2
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -11442,7 +11828,7 @@ focus_tree = {
 
 		#will have the same system as chile with the whole people getting mad
 
-		cost = 5
+		cost = 2
 
 		available = {
 			has_government = fascism
@@ -11476,7 +11862,7 @@ focus_tree = {
 		relative_position_id = BRA_expand_aggresively
 		prerequisite = { focus = BRA_expand_aggresively }
 
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = no 
 
@@ -11501,10 +11887,9 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			any_other_country = {
+			URG = {
 				capital_scope = {
-					is_fully_controlled_by = ROOT 
-					is_on_continent = south_america
+					is_fully_controlled_by = ROOT
 				}
 			}
 		}
@@ -11527,7 +11912,7 @@ focus_tree = {
 
 		#will unlock decisions to conquer countries in the north 
 
-		cost = 10
+		cost = 7.2
 
 		bypass = {
 			has_completed_focus = BRA_rapid_army_expansion
@@ -11691,7 +12076,7 @@ focus_tree = {
 
 		#will unlock decisions to conquer the countries in the south 
 
-		cost = 10
+		cost = 7.2
 
 		available = {
 			NOT = {
@@ -11750,7 +12135,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_look_south }
 		prerequisite = { focus = BRA_military_build_up_in_our_conquered_lands }
 
-		cost = 8
+		cost = 5
 
 		available = {
 			OR = {
@@ -11811,7 +12196,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 10
+		cost = 7.2
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
@@ -12137,7 +12522,8 @@ focus_tree = {
 		completion_reward = {
 			activate_mission_tooltip = BRA_communist_peasant_revolt
 			add_popularity = { ideology = communism popularity = 0.02 }
-			add_political_power = 110
+			add_political_power = 125
+			custom_effect_tooltip = BRA_can_only_focus_on_one_branch_tt
 			hidden_effect = {
 				set_country_flag = BRA_active_communist_revolt
 				set_global_flag = BRA_chose_commie_route
@@ -12214,6 +12600,10 @@ focus_tree = {
 		prerequisite = { focus = BRA_manipulate_behind_the_scenes }
 
 		cost = 2
+
+		ai_will_do = {
+            factor = 25
+        }
 
 		#will unlock decisions to convince farmers in plantations to join your side 
 
@@ -12311,7 +12701,7 @@ focus_tree = {
             factor = 15
 			modifier = {
 				factor = 20
-				has_completed_focus = BRA_secret_conscription
+				has_completed_focus = BRA_work_in_secret_with_coffee_farmers
 			}
         }
 
@@ -12324,6 +12714,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_MANPOWER }
 		completion_reward = {
+			add_political_power = 25
 			unlock_decision_tooltip = BRA_secret_conscription_in_FROM
 		}
 		 
@@ -12573,7 +12964,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_BRAZILIAN_CIVIL_WAR }
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 40
 			add_stability = -0.08
 			add_popularity = { ideology = communism popularity = 0.03 }
 			hidden_effect = { 
@@ -12624,7 +13015,7 @@ focus_tree = {
 		relative_position_id = BRA_interfere_with_vargas_plans
 		prerequisite = { focus = BRA_interfere_with_vargas_plans }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
             factor = 15
@@ -12665,7 +13056,7 @@ focus_tree = {
 
 		#unlocks map decisions to spread subversive influence to other states 
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
             factor = 15
@@ -12739,7 +13130,7 @@ focus_tree = {
 			has_active_mission = BRA_communist_peasant_revolt
 		}
 
-		cost = 7.2
+		cost = 6
 
 		ai_will_do = {
             factor = 15
@@ -12751,6 +13142,10 @@ focus_tree = {
 			add_political_power = 100
 			add_stability = -0.1
 			custom_effect_tooltip = BRA_gain_support_in_sao_paulo_tt
+			add_days_mission_timeout = {
+				mission = BRA_communist_peasant_revolt
+				days = 20
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -12795,6 +13190,10 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = BRC_start_civil_war_with_better_railways_and_supply_node_tt
+			add_days_mission_timeout = {
+				mission = BRA_communist_peasant_revolt
+				days = 5
+			}
 			hidden_effect = {
 				BRC = { set_country_flag = BRC_build_railway_and_supply_node }
 			}
@@ -12912,7 +13311,7 @@ focus_tree = {
 
 		#will spawn in divisions at the start of the civil war, and will be removed once its over 
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
             factor = 5
@@ -13042,7 +13441,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_ask_for_soviet_support }
 		mutually_exclusive = { focus = BRA_bring_soviet_weaponry_in_bulk }
 
-		cost = 6
+		cost = 4
 
 		ai_will_do = {
             factor = 5
@@ -13104,7 +13503,7 @@ focus_tree = {
 			focus = BRA_bring_soviet_weaponry_in_bulk
 		}
 
-		cost = 8
+		cost = 6
 
 		available = { 
 			has_civil_war = no 
@@ -13176,7 +13575,7 @@ focus_tree = {
 
 		#will prevent desertion of anarchists mid civil war 
 
-		cost = 8
+		cost = 6
 
 		ai_will_do = {
             factor = 15
@@ -13206,7 +13605,7 @@ focus_tree = {
 
 		#will spawn 4 proper divisions once civil war starts and give communist popularity
 
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
             factor = 15
@@ -13245,7 +13644,7 @@ focus_tree = {
 			has_active_mission = BRA_communist_peasant_revolt
 		}
 
-		cost = 6
+		cost = 2
 
 		ai_will_do = {
             factor = 15
@@ -13523,7 +13922,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			unlock_decision_tooltip = BRA_try_to_get_aid_from_FROM
+			custom_effect_tooltip = BRA_unlock_decision_help_from_others_tt
+			hidden_effect = {	
+				unlock_decision_tooltip = BRA_try_to_get_aid_from_FROM
+			}
 		}
 	}
 
@@ -13798,7 +14200,7 @@ focus_tree = {
 	focus = {
 		id = BRA_switch_to_a_war_economy
 		icon = GFX_BRA_generic_military
-		x = -4
+		x = -3
 		y =1 
 		relative_position_id = BRA_assasinate_vargas
 		prerequisite = { focus = BRA_assasinate_vargas }
@@ -13839,17 +14241,35 @@ focus_tree = {
 			}
 			add_ideas = war_economy
 			custom_effect_tooltip = BRA_switiching_war_economy_will_cause_serious_consequences_tt
-			
+			custom_effect_tooltip = BRA_mobilizing_eceonomy_will_destroy_plantations_tt
+			hidden_effect = {
+				every_controlled_state = {
+					limit = { has_dynamic_modifier = { modifier = BRA_small_coffee_plantations } }
+					remove_dynamic_modifier = { modifier = BRA_small_coffee_plantations }
+				}
+				every_controlled_state = {
+					limit = { has_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations } }
+					remove_dynamic_modifier = { modifier = BRA_widespread_coffee_plantations }
+				}
+				remove_ideas = {
+					BRA_very_slight_dependency_on_coffee
+					BRA_slight_dependency_on_coffee
+					BRA_dependent_on_coffee
+					BRA_very_dependent_on_coffee
+					BRA_extremely_dependent_on_coffee
+				}
+				set_country_flag = BRA_destroyed_plantations
+			}
 		}
 	}
 
 	focus = {
 		id = BRA_resources_for_the_army
 		icon = GFX_focus_generic_tank_production
-		x = -2
-		y = 1
+		x = -3
+		y = 3
 		relative_position_id = BRA_switch_to_a_war_economy
-		prerequisite = { focus = BRA_switch_to_a_war_economy }
+		prerequisite = { focus = BRA_invest_heavily_in_the_military }
 		prerequisite = { focus = BRA_establish_mines_for_other_resources }
 
 		#will give a temporary idea that improves factory output 
@@ -13873,10 +14293,10 @@ focus_tree = {
 	focus = {
 		id = BRA_emergency_railroad_construction
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = BRA_switch_to_a_war_economy
-		prerequisite = { focus = BRA_switch_to_a_war_economy }
+		prerequisite = { focus = BRA_assasinate_vargas }
 
 		cost = 4
 
@@ -13971,10 +14391,10 @@ focus_tree = {
 
 		available = {
 			BRA_is_the_commune_of_brazil = yes 
-			has_civil_war = yes 
+			has_global_flag = BRA_civil_war_in_progress
 		}
 
-		cost = 6
+		cost = 4
 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -13995,18 +14415,18 @@ focus_tree = {
 
 		#will unlock decisions to stomp out the integralists in states 
 
-		cost = 8
+		cost = 6
 
 		available = {
 			BRA_is_the_commune_of_brazil = yes 
-			has_civil_war = yes 
+			has_global_flag = BRA_civil_war_in_progress 
 			has_active_mission = BRA_integralists_seeking_to_strengthen_their_uprising
 		}
 
 		search_filters = { FOCUS_FILTER_BRAZILIAN_CIVIL_WAR FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			custom_effect_tooltip = BRA_integralist_strengthen_mission_cancelled_tt
-			unlock_decision_tooltip = BRA_crush_the_integralists_in_FROM
+			unlock_decision_tooltip = BRA_crush_the_integralists
 		}
 	}
 
@@ -14114,7 +14534,7 @@ focus_tree = {
 		
 		#social democracy path (will be shared with vargas path)
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 10
@@ -14144,7 +14564,7 @@ focus_tree = {
 		relative_position_id = BRA_the_peasants_represent_democracy
 		prerequisite = { focus = BRA_the_peasants_represent_democracy }
 
-		cost = 6
+		cost = 5
 
 		available = {
 			has_government = communism
@@ -14185,7 +14605,7 @@ focus_tree = {
 		relative_position_id = BRA_the_peasants_represent_democracy
 		prerequisite = { focus = BRA_the_peasants_represent_democracy }
 
-		cost = 7.2
+		cost = 5
 
 		available = {
 			has_government = communism
@@ -14607,7 +15027,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_invest_in_foreign_economies
 		prerequisite = { focus = BRA_invest_in_foreign_economies }
-		prerequisite = { focus = BRA_establish_an_agrarian_syndicate_council }
+		prerequisite = { focus = BRA_establish_agrarian_reforms }
 
 		cost = 10
 
@@ -14868,7 +15288,7 @@ focus_tree = {
 
 		#war path 
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
             factor = 10
@@ -14952,7 +15372,7 @@ focus_tree = {
 		relative_position_id = BRA_establish_our_dominance
 		prerequisite = { focus = BRA_establish_our_dominance }
 
-		cost = 8
+		cost = 5
 
 		available = {
 			has_civil_war = no 
@@ -14994,7 +15414,7 @@ focus_tree = {
 
 		#will unlock the mechanic to spread communism to other countries and instigate communist civil wars within them 
 
-		cost = 5
+		cost = 2
 
 		available = {
 			has_government = communism
@@ -15003,7 +15423,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			unlock_decision_tooltip = BRA_spread_communism_to_FROM
+			custom_effect_tooltip = BRA_spread_communism_to_other_countries_tt
 		}
 	}
 
@@ -15060,8 +15480,8 @@ focus_tree = {
 	focus = {
 		id = BRA_expand_our_plantations_even_further
 		icon = GFX_BOL_farmer_rights
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = BRA_establish_agrarian_reforms
 		prerequisite = { focus = BRA_establish_agrarian_reforms } 
 
@@ -15071,6 +15491,9 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = BRA_coffee_plantations_not_hostile_tt
 				check_variable = { BRA_coffee_companies_opinion > -1 }
+			}
+			hidden_trigger = {
+				BRA_coffee_plantations_active = yes
 			}
 		}
 
@@ -15146,7 +15569,21 @@ focus_tree = {
 		relative_position_id = BRA_establish_agrarian_reforms
 		prerequisite = { focus = BRA_post_civil_war_recovery }
 
-		cost = 8
+		cost = 7.2
+
+		available = {
+			NOT = {
+				OR = {
+					has_idea = BRA_post_civil_war_economic_recession_5
+					has_idea = BRA_post_civil_war_economic_recession_3
+					hidden_trigger = {
+						has_idea = BRA_post_civil_war_economic_recession_2
+						has_idea = BRA_post_civil_war_economic_recession_1
+						has_idea = BRA_post_civil_war_economic_recession_4
+					}
+				}
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -15181,7 +15618,7 @@ focus_tree = {
 		relative_position_id = BRA_the_inevitable_spread_of_communism
 		prerequisite = { focus = BRA_the_inevitable_spread_of_communism }
 
-		cost = 7
+		cost = 4
 
 		available = {
 			has_civil_war = no 
@@ -15222,7 +15659,7 @@ focus_tree = {
 		relative_position_id = BRA_the_inevitable_spread_of_communism
 		prerequisite = { focus = BRA_the_inevitable_spread_of_communism }
 
-		cost = 6
+		cost = 4
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -15260,11 +15697,10 @@ focus_tree = {
 	focus = { #yeap, this focus will basically revert the industrialization 
 		id = BRA_re_establish_a_fully_agrarian_economy
 		icon = GFX_BRA_agriculture 
-		x = 0
-		y = 1
+		x = 1
+		y = 2
 		relative_position_id = BRA_limit_our_exports
 		prerequisite = {
-			focus = BRA_expand_the_peasant_markets
 			focus = BRA_expand_our_plantations_even_further
 		}
 
@@ -15301,6 +15737,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = rural_economy 
+			EUYL_add_2_civilian = yes 
 			hidden_effect = {
 				set_country_flag = BRA_chose_rural
 			}
@@ -15334,7 +15771,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_everyone_united_under_one_banner
 		prerequisite = { focus = BRA_everyone_united_under_one_banner }
-		prerequisite = { focus = BRA_establish_an_agrarian_syndicate_council }
+		prerequisite = { focus = BRA_expand_the_peasant_markets }
 		mutually_exclusive = { focus = BRA_form_the_latin_bloc }
 		mutually_exclusive = { focus = BRA_join_the_soviets }
 
@@ -15684,6 +16121,7 @@ focus_tree = {
 					}
 					add_claim_by = ROOT
 				}
+				set_country_flag = EUYL_can_integrate
 			}
 		}
 	}

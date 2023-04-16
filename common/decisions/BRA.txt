@@ -15,12 +15,18 @@ BRA_political_crisis = {
             is_subject = no #The AI might puppet for god knows what reason
             NOT = {
                 OR = {
+                    has_war_with = BRA 
+                    has_war_with = SAO 
+                    has_war_with = IBR 
                     has_war_with = BRC 
                     has_war_with = BUS 
-                    has_war_with = BZE 
-                    has_war_with = SAO 
+                    has_war_with = BZE
+                    any_enemy_country = {
+                        original_tag = BRA
+                    }
                 }
             }
+            NOT = { has_country_flag = BRA_recently_spawned }
             NOT = {
                 OR = {
                     has_active_mission = BRA_impending_democratic_insurrection
@@ -30,14 +36,29 @@ BRA_political_crisis = {
                     has_active_mission = BRA_impending_imperial_uprising
                 }
             }
+            NOT = { has_global_flag = BRA_mission_launched }
         }
 
-        fire_only_once = yes 
+        cancel_trigger = {
+            OR = {
+                has_civil_war = yes 
+                has_war_with = BRA 
+                has_war_with = SAO 
+                has_war_with = IBR 
+                has_war_with = BRC 
+                has_war_with = BUS 
+                has_war_with = BZE
+                any_enemy_country = {
+                    original_tag = BRA
+                }
+            }
+        }
 
-        days_mission_timeout = 5
+        days_mission_timeout = 3
 
         timeout_effect = {
             country_event = brazil.57
+            set_global_flag = BRA_mission_launched
         }
     }
 
@@ -207,22 +228,33 @@ BRA_political_crisis = {
 		}
 
 		available = {
-			divisions_in_state = {
-				size > 3
-				state = FROM
-			}
+            if = {
+                limit = {
+                    is_ai = no 
+                }
+                divisions_in_state = {
+                    size > 3
+                    state = FROM
+                }
+            }
 		}
 		
 		cancel_trigger = {
-			custom_trigger_tooltip = {
-				tooltip = EUYL_has_3_divisions_tt
-				NOT = {
-					divisions_in_state = {
-						size > 2
-						state = FROM 
-					}
-				}
-			}
+            if = {
+                limit = {
+                    is_ai = no 
+                }
+                custom_trigger_tooltip = {
+                    tooltip = EUYL_has_3_divisions_tt
+                    NOT = {
+                        divisions_in_state = {
+                            size > 2
+                            state = FROM 
+                        }
+                    }
+                }
+            }
+            has_civil_war = yes 
 		}
 
 		cost = 15
@@ -490,7 +522,7 @@ BRA_political_crisis = {
             create_country_leader = {
                 name = "Dom Pedro III"
                 desc = "POLITICS_DOM_PEDRO_III_DESC"
-                picture = "gfx/leaders/BRA/portrait_bra_prince_pedro_hernique_de_orleans_e_braganza.png"
+                picture = "gfx/leaders/BRA/BRA_pedro_henrique_EUYL.png"
                 expire = "1965.1.1"
                 ideology = monarchism
                 traits = {
@@ -643,6 +675,59 @@ BRA_political_crisis = {
 
 BRA_political_manegement = {
 
+    BRA_estado_novo_mission_enemy = {
+        priority = 150
+        icon = GFX_BRA_vargas_estado_novo
+
+        activation = {
+            always = no #manually triggered 
+        }
+
+        available = {
+            OR = {
+                has_civil_war = yes 
+                has_country_flag = BRA_vargas_is_dead #will be given when vargas has 0 influence / focus maybe idk yet
+            }
+        }
+
+        cancel_trigger = {
+            OR = {
+                exists = no 
+                is_subject = yes 
+            }
+        }
+
+        days_mission_timeout = 600
+
+        is_good = no
+
+        fire_only_once = yes 
+
+        timeout_effect = {
+            custom_effect_tooltip = BRA_political_parties_shutdown_tt
+            hidden_effect = {
+                BRA_clear_integralist_opinion = yes 
+                BRA_clear_congress_opinion = yes 
+                clr_country_flag = BRA_hostile_communists
+                set_country_flag = BRA_congress_shutdown
+                set_country_flag = BRA_integralists_shutdown
+                set_country_flag = BRA_communists_shutdown
+                set_country_flag = BRA_all_parties_shutdown ## IMPORTANT COUNTRY FLAG ##
+                set_country_flag = BRA_estado_novo_established
+                set_variable = { BRA_congress_influence = 0 }
+                set_variable = { BRA_integralist_influence = 0 }
+                every_controlled_state = {
+                    limit = {
+                        has_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
+                    }
+                    remove_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
+                }
+                clear_variable = BRA_communist_subversive_activity
+                BRA_set_up_political_crisis = yes 
+            }
+        } 
+    }
+
     BRA_the_1938_elections = {
         priority = 200
         icon = generic_political_rally
@@ -703,52 +788,6 @@ BRA_political_manegement = {
         }
     }
 
-    BRA_estado_novo_mission_enemy = {
-        priority = 150
-        icon = GFX_BRA_vargas_estado_novo
-
-        activation = {
-            always = no #manually triggered 
-        }
-
-        available = {
-            OR = {
-                has_civil_war = yes 
-                has_country_flag = BRA_vargas_is_dead #will be given when vargas has 0 influence / focus maybe idk yet
-            }
-        }
-
-        cancel_trigger = {
-            OR = {
-                exists = no 
-                is_subject = yes 
-            }
-        }
-
-        days_mission_timeout = 600
-
-        is_good = no
-
-        fire_only_once = yes 
-
-        timeout_effect = {
-            custom_effect_tooltip = BRA_political_parties_shutdown_tt
-            hidden_effect = {
-                BRA_clear_integralist_opinion = yes 
-                BRA_clear_congress_opinion = yes 
-                clr_country_flag = BRA_hostile_communists
-                set_country_flag = BRA_congress_shutdown
-                set_country_flag = BRA_integralists_shutdown
-                set_country_flag = BRA_communists_shutdown
-                set_country_flag = BRA_all_parties_shutdown ## IMPORTANT COUNTRY FLAG ##
-                set_country_flag = BRA_estado_novo_established
-                set_variable = { BRA_congress_influence = 0 }
-                set_variable = { BRA_integralist_influence = 0 }
-                BRA_set_up_political_crisis = yes 
-            }
-        } 
-    }
-
     BRA_vargas_measure_for_dictatorship = {
         priority = 100
         icon = generic_speech
@@ -767,6 +806,7 @@ BRA_political_manegement = {
             OR = {
                 has_active_mission = BRA_the_1938_elections
                 has_active_mission = BRA_estado_novo_mission_enemy
+                has_active_mission = BRA_estado_novo_mission_enemy_2
             }
             exists = yes 
             NOT = { has_country_flag = BRA_vargas_is_dead } #will be a chance event in the civil war route
@@ -789,6 +829,54 @@ BRA_political_manegement = {
 
         timeout_effect = {
             BRA_increment_progress_to_dictatorship = yes 
+            if = {
+                limit = {
+                    check_variable = {
+                        BRA_progress_to_dictatorship > 25
+                    }
+                    OR = { 
+                        has_active_mission = BRA_estado_novo_mission_enemy_2
+                        has_active_mission = BRA_estado_novo_mission_enemy
+                    }
+                }
+                if = {
+                    limit = { has_active_mission = BRA_estado_novo_mission_enemy }
+                    add_days_mission_timeout = {
+                        mission = BRA_estado_novo_mission_enemy
+                        days = -10
+                    }
+                }
+                else = {
+                    add_days_mission_timeout = {
+                        mission = BRA_estado_novo_mission_enemy_2
+                        days = -10
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    check_variable = {
+                        BRA_progress_to_dictatorship > 35
+                    }
+                    OR = { 
+                        has_active_mission = BRA_estado_novo_mission_enemy_2
+                        has_active_mission = BRA_estado_novo_mission_enemy
+                    }
+                }
+                if = {
+                    limit = { has_active_mission = BRA_estado_novo_mission_enemy }
+                    add_days_mission_timeout = {
+                        mission = BRA_estado_novo_mission_enemy
+                        days = -20
+                    }
+                }
+                else = {
+                    add_days_mission_timeout = {
+                        mission = BRA_estado_novo_mission_enemy_2
+                        days = -20
+                    }
+                }
+            }
             hidden_effect = {
                 activate_mission = BRA_vargas_measure_for_dictatorship
             }
@@ -811,12 +899,12 @@ BRA_political_manegement = {
             }
         }
 
-        cost = 50
+        cost = 25
 
         days_remove = 50
 
         ai_will_do = {
-			factor = 165
+			factor = 235
 		}
 
         fire_only_once = yes 
@@ -856,12 +944,12 @@ BRA_political_manegement = {
             }
         }
 
-        cost = 50
+        cost = 25
 
         days_remove = 50
 
         ai_will_do = {
-			factor = 165
+			factor = 235
 		}
 
         fire_only_once = yes 
@@ -901,12 +989,12 @@ BRA_political_manegement = {
             }
         }
 
-        cost = 50
+        cost = 25
 
         days_remove = 50
 
         ai_will_do = {
-			factor = 165
+			factor = 235
 		}
 
         fire_only_once = yes 
@@ -1008,7 +1096,7 @@ BRA_political_manegement = {
             NOT = { has_country_flag = BRA_disbanded_police_force }
         }
 
-        cost = 35
+        cost = 25
 
         ai_will_do = {
 			factor = 75
@@ -1050,6 +1138,10 @@ BRA_political_manegement = {
             stability_weekly = -0.005
             weekly_manpower = -250
         }
+		
+		cancel_trigger = {
+			has_country_flag = BRA_disbanded_police_force
+		}
     }
 
     BRA_disband_the_police_force = {
@@ -1080,13 +1172,21 @@ BRA_political_manegement = {
             }
 		}
 
-        days_remove = 75
+        days_remove = 90
 
         modifier = {
-            weekly_manpower = -1000 #police force will rebel around this time 
+            weekly_manpower = -1000 #police force will rebel around this time
+			stability_weekly = -0.0025 #people wanted it to be harder lolol
+			democratic_drift = 0.01
         }
 
-        complete_effect = {
+		complete_effect = {
+			hidden_effect = {
+                set_country_flag = BRA_disbanded_police_force
+            }
+		}
+
+        remove_effect = {
             if = {
                 limit = { has_idea = BRA_police_brutality_1 }
                 remove_ideas = BRA_police_brutality_1
@@ -1097,9 +1197,6 @@ BRA_political_manegement = {
             }
             else = {
                 remove_ideas = BRA_police_brutality_3
-            }
-            hidden_effect = {
-                set_country_flag = BRA_disbanded_police_force
             }
             if = {
                 limit = { has_completed_focus = BRA_solidify_control_over_the_state }
@@ -1115,6 +1212,33 @@ BRA_political_manegement = {
             }
         }
     }
+	
+	BRA_reestablish_the_police_force = {
+		icon = decision_generic_reorganize_irregulars
+		
+		cost = 40
+		
+		visible = {
+			exists = yes 
+			has_civil_war = no 
+			has_country_flag = BRA_disbanded_police_force
+			check_variable = { BRA_playing_as_vargas = 1 }
+		}
+		
+		days_remove = 60
+		
+		modifier = {
+			political_power_factor = 0.1
+		}
+		
+		complete_effect = {
+			clr_country_flag = BRA_disbanded_police_force
+		}
+		
+		remove_effect = {
+			add_ideas = BRA_police_brutality_1
+		}
+	}
 
     BRA_increase_our_influence = { #dynamic decision that changes depending on who controls the nation 
         icon = eng_propaganda_campaigns
@@ -1152,6 +1276,27 @@ BRA_political_manegement = {
                 limit = { check_variable = { BRA_playing_as_integralists = 1}}
                 custom_effect_tooltip = BRA_integralist_increase_influence_3_tt
                 add_to_variable = { BRA_integralist_influence = 3 }
+                if = {
+                    limit = {
+                        has_completed_focus = BRA_reject_the_estado_navo
+                    }
+                    custom_effect_tooltip = BRA_add_2_army_support_tt
+                    custom_effect_tooltip = BRA_add_3_progress_civil_war_tt
+                    hidden_effect = {
+                        add_to_variable = { BRA_progress_to_a_civil_war = 3 } 
+                        add_to_variable = { BRA_current_army_support = 2 }
+                        clamp_variable = {
+                            var = BRA_progress_to_a_civil_war
+                            min = 0 
+                            max = 100
+                        }
+                        clamp_variable = {
+                            var = BRA_current_army_support
+                            min = 0 
+                            max = 100
+                        }
+                    }
+                }
             }
             else_if = {
                 limit = { check_variable = { BRA_playing_as_congress = 1}}
@@ -1177,7 +1322,7 @@ BRA_political_manegement = {
         }
 
         ai_will_do = {
-			factor = 175
+			factor = 225
 		}
 
         available = {
@@ -1221,15 +1366,19 @@ BRA_political_manegement = {
             }
         }
 
-        cost = 40
+        cost = 20
 
-        days_remove = 50
+        days_remove = 25
 
         ai_will_do = {
 			factor = 115
             modifier = {
-                add = 25
+                add = 95
                 has_completed_focus = BRA_censor_the_integralists
+            }
+            modifier = {
+                factor = 0
+                has_completed_focus = BRA_reject_the_estado_navo
             }
 		}
 
@@ -1241,8 +1390,8 @@ BRA_political_manegement = {
         complete_effect = {
             custom_effect_tooltip = BRA_decrease_stability_by_1_and_pp_gain_by_2_tt
             hidden_effect = {
-                subtract_from_variable = { BRA_crisis_stability_factor = 0.01 }
-                subtract_from_variable = { BRA_crisis_political_factor = 0.02 }
+                subtract_from_variable = { BRA_crisis_stability_factor = 0.005 }
+                subtract_from_variable = { BRA_crisis_political_factor = 0.005 }
             }
         }
 
@@ -1516,19 +1665,22 @@ BRA_political_manegement = {
         on_map_mode = map_and_decisions_view
 
         cancel_trigger = {
-            has_civil_war = yes 
+            OR = {    
+                has_civil_war = yes 
+                has_country_flag = BRA_communists_defeated_in_state
+            }
         }
 
         complete_effect = {
             random_list = {
-                25 = {
+                35 = {
                     FROM = {
                         clr_state_flag = BRA_communists_will_revolt_in_state_tt
                         remove_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
                     }
                     BRA_setting_up_subversive_communist_activity = yes
                 }
-                75 = {
+                65 = {
 
                 }
             }
@@ -1610,6 +1762,10 @@ BRA_political_manegement = {
 
         ai_will_do = {
 			factor = 95
+            modifier = {
+                factor = 0
+                has_completed_focus = BRA_reject_the_estado_navo
+            }
 		}
 
         complete_effect = {
@@ -1633,7 +1789,7 @@ BRA_political_manegement = {
                     }
                     hidden_effect = {
                         set_country_flag = BRA_communists_defeated_in_state
-                        country_event = { id = brazil.21 hours = 6 }
+                        country_event = { id = brazil.21 days = 7 } #istg this better work
                     }
                 }
                 50 = {
@@ -1666,22 +1822,28 @@ BRA_political_manegement = {
 
         available = {
             has_civil_war = no
-            divisions_in_state = {
-                size > 3
-                state = FROM
-            } 
+            if = {
+                limit = {
+                    is_ai = no 
+                }
+                divisions_in_state = {
+                    size > 3
+                    state = FROM
+                } 
+            }
         }
 
         visible = {
-            has_country_flag = BRA_able_to_stop_communists
+            has_civil_war = no 
+            check_variable = { BRA_playing_as_communists = 0 }
         }
 
-        cost = 40
+        cost = BRA_cost_to_stop_commies
 
         days_remove = 40 
 
         ai_will_do = {
-			factor = 165
+			factor = 215
 		}
 
         complete_effect = {
@@ -1882,7 +2044,7 @@ BRA_political_manegement = {
         icon = eng_trade_unions_demand 
 
         ai_will_do = {
-			factor = 145
+			factor = 220
 		}
 
 		state_target = yes
@@ -1901,9 +2063,14 @@ BRA_political_manegement = {
 		}
 
 		available = {
-			divisions_in_state = {
-                size > 3
-                state = FROM
+            if = {
+                limit = {
+                    is_ai = no 
+                }
+                divisions_in_state = {
+                    size > 3
+                    state = FROM
+                }
             }
             has_civil_war = no 
             command_power > 15
@@ -2031,9 +2198,14 @@ BRA_post_civil_war_recovery_category = {
         on_map_mode = map_only
 
         available = {
-			divisions_in_state = {
-                size > 4
-                state = FROM
+            if = {
+                limit = {
+                    is_ai = no 
+                }
+                divisions_in_state = {
+                    size > 4
+                    state = FROM
+                }
             }
             has_civil_war = no 
             hidden_trigger = {
@@ -2043,14 +2215,20 @@ BRA_post_civil_war_recovery_category = {
 		}
 
         cancel_trigger = {
-            divisions_in_state = {
-                size < 3
-                state = FROM 
+            if = {
+                limit = {
+                    is_ai = no 
+                }
+                divisions_in_state = {
+                    size < 3
+                    state = FROM 
+                }
             }
+            has_civil_war = yes 
         }
 
         ai_will_do = {
-			factor = 195
+			factor = 220
 		}
 
         visible = { #will add other focuses later on 
@@ -2133,7 +2311,7 @@ BRA_post_civil_war_recovery_category = {
 
         cost = 50
 
-        days_remove = 90
+        days_remove = 85
 
         ai_will_do = {
 			factor = 200
@@ -2637,22 +2815,33 @@ BRA_monarchism_on_the_rise = {
 		}
 
         available = {
-			divisions_in_state = {
-				size > 3
-				state = FROM
-			}
+            if = {
+                limit = {
+                    is_ai = no 
+                }
+                divisions_in_state = {
+                    size > 3
+                    state = FROM
+                }
+            }
 		}
 		
 		cancel_trigger = {
-			custom_trigger_tooltip = {
-				tooltip = EUYL_has_3_divisions_tt
-				NOT = {
-					divisions_in_state = {
-						size > 2
-						state = FROM 
-					}
-				}
-			}
+            if = {
+                limit = {
+                    is_ai = no 
+                }
+                custom_trigger_tooltip = {
+                    tooltip = EUYL_has_3_divisions_tt
+                    NOT = {
+                        divisions_in_state = {
+                            size > 2
+                            state = FROM 
+                        }
+                    }
+                }
+            }
+            has_civil_war = yes 
 		}
 
         days_remove = 35
@@ -2690,12 +2879,12 @@ BRA_monarchism_on_the_rise = {
             hidden_trigger = { NOT = { has_global_flag = BRA_spreading_influence } }
         }
 
-        cost = 35
+        cost = 40
 
-        days_remove = 30
+        days_remove = 35
 
         ai_will_do = {
-			factor = 150
+			factor = 180
 		}
 
         complete_effect = {
@@ -2772,7 +2961,7 @@ BRA_monarchism_on_the_rise = {
             has_civil_war = no
         }
 
-        days_mission_timeout = 90
+        days_mission_timeout = 140
         is_good = yes 
 
         visible = {
@@ -2788,6 +2977,7 @@ BRA_monarchism_on_the_rise = {
                 is_subject = yes 
                 has_civil_war = no 
                 has_global_flag = BRA_civil_war_concluded
+                BZE = { exists = no }
             }
         }
 
@@ -2795,11 +2985,6 @@ BRA_monarchism_on_the_rise = {
             random_state = {
                 limit = { 
                     is_core_of = BRA 
-                    OR = {
-                        is_fully_controlled_by = BRA 
-                        is_fully_controlled_by = BUS 
-                        is_fully_controlled_by = BRC 
-                    }
                     NOT = {
                         is_controlled_by = BZE 
                     }
@@ -2813,10 +2998,6 @@ BRA_monarchism_on_the_rise = {
                         }
                         create_unit = {
                             division = "name = \"Divisão Imperial\" division_template = \"Divisão de Infantaria\" start_experience_factor = 0.15 start_equipment_factor = 1" 
-                            owner = PREV
-                        }
-                        create_unit = {
-                            division = "name = \"Milícias Imperialistas\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
                             owner = PREV
                         }
                         create_unit = {
@@ -2847,6 +3028,59 @@ BRA_monarchism_on_the_rise = {
 }
 
 BRA_imminent_civil_war = {
+    BRA_estado_novo_mission_enemy_2 = {
+        priority = 150
+        icon = GFX_BRA_vargas_estado_novo
+
+        activation = {
+            always = no #manually triggered 
+        }
+
+        available = {
+            OR = {
+                has_civil_war = yes 
+                has_country_flag = BRA_vargas_is_dead #will be given when vargas has 0 influence / focus maybe idk yet
+            }
+        }
+
+        cancel_trigger = {
+            OR = {
+                exists = no 
+                is_subject = yes 
+            }
+        }
+
+        days_mission_timeout = 600
+
+        is_good = no
+
+        fire_only_once = yes 
+
+        timeout_effect = {
+            custom_effect_tooltip = BRA_political_parties_shutdown_tt
+            hidden_effect = {
+                BRA_clear_integralist_opinion = yes 
+                BRA_clear_congress_opinion = yes 
+                clr_country_flag = BRA_hostile_communists
+                set_country_flag = BRA_congress_shutdown
+                set_country_flag = BRA_integralists_shutdown
+                set_country_flag = BRA_communists_shutdown
+                set_country_flag = BRA_all_parties_shutdown ## IMPORTANT COUNTRY FLAG ##
+                set_country_flag = BRA_estado_novo_established
+                set_variable = { BRA_congress_influence = 0 }
+                set_variable = { BRA_integralist_influence = 0 }
+                every_controlled_state = {
+                    limit = {
+                        has_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
+                    }
+                    remove_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
+                }
+                clear_variable = BRA_communist_subversive_activity
+                BRA_set_up_political_crisis = yes 
+            }
+        } 
+    }
+
     BRA_strengthen_our_protests = {
         icon = generic_civil_support
 
@@ -2904,6 +3138,16 @@ BRA_imminent_civil_war = {
                 add_to_variable = { BRA_integralist_influence = 5 }
                 subtract_from_variable = { BRA_cost_to_expand = 5 }
                 BRA_set_up_political_crisis = yes 
+                clamp_variable = {
+                    var = BRA_progress_to_a_civil_war
+                    min = 0 
+                    max = 100
+                }
+                clamp_variable = {
+                    var = BRA_current_army_support
+                    min = 0 
+                    max = 100
+                }
             }
         }
 
@@ -2953,6 +3197,13 @@ BRA_imminent_civil_war = {
 
         ai_will_do = {
 			factor = 160
+            modifier = {
+                add = 75
+                AND = {
+                    check_variable = { BRA_progress_to_a_civil_war < 96 }
+                    check_variable = { BRA_current_army_support > 74 }
+                }
+            }
 		}
 
         complete_effect = {
@@ -3013,6 +3264,10 @@ BRA_imminent_civil_war = {
 
         ai_will_do = {
 			factor = 130
+            modifier = {
+                factor = 0
+                check_variable = { BRA_current_army_support > 95 }
+            }
 		}
 
         modifier = {
@@ -3074,6 +3329,13 @@ BRA_imminent_civil_war = {
 
         ai_will_do = {
 			factor = 130
+            modifier = {
+                factor = 0
+                AND = {
+                    check_variable = { BRA_current_army_support > 95 }
+                    check_variable = { BRA_progress_to_a_civil_war > 95 }
+                }
+            }
 		}
 
         modifier = {
@@ -3157,6 +3419,34 @@ BRA_imminent_civil_war = {
             hidden_effect = {
                 add_to_variable = { BRA_guns_acquired = 250 }
             }
+        }
+    }
+
+    BRA_launch_the_civil_war = {
+        priority = 200
+
+        visible = {
+            has_government = neutrality
+            NOT = { has_government = fascism }
+            has_civil_war = no
+            has_completed_focus = BRA_reject_the_estado_navo 
+        }
+
+        ai_will_do = {
+			factor = 195
+		}
+
+        fire_only_once = yes
+
+        available = {
+			custom_trigger_tooltip = {
+				tooltip = BRA_progress_to_a_civil_war_at_100_tt
+				check_variable = { BRA_progress_to_a_civil_war = 100 }
+			}
+        }
+
+        complete_effect = {
+            country_event = brazil.89
         }
     }
 }
@@ -3507,7 +3797,7 @@ BRA_imperial_management = {
 		icon = generic_civil_support
 		
         available = {                        
-            controls_state = 888            
+            controls_state = 966            
         }
 		
         activation = {                       
@@ -3690,7 +3980,10 @@ BRA_the_brazilian_civil_war = {
         }
 
         available = {
-            has_completed_focus = BRA_strike_a_deal_with_the_seperatists
+            OR = {
+                has_completed_focus = BRA_strike_a_deal_with_the_seperatists
+                has_global_flag = BRA_paulistas_pacified
+            }
         }
 
         target_trigger = {
@@ -3705,13 +3998,13 @@ BRA_the_brazilian_civil_war = {
         }
 
         cancel_trigger = {
-            exists = no 
+            has_global_flag = paulistas_revolted
         }
 
         is_good = no 
         fire_only_once = yes 
         on_map_mode = map_and_decisions_view
-        days_mission_timeout = 90
+        days_mission_timeout = 100
 
         complete_effect = {
             set_global_flag = paulistas_revolted
@@ -3807,6 +4100,22 @@ BRA_the_brazilian_civil_war = {
                             owner = PREV
                         }
                         create_unit = {
+                            division = "name = \"Milícias Paulistas\" division_template = \"Milicias Paulistas\" start_experience_factor = 0.1 start_equipment_factor = 1" 
+                            owner = PREV
+                        }
+                        create_unit = {
+                            division = "name = \"Milícias Paulistas\" division_template = \"Milicias Paulistas\" start_experience_factor = 0.1 start_equipment_factor = 1" 
+                            owner = PREV
+                        }
+                        create_unit = {
+                            division = "name = \"Divisão Paulistas\" division_template = \"Divisão Paulistas\" start_experience_factor = 0.1 start_equipment_factor = 1" 
+                            owner = PREV
+                        }
+                        create_unit = {
+                            division = "name = \"Divisão Paulistas\" division_template = \"Divisão Paulistas\" start_experience_factor = 0.1 start_equipment_factor = 1" 
+                            owner = PREV
+                        }
+                        create_unit = {
                             division = "name = \"Divisão Paulistas\" division_template = \"Divisão Paulistas\" start_experience_factor = 0.1 start_equipment_factor = 1" 
                             owner = PREV
                         }
@@ -3833,9 +4142,9 @@ BRA_the_brazilian_civil_war = {
                     limit = {
                         original_tag = BRA 
                         has_civil_war = yes 
-                        controls_state = 879
+                        controls_state = 957
                     }
-                    879 = {
+                    957 = {
                         create_unit = {
                             division = "name = \"Milícias\" division_template = \"Milícia\" start_experience_factor = 0.05 start_equipment_factor = 0.95" 
                             owner = PREV
@@ -3946,6 +4255,27 @@ BRA_the_brazilian_civil_war = {
                 }
             }
             hidden_effect = {
+                if = {
+                    limit = {
+                        has_war_with = BZE
+                    }
+                    498 = {
+                        remove_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
+                    }
+                    952 = {
+                        remove_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
+                    }
+                    953 = {
+                        remove_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
+                    }
+                    496 = {
+                        add_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
+                    }
+                    499 = {
+                        add_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state }
+                    }
+                    set_global_flag = BRA_weakened_spot
+                }
                 BRA_start_communist_civil_war = yes 
                 news_event = { id = news.363 days = 1 }
             }
@@ -3967,14 +4297,7 @@ BRA_the_brazilian_civil_war = {
         }
 
         available = {
-            custom_trigger_tooltip = {
-                tooltip = BRA_no_states_with_integralists_tt
-                all_core_state = {
-                    NOT = {
-                        has_dynamic_modifier = { modifier = BRA_integralists_occupation }
-                    }
-                }
-            }
+            has_global_flag = BRA_integralist_uprising_cancelled
         }
 
         cancel_trigger = {
@@ -4024,10 +4347,10 @@ BRA_the_brazilian_civil_war = {
             hidden_effect = {
                 set_country_flag = BRA_integralist_uprising_active
                 set_country_flag = BRC_integralists_planning_uprising
-                879 = {
+                957 = {
                     add_dynamic_modifier = { modifier = BRA_integralists_occupation }
                 }
-                906 = {
+                984 = {
                     add_dynamic_modifier = { modifier = BRA_integralists_occupation }
                 }
                 503 = {
@@ -4036,7 +4359,7 @@ BRA_the_brazilian_civil_war = {
                 502 = {
                     add_dynamic_modifier = { modifier = BRA_integralists_occupation }
                 }
-                881 = {
+                959 = {
                     add_dynamic_modifier = { modifier = BRA_integralists_occupation }
                 }
                 BRA_start_integralist_uprising = yes 
@@ -4060,6 +4383,14 @@ BRA_the_brazilian_civil_war = {
 
         available = {
             has_completed_focus = BRA_crush_the_integralists
+        }
+
+        cancel_trigger = {
+            any_enemy_country = {
+                original_tag = BRA 
+                has_government = fascism
+                has_civil_war = yes 
+            }
         }
 
         is_good = no 
@@ -4131,7 +4462,10 @@ BRA_the_brazilian_civil_war = {
         }
 
         available = {
-            has_global_flag = BRC_avoided_democrat_civil_war
+            OR = {
+                has_global_flag = BRC_avoided_democrat_civil_war
+                has_global_flag = BRA_raided_resistance_headquarters
+            }
         }
 
         visible = {
@@ -4140,7 +4474,16 @@ BRA_the_brazilian_civil_war = {
 
         is_good = no 
         fire_only_once = yes 
-        days_mission_timeout = 175
+        days_mission_timeout = 190
+
+        cancel_effect = {
+            hidden_effect = {
+                every_state = {
+                    limit = { has_state_flag = BRA_democratic_influence_state }
+                    clr_state_flag = BRA_democratic_influence_state
+                }
+            }
+        }
 
         timeout_effect = {
             effect_tooltip = {
@@ -4156,6 +4499,7 @@ BRA_the_brazilian_civil_war = {
                     BUS = {
                         transfer_state = PREV 
                     }
+                    set_state_flag = democratic_state_rebelled
                 }
                 if = {
                     limit = { has_idea = rural_economy }
@@ -4312,6 +4656,11 @@ BRA_the_brazilian_civil_war = {
                     }
                 }
                 BUS = {
+                    set_country_flag = {
+                        flag = BRA_recently_spawned
+                        days = 14
+                        value = 1
+                    }
                     add_ideas = BRA_civil_war_democratic
                     add_ideas = BRA_low_literacy_rate
                     inherit_technology = BRA
@@ -4450,6 +4799,501 @@ BRA_the_brazilian_civil_war = {
             }
         }
     }  
+
+    BRA_coerce_the_democrats = {
+        priority = 60
+        icon = GFX_decision_hol_exchange_intelligence_data
+
+        visible = {
+            has_active_mission = BRA_impending_democratic_insurrection
+            NOT = { has_global_flag = BRC_avoided_democrat_civil_war }
+            NOT = { has_country_flag = BRA_taken_locate_option }
+            NOT = { has_country_flag = BRA_headquarters_located }
+            exists = yes 
+            check_variable = {
+                BRA_chance_for_compromise < 100
+            }
+        }
+
+        available = {
+            has_manpower > 10000
+            NOT = { has_country_flag = BRA_taken_locate_option }
+        }
+
+        ai_will_do = {
+            factor = 115
+        }
+
+        cost = 20
+
+        days_remove = 20
+
+        cancel_trigger = {
+            OR = {
+                has_global_flag = BRC_avoided_democrat_civil_war
+                has_war_with = BUS
+            }
+        }
+
+        modifier = {
+            weekly_manpower = -750
+        }
+
+        complete_effect = {
+            set_country_flag = BRA_taken_coerce_option
+            custom_effect_tooltip = BRA_democrats_more_likely_to_cave_not_to_uprise_tt
+            add_to_variable = { BRA_chance_for_compromise = 25 }
+            subtract_from_variable = { BRA_chance_for_no_compromise = 25 }
+        }
+    }
+
+    BRA_try_to_locate_the_democratic_resistance = {
+        priority = 65
+        icon = GFX_decision_SWI_expand_covert_operations
+
+        visible = {
+            has_active_mission = BRA_impending_democratic_insurrection
+            NOT = { has_country_flag = BRA_taken_coerce_option }
+            exists = yes
+        }
+
+        available = {
+            NOT = { has_country_flag = BRA_taken_coerce_option }
+        }
+
+        cost = 15
+
+        days_remove = 40
+
+        fire_only_once = yes 
+
+        cancel_trigger = {
+            has_war_with = BUS
+        }
+
+        complete_effect = {
+            set_country_flag = BRA_taken_locate_option
+            set_variable = {
+                BRA_chance_to_locate_headquarters = 0
+            }
+            set_variable = {
+                BRA_chance_to_not_locate_headquarters = 100
+            }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        has_intelligence_agency = yes 
+                    }
+                    add_to_variable = {
+                        BRA_chance_to_locate_headquarters = 25
+                    }
+                    subtract_from_variable = {
+                        BRA_chance_to_not_locate_headquarters = 25
+                    }
+                }
+                if = {
+                    limit = {
+                        has_army_manpower = {
+                            size > 99999
+                        }
+                    }
+                    add_to_variable = {
+                        BRA_chance_to_locate_headquarters = 15
+                    }
+                    subtract_from_variable = {
+                        BRA_chance_to_not_locate_headquarters = 15
+                    }
+                }
+                if = {
+                    limit = {
+                        has_army_manpower = {
+                            size > 149999
+                        }
+                    }
+                    add_to_variable = {
+                        BRA_chance_to_locate_headquarters = 15
+                    }
+                    subtract_from_variable = {
+                        BRA_chance_to_not_locate_headquarters = 15
+                    }
+                }
+                if = {
+                    limit = {
+                        any_controlled_state = {
+                            has_state_flag = BRA_democratic_influence_state
+                        }
+                    }
+                    add_to_variable = {
+                        BRA_chance_to_locate_headquarters = 15
+                    }
+                    subtract_from_variable = {
+                        BRA_chance_to_not_locate_headquarters = 15
+                    }
+                }
+                if = {
+                    limit = {
+                        any_owned_state = {
+                            has_state_flag = BRA_democratic_influence_state
+                            ROOT = {
+                                divisions_in_state = {
+                                    size > 6
+                                    state = PREV
+                                }
+                            }
+                        }
+                    }
+                    add_to_variable = {
+                        BRA_chance_to_locate_headquarters = 25
+                    }
+                    subtract_from_variable = {
+                        BRA_chance_to_not_locate_headquarters = 25
+                    }
+                }
+                if = {
+                    limit = {
+                        has_stability > 0.4
+                    }
+                    add_to_variable = {
+                        BRA_chance_to_locate_headquarters = 15
+                    }
+                    subtract_from_variable = {
+                        BRA_chance_to_not_locate_headquarters = 15
+                    }
+                }
+                random_list = {
+                    65 = {
+                        country_event = { id = brazil.91 days = 2 random_days = 12}
+                    }
+                    35 = {
+
+                    }
+                }
+            }
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = BRA_depending_on_military_presence_and_other_factors_tt
+            if = {
+                limit = {
+                    has_intelligence_agency = yes 
+                }
+                add_to_variable = {
+                    BRA_chance_to_locate_headquarters = 25
+                }
+                subtract_from_variable = {
+                    BRA_chance_to_not_locate_headquarters = 25
+                }
+            }
+            if = {
+                limit = {
+                    has_army_manpower = {
+                        size > 99999
+                    }
+                }
+                add_to_variable = {
+                    BRA_chance_to_locate_headquarters = 15
+                }
+                subtract_from_variable = {
+                    BRA_chance_to_not_locate_headquarters = 15
+                }
+            }
+            if = {
+                limit = {
+                    has_army_manpower = {
+                        size > 149999
+                    }
+                }
+                add_to_variable = {
+                    BRA_chance_to_locate_headquarters = 15
+                }
+                subtract_from_variable = {
+                    BRA_chance_to_not_locate_headquarters = 15
+                }
+            }
+            if = {
+                limit = {
+                    any_controlled_state = {
+                        has_state_flag = BRA_democratic_influence_state
+                    }
+                }
+                add_to_variable = {
+                    BRA_chance_to_locate_headquarters = 15
+                }
+                subtract_from_variable = {
+                    BRA_chance_to_not_locate_headquarters = 15
+                }
+            }
+            if = {
+                limit = {
+                    any_owned_state = {
+                        has_state_flag = BRA_democratic_influence_state
+                        ROOT = {
+                            divisions_in_state = {
+                                size > 6
+                                state = PREV
+                            }
+                        }
+                    }
+                }
+                add_to_variable = {
+                    BRA_chance_to_locate_headquarters = 25
+                }
+                subtract_from_variable = {
+                    BRA_chance_to_not_locate_headquarters = 25
+                }
+            }
+            if = {
+                limit = {
+                    has_stability > 0.4
+                }
+                add_to_variable = {
+                    BRA_chance_to_locate_headquarters = 15
+                }
+                subtract_from_variable = {
+                    BRA_chance_to_not_locate_headquarters = 15
+                }
+            }
+            random_list = {
+                BRA_chance_to_locate_headquarters = {
+                    custom_effect_tooltip = BRA_headquarters_located_tt
+                    if = {
+                        limit = {
+                            any_controlled_state = {
+                                has_state_flag = BRA_democratic_influence_state
+                            }
+                        }
+                        random_controlled_state = {
+                            limit = {
+                                has_state_flag = BRA_democratic_influence_state
+                            }
+                            set_state_flag = BRA_headquarters_in_this_state
+                        }
+                        set_country_flag = BRA_can_raid_by_force
+                        unlock_decision_tooltip = BRA_raid_the_democratic_headquarters_with_force
+                    }
+                    else = {
+                        set_country_flag = BRA_can_raid_via_spies
+                        unlock_decision_tooltip = BRA_raid_the_democratic_headquarters_undercover
+                    }
+                    hidden_effect = {
+                        set_country_flag = BRA_headquarters_located
+                    }
+                }
+                BRA_chance_to_not_locate_headquarters = {
+                    country_event = brazil.92
+                }
+            }
+            hidden_effect = {
+                clear_variable = BRA_chance_to_locate_headquarters
+                clear_variable = BRA_chance_to_not_locate_headquarters
+            }
+        }
+    }
+
+    BRA_obliterate_the_paulistas = {
+        icon = GFX_decision_SWI_consolidate_council_power
+        state_target = yes 
+
+        targets = { 501 }
+
+        available = {
+            has_global_flag = BRA_civil_war_in_progress
+            has_manpower > 29999
+        }
+
+        visible = {
+            FROM = {
+                is_fully_controlled_by = ROOT
+            }
+            has_global_flag = BRA_paulista_revolt
+            has_completed_focus = BRA_obliterate_the_paulista_uprising
+        }
+
+        cost = 50
+
+        days_remove = 35
+
+        modifier = {
+            weekly_manpower = -1000
+        }
+
+        cancel_trigger = {
+            has_war_with = SAO
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = BRA_paulista_rebellion_cancelled_at_price_of_intensified_rebelling_tt
+            hidden_effect = {
+                set_global_flag = BRA_paulistas_pacified
+                FROM = {
+                    remove_dynamic_modifier = {
+                        modifier = BRA_sao_paulo_seperatist_movement
+                    }
+                    add_dynamic_modifier = {
+                        modifier = BRA_sao_paulo_seperatist_movement_2 
+                        days = 200
+                    }
+                }
+            }
+        }
+    }
+
+    BRA_raid_the_democratic_headquarters_with_force = {
+        priority = 100
+        icon = GFX_decision_generic_reorganize_irregulars
+
+        state_target = yes 
+
+        target_array = controlled_states
+
+        target_trigger = {
+            FROM = {
+                is_controlled_by = ROOT 
+                is_core_of = ROOT
+            }
+        }
+
+        visible = {
+            has_active_mission = BRA_impending_democratic_insurrection
+            exists = yes 
+            has_country_flag = BRA_can_raid_by_force
+            has_global_flag = BRA_civil_war_in_progress
+            FROM = {
+                has_state_flag = BRA_headquarters_in_this_state
+            }
+        }
+
+        available = {
+			hidden_trigger = {
+				has_manpower > 999
+			}
+            divisions_in_state = {
+                size > 5
+                state = FROM
+            }
+		}
+
+        custom_cost_trigger = {
+			has_manpower > 999
+		}
+
+        custom_cost_text = CHL_manpower_1000_tt
+
+        complete_effect = {
+            add_manpower = -1000
+        }
+
+        cancel_trigger = {
+            has_war_with = BUS
+        }
+
+        days_remove = 14
+
+        modifier = {
+            weekly_manpower = -2000
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = BRA_headquarters_raided_and_uprising_cancelled_tt
+            set_global_flag = BRA_raided_resistance_headquarters
+            hidden_effect = {
+                clr_country_flag = BRA_can_raid_by_force
+                clr_country_flag = BRA_taken_coerce_option
+            }
+        }
+    }
+
+    BRA_raid_the_democratic_headquarters_undercover = {
+        priority = 100
+        icon = GFX_decision_generic_assassination
+
+        visible = {
+            has_active_mission = BRA_impending_democratic_insurrection
+            exists = yes 
+            has_country_flag = BRA_can_raid_via_spies
+            has_global_flag = BRA_civil_war_in_progress
+            
+        }
+
+        cost = 40
+
+        cancel_trigger = {
+            has_war_with = BUS
+        }
+
+        days_remove = 40
+
+        remove_effect = {
+            custom_effect_tooltip = BRA_headquarters_raided_and_uprising_cancelled_tt
+            set_global_flag = BRA_raided_resistance_headquarters
+            hidden_effect = {
+                clr_country_flag = BRA_can_raid_via_spies
+                clr_country_flag = BRA_taken_locate_option
+            }
+        }
+    }
+
+    BRA_offer_a_compromise_to_the_democrats = {
+        priority = 65
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            exists = yes 
+            has_active_mission = BRA_impending_democratic_insurrection
+            NOT = { has_country_flag = BRA_taken_locate_option }
+            NOT = { has_country_flag = BRA_headquarters_located }
+        }
+
+        available = {
+            NOT = { has_country_flag = BRA_taken_locate_option }
+        }
+
+        cost = 50
+
+        complete_effect = {
+            random_list = {
+                BRA_chance_for_compromise = {
+                    country_event = brazil.93 #compromise accepted
+                    set_global_flag = BRC_avoided_democrat_civil_war
+                }
+                BRA_chance_for_no_compromise = {
+                    country_event = brazil.94 #compromise not accepted
+                }
+            }
+            hidden_effect = {
+                clr_country_flag = BRA_taken_coerce_option
+            }
+        }
+    }
+
+    BRA_ask_for_democratic_aid = {
+        priority = 50
+        icon = GFX_decision_generic_military
+
+        visible = {
+            has_global_flag = BRA_civil_war_in_progress
+            exists = yes 
+            has_global_flag = BRC_avoided_democrat_civil_war
+        }
+
+        cost = 10
+
+        days_remove = 25
+
+        remove_effect = {
+            random_list = {
+                50 = {
+                    add_equipment_to_stockpile = {
+                        type = infantry_equipment
+                        amount = 350
+                    }
+                }
+                50 = {
+
+                }
+            }
+        }
+    }
 
     BRA_save_ewert = {
         priority = 70
@@ -4600,7 +5444,15 @@ BRA_the_brazilian_civil_war = {
                 has_completed_focus = BRA_contact_other_south_american_countries
             }
             if = {
-                limit = { has_government = fascism }
+                limit = { 
+                    OR = {
+                        has_government = fascism 
+                        AND = {
+                            has_government = neutrality
+                            tag = BZE
+                        }
+                    }
+                }
                 has_completed_focus = BRA_ask_for_foreign_aid
             }
             if = {
@@ -4608,7 +5460,10 @@ BRA_the_brazilian_civil_war = {
                 has_completed_focus = BRA_open_our_markets 
             }
             if = {
-                limit = { has_government = neutrality }
+                limit = { 
+                    has_government = neutrality 
+                    NOT = { tag = BZE }
+                }
                 has_completed_focus = BRA_contact_other_south_american_nations
             }
             FROM = {
@@ -4827,80 +5682,49 @@ BRA_the_brazilian_civil_war = {
 		}
 	}
 
-    BRA_crush_the_integralists_in_FROM = {
-        priority = 25
-        icon = eng_trade_unions_demand 
+    BRA_crush_the_integralists = {
+        priority = 200
+        icon = GFX_decision_generic_reorganize_irregulars
 
         ai_will_do = {
-			factor = 145
-		}
-
-		state_target = yes
-
-		target_array = controlled_states
-
-        on_map_mode = map_and_decisions_view
-
-		target_trigger = {
-			FROM = {
-				is_fully_controlled_by = ROOT 
-				is_core_of = ROOT
-                has_dynamic_modifier = { modifier = BRA_integralists_occupation }  
-			}
-		}
-
-		available = {
-			divisions_in_state = {
-                size > 4
-                state = FROM
-            }
-            command_power > 15
-		}
-
-        cancel_trigger = {
-            OR = {
-                divisions_in_state = {
-                    size < 3
-                    state = FROM 
-                }
-                any_other_country = {
-                    original_tag = BRA 
-                    has_government = fascism
-                    OR = {
-                        has_civil_war = yes 
-                        has_war_with = ROOT
-                    }
-                }
-                FROM = {
-                    NOT = { has_dynamic_modifier = { modifier = BRA_integralists_occupation } }
-                }
-            }
+            factor = 250 
         }
 
-		visible = {
+        fire_only_once = yes
+
+        visible = {
+            has_active_mission = BRA_impending_integralist_uprising
             has_completed_focus = BRA_crush_the_integralists
-			FROM = {
-				has_dynamic_modifier = { modifier = BRA_integralists_occupation }
-			}
-		}
+        }
 
-        custom_cost_trigger = {
-			command_power > 15
-		}
+        available = {
+            has_manpower > 20000
+            has_army_experience > 14
+        }
 
-		custom_cost_text = CHL_cost_15_cp
+        cost = 50
 
-		days_remove = 40
+        days_remove = 25
 
-		modifier = {
-			weekly_manpower = -450
-		}
+        complete_effect = {
+            add_manpower = -5000
+            army_experience = -15
+        }
 
-		remove_effect = {
-			FROM = { 
-				remove_dynamic_modifier = { modifier = BRA_integralists_occupation }
-			}
-		}
+        cancel_trigger = {
+            has_war_with = IBR
+        }
+
+        modifier = {
+            weekly_manpower = -500
+            army_attack_factor = -0.05
+            army_defence_factor = -0.05
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = BRA_integralist_uprising_shutdown_tt
+            set_global_flag = BRA_integralist_uprising_cancelled
+        }
     }
 
     BRA_crush_the_communists_in_FROM = {
@@ -4924,18 +5748,40 @@ BRA_the_brazilian_civil_war = {
 		}
 
 		available = {
-			divisions_in_state = {
-                size > 4
-                state = FROM
+            if = {
+                limit = {
+                    is_ai = no 
+                }
+                divisions_in_state = {
+                    size > 4
+                    state = FROM
+                }
             }
-            has_civil_war = no 
             command_power > 15
 		}
 
         cancel_trigger = {
-            divisions_in_state = {
-                size < 3
-                state = FROM 
+            OR = {
+                if = {
+                    limit = {
+                        is_ai = no 
+                    }
+                    divisions_in_state = {
+                        size < 3
+                        state = FROM 
+                    }
+                }
+                any_other_country = {
+                    original_tag = BRA 
+                    has_government = communism
+                    OR = {
+                        has_civil_war = yes 
+                        has_war_with = ROOT
+                    }
+                }
+                FROM = {
+                    NOT = { has_dynamic_modifier = { modifier = BRA_subversive_communist_activity_in_state } }
+                }
             }
         }
 
@@ -4971,6 +5817,12 @@ BRA_aiding_the_brazilians = {
         icon = generic_industry
 
         target_trigger = {
+            FROM = {
+                original_tag = BRA
+                any_enemy_country = {
+                    original_tag = BRA
+                }
+            }
             if = {
                 limit = { has_country_flag = BRA_is_helping_communists }
                 FROM = {
@@ -5034,7 +5886,7 @@ BRA_aiding_the_brazilians = {
         }
 
         cost = 35
-        days_remove = 50
+        days_remove = 90
 
         available = {
             has_equipment = {
@@ -5068,6 +5920,12 @@ BRA_aiding_the_brazilians = {
         icon = hol_attract_foreign_investors
 
         target_trigger = {
+            FROM = {
+                original_tag = BRA
+                any_enemy_country = {
+                    original_tag = BRA
+                }
+            }
             if = {
                 limit = { has_country_flag = BRA_is_helping_communists }
                 FROM = {
@@ -5132,7 +5990,7 @@ BRA_aiding_the_brazilians = {
 
         cost = 40
 
-        days_remove = 90
+        days_remove = 135
 
         modifier = {
             consumer_goods_factor = 0.1
@@ -5160,6 +6018,12 @@ BRA_aiding_the_brazilians = {
         icon = generic_military
 
         target_trigger = {
+            FROM = {
+                original_tag = BRA
+                any_enemy_country = {
+                    original_tag = BRA
+                }
+            }
             if = {
                 limit = { has_country_flag = BRA_is_helping_communists }
                 FROM = {
@@ -5236,7 +6100,7 @@ BRA_aiding_the_brazilians = {
             }
         }
 
-        days_remove = 100
+        days_remove = 175
 
         complete_effect = {
             set_country_flag = {
@@ -6196,7 +7060,7 @@ BRA_economic_management = {
         days_remove = 180
 
         ai_will_do = {
-			factor = 150
+			factor = 175
 		}
 
         modifier = { consumer_goods_factor = 0.05 }
@@ -6830,6 +7694,11 @@ BRA_dependency_on_our_coffee_productions = {
             }
             hidden_effect = {
                 add_to_variable = { BRA_dependency_on_coffee = 10 }
+                clamp_variable = {
+                    var = BRA_dependency_on_coffee
+                    min = 0
+                    max = 100
+                }
                 BRA_update_opinion_variable = yes 
 				BRA_set_dependency_on_coffee_idea = yes
             }
@@ -6900,6 +7769,11 @@ BRA_dependency_on_our_coffee_productions = {
             }
             hidden_effect = {
                 subtract_from_variable = { BRA_dependency_on_coffee = 10 }
+                clamp_variable = {
+                    var = BRA_dependency_on_coffee
+                    min = 0
+                    max = 100
+                }
                 BRA_update_opinion_variable = yes 
 				BRA_set_dependency_on_coffee_idea = yes
             }
@@ -6911,7 +7785,7 @@ BRA_dependency_on_our_coffee_productions = {
 
         state_target = yes 
 
-        targets = { 496 499 877 878 500 501 879 503 502 505 }
+        targets = { 496 499 955 956 500 501 957 503 502 505 }
 
         on_map_mode = map_and_decisions_view
 
@@ -7002,6 +7876,11 @@ BRA_dependency_on_our_coffee_productions = {
             }
             hidden_effect = {
                 add_to_variable = { BRA_dependency_on_coffee = 5 }
+                clamp_variable = {
+                    var = BRA_dependency_on_coffee
+                    min = 0
+                    max = 100
+                }
                 BRA_update_opinion_variable = yes 
 				BRA_set_dependency_on_coffee_idea = yes
             }
@@ -7013,7 +7892,7 @@ BRA_dependency_on_our_coffee_productions = {
 
         state_target = yes 
 
-        targets = { 496 499 877 878 500 501 879 503 502 505 }
+        targets = { 496 499 955 956 500 501 957 503 502 505 }
 
         on_map_mode = map_and_decisions_view
 
@@ -7034,9 +7913,7 @@ BRA_dependency_on_our_coffee_productions = {
             NOT = {
                 has_country_flag = BRA_manipulating_coffee_plantations
             }
-            NOT = {
-                has_completed_focus = BRA_industrialize_fully_our_economy
-            }
+            has_completed_focus = BRA_industrialize_fully_our_economy
         }
 
         cancel_trigger = {
@@ -7089,6 +7966,11 @@ BRA_dependency_on_our_coffee_productions = {
             }
             hidden_effect = {
                 subtract_from_variable = { BRA_dependency_on_coffee = 5 }
+                clamp_variable = {
+                    var = BRA_dependency_on_coffee
+                    min = 0
+                    max = 100
+                }
                 BRA_update_opinion_variable = yes 
 				BRA_set_dependency_on_coffee_idea = yes
             }
@@ -7145,9 +8027,14 @@ BRA_dependency_on_our_coffee_productions = {
 		}
 
         available = {
-            divisions_in_state = {
-                size > 2
-                state = FROM
+            if = {
+                limit = {
+                    is_ai = no 
+                }
+                divisions_in_state = {
+                    size > 2
+                    state = FROM
+                }
             }
         }
 
@@ -7162,7 +8049,7 @@ BRA_dependency_on_our_coffee_productions = {
         }
 
         ai_will_do = {
-            factor = 150
+            factor = 225
         }
 
         cost = 25
@@ -7178,6 +8065,15 @@ BRA_dependency_on_our_coffee_productions = {
             FROM = {
                 remove_dynamic_modifier = { modifier = BRA_rebelling_coffee_plantations }
                 set_state_flag = BRA_plantation_dealt_with
+            }
+            if = {
+                limit = {
+                    has_idea = BRA_rebellious_coffee_plantations_idea
+                    all_controlled_state = {
+                        NOT = { has_dynamic_modifier = { modifier = BRA_rebelling_coffee_plantations } }
+                    }
+                }
+                remove_ideas = BRA_rebellious_coffee_plantations_idea
             }
         }
     }
@@ -7426,7 +8322,7 @@ BRA_brazilian_plane_production = {
         remove_effect = {
             clr_country_flag = BRA_purchasing_planes
             add_equipment_to_stockpile = {
-				type = fighter_equipment
+				type = small_plane_airframe
 				amount = 75
 				producer = FROM
 			}
@@ -7498,7 +8394,7 @@ BRA_brazilian_plane_production = {
         remove_effect = {
             clr_country_flag = BRA_purchasing_planes
             add_equipment_to_stockpile = {
-				type = tac_bomber_equipment
+				type = medium_plane_airframe
 				amount = 75
 				producer = FROM
 			}
@@ -7788,7 +8684,7 @@ BRA_spreading_democracy = {
 
         target_trigger = {
             FROM = {
-                is_on_continent = south_america
+                capital_scope = { is_on_continent = south_america }
                 NOT = { has_government = democratic }
                 has_civil_war = no 
                 NOT = { has_war_with = ROOT }
@@ -7827,7 +8723,7 @@ BRA_spreading_democracy = {
 
         target_trigger = {
             FROM = {
-                is_on_continent = south_america
+                capital_scope = { is_on_continent = south_america }
                 NOT = { has_government = democratic }
                 has_civil_war = no 
                 NOT = { has_war_with = ROOT }
