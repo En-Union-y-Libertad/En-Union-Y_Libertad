@@ -10,10 +10,19 @@ add_ideas = {
 	PRU_naval_democratic_loyalties
 	PRU_fiat_currency_instability_1
 	extensive_conscription
+<<<<<<< Updated upstream
+=======
+	EUYL_focus_on_army
+>>>>>>> Stashed changes
 }
 
 set_variable = { PRU_army_ideology = 1 } ## 1 - fascist | 0 - democratic 
 set_variable = { PRU_navy_ideology = 0 } ## 1 - fascist | 0 - democratic 
+<<<<<<< Updated upstream
+=======
+
+country_event = { id = peru.122 days = 200 random_days = 80 }
+>>>>>>> Stashed changes
 
 hidden_effect = {  ## BALANCE OF POWER ##
 	PRU_initiate_balance_of_power = yes  
@@ -112,6 +121,12 @@ PRU_pachacutec_2 = {
 PRU_pachacutec_2_general = {
 	set_character_flag = PRU_inca 
 }
+<<<<<<< Updated upstream
+=======
+PRU_ricardo_perez_godoy_general = {
+	set_character_flag = PRU_inca
+}
+>>>>>>> Stashed changes
 
 
 set_war_support = 0.2
@@ -270,30 +285,12 @@ set_popularities = {
 	fascism = 25
 }
 
-create_country_leader = {
-	name = "Óscar Benavides"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "GFX_Portrait_peru_oscar_benavides"
-	expire = "1965.1.1"
-	ideology = militarism
-	traits = {
-		#
-	}
-}
+promote_character = PRU_Oscar_benavides
 
 
 1939.1.1 = {
 	set_country_flag = PRU_started_1939
-	create_country_leader = {
-		name = "Manuel Prado Ugarteche"
-		desc = "POLITICS_MANUEL_PRADO_UGARTECHE_DESC"
-		picture = "gfx/leaders/PRU/portrait_per_liberal.dds"
-		expire = "1965.1.1"
-		ideology = liberalism
-		traits = {
-			#
-		}
-	}
+	promote_character = PRU_manuel_prado_ugarteche
 }
 
 

@@ -324,9 +324,9 @@ PRU_army_navy_rivalry_bop = {
 
 		timeout_effect = {
 			start_civil_war = {
-				ruling_party = ROOT
 				ideology = democratic
 				size = 0.5
+				keep_all_characters = yes 
 			}
 			hidden_effect = {
 				PRU_nullify_army = yes  
@@ -342,53 +342,23 @@ PRU_army_navy_rivalry_bop = {
 						infantry = { x = 0 y = 4 }
 					}
 				}
+<<<<<<< Updated upstream
 				promote_character = PRU_Oscar_benavides
+=======
+
+>>>>>>> Stashed changes
 				random_owned_controlled_state = {
 					create_unit = {
 						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
 						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
+						count = 3
 					}
 				}
-				random_owned_controlled_state = {
+				every_controlled_state = {
 					create_unit = {
 						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
 						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
+						count = 2
 					}
 				}
 
@@ -421,38 +391,11 @@ PRU_army_navy_rivalry_bop = {
 							infantry = { x = 0 y = 4 }
 						}
 					}
-					random_owned_controlled_state = {
+					every_controlled_state = {
 						create_unit = {
 							division = "name = \"Soldados de la Junta Naval\" division_template = \"Soldados de la Junta Naval\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
 							owner = PREV
-						}
-						create_unit = {
-							division = "name = \"Soldados de la Junta Naval\" division_template = \"Soldados de la Junta Naval\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
-						}
-					}
-					random_owned_controlled_state = {
-						create_unit = {
-							division = "name = \"Soldados de la Junta Naval\" division_template = \"Soldados de la Junta Naval\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
-						}
-						create_unit = {
-							division = "name = \"Soldados de la Junta Naval\" division_template = \"Soldados de la Junta Naval\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
-						}
-					}
-					random_owned_controlled_state = {
-						create_unit = {
-							division = "name = \"Soldados de la Junta Naval\" division_template = \"Soldados de la Junta Naval\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
-						}
-						create_unit = {
-							division = "name = \"Soldados de la Junta Naval\" division_template = \"Soldados de la Junta Naval\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
-						}
-						create_unit = {
-							division = "name = \"Soldados de la Junta Naval\" division_template = \"Soldados de la Junta Naval\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
+							count = 2
 						}
 					}
 				}
@@ -500,9 +443,9 @@ PRU_army_navy_rivalry_bop = {
 
 		timeout_effect = {
 			start_civil_war = {
-				ruling_party = ROOT
 				ideology = fascism
 				size = 0.5
+				keep_all_characters = yes 
 			}
 			hidden_effect = {
 				PRU_nullify_navy = yes  
@@ -518,56 +461,24 @@ PRU_army_navy_rivalry_bop = {
 						infantry = { x = 0 y = 4 }
 					}
 				}
+<<<<<<< Updated upstream
 				promote_character = PRU_Oscar_benavides
+=======
+>>>>>>> Stashed changes
 				random_owned_controlled_state = {
 					create_unit = {
 						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
 						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
+						count = 3
 					}
 				}
-				random_owned_controlled_state = {
+				every_controlled_state = {
 					create_unit = {
 						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
 						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
+						count = 2
 					}
 				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-				}
-
 				random_other_country = {
 					limit = {
 						original_tag = PRU 
@@ -597,38 +508,11 @@ PRU_army_navy_rivalry_bop = {
 							infantry = { x = 0 y = 4 }
 						}
 					}
-					random_owned_controlled_state = {
+					every_controlled_state = {
 						create_unit = {
 							division = "name = \"Soldados de la Junta Militar\" division_template = \"Soldados de la Junta Militar\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
 							owner = PREV
-						}
-						create_unit = {
-							division = "name = \"Soldados de la Junta Militar\" division_template = \"Soldados de la Junta Militar\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
-						}
-					}
-					random_owned_controlled_state = {
-						create_unit = {
-							division = "name = \"Soldados de la Junta Militar\" division_template = \"Soldados de la Junta Militar\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
-						}
-						create_unit = {
-							division = "name = \"Soldados de la Junta Militar\" division_template = \"Soldados de la Junta Militar\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
-						}
-					}
-					random_owned_controlled_state = {
-						create_unit = {
-							division = "name = \"Soldados de la Junta Militar\" division_template = \"Soldados de la Junta Militar\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
-						}
-						create_unit = {
-							division = "name = \"Soldados de la Junta Militar\" division_template = \"Soldados de la Junta Militar\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
-						}
-						create_unit = {
-							division = "name = \"Soldados de la Junta Militar\" division_template = \"Soldados de la Junta Militar\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-							owner = PREV
+							count = 2
 						}
 					}
 				}
@@ -648,6 +532,22 @@ PRU_army_navy_rivalry_bop = {
 			}
 		}
 	}
+<<<<<<< Updated upstream
+=======
+
+	debug_add_100_navy = {
+		visible = {
+			is_debug = yes 
+		}
+		
+		complete_effect = {
+			add_power_balance_value = {
+				id = PRU_army_navy_bop
+				value = -1
+			}
+		}
+	}
+>>>>>>> Stashed changes
 }
 
 PRU_army_navy_rivalry = {
@@ -668,14 +568,14 @@ PRU_army_navy_rivalry = {
 			has_idea = PRU_rebelling_army_1
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = no 
 
 		days_remove = 125
 
 		ai_will_do = {
-			factor = 175
+			factor = 250
 		}
 
 		modifier = {
@@ -707,14 +607,14 @@ PRU_army_navy_rivalry = {
 			has_idea = PRU_rebelling_army_2
 		}
 
-		cost = 175
+		cost = 100
 
 		fire_only_once = no 
 
 		days_remove = 200
 
 		ai_will_do = {
-			factor = 175
+			factor = 250
 		}
 
 		modifier = {
@@ -746,14 +646,14 @@ PRU_army_navy_rivalry = {
 			has_idea = PRU_rebelling_navy_1
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = no 
 
 		days_remove = 125
 
 		ai_will_do = {
-			factor = 175
+			factor = 250
 		}
 
 		modifier = {
@@ -785,14 +685,14 @@ PRU_army_navy_rivalry = {
 			has_idea = PRU_rebelling_navy_2
 		}
 
-		cost = 175
+		cost = 100
 
 		fire_only_once = no 
 
 		days_remove = 200
 
 		ai_will_do = {
-			factor = 1f75
+			factor = 250
 		}
 
 		modifier = {
@@ -2443,6 +2343,16 @@ PRU_the_peruvian_civil_war = {
 						target = BCG
 					}
 				}
+			}
+			clamp_variable = {
+				var = PRU_chance_of_civil_war
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = PRU_chance_of_peaceful_coup
+				min = 0
+				max = 100
 			}
 			random_list = {
 				PRU_chance_of_civil_war = {
@@ -4341,6 +4251,8 @@ PRU_the_peruvian_empire = { #imperial management
 			controls_state = 280
 			controls_state = 504
 			controls_state = 688
+			controls_state = 992
+			controls_state = 993
 			controls_state = 301
 			controls_state = 504
 			controls_state = 980
@@ -4359,6 +4271,11 @@ PRU_the_peruvian_empire = { #imperial management
 			504 = { add_core_of = ROOT }
 			980 = { add_core_of = ROOT }
 			983 = { add_core_of = ROOT }
+<<<<<<< Updated upstream
+=======
+			992 = { add_core_of = ROOT }
+			993 = { add_core_of = ROOT }
+>>>>>>> Stashed changes
 			set_country_flag = PRE_beni_district_formed
 		}
 	}
@@ -4739,6 +4656,7 @@ PRU_coup_attempt_fascists = {
 		}
 		
 		activation = { 
+<<<<<<< Updated upstream
 			has_country_flag = PRU_fascist_coup_attempt 
 			NOT = {
 				OR = {
@@ -4749,6 +4667,9 @@ PRU_coup_attempt_fascists = {
 			NOT = {
 				has_completed_focus = PRU_the_people_serve_the_state
 			}
+=======
+			always = no 
+>>>>>>> Stashed changes
 		}
 		
 		days_mission_timeout = 190	 
@@ -4756,15 +4677,21 @@ PRU_coup_attempt_fascists = {
 		is_good = no 
 
 		fire_only_once = yes 
+<<<<<<< Updated upstream
 		
 		visible = {
 			exists = yes 
 		}
+=======
+>>>>>>> Stashed changes
 		
 		cancel_trigger = { 
 			OR = {
 				has_civil_war = yes 
+				has_completed_focus = PRU_the_people_serve_the_state
+				has_government = fascism
 				NOT = {
+<<<<<<< Updated upstream
 					controls_state = 914
 				}
 				NOT = {
@@ -4775,9 +4702,25 @@ PRU_coup_attempt_fascists = {
 				}
 				NOT = {
 					controls_state = 491
+=======
+					has_full_control_of_state = 914
+					has_full_control_of_state = 919
+					has_full_control_of_state = 965
+					has_full_control_of_state = 491
+>>>>>>> Stashed changes
 				}
 				has_completed_focus = PRU_the_people_serve_the_state
 			}
+		}
+
+		cancel_effect = {
+			every_controlled_state = {
+				limit = {
+					has_state_flag = PRU_state_was_dealt_with
+				}
+				clr_state_flag = PRU_state_was_dealt_with
+			}
+			clr_country_flag = PRU_fascist_coup_attempt
 		}
 		
 		complete_effect = { add_war_support = 0.01 }
@@ -4802,21 +4745,25 @@ PRU_coup_attempt_fascists = {
 				ideology = fascism 
 				size = 0.4
 				capital = 491
+<<<<<<< Updated upstream
 				states = { 914 491 839 965 }
+=======
+				states = { 914 491 919 965 }
+				keep_all_characters = yes 
+				PREV = {
+					PRU_luis_a_flores = {
+						set_nationality = PREV.PREV
+					}
+					every_character = {
+						limit = { has_character_flag = PRU_urrista }
+						set_nationality = PREV.PREV
+					}
+				}
+				promote_character = PRU_luis_a_flores
+>>>>>>> Stashed changes
 			}
 			
 			hidden_effect = {
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Óscar Benavides"
-					desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-					picture = "GFX_Portrait_peru_oscar_benavides"
-					expire = "1965.1.1"
-					ideology = militarism
-					traits = {
-						#
-					}
-				}
 				every_controlled_state = {
 					create_unit = {
 						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
@@ -4839,6 +4786,7 @@ PRU_coup_attempt_fascists = {
 						create_unit = {
 							division = "name = \"Milicias Fascistas\" division_template = \"Milicias\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
 							owner = PREV
+							count = 2
 						}
 					}
 				}
@@ -4855,7 +4803,7 @@ PRU_coup_attempt_fascists = {
 				914 = {
 					has_state_flag = PRU_state_was_dealt_with
 				}
-				839 = {
+				919 = {
 					has_state_flag = PRU_state_was_dealt_with
 				}
 				965 = {
@@ -4906,7 +4854,11 @@ PRU_coup_attempt_fascists = {
 		highlight_states = {
 			highlight_states_trigger = {
 				state = 914
+<<<<<<< Updated upstream
 				state = 839
+=======
+				state = 919
+>>>>>>> Stashed changes
 				state = 965
 				state = 491 
 			}
@@ -4914,7 +4866,11 @@ PRU_coup_attempt_fascists = {
 
 		state_target = yes 
 
+<<<<<<< Updated upstream
 		targets = { 839 914 491 965 }
+=======
+		targets = { 919 914 491 965 }
+>>>>>>> Stashed changes
 
 		on_map_mode = map_and_decisions_view
 

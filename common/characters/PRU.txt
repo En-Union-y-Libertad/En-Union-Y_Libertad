@@ -55,23 +55,7 @@ characters={
 			id=-1
 		}
 	}
-	PRU_apu_panchau={
-		name="Apu-punchau"
-		portraits={
-			civilian={
-				large="gfx/leaders/PRU/INC_sun_god_portrait.dds"
-			}
-		}
-		country_leader={
-			desc = "POLITICS_SUN_GOD_DESC"
-			expire = "1965.1.1"
-			ideology = theocracy
-			traits = {
-				PRU_godly_being
-				PRU_not_a_real_person
-			}
-		}
-	}
+	
 	PRU_josé_luis_bustamante_y_rivero={
 		name="José Luis Bustamante y Rivero"
 		portraits={
@@ -1119,6 +1103,23 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+	}
+	PRU_apu_panchau={
+		name="Apu-punchau"
+		portraits={
+			civilian={
+				large="gfx/leaders/PRU/INC_sun_god_portrait.dds"
+			}
+		}
+		country_leader={
+			desc = "POLITICS_SUN_GOD_DESC"
+			expire = "1965.1.1"
+			ideology = theocracy
+			traits = {
+				PRU_godly_being
+				PRU_not_a_real_person
 			}
 		}
 	}
