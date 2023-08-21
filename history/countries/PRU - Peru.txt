@@ -45,6 +45,7 @@ recruit_character = PRU_armando_figueroa_roggero
 recruit_character = PRU_josé_r_alzamora
 recruit_character = PRU_federico_corrico
 recruit_character = PRU_rafael_escardo
+recruit_character = PRU_Wayna_Qhapaq
 recruit_character = PRU_alberto_lopez_flores
 recruit_character = PRU_oscar_gilardi
 recruit_character = PRU_armando_reveredo_iglesias
