@@ -1,0 +1,646 @@
+characters={
+	ELS_maximiliano_hernández_martínez={
+		name="Maximiliano Hernández Martínez"
+		portraits={
+			civilian={
+				large="GFX_portrait_el_salvador_maximiliano_hernandez_martinez"
+				small="gfx/interface/ideas/idea_ELS_maximiliano_hernandez_martinez.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits = { ELS_theosophic_dictator }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits = { offensive_doctrine politically_connected harsh_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = ELS_maximiliano_hernández_martínez
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ELS_arturo_araujo={
+		name="Arturo Araujo"
+		portraits={
+			civilian={
+				large=GFX_portrait_Victoriano_Ubico
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ELS_miguel_marmol={
+		name="Miguel Mármol"
+		portraits={
+			civilian={
+				large="gfx/leaders/ELS/portrait_ELS_Miguel_Mármol(old).dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			traits = { veteran_communist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ELS_oscar_osorio_hernandez={
+		name="Óscar Osorio Hernández"
+		portraits={
+			civilian={
+				large=GFX_portrait_Bartolome_Vasconcelos
+				small="gfx/interface/ideas/idea_south_america_generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_oscar_osorio_hernandez
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits  = {
+				backroom_backstabber
+			}
+		}
+	}
+	ELS_jorge_melendez_ramirez={
+		name="Jorge Meléndez Ramírez"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_south_america_1.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_jorge_melendez_ramirez
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits  = {
+				prince_of_terror
+			}
+		}
+	}
+	ELS_jose_gustavo_guerrero={
+		name="José Gustavo Guerrero"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_arab_3.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_jose_gustavo_guerrero
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits  = {
+				smooth_talking_charmer
+			}
+		}
+	}
+	ELS_jose_arturo_castellanos={
+		name="José Arturo Castellanos"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_europe_3.dds"
+				large="gfx/leaders/Europe/portrait_europe_generic_land_10.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_jose_arturo_castellanos
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits  = {
+				reluctant_interventionist
+			}
+		}
+		field_marshal={
+			traits = { defensive_doctrine politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 3
+		}
+		advisor={
+			slot = army_chief
+			idea_token = ELS_jose_gustavo_guerrero
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ELS_luis_alfaro_duran={
+		name="Luis Alfaro Durán"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_luis_alfaro_duran
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits  = {
+				economic_reformer
+			}
+			cost = 200.00
+		}
+	}
+	ELS_abel_cuenca={
+		name="Abel Cuenca"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_africa_1.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_abel_cuenca
+			allowed  = {
+				original_tag  = ELS
+			}
+			available = {
+				has_government = communism
+			}
+			traits  = {
+				marxist_academic
+			}
+		}
+	}
+	ELS_julio_enrique_avila={
+		name="Julio Enrique Ávila"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_5.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_julio_enrique_avila
+			allowed  = {
+				original_tag  = ELS
+			}
+			available = {
+				has_government = democratic
+			}
+			traits  = {
+				voice_of_restraint
+			}
+		}
+	}
+	ELS_joaquin_castro_canizales={
+		name="Joaquín 'Quino Caso' Canizales"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_asia_2.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_joaquin_castro_canizales
+			allowed  = {
+				original_tag  = ELS
+			}
+			available = {
+				has_government = democratic
+			}
+			traits  = {
+				liberal_journalist
+			}
+		}
+	}
+	ELS_antonio_novoa_hernandez={
+		name="Antonio Novoa Hernández"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_democratic_europe.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_antonio_novoa_hernandez
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits  = {
+				democratic_reformer
+			}
+		}
+	}
+	ELS_modesto_ramirez={
+		name="Modesto Ramírez"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_europe_5.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_modesto_ramirez
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits  = {
+				communist_revolutionary
+			}
+		}
+	}
+	ELS_andres_ignacio_menendez={
+		name="Andrés Ignacio Menéndez"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+				large="gfx/leaders/ELS/portrait_ELS_Andres_Ignacio_Menendez(old).dds"
+			}
+		}
+
+		#Sucessor of Martinez when he resigned, he tried setting up fair elections but this angered the rest of the army who deposed him and placed Osmin Salinas as president instead
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_andres_ignacio_menendez
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits  = {
+				war_industrialist ELS_democratic_sympathies
+			}
+		}
+		corps_commander={
+			traits = { politically_connected hidden_sympathies }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	ELS_osmin_aguirre_salinas={
+		name="Osmín Aguirre y Salinas"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+				large="gfx/leaders/ELS/portrait_ELS_Osmín Aguirre y Salinas.dds"
+			}
+		}
+
+		advisor={
+			slot = theorist
+			idea_token = ELS_osmin_aguirre_salinas_theorist
+			ledger = army
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_osmin_aguirre_salinas_hoi
+			allowed  = {
+				original_tag  = ELS
+			}
+			visible  = {
+				has_dlc = "La Resistance"
+			}
+			traits  = {
+				head_of_intelligence
+			}
+		}
+		corps_commander={
+			traits = { politically_connected old_guard }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	ELS_daniel_canas_infante={
+		name="Daniel Cañas Infante"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_air_south_america_1.dds"
+			}
+		}
+
+		advisor={
+			slot = theorist
+			idea_token = ELS_osmin_aguirre_salinas_theorist
+			ledger = army
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits = {
+				air_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}	
+	ELS_joaquin_valdez={
+		name="Joaquín Valdés"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_army_asia_7.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = ELS_joaquin_valdez
+			allowed  = {
+				original_tag  = ELS
+			}
+			traits  = {
+				fascist_demagogue
+			}
+		}
+		corps_commander={
+			traits = { politically_connected old_guard }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ELS_fidel_cristino_garay={
+		name="Fidel Cristino Garay"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_army_south_america_4.dds"
+				large="gfx/leaders/ELS/portrait_ELS_Fidel_Cristino_Garay.dds"
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = ELS_fidel_cristino_garay
+			allowed  = {
+				original_tag = ELS
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits = { politically_connected old_guard infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ELS_salvador_pena_trejo={
+		name="Salvador Peña Trejo"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_army_europe_2.dds"
+				large="gfx/leaders/ELS/portrait_ELS_Salvador_Peña_Trejo.dds"
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = ELS_salvador_pena_trejo
+			allowed  = {
+				original_tag = ELS
+			}
+			traits = {
+				army_chief_entrenchment_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits = { engineer_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ELS_salvador_castaneda_castro={
+		name="Salvador Castaneda Castro"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_europe_6.dds"
+				large="gfx/leaders/ELS/portrait_ELS_Salvador_Castañeda.dds"
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = ELS_salvador_castaneda_castro
+			allowed  = {
+				original_tag = ELS
+			}
+			traits = {
+				army_artillery_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits = { fortress_buster politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	ELS_mauro_espinola_castro={
+		name="Mauro Espinola Castro"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_6.dds"
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = ELS_mauro_espinola_castro
+			allowed  = {
+				original_tag = ELS
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ELS_victor_alfredo_lara={
+		name="Víctor Alfredo Lara"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_air_europe_1.dds"
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = ELS_victor_alfredo_lara
+			allowed  = {
+				original_tag = ELS
+			}
+			traits = {
+				air_air_superiority_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ELS_carlos_gavidia={
+		name="Carlos Gavidia"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_air_europe_3.dds"
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = ELS_victor_alfredo_lara
+			allowed  = {
+				original_tag = ELS
+			}
+			traits = {
+				air_close_air_support_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ELS_humberto_aberle = { 
+		name="Humberto Aberle"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_army_europe_4.dds"
+			}
+		}
+
+		advisor={
+			slot = air_chief
+			idea_token = ELS_humberto_aberle
+			ledger = air
+			allowed = {
+				original_tag = ELS
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ELS_enseigne_charles_sarrat = { 
+		name="Enseigne Charles Sarrat"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_generic_land_1.dds"
+			}
+		}
+
+		advisor={
+			slot = navy_chief
+			idea_token = ELS_enseigne_charles_sarrat
+			ledger = air
+			allowed = {
+				original_tag = ELS
+			}
+			available = {
+				NOT = {
+					has_war_with = FRA
+				}
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+}

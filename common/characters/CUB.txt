@@ -1,0 +1,809 @@
+characters={
+	CUB_josé_agripino_barnet={
+		name="José Agripino Barnet"
+		portraits={
+			civilian={
+				large="GFX_portrait_cuba_jose_barnet"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ CUB_puppet_of_batista }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CUB_blas_roca_calderio={
+		name="Blas Roca Calderio"
+		portraits={
+			civilian={
+				large="gfx/leaders/CUB/Portrait_Cuba_Blas_Roca_Calderio.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CUB_alfonso_serrano_villarino={
+		name="Alfonso Serrano Villarino"
+		portraits={
+			civilian={
+				large="gfx/leaders/CUB/portrait_Cuba_Alfonso_Serrano_Villarino.dds"
+			}
+		}
+		country_leader={
+			ideology=rexism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CUB_fulgencio_batista={
+		name="Fulgencio Batista"
+		portraits={
+			civilian={
+				large="gfx/leaders/CUB/Portrait_Cuba_Fulgencio_Batista.dds"
+				small="gfx/interface/ideas/idea_south_america_generic_land_5.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ retired_officer }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits = { offensive_doctrine politically_connected harsh_leader }
+			skill = 3
+			id = 3400
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = fulgencio_batista
+			removal_cost = -1
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				CUB_puppeteer_of_havana 
+			}
+		}
+	}
+
+	CUB_miguel_mariano_gomez={
+		name="Miguel Mariano Gómez"
+		portraits={
+			civilian={
+				large="gfx/leaders/CUB/Portrait_Cuba_Miguel_Mariano_Gomez.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ 
+				#
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	CUB_federico_laredo_bru={
+		name="Federico Laredo Brú"
+		portraits={
+			civilian={
+				large=GFX_portrait_Federico_Laredo_Bru
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ CUB_puppet_of_batista }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	CUB_carlos_saladrigas_zayas={
+		name="Carlos Saladrigas Zayas"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_generic_3.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_carlos_saladrigas_zayas
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				silent_workhorse
+			}
+		}
+	}
+
+	CUB_mario_garcia_menocal={
+		name="Mario García Menocal"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+				large="gfx/interface/ideas/portrait_south_america_generic_9.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_mario_garcia_menocal
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				industry_reformer
+			}
+		}
+	}
+
+	CUB_carlos_mendieta={
+		name="Carlos Mendieta"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_democratic_europe.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_mario_garcia_menocal
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				prince_of_terror
+			}
+		}
+	}
+
+	CUB_ramon_grau_san_martin={
+		name="Ramón Grau San Martín"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_arab_3.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_ramon_grau_san_martin
+			allowed  = {
+				original_tag  = CUB
+			}
+			available = {
+				NOT = {
+					has_idea = CUB_eduardo_chibas
+				}
+			}
+			traits  = {
+				CUB_corrupt_kleptocrat
+			}
+		}
+	}
+
+	CUB_eduardo_chibas={
+		name="Eduardo Chibás"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_3.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_eduardo_chibas
+			allowed  = {
+				original_tag  = CUB
+			}
+			available = {
+				NOT = {
+					OR = {
+						has_idea = CUB_ramon_grau_san_martin
+						has_government = communism
+					}	
+				}
+			}
+			traits  = {
+				CUB_anti_corruption_agent
+			}
+		}
+	}
+
+	CUB_jorge_manach={
+		name="Jorge Mañach"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_south_america_1.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_jorge_manach
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				generic_philosopher 
+			}
+		}
+	}
+
+	CUB_jose_manuel_cortina={
+		name="José Manuel Cortina"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_asia_3.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_jose_manuel_cortina
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				propaganda_bungler editor
+			}
+		}
+	}
+
+	CUB_joaquin_martinez_saenz={
+		name="Joaquín Martínez Sáenz"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_europe_4.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_joaquin_martinez_saenz
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				economic_reformer
+			}
+		}
+	}
+
+	CUB_jose_miguel_irisarri={
+		name="José Miguel Irisarri"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_europe_3.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_jose_miguel_irisarri
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				captain_of_industry
+			}
+		}
+	}
+
+	CUB_carlos_manuel_de_cespedes_y_quesada={
+		name="Carlos Manuel de Céspedes y Quesada"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_europe_5.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_carlos_manuel_de_cespedes_y_quesada
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				liberal_democratic_paragon
+			}
+		}
+	}
+
+	CUB_salvador_vilaseca_forne={
+		name="Salvador Vilaseca Forné"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_arab_1.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_alfonso_bernal_del_riesgo
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				education_reformer
+			}
+		}
+	}
+
+	CUB_lazaro_pena={
+		name="Lazaro Peña"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_africa_1.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_lazaro_pena
+			allowed  = {
+				original_tag  = CUB
+			}
+			available = {
+				has_government = communism
+			}
+			traits  = {
+				chair_of_the_unions
+			}
+		}
+	}
+
+	CUB_sandalio_junco={
+		name="Sandalio Junco"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_africa_3.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_lazaro_pena
+			allowed  = {
+				original_tag  = CUB
+			}
+			available = {
+				has_government = communism
+			}
+			traits  = {
+				devoted_trotskyist
+			}
+		}
+	}
+
+	CUB_alfonso_bernal_del_riesgo={
+		name="Alfonso Bernal del Riesgo"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_asia_3.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_alfonso_bernal_del_riesgo
+			allowed  = {
+				original_tag  = CUB
+			}
+			available = {
+				has_government = communism
+			}
+			traits  = {
+				marxist_academic
+			}
+		}
+	}
+
+	CUB_carlos_prio={
+		name="Carlos Prío"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_south_america_2.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_carlos_prio
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				democratic_reformer
+			}
+		}
+	}
+
+	CUB_raul_roa_garcia={
+		name="Raúl Roa García"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_political_advisor_europe_6.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_lazaro_pena
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				communist_revolutionary
+			}
+		}
+	}
+
+	CUB_antonio_avedano={
+		name="Antonio Avendaño"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_fascist_europe.dds"
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_antonio_avedano
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				fascist_demagogue
+			}
+		}
+	}
+
+	# Military Advisors #
+
+	CUB_alberto_bayo={
+		name="Alberto Bayo"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_army_europe_5.dds"
+				large="gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = CUB_alberto_bayo
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				air_chief_ground_support_2
+			}
+			on_add = {
+				add_popularity = { ideology = communism popularity = 0.1 }
+			}
+		}
+
+		corps_commander={
+			traits = { hidden_sympathies }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	CUB_genovevo_perez_damera={
+		name="Genovevo Pérez Damera"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_5.dds"
+				large="gfx/leaders/Europe/portrait_europe_generic_land_12.dds"
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = CUB_alberto_bayo
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				army_artillery_2
+			}
+		}
+
+		corps_commander={
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	CUB_francisco_tabernilla_dolz={
+		name="Francisco Tabernilla Dolz"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+				large="gfx/leaders/Europe/portrait_europe_generic_land_10.dds"
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = CUB_francisco_tabernilla_dolz
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				army_logistics_2
+			}
+		}
+
+		corps_commander={
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+
+	CUB_alberto_herrera_y_fianchi={
+		name="Alberto Herrera y Franchi"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+				large="gfx/leaders/Europe/portrait_europe_generic_land_17.dds"
+			}
+		}
+
+		corps_commander={
+			traits = { old_guard }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	CUB_martin_diaz_tamayo={
+		name="Martin Diaz Tamayo"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_4.dds"
+				large="gfx/leaders/Europe/portrait_europe_generic_land_11.dds"
+			}
+		}
+
+		advisor={
+			slot = army_chief
+			idea_token = CUB_martin_diaz_tamayo
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				army_chief_organizational_2
+			}
+		}
+
+		corps_commander={
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	CUB_aristides_sosa_de_quesada={
+		name="Arístides Sosa de Quesada"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_6.dds"
+				large="gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			}
+		}
+
+		advisor={
+			slot = army_chief
+			idea_token = CUB_aristides_sosa_de_quesada
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				army_chief_defensive_2
+			}
+		}
+
+		corps_commander={
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	CUB_manuel_lopez_migoya={
+		name="Manuel Lopez Migoya"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
+				large="gfx/leaders/Europe/portrait_europe_generic_land_14.dds"
+			}
+		}
+
+		advisor={
+			slot = army_chief
+			idea_token = CUB_manuel_lopez_migoya
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits  = {
+				army_chief_offensive_2
+			}
+		}
+
+		corps_commander={
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	CUB_ernesto_usatorres_ubieta={
+		name="Ernesto Usatorres Ubieta"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_generic_navy_3.dds"
+				large="gfx/leaders/Europe/portrait_europe_generic_navy_7.dds"
+			}
+		}
+		navy_leader={
+			traits = { 
+				# 
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = CUB_ernesto_usatorres_ubieta
+			ledger = navy
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits = {
+				navy_carrier_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CUB_carmelo_gonzalez_arias={
+		name="Carmelo González Arias"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_navy_3.dds"
+				large="gfx/leaders/Europe/portrait_europe_generic_navy_13.dds"
+			}
+		}
+		navy_leader={
+			traits = { 
+				# 
+			}
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			maneuvering_skill = 5
+			coordination_skill = 5
+		}
+	}
+
+	CUB_gaspar_maspons_jordan={
+		name="Gaspar Maspons Jordán"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_navy_asia_1.dds"
+				large="gfx/leaders/Europe/portrait_arabia_generic_navy_5.dds"
+			}
+		}
+		navy_leader={
+			traits = { blockade_runner }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+		advisor={
+			slot = theorist
+			idea_token = CUB_gaspar_maspons_jordan
+			ledger = navy
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits = {
+				naval_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CUB_mario_torres_menier={
+		name="Mario Torres Menier"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_air_south_america_1.dds"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = CUB_mario_torres_menier
+			ledger = navy
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits = {
+				air_warfare_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CUB_otalio_soca_llanes={
+		name="Otalio Soca Llanes"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_generic_air_europe_3.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = CUB_otalio_soca_llanes
+			ledger = navy
+			allowed  = {
+				original_tag  = CUB
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+}

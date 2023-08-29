@@ -1,0 +1,26 @@
+
+state={
+	id=311
+	name="STATE_311"
+
+	history={
+		add_core_of = BLZ
+		add_claim_by = GUA
+		owner = BLZ
+		victory_points = {
+			14612 1
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		2077 14611 14612 
+	}
+	manpower=18930
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

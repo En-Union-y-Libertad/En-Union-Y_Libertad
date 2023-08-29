@@ -1,0 +1,23 @@
+state={
+	id=926
+	name="STATE_926"
+
+	history={
+		owner = HON
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = HON
+		victory_points = {
+			14588 1
+		}
+	}
+
+	provinces={
+		14541 14547 14585 14588 
+	}
+	manpower=60145
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

@@ -1,0 +1,27 @@
+state={
+	id=934
+	name="STATE_934"
+
+	history={
+		owner = COS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			13087 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = COS
+		victory_points = {
+			13087 3
+		}
+	}
+
+	provinces={
+		13087 14558 14560 
+	}
+	manpower=180899
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}
