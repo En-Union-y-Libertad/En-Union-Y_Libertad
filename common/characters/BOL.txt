@@ -117,7 +117,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_land_13.dds"
 			}
 			army={
-				large="gfx/leaders/BOL/hans_kundt.png"
+				large="gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
 			}
 		}
 		corps_commander={
@@ -187,7 +187,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=peronism
+			ideology=peronist
 			expire="1950.1.1.12"
 			id=-1
 		}

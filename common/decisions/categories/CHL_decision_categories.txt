@@ -22,10 +22,7 @@ CHL_the_chilean_civil_war = {
 	icon = GFX_decision_category_military_operation
 
 	allowed = {
-		OR = {
-			original_tag = CHL 
-			original_tag = URG
-		}
+		original_tag = CHL 
 	}
 
 	available = {
@@ -151,9 +148,12 @@ CHL_nacista_management = {
 		original_tag = CHL 
 	}
 
+	available = {
+		has_government = fascism
+	}
+
 	visible = {
 		has_completed_focus = CHL_victory_for_nacismo
-		has_government = fascism
 	}
 }
 

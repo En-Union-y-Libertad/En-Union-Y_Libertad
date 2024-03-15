@@ -183,7 +183,7 @@ BOL_the_1936_coup_d_etat =  {
 
         state_target = yes 
 
-        targets = { 920 917 302 922 }
+        targets = { 840 841 302 844 }
 
 		on_map_mode = map_and_decisions_view
 
@@ -594,15 +594,10 @@ PBC_nationalism_rising = {
 
         available = {
             has_civil_war = no 
-            if = {
-                limit = {
-                    is_ai = no 
-                }
-                divisions_in_state = {
-                    size > 2
-                    state = FROM
-                }
-            }
+            divisions_in_state = {
+				size > 2
+				state = FROM
+			}
             hidden_trigger = {
                 NOT = {
                     has_country_flag = PBC_retaking_state
@@ -1071,29 +1066,29 @@ PBC_reforming_lost_unions = {
                 set_cosmetic_tag = GCO_UNIFIED
                 transfer_state = 306
                 transfer_state = 486
-                transfer_state = 928
-                transfer_state = 927
+                transfer_state = 850
+                transfer_state = 849
                 transfer_state = 493
-                transfer_state = 926
-                transfer_state = 929
-                transfer_state = 930
-                transfer_state = 931
-                transfer_state = 932
+                transfer_state = 848
+                transfer_state = 851
+                transfer_state = 852
+                transfer_state = 853
+                transfer_state = 854
                 transfer_state = 305
-                transfer_state = 935
-                transfer_state = 934
+                transfer_state = 857
+                transfer_state = 856
                 transfer_state = 304
                 transfer_state = 489
-                transfer_state = 942
-                transfer_state = 941
-                transfer_state = 946
+                transfer_state = 864
+                transfer_state = 863
+                transfer_state = 868
                 transfer_state = 307
                 transfer_state = 488
-                transfer_state = 938
-                transfer_state = 943
-                transfer_state = 945
-                transfer_state = 947
-                transfer_state = 944
+                transfer_state = 860
+                transfer_state = 865
+                transfer_state = 867
+                transfer_state = 869
+                transfer_state = 866
                 every_controlled_state = {
                     limit = {
                         OR = {
@@ -1198,35 +1193,35 @@ PBC_reforming_lost_unions = {
             }
             ARG = {
                 set_cosmetic_tag = VRP_UNIFIED
-                transfer_state = 966
+                transfer_state = 888
                 transfer_state = 278
-                transfer_state = 982
+                transfer_state = 904
                 transfer_state = 510
-                transfer_state = 983
+                transfer_state = 905
                 transfer_state = 509
-                transfer_state = 980
-                transfer_state = 977
+                transfer_state = 902
+                transfer_state = 899
                 transfer_state = 508
-                transfer_state = 981
-                transfer_state = 976
-                transfer_state = 973
-                transfer_state = 972
-                transfer_state = 974
-                transfer_state = 975
+                transfer_state = 903
+                transfer_state = 898
+                transfer_state = 895
+                transfer_state = 894
+                transfer_state = 896
+                transfer_state = 897
                 transfer_state = 511
-                transfer_state = 971
-                transfer_state = 970
+                transfer_state = 893
+                transfer_state = 892
                 transfer_state = 512
-                transfer_state = 969
-                transfer_state = 968
-                transfer_state = 967
-                transfer_state = 925
+                transfer_state = 891
+                transfer_state = 890
+                transfer_state = 889
+                transfer_state = 847
                 transfer_state = 300
-                transfer_state = 986
+                transfer_state = 908
                 transfer_state = 506
-                transfer_state = 916
+                transfer_state = 914
                 transfer_state = 279
-                transfer_state = 963
+                transfer_state = 885
                 transfer_state = 913
                 transfer_state = 911
                 transfer_state = 912
@@ -1410,7 +1405,7 @@ PBC_integrating_all_our_claimed_lands = {
 
         available = {
             FROM = {
-				compliance > 24
+				compliance > 34
 			}
 			has_equipment = {
 			    infantry_equipment > 499
@@ -1426,7 +1421,7 @@ PBC_integrating_all_our_claimed_lands = {
             }
         }
 
-        cost = 20
+        cost = 50
 
         days_remove = 40
 
@@ -1521,7 +1516,7 @@ PBC_war_of_independence_d = {
             has_completed_focus = PBC_escelate_the_war
         }
 
-        cost = 20
+        cost = 60
         days_remove = 50
 
         remove_effect = {
@@ -1807,7 +1802,7 @@ PBC_maneging_the_confederation = {
         icon = eng_trade_unions_support
 
         ai_will_do = {
-            factor = 175
+            factor = 140
         }
 
         available = {
@@ -1821,7 +1816,7 @@ PBC_maneging_the_confederation = {
             has_completed_focus = PBC_maneging_the_new_nation 
         }
 
-        cost = 30
+        cost = 70
 
         days_remove = 25
 
@@ -1858,7 +1853,7 @@ PBC_maneging_the_confederation = {
             has_completed_focus = PBC_maneging_the_new_nation 
         }
 
-        cost = 25
+        cost = 50
 
         days_remove = 25
 
@@ -1881,7 +1876,7 @@ PBC_maneging_the_confederation = {
         icon = eng_trade_unions_support
 
         ai_will_do = {
-            factor = 175
+            factor = 140
         }
 
         available = {
@@ -1895,7 +1890,7 @@ PBC_maneging_the_confederation = {
             has_completed_focus = PBC_maneging_the_new_nation 
         }
 
-        cost = 30
+        cost = 70
 
         days_remove = 25
 
@@ -1918,7 +1913,7 @@ PBC_maneging_the_confederation = {
         icon = eng_trade_unions_support
 
         ai_will_do = {
-            factor = 175
+            factor = 140
         }
 
         available = {
@@ -1932,7 +1927,7 @@ PBC_maneging_the_confederation = {
             has_completed_focus = PBC_maneging_the_new_nation 
         }
 
-        cost = 30
+        cost = 70
 
         days_remove = 25
 
@@ -2090,7 +2085,7 @@ PBC_maneging_the_confederation = {
 		remove_effect = {
 			clr_country_flag = CHL_purchasing_planes
 			add_equipment_to_stockpile = {
-				type = small_plane_airframe
+				type = fighter_equipment
 				amount = 65
 				producer = FROM
 			}
@@ -2161,7 +2156,7 @@ PBC_maneging_the_confederation = {
 		remove_effect = {
 			clr_country_flag = CHL_purchasing_planes
 			add_equipment_to_stockpile = {
-				type = medium_plane_airframe
+				type = tac_bomber_equipment
 				amount = 65
 				producer = FROM
 			}
@@ -2269,7 +2264,6 @@ BOL_dealing_with_toros_schemes = {
 
         activation = {
             has_country_flag = BOL_toro_rebellious
-            NOT = { has_global_flag = BOL_toro_rebelled }
         }
 
         is_good = no
@@ -2285,10 +2279,7 @@ BOL_dealing_with_toros_schemes = {
         target_array = controlled_states
 
         cancel_trigger = {
-            OR = {
-                has_completed_focus = BOL_imprison_toro
-                has_global_flag = BOL_toro_rebelled
-            }
+            has_completed_focus = BOL_imprison_toro
         }
 
         target_trigger = {
@@ -2456,7 +2447,6 @@ BOL_dealing_with_toros_schemes = {
                 }
             }
             hidden_effect = {
-                set_global_flag = BOL_toro_rebelled
                 remove_unit_leader = 44123
                 clr_country_flag = BOL_toro_rebellious
                 every_controlled_state = {
@@ -2616,7 +2606,7 @@ BOL_getting_our_sweet_revenge = {
 
         state_target = yes 
 
-        targets = { 978 979 688 909 910 923 }
+        targets = { 900 901 688 909 910 845 }
 
         target_trigger = {
             FROM = {
@@ -2971,479 +2961,6 @@ BOL_tejadas_incompetence = {
             }
             hidden_effect = {
                 clr_country_flag = BOL_teaching_tejada
-            }
-        }
-    }
-}
-
-BOL_taking_antofagasta = {
-
-    BOL_time_until_we_execute_the_plan = {
-        priority = 100
-        icon = infiltrate_state
-
-        activation = {
-            has_completed_focus = BOL_draft_plans_to_take_antofagasta
-        }
-
-        available = {
-            hidden_trigger = {
-                always = no 
-            }
-        }
-
-        cancel_trigger = {
-            OR = {
-                has_war_with = CHL 
-                CHL = {
-                    NOT = {
-                        controls_state = 909
-                    }
-                }
-            }
-        }
-
-        days_mission_timeout = 165
-
-        is_good = yes 
-
-        fire_only_once = yes 
-
-        timeout_effect = {
-            custom_effect_tooltip = BOL_because_of_current_claim_strength_tt
-            random_list = {
-                chance_of_taking_state = {
-                    transfer_state = 909
-                    add_war_support = 0.03
-                    CHL = {
-                        add_war_support = -0.05
-                    }
-                }
-                chance_of_not_taking_state = {
-                    add_war_support = -0.05
-                    CHL = {
-                        add_war_support = 0.03
-                        create_wargoal = {
-                            type = annex_everything
-                            target = BOL
-                        }
-                    }
-                }
-            }
-            hidden_effect = {
-                clear_variable = BOL_claim_strength
-                clear_variable = BOL_cost_to_claim_state
-                clear_variable = BOL_days_to_claim_state
-                clear_variable = CHL_cost_to_counter_claim
-                clear_variable = chance_of_taking_state
-                clear_variable = chance_of_not_taking_state
-            }
-        }
-    }
-
-    BOL_claim_the_state_of_antofagasta = {
-        icon = {
-			key = GFX_BOL_claim_anto_0
-			trigger = {
-				check_variable = {
-					var = BOL_claim_strength
-					value = 0
-					compare = equals
-				}
-			}
-		}
-        icon = {
-			key = GFX_BOL_claim_anto_1
-			trigger = {
-				check_variable = {
-					var = BOL_claim_strength
-					value = 1
-					compare = equals
-				}
-			}
-		}
-        icon = {
-			key = GFX_BOL_claim_anto_2
-			trigger = {
-				check_variable = {
-					var = BOL_claim_strength
-					value = 2
-					compare = equals
-				}
-			}
-		}
-        icon = {
-			key = GFX_BOL_claim_anto_3
-			trigger = {
-				check_variable = {
-					var = BOL_claim_strength
-					value = 3
-					compare = equals
-				}
-			}
-		}
-
-        state_target = yes 
-
-        ai_will_do = {
-            base = 135
-        }
-
-        target_trigger = {
-            FROM = {
-                state = 909
-            }
-        }
-
-        available = {
-            has_army_manpower = { size > 999 }
-        }
-
-        visible = {
-            NOT = {
-                OR = {
-                    has_war_with = CHL 
-                    CHL = {
-                        NOT = {
-                            controls_state = 909
-                        }
-                    }
-                }
-            }
-        }
-
-        on_map_mode = map_only
-
-        cost = BOL_cost_to_claim_state
-
-        days_remove = BOL_days_to_claim_state
-
-        modifier = {
-            political_power_factor = -0.1
-            weekly_manpower = -100
-        }
-
-        cancel_trigger = {
-            custom_trigger_tooltip = {
-                tooltip = CHL_countered_us_tt
-                has_country_flag = CHL_countered_us
-            }
-        }
-
-        complete_effect = {
-            custom_effect_tooltip = BOL_cost_will_increase_by_15_tt
-            hidden_effect = {
-                add_to_variable = { BOL_cost_to_claim_state = 15 }
-                CHL = {
-                    set_country_flag = BOL_claiming_state
-                }
-            }
-        }
-
-        remove_effect = {
-            if = {
-                limit = { check_variable = { BOL_claim_strength < 3 } }
-                custom_effect_tooltip = BOL_claim_strength_increase_1_tt
-                hidden_effect = {
-                    add_to_variable = { BOL_claim_strength = 1 }
-                    CHL = { add_to_variable = { CHL_bol_claim_strength = 1 } }
-                    if = {
-                        limit = { check_variable = { BOL_claim_strength < 3 } }
-                        add_to_variable = { chance_of_taking_state = 33 }
-                        subtract_from_variable = { chance_of_not_taking_state = 33 }
-                        CHL = {
-                            add_to_variable = { CHL_chance_of_taking_state = 33 }
-                            subtract_from_variable = { CHL_chance_of_not_taking_state = 33 }
-                        }
-                    }
-                    else = {
-                        add_to_variable = { CHL_chance_of_taking_state = 34 }
-                        subtract_from_variable = { CHL_chance_of_not_taking_state = 34 }
-                        CHL = {
-                            add_to_variable = { chance_of_taking_state = 34 }
-                            subtract_from_variable = { CHL_chance_of_not_taking_state = 34 }
-                        }
-                    }
-                    CHL = {
-                        clr_country_flag = BOL_claiming_state
-                    }
-                }
-            }
-            else = {
-                custom_effect_tooltip = BOL_this_decision_will_do_nothing_tt
-            }
-        }
-    }
-
-    BOL_chile_trying_to_counter_us = {
-        icon = generic_prepare_civil_war
-
-        activation = {
-            has_country_flag = CHL_trying_to_counter
-        }
-
-        available = {
-            hidden_trigger = {
-                always = no 
-            }
-        }
-
-        cancel_trigger = {
-            custom_trigger_tooltip = {
-                tooltip = BOL_chile_attempt_countered
-                has_country_flag = we_countered_chile
-            }
-        }
-
-        days_mission_timeout = 20
-
-        is_good = no 
-
-        timeout_effect = {
-            custom_effect_tooltip = CHL_will_counter_our_claim_attempt_tt
-        }
-    }
-
-    BOL_counter_the_chilean_counterattempt = {
-        icon = oppression
-
-        visible = {
-            has_country_flag = CHL_trying_to_counter
-        }
-
-        cancel_trigger = {
-            OR = {
-                has_war_with = BOL 
-                NOT = { controls_state = 909 }
-            }
-        }
-
-        cost = 30
-
-        ai_will_do = {
-            base = 110
-        }
-
-        complete_effect = {
-            custom_effect_tooltip = BOL_chile_counter_attempt_will_be_stopped_tt
-            hidden_effect = {
-                CHL = {
-                    set_country_flag = {
-                        flag = BOL_countered_us
-                        days = 1
-                        value = 1
-                    }
-                }
-                set_country_flag = {
-                    flag = we_countered_chile
-                    days = 1
-                    value = 1
-                }
-                clr_country_flag = CHL_trying_to_counter
-            }
-        }
-    }
-
-    BOL_delay_our_plan = {
-        icon = eng_trade_unions_support
-
-        visible = {
-            has_active_mission = BOL_time_until_we_execute_the_plan
-        }
-
-        cost = 35
-
-        ai_will_do = {
-            base = 65
-        }
-
-        complete_effect = {
-            add_days_mission_timeout = {
-                mission = BOL_time_until_we_execute_the_plan
-                days = 30
-            }
-        }
-    }
-}
-
-CHL_countering_bolivias_plan = {
-    CHL_bolivia_time_until_execute_plan = {
-        priority = 100
-        icon = infiltrate_state
-
-        activation = {
-            BOL = { has_completed_focus = BOL_draft_plans_to_take_antofagasta }
-        }
-
-        available = {
-            hidden_trigger = {
-                always = no 
-            }
-        }
-
-        cancel_trigger = {
-            OR = {
-                has_war_with = BOL 
-                NOT = { controls_state = 909 }
-            }
-        }
-
-        days_mission_timeout = 165
-
-        is_good = no 
-
-        timeout_effect = {
-            custom_effect_tooltip = CHL_depending_on_bol_claim_strength_tt
-            effect_tooltip = {
-                random_list = {
-                    CHL_chance_of_not_taking_state = {
-                        BOL = { transfer_state = 909 }
-                        add_war_support = -0.05
-                    }
-                    CHL_chance_of_taking_state = {
-                        add_war_support = 0.03
-                        CHL = {
-                            create_wargoal = {
-                                type = annex_everything
-                                target = BOL
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    CHL_bol_attempting_to_strengthen_claim = {
-        icon = generic_nationalism
-
-        activation = {
-            has_country_flag = BOL_claiming_state
-        }
-
-        available = {
-            hidden_trigger = {
-                always = no 
-            }
-        }
-        cancel_trigger = {
-            custom_trigger_tooltip = {
-                tooltip = CHL_sccesfully_countered_bolivia_tt
-                BOL = {
-                    has_country_flag = CHL_countered_us
-                }
-            }
-        }
-
-        days_mission_timeout = CHL_bol_days_to_claim_state
-
-        is_good = no 
-
-        timeout_effect = {
-            custom_effect_tooltip = CHL_bol_claim_strength_increase_1_tt
-        }
-    }
-
-    CHL_counter_bolivias_claim_attempts = {
-        icon = generic_prepare_civil_war
-
-        visible = {
-            has_country_flag = BOL_claiming_state
-        }
-
-        ai_will_do = {
-            base = 45
-            modifier = {
-                add = 65
-                has_government = fascism
-            }
-            modifier = {
-                add = 500
-                has_government = neutrality #no way in HELL will the anarchists allow the Bolivians to do this
-            }
-        }
-
-        cost = CHL_cost_to_counter_claim
-
-        state_target = yes 
-
-        target_trigger = {
-            FROM = {
-                state = 909
-            }
-        }
-
-        cost = 15
-
-        days_remove = 20
-
-        available = {
-            has_army_manpower = { size > 499 }
-        }
-
-        cancel_trigger = {
-            custom_trigger_tooltip = {
-                tooltip = CHL_bol_countered_our_attempt
-                has_country_flag = BOL_countered_us
-            }
-        }
-
-        modifier = {
-            political_power_factor = -0.25
-        }
-
-        complete_effect = {
-            add_manpower = -500
-            BOL = {
-                set_country_flag = CHL_trying_to_counter
-            }
-            hidden_effect = {
-                add_to_variable = { CHL_cost_to_counter_claim = 5 }
-            }
-        }
-
-        remove_effect = {
-            custom_effect_tooltip = CHL_if_not_react_20_days_counter_claim_tt
-            hidden_effect = {
-                BOL = {
-                    set_country_flag = {
-                        flag = CHL_countered_us
-                        days = 1
-                        value = 1
-                    }
-                    clr_country_flag = CHL_trying_to_counter
-                }
-            }
-        }
-    }
-
-    CHL_force_bolivians_to_have_to_speed_up = {
-        icon = generic_police_action
-
-        visible = {
-            BOL = {
-                has_active_mission = BOL_time_until_we_execute_the_plan
-            }
-        }
-
-        ai_will_do = {
-            base = 5
-            modifier = {
-                add = 35
-                has_government = fascism
-            }
-            modifier = {
-                add = 100
-                has_government = neutrality #again, the anarchists wouldn't allow this lmao
-            }
-        }
-
-        cost = 40
-
-        complete_effect = {
-            add_days_mission_timeout = {
-                mission = BOL_time_until_we_execute_the_plan
-                days = -25
             }
         }
     }

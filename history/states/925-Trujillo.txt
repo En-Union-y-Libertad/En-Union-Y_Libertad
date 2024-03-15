@@ -1,0 +1,24 @@
+state={
+	id=925
+	name="STATE_925"
+
+	history={
+		owner = HON
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = HON
+		add_claim_by = MKO
+		victory_points = {
+			14552 1
+		}
+	}
+
+	provinces={
+		2031 14545 14552 
+	}
+	manpower=54497
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

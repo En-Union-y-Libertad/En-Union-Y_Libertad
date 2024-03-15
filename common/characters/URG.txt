@@ -29,11 +29,6 @@ characters={
 					has_completed_focus = URG_go_against_terra
 				}
 			}
-			on_add = {
-				URG = {
-					URG_move_5_colorado = yes
-				}
-			}
 			traits  = {
 				financial_expert
 			}
@@ -41,7 +36,7 @@ characters={
 		country_leader={
 			desc = "GABRIEL_TERRA_DESC"
 			expire = "1965.1.1"
-			ideology = despotism
+			ideology = authoritarian_democracy
 			traits = {
 				URG_authoritarian_liberal
 			}
@@ -98,7 +93,6 @@ characters={
 				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_Political_1.dds"
 			}
 			army={
-				small="GFX_idea_south_america_generic_3"
 				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_Political_1.dds"
 			}
 		}
@@ -164,7 +158,6 @@ characters={
 				large="gfx/leaders/URG/portrait_URG_andres_martinez_treuba.dds"
 			}
 			army={
-				small = "GFX_idea_south_america_generic_1"
 				large="gfx/leaders/URG/portrait_urg_Emilio_Frugoni.dds"
 			}
 		}
@@ -312,7 +305,7 @@ characters={
 		country_leader={
 			desc="POLITICS_ALFREDO_BALDOMIR_FERRARI_DESC"
 			expire = "1965.1.1"
-			ideology = despotism
+			ideology = authoritarian_democracy
 			traits = {
 				retired_officer
 				URG_la_dictablanda
@@ -872,7 +865,7 @@ characters={
 		name="Augusto César Bado"
 		portraits={
 			army={
-				small="GFX_idea_south_america_generic_4"
+				small="gfx/interface/ideas/augusto_cesar_bado.dds"
 			}
 		}
 	}
@@ -926,7 +919,7 @@ characters={
 		name="Hugo Fernández Artucio"
 		portraits={
 			army={
-				small="GFX_idea_south_america_generic_2"
+				small="gfx/interface/ideas/hugo_fernandez_artucio.dds"
 			}
 		}
 	}
@@ -1091,7 +1084,7 @@ characters={
 		name="Alfeo Brum"
 		portraits={
 			army={
-				small="GFX_idea_south_america_generic_1"
+				small="gfx/interface/ideas/alfeo_brum.dds"
 			}
 		}
 	}

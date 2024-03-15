@@ -323,12 +323,12 @@ country_event = {
 		}
 		effect_tooltip = {
 			FROM = {
-				transfer_state = 967
+				transfer_state = 889
 			}
 			
 			ARG = {
-				add_state_core = 967
-				transfer_state = 967				
+				add_state_core = 889
+				transfer_state = 889				
 			}
 		}
 		FROM = {
@@ -369,8 +369,8 @@ country_event = {
 		transfer_state = 302
 		
 		ARG = {
-			add_state_core = 967
-			transfer_state = 967
+			add_state_core = 889
+			transfer_state = 889
 		}
 	}
 }
@@ -520,7 +520,7 @@ country_event = {
 		}
 		effect_tooltip = {
 			FROM = {
-				transfer_state = 967
+				transfer_state = 889
 			}
 			
 		}
@@ -560,8 +560,8 @@ country_event = {
 	is_triggered_only = yes
 	option = { # Ok
 		name = chile.411.a
-		transfer_state = 967
-		add_state_core = 967
+		transfer_state = 889
+		add_state_core = 889
 		
 		ai_chance = {
 			base = 100
@@ -581,12 +581,12 @@ country_event = {
 		create_wargoal = {
 			target = FROM
 			type = take_state_focus
-			generator = { 967 }
+			generator = { 889 }
 		}
 		ai_chance = {
 			factor = 10
 		}
-		add_state_core = 967
+		add_state_core = 889
 	}
 	option = { # No War
 		name = chile.412.b
@@ -619,18 +619,18 @@ country_event = {
 		}
 		effect_tooltip = {
 			FROM = {
-				transfer_state = 968
-				transfer_state = 969	
+				transfer_state = 890
+				transfer_state = 891	
 				transfer_state = 512	
-				transfer_state = 970	
-				transfer_state = 978
-				transfer_state = 979
-				add_state_core = 968
-				add_state_core = 969
+				transfer_state = 892	
+				transfer_state = 900
+				transfer_state = 901
+				add_state_core = 890
+				add_state_core = 891
 				add_state_core = 512
-				add_state_core = 970
-				add_state_core = 978
-				add_state_core = 979
+				add_state_core = 892
+				add_state_core = 900
+				add_state_core = 901
 			}
 			
 		}
@@ -679,20 +679,20 @@ country_event = {
 				create_wargoal = {
 					target = FROM
 					type = take_state_focus
-					generator = { 968 969 512 970 978 979 }
+					generator = { 890 891 512 892 900 901 }
 				}
-				transfer_state = 968
-				transfer_state = 969	
+				transfer_state = 890
+				transfer_state = 891	
 				transfer_state = 512	
-				transfer_state = 970	
-				transfer_state = 978
-				transfer_state = 979
-				add_state_core = 968
-				add_state_core = 969
+				transfer_state = 892	
+				transfer_state = 900
+				transfer_state = 901
+				add_state_core = 890
+				add_state_core = 891
 				add_state_core = 512
-				add_state_core = 970
-				add_state_core = 978
-				add_state_core = 979
+				add_state_core = 892
+				add_state_core = 900
+				add_state_core = 901
 			}
 			
 		}		
@@ -718,14 +718,14 @@ country_event = {
 			factor = 10
 		}	
 		name = chile.511.a
-		transfer_state = 968
-		transfer_state = 969	
+		transfer_state = 890
+		transfer_state = 891	
 		transfer_state = 512	
-		transfer_state = 970			
-		add_state_core = 968
-		add_state_core = 969
+		transfer_state = 892			
+		add_state_core = 890
+		add_state_core = 891
 		add_state_core = 512
-		add_state_core = 970
+		add_state_core = 892
 	}
 }
 
@@ -761,15 +761,15 @@ country_event = {
 		create_wargoal = {
 			target = FROM
 			type = take_state_focus
-			generator = { 968 969 512 970 }
+			generator = { 890 891 512 892 }
 		}
 		ai_chance = {
 			factor = 10
 		}
-		add_state_core = 968
-		add_state_core = 969
+		add_state_core = 890
+		add_state_core = 891
 		add_state_core = 512
-		add_state_core = 970		
+		add_state_core = 892		
 	}
 	option = { # No War
 		name = chile.512.b
@@ -792,7 +792,6 @@ country_event = {
 	option = {	#accept 
 		name = chile.15.a 
 		ai_chance = { base = 75 }
-		set_global_flag = CHL_spain_accepted_unification
 		CHL = {
 			annex_country = {
 				target = SPC
@@ -1065,7 +1064,7 @@ country_event = {
 #Communists protest supression of their party 
 country_event = {
 	id = chile.23
-	title = chile.23.t
+	title = chile.23
 	desc = chile.23.d 
 	picture = GFX_report_event_soldiers_marching
 
@@ -1100,12 +1099,6 @@ country_event = {
 		has_civil_war = no 
 		has_dynamic_modifier = { modifier = CHL_political_instability }
 		date > 1936.2.1
-		NOT = {
-			OR = {
-				has_government = fascism
-				has_government = communism
-			}
-		}
 	}
 
 	mean_time_to_happen = { days = 95 }
@@ -1639,7 +1632,6 @@ country_event = {
 			OR = {
 				has_completed_focus = CHL_begin_preperations_for_uprising
 				has_completed_focus = CHL_take_over_via_blood
-				has_completed_focus = CHL_victory_for_the_fp
 			}
 		}
 	}
@@ -1690,21 +1682,6 @@ country_event = {
 	picture = GFX_report_event_generic_rally_3 
 
 	is_triggered_only = yes 
-
-	immediate = {
-		hidden_effect = {
-			set_rule = {
-				can_create_collaboration_government = no
-				can_declare_war_on_same_ideology = no
-				can_force_government = yes
-				can_send_volunteers = no
-				can_puppet = no
-				can_lower_tension = yes
-				can_only_justify_war_on_threat_country = yes
-				can_guarantee_other_ideologies = yes
-			}
-		}
-	}
 
 	option = {
 		name = chile.37.a 
@@ -1972,11 +1949,11 @@ country_event = {
 				idea = PRU_purchasing_arica
 				days = 240
 			}
-			transfer_state = 967
-			transfer_state = 968
-			transfer_state = 969
+			transfer_state = 889
+			transfer_state = 890
+			transfer_state = 891
 			transfer_state = 512
-			transfer_state = 970
+			transfer_state = 892
 			hidden_effect = {
 				country_event = { id = peru.16 hours = 4 }
 			}
@@ -2068,7 +2045,7 @@ country_event = {
 			size = 0.65
 			capital = 506
 			states = {
-				506 910 909 916 913 911 912
+				506 910 909 914 913 911 912
 			}
 			keep_unit_leaders_trigger = {
 				has_trait = trait_CHL_fascist_sympathies
@@ -2125,7 +2102,7 @@ country_event = {
 					}
 				}
 			}
-			963 = {
+			885 = {
 				if = {
 					limit = {
 						has_state_flag = CHL_garnered_support_in_state

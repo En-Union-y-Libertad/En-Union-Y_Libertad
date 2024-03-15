@@ -3257,7 +3257,6 @@
  argentina.5.d:0 "Hoy han llegado diplomáticos argentinos para discutir sobre las conversaciones de paz. \n\n Esta guerra ha ejercido una gran presión sobre nuestros recursos, mano de obra e industria. \n\n Hasta ahora no ha salido nada bueno de este conflicto. \n\n Considerando nuestra situación actual, ¿qué elección debemos hacer? "
  argentina.5.a:0 "Acepta la propuesta de paz"
  argentina.5.b:0 "¡Luchamos por una causa! ¡Continúe la guerra!"
- argentina.5.c:0 "Aceptar paz y tomar Misiones"
  argentina.6.t:0 "Argentina exige Rio Grande Sul y Paz"
  argentina.6.d:0 "Hoy llegaron diplomáticos argentinos, exigiendo conversaciones de paz y nuestro estado de Rio Grande Sul. \n\n Esta guerra ha ejercido una gran presión sobre nuestros recursos, mano de obra e industria. \n\n Entonces Hasta ahora, nada bueno ha salido de este conflicto. \n\n Considerando nuestra situación actual, ¿qué elección debemos hacer? "
  argentina.6.a:0 "Ceder a sus demandas"
@@ -3400,8 +3399,8 @@
  argentina.50.t:0 "La Asamblea Legislativa ha votado que debemos pagar la Deuda"
  argentina.50.d:0 "Los senadores han votado y los resultados están a la vista. Un poco más de la mitad de los senadores han votado que de hecho somos culpables de tales actos y que debemos pagar la deuda. Es bastante triste que los senadores no pueden ver el hecho de que somos inocentes, pero debemos cumplir "
  argentina.50.a:0 "No podemos confiar en nadie"
- argentina.51.t:0 "El Ejército no está Contento con la Administración de [Root.GetLeader]"
- argentina.51.d:0 "A varios sectores de las fuerzas armadas no les gusto la administración de [Root.GetLeader], y varias partes del ejército han comenzado a conspirar contra el gobierno, con la esperanza de derrocarlo. \n\nYa comenzaron los planes y se desconoce si cuáles son sus intenciones finales. Todo lo que sabemos es que si este 'golpe' no se resuelve de inmediato, entonces estamos en serios problemas "
+ argentina.51.t:0 "El ejército no está contento con el sucesor de [Root.GetLeader]"
+ argentina.51.d:0 "Después de enterarse del sucesor de [Root.GetLeader], varias partes del ejército han comenzado a conspirar contra el gobierno, con la esperanza de derrocarlo. \n\nYa comenzaron los planes y se desconoce si cuáles son sus intenciones finales. Todo lo que sabemos es que si este 'golpe' no se resuelve de inmediato, entonces estamos en serios problemas "
  argentina.51.a:0 "¡QUÉ! ¡Estos malditos cabrones!"
  argentina.52.t:0 "Los militares han ejecutado su complot"
  argentina.52.d:0 "Los militares han ejecutado su tan esperado complot. Después de meses de cuidadosa planificación, parece que se ha desatado el infierno. \n\nSólo el tiempo dirá cuál será el futuro de este país, sin embargo, el futuro parece bastante oscuro."
@@ -3475,11 +3474,6 @@
  news.341.a:0 "¿No era ese continente el más aburrido? ¿Qué carajo está pasando?"
  news.341.b:0 "¡Pagarán con su sangre! Movilizá las reservas!"
  news.341.c:0 "¡Los Argentinos no tienen ninguna posibilidad!"
- 
- argentina.temp.t:0 "¿Quién gobernará nuestra Patria?"
- argentina.temp.d:0 "Ahora que estamos en manos del país, surge un dilema: ¿Quién gobernará nuestro país? Hay dos grandes contendientes para gobernar nuestro país, esos son Fanny Edelman y Liborio Justo. Ambos están dedicados representar al comunismo argentino con todo su corazón y llevar al país a la gloria. \n\n¿Quién será el que tome el mando?"
- argentina.temp.a:0 "Liborio Justo"
- argentina.temp.b:0 "Fanny Edelman"
 
  news.346.t:0 "La Guerra Peruano-Ecuatoriana"
  news.346.d:0 "Tras el aumento de las tensiones y los conflictos fronterizos entre los dos países, estalló una guerra total entre ambas naciones en una lucha por quién controlará Pastaza. \n\nAunque muchos piensan que Perú será el claro ganador debido a su supremacía industrial y militar, existe una pequeña minoría que cree que Ecuador puede salir victorioso de esta guerra. \n\nPor ahora, sólo el tiempo dirá quién será el verdadero vencedor de este conflicto".
@@ -3544,60 +3538,36 @@
  uruguay.16.d:0 "Los brasileños han respondido a nuestros diplomáticos diciendo que no aceptarán estas ofertas de paz y que prefieren dividir a la Argentina de la manera en que lo hemos hecho ahora"
  uruguay.16.a:0 "Maldito seas Brasil..."
  uruguay.17.t:0 "¿Quién debe dirigir nuestra nación?"
- uruguay.17.d:0 "Con la guerra civil en pleno apogeo y nuestra nación sumida en el caos, se plantea una pregunta por encima de cualquier otra, ¿quién debe liderar el país? \n\nEl encarcelamiento de Terra ha provocado que el nuevo estado que se ha creado esté cerca de la anarquía, y necesitamos un líder fuerte lo antes posible. Debido a su encarcelamiento, los ideales democráticos y comunistas se extienden a todo el pueblo uruguayo que está en contra de Terra. \n\nEsta puede ser la última vez que el pueblo decida quién dirigirá la nación, así que tenemos que tomar la decisión correcta y rápida. Después de una elección apresurada, el ganador es..."
- uruguay.17.a:0 "El Consejo Provisionario Liderará por ahora"
- uruguay.17.b:0 "Eugenio Gómez liderará, representando los laburantes"
- uruguay.18.t:0 "[GetYear] Elecciones"
- uruguay.18.d:0 "A pesar de la situación que llevó a los partidos a formar la coalición, la presión de todos los sectores democráticos del país había ido aumentando sobre [URG.GetLeader], exigiendo el regreso de elecciones libres, con algunos radicales incluso reclamando que [URG.GetLeader] está tratando de mantener el poder para sí mismo y, cediendo a la presión, [URG.GetLeader] había programado elecciones para [GetYear]. \n\nAunque la situación en el país está lejos de ser estable, parece [URG.GetLeader] ha cumplido su promesa y, hoy, los votantes tuvieron que decidir entre votar por Emilio Frugoni, Luis Batlle Berres o Luis Alberto de Herrera. Mientras Frugoni y Batlle gozan de relativa popularidad entre la población, Luis Alberto de Herrera es visto por la mayoría de los liberales como un traidor al país, solo siendo defendido por aquellos que apoyaron a Terra. Sin embargo, todos los candidatos disfrutan de una buena base de votantes, dándoles a todos la oportunidad de ganar esta importante elección. \n\nEn [GetDateText], mientras se cuentan los votos, es casi obvio que..."
- uruguay.18.a:0 "¡Luis Batlle Berres ganó las elecciones!"
- uruguay.18.b:0 "¡Emilio Frugoni ganó las elecciones!"
- uruguay.18.c:0 "¡Luis Alberto de Herrera ganó las elecciones!"
- uruguay.19.t:0 "¡Renuncia Luis Batlle Berres!"
- uruguay.19.d:0 "Los crecientes esfuerzos de la oposición para bloquear sus intentos de reforma han afectado la popularidad y el poder de Batlle Berres dentro del partido. Utilizando esta situación a su favor, Andrés Martínez Trueba hizo un trato con Luís Alberto de Herrera del Partido Nacional, ganando su apoyo y aumentando aún más la presión contra Batlle Berres.\n\nHabiendo ganado suficiente poder después del trato con Herrera, Martínez comenzó a presionar a Batlle Berres para que le hiciera concesiones. Y finalmente, comenzó a presionar A sabiendas de que Martínez contaba con el control de ambas cámaras legislativas y el apoyo del Partido Nacional, hoy, al mediodía, el presidente Luis Batlle Berres anunció su renuncia en las Cámaras de Senadores y Diputados, seguida por la renuncia de su vicepresidente Alfeo Brum y todo su gabinete, sorprendiendo a la mayor parte de la nación. \n\nUsando su apoyo en el parlamento, Martínez logró ser elegido como presidente interino por una pequeña mayoría".
- uruguay.19.a:0 "Éxito"
- uruguay.20.t:0 "[GetYear] Referéndum Constitucional"
- uruguay.20.d:0 "Poco después de una semana de asumir la presidencia, Andrés Martínez propuso una reforma constitucional, que buscaba abolir la presidencia y sustituirla por un nuevo sistema basado en el Consejo Nacional de Administración, que fue abolido por Gabriel Terra en 1933. Esto se hizo para mantener su parte del trato con Herrera, ya que ambas partes habían acordado cooperar solo si el poder era compartido entre ambas partes.\n\nDicha reforma fue votada por la población una semana hace un referéndum, con las opciones de mantener la constitución como está o aceptar la nueva propuesta. Y después de contar los votos restantes, la Corte Electoral anunció hoy que el referéndum..."
- uruguay.20.a:0 "...¡Aprobado!"
- uruguay.20.b:0 "...¡¿Falló?!"
- uruguay.21.t:0 "Estancamiento político"
- uruguay.21.d:0 "Luego de los resultados del referéndum, las disputas políticas entre ambos partidos llevaron a la ruptura de la coalición entre el Partido Colorado y el Partido Nacional. Con los partidos Nacional y Colorado fracturados en facciones opuestas, tanto el parlamento como el poder ejecutivo se ha reducido a paso de tortuga, lo que hace que el gobierno no pueda tomar ninguna medida para aliviar las tensiones entre ambas partes y hace que la redada de los remanentes terroristas sea mucho más difícil. \n\nToda esta tensión ha llevado a un distanciamiento y Ambiente tenso en Montevideo, ya que las diferencias entre los partidos continúan creciendo y comienzan a aparecer grietas tanto en el nuevo gobierno como en el sistema democrático".
- uruguay.21.a:0 "¡Esto es un desastre!"
- uruguay.22.t:0 "¡El Gobierno se derrumba!"
- uruguay.22.d:0 "¡Ha sucedido lo impensable! Poco antes de que un mes de estancamiento político y disturbios hayan pasado factura tanto a la ciudadanía como al gobierno de Martínez. \n\nTras las protestas masivas en la Plaza Independencia y el Palacio Legislativo , Martínez ha anunciado su renuncia, seguida en breve por el resto de su gabinete. Cualquier intento del parlamento de nombrar un interino ha fracasado, debido a la falta de cooperación de la PN y la presión de la población civil descontenta ".
- uruguay.22.a:0 "¡¿Esto podría empeorar?!"
- uruguay.26.t:0 "Destino de Argentina"
- uruguay.26.d:0 "Después de nuestra victoria contra el gobierno argentino, muchos comienzan a preguntarse qué será de la República Argentina. [URG.GetLeader] ha convocado a una reunión de representantes comunales de Uruguay para llegar a un acuerdo sobre qué será de Argentina. Después de algunos debates, el consenso es que..."
- uruguay.27.d:0 "Después de nuestra victoria con Chile contra el gobierno argentino, muchos comienzan a preguntarse qué será de Argentina. [URG.GetLeader] ha convocado una reunión de representantes comunales de Chile y Uruguay para llegar a un acuerdo acuerdo sobre cómo dividir Argentina entre las dos comunas anarquistas. Después de algunos debates, el consenso es que..."
- uruguay.26.a:0 "Formaremos comunas en la región leales a la revolución."
+ uruguay.17.d:0 "Con la guerra civil en pleno apogeo y nuestra nación sumida en el caos, se plantea una pregunta por encima de cualquier otra, ¿quién debe liderar el país? \n\nEl encarcelamiento de Terra ha provocado que el nuevo estado que se ha creado esté cerca de la anarquía, y necesitamos un líder fuerte lo antes posible. Debido a su encarcelamiento, los ideales democráticos y comunistas se extienden a todo el pueblo uruguayo que está en contra de Terra. \n\nEsta puede ser la última vez que el pueblo decida quién dirigirá la nación, así que tenemos que tomar la decisión correcta y rápida."
+ uruguay.17.a:0 "Basilio Muñoz seguira dirigiendo por ahora."
+ uruguay.17.b:0 "Eugenio Gómez dirigira por los trabajadores."
+ uruguay.18.t:0 "[GetYear] Elections"
+ uruguay.18.d:0 "A pesar de la situación que llevó a los partidos a formar la coalición, la presión de todos los sectores democráticos del país venía sumandose sobre [URG.GetLeader], exigiendo el regreso de elecciones libres, con algunos radicales incluso afirmando que [URG.GetLeader] está buscando mantener el poder para sí mismo y, cediendo a la presión, [URG.GetLeader] había programado elecciones para [GetYear]. \n\nAunque la situación en el país es todo menos estable, parece que [URG.GetLeader] ha cumplido su promesa y, hoy, los votantes tuvieron que decidir entre votar por Emilio Frugoni, Luis Batlle Berres o Luis Alberto de Herrera. Mientras que Frugoni y Batlle gozan de relativa popularidad entre la población, Luis Alberto de Herrera es visto por la mayoría de los liberales y socialistas como un traidor al país, siendo solo defendido por aquellos que apoyaron a Terra. Sin embargo, todos los candidatos disfrutan de una buena base de votantes, lo que les brinda la oportunidad de ganar esta importante elección. \n\nEn [GetDateText], mientras se cuentan los votos, es obvio que ..."
+ uruguay.18.a:0 "Luis Batlle Berres gano las elecciones!"
+ uruguay.18.b:0 "Emilio Frugoni gano las elecciones!"
+ uruguay.18.c:0 "Luis Alberto de Herrera gano las elecciones!"
+ uruguay.19.t:0 "Luis Batlle Berres renuncia!"
+ uruguay.19.d:0 "Los crecientes esfuerzos de la oposición para bloquear sus intentos de reforma han afectado la popularidad y el poder de Batlle Berres dentro del partido. Aprovechandose esta situación a su favor, Andrés Martínez Trueba logro hacer un trato con Luís Alberto de Herrera del Partido Nacional, ganando su apoyo y aumentando aún más la presión contra Batlle Berres. \n\nHabiendo ganado suficiente poder despúes del trato con Herrera, Martínez comenzó a presionar a Batlle Berres para que le hiciera concesiones. Y finalmente, comenzó a presionarlo a él y a su gabinete para que renunciaran. Sabiendo que Martínez tenía el control de ambas cámaras legislativas y el apoyo del Partido Nacional, hoy al mediodía el presidente Luis Batlle Berres anunció su renuncia en las Cámaras de Senadores y Diputados, seguida pronto por la renuncia de su vicepresidente Alfeo Brum y todo su gabinete, tomando por sorpresa a la mayor parte de la nación. \n\nCon su apoyo en el parlamento, Martínez logró ser elegido presidente interino por una escasa mayoría."
+ uruguay.19.a:0 "Perfecto!"
+ uruguay.20.t:0 "Referéndum Constitucional de [GetYear]"
+ uruguay.20:d:0 "Poco después de una semana después de asumir la presidencia, Andrés Martínez propuso una reforma constitucional, que buscaba abolir la presidencia y reemplazarla por un nuevo sistema basado en el Consejo Nacional de Administración, que fue abolido por Gabriel Terra en 1933. hizo para mantener su parte del trato con Herrera, ya que ambas partes habían acordado cooperar solo si el poder era compartido entre ambas partes. \n\nDicha reforma fue votada por la población hace una semana en un referéndum, con las opciones de mantener la constitución como está o aceptar la nueva propuesta. Y tras contar los votos restantes, la Corte Electoral anunció hoy que el referéndum..."
+ uruguay.20.a:0 "...Fue aprobado!"
+ uruguay.20.b:0 "...Fue rechazado?!"
+ uruguay.21.t:0 "Callejón sin Salida Político"
+ uruguay.21.d:0 "Tras los resultados del referéndum, las disputas políticas entre ambos partidos llevaron a la ruptura de la coalición entre el Partido Colorado y el Partido Nacional. Con los partidos Nacional y Colorado fracturados en facciones opuestas, tanto el parlamento como el poder ejecutivo se han ralentizado, lo que hace que el gobierno no pueda tomar ninguna acción para aliviar las tensiones entre ambos partidos y hace que el arresto de los Terristas restantes sea mucho más difícil. \n\nToda esta tensión ha llevado a un estado de ánimo distante y tenso en Montevideo, ya que las diferencias entre partidos continúan creciendo y comienzan a aparecer grietas tanto en el nuevo gobierno como en el sistema democrático."
+ uruguay.21.a:0 "Esto es un desastre!"
+ uruguay.22.t:0 "El gobierno collapsa!"
+ uruguay.22.d:0 "¡Ha sucedido lo impensable! Poco menos de un mes de estancamiento político y disturbios ha pasado factura tanto a la ciudadanía como al gobierno de Martínez. \n\nTras protestas masivas en la Plaza Independencia y el Palacio Legislativo, Martínez ha anunciado su renuncia, seguido en breve por el resto de su gabinete. Cualquier intento del parlamento de nombrar un interino ha fracasado debido a la falta de cooperación del PN y a la presión de la población civil descontenta."
+ uruguay.22.a:0 "Podría esto empeorar!?"
+ uruguay.26.t:0 "El futuro de Argentina"
+ uruguay.26.d:0 "Después de nuestra victoria contra el gobierno argentino, muchos comienzan a preguntarse qué será de la República Argentina. [URG.GetLeader] ha convocado a una reunión de representantes de las comunas de Uruguay para llegar a un acuerdo sobre lo que será de Argentina. Después de algunos debates, el consenso es que..."
+ uruguay.27.d:0 "Después de nuestra victoria con Chile contra el gobierno argentino, muchos comienzan a preguntarse qué será de Argentina. [URG.GetLeader] ha convocado a una reunión de representantes de las comunas tanto de Chile como de Uruguay para llegar a un acuerdo sobre cómo dividir Argentina entre las dos comunas anarquistas. Después de algunos debates, el consenso es que..."
+ uruguay.26.a:0 "Formaremos comunas en la región que sean leales a la revolución."
  uruguay.26.b:0 "Dividiremos Argentina en dos regiones y formaremos comunas leales a la revolución."
- uruguay.26.c:0 "Integraremos a los argentinos en las comunas existentes."
- uruguay.27.t:0 "Repartiendo Argentina"
- uruguay.27.a:0 "Separaremos Argentina con Chile y ambos formaremos comunas leales a la revolución en nuestras regiones."
- uruguay.27.b:0 "Integraremos a los argentinos en nuestras comunas existentes, mientras que los chilenos hacen lo mismo".
- uruguay.28.t:0 "El Estado de la Economía"
- uruguay.28.d:0 "Desde su independencia en 1830, Uruguay ha sido una sociedad agraria, con la mayor parte de los ingresos provenientes de las estancias en el campo. Sin embargo, con la revolución industrial en Europa, las industrias extranjeras comenzaron a llegar a Uruguay, y con ellos, la maquinaria industrial, se inició un proceso de urbanización e industrialización centrado en la capital montevideana, a pesar de todo, la mayor parte de los ingresos de la nación aún provienen de las exportaciones agrícolas, que entraron en juego en la gran guerra. , donde Uruguay entró en una época dorada gracias a los ingresos de estas exportaciones.\n\nAhora, con las tensiones avecinándose tanto en Europa como en el resto del mundo, los economistas comenzaron a debatir si este sistema es sostenible a largo plazo o si es Es hora de que Uruguay se ponga al día con los tiempos modernos. Algunos miembros del gobierno también están preocupados de que un cambio drástico en nuestra economía pueda traer descontento entre la población rural y las élites".
- uruguay.28.a:0 "Si no está roto, no lo arregles"
- uruguay.28.b:0 "Debemos alcanzar al resto del mundo"
- uruguay.29.t:0 "El destino del Estado de Bienestar"
- uruguay.29.de:0 "A medida que continuamos creando proyectos para expandir nuestra situación económica, se ha vuelto más difícil mantener un superávit positivo en nuestro presupuesto anual. Con esto en mente, algunos miembros de nuestro gabinete han sugerido una reforma a la muchos programas de asistencia social patrocinados por el gobierno.\n\n\nEsto ha llevado a un debate controvertido, ya que estos programas son muy populares entre la gente y las reformas extensas podrían resultar muy impopulares. Algunos políticos también han argumentado que una abolición completa de estos programas nos permitiría industrializarnos rápidamente, pero esta acción podría generar una reacción negativa tanto de la población como de otros políticos".
- uruguay.29.a:0 "Mantener el sistema actual."
- uruguay.29.b:0 "Aprobar algunas reformas menores"
- uruguay.29.c:0 "Aprobar algunas reformas básicas"
- uruguay.29.d:0 "Aprobar reformas amplias"
- uruguay.29.e:0 "Abolir el sistema de bienestar"
- uruguay.30.t:0 "Carne en lata Fray Bentos"
- uruguay.30.d:0 "Fray Bentos es una marca de corned beef con origen en el Frigorífico Anglo Meatpacking de Río Negro, siendo su denominación originaria de la localidad de Fray Bentos, donde se encuentra ubicada. Dicha marca ha venido teniendo un notable éxito debido a las crecientes tensiones, con muchas naciones comenzando a almacenar productos enlatados en caso de una guerra total. \n\nEsto nos deja en una posición interesante, ya que muchas naciones están dispuestas a comprar nuestros productos, pero el tamaño limitado de la planta y la mano de obra significa que solo puede cubrir las demandas de una nación importante. Se podrían hacer argumentos para ayudar a cualquiera de las partes, pero también podría consumirse localmente si no podemos asegurar un comprador".
- uruguay.30.a:0 "Exportarlo a Gran Bretaña"
- uruguay.30.b:0 "Exportarlo a Alemania"
- uruguay.30.c:0 "Exportarlo a la Unión Soviética"
- uruguay.30.do:0 "Producirlo para consumo local en su lugar"
- uruguay.31.t:0 "¡Protestas nacionales estallan en guerra civil!"
- uruguay.31.d:0 "Después de más de un año de oposición de los blancos a nuestras acciones políticas, el barril de pólvora ha llegado a su punto de ebullición y ha explotado. \n\nLos simpatizantes de los blancos se han reunido por todo el país, capturando armas de nuestras reservas , y comenzó a atacar edificios gubernamentales y estaciones de policía locales. \n\n¡Necesitamos enfrentar esta insurrección inmediatamente antes de que se salga de control!"
- uruguay.31.a:0 "¡Pagarán por esto!"
- uruguay.32.t:0 "¡Protestas en Colorado estallan en guerra civil!"
- uruguay.32.d:0 "Después de más de un año de que los colorados se opusieron a nuestras acciones políticas, el barril de pólvora llegó a su punto de ebullición y explotó. \n\nLos partidarios de los colorados se han reunido en todo el país, capturando armas de nuestras reservas , y comenzó a atacar edificios gubernamentales y estaciones de policía locales. \n\n¡Necesitamos enfrentar esta insurrección inmediatamente antes de que se salga de control!"
- uruguay.32.a:0 "¡Pagarán por esto!"
-
+ uruguay.26.c:0 "Integraremos a los argentinos a comunas ya existentes"
+ uruguay.27.t:0 "Dividiendo Argentina"
+ uruguay.27:a.0 "Dividiremos Argentina con Chile y los dos formaremos comunas leales a la revolución en nuestras regiones."
+ uruguay.27.b:0 "Integraremos a los argentinos en nuestras comunas existentes, mientras que los chilenos hacen lo mismo."  
 # === [LocEditor:OrphanedKeys] Keys that do not exist in English ===
  usa.24.title:0 "El ocaso rojo"
  news.317.c:0 "Esto desbarata nuestros planes..."
@@ -3853,13 +3823,6 @@
  PRU_civil_war_situation:0 "Por un lado, tenemos a Luis A. Flores, un líder robusto que ya ha demostrado su valía en el campo y con su capacidad de liderazgo. \n\nPor otro lado, tenemos a Eloy Ureta, un líder inteligente que podría utilizar su ingenio para superar al enemigo. \n\nLa guerra civil está en pleno apogeo, así que tenemos que hacer una elección rápida, el líder de nuestra nación será..."
  PRU_peaceful_coup_situation:0 "Por un lado, tenemos a Luis A. Flores, un líder con talento que sabe dirigir con puño de hierro. \n\nPor otro lado, tenemos a Eloy Ureta, un líder capaz que con su ingenio e inteligencia podría mejorar mucho nuestra economía, nuestro ejército y la estabilidad general del país. \n\nCon esta elección en nuestras manos, el líder de nuestra nación será..."
 
- peru.33.t:0 "[FROM.GetName] Quiere comprar nuestros Tanques"
- peru.33.d:0 "Delagados de [FROM.GetName] han viajado a través del mundo para venir a nuestra nación y preguntarnos si pueden comprar algunos de nuestros tanques. Han visto nuestro arsenal y están muy satisfechos con nuestros tanques, especialmente los ligeros, y han declarado que están dispuestos a pagar una suma decente por algunos. \n\n¿Debemos aceptar su oferta?"
- peru.33.a:0 "Dejenlos comprar Buenos Tanques"
- peru.33.b:0 "Dejenlos comprar Tanques"
- peru.33.c:0 "No le dejemos comprar nada!"
-
-
  peru.254.t:0 "¡Los Fascistas están Enfurecidos por la Anulación de las Elecciones!"
  peru.254.d:0 "Los fascistas han dejado muy claro su descontento por la anulación de las elecciones, casi demasiado claro. \n\nPersonas infiltradas entre sus filas nos han informado de que están planeando una guerra civil en toda regla para intentar derrocar a nuestro gobierno. \n\nTenemos que asegurarnos de que eso no ocurra, pase lo que pase."
  peru.254.a:0 "¡Pagarán por esto!"
@@ -4015,10 +3978,6 @@
  bolivia.8.d:0 "Ha llegado la noticia a todo el país de que Germán ha fallecido hoy. \n\nMuchos especulan que se suicidó, sin embargo, hay una pequeña minoría que cree que pudo haber sido asesinado. \n\nAhora no es el momento de especular sobre quién o qué lo mató, ahora es el momento de llorar la muerte de nuestro presidente y esperar lo mejor. Por el futuro de Bolivia".
  bolivia.8.a:0 "Que descanse en paz"
 
- bolivia.9.t:0 "Bolivia esta Intentando Tomar Antofagasta"
- bolivia.9.d:0 "Algunos de nuestros espías han notado un comportamiento extraño en la frontera boliviana, parece que están planeando algún tipo de plan para tomar nuestra provincia de Antofagasta. Tenemos que tener cuidado ya que no están usando la fuerza directa, sino más bien maniobras subversivas con el fin de tomar el estado sin guerra. \n\nNo permitiremos que estos viles bolivianos tomen un centímetro de nuestras tierras".
- bolivia.9.a:0 "Nos aseguraremos de que eso no ocurra!"
-
 
  ### Eventos de la Confederación Perú-Boliviana ###
 
@@ -4124,74 +4083,6 @@
  news.359.a:0 "Verdaderamente una vergüenza"
  news.359.b:0 "¡Por fin, todo este petróleo será nuestro!"
 
- argentina.rework.1.t:0 "¿Hacemos las próximas elecciones?"
- argentina.rework.1.d:0 "El mandato de 6 años de Justo está llegando a su fin, y la gente espera que las elecciones se celebren pronto. \n\nSin embargo, tenemos el poder de simplemente no celebrar las elecciones y mantener a Justo en el poder, después de todo, los militares deberían respaldarnos y tratar con las personas que puedan oponerse a esto. \n\nAl final, la elección depende de nosotros. ¿Qué debemos hacer..."
- argentina.rework.1.a:0 "Organizar las elecciones"
- argentina.rework.1.b:0 "¡Justo permanecerá en el poder pase lo que pase!"
- argentina.rework.2.t:0 "Escándalo de corrupción"
- argentina.rework.2.d:0 "La corrupción en la nación ha causado un escándalo en el escenario político de la nación. Los políticos corruptos están moviendo los hilos para beneficiarse a sí mismos sin preocuparse por nadie más. \n\n¿Qué debemos hacer con este lío? ?"
- argentina.rework.2.a:0 "Desafíalo de frente"
- argentina.rework.2.b:0 "Vamos a esconderlo debajo de la alfombra"
- argentina.rework.3.t:0 "¡Se ha encontrado al oligarca corrupto!"
- argentina.rework.3.d:0 "Después de realizar una extensa investigación en nuestro gobierno, hemos descubierto un oligarca corrupto entre nosotros. Ahora que lo tenemos a nuestro alcance, ¿qué debemos hacer?"
- argentina.rework.3.a:0 "Échenlos del país"
- argentina.rework.3.b:0 "Barrer nuestros hallazgos debajo de la alfombra"
- argentina.rework.4.t:0 "La investigación resultó ser un fracaso"
- argentina.rework.4.d:0 "Nuestra investigación resultó ser un fracaso, ya que nuestros investigadores no pudieron encontrar ninguna prueba concreta sobre la presencia de algún tipo de corrupción o político corrupto dentro del gobierno."
- argentina.rework.4.a:0 "Puede que obtengamos mejores resultados la próxima vez"
- argentina.rework.ALN.t:0 "La formación de la Alianza Libertadora Nacionalista"
- argentina.rework.ALN.d:0 "Nos ha llegado la noticia de que la Legión Cívica Argentina ha sido disuelta y transformada en la Alianza Libertadora Nacionalista bajo el liderazgo de Juan Queraltó. \n\nSon un partido extremista que se parece mucho al partido NSDAP en la Alemania nazi. Tenemos que estar atentos a este nuevo partido, podrían no estar tramando nada bueno".
- argentina.rework.ALN.a:0 "Tenemos que tener cuidado"
- argentina.rework.5.t:0 "¡Ataque terrorista de la ALN!"
- argentina.rework.5.d:0 "Los reporteros de noticias inundaron las radios cuando llegaron informes de un ataque terrorista no provocado por parte del partido ALN. ¡Tenemos que lidiar con ellos rápidamente e impedir que continúen con este alboroto salvaje!"
- argentina.rework.5.a:0 "¡Pagarán por esto!"
- argentina.rework.6.t:0 "Sede de ALN encontrada"
- argentina.rework.6.d:0 "Después de nuestro reciente resumen del lío causado por la ALN, hemos encontrado información bastante intrigante sobre su cuartel general. Con su cuartel general, no tendrán más remedio que guardar silencio y recordar. \n\nLo que sigue debería ser obvio."
- argentina.rework.6.a:0 "¡Apunta y destrúyelo!"
- argentina.rework.7.t:0 "Los militares están disgustados con nuestro gobierno actual"
- argentina.rework.7.d:0 "La tensión en el escenario político de Argentina se ha ido rápidamente de las manos, y los militares han estado observando muy de cerca la forma en que hemos estado gobernando la nación, y desde el punto de vista de están lejos de estar satisfechos con nuestras acciones actuales. \n\nVarios de nuestros generales nos han emitido una advertencia directamente, diciendo que si la situación en la nación continúa escalando, habrá graves consecuencias".
- argentina.rework.7.a:0 "Maldita sea, tenemos que tener cuidado"
- argentina.rework.8.t:0 "Los militares han rodeado la Casa Rosada"
- argentina.rework.8.d.notHistorical:0 "Mientras hablamos, todo lo que podemos hacer es mirar indefensos cómo los militares tienen la Casa Rosada, el principal edificio del gobierno de Argentina y el lugar donde el presidente tiene todo el poder administrativo, completamente rodeada y ordenándonos que renunciemos al liderazgo de la nación. \n\nHasta ahora no tenemos idea de cómo obtuvieron tanto poder o financiación, pero de lo que sí tenemos una pista es de la gravedad de esta situación y nuestra incapacidad para responder. .\n\nSin tiempo libre, ¿qué debemos hacer?"
- argentina.rework.8.d.historical:0 "Mientras hablamos, todo lo que podemos hacer es observar indefensos cómo los militares tienen la Casa Rosada, el principal edificio del gobierno de Argentina y el lugar donde el presidente tiene todo el poder administrativo, completamente rodeada y ordenándonos que renunciemos al liderazgo de la nación. \n\nLos principales perpetradores de esto deben haber sido el GOU (Grupo de Oficiales Unidos), que se financió en secreto y creció en poder sin que nos demos cuenta. \n\n¿Qué debemos hacer? ¿ahora?"
- argentina.rework.8.a:0 "Que se hagan cargo ellos"
- argentina.rework.8.b:0 "SOBRE NUESTRAS TUMBAS, VIVA LA PATRIA"
- argentina.rework.9.t:0 "La gente sale a la calle a protestar"
- argentina.rework.9.d:0 "Muchas personas en todo el país han comenzado a protestar, exigiendo estabilidad y prosperidad en el país. Sus voces solo se harán más fuertes a medida que pase el tiempo, y sus problemas muestran cuán grave se está volviendo la situación aquí. en Argentina."
- argentina.rework.9.a:0 "Nosotros nos encargamos de ellos"
- argentina.rework.10.t:0 "¡La inflación golpea la economía!"
- argentina.rework.10.d:0 "Aunque antes no teníamos problemas con la inflación, el mercado de hoy se derrumbó debido a que una crisis inflacionaria ahora hace estragos en nuestra ya débil economía. \n\nLos mercados están luchando por mantenerse, y la gente está corriendo a los bancos para retirar el dinero que puedan tener, solo empeorando la situación".
- argentina.rework.10.a:0 "Esto es lo último que necesitábamos"
- argentina.rework.11.t:0 "Nos han metido en una Lucha Política"
- argentina.rework.11.d:0 "Las elecciones de 1937 nos han estado cobrando un precio muy alto, ya que nos hemos visto obligados a estar alerta todo este tiempo para que la gente votara por nuestro partido. Esto, sin embargo, ha llevar a las partes contrarias a aprovechar la situación y ponernos en desventaja, desafiando nuestro dominio. \n\nNo podremos hacer nada, por el momento, pero devolveremos el golpe y con fuerza".
- argentina.rework.11.a:0 "Lo superaremos"
- argentina.rework.12.t:0 "El Gobierno ha iniciado una investigación"
- argentina.rework.12.d:0 "Por temor a posibles oligarcas o políticos corruptos en el país, el gobierno ha iniciado una investigación exhaustiva en todo el país para tratar de detener esto. \n\nSi les permitimos continuar con esta investigación, es posible que descubran sobre nuestros leales aliados ayudándonos en las sombras, y no podemos permitir que eso suceda".
- argentina.rework.12.a:0 "Hay que acabar con esto"
- argentina.rework.13.t:0 "Los militares exigen mayor financiación"
- argentina.rework.13.d:0 "Los militares han ofrecido su apoyo en las sombras, a cambio de que aumentemos su financiación y poder en la nación. Si no cumplimos, podría haber graves consecuencias."
- argentina.rework.13.a:0 "Bien, lo haremos"
- argentina.rework.13.b:0 "No pasa"
- argentina.rework.14.t:0 "Los oligarcas exigen más poder"
- argentina.rework.14.d:0 "Los oligarcas de todo el país están disgustados con el poder que tienen actualmente y exigen más poder político sobre el país. \n\n¿Deberíamos acceder a sus demandas?"
- argentina.rework.15.t:0 "Oligarcas exigen aumento de salarios"
- argentina.rework.15.d:0 "Los oligarcas en nuestro país están disgustados con sus salarios actuales y exigen más dinero para redirigirlos a fin de mantener su apoyo. \n\n¿Deberíamos ceder a sus demandas? ?"
- argentina.rework.16.t:0 "Políticos en Buenos Aires exigen redireccionamiento de fondos"
- argentina.rework.16.d:0 "Políticos corruptos de Buenos Aires están exigiendo que los fondos nacionales se centralicen únicamente en Buenos Aires. La mayoría de nuestros beneficios provienen de la capital, y no adherirse a sus demandas podría resultar en la pérdida de su apoyo . \n\n¿Deberíamos estar de acuerdo?"
- argentina.rework.17.t:0 "Los oligarcas nos apoyan"
- argentina.rework.17.d:0 "Últimamente, los oligarcas han estado muy complacidos con la forma en que los hemos tratado, y han accedido a pagarnos por nuestras acciones."
- argentina.rework.17.a:0 "¡Genial!"
- argentina.rework.18.t:0 "Argentinos de todo el país ofrecen tomar las armas"
- argentina.rework.18.d:0 "La situación actual de nuestro país se está desmoronando rápidamente. Los soldados extranjeros están entrando en nuestro país y nuestro ejército resiste el asalto. En medio de todo este caos, los argentinos de todo el país se han ofrecido a tomar las armas para defender la Patria. \n\n¿Deberíamos aceptar su ayuda y permitirles unirse a los soldados profesionales en el frente?"
- argentina.rework.18.a:0 "A DEFENDER LA PATRIA!"
- argentina.rework.18.b:0 "Lo siento pero eso no puede pasar"
-
- argentina.22.t.ucravictor:0 "La UCRA (Concordancia) ha ganado las Elecciones"
- argentina.22.t.ucrvictor:0 "La UCR ha ganado las Elecciones"
- argentina.22.t.psvictor:0 "El Partido Socialista ha ganado las Elecciones
- argentina.22.d:0 "Llegaron las elecciones, después de 6 años de Agustín Pedro Justo ya contamos los votos y el país ha decidido quién debe llevar a nuestra nación a la grandeza. \n\nQuien tome el mando, solo esperemos saben lo que hacen y se ocupan de los problemas que enfrenta actualmente nuestro país”.
- argentina.22.a:0 "¡No te decepcionaremos!"
-
  
  ### Eventos de Colombia ###
 
@@ -4245,7 +4136,7 @@
  int.oponen.desc:0 "A pesar de los esfuerzos presidenciales por otorgarle la alcaldía a los liberales electos, ha sido imposible lograr este cometido. Los gobernadores departamentales conservadores argumentan que el país se encuentra en estado de sitio desde 1899, por lo que están avalados constitucionalmente para “remover del cargo a cualquier subordinado si lo consideran adecuado”. Es más que obvio que estos conflictos son de un orden ideológico, pero están sustentados legalmente y es poco lo que se puede hacer al respecto."
  int.oponen.a:0 "Empeñados en obstruir la voluntad del pueblo."
  #colombia.17
- pensa.eliminada.title:0 "Gobierno elimina prensa subversiva"
+ prensa.eliminada.title:0 "Gobierno elimina prensa subversiva"
  prensa.eliminada.desc:0 "El extenso operativo preparado por las autoridades ha dado sus frutos. La imprenta de diarios ultraconservadores finalmente fue ubicada en Medellín, desde donde se distribuía a todo el departamento, incitando el odio hacia los liberales. Múltiples personas fueron arrestadas y el lugar de la imprenta ha quedado bajo custodia policial. La dirección liberal antioqueña exaltó la labor gubernamental y espera que con este hecho merme la violencia política."
  prensa.eliminada.a:0 "Excelente."
  #colombia.18
@@ -4642,17 +4533,6 @@
  colombia.106.desc:0 "Nuestros informes de inteligencia reportan que las organizaciones de extrema derecha que abogan por la reunificación de la Confederación Perú-Boliviana están aumentando sus actividades en la nación. Estos incidentes antes eran aislados, pero se están intensificando debido a lo que parece ser un apoyo económico por parte de los colombianos. Estas acusaciones son delicadas, por lo que la ausencia de pruebas concluyentes nos deja en una posición inviable. En cualquier caso, lo mejor es prepararnos antes que sea demasiado tarde."
  colombia.106.a:0 "¡¿Quienes se creen que son?!"
 
- ### Evento Generico al Comienzo del Juego 
- EUYL_startupevent.1.t:0 "Muchas Gracias por Jugar En Unión Y Libertad | A South America Rework!"
- EUYL_startupevent.1.d:0 "Muchas gracias por jugar al mod. Si no estás jugando el mod, entonces estás jugando un mod que contiene contenido del mod En Unión y Libertad | A South America Rework. \n\nEspero que disfrutes del mod, y si encuentras algún error, por favor asegúrate de reportarlo en los comentarios en steam, o en el servidor discord. Muchas gracias y que lo disfrutéis".
- EUYL_startupevent.1.a:0 "Genial, lo haré"
- EUYL_startupevent.1.b:0 "Jesucristo, deja de molestarme"
-
- news.bolivia.t:0 "La Guerra Civil Boliviana"
- news.bolivia.d:0 "Tras la negación de Tejada a ceder ante el ejército, los generales Germán Busch y David Toro decidieron tomar las armas, utilizando su apoyo militar e influencia sobre las fuerzas armadas, y organizaron un levantamiento a gran escala contra el gobierno de Tejada. Ya se han producido múltiples informes de atentados, y los combates se suceden mientras se envía este mensaje a nivel mundial. \n\nEl país está muy dividido, y muchos expertos no saben cuál será el resultado de este conflicto, ni las consecuencias que traerá. \n\nLo único que podemos hacer es esperar que la situación no se agrave más allá de las fronteras de Bolivia".
- news.bolivia.a:0 "¡Vamos a acabar con esto!"
- news.bolivia.b:0 "Espero que puedan recuperarse de esto"
-
 
  ### Brasil ###
  brazil.1.t:0 "Las plantaciones de café se ofrecen para ayudar a Nuestra Economía"
@@ -4683,427 +4563,3 @@
  brazil.7.t:0 "Los Agricultores rechazaron nuestro acuerdo"
  brazil.7.d:0 "Los propietarios de las plantaciones han rechazado nuestro acuerdo, y nos han dicho que no interrumpamos su negocio a toda costa. Parece que nuestra trnasición a una economía industrializada no será tan suave como parecía."
  brazil.7.a:0 "Parece que tendremos un nuevo enemigo"
-
- brazil.8.t:0 "¿Cuánto le Gustaría Invertir en el Ejército?"
- brazil.8.d:0 "Tenemos la opción de invertir cierta cantidad de nuestro poder político sobre la nación en la expansión de nuestro ejército. Algunos expertos nos dicen que invirtamos poco, y que vayamos aumentando con el tiempo, mientras que otros nos dicen que invirtamos lo máximo posible ahora. \n\nDadas estas opciones, ¿con cuál deberíamos quedarnos?"
- brazil.8.a:0 "Invertir 35 poder político"
- brazil.8.b:0 "Invertir 60 de poder político"
- brazil.8.c:0 "Invertir 110 de poder político"
-
- brazil.9.t:0 "Brasil Solicita Licencia para Producir nuestros Tanques"
- brazil.9.d:0 "Políticos y generales brasileños han llegado hoy a Washington D.C. para solicitarnos una petición. Están solicitando acceso para producir nuestros tanques, y para algunos de nuestros tanques. \n\nNuestras relaciones con Brasil y los brasileños han mejorado en los últimos años, y su posición dominante en América del Sur podría ser de gran importancia estratégica para nosotros, especialmente en el futuro si alguna vez nos encontramos en una situación difícil. \n\nTeniendo en cuenta estos factores, ¿deberíamos aceptar su petición?"
- brazil.9.a:0 "Aceptar su petición"
- brazil.9.b:0 "Negar su petición"
-
- brazil.10.t:0 "Brasil Solicita la Compra de uno de nuestros Transportistas"
- brazil.10.d:0 "Los brasileños se han fijado en nuestros modelos de portaaviones y han decidido que podrían hacer un buen uso de uno de nuestros portaaviones en su propia armada. \n\n¿Deberíamos permitirles comprar uno de nuestros portaaviones?"
- brazil.10.a:0 "Sí"
- brazil.10.b:0 "No"
-
- brazil.11.t:0 "Opositores políticos protestan contra nuestras campañas de propaganda"
- brazil.11.d:0 "Varios funcionarios y muchos de sus partidarios han tomado represalias contra nuestro aumento de influencia en la esfera política de la nación. Las protestas han comenzado a extenderse por todo el país a medida que miles de personas comienzan a reclamar que estamos incrementando egoístamente nuestro propio poder. \n\nLas espinas crecen cada vez más en nuestros costados cuanto más intentamos sacar adelante nuestra agenda política. Tenemos que ser conscientes de las decisiones que tomamos de las consecuencias que pueden venir después."
- brazil.11.a:0 "No van a protestar durante mucho tiempo"
-
- brazil.12.t:0 "A [FROM.GetName] le gustaría que invirtiéramos en su país"
- brazil.12.d:0 "[FROM.GetName] se ha puesto en contacto con nosotros recientemente, preguntando si estaríamos dispuestos a invertir en su economía. Afirman que nos beneficiaremos a largo plazo y que nuestra economía crecerá junto a la suya. \n\n¿Deberíamos invertir parte de nuestras reservas en [FROM.GetName]?"
- brazil.12.a:0 "Sí, absolutamente"
- brazil.12.b:0 "No, no nos sobra el dinero"
-
- brazil.13.t:0 "[FROM.GetName] ha Invertido! ¿Dónde debemos poner el dinero?"
- brazil.13.d:0 "Nuestros funcionarios han informado con una excelente noticia, [FROM.GetName] ha aceptado nuestra petición y ha invertido una buena suma de sus reservas en nuestra economía. \n\nAhora nos toca a nosotros decidir en qué queremos invertir ese dinero. \n\nCon esta elección en la palma de la mano, ¿en qué debemos invertir ese dinero?"
- brazil.13.a:0 "Invertirlo en los mercados civiles"
- brazil.13.b:0 "Invertirlo en el ejército"
- brazil.13.c:0 "Invertirlo en la Marina"
- brazil.13.e:0 "Invertirlo en la infraestructura y el sistema ferroviario"
-
- brazil.14.t:0 "[FROM.GetName] no ha aceptado nuestra solicitud"
- brazil.14.d:0 "Lamentablemente, [FROM.GetName] ha rechazado nuestra petición de invertir en nuestra nación, diciendo que simplemente no tienen suficiente dinero de sobra para invertir en nuestra nación. Esperemos que puedan invertir en otro momento".
- brazil.14.a:0 "Lamentable"
-
- brazil.15.t:0 "¡Vargas ha comenzado los preparativos para el establecimiento de su Estado Novo!"
- brazil.15.d:0 "Vargas ha comenzado oficialmente los preparativos para su versión de Brasil, estableciéndose en el centro del país y dirigiéndolo a su gusto. \n\nNo se sabe mucho de cómo va a lograr tal hazaña, sin embargo muchos especulan con un posible autogolpe para deponer al congreso y tomar el control total de la nación. Debemos estar atentos a lo que planea Vargas y debemos asegurarnos de que no se interponga en nuestro camino".
- brazil.15.a:0 "¡Nos aseguraremos de que no lo haga!"
-
- brazil.16.t:0 "El Congreso ha intervenido en nuestros planes"
- brazil.16.d:0 "El Congreso de Brasil se ha dado cuenta de nuestras acciones sin precedentes sobre el Estado y ha impuesto varias reformas para intentar reducir la influencia sobre nuestra nación". \n\nTeniendo en cuenta el poder del congreso en este momento, no se puede hacer mucho, pero con suficiente esfuerzo y tiempo, podríamos ser capaces de cambiar las tornas."
- brazil.16.a:0 "No podrán detenernos"
-
- brazil.17.t:0 "El Congreso interviene en nuestros planes para una dictadura"
- brazil.17.d:0 "El congreso se ha dado cuenta de algunas de nuestras extrañas acciones y han comenzado a establecer reformas a nivel nacional para hacer retroceder el avance de nuestra dictadura". \n\nTodavía es un misterio cómo han sido capaces de descubrir nuestros planes, pero tenemos que tener cuidado con sus acciones. Si impulsan demasiadas reformas, podríamos estar en serios problemas".
- brazil.17.a:0 "¡Las meras reformas no nos detendrán!"
-
- brazil.18.t:0 "Los comunistas planean extender su influencia a otro estado"
- brazil.18.d:0 "Nuestra cobertura de inteligencia sobre la nación ha detectado actividad subversiva comunista en un estado que no informó previamente de ninguna actividad de este tipo. Parece que los comunistas están planeando establecerse completamente allí. \n\nTenemos que intentar detenerlos antes de que sea demasiado tarde".
- brazil.18.a:0 "Dejemos que lo tomen, lo recuperaremos después"
- brazil.18.b:0 "¡Estos malditos comunistas no van a tomar ni un centímetro más de este país!"
-
- brazil.19.t:0 "Los comunistas han extendido la propaganda sobre el país"
- brazil.19.d:0 "Los comunistas han comenzado a difundir propaganda masiva sobre su movimiento al pueblo de Brasil, especialmente dentro de los estados donde la actividad subversiva está actualmente activa. \n\nTambién están apuntando mucho a los agricultores y a la clase baja, por lo que tenemos que tener cuidado en los estados donde tenemos plantaciones."
- brazil.19.a:0 "Qué tácticas más sucias"
-
- brazil.20.t:0 "¡Los comunistas están planeando hacer estragos en un estado!"
- brazil.20.d:0 "Algunos de nuestros espías encubiertos han informado de un descubrimiento bastante desalentador: los comunistas están planeando causar daños deliberadamente en un estado sobre el que tienen influencia para hacer oír su voz. \n\nTenemos que ser muy cuidadosos, ya que aún no sabemos la gravedad de los daños. Debemos intentar detenerlos lo antes posible".
- brazil.20.a:0 "¿Hablas en serio?"
-
- brazil.22.t:0 "Los integralistas aumentan su influencia sobre el país"
- brazil.22.d:0 "Utilizando algunas tácticas bastante cuestionables, los integralistas han incrementado su influencia sobre la política de este país y están empezando a suponer una seria amenaza para el poder administrativo que tenemos sobre el país. \n\nTenemos que intentar detenerlos antes de que se vuelvan demasiado poderosos. Como mínimo, debemos asegurarnos de que sean amigos de nuestro gobierno".
- brazil.22.a:0 "No tienen nada bueno..."
-
- brazil.23.t:0 "El Congreso elabora reformas para controlar más eficazmente a la nación"
- brazil.23.d:0 "El Congreso ha anunciado oficialmente una nueva ola de reformas para el país y su política con el fin de establecer un punto de apoyo aún mayor en la nación. Esto desbaratará algunos de nuestros planes, y hará que la influencia del congreso sobre la nación se dispare. \n\nN - Cueste lo que cueste, tenemos que asegurarnos de que el congreso no haga esto a menudo, para que podamos continuar adecuadamente con nuestros planes."
- brazil.23.a:0 "Molestia molesta"
-
- brazil.24.t:0 "Nuestros espías contrarrestaron con éxito a los comunistas"
- brazil.24.d:0 "Nuestros espías han informado con fantásticas noticias, han podido contrarrestar el caso y detener a los comunistas que ocupaban el estado. \n\nCon una victoria tan importante, el movimiento comunista seguramente recibirá un gran golpe de esto. Sólo tenemos que presionar un poco más y podremos acabar completamente con los comunistas".
- brazil.24.a:0 "¡Es una noticia fantástica!"
-
- brazil.25.t:0 "Nuestros espías fueron contrarrestados"
- brazil.25.d:0 "Nuestros espías fueron desafortunadamente derrotados por los comunistas mientras intentaban detener la actividad subversiva comunista. \n\nEsta fue una gran derrota, y una completa humillación. Lo más probable es que los comunistas aprovechen esta derrota para utilizarla contra nosotros. \n\nLo único que queda es esperar que podamos detener lo que venga después".
- brazil.25.a:0 "¡Esto es terrible!"
-
- brazil.26.t:0 "Los integralistas esperan que se nombre a Plinio Salgado"
- brazil.26.d:0 "Los integralistas hasta ahora han apoyado nuestros esfuerzos para establecer un gobierno más autoritario, y debido a esto están esperando que nombremos a Plínio Salgado como ministro de educación. \n\nSi lo hacemos o no depende de nosotros, y cada una de nuestras opciones tendrá aspectos positivos y negativos."
- brazil.26.a:0 "Por ahora veremos"
-
- brazil.27.t:0 "¡Los integralistas han ocupado uno de nuestros estados!"
- brazil.27.d:0 "Los informes locales nos han informado de que los integralistas han comenzado a ocupar militarmente uno de nuestros estados para establecer el dominio sobre la esfera política brasileña."
- brazil.27.a:0 "¡Maldito sea todo esto!"
-
- brazil.28.t:0 "Los integralistas causan estragos en uno de sus estados ocupados"
- brazil.28.d:0 "Los integralistas han decidido demoler uno de los estados que ocupan como acto de resistencia contra nuestro gobierno. \n\nSi continúan con estos flagrantes actos de terrorismo, habrá graves consecuencias."
- brazil.28.a:0 "Malditos bastardos"
-
- brazil.29.t:0 "Simpatizantes integralistas inician protestas en todo el país"
- brazil.29.d:0 "Los integralistas han tomado las calles de todo el país para protestar contra la supresión de su movimiento, y la administración de nuestro país. Plínio Salgado y Gustavo Barroso son la punta de lanza de estas protestas, y están tratando de desestabilizar la nación a propósito. \n\nEstas protestas deben detenerse inmediatamente, y sus líderes deben ser arrestados. Si estas protestas continúan, podemos estar en serios problemas".
- brazil.29.a:0 "¡Abajo el integralismo!"
-
- brazil.30.t:0 "Los integralistas intensifican su levantamiento"
- brazil.30.d:0 "Utilizando varias tácticas de propaganda barata e influencia sobre la nación, los integralistas han intensificado su levantamiento y están haciendo planes a gran escala en la próxima guerra civil. \n\nTenemos que estar bien preparados para este conflicto, todos nuestros hombres deben ser reclutados en caso de una guerra civil total."
- brazil.30.a:0 "Esperemos que podamos detener esto"
-
- brazil.31.t:0 "Carlos Prestes ha sido arrestado"
- brazil.31.d:0 "El revolucionario comunista Carlos Prestes ha sido capturado y detenido por nuestras autoridades. Esto supondrá un gran golpe para el movimiento comunista y seguramente les afectará en los próximos años. \n\nNo será una victoria completamente tranquila, ya que los comunistas probablemente harán un último esfuerzo para tomar represalias contra el encarcelamiento de Prestes, pero sin su líder deberíamos ser capaces de lidiar con él con bastante rapidez."
- brazil.31.a:0 "¡Genial!"
-
- brazil.33.t:0 "Prestes comienza a planear una revuelta"
- brazil.33.d:0 "Después de trabajar en la sombra durante algún tiempo, los comunistas han comenzado a planear un levantamiento a gran escala para vengar el fallido intento de sublevación de 1935. \n\nA diferencia de la última vez, esta vez parece estar mucho más organizado, y la cantidad de gente que apoya a Prestes es mucho mayor que en el intento de 1935. Tenemos que tener cuidado aquí, un paso en falso podría costarnos mucho".
- brazil.33.a:0 "¡Serán aplastados!"
-
- brazil.35.t:0 "Cafeteros hostiles hablan contra nuestro partido"
- brazil.35.d:0 "Los cafeteros enfurecidos han tomado el campo para protestar y hablar contra nuestro partido. Exigen que les demos más representación política y que invirtamos más recursos en los cafetales."
- brazil.35.a:0 "No necesitamos esto ahora"
-
- brazil.36.t:0 "Los cafeteros hostiles han boicoteado sus ganancias"
- brazil.36.d:0 "Las plantaciones de café hostiles se han unido y han boicoteado nuestra economía impidiendo que sus beneficios lleguen al gobierno nacional. Este acto de protesta está resultando perjudicial para nuestra economía y debemos enfrentarnos a ellos tan rápido como podamos."
- brazil.36.a:0 "¡Se les pondrá en su sitio!"
-
- brazil.37.t:0 "Vargas ha suprimido nuestro movimiento"
- brazil.37.d:0 "Vargas se ha dado cuenta de que nuestro movimiento está ganando adeptos entre la gente, así que él y los miembros de su gabinete han decidido adoptar un enfoque más político. Vargas ha difamado públicamente a nuestro movimiento y ha tomado medidas para suprimir nuestra capacidad de extender nuestro movimiento a otros lugares del país. \n\nEste gobierno tiránico se derrumbará y Vargas pagará por lo que hizo".
- brazil.37.a:0 "Bien dicho compañero. ¡Vargas caerá!"
-
- brazil.38.t:0 "Vargas desestabiliza nuestros planes"
- brazil.38.d:0 "Con tácticas deleznables, Vargas ha interferido en nuestros planes y ha desestabilizado nuestra revuelta hasta cierto punto. Debido a esto, necesitamos acelerar nuestros planes para compensar este contratiempo."
- brazil.38.a:0 "Podemos hacer frente a un contratiempo"
-
- brazil.39.t:0 "Los comunistas de [FROM.GetName] quieren nuestro apoyo en su levantamiento"
- brazil.39.d:0 "Agentes encubiertos de [FROM.GetName] han venido a nuestra sede para pedir apoyo en su levantamiento contra la 'opresión de Vargas y su régimen autoritario'. \n\nAfirman que poseemos lo que necesitan para que la revuelta campesina contra el gobierno actual tenga éxito y están dispuestos a devolver nuestras contribuciones a su levantamiento. \n\n¿Debemos prestarles nuestra ayuda?"
- brazil.39.a:0 "Esta es nuestra oportunidad de oro, les ayudaremos"
- brazil.39.b:0 "No podemos permitirnos ayudar en este momento"
-
- brazil.40.t:0 "[FROM.GetName] ha accedido a ayudarnos"
- brazil.40.d:0 "¡Nuestros agentes encubiertos han vuelto con excelentes noticias! Han dicho que [FROM.GetNameDEF] nos ayudará en nuestra revuelta, y nos suministrará todo lo que necesitemos siempre que le paguemos."
- brazil.40.a:0 "Perfecto"
-
- brazil.41.t:0 "[FROM.GetName] se ha negado a ayudarnos"
- brazil.41.d:0 "Nuestros agentes encubiertos han vuelto de [FROM.GetName] con noticias desgarradoras. Han dicho que no nos prestarán ayuda en nuestra revuelta contra la dictadura de Vargas."
- brazil.41.a:0 "¡Esto es terrible!"
-
- brazil.42.t:0 "¡Vargas se ha enterado de nuestra actividad y ha interferido!"
- brazil.42.d:0 "Vargas se ha enterado de nuestra actividad por medios que aún no hemos descubierto. Nuestros hombres han sido arrestados realizando esta tarea y nuestros planes generales han sufrido un revés debido a esto. \n\nN - Tenemos que ser más cuidadosos en un futuro próximo, o de lo contrario Vargas puede descubrir todos nuestros planes."
- brazil.42.a:0 "¡Pagará por esto!"
-
- brazil.43.t:0 "Vargas ha sido asesinado"
- brazil.43.d:0 "Las radios de todo el país comenzaron a enloquecer, ya que los informes han confirmado que Vargas ha sido asesinado por lo que parece ser un grupo terrorista no identificado. \n\nLas consecuencias de este acontecimiento han comenzado, ya que la gente de todo el país ha comenzado a realizar protestas masivas, la mayoría de ellas violentas y con disparos. \n\nLa nación se está derrumbando mientras hablamos, por favor, si alguien está allí leyendo esto, manténgase a salvo, quédese en casa, y tenga cuidado de con quién está rodeado. Pueden ser un aliado, o un enemigo esperando para atacar".
- brazil.43.a:0 "Ha llegado nuestra hora"
-
- brazil.44.t:0 "Intento fallido de asesinato de Vargas"
- brazil.44.d:0 "Hoy llegaron informes de que hubo un intento de asesinato contra Vargas. El grupo responsable ha sido identificado como parte del Partido Comunista de Brasil. \n\nSus intenciones, sin embargo, siguen siendo un misterio para el público y el gobierno. Sea cual sea el objetivo final, Vargas ha anunciado oficialmente una guerra total contra los comunistas dentro del país y los "erradicará" de la nación sin importar los costes."
- brazil.44.a:0 "¡Mierda! Esto no fue como se esperaba!"
-
- brazil.45.t:0 "Los separatistas paulistas comienzan a tomar las armas"
- brazil.45.d:0 "Con la nación en un estado de guerra interna y caos, los sentimientos nacionalistas dentro de Sao Paulo han comenzado a crecer exponencialmente, y algunos incluso han comenzado a tomar las armas con el fin de convertirse en una nación soberana. \n\nLas implicaciones que esto provocará aún son objeto de debate, pero ahora mismo tenemos que ocuparnos de este asunto."
- brazil.45.a:0 "Esto no es bueno"
-
- brazil.46.t:0 "Los integralistas han comenzado a armarse"
- brazil.46.d:0 "A medida que nuestra nación cae más y más en la anarquía, los integralistas han comenzado a tomar las armas y a organizarse. \n\nPor lo que parece, están planeando un levantamiento a gran escala y aprovechar el desastre que es Brasil actualmente. \n\nDeberíamos tener cuidado con lo que hacen, después de todo su levantamiento podría inclinar la balanza de esta guerra, para bien o para mal."
- brazil.46.a:0 "¡Los aplastaremos!"
-
- brazil.47.t:0 "Los integralistas han reforzado su revuelta"
- brazil.47.d:0 "Los informes de algunos de nuestros partidarios disfrazados nos han informado de varios planes de los integralistas para aumentar la fuerza de su sublevación. Quieren ganar esta guerra civil como sea, y lo harán por cualquier medio. \n\nTenemos que prepararnos para su levantamiento, sólo Dios sabe cuándo atacarán y cuántos hombres respaldarán sus ideales".
- brazil.47.a:0 "¡Aún así perderán!"
-
- brazil.48.t:0 "Los integralistas han ganado las elecciones"
- brazil.48.d:0 "Los votos han sido contados y los resultados han salido. Los integralistas se han adelantado en el recuento de votos, y tomarán posesión del cargo a partir de hoy. \n\nEl mundo está sorprendido por este resultado, ya que nadie esperaba que el partido fascista de Brasil fuera el primero. Los diplomáticos alemanes e italianos ya están felicitando a los integralistas por su victoria, y el pueblo está celebrando en las calles."
- brazil.48.a:0 "Es nuestra hora de brillar" 
-
- #añadir más
- brazil.48.t:0 "Los integralistas han ganado las elecciones"
- brazil.48.d:0 "Los votos han sido contados y los resultados han salido. Los integralistas se han adelantado en el recuento de votos, y tomarán posesión del cargo a partir de hoy. \n\nEl mundo está sorprendido por este resultado, ya que nadie esperaba que el partido fascista de Brasil fuera el primero. Los diplomáticos alemanes e italianos ya están felicitando a los integralistas por su victoria, y el pueblo está celebrando en las calles."
- brazil.48.a:0 "Es nuestra hora de brillar"
-
- #añadir más tal vez
- brazil.49.t:0 "José Américo ganó las elecciones"
- brazil.49.d:0 "Los votos han sido contados y los resultados han salido. José Américo de Almeida se ha adelantado en el recuento de votos y tomará posesión de su cargo a partir de hoy. \n\nCon el apoyo de Vargas, Américo promete no cambiar mucho el país y mejorarlo aún más. Con el mundo ardiendo rápidamente, también prometió mantenerse totalmente neutral en caso de un conflicto global".  
- brazil.49.a:0 "El pueblo ha hablado"
- 
- brazil.50.t:0 "El Partido de la Unión Democrática ha ganado las elecciones"
- brazil.50.d:0 "Los votos han sido contados y los resultados han salido a la luz. La Unión Democrática Brasileña, liderada por Armando de Sales Oliveira, ha ganado oficialmente y tomará posesión del cargo a partir de hoy. \n\nOccidente está encantado con los resultados y hemos recibido cartas de felicitación del Reino Unido, Francia y Estados Unidos".
- brazil.50.a:0 "El pueblo ha sido escuchado"
- 
- brazil.51.t:0 "[FROM.GetName] quiere que les ayudemos en la guerra civil"
- brazil.51.d:0 "Diplomáticos de [FROM.GetName] nos han preguntado si podemos ayudarles de alguna manera en la guerra civil brasileña. \n\n¿Debemos ayudarles?"
- brazil.51.a:0 "Sí"
- brazil.51.b:0 "No"
- 
- brazil.52.t:0 "[FROM.GetName] ¡Está de acuerdo en ayudar!"
- brazil.52.d:0 "[FROM.GetName] está de acuerdo en ayudarnos, y pronto enviará ayuda de la manera que pueda".
- brazil.52.a:0 "¡Perfecto!"
- 
- brazil.53.t:0 "[FROM.GetName] se niega"
- brazil.53.d:0 "[FROM.GetName] se ha negado a ayudarnos, afirmando que no están en condiciones de hacerlo en este momento"
- brazil.53.a:0 "Desafortunado"
- 
- brazil.54.t:0 "[FROM.GetName] envía equipo"
- brazil.54.d:0 "[FROM.GetName] nos ha enviado equipo de infantería para ayudarnos en nuestros esfuerzos!"
- brazil.54.a:0 "Cualquier ayuda es muy apreciada"
- 
- brazil.55.t:0 "[FROM.GetName] ¡envía bonos de guerra!"
- brazil.55.d:0 "[FROM.GetName] nos ha enviado bonos de guerra para ayudar a nuestra economía durante nuestra lucha en la guerra civil!"
- brazil.55.a:0 "Cualquier ayuda es muy apreciada"
-
- brazil.56.t:0 "[FROM.GetName] envía voluntarios"
- brazil.56.d:0 "[FROM.GetName] nos ha enviado fuerzas de voluntarios para ayudarnos en la guerra civil. Han declarado que estaremos a cargo de sus hombres!"
- brazil.56.a:0 "Cualquier ayuda es muy apreciada"
- 
- brazil.57.t:0 "¡La guerra ha concluido finalmente!"
- brazil.57.d:0 "Después de muchos, muchos meses de lucha, sangre, caos y muerte, la nación ha sido finalmente unificada bajo una sola bandera. La historia recordará para siempre esta guerra civil como una de las más mortíferas conocidas por el hombre, con millones de soldados en total. \n\nLa gente comenzó a vitorear en las calles destrozadas, y muchos soldados lloraron de alegría al poder reunirse con sus familias. \n\nTenemos un largo camino por delante, y muchos problemas que afrontar, pero seremos capaces de salir adelante y convertirnos en un Brasil que nadie ha soñado".
- brazil.57.a:0 "Que esta nueva paz sea eterna"
- 
- brazil.58.t:0 "Un joven con un gran sueño"
- brazil.58.d:0 "Basil Dos Santos, un joven adolescente que vive en las tierras de cultivo de Río de Jainero con su cuidador. Visita con frecuencia a su grupo de amigos que viven en un pueblo cercano, y antes del comienzo de la guerra civil, se le solía ver cuidando las plantaciones de café que rodean su casa. \n\nSin embargo, todo cambió cuando los comunistas empezaron a trabajar en la clandestinidad para derrocar al gobierno, y algunos de estos soldados se acercaron a Basil para pedirle que les ayudara a esconder armamento en las plantaciones. Asustado, Basil accedió y comenzó a esconderlas, pero los soldados quedaron impresionados por su rapidez y eficacia, y rápidamente reconocieron al joven adolescente como un prodigio. Ya se ha corrido la voz de su ayuda entre los comunistas, y también entre los campesinos".
- brazil.58.a:0 "Muchos tienen sueños, ¿qué hace que el suyo sea tan especial?"
- brazil.58.b:0 "Intrigante, deberíamos vigilarlo"
- 
- brazil.59.t:0 "¡Basil se gana el apoyo de los agricultores!
- brazil.59.d:0 "El joven y su visión fueron vistos inicialmente sólo como eso, la visión de un niño. Sin embargo, esta visión parece haber calado en un determinado grupo de personas de nuestro estado: los agricultores. Los agricultores de todo el país se han quedado prendados de su visión y parecen encontrar su inexperiencia juvenil como algo entrañable y no como un obstáculo. Por ahora, parece que Basil se ha ganado el estatus de celebridad entre los agricultores, pero no hay duda de que su influencia se extenderá aún más por toda nuestra nación. Al ver que sus casas se derrumban y que su vida cotidiana desaparece, muchos agricultores han empezado a vitorear a Basil, y algunos ya lo proclaman como el salvador de Brasil y de su pueblo."
- brazil.59.a:0 "¿Por qué se preocupan por un niño mísero?"
- brazil.59.b:0 "Un desarrollo interesante"
- 
- #cambiar el parlamento con lo que sea
- brazil.60.t:0 "¡El pueblo exige la investidura inmediata de Basilio!
- brazil.60.d:0 "La tranquila mañana de hoy se ha visto bruscamente interrumpida por el sonido de miles de hombres, mujeres y niños que protestaban en la sede comunista de [ROOT.GetCapitalVictoryPointName] con una simple demanda: desean la inmediata dimisión de [BRA.GetLeader] y la toma de posesión de Basilio. Lo que antes era un simple niño que sólo deseaba hacer realidad su sueño se ha convertido en un movimiento político con un poder monumental en [BRA.GetName], y ese poder ha pedido nuestra colaboración. \n\nEl pueblo no dejará de corear el nombre de Basilio, y ahora que las bajas no hacen más que aumentar, tenemos que tomar una decisión y rápido".
- brazil.60.a:0 "¿Están locos? ¡Una sentencia infantil es absurda!"
- brazil.60.b:0 "El pueblo ha hablado y nosotros escucharemos en consecuencia..."
- 
- brazil.61.t:0 "[FROM.GetName] ¡Exige nuestra subyugación!" #Puede ser incorrecto, tal vez usar FROM o BRA
- brazil.61.d:0 "[FROM.GetName] exige nuestra subyugación inmediata! Ya han alineado miles de soldados en nuestra frontera y esperamos una respuesta de nuestra parte pronto. \n\n¿Qué debemos hacer?"
- brazil.61.a:0 "¿Tenemos realmente alguna opción en el asunto?"
- brazil.61.b:0 "¡Independencia o muerte!"
- 
- brazil.62.t:0 "[FROM.GetName] ¡Cede a nuestras demandas!"
- brazil.62.d:0 "[FROM.GetName] ha aceptado convertirse en nuestro súbdito, y a partir de hoy tendremos poder administrativo sobre la mayor parte de su nación."
- brazil.62.a:0 "Han tomado la decisión correcta".
- 
- brazil.63.t:0 "¡[BRA.GetName] está invadiendo [URG.GetName]!"
- brazil.63.d:0 "Los reporteros llegaron hoy en tropel a la Casa Rosada, sudando profusamente y gritando '[BRA.GetName] está invadiendo Uruguay!'. Esta información es algo que nadie hubiera esperado, y sin embargo está ocurriendo mientras hablamos ahora mismo. \n\nEl hermano está haciendo algo atroz en este momento, y Uruguay no tiene ninguna posibilidad de derrotarlos. Con nuestro hermano en peligro, ¿debemos intervenir y detener a los belicosos?"
-
- brazil.64.t:0 "[ARG.GetName] ha decidido intervenir en nuestro reclamo de [URG.GetName]"
- brazil.64.d:0 "Nuestros diplomáticos nos han notificado que [ARG.GetName] está interviniendo oficialmente, y apoyará plenamente a los uruguayos en este conflicto."
- brazil.64.a:0 "¡Se arrepentirán de haberse unido a esta guerra!"
- 
- brazil.65.t:0 "¿Hacer la paz con [BRA.GetName]?"
- brazil.65.d:0 "Hemos perdido muchos hombres en esta guerra inútil. Nuestros soldados no aguantan más, el pueblo está protestando en las calles exigiendo que salgamos de la guerra. \n\n¿Qué debemos hacer?"
- brazil.65.a:0 "No más derramamiento de sangre"
- brazil.65.b:0 "No se puede hacer la paz con monstruos"
-
- brazil.66.t:0 "¿Quién nos guiará?"
- brazil.66.d:0 "Tenemos unas cuantas opciones, será una elección muy difícil. Hay muchos buenos líderes a nuestra disposición, dispuestos a darlo todo para dirigir el país y mejorarlo en todo lo posible. \n\nMientras hablamos, los votos han sido contados, y el pueblo ha elegido como líder..."
- brazil.66.a:0 "[ROOT.GetLeader]"
- brazil.66.b:0 "El Congreso"
- brazil.66.c:0 "Armando Sales"
- brazil.66.e:0 "Luis Washington"
- brazil.66.f:0 "José Américo"
- brazil.66.g:0 "Afranio de Melo"
-
- brazil.67.t:0 "Una llamada de auxilio brasileña"
- brazil.67.d:0 "Los integralistas brasileños piden ayuda para su próxima revuelta que están organizando. Afirman que necesitan nuestra ayuda para mejorar sus posibilidades de derrocar al gobierno. \n\nTenemos dos opciones, ir en su ayuda, o dejarlos en paz"
- brazil.67.a:0 "Aceptar su petición"
- brazil.67.b:0 "Negar su petición"
- 
- brazil.68.t:0 "Prestes Assassination Attemp Succedes"
- brazil.68.d:0 "El partido comunista está enloqueciendo, organizando protestas masivas en todo el país, exigiendo una explicación del gobierno sobre el asesinato de Prestes. \n\nTodo el mundo está tratando de encontrar una explicación para esto, que es exactamente lo que estábamos esperando. Ahora los comunistas no tendrán la oportunidad de rebelarse sin un líder adecuado, y el país sólo se ha desestabilizado aún más como resultado."
- brazil.68.a:0 "Exactamente como estaba previsto"
- 
- brazil.69.t:0 "Falló el intento de asesinato de Prestes"
- brazil.69.d:0 "El extracto del periódico dice `Una alegría para el partido comunista hoy, ya que un asesino de origen desconocido fue enviado a matar a Prestes y fue abatido antes de que pudieran alcanzarlo. Los seguidores del partido comunista se han levantado en armas y están muy enfadados.`nuestros planes han fracasado, y el pueblo está conmocionado. Afortunadamente nuestro aassasin pudo mantener su identidad en secreto, el único problema es que no estamos seguros de que siga siendo un secreto por mucho tiempo."
- brazil.69.a:0 "¡Mierda! ¡MIERDA! Esto no es bueno!"
-
- brazil.70.t:0 "El plan comunista de revuelta"
- brazil.70.d:0 "Agentes encubiertos nos han informado que los comunistas están recuperando armamento electrónico de las plantaciones de café y armando milicias. A juzgar por la situación actual del país, no hay duda de que están planeando un levantamiento a gran escala para tratar de establecerse como líderes del país. \n\nHagamos lo que hagamos, no podemos dejar que eso ocurra, y debemos hacer todo lo que esté en nuestra mano para intentar derrotarlos lo antes posible".
- brazil.70.a:0 "¡Esos bastardos no sobrevivirán ni un mes!"
-
- brazil.71.t:0 "La cuestión real"
- brazil.71.d:0 "La familia real ha sido cuestionada si es necesaria. Su papel en el país ha cambiado desde la disolución del Imperio, e incluso pueden poner una espina en nuestro lado teniendo en cuenta los ideales opuestos. \n\n¿Debemos deportarlos de este país, darles mayores funciones en el gobierno, o dejarlos en paz?"
- brazil.71.a:0 "Deportarlos"
- brazil.71.b:0 "Darles funciones en el Gobierno"
- brazil.71.c:0 "Dejar que se queden"
-
- brazil.72.t:0 "Patrianovistas ofrecen apoyo en el levantamiento integralista"
- brazil.72.d:0 "Los Patrianovistas nos han ofrecido apoyo en nuestro levantamiento. Reconocen nuestros diferentes ideales, sin embargo, están dispuestos a dejar de lado nuestras diferencias y ayudarnos en nuestros esfuerzos contra Vargas. \n\n¿Aceptamos o negamos?"
- brazil.72.a:0 "Tomaremos todo lo que ayude"
- brazil.72.b:0 "¡Estamos bien por nuestra cuenta!"
-
- brazil.73.t:0 "¡El [BZE.GetName] solicitan nuestra ayuda!"
- brazil.73.d:0 "El [BZE.GetName] solicitan ayuda en su guerra civil. Están planeando un levantamiento a gran escala para restaurar la monarquía en el país, y con la actual situación política del país, creen que es la oportunidad perfecta para hacerlo. \n\n¿Debemos prestarles nuestra ayuda?"
- brazil.73.a:0 "Claro, cualquier cosa para ayudarles"
- brazil.73.b:0 "No podemos hacer eso ahora"
-
- brazil.74.t:0 "¡Los [BZE.GetName] quieren que intervengamos en la guerra civil!"
- brazil.74.d:0 "Los imperialistas brasileños piden que intervengamos totalmente en la guerra civil y les ayudemos en sus esfuerzos contra las otras facciones. \n\n¿Debemos intervenir y ayudarlos? ¿O debemos dejarlos a su aire?"
- brazil.74.a:0 "¡Es hora de ayudar a nuestros hermanos!"
- brazil.74.b:0 "Lo siento, pero no"
-
- brazil.75.t:0 "Una revuelta uruguaya fracasada"
- brazil.75.d:0 "Los monárquicos de Uruguay han fracasado en su levantamiento. \n\n¿Nos hacemos cargo o los dejamos en paz?"
- brazil.75.a:0 "A la guerra"
- brazil.75.b:0 "Ahora no es el momento"
-
- brazil.76.t:0 "Una oportunidad para golpear"
- brazil.76.d:0 "Tenemos una oportunidad de golpear a [BRA.GetName]. Se encontraron en una guerra con Argentina y Uruguay al mismo tiempo, y sus fuerzas están todas concentradas en su frontera, mientras que nuestra frontera está completamente vacía. \n\n¿Nos arriesgamos o no es el momento?"
- brazil.76.a:0 "Tomar nuestros riesgos"
- brazil.76.b:0 "No podemos permitirnos una guerra en este momento"
-
- brazil.77.t:0 "Unificación con Brasil"
- brazil.77.d:0 "Los brasileños han ofrecido una unificación de nuestros territorios. Si aprovechamos esta oportunidad, podríamos convertirnos en una potencia imparable, y convertirnos en una verdadera amenaza para los que consideramos enemigos. \n\nN - Debería"
- brazil.77.a:0 "Sí, nos unificaremos"
- brazil.77.b:0 "No, no nos unificaremos"
-
- brazil.78.t:0 "Portugal se niega a la unificación"
- brazil.78.d:0 "Los portugueses se han negado a nuestra petición de unificación y no han tomado ninguna decisión para cambiar sus costumbres"
- brazil.78.a:0 "Maldito sea todo".
-
- brazil.79.t:0 "Levantamiento uruguayo"
- brazil.79.d:0 "El levantamiento uruguayo ha comenzado, y nuestro dominio imperial está ahora luchando contra el gobierno uruguayo. \n\nN para intervenir y manejar la situación. Una vez que hayamos limpiado Uruguay, los integraremos en el Imperio una vez más."
- brazil.79.a:0 "Entendido"
-
- brazil.80.t:0 "El país estaba convencido del plan Cohen"
- brazil.80.d:0 "El pueblo, el congreso y el ejército estaban convencidos del Plan Cohen. Gracias a esto, el congreso nos concederá aún más poder sobre este golpe inventado para dirigir con puño de hierro."
- brazil.80.a:0 "Perfecto"
-
- brazil.81.t:0 "Los integralistas intentan un último esfuerzo"
- brazil.81.d:0 "Pudimos recoger información sobre los planes de un último esfuerzo de los integralistas para poner a Plínio en el poder. También pudimos saber que están planeando un ataque total al Palacio de Guanabara. \n\nTenemos que tener cuidado con su próximo movimiento. Podría estropear todos nuestros planes si las cosas se tuercen".
- brazil.81.a:0 "¡Estos malditos bastardos!"
-
- brazil.82.t:0 "[BRA.GetName] nos propone un plan"
- brazil.82.d:0 "[BRA.GetName] se ha puesto en contacto con nosotros, diciéndonos que tienen un plan bajo la manga. No sólo quieren unirse a nuestra facción y ayudarnos en nuestra guerra contra los aliados, sino que también quieren crear un nuevo frente en Sudamérica invadiendo Uruguay. \n\nAunque el plan parece arriesgado, seguramente desviará la atención de los aliados de Europa a Sudamérica, ahora que sus posesiones allí estarán en peligro. ¿Debemos estar de acuerdo con su plan?"
- brazil.82.a:0 "Los dejaremos entrar cuando lancen el ataque"
- brazil.82.b:0 "No podemos permitirnos otro frente"
-
- brazil.83.t:0 "[BRA.GetName] Quiere comprar nuestras colonias en África"
- brazil.83.d:0 "Diplomáticos brasileños han llegado hoy a nuestra nación para proponernos una oferta. Estarían dispuestos a pagar una gran suma de dinero por nuestras tierras en África. También prometen mantener relaciones positivas con nosotros y defendernos en caso de una invasión extranjera. \n\n¿Debemos aceptar su oferta?"
- brazil.83.a:0 "Claro, pueden tenerlo"
- brazil.83.b:0 "Absolutamente no"
-
- brazil.84.t:0 "[FROM.GetName] Quiere comprar nuestras posesiones en Sudamérica"
- brazil.84.d:0 "Diplomáticos de [FROM.GetName] han venido a [ROOT.GetName] para pedir nuestras posesiones sudamericanas al norte de su territorio. Están dispuestos a pagar una gran suma de dinero por dichas posesiones. \n\n¿Debemos aceptar?"
- brazil.84.a:0 "Claro, pueden tenerlas"
- brazil.84.b:0 "Absolutamente no"
-
- brazil.85.t:0 "[BRA.GetName] exige un referéndum democrático en nuestra nación"
- brazil.85.d:0 "Diplomáticos brasileños han venido a [ROOT.GetName], exigiendo que celebremos un referéndum democrático y dejemos que el pueblo elija. Nos han advertido que habrá consecuencias nefastas si no hacemos el referéndum. \n\n¿Debemos ceder o mantenernos firmes?"
- brazil.85.a:0 "Cedemos"
- brazil.85.b:0 "¡No se saldrán con la suya!"
-
- brazil.86.t:0 "¿Debemos unificarnos con las Repúblicas Unidas de América Latina?"
- brazil.86.d:0 "Nos han informado de que se han formado las Repúblicas Unidas de América Latina y nos preguntan si queremos unirnos a su unión. Ya nos han asegurado que estaremos debidamente representados en la unión. \n\nEntonces, ¿debemos unirnos y convertirnos juntos en una superpotencia?"
- brazil.86.a:0 "Hagámoslo"
- brazil.86.b:0 "¡Nunca!"
-
- brazil.87.t:0 "¡Portugal trata de resucitar la monarquía!"
- brazil.87.d:0 "Espías portugueses capturados han confesado que el gobierno portugués está planeando instigar un levantamiento imperial a gran escala dentro de la nación. Tenemos que tener mucho cuidado con su próximo movimiento, ya que esto podría afectar en gran medida el curso de la guerra."
- brazil.87.a:0 "¡Estos malditos bastardos!"
-
- brazil.88.t:0 "Portugal nos ayudará en nuestros esfuerzos imperiales"
- brazil.88.d:0 "Los espías portugueses han llegado en secreto a nuestro cuartel general para informarnos de que contamos con el pleno apoyo de la monarquía portuguesa y de sus fuerzas. Si necesitamos ayuda, simplemente debemos pedirla y ellos responderán".
- brazil.88.a:0 "¡Eso es genial!"
-
- brazil.89.t:0 "Estamos preparados para la guerra civil, ¿lanzamos el ataque?"
- brazil.89.d:0 "Nuestros miembros leales nos han informado que todas las piezas están en su lugar para nuestro ataque contra el Palacio de Guanabara. Una vez que lo hagamos, la guerra civil comenzará oficialmente cuando nuestras fuerzas se organicen y tomen el control de varios estados en el sur de Brasil. \n\n¿Lanzamos el ataque ahora o esperamos un poco?"
- brazil.89.a:0 "¡Hagámoslo!"
- brazil.89.b:0 "Aún no estamos listos"
-
- brazil.90.t:0 "Varios generales enemigos se han puesto de nuestro lado"
- brazil.90.d:0 "Después de su derrota en la guerra civil y de dejar las armas, algunos de sus generales han venido a nosotros para ofrecer su apoyo en nuestro lado del conflicto y llevar a Brasil a una era mejor."
- brazil.90.a:0 "¡Genial!"
-
- news.361.t:0 "Levantamiento integralista en Brasil"
- news.361.d:0 "El mundo no podía más que asistir atónito al desmoronamiento de las esferas políticas y sociales brasileñas con el levantamiento integralista en el país. Los integralistas han conseguido un apoyo masivo para su movimiento, utilizando las malas acciones de los líderes actuales y pasados para alimentar su partido y crecer en apoyo. \n\nMientras hablamos, muchas batallas ya están estallando por toda la nación, y la mayoría cree que Brasil llegará a un estado de pura guerra interna. Los expertos ya predicen que ésta será una de las guerras civiles más mortíferas conocidas por el hombre, y sólo acaba de empezar."
- news.361.a:0 "¡Venceremos!"
- news.361.b:0 "¡No se saldrán con la suya!"
- news.361.c:0 "Jesucristo"
-
- news.362.t:0 "Levantamiento paulista en Brasil"
- news.362.d:0 "Como si la situación en Brasil no pudiera empeorar, la inteligencia ya confirmó que un levantamiento paulista estalló de lleno en la nación. Los paulistas vieron el débil estado de Brasil como una oportunidad para independizarse oficialmente de ellos. \n\nParece que fueron capaces de amasar un ejército bastante grande para combatir a las otras facciones brasileñas, y están dispuestos a luchar hasta el final por su independencia. \n\nSólo el tiempo dirá cómo evolucionará la guerra civil brasileña, pero de momento no tiene buena pinta".
- news.362.a:0 "¡Conseguiremos nuestra independencia!"
- news.362.b:0 "¡No ganarán una mierda!"
- news.362.c:0 "Esto sólo va a empeorar"
-
- news.363.t:0 "Levantamiento comunista en Brasil"
- news.363.d:0 "El mundo no puede hacer otra cosa que ver como Brasil desciende al puro caos. El partido comunista del país ha organizado un levantamiento a gran escala para derrocar al gobierno y establecerse como los verdaderos líderes de Brasil. \n\nPor lo que parece, la gran mayoría de su apoyo proviene de los agricultores del país y de la clase baja. También fueron capaces de formar grandes cantidades de milicias para ser los vencedores de la guerra civil. \n\nLas batallas ya han estallado y los cadáveres se acumulan mientras hablamos".
- news.363.a:0 "¡Venceremos!"
- news.363.b:0 "¡No se saldrán con la suya!"
- news.363.c:0 "Jesucristo"
-
- news.364.t:0 "Insurrección democrática en Brasil"
- news.364.d:0 "La guerra civil brasileña sigue intensificándose, ya que el pueblo ha decidido que está harto y ha lanzado un levantamiento para reinstaurar la democracia en la nación. Lo están haciendo bajo el nombre de los Estados Unidos de Brasil, un nombre de muy corta duración para Brasil en la década de 1870. Han elegido revivir esa efímera república para contrastar con todas las demás ideologías extremistas en la guerra civil, y de una vez por todas poner fin a la guerra civil. \n\nQuien gane en esta guerra civil es todavía objeto de debate, pero lo que es seguro es que tendrán un largo camino que recorrer antes de poder arreglar realmente la nación."
- news.364.a:0 "¡¿Otra facción?!"
- news.364.b:0 "Pronto serán aplastados"
- news.364.c:0 "¡La democracia volverá!"
-
- news.365.t:0 "Levantamiento imperial en la guerra civil brasileña"
- news.365.d:0 "A partir de hoy, se ha confirmado que una facción imperialista, con el apoyo de los Patrianovistas, ha lanzado un asalto a gran escala contra las otras facciones en la guerra civil, siendo su principal objetivo restaurar el trono imperial y colocar a la familia real de nuevo en su "lugar apropiado". \n\nNo se sabe mucho de este levantamiento, y algunos sospechan que Portugal puede haber tenido algún tipo de participación en la ayuda a los imperialistas. \n\nLa guerra civil parece que no va a terminar pronto".
- news.365.a:0 "no se detiene"
- news.365.b:0 "Genial, justo lo que necesitábamos..."
- news.365.c:0 "¡Gloria a la familia real!"
- news.365.e:0 "Esto sí que es interesante"
-
- news.366.t:0 "Portugal interviene en la guerra civil brasileña"
- news.366.d:0 "El mundo se ha visto envuelto en un ataque incontrolable cuando las fuentes de noticias han confirmado que Portgual ha intervenido oficialmente en la guerra civil brasileña, ayudando a los imperialistas en su guerra civil. Los Estados Unidos no saben cómo responder, ya que esto es técnicamente una violación directa de la Doctrina Monroe, sin embargo, los EE.UU. no parece estar en una forma de ir a la guerra todavía. \n\nLa situación no hace más que agravarse, ya que ahora una potencia europea interviene en la guerra civil brasileña. Lo único que el mundo puede esperar es que la guerra civil no se internacionalice".
- news.366.a:0 "PORTUGAL????"
- news.366.b:0 "¿¡¡Qué demonios!?"
- news.366.c:0 "Hagamos esto"
-
- news.367.t:0 "Paraguay interviene en la segunda guerra cisplatina"
- news.367.d:0 "Como si la situación en Sudamérica no pudiera ser peor, se ha confirmado que Paraguay participa oficialmente en la Segunda Guerra Cisplatina tras cruzar la frontera brasileña con su ejército. \n\nLo único que podemos esperar ahora es que la situación no se agrave más de lo que ya está".
- news.367.a:0 "Las cosas sólo empeoran"
- news.367.b:0 "¡Estos bastardos serán aplastados!"
- news.367.c:0 "¡Brasil caerá pronto!"
-
- brazil.23.b:0 "Genial!"
- brazil.91.t:0 "Capturado un agente huido de los demócratas"
- brazil.91.d:0 "Hemos capturado a un agente huido de los demócratas que planean realizar un posible levantamiento. Aprovechando esta oportunidad, podríamos obtener mucha información sobre el paradero de su cuartel general."
- brazil.91.a:0 "Necesitamos obtener toda la información posible"
- brazil.91.b:0 "Hazle algunas preguntas"
- brazil.91.c:0 "No te fíes de este espía en potencia"
-
- brazil.92.t:0 "No hemos sido capaces de localizar el cuartel general"
- brazil.92.d:0 "A pesar de nuestros denodados esfuerzos, no fuimos capaces de descubrir la ubicación de la sede democrática"
- brazil.92.a:0 "¡Maldita sea!"
-
- brazil.93.t:0 "La Resistencia Democrática ha aceptado el compromiso"
- brazil.93.d:0 "La resistencia democrática ha aceptado nuestro compromiso y escucharemos sus demandas a cambio de su pacificación en la guerra civil e incluso de una posible cooperación."
- brasil.93.a:0 "¡Genial!"
-  
- brazil.94.t:0 "La Resistencia Democrática no ha aceptado el compromiso"
- brazil.94.d:0 "La resistencia ha rechazado nuestro compromiso y continuará con sus planes originales"
- brazil.94.a:0 "¡Lamentarán esa decisión!"

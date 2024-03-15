@@ -8,13 +8,6 @@ country_event = {
     picture = GFX_BOL_bolivia1
 
     is_triggered_only = yes 
-	
-	immediate = {
-		if = {
-			limit = { has_completed_focus = BOL_side_with_the_people }
-			news_event = { id = news.bolivia days = 1 }
-		}
-	}
 
     option = {
         name = bolivia.1.a
@@ -39,10 +32,18 @@ country_event = {
         }
         else = {
             hidden_effect = {
+                delete_unit_template_and_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
+                delete_unit_template_and_units = {
+                    division_template = "División de Caballería"
+                    disband = yes
+                }
                 division_template = { 
                     name = "Milicias del Gobierno" 
                     division_names_group = SPAN_INF_02 
-                    is_locked = no 
+                    is_locked = yes 
                     regiments = { 
                         infantry = { x = 0 y = 0 }  
                         infantry = { x = 0 y = 1 } 
@@ -53,7 +54,7 @@ country_event = {
                 division_template = { 
                     name = "Milicias del Ejército" 
                     division_names_group = SPAN_INF_02 
-                    is_locked = no 
+                    is_locked = yes 
                     regiments = { 
                         infantry = { x = 0 y = 0 }  
                         infantry = { x = 0 y = 1 } 
@@ -64,7 +65,7 @@ country_event = {
                 division_template = {
                     name = "Guardia Nacional" 
                     division_names_group = SPAN_INF_02 
-                    is_locked = no 
+                    is_locked = yes 
                     regiments = { 
                         infantry = { x = 0 y = 0 }  
                         infantry = { x = 0 y = 1 } 
@@ -109,7 +110,7 @@ country_event = {
                     }
                     if = {
                         limit = { has_completed_focus = BOL_secure_the_guardia_nacional }
-                        920 = {
+                        840 = {
                             create_unit = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = ROOT
@@ -134,7 +135,7 @@ country_event = {
                             }
                         }
                     }
-                    922 = {
+                    844 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
@@ -155,7 +156,7 @@ country_event = {
                             }
                         }
                     }
-                    917 = {
+                    841 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
@@ -201,7 +202,7 @@ country_event = {
                             }
                         }
                     }
-                    922 = {
+                    844 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
@@ -215,7 +216,7 @@ country_event = {
                             owner = ROOT
                         }
                     }
-                    920 = {
+                    840 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
@@ -265,7 +266,7 @@ country_event = {
                                     }
                                 }
                             }
-                            985 = {
+                            907 = {
                                 create_unit = {
                                     division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                     owner = PREV
@@ -284,7 +285,7 @@ country_event = {
                                 }
                             }
                         }
-                        921 = {
+                        843 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -306,7 +307,7 @@ country_event = {
                                 owner = PREV
                             }
                         }
-                        921 = {
+                        843 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -346,7 +347,7 @@ country_event = {
                                 owner = PREV
                             }
                         }
-                        921 = {
+                        843 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -362,7 +363,7 @@ country_event = {
                             if = {
                                 limit = {
                                     NOT = {
-                                        PREV = { controls_state = 918 }
+                                        PREV = { controls_state = 842 }
                                     }
                                 }
                                 create_unit = {
@@ -379,7 +380,7 @@ country_event = {
                                 }
                             }
                         }
-                        918 = {
+                        842 = {
                             if = {
                                 limit = { is_controlled_by = PREV }
                                 create_unit = {
@@ -406,7 +407,7 @@ country_event = {
                     size = BOL_civil_war_power
                     capital = 302
                     states = {
-                        917 302 985 487 922 918 921
+                        841 302 907 487 844 842 843
                     }
                 }
                 remove_unit_leader = 44123
@@ -426,7 +427,7 @@ country_event = {
                             #
                         }
                     }
-                    920 = {
+                    840 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
@@ -481,7 +482,7 @@ country_event = {
                                 owner = PREV
                             }
                         }
-                        918 = {
+                        842 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -499,7 +500,7 @@ country_event = {
                                 owner = PREV
                             }
                         }
-                        922 = {
+                        844 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -535,7 +536,7 @@ country_event = {
                                 owner = PREV
                             }
                         }
-                        917 = {
+                        841 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -553,7 +554,7 @@ country_event = {
                                 owner = PREV
                             }
                         }
-                        921 = {
+                        843 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -575,7 +576,7 @@ country_event = {
                                 owner = PREV
                             }
                         }
-                        985 = {
+                        907 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -593,7 +594,7 @@ country_event = {
                                 owner = PREV
                             }
                         }
-                        922 = {
+                        844 = {
                             create_unit = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = PREV
@@ -842,7 +843,7 @@ country_event = {
 
         FROM = {
             transfer_state = 909
-            give_resource_rights = { receiver = ROOT state = 922 }
+            give_resource_rights = { receiver = ROOT state = 844 }
             country_event = { id = peru.16 hours = 4 }
         }
     }
@@ -899,10 +900,10 @@ country_event = {
             }
         }
         FROM = {
-            transfer_state = 923
-            transfer_state = 962
-            transfer_state = 960
-            transfer_state = 958
+            transfer_state = 845
+            transfer_state = 884
+            transfer_state = 882
+            transfer_state = 880
             random_owned_controlled_state = {
                 limit = { industrial_complex > 1 }
                 remove_building = {
@@ -1023,21 +1024,6 @@ country_event = {
         hidden_effect = {
             set_country_flag = BOL_german_died
         }
-    }
-}
-
-#Chile gets event warning that Bolivia is planning to take over Antofagasta 
-country_event = {
-    id = bolivia.9
-    title = bolivia.9.t 
-    desc = bolivia.9.d 
-    picture = GFX_report_event_generic_army
-
-    is_triggered_only = yes 
-
-    option = {
-        name = bolivia.9.a 
-        unlock_decision_category_tooltip = CHL_countering_bolivias_plan
     }
 }
         

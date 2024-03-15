@@ -24,6 +24,8 @@ recruit_character = CHL_miguel_cruchaga_tacomal
 recruit_character = CHL_luis_alamos_barros
 recruit_character = CHL_pedro_dartnell
 recruit_character = CHL_augusto_pinochet
+recruit_character = CHL_julio_allard_pinto
+recruit_character = CHL_e_novoa_fuentes
 recruit_character = CHL_dario_mujica_gamboa
 recruit_character = CHL_marmaduke_grove
 recruit_character = CHL_c_j_de_la_motte
@@ -49,18 +51,6 @@ recruit_character = CHL_naval_strike_aviation_council
 recruit_character = CHL_close_air_support_aviation_council
 recruit_character = CHL_logistics_naval_council
 recruit_character = CHL_anti_submarine_naval_council
-recruit_character = CHL_peter_hansen
-recruit_character = CHL_francisco_javier_diaz
-recruit_character = CHL_venancio_conuepan
-recruit_character = CHL_rene_schneider
-recruit_character = CHL_carlos_prats
-recruit_character = CHL_guillermo_barrios_tirado
-recruit_character = CHL_vicente_merino_bielich
-recruit_character = CHL_navo_jorge_videla_cobo
-
-CHL_peter_hansen = {
-	set_character_flag = CHL_living_in_germany
-}
 
 
 oob = "CHL_1936"
@@ -78,25 +68,9 @@ set_technology = {
 	gw_artillery = 1
 	interwar_antiair = 1
 	tech_mountaineers = 1
-	basic_train = 1
-}
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "CHL_1936_air_bba"
-		set_technology = {
-			aa_lmg = 1
-			engines_1 = 1
-			early_bombs = 1
-			iw_small_airframe = 1
-		}
-	else = {
-		set_air_oob = "CHL_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			cv_early_fighter = 1
-			early_bomber = 1
-		}
-	}
+	early_fighter = 1
+	cv_early_fighter = 1
+	early_bomber = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -134,13 +108,11 @@ set_research_slots = 3
 add_ideas = CHL_highly_divided_social_classes_idea
 add_ideas = CHL_land_of_mountain
 add_ideas = monroe_doctrine_idea
-add_ideas = extensive_conscription
-add_ideas = limited_exports
 set_variable = { CHL_nacista_power = 3 }
 set_variable = { CHL_communists_power = 2 }
 set_variable = { CHL_control_over_nation = 95 }
 set_variable = { CHL_nacista_influence_days = 35 }
-set_variable = { CHL_communist_influence_days = 35 }
+set_variable = { CHL_communist_influencce_days = 35 }
 set_variable = { CHL_fascist_drift = CHL_nacista_power }
 set_variable = { CHL_communist_drift = CHL_communists_power }
 set_variable = { CHL_chance_of_communist = 50 }
@@ -169,18 +141,7 @@ country_event = { id = chile.18 days = 1 }
 	complete_national_focus = CHL_aftermath_of_the_great_depression
 	complete_national_focus = CHL_maintain_the_stability_of_the_nation
 	complete_national_focus = CHL_expand_the_industry
-	complete_national_focus = CHL_make_an_effort_to_stabilize_the_nation
-	complete_national_focus = CHL_cooperate_with_el_frente
-	complete_national_focus = CHL_liberalism_focus
-	complete_national_focus = CHL_expand_the_welfare_plans
-	complete_national_focus = CHL_nationalize_key_industries
-	complete_national_focus = CHL_advocate_a_compromise_with_the_democrats
-	complete_national_focus = CHL_victory_for_the_fp
-	complete_national_focus = CHL_focus_on_internal_politics
-	complete_national_focus = CHL_reignite_ties_with_the_british
-	complete_national_focus = CHL_fuerzas_armadas
-	complete_national_focus = CHL_ejercito_de_chile
-	complete_national_focus = CHL_armada_chilena
+	
 	
 	oob = "CHL_1939"
 	if = {

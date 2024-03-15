@@ -1,0 +1,18 @@
+﻿units= {
+	##### Naval OOB #####
+	fleet = {
+		name = "Armada de Cuba"
+		naval_base = 7622 #Havana
+		task_force = {				
+			name = "Armada de Cuba"			
+			location = 7622 #Havana
+			ship = { name = "ARC Habana" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CUB } } }
+			ship = { name = "ARC Pilar del Río" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CUB } } }
+			ship = { name = "ARC 10 de Octubre" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CUB } } }
+			ship = { name = "ARC 24 de Febrero" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CUB } } }
+			ship = { name = "ARC Baire" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CUB } } }
+			ship = { name = "ARC Cuba" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CUB } } }
+			ship = { name = "ARC Patria" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CUB } } }
+		}
+	}
+}

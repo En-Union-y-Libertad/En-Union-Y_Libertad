@@ -235,24 +235,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_ucr_a_texticon"
-		texturefile = "gfx/texticons/ucr_a_texticon.png"
-		legacy_lazy_load = no
-	}
-
-	spriteType = {
-		name = "GFX_partido_socialista_texticon"
-		texturefile = "gfx/texticons/partido_socialista_texticon.png"
-		legacy_lazy_load = no
-	}
-
-	spriteType = {
-		name = "GFX_ucr_texticon"
-		texturefile = "gfx/texticons/ucr_texticon.png"
-		legacy_lazy_load = no
-	}
-
-	spriteType = {
 		name = "GFX_BOL_bolivia_flag"
 		texturefile = "gfx/texticons/BOL_bolivia_flag.dds"
 		legacy_lazy_load = no
@@ -285,24 +267,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_PAN_panama_flag"
 		texturefile = "gfx/texticons/PAN_panama_flag.png"
-		legacy_lazy_load = no
-	}
-
-	spriteType = {
-		name = "GFX_BRA_integralist"
-		texturefile = "gfx/texticons/BRA_integralist.png"
-		legacy_lazy_load = no
-	}
-
-	spriteType = {
-		name = "GFX_BRA_Vargas"
-		texturefile = "gfx/texticons/BRA_Vargas.png"
-		legacy_lazy_load = no
-	}
-
-	spriteType = {
-		name = "GFX_BRA_communist"
-		texturefile = "gfx/texticons/BRA_communist.png"
 		legacy_lazy_load = no
 	}
 

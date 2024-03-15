@@ -1,6 +1,4 @@
-﻿capital = 925
-
-URG_initiate_balance_of_power = yes
+﻿capital = 847
 
 recruit_character = URG_gabriel_terra_c
 recruit_character = URG_luis_alberta_de_herrera_c
@@ -84,17 +82,7 @@ if = {
 set_country_flag = monroe_doctrine
 set_country_flag = URG_terra
 
-promote_character = URG_gabriel_terra_c
-
 set_variable = { URG_debt_to_britain = 0 }
-activate_mission = URG_pay_the_british_debt
-
-set_variable = {
-	var = URG_politicians_arrested
-	value = 43
-}
-
-URG_set_up_prisoners_modifier = yes
 
 set_war_support = 0.16
 
@@ -103,10 +91,6 @@ add_ideas = URG_welfare_state
 add_ideas = URG_debt_to_the_british
 add_ideas = monroe_doctrine_idea
 country_event = { id = uruguay.4 days = 1 }
-
-hidden_effect = { #NATIONAL SPIRIT
-	add_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
-}
 
 set_convoys = 45
 
@@ -120,10 +104,6 @@ set_convoys = 45
 	}
 	
 	set_variable = { URG_debt_to_britain = 45 }
-	add_days_mission_timeout = {
-		mission = URG_pay_the_british_debt
-		days = -600
-	}
 		
 	complete_national_focus = URG_go_with_terra
 	complete_national_focus = URG_strengthen_the_ANCAP

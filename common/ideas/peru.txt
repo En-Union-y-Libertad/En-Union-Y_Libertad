@@ -25,6 +25,8 @@ ideas = {
 			modifier = {
 			consumer_goods_factor = 0.05
 			}
+
+
 		}
 
 		PRU_purchasing_2 = {
@@ -551,8 +553,8 @@ ideas = {
 
 			modifier = {
 				political_power_gain = -0.2
-				stability_factor = -0.2
-				consumer_goods_factor = 0.2
+				stability_factor = -0.15
+				consumer_goods_factor = 0.1
 				civilian_intel_to_others = -25
 				trade_opinion_factor = -0.50
 			}
@@ -583,9 +585,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = -0.15
+				political_power_gain = -0.1
 				stability_factor = -0.1
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.06
 				civilian_intel_to_others = -2
 				trade_opinion_factor = -0.50
 			}
@@ -618,7 +620,7 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.05
 				stability_factor = -0.05
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.03
 				trade_opinion_factor = -0.25
 			}
 		}
@@ -1382,7 +1384,6 @@ ideas = {
 				NOT = {
 					has_country_flag = is_PBC
 				}
-				check_variable = { PRU_army_ideology = 1 }
 			}
 
 			cancel = {
@@ -1425,7 +1426,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = 0.05
+				political_power_gain = 0.25
 				max_dig_in = 5
 				dig_in_speed = 3
 				extra_marine_supply_grace = 90
@@ -1498,8 +1499,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				army_org_factor = 0.05
-				army_org_regain = 0.1
+				army_org_factor = 0.15
+				army_org_regain = 0.25
 				org_loss_when_moving = -0.1
 			}
 
@@ -1529,9 +1530,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				max_planning_factor = 0.1
-				dig_in_speed_factor = 0.1
-				max_dig_in_factor = 0.05
+				max_planning_factor = 0.25
+				dig_in_speed_factor = 0.2
+				max_dig_in_factor = 0.1
 			}
 
 		}
@@ -1761,9 +1762,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.05
-				production_speed_buildings_factor = 0.1 
-				industry_repair_factor = 0.25
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.25 
+				industry_repair_factor = 0.5
 			}
 
 		}	
@@ -1789,8 +1790,8 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = 0.075
-				production_speed_buildings_factor = 0.15
-				industry_repair_factor = 0.35
+				production_speed_buildings_factor = 0.25
+				industry_repair_factor = 0.5
 			}
 
 		}	
@@ -1815,9 +1816,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = -0.1
-				industry_repair_factor = -0.2
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = -0.2
+				industry_repair_factor = -0.4
 			}
 
 		}
@@ -2319,10 +2320,6 @@ ideas = {
 				always = yes 
 			}
 
-			available = {
-				has_civil_war = yes 
-			}
-
 			removal_cost = -1
 
 			modifier = {
@@ -2343,10 +2340,6 @@ ideas = {
 				always = yes 
 			}
 
-			available = {
-				has_civil_war = yes 
-			}
-
 			removal_cost = -1
 
 			modifier = {
@@ -2365,10 +2358,6 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes 
-			}
-
-			available = {
-				has_civil_war = yes 
 			}
 
 			removal_cost = -1
@@ -2442,11 +2431,33 @@ ideas = {
 			picture = generic_economic_increase 
 
 			allowed = {
-				always = no 
+				OR = {
+					tag = ARG
+					tag = BRA
+					tag = COL
+					tag = BOL
+					tag = URG
+					tag = PRU 
+					tag = ECU 
+					tag = PAR 
+					tag = VEN
+				}
 			}
 
 			available = {
-				is_in_faction = yes 
+				OR = {
+					is_in_faction_with = PRU
+					is_in_faction_with = CHL
+					if = {
+						limit = {
+							OR = {
+								always = no 
+								original_tag = BOL 
+							}
+						}
+						is_in_faction = yes 
+					}
+				}
 				NOT = {
 					has_country_flag = is_PBC 
 				}
@@ -2468,11 +2479,32 @@ ideas = {
 			picture = generic_manpower_bonus
 
 			allowed = {
-				always = no 
+				OR = {
+					tag = ARG
+					tag = BRA
+					tag = COL
+					tag = BOL
+					tag = URG
+					tag = PRU 
+					tag = ECU 
+					tag = PAR 
+					tag = VEN
+				}
 			}
 
 			available = {
-				is_in_faction = yes 
+				OR = {
+					is_in_faction_with = PRU
+					if = {
+						limit = {
+							OR = {
+								always = no 
+								original_tag = BOL 
+							}
+						}
+						is_in_faction = yes 
+					}
+				}
 				NOT = {
 					has_country_flag = is_PBC
 				}

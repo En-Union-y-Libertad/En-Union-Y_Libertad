@@ -11,16 +11,14 @@ state={
 		owner = BRA
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
 
 		}
 		add_core_of = BRA
-		add_core_of = ROA
 		victory_points = {
 			1979 2 
 		}
 		victory_points = {
-			10934 3
+			10934 2 
 		}
 	}
 

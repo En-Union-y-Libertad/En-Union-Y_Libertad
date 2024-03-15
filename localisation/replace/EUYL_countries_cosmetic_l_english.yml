@@ -9,10 +9,6 @@
  CHL_anarchist_global_commune:0 "Global Anarchist Commune"
  CHL_anarchist_global_commune_DEF:0 "the Global Anarchist Commune"
  CHL_anarchist_global_commune_ADJ:0 "Global Anarchist Commune"
- 
- ARG_la_plata:0 "Commune of La Plata"
- ARG_la_plata_DEF:0 "the Commune of La Plata"
- ARG_la_plata_ADJ:0 "Platense"
 
  BOL_government:0 "Bolivian Government"
  BOL_armed_forces:0 "Bolivian Armed Forces"
@@ -21,13 +17,9 @@
  BOL_armed_forces_DEF:0 "the Bolivian Armed Forces"
  BOL_armed_forces_ADJ:0 "Bolivian Armed Forces"
 
- SAU_UNIFIED:0 "Union of South American Socialist Republics"
- SAU_UNIFIED_DEF:0 "the Union of South American Socialist Republics"
- SAU_UNIFIED_ADJ:0 "USASR"
-
- GBO:0 "Greater Bolivia"
- GBO_DEF:0 "Greater Bolivia"
- GBO_ADJ:0 "Bolivian"
+ SAU_UNIFIED:0 "South American Union"
+ SAU_UNIFIED_DEF:0 "the South American Union"
+ SAU_UNIFIED_ADJ:0 "South American Union"
 
  GCO_UNIFIED_communism:0 "Commune of Gran Colombia"
  GCO_UNIFIED_fascism:0 "Gran Colombia"
@@ -50,10 +42,6 @@
  PRE_UNIFIED:0 "Peruvian Empire"
  PRE_UNIFIED_DEF:0 "the Peruvian Empire"
  PRE_UNIFIED_ADJ:0 "Imperialist Peruvians"
-
- RBR_UNIFIED:0 "Republic of Brazil"
- RBR_UNIFIED_DEF:0 "the Republic of Brazil"
- RBR_UNIFIED_ADJ:0 "Brazilian"
  
  PBC_UNIFYING_fascism:0 "Unionist Allience"
  PBC_UNIFYING_fascism_DEF:0 "the Unionist Allience"
@@ -93,18 +81,6 @@
  LGA_federal_democratic_DEF:0 "the Federación Libre"
  LGA_federal_ADJ:0 "Liga Federal"
 
- BRA_URG:0 "Brazilian Dominion of Uruguay"
- BRA_URG_DEF:0 "the Brazilian Dominion of Uruguay"
- BRA_URG_ADJ:0 "Uruguayans"
-
- BRA_LIB:0 "Brazilian Dominion of Liberia"
- BRA_LIB_DEF:0 "the Brazilian Dominion of Liberia"
- BRA_LIB_ADJ:0 "Liberians"
-
- HSPAM:0 "United Republics of Latin America"
- HSPAM_DEF:0 "the United Republics of Latin America"
- HSPAM_ADJ:0 "Latin Americans"
-
  PRU_naval_junta:0 "Peruvian Naval Junta"
  PRU_military_junta:0 "Peruvian Military Junta"
  PRU_naval_junta_DEF:0 "the Peruvian Naval Junta"
@@ -117,22 +93,6 @@
  GRC_UNIFIED:0 "Gran Colombia"
  GRC_UNIFIED_DEF:0 "the Gran Colombia"
  GRC_UNIFIED_ADJ:0 "Colombian"
-
- BRI_UNIFIED:0 "Empire of Brazil"
- BRI_UNIFIED_DEF:0 "the Empire of Brazil"
- BRI_UNIFIED_ADJ:0 "Brazilian Imperialists"
-
- BRA_USA_UNIFIED:0 "United States of Brazil"
- BRA_USA_UNIFIED_DEF:0 "the United States of Brazil"
- BRA_USA_UNIFIED_ADJ:0 "Brazilian"
-
- BRA_COMMUNIST:0 "Commune of Brazil"
- BRA_COMMUNIST_DEF:0 "the Commune of Brazil"
- BRA_COMMUNIST_ADJ:0 "Brazilian"
-
- BRA_FASCIST:0 "Integralist Brazil"
- BRA_FASCIST_DEF:0 "Integralist Brazil"
- BRA_FASCIST_ADJ:0 "Integralists"
 
  COL_gaitan_war:0 "Gaitanist Colombia"
  COL_gaitan_war_DEF:0 "the Gaitanist Colombia"
@@ -154,13 +114,16 @@
  URG_anarchism_DEF:0 "the Anarcho-Batllist Commune"
  URG_anarchism_ADJ:0 "Anarcho-Batllist"
 
- URG_GLOBAL:0 "Global Anarchist Council"
- URG_GLOBAL_DEF:0 "the Global Anarchist Council"
- URG_GLOBAL_ADJ:0 "Global Anarchist Council"
-
  ARG_anarchist:0 "Anarchist Argentina"
  ARG_anarchist_DEF:0 "Anarchist Argentina"
  ARG_anarchist_ADJ:0 "Argentinian"
+
+ PAT_anarchist:0 "Patagonian Anarchist Front"
+ PAT_anarchist_DEF:0 "the Patagonian Anarchist Front"
+ PAT_anarchist_ADJ:0 "Patagonian"
+
+ BLZ_UK_neutrality:0 "British Honduras"
+ BLZ_UK_neutrality_DEF:0 "British Honduras"
 
  INS_HOL_democratic:0 "Dutch East Indies"
  INS_HOL_democratic_DEF:0 "the Dutch East Indies"

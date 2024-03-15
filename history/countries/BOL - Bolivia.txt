@@ -1,16 +1,5 @@
 ﻿capital = 302
 
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "BOL_1936_air_bba"
-	else = {
-		set_air_oob = "BOL_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-		}
-	}
-}
-
 recruit_character = BOL_josé_luis_tejada_sorzano
 recruit_character = BOL_Óscar_Únzaga_de_la_vega
 recruit_character = BOL_germán_busch
@@ -46,8 +35,7 @@ add_ideas = {
 	BOL_losers_in_the_chaco_war
 	BOL_unstable_republic
 	BOL_great_depression
-	BOL_sea_access_loss	
-	BOL_servicio_militar_obligatorio
+	BOL_sea_access_loss
 }
 
 add_ideas = monroe_doctrine_idea
@@ -72,7 +60,6 @@ set_country_flag = monroe_doctrine
 
 	add_political_power = 355
 	set_country_flag = BOL_started_in_39
-	#country_event = { id = bolivia.8 days = 120 }
 	
 	#generic focuses
 	complete_national_focus = BOL_side_with_military

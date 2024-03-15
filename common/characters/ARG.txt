@@ -30,59 +30,15 @@ characters={
 			id=-1
 		}
 	}
-	ARG_the_military_junta = {
-		name = "Junta Militar Argentina"
-		portraits = {
-			civilian = {
-				large="gfx/leaders/ARG/ARG_military_junta.png"
-			}
-		}
-		country_leader = {
-			desc="POLITICS_JUNTA_MILITAR_DESC"
-			ideology=militarism
-			traits = { BRA_disorganized_leadership }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
-	ARG_roberto_maria_ortiz = {
-		name = "Roberto Marcelino Ortiz"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/ARG/Portrait_Roberto_M_Ortiz.dds"
+	ARG_gino_gatti_c = {
+		name="Gino Gatti"
+		
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_Political_1.dds"
 			}
 			army={
-				small="GFX_idea_south_america_generic_3"
-			}
-		}
-		country_leader = {
-			desc = "POLITICS_ROBERTO_MARIA_ORTIZ_DESC"
-			ideology = centrism
-			traits = { ARG_brutal_leader_2 ARG_expert_commercialist }
-			expire="1965.1.1.1"
-			id = -1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ARG_roberto_maria
-			allowed  = {
-				original_tag  = ARG
-			}
-			available = {
-				has_civil_war = no
-				NOT = {
-					OR = {
-						has_government = fascism
-						has_government = communism
-					}
-				}
-			}
-			traits  = {
-				silent_workhorse 
-			}
-			ai_will_do = {
-				factor = 1
+				large="gfx/leaders/South America/Portrait_UL_South_America_Generic_Political_1.dds"
 			}
 		}
 	}
@@ -92,9 +48,6 @@ characters={
 			civilian={
 				large="gfx/leaders/ARG/Portrait_Argentina_Fanny_Jabcovsky.dds"
 			}
-			army={
-				small="GFX_idea_generic_army_female_south_america"
-			}
 		}
 		country_leader={
 			desc="POLITICS_FANNY_JABCOVSKY_DESC"
@@ -102,72 +55,6 @@ characters={
 			traits={ ARG_first_female_ruler }
 			expire="1965.1.1.1"
 			id=-1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ARG_fanny_ad
-			allowed  = {
-				original_tag  = ARG
-			}
-			available = {
-				NOT = { has_government = fascism }
-			}
-			on_add = {
-				ROOT = {
-					add_popularity = {
-						ideology = communism
-						popularity = 0.05
-					}
-				}
-			}
-			traits  = {
-				financial_expert 
-			}
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	ARG_liborio_justo = {
-		name="Liborio Justo"
-		portraits={
-			civilian={
-				large="gfx/leaders/ARG/ARG_liborio_justo.png"
-			}
-			army={
-				small="GFX_idea_generic_communist_south_america"
-			}
-		}
-		country_leader={
-			desc="POLITICS_LIBORIO_JUSTO_DESC"
-			ideology=marxism
-			traits={ ARG_brutal_leader_2 }
-			expire="1965.1.1.1"
-			id=-1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ARG_liborio_justo_ad
-			allowed  = {
-				original_tag  = ARG
-			}
-			available = {
-				NOT = { has_government = fascism }
-			}
-			on_add = {
-				ROOT = {
-					add_popularity = {
-						ideology = communism
-						popularity = 0.05
-					}
-				}
-			}
-			traits  = {
-				technocrat 
-			}
-			ai_will_do = {
-				factor = 1
-			}
 		}
 	}
 	ARG_arturo_rawson={
@@ -262,13 +149,6 @@ characters={
 			logistics_skill=3
 			legacy_id=24657
 		}
-		country_leader = {
-			desc="POLITICS_PEDRO_PABLO_RAMIREZ_DESC"
-			ideology=militarism
-			traits = { dictator }
-			expire="1965.1.1.1"
-			id=-1
-		}
 	}
 	ARG_juan_domingo_peron={
 		name="Juan Domingo Peron"
@@ -276,18 +156,14 @@ characters={
 			slot = political_advisor
 			idea_token = ARG_juan_domingo_peron
 			allowed  = {
-				original_tag  = ARG
-			}
-			available  = {
-				custom_trigger_tooltip = {
-					tooltip = ARG_is_not_currently_studying_italian_warfare_tt
-					NOT = { has_character_flag = ARG_in_italy }
-				} 
-				NOT = { has_government = communism }
-			}
-			traits  = {
-				national_integralist 
-			}
+					original_tag  = ARG
+				}
+				available  = {
+					has_completed_focus  = ARG_perons_argentina 
+				}
+				traits  = {
+					national_integralist 
+				}
 		}
 		portraits={
 			army={
@@ -299,7 +175,7 @@ characters={
 		}
 		country_leader={
 			desc="POLITICS_JUAN_DOMINGO_PERON_DESC"
-			ideology=peronism
+			ideology=peronist
 			traits={ ARG_inexperienced_leader fascist_sympathies }
 			expire="1965.1.1.1"
 			id=-1
@@ -320,7 +196,7 @@ characters={
 			id=-1
 		}
 	}
-	ARG_marcelo_t_de_alvear={
+	ARG_marcelo_t._de_alvear={
 		name="Marcelo T. de Alvear"
 		portraits={
 			civilian={
@@ -330,35 +206,6 @@ characters={
 		country_leader={
 			desc="POLITICS_MARCELO_ALVEAR_DESC"
 			ideology=socialism
-			traits = { PRU_compassionate_leader }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	ARG_nicolas_repetto = {
-		name = "Nicolás Repetto"
-		portraits={
-			civilian={
-				large="gfx/leaders/ARG/portrait_ARG_nicolas_repetto.png"
-			}
-		}
-		country_leader={
-			desc="POLITICS_NICOLAS_REPETTO_DESC"
-			ideology=social_democracy
-			expire="1965.1.1.1"
-			id=-1
-		}
-	} ## Both will have unique traits later on ##
-	ARG_alfredo_palacios = {
-		name = "Alfredo Lorenzo Palacios"
-		portraits={
-			civilian={
-				large="gfx/leaders/ARG/portrait_ARG_alfredo_palacios.png"
-			}
-		}
-		country_leader={
-			desc="POLITICS_ALFREDO_PALACIOS_DESC"
-			ideology=social_democracy
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -383,7 +230,7 @@ characters={
 			legacy_id=51225
 		}
 	}
-	ARG_edelmiro_julian_farrell={
+	ARG_edelmiro_julián_farrell={
 		name="Edelmiro Julián Farrell"
 		portraits={
 			army={
@@ -441,45 +288,6 @@ characters={
 			planning_skill=2
 			logistics_skill=3
 			legacy_id=-1
-		}
-	}
-	ARG_carlos_von_der = {
-		name = "Carlos von der Becke"
-		portraits = {
-			army = {
-				large = "gfx/leaders/ARG/ARG_carlos_von_der_becke.png"
-			}
-		}
-		corps_commander = {
-			traits = {}
-			skill = 2
-			attack_skill=1
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=-1
-		}
-	}
-	ARG_rodolfo_freude = {
-		name = "Rodolfo Freude"
-		portraits = {
-			army = {
-				small = "GFX_ARG_rodolfo_freude"
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = ARG_rodolfo_f
-			allowed = {
-				original_tag = ARG
-				has_dlc = "La Resistance"
-			}
-			available = {
-				has_intelligence_agency = yes
-			}
-			traits = {
-				head_of_intelligence 
-			}
 		}
 	}
 	ARG_juan_carlos_onganía={

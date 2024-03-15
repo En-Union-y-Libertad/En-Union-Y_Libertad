@@ -78,7 +78,7 @@ CHL_internal_political_split = {
 
 		is_good = no 
 
-		days_mission_timeout = CHL_communist_influence_days
+		days_mission_timeout = CHL_nacista_influence_days
 
 		fire_only_once = no 
 
@@ -144,9 +144,9 @@ CHL_internal_political_split = {
 			}
 		}
 
-		cost = 15
+		cost = 20
 
-		days_remove = 25
+		days_remove = 30
 
 		modifier = {
 			political_power_factor = -0.05
@@ -225,9 +225,9 @@ CHL_internal_political_split = {
 			}
 		}
 
-		cost = 15
+		cost = 20
 
-		days_remove = 25
+		days_remove = 30
 
 		modifier = {
 			political_power_factor = -0.05
@@ -306,9 +306,9 @@ CHL_internal_political_split = {
 			}
 		}
 
-		cost = 40
+		cost = 50
 
-		days_remove = 40
+		days_remove = 50
 
 		modifier = {
 			stability_weekly = -0.0014
@@ -388,9 +388,9 @@ CHL_internal_political_split = {
 			}
 		}
 
-		cost = 40
+		cost = 50
 
-		days_remove = 40
+		days_remove = 50
 
 		modifier = {
 			stability_weekly = -0.0014
@@ -1279,6 +1279,10 @@ CHL_the_chilean_civil_war = {
 			base = 70
 		}
 		
+		allowed = {
+			original_tag = CHL 
+		}
+		
 		available = {
 			command_power > 15
 			custom_trigger_tooltip = {
@@ -1298,7 +1302,7 @@ CHL_the_chilean_civil_war = {
 		fire_only_once = no
 		
 		modifier = {
-			army_attack_factor = 0.1
+			army_attack_factor =  0.1
 		}
 		
 		ai_will_do = {
@@ -1323,6 +1327,10 @@ CHL_the_chilean_civil_war = {
 		
 		ai_will_do = {
 			base = 70
+		}
+		
+		allowed = {
+			original_tag = CHL 
 		}
 		
 		available = {
@@ -1360,64 +1368,6 @@ CHL_the_chilean_civil_war = {
 		
 		remove_effect = {
 			clr_country_flag = ARG_decision_already_in_progress
-		}
-	}
-
-	URG_urgent_mobilization = {
-		priority = 15
-		icon = generic_army_support
-
-		allowed = { original_tag = URG }
-
-		cost = 10
-
-		days_remove = 10
-
-		fire_only_once = yes 
-
-		ai_will_do = {
-			factor = 150
-		}
-
-		remove_effect = {
-			add_manpower = 8000
-			if = {
-				limit = {
-					has_template = "Nacionales"
-				}
-				random_controlled_state = {
-					create_unit = {
-						division = "name = \"Nacionales\" division_template = \"Nacionales\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_template = "Loyalists"
-				}
-				random_controlled_state = {
-					create_unit = {
-						division = "name = \"Loyalists\" division_template = \"Loyalists\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-						owner = ROOT
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_template = "Milicias"
-				}
-				random_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = ROOT
-					}
-				}
-			}
-			else = {
-				add_war_support = 0.05
-				add_manpower = 2000
-			}
 		}
 	}
 
@@ -1925,14 +1875,9 @@ CHL_the_1938_chilean_elections = {
 			has_equipment = {
 				infantry_equipment > 49
 			}
-			if = {
-                limit = {
-                    is_ai = no 
-                }
-				divisions_in_state = {
-					size > 1
-					state = FROM
-				}
+			divisions_in_state = {
+				size > 1
+				state = FROM
 			}
 		}
 
@@ -2044,25 +1989,11 @@ CHL_calming_down_the_people = {
 		allowed = { original_tag = CHL }
 
 		activation = {
+			has_completed_focus = CHL_abandon_the_compromise
 			OR = {
 				has_idea = CHL_people_protesting_rapid_expansion_1
 				has_idea = CHL_people_protesting_rapid_expansion_2
 				has_idea = CHL_people_protesting_rapid_expansion_3
-			}
-			NOT = { has_government = fascism }
-		}
-		
-		available = {
-			OR = {
-				exists = no 
-				is_subject = yes 
-				has_capitulated = yes 
-			}
-		}
-
-		cancel_trigger = {
-			hidden_trigger = {
-				has_government = fascism
 			}
 		}
 
@@ -2077,7 +2008,7 @@ CHL_calming_down_the_people = {
 				}
 				swap_ideas = {
 					remove_idea = CHL_people_protesting_rapid_expansion_3
-					add_idea = CHL_people_protesting_rapid_expansion_2
+					add_idea = CHL_people_protesting_rapid_expansion_3
 				}
 			}
 			else_if = {
@@ -2147,14 +2078,6 @@ CHL_nacista_management = {
 			}
 		}
 
-		available = {
-			OR = {
-				exists = no 
-				is_subject = yes 
-				has_capitulated = yes 
-			}
-		}
-
 		is_good = yes 
 
 		days_mission_timeout = CHL_days_for_people_to_calm_down
@@ -2166,7 +2089,7 @@ CHL_nacista_management = {
 				}
 				swap_ideas = {
 					remove_idea = CHL_people_protesting_rapid_expansion_3
-					add_idea = CHL_people_protesting_rapid_expansion_2
+					add_idea = CHL_people_protesting_rapid_expansion_3
 				}
 			}
 			else_if = {
@@ -2191,12 +2114,16 @@ CHL_nacista_management = {
 
 		available = {
 			has_government = fascism
-			has_capitulated = no 
-			is_subject = no 
 		}
 
 		visible = {
 			has_completed_focus = CHL_begin_mass_mobilization
+			OR = {
+				has_idea = CHL_mass_mobilization_1
+				has_idea = CHL_mass_mobilization_2
+				has_idea = CHL_mass_mobilization_3
+				has_idea = CHL_mass_mobilization_4
+			}
 		}
 
 		cost = CHL_cost_to_mobilize
@@ -2209,19 +2136,6 @@ CHL_nacista_management = {
 
 		remove_effect = {
 			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_idea = CHL_mass_mobilization_1
-							has_idea = CHL_mass_mobilization_2
-							has_idea = CHL_mass_mobilization_3
-							has_idea = CHL_mass_mobilization_4
-						}
-					}
-				}
-				add_ideas = CHL_mass_mobilization_1
-			}
-			else_if = {
 				limit = { 
 					has_idea = CHL_mass_mobilization_1
 				}
@@ -4150,7 +4064,7 @@ CHL_cooperating_with_the_british = {
 		remove_effect = {
 			clr_country_flag = CHL_architectural_project_in_progress
 			random_owned_controlled_state = {
-				limit = { infrastructure < 5 }
+				limit = { infrastructure < 10 }
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -4804,7 +4718,7 @@ CHL_march_to_argentina_capital = {
 		allowed = { original_tag = CHL } 
 		
         available = {                        
-            controls_state = 966            
+            controls_state = 888            
         }
 		
         activation = {                       
@@ -4846,7 +4760,7 @@ CHL_the_patagonian_integration_campaign = {
 
 		state_target = yes 
 
-		targets = { 967 968 969 512 970 }
+		targets = { 889 890 891 512 892 }
 
 		on_map_mode = map_and_decisions_view
 
@@ -4860,17 +4774,9 @@ CHL_the_patagonian_integration_campaign = {
 		}
 
 		available = {
-			if = {
-                limit = {
-                    is_ai = no 
-                }
-				divisions_in_state = {
-					size > 4
-					state = FROM
-				}
-			}
-			else = {
-				has_army_experience > 9 
+			divisions_in_state = {
+				size > 4
+				state = FROM
 			}
 			hidden_trigger = {
 				NOT = {
@@ -4896,19 +4802,12 @@ CHL_the_patagonian_integration_campaign = {
 		}
 
 		complete_effect = {
-			if = {
-                limit = {
-                    is_ai = no 
-                }
-				army_experience = -10
-			}
 			hidden_effect = {
 				set_country_flag = CHL_integrating_state_lol
 			}
 		}
 
 		remove_effect = {
-			clr_country_flag = CHL_integrating_state_lol
 			FROM = {
 				add_core_of = ROOT
 			}
@@ -5048,7 +4947,7 @@ CHL_the_nacista_uprising = {
 					size = 0.75
 					capital = 506
 					states = {
-						506 910 909 916 913 911 912 507
+						506 910 909 914 913 911 912 507
 					}
 					keep_unit_leaders_trigger = {
 						has_trait = trait_CHL_fascist_sympathies
@@ -5144,7 +5043,7 @@ CHL_the_nacista_uprising = {
 
 		state_target = yes 
 
-		targets = { 279 963 507 }
+		targets = { 279 885 507 }
 
 		target_trigger = {
 			FROM = {
@@ -5153,16 +5052,10 @@ CHL_the_nacista_uprising = {
 		}
 
 		available = {
-			if = {
-                limit = {
-                    is_ai = no 
-                }
-				divisions_in_state = {
-					size > 2
-					state = FROM
-				}
+			divisions_in_state = {
+				size > 2
+				state = FROM
 			}
-			has_civil_war = no 
 		}
 
 		visible = {
@@ -5339,25 +5232,11 @@ CHL_cooperating_with_the_soviets = {
 
 		remove_effect = {
 			clr_country_flag = CHL_purchasing_tank
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "No Step Back"
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = light_tank_equipment_1
-					amount = 90
-					producer = FROM 
-				}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 90
+				producer = FROM 
 			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
-					amount = 90
-					producer = FROM 
-				}
-			}	
 			FROM = {
 				add_offsite_building = {
 					type = industrial_complex
@@ -5428,25 +5307,11 @@ CHL_cooperating_with_the_soviets = {
 
 		remove_effect = {
 			clr_country_flag = CHL_purchasing_tank
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "No Step Back"
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_equipment_1
-					amount = 75
-					producer = FROM 
-				}
+			add_equipment_to_stockpile = {
+				type = medium_tank_equipment_1
+				amount = 75
+				producer = FROM 
 			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = medium_tank_chassis_1
-					amount = 75
-					producer = FROM 
-				}
-			}	
 			FROM = {
 				add_offsite_building = {
 					type = industrial_complex
@@ -5518,25 +5383,11 @@ CHL_cooperating_with_the_soviets = {
 
 		remove_effect = {
 			clr_country_flag = CHL_purchasing_tank
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "No Step Back"
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = heavy_tank_equipment_1
-					amount = 65
-					producer = FROM 
-				}
+			add_equipment_to_stockpile = {
+				type = heavy_tank_equipment_1
+				amount = 65
+				producer = FROM 
 			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = heavy_tank_chassis_1
-					amount = 65
-					producer = FROM 
-				}
-			}	
 			FROM = {
 				add_offsite_building = {
 					type = industrial_complex
@@ -5695,7 +5546,7 @@ CHL_purchasing_foreign_planes = {
 		remove_effect = {
 			clr_country_flag = CHL_purchasing_planes
 			add_equipment_to_stockpile = {
-				type = small_plane_airframe
+				type = fighter_equipment
 				amount = 65
 				producer = FROM
 			}
@@ -5767,7 +5618,7 @@ CHL_purchasing_foreign_planes = {
 		remove_effect = {
 			clr_country_flag = CHL_purchasing_planes
 			add_equipment_to_stockpile = {
-				type = medium_plane_airframe
+				type = tac_bomber_equipment
 				amount = 65
 				producer = FROM
 			}

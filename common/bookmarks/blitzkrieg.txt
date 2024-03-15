@@ -72,14 +72,13 @@ bookmarks = {
 			history = ITA_BLITZKRIEG_DESC
 			ideology = fascism
 			ideas={
-				vittorio_emanuele_albania_ethiopia
-				ITA_camicie_nere
-				ITA_pact_of_steel
+				vittoria_mutilata
+				victor_emmanuel
 			}
 			focuses = {
-				ITA_battaglioni_d_assalto
-				ITA_by_blood_alone
-				ITA_ferrea_mole_ferreo_cuore
+				ITA_pact_of_steel
+				ITA_spanish_italian_faction
+				ITA_italy_first
 			}			
 		}
 		JAP = {
@@ -502,21 +501,7 @@ bookmarks = {
 				POL_seek_accommodation_with_germany
 			}
 		}
-		"SWI"={
-			minor = yes
-			history = "SWI_BLITZKRIEG_DESC"
-			ideology = democratic
-			ideas = {
-				SWI_spirit_of_helvetia_aggressive_war
-				SWI_frontier_defense_plan_idea_3
-				SWI_mountaineer_paratroopers_idea
-			}
-			focuses = {
-				SWI_gotthard_union
-				SWI_promote_guisan
-				SWI_closer_ties_with_germany
-			}
-		}
+		
 		"ARG" = {
 			minor = yes
 			history = "ARG_BLITZKRIEG_DESC"
@@ -613,22 +598,6 @@ bookmarks = {
 				COL_fundar_la_oea
 				COL_proteger_al_pueblo_colombiano
 				COL_tratado_de_asistencia_colombo_americano
-			}
-		}
-		
-		"BRA" = {
-			minor = yes 
-			history = "BRA_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				BRA_scars_of_the_1930_revolution_3
-				BRA_minimum_wage_established
-				industrializing_economy
-			}
-			focuses = {
-				BRA_establish_the_FAB
-				BRA_establish_the_mercosur
-				BRA_the_germans_and_brazilians_united
 			}
 		}
 	}

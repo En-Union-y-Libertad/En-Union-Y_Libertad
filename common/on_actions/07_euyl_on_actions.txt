@@ -1,132 +1,8 @@
 #FROM is war target
 on_actions = {
-    on_government_change = {
-        effect = {
-            if = {
-				limit = {
-					original_tag = PRU
-					has_government = communism
-				}
-				every_character = {
-                    limit = { has_character_flag = PRU_urrista }
-                    PRU = { retire_character = PREV }
-                }
-			}
-        }
-        effect = { #To remove any organized resistance of ideology that is currently in power 
-            if = {
-                limit = {
-                    original_tag = CHL 
-                    has_government = fascism
-                }
-                CHL = {
-                    every_controlled_state = {
-                        limit = { 
-                            has_dynamic_modifier = { modifier = CHL_organized_nacista_rebellion }
-                        }
-                        remove_dynamic_modifier = { modifier = CHL_organized_nacista_rebellion }
-                    }
-                }
-            }
-            if = {
-                limit = { 
-                    original_tag = CHL 
-                    has_government = communism
-                }
-                CHL = {
-                    every_controlled_state = {
-                        limit = { 
-                            has_dynamic_modifier = { modifier = CHL_organized_communist_rebellion }
-                        }
-                        remove_dynamic_modifier = { modifier = CHL_organized_communist_rebellion }
-                    }
-                }
-            }
-        }
-    }
-	on_monthly_ARG = {
-        effect = {
-            if = {
-                limit = {
-                    has_idea = ARG_high_inflation_risk
-                }
-                random_list = {
-                    5 = {
-                        remove_ideas = {
-                            ARG_high_inflation_risk
-                            ARG_medium_inflation_risk
-                            ARG_low_inflation_risk
-                        }
-                        add_ideas = ARG_inflation_4
-                        country_event = argentina.rework.10
-                    }
-                    95 = {
-
-                    }
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = ARG_medium_inflation_risk
-                }
-                random_list = {
-                    2 = {
-                        remove_ideas = {
-                            ARG_high_inflation_risk
-                            ARG_medium_inflation_risk
-                            ARG_low_inflation_risk
-                        }
-                        add_ideas = ARG_inflation_4
-                        country_event = argentina.rework.10
-                    }
-                    98 = {
-
-                    }
-                }
-            }
-            else_if = {
-                limit = {
-                    has_idea = ARG_low_inflation_risk
-                }
-                random_list = {
-                    1 = {
-                        remove_ideas = {
-                            ARG_high_inflation_risk
-                            ARG_medium_inflation_risk
-                            ARG_low_inflation_risk
-                        }
-                        add_ideas = ARG_inflation_3
-                        country_event = argentina.rework.10
-                    }
-                    99 = {
-
-                    }
-                }
-            }
-        }
-    }
-	on_peace = {
-		effect = {
-			if = {
-				limit = {
-					original_tag = ARG 
-					has_template = "Milicias Argentinas" 
-					has_template = "Gauchos"
-				}
-				delete_units = {
-					division_template = "Milicias Argentinas"
-					disband = yes
-				}
-				delete_units = {
-					division_template = "Gauchos"
-					disband = yes
-				}
-			}
-		}
-	}
 	on_declare_war = {
-        effect = { #Peru-Bolivian Confederation gets event of nation attacking an ally nation with the defense pact idea
-			if = {
+        effect = {
+            if = {
                 limit = {
                     ROOT = {
                         exists = yes 
@@ -165,58 +41,6 @@ on_actions = {
                 }
             }
         }
-        effect = { #Brazil starts war with Uruguay 
-            if = {
-                limit = {
-                    original_tag = BRA 
-                    NOT = { has_global_flag = second_cisplatine_war }
-                    FROM = {
-                        original_tag = URG 
-                    }
-                }
-                hidden_effect = {
-                    if = {
-                        limit = {
-                            ARG = {
-                                has_civil_war = no
-                                NOT = { has_war_with = ROOT }
-                                NOT = { is_in_faction_with = ROOT }
-                            }
-                        }
-                        ARG = {
-                            country_event = { id = brazil.63 hours = 10 }
-                        }
-                        set_global_flag = second_cisplatine_war
-                    }
-                }
-            }
-        }
-		effect = { #Argentina starts war with Uruguay 
-            if = {
-                limit = {
-                    original_tag = ARG 
-                    NOT = { has_global_flag = second_cisplatine_war }
-                    FROM = {
-                        original_tag = URG 
-                    }
-                }
-                hidden_effect = {
-                    if = {
-                        limit = {
-                            BRA = {
-                                has_civil_war = no
-                                NOT = { has_war_with = ROOT }
-                                NOT = { is_in_faction_with = ROOT }
-                            }
-                        }
-                        BRA = {
-                            country_event = { id = argentina.2 hours = 10 }
-                        }
-                        set_global_flag = second_cisplatine_war
-                    }
-                }
-            }
-        }
 		effect = {
             #Peru starts the war against Ecuador 
 			if = {
@@ -228,47 +52,8 @@ on_actions = {
 					FROM = {
 						tag = ECU
 					}
-                    NOT = {
-                        has_global_flag = peru_ecuador_war
-                    }
 				}
                 news_event = { id = news.346 hours = 6 random = 20 }
-                set_global_flag = peru_ecuador_war
-                hidden_effect = {
-                    ECU = {
-                        add_ideas = EUYL_war_of_survival
-                        division_template = {
-                            name = "Reservistas" 
-                            division_names_group = SPAN_INF_02 
-                            is_locked = no 
-                            regiments = { 
-                                infantry = { x = 0 y = 0 }  
-                                infantry = { x = 0 y = 1 } 
-                                infantry = { x = 0 y = 2 } 
-                                infantry = { x = 0 y = 3 } 
-                                infantry = { x = 0 y = 4 } 
-                            }
-                        }
-                        random_owned_controlled_state = {
-                            create_unit = {
-                                division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                                owner = ECU
-                            }
-                        }
-                        random_owned_controlled_state = {
-                            create_unit = {
-                                division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                                owner = ECU
-                            }
-                        }
-                        random_owned_controlled_state = {
-                            create_unit = {
-                                division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                                owner = ECU
-                            }
-                        }
-                    }
-                }
             }
         }
         effect = {
@@ -279,88 +64,8 @@ on_actions = {
                     FROM = {
                         tag = PAR
                     }
-                    NOT = {
-                        has_global_flag = second_chaco_war
-                    }
                 }
                 news_event = { id = news.347 hours = 6 random = 20 }
-                set_global_flag = second_chaco_war
-                hidden_effect = {
-                    PAR = {
-                        add_ideas = EUYL_war_of_survival
-                        division_template = {
-                            name = "Reservistas" 
-                            division_names_group = SPAN_INF_02 
-                            is_locked = no 
-                            regiments = { 
-                                infantry = { x = 0 y = 0 }  
-                                infantry = { x = 0 y = 1 } 
-                                infantry = { x = 0 y = 2 } 
-                                infantry = { x = 0 y = 3 } 
-                                infantry = { x = 0 y = 4 } 
-                            }
-                        }
-                        random_owned_controlled_state = {
-                            create_unit = {
-                                division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                                owner = PAR
-                            }
-                        }
-                        random_owned_controlled_state = {
-                            create_unit = {
-                                division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                                owner = PAR
-                            }
-                        }
-                        random_owned_controlled_state = {
-                            create_unit = {
-                                division = "name = \"Reservistas\" division_template = \"Reservistas\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                                owner = PAR
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        effect = { #Brazilian civil war if player still has scars of the revolution idea
-            if = {
-                limit = {
-                    original_tag = BRA 
-                    BRA = {
-                        OR = {
-                            has_idea = BRA_scars_of_the_1930_revolution_1
-                            has_idea = BRA_scars_of_the_1930_revolution_2
-                            has_idea = BRA_scars_of_the_1930_revolution_3
-                            has_idea = BRA_scars_of_the_1930_revolution_4
-                        } 
-                    }
-                    FROM = {
-                        exists = yes
-                        NOT = {
-                            original_tag = BRA 
-                        } 
-                    }
-                    NOT = {
-                        has_global_flag = brazil_civil_war_from_scars
-                    }
-                }
-                set_global_flag = brazil_civil_war_from_scars
-                set_temp_variable = { BRA_democratic_popularity = party_popularity@democratic }
-                start_civil_war = {
-                    ruling_party = ROOT 
-                    ideology = democratic
-                    size = 0.4
-                }
-                random_other_country = {
-                    limit = {
-                        original_tag = BRA 
-                        has_government = democratic
-                        has_civil_war = yes 
-                    }
-                    retire_country_leader = yes 
-                    promote_character = BRA_armed_civilians
-                }
-                BRA_set_up_generic_civil_war_divisions_democratic = yes 
             }
         }
         effect = {
@@ -411,92 +116,9 @@ on_actions = {
                 }
             }
         }
-        effect = {
-            #People of Brazil get mad from constant wars 
-            if = {
-                limit = {
-                    original_tag = BRA 
-                    BRA = {
-                        OR = {
-                            has_completed_focus = BRA_external_imperial_management
-                            has_completed_focus = BRA_expand_aggresively
-                        }
-                    }
-                    FROM = {
-                        exists = yes 
-                    }
-                }
-                BRA = {
-                    if = {
-                        limit = {
-                            NOT = {
-                                OR = {
-                                    has_idea = CHL_people_protesting_rapid_expansion_1
-                                    has_idea = CHL_people_protesting_rapid_expansion_2
-                                }
-                            }
-                        }
-                        add_ideas = CHL_people_protesting_rapid_expansion_1
-                    }
-                    else_if = {
-                        limit = {
-                            has_idea = CHL_people_protesting_rapid_expansion_1
-                        }
-                        swap_ideas = {
-                            remove_idea = CHL_people_protesting_rapid_expansion_1
-                            add_idea = CHL_people_protesting_rapid_expansion_2
-                        }
-                    }
-                    else_if = {
-                        limit = {
-                            has_idea = CHL_people_protesting_rapid_expansion_2
-                        }
-                        swap_ideas = {
-                            remove_idea = CHL_people_protesting_rapid_expansion_2
-                            add_idea = CHL_people_protesting_rapid_expansion_3
-                        }
-                    }
-                }
-            }
-        }
     }
     #ROOT is winner #FROM gets annexed - This will also fire on_annex
     on_civil_war_end = {
-        #effect = {
-        #    if = {
-        #        limit = {
-        #            FROM = {
-        #                original_tag = BRA 
-        #            }
-        #            ROOT = {
-        #                original_tag = BRA 
-        #                has_global_flag = BRA_civil_war_in_progress #this is to make sure this triggers only after a pre-definied civil war 
-        #                has_civil_war = no 
-        #                is_subject = no #The AI might puppet for god knows what reason
-        #                NOT = {
-        #                    OR = {
-        #                        has_war_with = BRC 
-        #                        has_war_with = BUS 
-        #                        has_war_with = BZE 
-        #                        has_war_with = SAO 
-        #                    }
-        #                }
-        #                NOT = {
-        #                    OR = {
-        #                        has_active_mission = BRA_impending_democratic_insurrection
-        #                        has_active_mission = BRA_impending_integralist_uprising
-        #                        has_active_mission = BRA_impending_communist_uprising
-        #                        has_active_mission = BRA_impending_paulista_revolt
-        #                        has_active_mission = BRA_impending_imperial_uprising
-        #                    }
-        #                }
-        #            }
-        #        }
-        #        ROOT = {
-        #            country_event = brazil.57
-        #        }
-        #    }
-        #}
         effect = {
             #End of Peruvian civil war
             if = {
@@ -508,14 +130,10 @@ on_actions = {
                         original_tag = PRU 
                         has_government = fascism
                     }
-                    NOT = {
-                        has_global_flag = end_peru_civil_war_fash
-                    }
                 }
                 ROOT = {
                     country_event = { id = peru.24 hours = 8 }
                 }
-                set_global_flag = end_peru_civil_war_fash
             }
         }
         effect = {
@@ -534,10 +152,6 @@ on_actions = {
                                 has_cosmetic_tag = PRU_naval_junta
                             }
                         }
-                        is_ai = yes 
-                    }
-                    NOT = {
-                        has_global_flag = end_civil_war_peru_neut
                     }
                 }
                 ROOT = {
@@ -573,7 +187,6 @@ on_actions = {
                     complete_national_focus = PRU_marina_de_guerra_del_peru
                     complete_national_focus = PRU_extend_naval_training
                 }
-                set_global_flag = end_civil_war_peru_neut
             }
         }
         effect = { 
@@ -611,10 +224,6 @@ on_actions = {
                     ROOT = {
                         original_tag = BOL 
                         has_government = communism
-                        is_ai = yes 
-                    }
-                    NOT = {
-                        has_global_flag = end_bolivia_civil_war
                     }
                 }
                 ROOT = {
@@ -640,7 +249,6 @@ on_actions = {
                     complete_national_focus = BOL_switch_to_an_agrarian_industry
                     complete_national_focus = BOL_feed_our_people
                 }
-                set_global_flag = end_bolivia_civil_war
             }
         }
         effect = {
@@ -654,30 +262,23 @@ on_actions = {
                     ROOT = {
                         original_tag = ARG 
                         has_government = neutrality
-                        is_ai = yes 
-                    }
-                    NOT = {
-                        has_global_flag = end_argentine_civil_war
                     }
                 }
-                ROOT = {
-                    load_focus_tree = {
-                        tree = argentine_focus
-                        keep_completed = no 
-                    }
-                    complete_national_focus = ARG_infamous_decade
-                    complete_national_focus = ARG_focus_economy
-                    complete_national_focus = ARG_make_an_effort_to_control_the_inflation
-                    complete_national_focus = ARG_support_our_growing_industry
-                    complete_national_focus = ARG_reduce_public_expense
-                    complete_national_focus = ARG_rapidly_mobilize
-                    complete_national_focus = ARG_raise_military_salary
-                    complete_national_focus = ARG_spread_military_propganda
-                    complete_national_focus = ARG_idolize_war_heroes
-                    complete_national_focus = ARG_restrict_the_usage_of_the_dollar
-                    complete_national_focus = ARG_develop_the_capital
+                load_focus_tree = {
+                    tree = argentine_focus
+                    keep_completed = no 
                 }
-                set_global_flag = end_argentine_civil_war
+                complete_national_focus = ARG_infamous_decade
+                complete_national_focus = ARG_focus_economy
+                complete_national_focus = ARG_make_an_effort_to_control_the_inflation
+                complete_national_focus = ARG_support_our_growing_industry
+                complete_national_focus = ARG_reduce_public_expense
+                complete_national_focus = ARG_rapidly_mobilize
+                complete_national_focus = ARG_raise_military_salary
+                complete_national_focus = ARG_spread_military_propganda
+                complete_national_focus = ARG_idolize_war_heroes
+                complete_national_focus = ARG_restrict_the_usage_of_the_dollar
+                complete_national_focus = ARG_develop_the_capital
             }
         }
         effect = {
@@ -697,9 +298,6 @@ on_actions = {
                         original_tag = CHL 
                         has_government = communism
                         is_ai = yes 
-                    }
-                    NOT = {
-                        has_global_flag = end_civil_war_chile_commie
                     }
                 }
                 load_focus_tree = {
@@ -743,7 +341,6 @@ on_actions = {
                 add_to_temp_variable = { CHL_combined_power = CHL_nacista_power }
                 subtract_from_temp_variable = { CHL_100_per = CHL_combined_power }
                 set_variable = { CHL_control_over_nation = CHL_100_per }
-                set_global_flag = end_civil_war_chile_commie
             }
         }
         effect = {
@@ -760,9 +357,6 @@ on_actions = {
                         original_tag = CHL 
                         has_government = fascism
                         is_ai = yes 
-                    }
-                    NOT = {
-                        has_global_flag = end_chile_civil_war_fash
                     }
                 }
                 load_focus_tree = {
@@ -805,7 +399,6 @@ on_actions = {
                 add_to_temp_variable = { CHL_combined_power = CHL_nacista_power }
                 subtract_from_temp_variable = { CHL_100_per = CHL_combined_power }
                 set_variable = { CHL_control_over_nation = CHL_100_per }
-                set_global_flag = end_chile_civil_war_fash
             }
         }
 		effect = {
@@ -819,9 +412,6 @@ on_actions = {
                         original_tag = COL 
                         has_government = neutrality
                         has_cosmetic_tag = COL_militar_gov
-                    }
-                    NOT = {
-                        has_global_flag = end_colombia_civil_war_military
                     }
                 }
                 ROOT = {
@@ -840,7 +430,6 @@ on_actions = {
                     complete_national_focus = COL_alianza_con_el_movimiento_obrero
                     complete_national_focus = COL_la_patria_por_encima_de_los_partidos
                 }
-                set_global_flag = end_colombia_civil_war_military
             }
         }
 
@@ -855,9 +444,6 @@ on_actions = {
                         original_tag = COL 
                         has_government = communism
                         has_cosmetic_tag = COL_gaitan_war
-                    }
-                    NOT = {
-                        has_global_flag = end_civil_war_colombia_liberal
                     }
                 }
                 ROOT = {
@@ -879,7 +465,6 @@ on_actions = {
                     complete_national_focus = COL_el_ejercito_popular
                     complete_national_focus = COL_tribuno_del_pueblo
                 }
-                set_global_flag = end_civil_war_colombia_liberal
             }
         }
 
@@ -897,9 +482,6 @@ on_actions = {
                             has_government = fascism
                         }
                         has_cosmetic_tag = COL_azul_war
-                    }
-                    NOT = {
-                        has_global_flag = end_colombia_civil_war_conservative
                     }
                 }
                 ROOT = {
@@ -920,7 +502,6 @@ on_actions = {
                     complete_national_focus = COL_derrocar_a_los_liberales
                     complete_national_focus = COL_laureanismo
                 }
-                set_global_flag = end_colombia_civil_war_conservative
             }
         }
 
@@ -980,9 +561,6 @@ on_actions = {
                     COL = {
                         has_completed_focus = COL_reestablecer_el_orden_en_peru
                     }
-                    NOT = {
-                        has_global_flag = end_peru_civil_war_colombia
-                    }
                 }
                 ROOT = {
                     drop_cosmetic_tag = yes
@@ -992,45 +570,11 @@ on_actions = {
                     }
                 }
                 COL = {
-                    transfer_state = 965
+                    transfer_state = 887
                 }
-                set_global_flag = end_peru_civil_war_colombia
             }
         }
 	}
-	
-	on_capitulation_immediate = {
-        effect = {
-            if = {
-                limit = {
-                    has_global_flag = BRA_civil_war_in_progress
-                    ROOT = {
-                        original_tag = BRA 
-                    }
-                    FROM = {
-                        original_tag = BRA 
-                        exists = yes 
-                    }
-                }
-                ROOT = {
-                    every_character = {
-                        random_list = {
-                            70 = {
-                                set_nationality = FROM 
-                            }
-                            30 = {
-
-                            }
-                        }
-                    }
-                }
-                FROM = {
-                    country_event = { id = brazil.90 hours = 3 }
-                }
-            }
-        }
-    }
-	
 	#ROOT is winner, FROM gets annexed.
     on_annex = { 
         effect = {
@@ -1048,9 +592,6 @@ on_actions = {
                     BOL = {
                         exists = no
                     }
-                    NOT = {
-                        has_global_flag = peru_bolivia_unification_end
-                    }
                 }
                 ROOT = {
                     set_cosmetic_tag = PBC_UNIFIED
@@ -1059,7 +600,6 @@ on_actions = {
                 COL = {
                     country_event = { id = colombia.104 hours = 12 }
                 }
-                set_global_flag = peru_bolivia_unification_end
             }
             else_if = {
                 limit = {
@@ -1074,9 +614,6 @@ on_actions = {
                     PRU = {
                         exists = no
                     }
-                    NOT = {
-                        has_global_flag = peru_bolivia_unification_end
-                    }
                 }
                 ROOT = {
                     set_cosmetic_tag = PBC_UNIFIED
@@ -1085,33 +622,9 @@ on_actions = {
                 COL = {
                     country_event = { id = colombia.104 hours = 12 }
                 }
-                set_global_flag = peru_bolivia_unification_end
             }
         }
     }
-
-    on_startup = {
-		effect = {
-			every_country = {
-                limit = { capital_scope = { is_on_continent = south_america } }
-                set_variable = { EUYL_cost_many_immigrants = 125 }
-                set_variable = { EUYL_cost_some_immigrants = 80 }
-                set_variable = { EUYL_cost_few_immigrants = 50 }
-                set_variable =  { EUYL_cost_take_in_refugees = 75 } #will be used in Argentina and Brazil
-			}
-			every_country = {
-				country_event = { id = EUYL_startupevent.1 }
-			}
-		}
-        effect = {
-            ARG = {
-                every_controlled_state = {
-                    limit = { has_state_flag = ARG_original_state_not_yet_integrated }
-                    remove_core_of = ARG
-                }
-            }
-        }
-	}
 
     on_monthly_COL = {
         effect = { #Check if Rojas Pinilla is going to rebel if the president is Laureano Gómez
@@ -1179,11 +692,12 @@ on_actions = {
             }
         }
 	}
-	on_monthly_BRA = { #updates the coffee variables
+	
+	on_monthly_BRA = {
 		effect = {
 			if = {
 				limit = {
-					BRA_coffee_plantations_active = yes 
+					#BRA_coffee_plantations_active = yes 
 					NOT = { has_country_flag = BRA_civil_war_active }
 				}
 				BRA_update_opinion_variable = yes 
@@ -1191,5 +705,16 @@ on_actions = {
 			}
 		}
 	}
+
+    on_EUYL_abandon_colony_BLZ = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = BLZ
+				}
+				EUYL_abandon_colony_BLZ = yes
+			}
+        }
+    }     
 }
 

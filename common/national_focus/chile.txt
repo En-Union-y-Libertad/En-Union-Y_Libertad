@@ -16,7 +16,7 @@ focus_tree = {
 			add = 10
 			tag = CHL
 		}
-	}	
+	}
 	
 	initial_show_position = {
 		x = 0
@@ -367,21 +367,15 @@ focus_tree = {
 		relative_position_id = CHL_aftermath_of_the_great_depression
 		prerequisite = { focus = CHL_aftermath_of_the_great_depression }
 		
-		cost = 3
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			if = {
-				limit = { has_completed_focus = CHL_support_the_radicals }
-				add_political_power = 50
-			}
-			else = {
-				add_political_power = 25
-				add_stability = 0.03
-			}
+			add_political_power = 25
+			add_stability = 0.03
 		}
 	}
 	
@@ -393,7 +387,7 @@ focus_tree = {
 		relative_position_id = CHL_aftermath_of_the_great_depression
 		prerequisite = { focus = CHL_aftermath_of_the_great_depression }
 		
-		cost = 3
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -414,7 +408,7 @@ focus_tree = {
 		relative_position_id = CHL_aftermath_of_the_great_depression
 		prerequisite = { focus = CHL_aftermath_of_the_great_depression }
 		
-		cost = 5
+		cost = 6
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -433,7 +427,7 @@ focus_tree = {
 		relative_position_id = CHL_aftermath_of_the_great_depression
 		prerequisite = { focus = CHL_aftermath_of_the_great_depression }
 		
-		cost = 5
+		cost = 6
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -454,7 +448,7 @@ focus_tree = {
 		prerequisite = { focus = CHL_maintain_the_stability_of_the_nation }
 		mutually_exclusive = { focus = CHL_invest_more_in_the_military }
 		
-		cost = 6
+		cost = 8
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -477,7 +471,7 @@ focus_tree = {
 		prerequisite = { focus = CHL_embrace_chilean_nationalism }
 		mutually_exclusive = { focus = CHL_invest_more_in_the_civilian_economy }
 		
-		cost = 6
+		cost = 8
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -659,7 +653,7 @@ focus_tree = {
 		relative_position_id = CHL_expand_the_industry
 		prerequisite = { focus = CHL_expand_the_industry }
 		
-		cost = 8
+		cost = 10
 		
 		available = {
 			279 = {
@@ -777,7 +771,7 @@ focus_tree = {
 		relative_position_id = CHL_ramp_up_the_armories
 		prerequisite = { focus = CHL_ramp_up_the_armories }
 		
-		cost = 8
+		cost = 10
 		
 		available = {
 			controls_state = 909
@@ -1253,7 +1247,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CHL_communist_path
-		cost = 5	
+		cost = 10		
 		search_filters = {FOCUS_FILTER_POLITICAL}
 	}
 	
@@ -1279,7 +1273,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = CHL_offer_cooperation_with_the_social_classes
-		cost = 5		
+		cost = 10			
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 	}
 
@@ -1330,7 +1324,7 @@ focus_tree = {
 		relative_position_id = CHL_continue_with_the_fp
 		prerequisite = { focus = CHL_continue_with_the_fp }
 
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -1543,9 +1537,6 @@ focus_tree = {
 					#
 				}
 			}
-			hidden_effect = {
-				clr_country_flag = CHL_FP_player
-			}
 		}
 
 		#this focus brings Labarca to power instead of Pedro
@@ -1583,9 +1574,6 @@ focus_tree = {
 			custom_effect_tooltip = CHL_communists_hostile_tt
 			clr_country_flag = CHL_communists_friendly
 			add_stability = -0.03
-			hidden_effect = {
-				clr_country_flag = CHL_FP_player
-			}
 		}
 	}
 	
@@ -2338,7 +2326,7 @@ focus_tree = {
 			add_war_support = 0.05
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 978
+				amount = 900
 			}
 		}
 	}
@@ -2712,7 +2700,7 @@ focus_tree = {
 						owner = ROOT
 					}
 				}
-				916 = {
+				914 = {
 					create_unit = {
 						division = "name = \"Anarqúistas\" division_template = \"Anarqúistas\" start_experience_factor = 0.25 start_equipment_factor = 1.0" 
 						owner = ROOT
@@ -3236,7 +3224,7 @@ focus_tree = {
 		relative_position_id = CHL_an_army_of_workers
 		prerequisite = { focus = CHL_an_army_of_workers }
 		
-		cost = 5
+		cost = 10
 		
 		ai_will_do = {
 			factor = 10
@@ -3471,10 +3459,10 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			controls_state = 967
-			controls_state = 968
-			controls_state = 969
-			controls_state = 970 
+			controls_state = 889
+			controls_state = 890
+			controls_state = 891
+			controls_state = 892 
 			controls_state = 512
 		}
 
@@ -3482,10 +3470,10 @@ focus_tree = {
 		continue_if_invalid = no 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			add_state_core = 967
-			add_state_core = 968
-			add_state_core = 969
-			add_state_core = 970
+			add_state_core = 889
+			add_state_core = 890
+			add_state_core = 891
+			add_state_core = 892
 			add_state_core = 512
 		}
 	}
@@ -3533,7 +3521,7 @@ focus_tree = {
 			controls_state = 303
 			controls_state = 302
 			controls_state = 278
-			controls_state = 966
+			controls_state = 888
 		}
 		
 		cancel_if_invalid = yes
@@ -3564,9 +3552,6 @@ focus_tree = {
 			custom_effect_tooltip = CHL_unlock_integrate
 			hidden_effect = {
 				set_cosmetic_tag = CHL_anarchist_global_commune
-			}
-			hidden_effect = {
-				set_country_flag = EUYL_can_integrate
 			}
 		}
 	}
@@ -3862,7 +3847,7 @@ focus_tree = {
 		}
 		x = 48
 		y = 0
-		cost = 2
+		cost = 5
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 	}	
@@ -3876,7 +3861,7 @@ focus_tree = {
 		relative_position_id = CHL_establish_a_comrpomise_with_the_democrats
 		prerequisite = { focus = CHL_liberalism_focus }
 
-		cost = 7.2
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
@@ -4101,7 +4086,7 @@ focus_tree = {
 		prerequisite = { focus = CHL_revenue_tax }
 		mutually_exclusive = { focus = CHL_crush_the_nacistas }
 
-		cost = 3
+		cost = 5
 
 		ai_will_do = {
 			factor = 250
@@ -4130,7 +4115,6 @@ focus_tree = {
 			custom_effect_tooltip = CHL_communists_hostile_tt
 			custom_effect_tooltip = CHL_government_hostile_tt
 			custom_effect_tooltip = CHL_increase_nacista_by_2_good
-			remove_ideas = democratic_influence
 			hidden_effect = {
 				set_country_flag = CHL_nacista_friendly
 				add_to_variable = { CHL_nacista_power = 2 }
@@ -4155,7 +4139,7 @@ focus_tree = {
 		relative_position_id = CHL_side_with_the_nacistas
 		prerequisite = { focus = CHL_side_with_the_nacistas }
 
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
@@ -4221,7 +4205,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = CHL_add_10_days_communism_tt
 			hidden_effect = {
-				add_to_variable = { CHL_communist_influence_days = 10 }
+				add_to_variable = { CHL_communist_influencce_days = 10 }
 				set_temp_variable = { CHL_temp_power = 100 }
 				set_temp_variable = { CHL_power_subtraction = CHL_nacista_power }
 				add_to_temp_variable = { CHL_power_subtraction = CHL_communists_power }
@@ -4243,7 +4227,7 @@ focus_tree = {
 		relative_position_id = CHL_supress_the_communists
 		prerequisite = { focus = CHL_supress_the_communists }
 
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
@@ -4349,7 +4333,7 @@ focus_tree = {
 		prerequisite = { focus = CHL_take_over_various_government_positions }
 		mutually_exclusive = { focus = CHL_take_over_via_blood }
 
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
@@ -4376,7 +4360,7 @@ focus_tree = {
 
 		#this will start another version of the coup where the player is in control 
 
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
@@ -4404,7 +4388,7 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CHL_win_via_elections }
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 15
@@ -4439,7 +4423,7 @@ focus_tree = {
 
 		mutually_exclusive = { focus = CHL_continue_with_the_coup }
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 15
@@ -4501,7 +4485,7 @@ focus_tree = {
 			focus = CHL_win_via_elections
 		}
 
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -4516,7 +4500,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = -0.01
-			add_political_power = 50
+			add_political_power = 15
 			custom_effect_tooltip = CHL_increase_nacista_by_2_good
 			add_popularity = { ideology = fascism popularity = 0.01 }
 			hidden_effect = {
@@ -4538,7 +4522,7 @@ focus_tree = {
 		relative_position_id = CHL_continue_with_the_coup
 		prerequisite = { focus = CHL_continue_with_the_coup }
 
-		cost = 7.2
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -4573,7 +4557,7 @@ focus_tree = {
 		prerequisite = { focus = CHL_garner_mass_support }
 		prerequisite = { focus = CHL_speak_out_against_the_government }
 
-		cost = 8
+		cost = 10 
 
 		ai_will_do = {
 			factor = 10
@@ -4600,7 +4584,7 @@ focus_tree = {
 	focus = {
 		id = CHL_crush_the_press
 		prerequisite = { focus = CHL_weaken_the_central_government }
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_r56_goal_SIA_weaken_democracy
 		x = 0
 		y = 1
 		ai_will_do = {
@@ -5068,7 +5052,7 @@ focus_tree = {
 		relative_position_id = CHL_assasinate_arturo
 		prerequisite = { focus = CHL_assasinate_arturo }
 
-		cost = 7.2
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -5134,7 +5118,7 @@ focus_tree = {
 			focus = CHL_seize_the_national_highways
 		}
 
-		cost = 8
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -5323,7 +5307,7 @@ focus_tree = {
 			has_army_manpower = { size > 99999 }
 			ARG = {
 				is_subject = no
-				controls_state = 967
+				controls_state = 889
 			}
 		}
 		
@@ -5347,7 +5331,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ARG_iftheyaccept
 			effect_tooltip = {
-				transfer_state = 967
+				transfer_state = 889
 			}
 		}
 	}
@@ -5891,12 +5875,12 @@ focus_tree = {
 			}
 			ARG = {
 				is_subject = no
-				controls_state = 968
-				controls_state = 969
+				controls_state = 890
+				controls_state = 891
 				controls_state = 512
-				controls_state = 970
-				controls_state = 978
-				controls_state = 979
+				controls_state = 892
+				controls_state = 900
+				controls_state = 901
 			}
 			PRU = {
 				capital_scope = {
@@ -5915,11 +5899,7 @@ focus_tree = {
 			has_completed_focus = CHL_build_up_the_military
 			OR = {
 				is_in_faction_with = ARG
-				has_war_with = ARG
-				ARG = {
-					is_subject_of = ROOT 
-				} 
-				controls_state = 966
+				has_war_with = ARG 
 			}
 		}
 		
@@ -5936,12 +5916,12 @@ focus_tree = {
 			effect_tooltip = {
 				random_list = {
 					50 = {
-						transfer_state = 968
-						transfer_state = 969	
+						transfer_state = 890
+						transfer_state = 891	
 						transfer_state = 512	
-						transfer_state = 970	
-						transfer_state = 978
-						transfer_state = 979
+						transfer_state = 892	
+						transfer_state = 900
+						transfer_state = 901
 					}
 					50 = {
 						puppet = ARG
@@ -6226,7 +6206,7 @@ focus_tree = {
 		available = {
 			controls_state = 307
 			controls_state = 489
-			controls_state = 942
+			controls_state = 864
 		}
 
 		cancel_if_invalid = yes 
@@ -6257,7 +6237,7 @@ focus_tree = {
 					amount = 16
 				}
 			}
-			942 = {
+			864 = {
 				add_resource = {
 					type = oil 
 					amount = 6
@@ -6584,7 +6564,7 @@ focus_tree = {
 		prerequisite = { focus = CHL_revenue_tax }
 		mutually_exclusive = { focus = CHL_side_with_the_nacistas }
 
-		cost = 3
+		cost = 5
 
 		ai_will_do = {
 			factor = 250
@@ -6604,7 +6584,7 @@ focus_tree = {
 		relative_position_id = CHL_crush_the_nacistas
 		prerequisite = { focus = CHL_crush_the_nacistas }
 
-		cost = 4
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -6625,7 +6605,7 @@ focus_tree = {
 		prerequisite = { focus = CHL_make_an_effort_to_stabilize_the_nation }
 		mutually_exclusive = { focus = CHL_crush_the_communists }
 
-		cost = 2
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
@@ -7428,10 +7408,6 @@ focus_tree = {
 				idea = CHL_goodbye_frente_popular
 				days = 365
 			}
-			hidden_effect = {
-				set_variable = { CHL_communists_power = 0 }
-				set_country_flag = CHL_communist_defeated
-			}
 		}
 	}
 
@@ -7965,7 +7941,7 @@ focus_tree = {
 			}
 			OR = {
 				AND = {
-					controls_state = 986
+					controls_state = 908
 					controls_state = 300
 				}
 				any_other_country = {
@@ -7976,14 +7952,14 @@ focus_tree = {
 						}
 						is_subject_of = ROOT 
 					}
-					controls_state = 986
+					controls_state = 908
 					controls_state = 300
 				}
 			}
 			OR = {
 				AND = {
 					controls_state = 278
-					controls_state = 966
+					controls_state = 888
 				}
 				any_other_country = {
 					OR = {
@@ -7994,7 +7970,7 @@ focus_tree = {
 						is_subject_of = ROOT 
 					}
 					controls_state = 278
-					controls_state = 966
+					controls_state = 888
 				}
 			}
 			OR = {
@@ -8018,7 +7994,7 @@ focus_tree = {
 				AND = {
 					controls_state = 302
 					controls_state = 487
-					controls_state = 985
+					controls_state = 907
 				}
 				any_other_country = {
 					OR = {
@@ -8030,7 +8006,7 @@ focus_tree = {
 					}
 					controls_state = 302
 					controls_state = 487
-					controls_state = 985
+					controls_state = 907
 				}
 			}
 		}
@@ -8151,19 +8127,19 @@ focus_tree = {
 		available = {
 			controls_state = 492
 			controls_state = 915
-			controls_state = 987
-			controls_state = 989
-			controls_state = 917
-			controls_state = 920
-			controls_state = 921
+			controls_state = 835
+			controls_state = 837
+			controls_state = 841
+			controls_state = 840
+			controls_state = 843
 			controls_state = 302
-			controls_state = 985
-			controls_state = 979
-			controls_state = 978
-			controls_state = 967
-			controls_state = 968
-			controls_state = 969
-			controls_state = 970
+			controls_state = 907
+			controls_state = 901
+			controls_state = 900
+			controls_state = 889
+			controls_state = 890
+			controls_state = 891
+			controls_state = 892
 			controls_state = 512
 		}
 		
@@ -8175,20 +8151,20 @@ focus_tree = {
 			add_stability = 0.05
 			add_state_core = 492
 			add_state_core = 302
-			add_state_core = 985
-			add_state_core = 979
-			add_state_core = 978
-			add_state_core = 967
-			add_state_core = 968
-			add_state_core = 969
-			add_state_core = 970
+			add_state_core = 907
+			add_state_core = 901
+			add_state_core = 900
+			add_state_core = 889
+			add_state_core = 890
+			add_state_core = 891
+			add_state_core = 892
 			add_state_core = 512
 			add_state_core = 915
-			add_state_core = 987
-			add_state_core = 989
-			add_state_core = 917
-			add_state_core = 920
-			add_state_core = 921
+			add_state_core = 835
+			add_state_core = 837
+			add_state_core = 841
+			add_state_core = 840
+			add_state_core = 843
 		}
 	}
 			
@@ -8326,7 +8302,7 @@ focus_tree = {
 		relative_position_id = CHL_focus_on_internal_politics
 		prerequisite = { focus = CHL_focus_on_internal_politics }
 
-		cost = 7.2
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
@@ -8411,7 +8387,7 @@ focus_tree = {
 			has_civil_war = no 
 		}
 
-		cost = 7.2
+		cost = 10
 
 		cancel_if_invalid = yes 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
@@ -8987,7 +8963,7 @@ focus_tree = {
 		relative_position_id = CHL_supress_the_nacista_movement
 		prerequisite = { focus = CHL_supress_the_nacista_movement }
 
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 4
@@ -9040,7 +9016,7 @@ focus_tree = {
 		relative_position_id = CHL_supress_the_nacista_movement
 		prerequisite = { focus = CHL_supress_the_nacista_movement }
 
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 4
@@ -9140,7 +9116,7 @@ focus_tree = {
 		prerequisite = { focus = CHL_make_an_effort_to_stabilize_the_nation }
 		mutually_exclusive = { focus = CHL_cooperate_with_el_frente }
 
-		cost = 2
+		cost = 6
 
 		ai_will_do = {
 			factor = 10
@@ -9276,7 +9252,7 @@ focus_tree = {
 		prerequisite = { focus = CHL_liberty_to_the_people }
 		prerequisite = { focus = CHL_spread_our_democratic_deals }
 
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 3
@@ -9385,7 +9361,7 @@ focus_tree = {
 		prerequisite = { focus = CHL_increase_private_property_rights }
 		prerequisite = { focus = CHL_privatize_the_companies }
 
-		cost = 5
+		cost = 8
 
 		ai_will_do = {
 			factor = 3
@@ -9395,7 +9371,7 @@ focus_tree = {
 			has_government = democratic
 			custom_trigger_tooltip = {
 				tooltip = CHL_control_over_nation_over_90
-				check_variable = { CHL_control_over_nation > 80 }
+				check_variable = { CHL_control_over_nation > 90 }
 			}
 		}
 
@@ -9425,7 +9401,7 @@ focus_tree = {
 			add_ideas = CHL_democratic_bastion
 		}
 		
-		cost = 5
+		cost = 10	
 		search_filters = {FOCUS_FILTER_POLITICAL }			
 	}	
 
@@ -9488,7 +9464,7 @@ focus_tree = {
 			custom_effect_tooltip = CHL_decrease_nacista_by_1
 			custom_effect_tooltip = CHL_decrease_comunista_by_1
 			hidden_effect = {
-				add_to_variable = { CHL_communist_influence_days = 5 }
+				add_to_variable = { CHL_communist_influencce_days = 5 }
 				add_to_variable = { CHL_nacista_influence_days = 5 }
 				if = {
 					limit = { 
@@ -10301,11 +10277,11 @@ focus_tree = {
 					has_war_with = ARG 
 				}
 				OR = {
-					controls_state = 967
-					controls_state = 968
-					controls_state = 969
+					controls_state = 889
+					controls_state = 890
+					controls_state = 891
 					controls_state = 512
-					controls_state = 970
+					controls_state = 892
 				}
 			}
 		}
@@ -10339,12 +10315,12 @@ focus_tree = {
 					has_war_with = ARG 
 				}
 				OR = {
-					controls_state = 967
-					controls_state = 968
-					controls_state = 969
+					controls_state = 889
+					controls_state = 890
+					controls_state = 891
 					controls_state = 512
-					controls_state = 970
-					controls_state = 966
+					controls_state = 892
+					controls_state = 888
 				}
 			}
 		}
@@ -10867,12 +10843,11 @@ focus_tree = {
 			custom_effect_tooltip = CHL_for_every_40_tungsten_tt
 			if = {
 				limit = {
-					302 = {
-						has_resources_amount = {
-							resource = tungsten
-							amount > 119
-						}
-					}
+					has_resources_amount = {
+                        resource = tungsten
+                        amount > 119
+                        state = 302
+                    }
 				}
 				random_owned_controlled_state = {
 					limit = { is_core_of = ROOT }
@@ -10904,12 +10879,11 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					302 = {
-						has_resources_amount = {
-							resource = tungsten
-							amount > 79
-						}
-					}
+					has_resources_amount = {
+                        resource = tungsten
+                        amount > 79
+                        state = 302
+                    }
 				}
 				random_owned_controlled_state = {
 					limit = { is_core_of = ROOT }
@@ -10932,12 +10906,11 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					302 = {
-						has_resources_amount = {
-							resource = tungsten
-							amount > 39
-						}
-					}
+					has_resources_amount = {
+                        resource = tungsten
+                        amount > 39
+                        state = 302
+                    }
 				}
 				random_owned_controlled_state = {
 					limit = { is_core_of = ROOT }
@@ -10966,20 +10939,20 @@ focus_tree = {
 		available = {
 			is_in_faction_with = ARG 
 			ARG = {
-				controls_state = 967
-				controls_state = 968
-				controls_state = 969
+				controls_state = 889
+				controls_state = 890
+				controls_state = 891
 				controls_state = 512
-				controls_state = 970
+				controls_state = 892
 			}
 		}
 
 		bypass = {
-			controls_state = 967
-			controls_state = 968
-			controls_state = 969
+			controls_state = 889
+			controls_state = 890
+			controls_state = 891
 			controls_state = 512
-			controls_state = 970
+			controls_state = 892
 		}
 
 		cancel_if_invalid = yes 
@@ -10990,11 +10963,11 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ARG_iftheyaccept
 			effect_tooltip = {
-				transfer_state = 967
-				transfer_state = 968
-				transfer_state = 969
+				transfer_state = 889
+				transfer_state = 890
+				transfer_state = 891
 				transfer_state = 512
-				transfer_state = 970
+				transfer_state = 892
 				random_owned_controlled_state = {
 					limit = { industrial_complex > 1 }
 					remove_building = {
@@ -11044,22 +11017,22 @@ focus_tree = {
 			NOT = {
 				has_war_with = ARG
 			}
-			controls_state = 967
-			controls_state = 968
-			controls_state = 969
+			controls_state = 889
+			controls_state = 890
+			controls_state = 891
 			controls_state = 512
-			controls_state = 970
+			controls_state = 892
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			968 = {
+			890 = {
 				add_resource = {
 					type = oil 
 					amount = 12
 				}
 			}
-			970 = {
+			892 = {
 				add_resource = {
 					type = oil
 					amount = 8
@@ -11087,11 +11060,11 @@ focus_tree = {
 			NOT = {
 				has_war_with = ARG
 			}
-			controls_state = 967
-			controls_state = 968
-			controls_state = 969
+			controls_state = 889
+			controls_state = 890
+			controls_state = 891
 			controls_state = 512
-			controls_state = 970
+			controls_state = 892
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
@@ -11696,7 +11669,6 @@ focus_tree = {
 			army_experience = 20
 			add_ideas = CHL_ejercito_chileno
 			unlock_decision_category_tooltip = south_american_armament
-			unlock_decision_tooltip = CHL_recruit_young_officers
 		}
 	}
 	

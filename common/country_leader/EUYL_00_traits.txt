@@ -94,13 +94,6 @@ leader_traits = {
 		democratic_drift = -0.10
 		communism_drift = 0.05
 	}
-
-	PRU_compassionate_leader = {
-		random = no 
-		stability_factor = 0.05
-		drift_defence_factor = -0.1
-	}
-
 	ARG_brutal_leader = {
 		random = no
 		stability_factor = 0.1
@@ -152,7 +145,7 @@ leader_traits = {
 	ARG_first_female_ruler = {
 		random = no
 		stability_factor = 0.05
-		political_power_factor = 0.05
+		political_power_factor = 0.15
 		political_advisor_cost_factor = -0.1
 		trade_laws_cost_factor = -0.1
 		mobilization_laws_cost_factor = -0.1
@@ -305,29 +298,19 @@ leader_traits = {
 		production_speed_buildings_factor = -0.1
 	}
 
-	BRA_father_of_brazilian_integralism = {
-		random = no 
-		war_support_factor = 0.1
-		fascism_drift = 0.05
-		stability_factor = -0.05
-		conscription = 0.005
-	}
+####Honduras####
 
-	BRA_royal_dictator = {
-		random = no 
-		weekly_manpower = 1000
-		war_support_factor = 0.05
-		political_power_gain = 0.05
-	}
-
-	BRA_hero_of_the_civil_war = {
-		random = no 
-		stability_weekly = 0.001
-		war_support_weekly = 0.001
-		weekly_manpower = 250
-		army_attack_factor = 0.02
-		army_defence_factor = 0.02
-	}
+	HON_strongman_of_tegucigalpa = { 
+		random = no
+		army_morale_factor = 0.05
+		political_power_factor = 0.10
+		communism_acceptance = -50
+		communism_drift = -0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
 
 ####Uruguay####
     urg_ancap_trait = {
@@ -336,8 +319,8 @@ leader_traits = {
         local_resources_factor = 0.1
 		production_speed_industrial_complex_factor = 0.1
 		consumer_goods_factor = -0.03		
-	}	
-	
+	}
+
 	URG_herrerist = {
 		foreign_subversive_activites = -0.3
 		mobilization_speed = 0.1
@@ -396,8 +379,7 @@ leader_traits = {
 		political_power_gain = 0.05
 		army_core_defence_factor = 0.1
 	}	
-####Uruguay####
-
+	
 	#EUYL#
 
 	EUYL_soldier_recruiter = {
@@ -422,102 +404,84 @@ leader_traits = {
 		}
 	}
 
-	ARG_ruthless_leader = { #Lider Despiadado
-		random = no 
+	anti_socialist_bishop = {
+		communism_acceptance = -50
+		communism_drift = -0.05
+		democratic_acceptance = -10
+		democratic_drift = -0.01
+		stability_factor = 0.075
+	}
+
+	ELS_theosophic_dictator = {
+		political_power_factor = 0.3
+		communism_acceptance = -50
+		communism_drift = -0.05
+		democratic_acceptance = 20
 		stability_factor = -0.1
-		war_support_factor = 0.1
-		political_power_factor = 0.15
-		resistance_damage_to_garrison = 0.2
+		war_support_factor = -0.1
+		research_speed_factor = -0.15
 	}
 
-	minister_of_education = {
-		random = no 
-		sprite = 13 
-
-		research_speed_factor = 0.05
-		political_power_gain = 0.05
-
-		ai_will_do = {
-			factor = 1
-		}
+	ELS_democratic_sympathies = {
+		democratic_acceptance = 50
+		democratic_drift = 0.01
 	}
 
-	EUYL_collectivization_expert = {
-		random = no 
-		sprite = 13
-
-		industrial_capacity_factory = 0.1
-
-		ai_will_do = {
-			factor = 1
-		}
+	CUB_puppeteer_of_havana = {
+		political_power_factor = -0.5
+		stability_factor = -0.1
+		custom_modifier_tooltip = CUB_batista_advisor_locked_tt
 	}
 
-	EUYL_ambassador_of_brazilian_integralism = {
-		random = no 
-		sprite = 13
-
-		fascism_drift = 0.05
-		war_support_factor = 0.05
-
-		ai_will_do = {
-			factor = 1
-		}
+	CUB_puppet_of_batista = {
+		political_power_factor = 0.4
 	}
 
-	BRA_heir_of_the_throne = {
-		random = no 
-		sprite = 13 
-
-		neutrality_drift = 0.1
-		stability_factor = 0.05
-		war_support_factor = 0.05
-
-		ai_will_do = {
-			factor = 1 
-		}
-	}
-
-	BRA_bright_mind = {
-		random = no 
-		sprite = 13 
-
-		local_resources_factor = 0.05
-		production_speed_buildings_factor = 0.05
-		improve_relations_maintain_cost_factor = -0.2
-		trade_opinion_factor = 0.05
-
-		ai_will_do = {
-			factor = 1 
-		}
-	}
-	
-	BRA_disorganized_leadership = {
-		random = no 
-
-		political_power_factor = -0.15
+	CUB_corrupt_kleptocrat = {
+		political_power_factor = -0.1
 		stability_factor = -0.05
-		war_support_factor = 0.05
-		army_attack_factor = -0.05
-		army_defence_factor = -0.05
-
-		ai_will_do = {
-			factor = 0
-		}
+		consumer_goods_factor = -0.05
 	}
 
-	BRA_compassionate_leader = {
-		random = no 
+	CUB_anti_corruption_agent = {
+		political_power_factor = 0.05
+		stability_factor = 0.1
+		drift_defence_factor = 0.25
+		consumer_goods_factor = 0.05
+	}
 
+	generic_army_connections = {
+		random = yes
+		high_command_cost_factor = -0.20
+		air_chief_cost_factor = -0.20
+		army_chief_cost_factor = -0.20
+		navy_chief_cost_factor = -0.20
+	}
+
+    generic_physician = {
+		random = yes
+		army_morale_factor = 0.05
+	}
+
+	generic_lawyer = {
+		random = yes
+		political_power_gain = 0.05
+	}
+
+	generic_judge = {
+		random = yes
+		stability_factor = 0.1
+	}
+
+	generic_writer = {
+		random = yes
 		stability_factor = 0.05
-		political_power_factor = -0.05
 	}
 
-	BRA_leader_of_the_farmers = {
-		random = no 
-
-		local_resources_factor = 0.05
-		production_speed_buildings_factor = 0.05
-		consumer_goods_factor = -0.02
+	generic_philosopher = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		research_speed_factor = 0.05
 	}
 }

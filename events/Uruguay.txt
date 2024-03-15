@@ -107,11 +107,11 @@ country_event = {
 			set_demilitarized_zone = yes 
 			add_dynamic_modifier = { modifier = URG_terra_loyalities }
 		}
-		986 = {
+		908 = {
 			set_demilitarized_zone = yes 
 			add_dynamic_modifier = { modifier = URG_terra_loyalities }
 		}
-		925 = {
+		847 = {
 			set_demilitarized_zone = yes 
 			add_dynamic_modifier = { modifier = URG_terra_loyalities }
 		}
@@ -455,16 +455,16 @@ country_event = {
 		hidden_effect = {
 			ARG = {
 				transfer_state = 511
-				transfer_state = 974
-				transfer_state = 973
-				transfer_state = 975
-				transfer_state = 976
-				transfer_state = 977
-				transfer_state = 981
+				transfer_state = 896
+				transfer_state = 895
+				transfer_state = 897
+				transfer_state = 898
+				transfer_state = 899
+				transfer_state = 903
 				transfer_state = 508
-				transfer_state = 978
-				transfer_state = 979
-				transfer_state = 980
+				transfer_state = 900
+				transfer_state = 901
+				transfer_state = 902
 				transfer_state = 509
 			}
 		}
@@ -478,47 +478,47 @@ country_event = {
 				URG = { has_country_flag = PAR_declared_war }
 			}
 			PAR = {
-				transfer_state = 980
+				transfer_state = 902
 			}
 			URG = {
-				transfer_state = 982
-		        transfer_state = 972
+				transfer_state = 904
+		        transfer_state = 894
 				transfer_state = 278
-                transfer_state = 966
-				transfer_state = 971
-                transfer_state = 970
+                transfer_state = 888
+				transfer_state = 893
+                transfer_state = 892
                 transfer_state = 512
-                transfer_state = 969
-                transfer_state = 968
-                transfer_state = 967
+                transfer_state = 891
+                transfer_state = 890
+                transfer_state = 889
 				hidden_effect = {
 					clr_country_flag = PAR_declared_war
 				}
 			}
 			BRA = {
-				transfer_state = 983
+				transfer_state = 905
 				transfer_state = 510
 				puppet = ARG 
 			}
 		}
 		else = {
 			URG = {
-				transfer_state = 982
-		        transfer_state = 972
+				transfer_state = 904
+		        transfer_state = 894
 				transfer_state = 278
-                transfer_state = 966
-				transfer_state = 971
-                transfer_state = 970
+                transfer_state = 888
+				transfer_state = 893
+                transfer_state = 892
                 transfer_state = 512
-                transfer_state = 969
-                transfer_state = 968
-                transfer_state = 967
+                transfer_state = 891
+                transfer_state = 890
+                transfer_state = 889
 				hidden_effect = {
 					clr_country_flag = PAR_declared_war
 				}
 			}
 			BRA = {
-				transfer_state = 983
+				transfer_state = 905
 				transfer_state = 510
 				puppet = ARG 
 			}
@@ -556,24 +556,32 @@ country_event = {
 	desc = uruguay.17.d
 	picture = GFX_report_event_generic_conference 
 	
-	fire_only_once = yes 
-
-	trigger = {
-		original_tag = URG 
-		exists = yes 
-		has_civil_war = no 
-		has_completed_focus = URG_imprison_Terra
-	} 
+	is_triggered_only = yes 
 	
 	option = {
 		name = uruguay.17.a 
 		ai_chance = { base = 67 }
-		custom_effect_tooltip = URG_extraordinary_elections_tt
-		URG_move_70_nacionales = yes
+		URG_consejo_de_estado_provisorio_c = { 
+			remove_country_leader_role = {
+				ideology = liberalism
+			}
+		}
+		add_country_leader_role = {
+			character = URG_basilio_munoz_c
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = liberalism
+					traits = {
+						URG_el_guerrillero
+					}
+				}
+			promote_leader = yes
+		}
 		add_war_support = 0.15
 		complete_national_focus = URG_the_will_of_the_people
+		show_effect_tooltip = URG_extraordinary_elections_tt
 		hidden_effect = {
-			country_event = { id = uruguay.18 days = 30 }
+			country_event = { id = uruguay.18 days = 90 }
 			set_politics = {
 				ruling_party = democratic
 				elections_allowed = yes
@@ -591,7 +599,6 @@ country_event = {
 			elections_allowed = no 
 		}
 		complete_national_focus = URG_a_new_path
-		URG_bop_remove_bop_effect = yes
 	}
 }
 
@@ -603,7 +610,7 @@ country_event = {
 	desc = uruguay.18.d 
 	picture = GFX_report_event_generic_parliament 
 	
-	is_triggered_only = yes
+	is_triggered_only = yes 
 	
 	option = {
 		name = uruguay.18.a 
@@ -611,11 +618,12 @@ country_event = {
 			base = 33
 		}
 		clr_country_flag = URG_terra
-		URG_consejo_de_estado_provisorio_c = { 
+		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
+		URG_basilio_munoz_c = { 
 			remove_country_leader_role = {
 				ideology = liberalism
 			}
-		}
+		}	
 		add_country_leader_role = {
 			character = URG_luis_batlle_berres_c
 			country_leader = {
@@ -638,7 +646,8 @@ country_event = {
 		name = uruguay.18.b 
 		ai_chance = { base = 34 }
 		clr_country_flag = URG_terra
-		URG_consejo_de_estado_provisorio_c = { 
+		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
+		URG_basilio_munoz_c = { 
 			remove_country_leader_role = {
 				ideology = liberalism
 			}
@@ -668,7 +677,8 @@ country_event = {
 		}
 		retire_country_leader = yes
 		clr_country_flag = URG_terra
-		URG_consejo_de_estado_provisorio_c = { 
+		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
+		URG_basilio_munoz_c = { 
 			remove_country_leader_role = {
 				ideology = liberalism
 			}
@@ -724,7 +734,7 @@ country_event = {  #Andres Martinez takes over
 		}
 		hidden_effect = {
 			URG = {
-				country_event = { id = uruguay.20 days = 5 random_days = 10 }
+				country_event = { id = uruguay.20 days = 15 }
 			}
 		}
 	}
@@ -848,8 +858,11 @@ country_event = {  #Government Collapses
 	
 	option = {
 		name = uruguay.22.a 
+
+		add_stability = -0.25
 		hidden_effect = {
 			set_country_flag = URG_anarchists
+			mark_focus_tree_layout_dirty = yes
 			retire_country_leader = yes
 			add_country_leader_role = {
 				character = URG_collapsed_government_c
@@ -957,34 +970,12 @@ country_event = {
 		}
 	}
 	option = {
-		name = uruguay.26.c
-	}	
-}
+		name = uruguay.26.b 
 
-country_event = { 
-	id = uruguay.27
-	title = uruguay.27.t 
-	desc = {
-		text = uruguay.27.d 
-	}
-	picture = GFX_report_event_generic_parliament 
-	
-	is_triggered_only = yes 
-
-	option = {
-		name = uruguay.27.a 
-		effect_tooltip = {
-			release_puppet = ARG
-			CHL = {
-				transfer_state = 967
-			}
-		}	
+		release_puppet = ARG
 		hidden_effect = {
-			URG = {	
-				release_puppet = ARG
-			}
-			CHL = {
-				transfer_state = 967
+			ARG = {
+				set_cosmetic_tag = ARG_anarchist
 			}
 			ARG = {
 				set_cosmetic_tag = ARG_anarchist
@@ -1001,6 +992,103 @@ country_event = {
 				promote_leader = yes
 				}	
 			}
+			PAT = {
+				diplomatic_relation = {
+    				country = CHL
+   					relation = puppet
+   					active = yes
+				}
+				transfer_state = 890
+				transfer_state = 891
+				transfer_state = 512
+				transfer_state = 892
+				transfer_state = 889
+				set_cosmetic_tag = PAT_anarchist
+				recruit_character = PAT_patagonian_communes_c
+				add_country_leader_role = {
+					character = PAT_antonio_soto_c
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = anarchism
+						traits = {
+
+						}
+					}
+				promote_leader = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = uruguay.26.c
+	}	
+}
+
+country_event = { 
+	id = uruguay.27
+	title = uruguay.27.t 
+	desc = {
+		text = uruguay.27.d 
+	}
+	picture = GFX_report_event_generic_parliament 
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = uruguay.27.a 
+
+		custom_effect_tooltip = URG_CHL_PAT	
+		show_effect_tooltip = {
+			release_puppet = ARG
+		}	
+		hidden_effect = {
+			URG = {	
+				release_puppet = ARG
+			}
+			PAT = {
+				diplomatic_relation = {
+    				country = CHL
+   					relation = puppet
+   					active = yes
+				}
+				transfer_state = 890
+				transfer_state = 891
+				transfer_state = 512
+				transfer_state = 892
+			}	
+			CHL = {
+				transfer_state = 889
+			}
+			ARG = {
+				set_cosmetic_tag = ARG_anarchist
+				recruit_character = ARG_gino_gatti_c
+				add_country_leader_role = {
+					character = ARG_gino_gatti_c
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = anarchism
+						traits = {
+
+						}
+					}
+				promote_leader = yes
+				}	
+			}
+			PAT = {
+				set_cosmetic_tag = PAT_anarchist
+				recruit_character = PAT_patagonian_communes_c
+				add_country_leader_role = {
+					character = PAT_patagonian_communes_c
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = anarchism
+						traits = {
+
+						}
+					}
+				promote_leader = yes
+				}
+			}
 		}
 	}
 	option = {
@@ -1011,11 +1099,11 @@ country_event = {
     		transfer_troops = no
 		}
 		CHL = {
-			set_state_owner = 968
-			set_state_owner = 969
+			set_state_owner = 890
+			set_state_owner = 891
 			set_state_owner = 512
-			set_state_owner = 970
-			set_state_owner = 967
+			set_state_owner = 892
+			set_state_owner = 889
 		}
 	}	
 }
@@ -1030,7 +1118,7 @@ country_event = {
 	
 	option = {
 		name = uruguay.28.a 
-		URG_move_35_colorado = yes
+
 		swap_ideas = {
 			remove_idea = URG_INC
 			add_idea = URG_maintain_status_quo
@@ -1041,8 +1129,9 @@ country_event = {
 	}
 	option = {
 		name = uruguay.28.b
-		URG_move_35_nacionales = yes
+
 		add_ideas = URG_industrialize_the_economy
+		add_ideas = URG_blancos_in_opposition0
 		hidden_effect = {
 			complete_national_focus = URG_industrial_economy
 		}
@@ -1059,14 +1148,14 @@ country_event = {
 	
 	option = {
 		name = uruguay.29.a 
-		URG_move_10_colorado = yes
+
 		add_political_power = -50
 		add_stability = 0.05
 		add_war_support = 0.05
 	}
 	option = {
 		name = uruguay.29.b
-		URG_move_5_colorado = yes
+
 		swap_ideas = {
 			remove_idea = URG_welfare_state
 			add_idea = URG_welfare_state1
@@ -1074,7 +1163,7 @@ country_event = {
 	}
 	option = {
 		name = uruguay.29.d
-		
+
 		swap_ideas = {
 			remove_idea = URG_welfare_state
 			add_idea = URG_welfare_state3
@@ -1082,7 +1171,7 @@ country_event = {
 	}
 	option = {
 		name = uruguay.29.e
-		URG_move_20_nacionales = yes
+
 		remove_ideas = URG_welfare_state
 		add_timed_idea = {
 			idea = URG_welfare_state4
@@ -1316,7 +1405,7 @@ country_event = {
 	}
 }
 
-country_event = { #Nacionales protests erupt into a civil war
+country_event = {
 	id = uruguay.31
 	title = uruguay.31.t
 	desc = uruguay.31.d
@@ -1326,198 +1415,5 @@ country_event = { #Nacionales protests erupt into a civil war
 	
 	option = {
 		name = uruguay.31.a
-		hidden_effect = {
-			URG_move_70_nacionales = yes 
-			division_template = { 
-				name = "Milicias" 
-				division_names_group = SPAN_INF_02 
-				is_locked = yes 
-				regiments = { 
-					infantry = { x = 0 y = 0 }  
-					infantry = { x = 0 y = 1 } 
-					infantry = { x = 0 y = 2 } 
-				}
-			}
-			remove_ideas = {
-				URG_blancos_in_opposition0
-				URG_blancos_in_opposition1
-				URG_blancos_in_opposition2
-			}
-		}
-		start_civil_war = {
-			ideology = democratic 
-			size = 0.4
-		}
-		hidden_effect = {
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-			}
-			random_other_country = {
-				limit = {
-					original_tag = URG 
-					has_government = democratic
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-				}
-			}
-		}
 	}
-}	
-
-country_event = { #Colorados protests erupt into a civil war
-	id = uruguay.32
-	title = uruguay.32.t
-	desc = uruguay.32.d
-	picture = GFX_report_event_generic_rally_3
-	
-	is_triggered_only = yes 
-	
-	option = {
-		name = uruguay.32.a
-		hidden_effect = {
-			URG_move_70_colorado = yes
-			division_template = { 
-				name = "Milicias" 
-				division_names_group = SPAN_INF_02 
-				is_locked = yes 
-				regiments = { 
-					infantry = { x = 0 y = 0 }  
-					infantry = { x = 0 y = 1 } 
-					infantry = { x = 0 y = 2 } 
-				}
-			}
-			remove_ideas = {
-				URG_colorados_in_opposition0
-				URG_colorados_in_opposition1
-				URG_colorados_in_opposition2
-			}
-		}
-		start_civil_war = {
-			ideology = neutrality 
-			size = 0.4
-		}
-		hidden_effect = {
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-			}
-			random_other_country = {
-				limit = {
-					original_tag = URG 
-					has_government = democratic
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-				}
-			}
-		}
-	}
-}
+}		 

@@ -1,121 +1,6 @@
 ideas = {
 	# MILITARY
 	country = {
-	
-		BOL_servicio_militar_obligatorio = {
-			picture = BOL_obligatory_service
-			
-			allowed = {
-				original_tag = BOL 
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			available = {
-				OR = {
-					NOT = { has_government = democratic }
-					NOT = {
-						OR = {
-							has_idea = service_by_requirement
-							has_idea = all_adults_serve
-							has_idea = scraping_the_barrel
-						}
-					}
-					NOT = {
-						has_country_flag = is_PBC
-					}
-				}	
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				stability_factor = -0.1
-				conscription = 0.045
-			}
-		}
-
-		BOL_catholic_support_1 = {
-			name = BOL_catholic_support
-			picture = spa_carlism
-
-			allowed = {
-				original_tag = BOL 
-			}
-
-			allowed_civil_war = {
-				always = yes 
-			}
-
-			available = {
-				NOT = {
-					has_country_flag = is_PBC
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				conscription = 0.01
-				industrial_capacity_factory = 0.05
-				war_support_factor = 0.1
-			}
-		}
-
-		BOL_catholic_support_2 = {
-			name = BOL_catholic_support
-			picture = spa_carlism
-
-			allowed = {
-				original_tag = BOL 
-			}
-
-			allowed_civil_war = {
-				always = yes 
-			}
-
-			available = {
-				NOT = {
-					has_country_flag = is_PBC
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				conscription = 0.015
-				industrial_capacity_factory = 0.1
-				war_support_factor = 0.15
-			}
-		}
-
-		BOL_connect_the_country_idea = {
-			picture = generic_build_infrastructure
-
-			allowed = {
-				original_tag = BOL 
-			}
-
-			allowed_civil_war = {
-				always = yes 
-			}
-
-			available = {
-				NOT = {
-					has_country_flag = is_PBC 
-				}
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				production_speed_infrastructure_factor = 0.1
-				production_speed_rail_way_factor = 0.1
-			}
-		}
-	
 		BOL_sea_access_loss = {
 			picture = BOL_loser_to_chile
 
@@ -1126,7 +1011,10 @@ ideas = {
 			picture = PBC_conflicting_ideals
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			allowed_civil_war = {
@@ -1149,7 +1037,10 @@ ideas = {
 			picture = PBC_conflicting_ideals
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			allowed_civil_war = {
@@ -1171,7 +1062,10 @@ ideas = {
 			picture = generic_political_support
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			allowed_civil_war = {
@@ -1281,7 +1175,10 @@ ideas = {
 			picture = PBC_war_of_independence
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			available = {
@@ -1307,7 +1204,10 @@ ideas = {
 			picture = PBC_war_of_independence
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			available = {
@@ -1333,7 +1233,10 @@ ideas = {
 			picture = PBC_war_of_independence
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			available = {
@@ -1359,7 +1262,10 @@ ideas = {
 			picture = PBC_war_of_independence
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			available = {
@@ -1385,7 +1291,10 @@ ideas = {
 			picture = PBC_war_of_independence
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			available = {
@@ -1411,7 +1320,10 @@ ideas = {
 			picture = PBC_war_of_independence
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			available = {
@@ -1437,7 +1349,10 @@ ideas = {
 			picture = PBC_war_of_independence
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			available = {
@@ -1463,7 +1378,10 @@ ideas = {
 			picture = PBC_war_of_independence
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			available = {
@@ -1489,7 +1407,10 @@ ideas = {
 			picture = PBC_war_of_independence
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			available = {
@@ -1515,7 +1436,10 @@ ideas = {
 			picture = PBC_war_of_independence
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			available = {
@@ -1541,7 +1465,10 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			allowed_civil_war = {
@@ -1558,7 +1485,10 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			allowed_civil_war = {
@@ -1575,7 +1505,10 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			allowed_civil_war = {
@@ -1592,7 +1525,10 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			allowed_civil_war = {
@@ -1608,7 +1544,10 @@ ideas = {
 			picture = generic_infantry_bonus
 
 			allowed = {
-				always = no
+				OR = {
+					original_tag = PRU 
+					always = no 
+				}
 			}
 
 			allowed_civil_war = {

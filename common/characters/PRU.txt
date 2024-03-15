@@ -55,7 +55,23 @@ characters={
 			id=-1
 		}
 	}
-	
+	PRU_apu_panchau={
+		name="Apu-punchau"
+		portraits={
+			civilian={
+				large="gfx/leaders/PRU/INC_sun_god_portrait.dds"
+			}
+		}
+		country_leader={
+			desc = "POLITICS_SUN_GOD_DESC"
+			expire = "1965.1.1"
+			ideology = theocracy
+			traits = {
+				PRU_godly_being
+				PRU_not_a_real_person
+			}
+		}
+	}
 	PRU_josé_luis_bustamante_y_rivero={
 		name="José Luis Bustamante y Rivero"
 		portraits={
@@ -79,46 +95,11 @@ characters={
 			}
 		}
 		country_leader={
-			desc="POLITICS_LUIS_FLORES_DESC"
+			desc="POLITICS_OSCAR_BENAVIDES_DESC"
 			ideology=fascism_ideology
 			expire="1965.1.1.1"
 			id=-1
 			traits = { CHL_military_leader }
-		}
-		corps_commander={
-			traits={ }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=3
-			visible = {
-				has_government = fascism
-			}
-		}
-	}
-
-	PRU_ernesto_montagne_markholz = {
-		name = "Ernesto Montagne Markholz"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/PRU/montagne.png"
-			}
-		}
-		country_leader={
-			desc="POLITICS_LUIS_FLORES_DESC"
-			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
-			traits = { PRU_compassionate_leader }
-		}
-		corps_commander={
-			traits={ trait_PRU_urrista old_guard }
-			skill=3
-			attack_skill=2
-			defense_skill=1
-			planning_skill=4
-			logistics_skill=3
 		}
 	}
 	
@@ -150,7 +131,7 @@ characters={
 		}
 		
 		field_marshal={
-			traits={ trait_PRU_urrista offensive_doctrine }
+			traits={ offensive_doctrine }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -170,7 +151,6 @@ characters={
 			}
 		}
 		field_marshal={
-			traits = { armor_officer }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -226,7 +206,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard jungle_rat }
+			traits={ old_guard }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -246,7 +226,6 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { trait_PRU_urrista }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -267,55 +246,6 @@ characters={
 		}
 		corps_commander={
 			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
-	PRU_maximo_pimentel = {
-		name = "Maximo Pimentel Obregon"
-		portraits = {
-			army = {
-				large = "gfx/leaders/PRU/Maximo_Pimentel_Obregon.png"
-			}
-		}
-		corps_commander={
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-	PRU_carlos_minano_mendocilla = {
-		name = "Carlos Miñano Mendocilla"
-		portraits = {
-			army = {
-				large = "gfx/leaders/PRU/PRU_carlos_minano.png"
-			}
-		}
-		corps_commander={
-			skill=2
-			attack_skill=1
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
-	PRU_victor_rodriguez_zumaran = {
-		name = "Víctor Rodríguez Zumarán"
-		portraits = {
-			army = {
-				large = "gfx/leaders/PRU/PRU_victor_rodriguez.png"
-			}
-		}
-		corps_commander={
-			traits = { jungle_rat }
-			skill=1
 			attack_skill=2
 			defense_skill=1
 			planning_skill=1
@@ -359,7 +289,7 @@ characters={
 				small="gfx/interface/ideas/idea_south_america_generic_navy_1.dds"
 			}
 			army={
-				large="gfx/leaders/PRU/Roque.png"
+				large="gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
 			}
 		}
 		navy_leader={
@@ -368,40 +298,6 @@ characters={
 			attack_skill=3
 			defense_skill=2
 			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=-1
-		}
-	}
-	PRU_carlos_rotalde={
-		name="Carlos Rotalde"
-		portraits={
-			army={
-				large="gfx/leaders/PRU/carlos_rotalde.png"
-			}
-		}
-		navy_leader={
-			traits={ }
-			skill=1
-			attack_skill=2
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=-1
-		}
-	}
-	PRU_mariano_melgar={
-		name="Mariano H. Melgar Conde"
-		portraits={
-			army={
-				large="gfx/leaders/PRU/mariano_melgar_conde.png"
-			}
-		}
-		navy_leader={
-			traits={ }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			maneuvering_skill=3
 			coordination_skill=1
 			legacy_id=-1
 		}
@@ -523,7 +419,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=peronism
+			ideology=peronist
 			expire="1943.1.1.12"
 			id=-1
 		}
@@ -560,66 +456,6 @@ characters={
 			attack_skill=3
 			defense_skill=4
 			maneuvering_skill=2
-			coordination_skill=1
-			legacy_id=-1
-			visible = { has_completed_focus = PRU_our_war_of_independence }
-		}
-	}
-
-	PRU_Mateo_Sahuaraural = {
-		name = "Mateo Sahuaraura"
-		portraits = {
-			army={
-				large="gfx/leaders/PRU/mateo.png"
-			}
-		}
-		
-		corps_commander = {
-			traits={ } 
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=-1
-			visible = { has_completed_focus = PRU_our_war_of_independence }
-		}
-	}
-
-	PRU_Justo_Pumacahua = {
-		name = "Justo Pumacahua"
-		portraits = {
-			army={
-				large="gfx/leaders/PRU/mamani.png"
-			}
-		}
-		
-		corps_commander = {
-			traits={ trait_mountaineer } 
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=-1
-			visible = { has_completed_focus = PRU_our_war_of_independence }
-		}
-	}
-
-	PRU_Amadeo_Quispe = {
-		name = "Amadeo Quispe"
-		portraits = {
-			army={
-				large="gfx/leaders/PRU/Mariano_quispe.png"
-			}
-		}
-		
-		corps_commander = {
-			traits={ trait_mountaineer } 
-			skill=2
-			attack_skill=1
-			defense_skill=3
-			maneuvering_skill=1
 			coordination_skill=1
 			legacy_id=-1
 			visible = { has_completed_focus = PRU_our_war_of_independence }
@@ -1121,23 +957,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_air_south_america_1"
-			}
-		}
-	}
-	PRU_apu_panchau={
-		name="Apu-punchau"
-		portraits={
-			civilian={
-				large="gfx/leaders/PRU/INC_sun_god_portrait.dds"
-			}
-		}
-		country_leader={
-			desc = "POLITICS_SUN_GOD_DESC"
-			expire = "1965.1.1"
-			ideology = theocracy
-			traits = {
-				PRU_godly_being
-				PRU_not_a_real_person
 			}
 		}
 	}

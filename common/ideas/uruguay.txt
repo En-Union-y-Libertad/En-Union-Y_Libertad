@@ -14,22 +14,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.2
-			}
-		}
-
-		URG_lingering_british_debt = {
-			picture = URG_lingering_debt_to_the_british
-
-			allowed = { original_tag = URG }
-
-			allowed_civil_war = { always = yes }
-			
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.05
-				political_power_factor = -0.05
+				consumer_goods_factor = 0.15
 			}
 		}
 	
@@ -305,7 +290,7 @@ ideas = {
 		}
 
 		URG_rebelling_officers = {
-			picture = BRA_brutality_medium
+			picture = ARG_military_distrust
 
 			allowed = { tag = URG }
 			
@@ -321,9 +306,9 @@ ideas = {
 		}
 
 		URG_political_deadlock = {
-			picture = URG_deadlock
+			picture = URG_violent_protestors
 			
-			allowed = { original_tag = URG }
+			allowed = { tag = URG }
 			
 			allowed_civil_war = { always = yes }
 			
@@ -522,7 +507,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_manpower_bonus
+			picture = generic_war_preparation
 			
 			modifier = {
 				army_morale_factor = 0.04
@@ -541,7 +526,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_air_bonus
+			picture = generic_war_preparation
 			
 			modifier = {
 				air_accidents_factor = -0.1
@@ -561,7 +546,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_air_bonus
+			picture = generic_war_preparation
 			
 			modifier = {
 				air_accidents_factor = 0.15
@@ -584,7 +569,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_air_payment
+			picture = generic_war_preparation
 			
 			modifier = {
 				air_accidents_factor = 0.15
@@ -607,7 +592,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = URG_patriotic_war
+			picture = generic_war_preparation
 			
 			modifier = {
 				recruitable_population_factor = 0.1
@@ -616,7 +601,7 @@ ideas = {
 		}
 
 		URG_escuela_militar = {
-			picture = mex_politicised_army
+			picture = generic_war_preparation
 
 			allowed = { tag = URG }
 			
@@ -632,7 +617,7 @@ ideas = {
 		}
 
 		URG_naval_expenses = {
-			picture = generic_sea_focused_navy
+			picture = generic_war_preparation
 
 			allowed = { tag = URG }
 			
@@ -647,7 +632,7 @@ ideas = {
 		}
 
 		URG_farming_subsidized = {
-			picture = LIT_invested_in_farms
+			picture = generic_war_preparation
 
 			allowed = { tag = URG }
 			
@@ -662,7 +647,7 @@ ideas = {
 		}
 
 		URG_brou_reformed = {
-			picture = generic_goods_red_bonus
+			picture = generic_war_preparation
 
 			allowed = { tag = URG }
 			
@@ -677,7 +662,7 @@ ideas = {
 		}
 
 		URG_INC = {
-			picture = generic_production_bonus
+			picture = generic_war_preparation
 
 			allowed = { tag = URG }
 			
@@ -693,7 +678,7 @@ ideas = {
 		}
 
 		URG_building_grants_idea = {
-			picture = generic_goods_red_bonus
+			picture = generic_war_preparation
 
 			allowed = { tag = URG }
 			
@@ -706,8 +691,8 @@ ideas = {
 			}
 		}
 
-		URG_maintain_status_quo = { #agrarian economy
-			picture = generic_agrarian_society
+		URG_maintain_status_quo = {
+			picture = generic_war_preparation
 
 			allowed = { tag = URG }
 			
@@ -729,8 +714,8 @@ ideas = {
 			}
 		}
 
-		URG_maintain_status_quo2 = { #agrarian economy
-			picture = generic_agrarian_society
+		URG_maintain_status_quo2 = {
+			picture = generic_war_preparation
 
 			allowed = { tag = URG }
 			
@@ -754,7 +739,7 @@ ideas = {
 		}
 
 		URG_industrialize_the_economy = {
-			picture = URG_maintain_economy
+			picture = generic_war_preparation
 
 			allowed = { tag = URG }
 			
@@ -775,7 +760,7 @@ ideas = {
 		}
 
 		URG_welfare_state = {
-			picture = URG_welfare_state
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -784,6 +769,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				political_power_factor = 0.1
 				stability_factor = 0.15
 				war_support_factor = 0.1
 				monthly_population = 0.25
@@ -792,7 +778,7 @@ ideas = {
 		}
 
 		URG_welfare_state1 = {
-			picture = URG_welfare_state
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -810,7 +796,7 @@ ideas = {
 		}
 
 		URG_welfare_state2 = {
-			picture = URG_welfare_state
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -828,7 +814,7 @@ ideas = {
 		}
 
 		URG_welfare_state3 = {
-			picture = URG_welfare_state
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -844,7 +830,7 @@ ideas = {
 		}
 
 		URG_welfare_state4 = {
-			picture = URG_welfare_state
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -860,7 +846,7 @@ ideas = {
 		}
 
 		URG_mass_production_idea = {
-			picture = ast_volunteer_defence_corps
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -879,7 +865,7 @@ ideas = {
 		}
 
 		URG_quality_control_idea = {
-			picture = CHL_armed_neutrality
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -898,7 +884,7 @@ ideas = {
 		}
 
 		URG_corned_beef_profits = {
-			picture = generic_foreign_capital
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -911,7 +897,7 @@ ideas = {
 			}
 		}
 		URG_local_consuption = {
-			picture = generic_agrarian_reform
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -941,9 +927,8 @@ ideas = {
 				communism_drift = 0.01
 			}
 		}
-		
 		URG_blancos_in_opposition0 = {
-			picture = URG_low_blancos_opposition
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -958,7 +943,7 @@ ideas = {
 			}
 		}
 		URG_blancos_in_opposition1 = {
-			picture = URG_mild_blancos_opposition
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -973,7 +958,7 @@ ideas = {
 			}
 		}
 		URG_blancos_in_opposition2 = {
-			picture = URG_intense_blancos_opposition
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -987,9 +972,8 @@ ideas = {
 				war_support_factor = -0.15
 			}
 		}
-		
-		URG_colorados_in_opposition0 = {
-			picture = URG_low_colorado_opposition
+		URG_blancos_in_opposition3 = {
+			picture = generic_constitutional_guarantees
 
 			allowed = { tag = URG }
 			
@@ -998,39 +982,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_factor = -0.1
-				stability_factor = -0.05
-				war_support_factor = -0.05
-			}
-		}
-		URG_colorados_in_opposition1 = {
-			picture = URG_mild_colorado_opposition
-
-			allowed = { tag = URG }
-			
-			allowed_civil_war = { always = yes }
-			
-			removal_cost = -1
-			
-			modifier = {
-				political_power_factor = -0.15
-				stability_factor = -0.1
-				war_support_factor = -0.1
-			}
-		}
-		URG_colorados_in_opposition2 = {
-			picture = URG_intense_colorado_opposition
-
-			allowed = { tag = URG }
-			
-			allowed_civil_war = { always = yes }
-			
-			removal_cost = -1
-			
-			modifier = {
-				political_power_factor = -0.2
-				stability_factor = -0.15
-				war_support_factor = -0.15
+				political_power_factor = -0.25
+				stability_weekly = -0.002
+				stability_factor = -0.2
+				war_support_factor = -0.2
 			}
 		}
 	}

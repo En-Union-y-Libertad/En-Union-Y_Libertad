@@ -1,0 +1,28 @@
+state={
+	id=916
+	name="STATE_916"
+	history={
+		owner = URG
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			4457 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = URG
+		victory_points = {
+			4457 1 
+		}
+		victory_points = {
+			13240 2
+		}
+	}
+	provinces={
+		4457 13239 13240 13241 13251 13255 
+	}
+	manpower=208556
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -381,7 +381,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = bog.aceptab.a
+		name = bog.aceptan.a
 		COL_political_violence_level_down = yes
 		hidden_effect = {
 			set_country_flag = bog_aceptan
@@ -653,8 +653,8 @@ country_event = {
 			start_civil_war = {
 				ideology = fascism
 				size = 0.2
-				capital = 928
-				states = { 928 932 933 }
+				capital = 850
+				states = { 850 854 855 }
 			}
 			remove_ideas = COL_oposicion
 		}
@@ -737,8 +737,8 @@ country_event = {
 			start_civil_war = {
 				ideology = neutrality
 				size = 0.2
-				capital = 931
-				states = { 486 930 931 }
+				capital = 853
+				states = { 486 852 853 }
 			}
 			remove_ideas = COL_politicised_army
 		}
@@ -1003,7 +1003,7 @@ country_event = {
 					ideology = communism
 					size = 0.2
 					capital = 493
-					states = { 493 926 927 928 489 942 }
+					states = { 493 848 849 850 489 864 }
 				}
 			}
 			else = {
@@ -1011,7 +1011,7 @@ country_event = {
 					ideology = communism
 					size = 0.2
 					capital = 493
-					states = { 493 926 927 }
+					states = { 493 848 849 }
 				}
 			}
 			remove_ideas = COL_oposicion
@@ -1802,7 +1802,7 @@ country_event = {
 			start_civil_war = {
 				ideology = democratic
 				size = civil_war_size_var
-				states = { 493 926 927 }
+				states = { 493 848 849 }
 			}
 		}
 		hidden_effect = {
@@ -1898,7 +1898,7 @@ country_event = {
 			start_civil_war = {
 				ideology = democratic
 				size = civil_war_size_var
-				states = { 493 926 927 }
+				states = { 493 848 849 }
 			}
 		}
 		hidden_effect = {
@@ -2058,16 +2058,16 @@ country_event = {
 		name = colombia.45.a
 		hidden_effect = {
 			add_state_claim = 305
-			add_state_claim = 935
-			add_state_claim = 934
-			add_state_claim = 924
+			add_state_claim = 857
+			add_state_claim = 856
+			add_state_claim = 846
 			add_state_claim = 490
 			add_state_claim = 649
 		}
 		create_wargoal = {
 			type = take_state_focus
 			target = ECU
-			generator = { 305 935 934 924 490 649 }
+			generator = { 305 857 856 846 490 649 }
 		}
 	}
 }
@@ -2333,21 +2333,21 @@ country_event = {
 		name = colombia.51.a
 		hidden_effect = {
 			add_state_claim = 489
-			add_state_claim = 942
+			add_state_claim = 864
 			add_state_claim = 307
 			add_state_claim = 488
-			add_state_claim = 938
-			add_state_claim = 943
-			add_state_claim = 945
-			add_state_claim = 947
-			add_state_claim = 946
-			add_state_claim = 941
-			add_state_claim = 944
+			add_state_claim = 860
+			add_state_claim = 865
+			add_state_claim = 867
+			add_state_claim = 869
+			add_state_claim = 868
+			add_state_claim = 863
+			add_state_claim = 866
 		}
 		create_wargoal = {
 			type = take_state_focus
 			target = VEN
-			generator = { 489 942 307 488 938 943 945 947 946 941 944 }
+			generator = { 489 864 307 488 860 865 867 869 868 863 866 }
 		}
 	}
 }
@@ -2452,7 +2452,7 @@ country_event = {
 		name = colombia.54.a
 
 		COL = {
-			transfer_state = 965
+			transfer_state = 887
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -2463,7 +2463,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			965 = {
+			887 = {
 				set_compliance = 40
 			} 
 		}
@@ -2497,19 +2497,19 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-						965 = {
+						887 = {
 							is_core_of = COL
 						}
 					}
 				}
-				add_state_claim = 965
+				add_state_claim = 887
 			}
 		}
 
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
-			generator = { 965 }
+			generator = { 887 }
 		}
 	}
 
@@ -2597,7 +2597,7 @@ country_event = {
 		name = colombia.57.a
 
 		COL = {
-			transfer_state = 964
+			transfer_state = 886
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -2608,7 +2608,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			964 = {
+			886 = {
 				set_compliance = 40
 			} 
 		}
@@ -2638,19 +2638,19 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-						964 = {
+						886 = {
 							is_core_of = COL
 						}
 					}
 				}
-				add_state_claim = 964
+				add_state_claim = 886
 			}
 		}
 
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
-			generator = { 964 }
+			generator = { 886 }
 		}
 	}
 
@@ -2735,7 +2735,7 @@ country_event = {
 		name = colombia.60.a
 
 		COL = {
-			transfer_state = 936
+			transfer_state = 858
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -2746,7 +2746,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			936 = {
+			858 = {
 				set_compliance = 40
 			} 
 		}
@@ -2776,19 +2776,19 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-						936 = {
+						858 = {
 							is_core_of = COL
 						}
 					}
 				}
-				add_state_claim = 936
+				add_state_claim = 858
 			}
 		}
 
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
-			generator = { 936 }
+			generator = { 858 }
 		}
 	}
 
@@ -2869,7 +2869,7 @@ country_event = {
 		name = colombia.63.a
 
 		COL = {
-			transfer_state = 937
+			transfer_state = 859
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -2880,7 +2880,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			937 = {
+			859 = {
 				set_compliance = 40
 			} 
 		}
@@ -2912,7 +2912,7 @@ country_event = {
 				factor = 1.5
 				any_other_country = {
 					is_major = no
-					has_full_control_of_state = 937
+					has_full_control_of_state = 859
 				}
 			}
 		}
@@ -2921,19 +2921,19 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-						937 = {
+						859 = {
 							is_core_of = COL
 						}
 					}
 				}
-				add_state_claim = 937
+				add_state_claim = 859
 			}
 		}
 
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
-			generator = { 937 }
+			generator = { 859 }
 		}
 	}
 
@@ -2944,7 +2944,7 @@ country_event = {
 				factor = 1.5
 				any_other_country = {
 					is_major = yes
-					has_full_control_of_state = 937
+					has_full_control_of_state = 859
 				}
 			}
 		}
@@ -3820,8 +3820,8 @@ country_event = {
 							has_country_flag = ceder_guajira_flag
 						}
 					}
-					give_resource_rights = { receiver = USA state = 926 }
-					926 = {
+					give_resource_rights = { receiver = USA state = 848 }
+					848 = {
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -3872,8 +3872,8 @@ country_event = {
 							has_country_flag = ceder_arauca_flag
 						}
 					}
-					give_resource_rights = { receiver = USA state = 929 }
-					929 = {
+					give_resource_rights = { receiver = USA state = 851 }
+					851 = {
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -3960,8 +3960,8 @@ country_event = {
 							has_country_flag = ceder_guajira_flag
 						}
 					}
-					give_resource_rights = { receiver = FRA state = 926 }
-					926 = {
+					give_resource_rights = { receiver = FRA state = 848 }
+					848 = {
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4012,8 +4012,8 @@ country_event = {
 							has_country_flag = ceder_arauca_flag
 						}
 					}
-					give_resource_rights = { receiver = FRA state = 929 }
-					929 = {
+					give_resource_rights = { receiver = FRA state = 851 }
+					851 = {
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4100,8 +4100,8 @@ country_event = {
 							has_country_flag = ceder_guajira_flag
 						}
 					}
-					give_resource_rights = { receiver = ENG state = 926 }
-					926 = {
+					give_resource_rights = { receiver = ENG state = 848 }
+					848 = {
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4152,8 +4152,8 @@ country_event = {
 							has_country_flag = ceder_arauca_flag
 						}
 					}
-					give_resource_rights = { receiver = ENG state = 929 }
-					929 = {
+					give_resource_rights = { receiver = ENG state = 851 }
+					851 = {
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4309,8 +4309,8 @@ country_event = {
 							has_country_flag = ceder_guajira_flag
 						}
 					}
-					give_resource_rights = { receiver = THIS state = 926 }
-					926 = {
+					give_resource_rights = { receiver = THIS state = 848 }
+					848 = {
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4361,8 +4361,8 @@ country_event = {
 							has_country_flag = ceder_arauca_flag
 						}
 					}
-					give_resource_rights = { receiver = THIS state = 929 }
-					929 = {
+					give_resource_rights = { receiver = THIS state = 851 }
+					851 = {
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4445,9 +4445,9 @@ country_event = {
 			}
 			effect_tooltip = {
 				COL = {
-					give_resource_rights = { receiver = ROOT state = 926 }	
+					give_resource_rights = { receiver = ROOT state = 848 }	
 				}
-				926 = {
+				848 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -4505,9 +4505,9 @@ country_event = {
 			}
 			effect_tooltip = {
 				COL = {
-					give_resource_rights = { receiver = ROOT state = 929 }
+					give_resource_rights = { receiver = ROOT state = 851 }
 				}
-				929 = {
+				851 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -4603,9 +4603,9 @@ country_event = {
 				}
 			}
 			COL = {
-				give_resource_rights = { receiver = FROM state = 926 }	
+				give_resource_rights = { receiver = FROM state = 848 }	
 			}
-			926 = {
+			848 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -4686,9 +4686,9 @@ country_event = {
 				}
 			}
 			COL = {
-				give_resource_rights = { receiver = FROM state = 929 }
+				give_resource_rights = { receiver = FROM state = 851 }
 			}
-			929 = {
+			851 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -4832,10 +4832,10 @@ country_event = {
 		306 = {
 			set_state_flag = oligarquia_state_flag
 		}
-		928 = {
+		850 = {
 			set_state_flag = oligarquia_state_flag
 		}
-		927 = {
+		849 = {
 			set_state_flag = oligarquia_state_flag
 		}
 	}
@@ -5188,7 +5188,6 @@ country_event = {
 				original_tag = PRU
 				has_government = neutrality
 			}
-			load_focus_tree = { tree = peru_focus keep_completed = yes }
 			save_event_target_as = peru_benavides_civil_war
 			hidden_effect = {
 				add_ideas = COL_influencia_militarista
@@ -5439,7 +5438,7 @@ country_event = {
 					has_country_flag = japura_incident
 				}
 			}
-			transfer_state = 936
+			transfer_state = 858
 		}
 		else_if = {
 			limit = {
@@ -5447,7 +5446,7 @@ country_event = {
 					has_country_flag = mapari_incident
 				}
 			}
-			transfer_state = 964
+			transfer_state = 886
 		}
 
 		add_stability = 0.05

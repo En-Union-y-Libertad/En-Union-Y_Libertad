@@ -246,16 +246,6 @@ opinion_modifiers = {
 	ger_chi_diplomacy_focus = {
 		value = 15
 	}
-	
-	SOV_chose_NATO_neutrality = { 
-		value = 30
-		decay = 1
-	}
-	
-	SOV_joined_NATO = { 
-		value = -30
-		decay = 1
-	}
 
 	supported_the_chinese = {
 		value = -15
@@ -1235,35 +1225,5 @@ opinion_modifiers = {
 	
 	COL_benavides_contacted = {
 		value = -75
-	}
-
-	invested_in_country = {
-		value = 15
-	}
-
-	NOT_invested_in_country = {
-		value = -15
-	}
-
-	BRA_brazilian_civil_war_commitment = {
-		value = 35
-	}
-
-	BRA_cotton_trade = {
-		value = 25 
-	}
-
-	BRA_resource_rights = {
-		value = 30
-	}
-
-	ARG_roca_runciman_other_country = {
-		value = -40
-		trade =  yes 
-	}
-
-	ARG_roca_runciman_england = {
-		value = 100
-		trade = yes 
 	}
 }

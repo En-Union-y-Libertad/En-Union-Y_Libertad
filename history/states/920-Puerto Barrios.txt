@@ -1,0 +1,27 @@
+state={
+	id=920
+	name="STATE_920"
+
+	history={
+		owner = GUA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = GUA
+		victory_points = {
+			13085 1
+		}
+		13085 = {
+			naval_base = 1
+		}
+	}
+
+	provinces={
+		13085 14546 14599 14602 
+	}
+
+	manpower=161161
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

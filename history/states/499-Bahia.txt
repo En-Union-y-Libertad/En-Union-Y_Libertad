@@ -16,12 +16,11 @@ state={
 
 		}
 		add_core_of = BRA
-		add_core_of = DRJ
 		victory_points = {
-			10946 5
+			10946 1 
 		}
 		victory_points = {
-			8143 3
+			8143 1 
 		}
 		victory_points = {
 			14136 3 

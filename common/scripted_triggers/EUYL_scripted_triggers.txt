@@ -19,11 +19,11 @@ COL_is_laureanist_state = {
 
 		#306 - Cundinamarca
 		#486 - Meta
-		#932 - Caquetá
-		#928 - Nariño
-		#927 - Antioquia
+		#854 - Caquetá
+		#850 - Nariño
+		#849 - Antioquia
 		#493 - Magdalena
-		#929 - Arauca
+		#851 - Arauca
 		
 		OR = {
 			AND = {
@@ -35,15 +35,15 @@ COL_is_laureanist_state = {
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 			AND = {
-				state = 932
+				state = 854
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 			AND = {
-				state = 928
+				state = 850
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 			AND = {
-				state = 927
+				state = 849
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 			AND = {
@@ -51,7 +51,7 @@ COL_is_laureanist_state = {
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 			AND = {
-				state = 929
+				state = 851
 				has_dynamic_modifier = { modifier = COL_laureanist_agitation }
 			}
 		}
@@ -69,43 +69,28 @@ ARG_fm_monopoly = {
 	}
 }
 
-BRA_isnt_industrializing_economy = {
-	custom_trigger_tooltip = {
-		tooltip = BRA_not_industrializing_tt
-		NOT = {
-			OR = {
-				has_idea = rural_economy
-				has_idea = semi_rural_economy
-				has_idea = industrializing_economy
-			}
-		}
-	}
-}
+#BRA_isnt_industrializing_economy = {
+#	custom_trigger_tooltip = {
+#		tooltip = BRA_not_industrializing_tt
+#		NOT = {
+#			OR = {
+#				has_idea = rural_economy
+#				has_idea = semi_rural_economy
+#				has_idea = industrializing_economy
+#			}
+#		}
+#	}
+#}
 
-BRA_coffee_plantations_active = {
-	OR = {
-		has_idea = BRA_very_slight_dependency_on_coffee
-		has_idea = BRA_slight_dependency_on_coffee
-		has_idea = BRA_dependent_on_coffee
-		has_idea = BRA_very_dependent_on_coffee
-		has_idea = BRA_extremely_dependent_on_coffee
-	}
-}
-
-ARG_is_suffering_from_inflation = {
-	OR = {
-		has_idea = ARG_inflation_1
-		has_idea = ARG_inflation_2
-		has_idea = ARG_inflation_3
-		has_idea = ARG_inflation_4
-		has_idea = ARG_inflation_5
-		has_idea = ARG_inflation_6
-		has_idea = ARG_inflation_7
-		has_idea = ARG_inflation_8
-		has_idea = ARG_inflation_9
-		has_idea = ARG_inflation_10
-	}
-}
+#BRA_coffee_plantations_active = {
+#	OR = {
+#		has_idea = BRA_very_slight_dependency_on_coffee
+#		has_idea = BRA_slight_dependency_on_coffee
+#		has_idea = BRA_dependent_on_coffee
+#		has_idea = BRA_very_dependent_on_coffee
+#		has_idea = BRA_extremely_dependent_on_coffee
+#	}
+#}
 
 PBC_check_for_war_focus = {
 	if = {
@@ -127,25 +112,5 @@ PBC_check_for_war_focus = {
 			has_war_with = ECU 
 			has_war_with = COL 
 		}
-	}
-}
-
-BRA_is_the_commune_of_brazil = {
-	custom_trigger_tooltip = {
-		tooltip = BRA_is_commune_of_brasil_tt
-		tag = BRC
-	}
-}
-BRA_is_NOT_the_empire_of_brazil = {
-	custom_trigger_tooltip = {
-		tooltip = BRA_not_empire_of_brasil_tt
-		NOT = { tag = BZE }
-	}
-}
-
-BRA_is_the_empire_of_brazil = {
-	custom_trigger_tooltip = {
-		tooltip = BRA_is_the_empire_of_brazil_tt
-		tag = BZE 
 	}
 }
