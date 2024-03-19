@@ -13606,6 +13606,13 @@ news_event = {
 				has_war_with = CHL 
 			}
 		}
+		if = { ## Unlocks Second War of Pacific Focuses
+			limit = { original_tag = PRU }
+			custom_effect_tooltip = CHL_unlock_second_war_of_pacific_focuses
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
 	}
 
 	option = {
@@ -13735,7 +13742,6 @@ news_event = {
 
 	major = yes
 	is_triggered_only = yes
-	fire_only_once = yes 
 
 	option = {
 		name = news.346.a 
@@ -13790,7 +13796,6 @@ news_event = {
 
 	major = yes
 	is_triggered_only = yes
-	fire_only_once = yes 
 
 	option = {
 		name = news.347.a 
@@ -13848,8 +13853,8 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		966 = { is_controlled_by = URG }
-		966 = { is_owned_by = ARG }
+		1021 = { is_controlled_by = URG }
+		1021 = { is_owned_by = ARG }
 		ARG = { 
 			has_war_with = URG 
 			has_civil_war = no
@@ -14031,15 +14036,15 @@ news_event = {
 
 #Fall of Buenos Aires (Generic)
 news_event = {
-	id = news.350
-	title = news.350.t
-	desc = news.350.d
+	id = news.750
+	title = news.750.t
+	desc = news.750.d
 	picture = GFX_news_event_soldiers_marching
 	
 	major = yes
 	
 	trigger = {
-		966 = { 
+		1021 = { 
 			is_owned_by = ARG 
 			NOT = {
 				is_controlled_by = ARG 
@@ -14067,21 +14072,21 @@ news_event = {
 	}
 	
 	option = {
-		name = news.350.a
+		name = news.750.a
 		trigger = {
 			NOT = {
 				OR = {
 					original_tag = ARG 
-					controls_state = 966
+					controls_state = 1021
 				}
 			}
 		}
 	}
 	option = {
-		name = news.350.b
+		name = news.750.b
 		trigger = { 
 			has_war_with = ARG 
-			controls_state = 966
+			controls_state = 1021
 		}
 	}
 	option = {
@@ -14210,7 +14215,7 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		925 = { 
+		1011 = { 
 			is_owned_by = URG 
 			NOT = {
 				is_controlled_by = URG 
@@ -14237,7 +14242,7 @@ news_event = {
 			NOT = {
 				OR = {
 					original_tag = URG 
-					controls_state = 925
+					controls_state = 1011
 				}
 			}
 		}
@@ -14246,7 +14251,7 @@ news_event = {
 		name = news.353.b
 		trigger = { 
 			has_war_with = URG 
-			controls_state = 925
+			controls_state = 1011
 		}
 	}
 	option = {
@@ -14375,7 +14380,7 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		301 = { 
+		991 = { ## had it as 301 for the longest time lmaooo
 			is_owned_by = PAR 
 			NOT = {
 				is_controlled_by = PAR 
@@ -14540,7 +14545,7 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		941 = { 
+		1027 = { 
 			is_owned_by = VEN 
 			NOT = {
 				is_controlled_by = VEN 
@@ -14567,7 +14572,7 @@ news_event = {
 			NOT = {
 				OR = {
 					original_tag = VEN 
-					controls_state = 941
+					controls_state = 1027
 				}
 			}
 		}
@@ -14576,7 +14581,7 @@ news_event = {
 		name = news.359.b
 		trigger = { 
 			has_war_with = VEN 
-			controls_state = 941
+			controls_state = 1027
 		}
 	}
 	option = {
@@ -14892,6 +14897,70 @@ news_event = {
 			OR = {
 				original_tag = ARG 
 				original_tag = PAR
+			}
+		}
+	}
+}
+
+#Papal State Declared in Argentina
+news_event = {
+	id = news.368
+	title = news.368.t 
+	desc = news.368.d 
+	picture = GFX_news_event_generic_parliament
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.368.a 
+		trigger = {
+			NOT = { original_tag = ARG }
+		}
+	}
+
+	option = {
+		name = news.368.b 
+		trigger = {
+			original_tag = ARG 
+		}
+	}
+}
+
+#Paraguayan War of Vengeance
+news_event = {
+	id = news.369
+	title = news.369.t
+	desc = news.369.d 
+	picture = GFX_news_event_PAR_war
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.369.a 
+		trigger = {
+			original_tag = PAR
+		}
+		PAR = { mark_focus_tree_layout_dirty = yes }
+	}
+
+	option = {
+		name = news.369.b 
+		trigger = {
+			NOT = { original_tag = PAR }
+			has_war_with = PAR
+		}
+	}
+
+	option = {
+		name = news.369.c 
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = PAR 
+					has_war_with = PAR
+				}
 			}
 		}
 	}

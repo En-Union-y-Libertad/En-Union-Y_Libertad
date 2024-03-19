@@ -108,44 +108,33 @@ country_event = {
                         }
                     }
                     if = {
+                        limit = {
+                            is_ai = yes
+                        }
+                        add_ideas = EUYL_chaos_civil_war_help
+                    }
+                    if = {
                         limit = { has_completed_focus = BOL_secure_the_guardia_nacional }
-                        920 = {
+                        random_owned_controlled_state = {
                             create_unit = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = ROOT
-                            }
-                            create_unit = {
-                                division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-                                owner = ROOT
-                            }
-                            create_unit = {
-                                division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-                                owner = ROOT
-                            }
-                            create_unit = {
-                                division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-                                owner = ROOT
+                                count = 1
                             }
                         }
                         random_owned_controlled_state = {
                             create_unit = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = ROOT
+                                count = 2
                             }
                         }
                     }
-                    922 = {
+                    every_controlled_state = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
+                            count = 1
                         }
                         if = {
                             limit = { has_state_flag = BOL_conscripted_militia }
@@ -155,80 +144,6 @@ country_event = {
                             }
                         }
                     }
-                    917 = {
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        if = {
-                            limit = { has_state_flag = BOL_conscripted_militia }
-                            create_unit = {
-                                division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-                                owner = ROOT
-                            }
-                        }
-                    }
-                    302 = {
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        if = {
-                            limit = { has_state_flag = BOL_conscripted_militia }
-                            create_unit = {
-                                division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-                                owner = ROOT
-                            }
-                        }
-                    }
-                    922 = {
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                    }
-                    920 = {
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        if = {
-                            limit = { has_state_flag = BOL_conscripted_militia }
-                            create_unit = {
-                                division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.1 start_equipment_factor = 1.0" 
-                                owner = ROOT
-                            }
-                        }
-                    }
-
                     random_other_country = {
                         limit = {
                             original_tag = BOL 
@@ -265,135 +180,26 @@ country_event = {
                                     }
                                 }
                             }
-                            985 = {
+                            random_owned_controlled_state = {
                                 create_unit = {
                                     division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                     owner = PREV
-                                }
-                                create_unit = {
-                                    division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-                                    owner = PREV
-                                }
-                                create_unit = {
-                                    division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-                                    owner = PREV
-                                }
-                                create_unit = {
-                                    division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-                                    owner = PREV
+                                    count = 2
                                 }
                             }
                         }
-                        921 = {
+                        every_controlled_state = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
+                                count = 2
                             }
                         }
-                        921 = {
+                        random_controlled_state = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
-                            }
-                        }
-                        487 = {
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                        }
-                        921 = {
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            if = {
-                                limit = {
-                                    NOT = {
-                                        PREV = { controls_state = 918 }
-                                    }
-                                }
-                                create_unit = {
-                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                    owner = PREV
-                                }
-                                create_unit = {
-                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                    owner = PREV
-                                }
-                                create_unit = {
-                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                    owner = PREV
-                                }
-                            }
-                        }
-                        918 = {
-                            if = {
-                                limit = { is_controlled_by = PREV }
-                                create_unit = {
-                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                    owner = PREV
-                                }
-                                create_unit = {
-                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                    owner = PREV
-                                }
-                                create_unit = {
-                                    division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                    owner = PREV
-                                }
+                                count = 1
                             }
                         }
                     }
@@ -406,7 +212,7 @@ country_event = {
                     size = BOL_civil_war_power
                     capital = 302
                     states = {
-                        917 302 985 487 922 918 921
+                        1003 302 985 487 1008 1004 1007
                     }
                 }
                 remove_unit_leader = 44123
@@ -426,22 +232,11 @@ country_event = {
                             #
                         }
                     }
-                    920 = {
+                    random_controlled_state = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
-                        }
-                        create_unit = {
-                            division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
-                            owner = ROOT
+                            count = 5
                         }
                     }
                     random_other_country = {
@@ -460,155 +255,14 @@ country_event = {
                             expire = "1965.1.1"
                             ideology = military_socialism
                             traits = {
-                                ARG_inexperienced_leader
+                                ARG_inexperienced_leader_1
                             }
                         }
-                        302 = {
+                        every_controlled_state = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                        }
-                        918 = {
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                        }
-                        922 = {
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                        }
-                        487 = {
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                        }
-                        917 = {
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                        }
-                        921 = {
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                        }
-                        985 = {
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                        }
-                        922 = {
-                            create_unit = {
-                                division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-                                owner = PREV
-                            }
-                            create_unit = {
-                                division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
-                                owner = PREV
+                                count = 4
                             }
                         }
                     }
@@ -727,9 +381,9 @@ country_event = {
             }
             
             set_variable = { BOL_number_of_states_controlled_by_toro = 1 }
-            set_variable = { BOL_cost_of_taking_out_toro = 70 }
-            set_variable = { BOL_time_it_takes_toro_for_rebellion = 70}
-            set_variable = { BOL_days_to_get_back_state = 50 }
+            set_variable = { BOL_cost_of_taking_out_toro = 50 }
+            set_variable = { BOL_time_it_takes_toro_for_rebellion = 80}
+            set_variable = { BOL_days_to_get_back_state = 35 }
         }
     }
 }
@@ -762,9 +416,29 @@ country_event = {
                 add = 20
                 num_of_civilian_factories > 12
             }
+            modifier = { ## hell naw
+                factor = 0
+                OR = {
+                    has_government = communism
+                    has_government = fascism
+                    has_game_rule = {
+                        rule = EUYL_PAR_ai_behavior 
+                        option = PAR_NATIVE
+                    }
+                }
+            }
+            modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
 		}
 		FROM = {
 			transfer_state = 688
+			transfer_state = 992
+			transfer_state = 993
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -806,6 +480,11 @@ country_event = {
 		}
 		FROM = {
 			country_event = { id = peru.17 hours = 6 }
+            create_wargoal = {
+                target = ROOT 
+                type = take_state_focus
+                generator = { 688 992 993 }
+            }
 		}
 	}
 }
@@ -838,11 +517,18 @@ country_event = {
                 add = 20
                 num_of_civilian_factories > 12
             }
+            modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
 		}
 
         FROM = {
-            transfer_state = 909
-            give_resource_rights = { receiver = ROOT state = 922 }
+            transfer_state = 995
+            give_resource_rights = { receiver = ROOT state = 1008 }
             country_event = { id = peru.16 hours = 4 }
         }
     }
@@ -865,6 +551,11 @@ country_event = {
 		}
 		FROM = {
 			country_event = { id = peru.17 hours = 6 }
+            create_wargoal = {
+                target = ROOT 
+                type = take_state_focus
+                generator = { 995 }
+            }
 		}
     }
 }
@@ -897,12 +588,19 @@ country_event = {
                 add = 20
                 num_of_civilian_factories > 12
             }
+            modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
         }
         FROM = {
-            transfer_state = 923
-            transfer_state = 962
-            transfer_state = 960
-            transfer_state = 958
+            transfer_state = 1009
+            transfer_state = 996
+            transfer_state = 940
+            transfer_state = 980
             random_owned_controlled_state = {
                 limit = { industrial_complex > 1 }
                 remove_building = {
@@ -943,6 +641,11 @@ country_event = {
 		}
 		FROM = {
 			country_event = { id = peru.17 hours = 6 }
+            create_wargoal = {
+                target = ROOT 
+                type = take_state_focus
+                generator = { 1009 996 940 980 }
+            }
 		}
     }
 }
@@ -973,8 +676,14 @@ country_event = {
             }
         }
         688 = {
-            remove_core_of = BOL 
+            remove_core_of = BOL			
         }
+		992 = {
+			remove_core_of = BOL 
+		}
+		993 = {
+			remove_core_of = BOL
+		}
         give_military_access = FROM
         add_opinion_modifier = { modifier = strengthened_ties target = FROM }
         FROM = {
@@ -988,6 +697,13 @@ country_event = {
         name = bolivia.7.b 
         ai_chance = {
             base = 20
+            modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
         }
         FROM = {
             country_event = { id = peru.17 hours = 8 }
@@ -1038,6 +754,86 @@ country_event = {
     option = {
         name = bolivia.9.a 
         unlock_decision_category_tooltip = CHL_countering_bolivias_plan
+    }
+}
+
+# Bolivia has Taken Antofagasta, what should we do? 
+country_event = {
+    id = bolivia.10
+    title = bolivia.10.t 
+    desc = bolivia.10.d 
+
+    is_triggered_only = yes 
+
+    option = {
+        name = bolivia.10.a 
+        ai_chance = {
+            base = 20
+            modifier ={ 
+                factor = 2.5
+                OR = {
+                    has_government = fascism
+                    has_government = communism
+                }
+            }
+            modifier = {
+                factor = 4
+                strength_ratio = {
+					tag = FROM
+					ratio > 1
+				}
+            }
+            modifier = { 
+                factor = 0
+                has_civil_war = yes #if for some reason they have a civil war 
+            }
+            modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
+        }
+        create_wargoal = {
+			type = take_state_focus
+			generator = { 995 }
+			target = FROM
+		}
+        hidden_effect = {
+            add_ai_strategy = { ## to motivate the AI to declare war on FROM
+                type = declare_war
+                id = FROM
+                value = 100
+            }
+        }
+    }
+
+    option = {
+        name = bolivia.10.b 
+        ai_chance = {
+            base = 30
+            modifier = {
+                factor = 10
+                strength_ratio = {
+					tag = FROM
+					ratio < 1
+				}
+            }
+            modifier = {
+                factor = 2
+                has_government = democratic
+            }
+            modifier = {
+                factor = 0
+                has_completed_focus = CHL_our_own_fate ## Anarchists aint letting this shi slide
+            }
+            modifier = {
+                factor = 4
+                has_war = yes 
+            }
+        }
+        add_war_support = -0.01
     }
 }
         

@@ -12,6 +12,13 @@ ideologies = {
 		
 			socialism = {
 			}
+			
+			populism = {
+			}
+
+			democratic_monarchism = {
+				can_be_randomly_selected = no
+			}
 		}
 		
 		dynamic_faction_names = {
@@ -91,6 +98,18 @@ ideologies = {
 			tenentism = {
 				can_be_randomly_selected = no 
 			}
+
+			posadism = {
+				can_be_randomly_selected = no 
+			}
+
+			syndicalism = {
+				can_be_randomly_selected = no 
+			}
+
+			anti_imperialism = {
+				can_be_randomly_selected = no
+			}
 		}
 		
 		dynamic_faction_names = {
@@ -140,10 +159,6 @@ ideologies = {
 			
 			gen_nazism = {
 			}
-			
-			federalism = {
-				can_be_randomly_selected = no
-			}
 
 			integralism  = {
 				can_be_randomly_selected = no 
@@ -156,6 +171,22 @@ ideologies = {
 			}
 			
 			rexism = {
+			}
+
+			fascism_by_name = {
+				can_be_randomly_selected = no 
+			}
+
+			fascistic_militarism = {
+				can_be_randomly_selected = no 
+			}
+
+			totalitarianism = {
+				can_be_randomly_selected = no 
+			}
+
+			totalitarian_monarchism = {
+				can_be_randomly_selected = no 
 			}
 		}
 		
@@ -204,6 +235,10 @@ ideologies = {
 
 			anarchism = {
 				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
+			}
+
+			federalism = {
+				can_be_randomly_selected = no
 			}
 			
 			moderatism = {

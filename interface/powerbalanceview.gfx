@@ -248,8 +248,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/bop/URG_BoP_NACIONALES.png"
 	}
 
-<<<<<<< Updated upstream
-=======
 	spriteType = {
 		name = "GFX_PAR_BoP_military_side"
 		texturefile = "gfx/interface/bop/PAR_BoP_military_side.png"
@@ -276,6 +274,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_PAR_BoP_Obdulio_Barthe"
+		texturefile = "gfx/interface/bop/PAR_BoP_Obdulio_Barthe.png"
+	}
+
+	spriteType = {
 		name = "GFX_PAR_BoP_rafael_franco"
 		texturefile = "gfx/interface/bop/PAR_BoP_rafael_franco.png"
 	}
@@ -290,7 +293,75 @@ spriteTypes = {
 		texturefile = "gfx/interface/bop/PAR_BoP_Luis_Alberto.png"
 	}
 
->>>>>>> Stashed changes
+	spriteType = {
+		name = "GFX_ARG_BoP_Unionists"
+		texturefile = "gfx/interface/bop/ARG_BoP_Unionists.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_BoP_Federalism"
+		texturefile = "gfx/interface/bop/ARG_BoP_Federalism.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_BoP_Socialists"
+		texturefile = "gfx/interface/bop/ARG_BoP_Socialists.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_BoP_Political_Enemies"
+		texturefile = "gfx/interface/bop/ARG_BoP_Political_Enemies.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_BoP_Oligarchs"
+		texturefile = "gfx/interface/bop/ARG_BoP_Oligarchs.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_BoP_Government"
+		texturefile = "gfx/interface/bop/ARG_BoP_Government.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_BoP_Coalition"
+		texturefile = "gfx/interface/bop/ARG_BoP_Coalition.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_BoP_Military"
+		texturefile = "gfx/interface/bop/ARG_BoP_Military.png"
+	}
+
+	## BRAZIL ##
+
+	spriteType = {
+		name = "GFX_BRA_BOP_democracy_side"
+		texturefile = "gfx/interface/bop/BRA_BOP_democracy_side.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_BOP_dictatorship_side"
+		texturefile = "gfx/interface/bop/BRA_BOP_dictatorship_side.png"
+	}
+
+	## VENEZUELA ##
+
+	spriteType = {
+		name = "GFX_VEN_bop_axis_side"
+		texturefile = "gfx/interface/bop/VEN_bop_axis_side.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_bop_allies_side"
+		texturefile = "gfx/interface/bop/VEN_bop_allies_side.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_bop_commie_side"
+		texturefile = "gfx/interface/bop/VEN_bop_commie_side.png"
+	}
+
 	### EUYL ###
 
 	spriteType = {

@@ -1,6 +1,133 @@
 ideas = {
 
 	hidden_ideas = {
+
+		EUYL_south_american_dreadnought_race = {
+			picture = EUYL_south_american_dreadnought_race
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			research_bonus = {
+				naval_equipment = 0.3
+			}
+		}
+		
+		EUYL_focus_on_army = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				ai_badass_factor = 0.1
+				ai_desired_divisions_factor = 0.15
+			}
+		}
+
+		EUYL_chaos = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				ai_badass_factor = 0.5
+				ai_desired_divisions_factor = 0.4
+				ai_focus_aggressive_factor = 0.5
+			}
+		}
+
+		EUYL_chaos_civil_war_help = {
+			allowed = {
+				always = no
+			}
+
+			available = {
+				has_civil_war = yes 
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_remove = {
+				add_ideas = EUYL_chaos_lil_help
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.8
+				army_defence_factor = 0.8
+			}
+		}
+
+		EUYL_chaos_lil_help = {
+			allowed = {
+				always = no
+			}
+
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+
+		EUYL_expansionist_path = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				ai_badass_factor = 0.2
+				ai_desired_divisions_factor = 0.25
+			}
+		}
+
+		PAR_expansionist_path = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				ai_badass_factor = 0.35
+				ai_desired_divisions_factor = 0.4
+			}
+		}
 	
 		league_of_nations_member_idea = { 
 			allowed = {
@@ -104,7 +231,7 @@ ideas = {
 
 	# Special ones that can be applied on other countries through focus system.
 	country = {
-	
+		
 		TO_chose_neutrality = {
 
 			picture = generic_pp_unity_bonus
@@ -146,7 +273,7 @@ ideas = {
 				communism_acceptance = -15
 			}
 		}
-	
+		
 		nationalism = {
 			
 			allowed = {
@@ -991,9 +1118,22 @@ ideas = {
 			}
 
 			picture = generic_production_bonus
+
+			on_remove = {
+				if = {
+					limit = {
+						original_tag = VEN 
+					}
+					set_country_flag = {
+						flag = VEN_temp_buffer_flag 
+						days = 60
+						value = 1
+					}
+				}
+			}
 			
 			modifier = {
-				consumer_goods_factor = 0.2
+				consumer_goods_factor = 0.4
 				local_resources_factor = -0.2
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = -0.2
@@ -1012,9 +1152,22 @@ ideas = {
 			}
 
 			picture = generic_production_bonus
+
+			on_remove = {
+				if = {
+					limit = {
+						original_tag = VEN 
+					}
+					set_country_flag = {
+						flag = VEN_temp_buffer_flag 
+						days = 60
+						value = 1
+					}
+				}
+			}
 			
 			modifier = {
-				consumer_goods_factor = 0.3
+				consumer_goods_factor = 0.6
 				local_resources_factor = -0.3
 				industrial_capacity_factory = -0.3
 				industrial_capacity_dockyard = -0.3
@@ -1033,9 +1186,22 @@ ideas = {
 			}
 
 			picture = generic_production_bonus
+
+			on_remove = {
+				if = {
+					limit = {
+						original_tag = VEN 
+					}
+					set_country_flag = {
+						flag = VEN_temp_buffer_flag 
+						days = 60
+						value = 1
+					}
+				}
+			}
 			
 			modifier = {
-				consumer_goods_factor = 0.5
+				consumer_goods_factor = 0.8
 				local_resources_factor = -0.5
 				industrial_capacity_factory = -0.5
 				industrial_capacity_dockyard = -0.5
@@ -1227,8 +1393,7 @@ ideas = {
 				production_cost_max_ship_hull_carrier = 10750
 			}
 		}
-		
-		
+
 		organization_of_african_unity_member_idea = { 
 			allowed = {
 				always = no
@@ -1265,7 +1430,117 @@ ideas = {
 				war_support_factor = 0.15
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.1
-				weekly_manpower = 928
+				weekly_manpower = 1014
+			}
+		}
+
+		EUYL_generic_repayment = {
+			picture = generic_goods_red_bonus
+
+			allowed = {
+				always = no 
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+
+		EUYL_crippled_army = {
+			picture = ARG_burnt_out_army
+			allowed = { always = no }
+			available = {
+				has_war = yes 
+			}
+
+			allowed_civil_war = {
+				always = no 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.25
+				army_attack_factor = -0.1
+				army_defence_factor = -0.15
+				army_morale_factor = -0.2
+				army_speed_factor = -0.1
+				weekly_manpower = -650
+			}
+		}
+
+		EUYL_defeated_by_PBC = {
+			picture = ARG_burnt_out_army
+			allowed = { always = no } 
+
+			allowed_civil_war = { 
+				always = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				ai_join_ally_desire_factor = -1000
+				ai_get_ally_desire_factor = -1000
+				stability_factor = -0.05
+			}
+		}
+
+		EUYL_rebelling_army = {
+			picture = ARG_burnt_out_army
+			allowed = { always = no }
+
+			available = {
+				has_war = yes 
+			}
+
+			allowed_civil_war = {
+				always = no 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.1
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				army_morale_factor = -0.2
+				army_speed_factor = -0.1
+				weekly_manpower = -650
+			}
+		}
+
+		EUYL_rebelling_army_1 = {
+			name = EUYL_rebelling_army
+			picture = ARG_burnt_out_army
+			allowed = { always = no }
+			
+			available = {
+				has_civil_war = no
+			}
+
+			allowed_civil_war = {
+				always = no 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.1
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				army_morale_factor = -0.2
+				army_speed_factor = -0.1
+				weekly_manpower = -650
 			}
 		}
 		
@@ -1290,15 +1565,12 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.2
 				production_speed_infrastructure_factor = 0.05
 				land_doctrine_cost_factor = -0.2
+				research_speed_factor = 0.08
 			}
 
 			research_bonus = {
 				infantry_weapons = 0.10
 				artillery = 0.10
-			}
-
-			modifier = {
-				research_speed_factor = 0.08
 			}
 		}
 	
@@ -1328,9 +1600,6 @@ ideas = {
 			research_bonus = {
 				infantry_weapons = 0.10
 				artillery = 0.10
-			}
-			
-			research_bonus = {
 				electronics = 0.15
 				industry = 0.15
 			}
@@ -1357,16 +1626,12 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.2
 				production_speed_infrastructure_factor = 0.05
 				naval_doctrine_cost_factor = -0.2
+				production_speed_dockyard_factor = 0.1
+				research_speed_factor = 0.08
 			}
 
 			research_bonus = {
 				naval_equipment = 0.20
-			}
-			
-			modifier = {
-				production_speed_dockyard_factor = 0.1
-
-				research_speed_factor = 0.08
 			}
 		}
 	
@@ -1391,17 +1656,11 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.2
 				production_speed_infrastructure_factor = 0.05
 				naval_doctrine_cost_factor = -0.2
-			}
-
-			research_bonus = {
-				naval_equipment = 0.20
-			}
-
-			modifier = {
 				production_speed_dockyard_factor = 0.1
 			}
 
 			research_bonus = {
+				naval_equipment = 0.20
 				electronics = 0.15
 				industry = 0.15
 			}
@@ -1428,16 +1687,12 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.2
 				production_speed_infrastructure_factor = 0.05
 				air_doctrine_cost_factor = -0.2
+				production_speed_air_base_factor = 0.1
+				research_speed_factor = 0.08
 			}
 
 			research_bonus = {
 				air_equipment = 0.15
-			}
-
-			modifier = {
-				production_speed_air_base_factor = 0.1
-
-				research_speed_factor = 0.08
 			}
 		}
 	
@@ -1462,17 +1717,11 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.2
 				production_speed_infrastructure_factor = 0.05
 				air_doctrine_cost_factor = -0.2
-			}
-
-			research_bonus = {
-				air_equipment = 0.15
-			}
-
-			modifier = {
 				production_speed_air_base_factor = 0.1
 			}
 
 			research_bonus = {
+				air_equipment = 0.15
 				electronics = 0.15
 				industry = 0.15
 			}
@@ -1499,15 +1748,12 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 				production_lack_of_resource_penalty_factor = -0.15
 				land_doctrine_cost_factor = -0.2
+				research_speed_factor = 0.08
 			}
 			
 			research_bonus = {
 				infantry_weapons = 0.10
 				artillery = 0.10
-			}
-
-			modifier = {
-				research_speed_factor = 0.08
 			}
 		}
 	
@@ -1537,9 +1783,6 @@ ideas = {
 			research_bonus = {
 				infantry_weapons = 0.10
 				artillery = 0.10
-			}
-
-			research_bonus = {
 				electronics = 0.15
 				industry = 0.15
 			}
@@ -1566,16 +1809,12 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 				production_lack_of_resource_penalty_factor = -0.15
 				naval_doctrine_cost_factor = -0.2
+				production_speed_dockyard_factor = 0.1
+				research_speed_factor = 0.08
 			}
 
 			research_bonus = {
 				naval_equipment = 0.20
-			}
-
-			modifier = {
-				production_speed_dockyard_factor = 0.1
-
-				research_speed_factor = 0.08
 			}
 		}
 	
@@ -1600,17 +1839,11 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 				production_lack_of_resource_penalty_factor = -0.15
 				naval_doctrine_cost_factor = -0.2
-			}
-
-			research_bonus = {
-				naval_equipment = 0.20
-			}
-
-			modifier = {
 				production_speed_dockyard_factor = 0.1
 			}
 
 			research_bonus = {
+				naval_equipment = 0.20
 				electronics = 0.15
 				industry = 0.15
 			}
@@ -1637,15 +1870,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 				production_lack_of_resource_penalty_factor = -0.15
 				air_doctrine_cost_factor = -0.2
-			}
-
-			research_bonus = {
-				air_equipment = 0.15
-			}
-
-			modifier = {
 				production_speed_air_base_factor = 0.1
-
 				research_speed_factor = 0.08
 			}
 		}
@@ -1671,17 +1896,11 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 				production_lack_of_resource_penalty_factor = -0.15
 				air_doctrine_cost_factor = -0.2
-			}
-
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			modifier = {
 				production_speed_air_base_factor = 0.1
 			}
 
 			research_bonus = {
+				air_equipment = 0.15
 				electronics = 0.15
 				industry = 0.15
 			}
@@ -1703,52 +1922,6 @@ ideas = {
 
 			modifier = {
 				war_support_factor = 0.03
-			}
-		}
-		
-		monroe_doctrine_idea = {
-		
-			picture = monroe_doctrine_picture
-			
-			allowed = {
-				OR = {
-					tag = ARG
-					tag = CHL
-					tag = URG 
-					tag = PAR
-					tag = PRU
-					tag = BOL 
-					tag = BRA 
-					tag = ECU 
-					tag = COL 
-					tag = VEN
-					tag = PAN 
-					tag = COS
-					tag = NIC 
-					tag = HON
-					tag = ELS
-					tag = GUA 
-					tag = CUB
-					tag = HAI
-					tag = DOM
-				}
-			}
-			
-			available = {
-				is_in_faction = no
-			}
-			
-			allowed_civil_war = {
-				always = yes 
-			}
-			
-			
-			removal_cost = -1
-	
-			modifier = {
-				ai_get_ally_desire_factor = -500
-				ai_join_ally_desire_factor = -500
-				join_faction_tension = 0.5
 			}
 		}
 		
@@ -1926,7 +2099,7 @@ ideas = {
 			picture = generic_air_manufacturer_1
 
 			allowed = {
-				NOT = { OR = { tag = ARG tag = PRU tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA original_tag = COL } }
+				NOT = { OR = { tag = ARG tag = PRU tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA original_tag = COL tag = PAR } }
 				NOT = {
 					has_available_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
@@ -2153,7 +2326,7 @@ ideas = {
 			picture = generic_industrial_concern_1
 
 			allowed = {
-				NOT = { OR = { tag = ARG tag = PRU tag = BRA tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = HUN original_tag = COL } }
+				NOT = { OR = { tag = BOL tag = PAR tag = ARG tag = PRU tag = BRA tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = HUN original_tag = COL tag = VEN } }
 				NOT = {
 					has_available_idea_with_traits = { idea = industrial_concern limit = 1 }
 				}
@@ -2204,7 +2377,7 @@ ideas = {
 			picture = generic_electronics_concern_1
 
 			allowed = {
-				NOT = { OR = { tag = ARG tag = PRU tag = BRA tag = GER tag = URG tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA original_tag = COL } }
+				NOT = { OR = { tag = BOL tag = PAR tag = ARG tag = PRU tag = BRA tag = GER tag = URG tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA original_tag = COL tag = VEN } }
 				NOT = {
 					has_available_idea_with_traits = { idea = electronics_concern limit = 1 }
 				}
@@ -2320,7 +2493,7 @@ ideas = {
 			picture = generic_infantry_equipment_manufacturer_2
 
 			allowed = {
-				NOT = { OR = { tag = ARG tag = PRU tag = BRA tag = CHL tag = CHL tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = HUN original_tag = COL } }
+				NOT = { OR = { tag = ARG tag = PRU tag = BRA tag = CHL tag = CHL tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = HUN original_tag = COL tag = PAR } }
 				NOT = {
 					has_available_idea_with_traits = { idea = infantry_equipment_manufacturer limit = 1 }
 				}

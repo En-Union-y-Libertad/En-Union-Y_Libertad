@@ -103,15 +103,8 @@ country_event = {
 		name = uruguay.5.a 
 		add_stability = -0.35
 		add_ideas = URG_violent_protests
-		300 = {
-			set_demilitarized_zone = yes 
-			add_dynamic_modifier = { modifier = URG_terra_loyalities }
-		}
-		986 = {
-			set_demilitarized_zone = yes 
-			add_dynamic_modifier = { modifier = URG_terra_loyalities }
-		}
-		925 = {
+		every_controlled_state = {
+			limit = { is_core_of = ROOT }
 			set_demilitarized_zone = yes 
 			add_dynamic_modifier = { modifier = URG_terra_loyalities }
 		}
@@ -173,7 +166,7 @@ country_event = {
 		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
 		URG_gabriel_terra_c = { 
 			remove_country_leader_role = {
-				ideology = authoritarian_democracy
+				ideology = despotism
 			}
 		}	
 		promote_character = URG_alfredo_baldomir_c
@@ -344,7 +337,7 @@ country_event = {
 	
 	option = {
 		name = uruguay.11.b 
-		ai_chance = { base = 0 }
+		ai_chance = { base = 1 }
 		add_manpower = -72
 		add_equipment_to_stockpile = {
 			type = motorized_equipment
@@ -455,16 +448,16 @@ country_event = {
 		hidden_effect = {
 			ARG = {
 				transfer_state = 511
-				transfer_state = 974
+				transfer_state = 958
 				transfer_state = 973
-				transfer_state = 975
+				transfer_state = 960
 				transfer_state = 976
 				transfer_state = 977
 				transfer_state = 981
 				transfer_state = 508
 				transfer_state = 978
 				transfer_state = 979
-				transfer_state = 980
+				transfer_state = 957
 				transfer_state = 509
 			}
 		}
@@ -478,19 +471,19 @@ country_event = {
 				URG = { has_country_flag = PAR_declared_war }
 			}
 			PAR = {
-				transfer_state = 980
+				transfer_state = 957
 			}
 			URG = {
 				transfer_state = 982
-		        transfer_state = 972
+		        transfer_state = 956
 				transfer_state = 278
-                transfer_state = 966
+                transfer_state = 1021
 				transfer_state = 971
                 transfer_state = 970
                 transfer_state = 512
-                transfer_state = 969
-                transfer_state = 968
-                transfer_state = 967
+                transfer_state = 955
+                transfer_state = 954
+                transfer_state = 953
 				hidden_effect = {
 					clr_country_flag = PAR_declared_war
 				}
@@ -504,15 +497,15 @@ country_event = {
 		else = {
 			URG = {
 				transfer_state = 982
-		        transfer_state = 972
+		        transfer_state = 956
 				transfer_state = 278
-                transfer_state = 966
+                transfer_state = 1021
 				transfer_state = 971
                 transfer_state = 970
                 transfer_state = 512
-                transfer_state = 969
-                transfer_state = 968
-                transfer_state = 967
+                transfer_state = 955
+                transfer_state = 954
+                transfer_state = 953
 				hidden_effect = {
 					clr_country_flag = PAR_declared_war
 				}
@@ -565,9 +558,18 @@ country_event = {
 		has_completed_focus = URG_imprison_Terra
 	} 
 	
-	option = {
+	option = { #Democratic Path
 		name = uruguay.17.a 
-		ai_chance = { base = 67 }
+		ai_chance = { 
+			base = 67 
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = EUYL_URG_ai_behavior 
+					option = URG_COMMUNIST
+				}
+			}
+		}
 		custom_effect_tooltip = URG_extraordinary_elections_tt
 		URG_move_70_nacionales = yes
 		add_war_support = 0.15
@@ -581,9 +583,18 @@ country_event = {
 		}
 	}
 	
-	option = {
+	option = { #Communist path
 		name = uruguay.17.b 
-		ai_chance = { base = 33 }
+		ai_chance = { 
+			base = 33 
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = EUYL_URG_ai_behavior 
+					option = URG_LIBERAL_DEMOCRACY
+				}
+			}
+		}
 		add_popularity = { ideology = communism popularity = 0.25 }
 		add_war_support = 0.15
 		set_politics = {
@@ -609,6 +620,13 @@ country_event = {
 		name = uruguay.18.a 
 		ai_chance = {
 			base = 33
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
 		}
 		clr_country_flag = URG_terra
 		URG_consejo_de_estado_provisorio_c = { 
@@ -976,7 +994,7 @@ country_event = {
 		effect_tooltip = {
 			release_puppet = ARG
 			CHL = {
-				transfer_state = 967
+				transfer_state = 953
 			}
 		}	
 		hidden_effect = {
@@ -984,7 +1002,7 @@ country_event = {
 				release_puppet = ARG
 			}
 			CHL = {
-				transfer_state = 967
+				transfer_state = 953
 			}
 			ARG = {
 				set_cosmetic_tag = ARG_anarchist
@@ -1011,11 +1029,11 @@ country_event = {
     		transfer_troops = no
 		}
 		CHL = {
-			set_state_owner = 968
-			set_state_owner = 969
+			set_state_owner = 954
+			set_state_owner = 955
 			set_state_owner = 512
 			set_state_owner = 970
-			set_state_owner = 967
+			set_state_owner = 953
 		}
 	}	
 }
@@ -1353,30 +1371,14 @@ country_event = { #Nacionales protests erupt into a civil war
 				create_unit = {
 					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
 					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
+					count = 3
 				}
 			}
 			random_owned_controlled_state = {
 				create_unit = {
 					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
 					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
+					count = 3
 				}
 			}
 			random_other_country = {
@@ -1388,30 +1390,14 @@ country_event = { #Nacionales protests erupt into a civil war
 					create_unit = {
 						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
 						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
+						count = 3
 					}
 				}
 				random_owned_controlled_state = {
 					create_unit = {
 						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
 						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
+						count = 3
 					}
 				}
 			}
@@ -1456,30 +1442,14 @@ country_event = { #Colorados protests erupt into a civil war
 				create_unit = {
 					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
 					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
+					count = 3
 				}
 			}
 			random_owned_controlled_state = {
 				create_unit = {
 					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
 					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
+					count = 3
 				}
 			}
 			random_other_country = {
@@ -1491,30 +1461,14 @@ country_event = { #Colorados protests erupt into a civil war
 					create_unit = {
 						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
 						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
+						count = 3
 					}
 				}
 				random_owned_controlled_state = {
 					create_unit = {
 						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
 						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
+						count = 3
 					}
 				}
 			}
