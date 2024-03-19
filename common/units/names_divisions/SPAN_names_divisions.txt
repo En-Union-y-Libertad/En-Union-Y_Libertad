@@ -38,7 +38,11 @@ SPAN_INF_01 =
 {
 	name = "Infantry Division"
 
+<<<<<<< HEAD
 	for_countries = { COS DOM ECU EQG GUA GNC HON MEX MKO NIC PAN PAR PRU URG VEN }
+=======
+	for_countries = { COS DOM ECU EQG GUA HON MEX NIC PAN PAR URG VEN }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 
@@ -80,7 +84,11 @@ SPAN_INFB_01 =
 {
 	name = "Infantry Brigade"
 
+<<<<<<< HEAD
 	for_countries = { COS DOM ECU EQG GUA GNC HON MEX MKO NIC PAN PAR PRU URG VEN }
+=======
+	for_countries = { COS DOM ECU EQG GUA HON MEX NIC PAN PAR URG VEN }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 
@@ -206,7 +214,11 @@ SPAN_CAV_01 =
 {
 	name = "Cavalry Division"
 
+<<<<<<< HEAD
 	for_countries = { ARG BOL CHL COL COS CUB DOM ECU ELS EQG GUA HON MEX NIC PAN PAR PRU URG VEN }
+=======
+	for_countries = { ARG BOL CHL COL COS CUB DOM ECU ELS EQG GUA HON MEX NIC PAN PAR URG VEN }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 
@@ -238,7 +250,11 @@ SPAN_CAVB_01 =
 {
 	name = "Cavalry Brigade"
 
+<<<<<<< HEAD
 	for_countries = { ARG BOL CHL COL COS CUB DOM ECU ELS EQG GUA HON MEX NIC PAN PAR PRU URG VEN }
+=======
+	for_countries = { ARG BOL CHL COL COS CUB DOM ECU ELS EQG GUA HON MEX NIC PAN PAR URG VEN }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 
@@ -302,7 +318,11 @@ SPAN_MOT_02 =
 {
 	name = "Motorized Infantry"
 
+<<<<<<< HEAD
 	for_countries = { ARG COL PRU VEN }
+=======
+	for_countries = { ARG COL VEN }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 
@@ -366,7 +386,11 @@ SPAN_MEC_02 =
 {
 	name = "Mechanized Infantry"
 
+<<<<<<< HEAD
 	for_countries = { ARG COL PRU VEN }
+=======
+	for_countries = { ARG COL VEN }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 
@@ -398,7 +422,11 @@ SPAN_ARM_01 =
 {
 	name = "Armored Division"
 
+<<<<<<< HEAD
 	for_countries = { ARG BOL CHL COL COS CUB DOM ECU ELS EQG GUA HON MEX NIC PAN PAR PRU URG VEN }
+=======
+	for_countries = { ARG BOL CHL COL COS CUB DOM ECU ELS EQG GUA HON MEX NIC PAN PAR URG VEN }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 
@@ -430,7 +458,11 @@ SPAN_PAR_01 =
 {
 	name = "Parachute Division"
 
+<<<<<<< HEAD
 	for_countries = { ARG BOL CHL COL COS DOM ECU ELS EQG GUA HON MEX NIC PAN PAR PRU URG }
+=======
+	for_countries = { ARG BOL CHL COL COS DOM ECU ELS EQG GUA HON MEX NIC PAN PAR URG }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 
@@ -494,7 +526,11 @@ SPAN_MAR_01 =
 {
 	name = "Marine Infantry Division"
 
+<<<<<<< HEAD
 	for_countries = { ARG BOL CHL COL COS CUB DOM ECU ELS EQG GUA HON MEX NIC PAN PAR PRU URG VEN }
+=======
+	for_countries = { ARG BOL CHL COL COS CUB DOM ECU ELS EQG GUA HON MEX NIC PAN PAR URG VEN }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 
@@ -526,7 +562,11 @@ SPAN_MNT_01 =
 {
 	name = "Mountain Division"
 
+<<<<<<< HEAD
 	for_countries = { BOL CHL COS CUB DOM ECU ELS EQG GUA HON MEX NIC PAN PAR PRU URG }
+=======
+	for_countries = { BOL CHL COS CUB DOM ECU ELS EQG GUA HON MEX NIC PAN PAR URG }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 
@@ -590,7 +630,11 @@ SPAN_GAR_01 =
 {
 	name = "Garrison Division"
 
+<<<<<<< HEAD
 	for_countries = { COS DOM ECU EQG GUA GNC HON MEX MKO NIC PAN PAR PRU URG VEN }
+=======
+	for_countries = { COS DOM ECU EQG GUA HON MEX NIC PAN PAR URG VEN }
+>>>>>>> Oscar's-branch
 
 	can_use = { always = yes }
 

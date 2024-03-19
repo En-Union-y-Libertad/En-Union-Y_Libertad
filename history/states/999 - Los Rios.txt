@@ -1,0 +1,42 @@
+
+state={
+<<<<<<< HEAD:history/states/913 - Los Rios.txt
+	id=913
+	name="STATE_913"
+=======
+	id=999
+	name="Bio Bio"
+>>>>>>> Oscar's-branch:history/states/999 - Los Rios.txt
+	resources={
+		steel=6.000
+		oil=1.000
+	}
+
+	history={
+		owner = CHL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = CHL
+		add_core_of = PAT
+		victory_points = {
+<<<<<<< HEAD:history/states/913 - Los Rios.txt
+			12954 10 
+=======
+			12984 3 
+>>>>>>> Oscar's-branch:history/states/999 - Los Rios.txt
+		}
+
+	}
+
+	provinces={
+<<<<<<< HEAD:history/states/913 - Los Rios.txt
+		5169 12954 13734 13735 13736 
+=======
+		8251 12984 13740 13741 
+>>>>>>> Oscar's-branch:history/states/999 - Los Rios.txt
+	}
+	manpower=135146
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -109,7 +109,14 @@ country_event = {
                         }
                     }
                     if = {
+                        limit = {
+                            is_ai = yes
+                        }
+                        add_ideas = EUYL_chaos_civil_war_help
+                    }
+                    if = {
                         limit = { has_completed_focus = BOL_secure_the_guardia_nacional }
+<<<<<<< HEAD
                         840 = {
                             create_unit = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
@@ -123,18 +130,24 @@ country_event = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = ROOT
                             }
+=======
+                        random_owned_controlled_state = {
+>>>>>>> Oscar's-branch
                             create_unit = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = ROOT
+                                count = 1
                             }
                         }
                         random_owned_controlled_state = {
                             create_unit = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = ROOT
+                                count = 2
                             }
                         }
                     }
+<<<<<<< HEAD
                     844 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
@@ -144,9 +157,13 @@ country_event = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
                         }
+=======
+                    every_controlled_state = {
+>>>>>>> Oscar's-branch
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
+                            count = 1
                         }
                         if = {
                             limit = { has_state_flag = BOL_conscripted_militia }
@@ -156,6 +173,7 @@ country_event = {
                             }
                         }
                     }
+<<<<<<< HEAD
                     841 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
@@ -230,6 +248,8 @@ country_event = {
                         }
                     }
 
+=======
+>>>>>>> Oscar's-branch
                     random_other_country = {
                         limit = {
                             original_tag = BOL 
@@ -266,6 +286,7 @@ country_event = {
                                     }
                                 }
                             }
+<<<<<<< HEAD
                             907 = {
                                 create_unit = {
                                     division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
@@ -279,12 +300,17 @@ country_event = {
                                     division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                     owner = PREV
                                 }
+=======
+                            random_owned_controlled_state = {
+>>>>>>> Oscar's-branch
                                 create_unit = {
                                     division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                     owner = PREV
+                                    count = 2
                                 }
                             }
                         }
+<<<<<<< HEAD
                         843 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
@@ -302,11 +328,16 @@ country_event = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
                             }
+=======
+                        every_controlled_state = {
+>>>>>>> Oscar's-branch
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
+                                count = 2
                             }
                         }
+<<<<<<< HEAD
                         843 = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
@@ -395,6 +426,13 @@ country_event = {
                                     division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                     owner = PREV
                                 }
+=======
+                        random_controlled_state = {
+                            create_unit = {
+                                division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+                                owner = PREV
+                                count = 1
+>>>>>>> Oscar's-branch
                             }
                         }
                     }
@@ -407,7 +445,11 @@ country_event = {
                     size = BOL_civil_war_power
                     capital = 302
                     states = {
+<<<<<<< HEAD
                         841 302 907 487 844 842 843
+=======
+                        1003 302 985 487 1008 1004 1007
+>>>>>>> Oscar's-branch
                     }
                 }
                 remove_unit_leader = 44123
@@ -427,6 +469,7 @@ country_event = {
                             #
                         }
                     }
+<<<<<<< HEAD
                     840 = {
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
@@ -440,9 +483,13 @@ country_event = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
                         }
+=======
+                    random_controlled_state = {
+>>>>>>> Oscar's-branch
                         create_unit = {
                             division = "name = \"Milicias del Gobierno\" division_template = \"Milicias del Gobierno\" start_experience_factor = 0.04 start_equipment_factor = 0.9" 
                             owner = ROOT
+                            count = 5
                         }
                     }
                     random_other_country = {
@@ -461,13 +508,14 @@ country_event = {
                             expire = "1965.1.1"
                             ideology = military_socialism
                             traits = {
-                                ARG_inexperienced_leader
+                                ARG_inexperienced_leader_1
                             }
                         }
-                        302 = {
+                        every_controlled_state = {
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
                                 owner = PREV
+<<<<<<< HEAD
                             }
                             create_unit = {
                                 division = "name = \"Milicias del Ejército\" division_template = \"Milicias del Ejército\" start_experience_factor = 0 start_equipment_factor = 1.0" 
@@ -610,6 +658,9 @@ country_event = {
                             create_unit = {
                                 division = "name = \"Guardia Nacional\" division_template = \"Guardia Nacional\" start_experience_factor = 0.2 start_equipment_factor = 1.0" 
                                 owner = PREV
+=======
+                                count = 4
+>>>>>>> Oscar's-branch
                             }
                         }
                     }
@@ -728,9 +779,9 @@ country_event = {
             }
             
             set_variable = { BOL_number_of_states_controlled_by_toro = 1 }
-            set_variable = { BOL_cost_of_taking_out_toro = 70 }
-            set_variable = { BOL_time_it_takes_toro_for_rebellion = 70}
-            set_variable = { BOL_days_to_get_back_state = 50 }
+            set_variable = { BOL_cost_of_taking_out_toro = 50 }
+            set_variable = { BOL_time_it_takes_toro_for_rebellion = 80}
+            set_variable = { BOL_days_to_get_back_state = 35 }
         }
     }
 }
@@ -763,9 +814,29 @@ country_event = {
                 add = 20
                 num_of_civilian_factories > 12
             }
+            modifier = { ## hell naw
+                factor = 0
+                OR = {
+                    has_government = communism
+                    has_government = fascism
+                    has_game_rule = {
+                        rule = EUYL_PAR_ai_behavior 
+                        option = PAR_NATIVE
+                    }
+                }
+            }
+            modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
 		}
 		FROM = {
 			transfer_state = 688
+			transfer_state = 992
+			transfer_state = 993
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -807,6 +878,11 @@ country_event = {
 		}
 		FROM = {
 			country_event = { id = peru.17 hours = 6 }
+            create_wargoal = {
+                target = ROOT 
+                type = take_state_focus
+                generator = { 688 992 993 }
+            }
 		}
 	}
 }
@@ -839,11 +915,23 @@ country_event = {
                 add = 20
                 num_of_civilian_factories > 12
             }
+            modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
 		}
 
         FROM = {
+<<<<<<< HEAD
             transfer_state = 909
             give_resource_rights = { receiver = ROOT state = 844 }
+=======
+            transfer_state = 995
+            give_resource_rights = { receiver = ROOT state = 1008 }
+>>>>>>> Oscar's-branch
             country_event = { id = peru.16 hours = 4 }
         }
     }
@@ -866,6 +954,11 @@ country_event = {
 		}
 		FROM = {
 			country_event = { id = peru.17 hours = 6 }
+            create_wargoal = {
+                target = ROOT 
+                type = take_state_focus
+                generator = { 995 }
+            }
 		}
     }
 }
@@ -898,12 +991,26 @@ country_event = {
                 add = 20
                 num_of_civilian_factories > 12
             }
+            modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
         }
         FROM = {
+<<<<<<< HEAD
             transfer_state = 845
             transfer_state = 884
             transfer_state = 882
             transfer_state = 880
+=======
+            transfer_state = 1009
+            transfer_state = 996
+            transfer_state = 940
+            transfer_state = 980
+>>>>>>> Oscar's-branch
             random_owned_controlled_state = {
                 limit = { industrial_complex > 1 }
                 remove_building = {
@@ -944,6 +1051,11 @@ country_event = {
 		}
 		FROM = {
 			country_event = { id = peru.17 hours = 6 }
+            create_wargoal = {
+                target = ROOT 
+                type = take_state_focus
+                generator = { 1009 996 940 980 }
+            }
 		}
     }
 }
@@ -974,8 +1086,14 @@ country_event = {
             }
         }
         688 = {
-            remove_core_of = BOL 
+            remove_core_of = BOL			
         }
+		992 = {
+			remove_core_of = BOL 
+		}
+		993 = {
+			remove_core_of = BOL
+		}
         give_military_access = FROM
         add_opinion_modifier = { modifier = strengthened_ties target = FROM }
         FROM = {
@@ -989,6 +1107,13 @@ country_event = {
         name = bolivia.7.b 
         ai_chance = {
             base = 20
+            modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
         }
         FROM = {
             country_event = { id = peru.17 hours = 8 }
@@ -1026,4 +1151,102 @@ country_event = {
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+#Chile gets event warning that Bolivia is planning to take over Antofagasta 
+country_event = {
+    id = bolivia.9
+    title = bolivia.9.t 
+    desc = bolivia.9.d 
+    picture = GFX_report_event_generic_army
+
+    is_triggered_only = yes 
+
+    option = {
+        name = bolivia.9.a 
+        unlock_decision_category_tooltip = CHL_countering_bolivias_plan
+    }
+}
+
+# Bolivia has Taken Antofagasta, what should we do? 
+country_event = {
+    id = bolivia.10
+    title = bolivia.10.t 
+    desc = bolivia.10.d 
+
+    is_triggered_only = yes 
+
+    option = {
+        name = bolivia.10.a 
+        ai_chance = {
+            base = 20
+            modifier ={ 
+                factor = 2.5
+                OR = {
+                    has_government = fascism
+                    has_government = communism
+                }
+            }
+            modifier = {
+                factor = 4
+                strength_ratio = {
+					tag = FROM
+					ratio > 1
+				}
+            }
+            modifier = { 
+                factor = 0
+                has_civil_war = yes #if for some reason they have a civil war 
+            }
+            modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
+        }
+        create_wargoal = {
+			type = take_state_focus
+			generator = { 995 }
+			target = FROM
+		}
+        hidden_effect = {
+            add_ai_strategy = { ## to motivate the AI to declare war on FROM
+                type = declare_war
+                id = FROM
+                value = 100
+            }
+        }
+    }
+
+    option = {
+        name = bolivia.10.b 
+        ai_chance = {
+            base = 30
+            modifier = {
+                factor = 10
+                strength_ratio = {
+					tag = FROM
+					ratio < 1
+				}
+            }
+            modifier = {
+                factor = 2
+                has_government = democratic
+            }
+            modifier = {
+                factor = 0
+                has_completed_focus = CHL_our_own_fate ## Anarchists aint letting this shi slide
+            }
+            modifier = {
+                factor = 4
+                has_war = yes 
+            }
+        }
+        add_war_support = -0.01
+    }
+}
+>>>>>>> Oscar's-branch
         

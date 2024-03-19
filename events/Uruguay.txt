@@ -103,6 +103,7 @@ country_event = {
 		name = uruguay.5.a 
 		add_stability = -0.35
 		add_ideas = URG_violent_protests
+<<<<<<< HEAD
 		300 = {
 			set_demilitarized_zone = yes 
 			add_dynamic_modifier = { modifier = URG_terra_loyalities }
@@ -112,6 +113,10 @@ country_event = {
 			add_dynamic_modifier = { modifier = URG_terra_loyalities }
 		}
 		847 = {
+=======
+		every_controlled_state = {
+			limit = { is_core_of = ROOT }
+>>>>>>> Oscar's-branch
 			set_demilitarized_zone = yes 
 			add_dynamic_modifier = { modifier = URG_terra_loyalities }
 		}
@@ -173,7 +178,7 @@ country_event = {
 		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
 		URG_gabriel_terra_c = { 
 			remove_country_leader_role = {
-				ideology = authoritarian_democracy
+				ideology = despotism
 			}
 		}	
 		promote_character = URG_alfredo_baldomir_c
@@ -344,7 +349,7 @@ country_event = {
 	
 	option = {
 		name = uruguay.11.b 
-		ai_chance = { base = 0 }
+		ai_chance = { base = 1 }
 		add_manpower = -72
 		add_equipment_to_stockpile = {
 			type = motorized_equipment
@@ -455,6 +460,7 @@ country_event = {
 		hidden_effect = {
 			ARG = {
 				transfer_state = 511
+<<<<<<< HEAD
 				transfer_state = 896
 				transfer_state = 895
 				transfer_state = 897
@@ -465,6 +471,18 @@ country_event = {
 				transfer_state = 900
 				transfer_state = 901
 				transfer_state = 902
+=======
+				transfer_state = 958
+				transfer_state = 973
+				transfer_state = 960
+				transfer_state = 976
+				transfer_state = 977
+				transfer_state = 981
+				transfer_state = 508
+				transfer_state = 978
+				transfer_state = 979
+				transfer_state = 957
+>>>>>>> Oscar's-branch
 				transfer_state = 509
 			}
 		}
@@ -478,6 +496,7 @@ country_event = {
 				URG = { has_country_flag = PAR_declared_war }
 			}
 			PAR = {
+<<<<<<< HEAD
 				transfer_state = 902
 			}
 			URG = {
@@ -491,6 +510,21 @@ country_event = {
                 transfer_state = 891
                 transfer_state = 890
                 transfer_state = 889
+=======
+				transfer_state = 957
+			}
+			URG = {
+				transfer_state = 982
+		        transfer_state = 956
+				transfer_state = 278
+                transfer_state = 1021
+				transfer_state = 971
+                transfer_state = 970
+                transfer_state = 512
+                transfer_state = 955
+                transfer_state = 954
+                transfer_state = 953
+>>>>>>> Oscar's-branch
 				hidden_effect = {
 					clr_country_flag = PAR_declared_war
 				}
@@ -503,6 +537,7 @@ country_event = {
 		}
 		else = {
 			URG = {
+<<<<<<< HEAD
 				transfer_state = 904
 		        transfer_state = 894
 				transfer_state = 278
@@ -513,6 +548,18 @@ country_event = {
                 transfer_state = 891
                 transfer_state = 890
                 transfer_state = 889
+=======
+				transfer_state = 982
+		        transfer_state = 956
+				transfer_state = 278
+                transfer_state = 1021
+				transfer_state = 971
+                transfer_state = 970
+                transfer_state = 512
+                transfer_state = 955
+                transfer_state = 954
+                transfer_state = 953
+>>>>>>> Oscar's-branch
 				hidden_effect = {
 					clr_country_flag = PAR_declared_war
 				}
@@ -558,8 +605,9 @@ country_event = {
 	
 	is_triggered_only = yes 
 	
-	option = {
+	option = { #Democratic Path
 		name = uruguay.17.a 
+<<<<<<< HEAD
 		ai_chance = { base = 67 }
 		URG_consejo_de_estado_provisorio_c = { 
 			remove_country_leader_role = {
@@ -577,6 +625,20 @@ country_event = {
 				}
 			promote_leader = yes
 		}
+=======
+		ai_chance = { 
+			base = 67 
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = EUYL_URG_ai_behavior 
+					option = URG_COMMUNIST
+				}
+			}
+		}
+		custom_effect_tooltip = URG_extraordinary_elections_tt
+		URG_move_70_nacionales = yes
+>>>>>>> Oscar's-branch
 		add_war_support = 0.15
 		complete_national_focus = URG_the_will_of_the_people
 		show_effect_tooltip = URG_extraordinary_elections_tt
@@ -589,9 +651,18 @@ country_event = {
 		}
 	}
 	
-	option = {
+	option = { #Communist path
 		name = uruguay.17.b 
-		ai_chance = { base = 33 }
+		ai_chance = { 
+			base = 33 
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = EUYL_URG_ai_behavior 
+					option = URG_LIBERAL_DEMOCRACY
+				}
+			}
+		}
 		add_popularity = { ideology = communism popularity = 0.25 }
 		add_war_support = 0.15
 		set_politics = {
@@ -616,6 +687,13 @@ country_event = {
 		name = uruguay.18.a 
 		ai_chance = {
 			base = 33
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = EUYL_chaos_mode
+					option = YES
+				}
+			}
 		}
 		clr_country_flag = URG_terra
 		remove_dynamic_modifier = { modifier = URG_the_terra_dictatorship }
@@ -972,10 +1050,37 @@ country_event = {
 	option = {
 		name = uruguay.26.b 
 
+<<<<<<< HEAD
 		release_puppet = ARG
 		hidden_effect = {
 			ARG = {
 				set_cosmetic_tag = ARG_anarchist
+=======
+country_event = { 
+	id = uruguay.27
+	title = uruguay.27.t 
+	desc = {
+		text = uruguay.27.d 
+	}
+	picture = GFX_report_event_generic_parliament 
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = uruguay.27.a 
+		effect_tooltip = {
+			release_puppet = ARG
+			CHL = {
+				transfer_state = 953
+			}
+		}	
+		hidden_effect = {
+			URG = {	
+				release_puppet = ARG
+			}
+			CHL = {
+				transfer_state = 953
+>>>>>>> Oscar's-branch
 			}
 			ARG = {
 				set_cosmetic_tag = ARG_anarchist
@@ -1099,11 +1204,19 @@ country_event = {
     		transfer_troops = no
 		}
 		CHL = {
+<<<<<<< HEAD
 			set_state_owner = 890
 			set_state_owner = 891
 			set_state_owner = 512
 			set_state_owner = 892
 			set_state_owner = 889
+=======
+			set_state_owner = 954
+			set_state_owner = 955
+			set_state_owner = 512
+			set_state_owner = 970
+			set_state_owner = 953
+>>>>>>> Oscar's-branch
 		}
 	}	
 }
@@ -1415,5 +1528,139 @@ country_event = {
 	
 	option = {
 		name = uruguay.31.a
+<<<<<<< HEAD
 	}
 }		 
+=======
+		hidden_effect = {
+			URG_move_70_nacionales = yes 
+			division_template = { 
+				name = "Milicias" 
+				division_names_group = SPAN_INF_02 
+				is_locked = yes 
+				regiments = { 
+					infantry = { x = 0 y = 0 }  
+					infantry = { x = 0 y = 1 } 
+					infantry = { x = 0 y = 2 } 
+				}
+			}
+			remove_ideas = {
+				URG_blancos_in_opposition0
+				URG_blancos_in_opposition1
+				URG_blancos_in_opposition2
+			}
+		}
+		start_civil_war = {
+			ideology = democratic 
+			size = 0.4
+		}
+		hidden_effect = {
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
+					owner = ROOT
+					count = 3
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
+					owner = ROOT
+					count = 3
+				}
+			}
+			random_other_country = {
+				limit = {
+					original_tag = URG 
+					has_government = democratic
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
+						owner = PREV
+						count = 3
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Milicias Nacionales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
+						owner = PREV
+						count = 3
+					}
+				}
+			}
+		}
+	}
+}	
+
+country_event = { #Colorados protests erupt into a civil war
+	id = uruguay.32
+	title = uruguay.32.t
+	desc = uruguay.32.d
+	picture = GFX_report_event_generic_rally_3
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = uruguay.32.a
+		hidden_effect = {
+			URG_move_70_colorado = yes
+			division_template = { 
+				name = "Milicias" 
+				division_names_group = SPAN_INF_02 
+				is_locked = yes 
+				regiments = { 
+					infantry = { x = 0 y = 0 }  
+					infantry = { x = 0 y = 1 } 
+					infantry = { x = 0 y = 2 } 
+				}
+			}
+			remove_ideas = {
+				URG_colorados_in_opposition0
+				URG_colorados_in_opposition1
+				URG_colorados_in_opposition2
+			}
+		}
+		start_civil_war = {
+			ideology = neutrality 
+			size = 0.4
+		}
+		hidden_effect = {
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
+					owner = ROOT
+					count = 3
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"Milicias Leales\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
+					owner = ROOT
+					count = 3
+				}
+			}
+			random_other_country = {
+				limit = {
+					original_tag = URG 
+					has_government = democratic
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
+						owner = PREV
+						count = 3
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"Milicias Coloradas\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
+						owner = PREV
+						count = 3
+					}
+				}
+			}
+		}
+	}
+}
+>>>>>>> Oscar's-branch

@@ -1,4 +1,5 @@
 ﻿l_spanish:
+<<<<<<< HEAD
  ARG_northern:0 "Comenzarás la guerra civil con las provincias de §YLa Rioja, San Juan, Catamarca, Tucumán, Salta, Jujuy, Chaco, Formosa, Corrientes, Santiago del Estero, Misiones, Entre Ríos, Santa Fe y Córdoba!§ !. \n"
  ARG_gainsupport:0 "Comenzarás la guerra civil con §G3 más regimientos de milicias§W que los Unitarios. \n"
  ARG_workers_support:0 "Tus regimientos de milicia estarán §G30% mejor equipadas§W que los regimientos de los Unitarios. \n"
@@ -20,6 +21,29 @@
  ARG_removecommunismfromcontinent:0 "Obtendrá §Ywargoals§W en cada nación §Ycommunist§W en el continente."
  ARG_asked_for_control_over_the_southern_atlantic:0 "§RI si le ha pedido a Gran Bretaña el control del Atlántico Sur y ellos aceptaron: §W"
  ARG_rivadavia:0 "§Y2 Acorazados clase Rivadavia§W se colocarán en la cola de producción §G70% §W y §G55% §W completos respectivamente".
+=======
+ ARG_northern:0 "Comenzarás la guerra civil con las provincias de §YLa Rioja, San Juan, Catamarca, Tucumán, Salta, Jujuy, Corrientes, Santiago del Estero, Misiones, Entre Ríos, Santa Fe y Córdoba!§ !. \n"
+ ARG_gainsupport:0 "Comenzarás la guerra civil con §G3 más regimientos de milicias§! que los Unitarios. \n"
+ ARG_workers_support:0 "Tus regimientos de milicia estarán §G30% mejor equipadas§! que los regimientos de los Unitarios. \n"
+ ARG_Military_support:0 "Desbloquea decisiones que le permitirán §G aumentar temporalmente su velocidad, organización, ataque o defensa§! durante la guerra civil. \n"
+ ARG_high_command:0 "Obtendrás §G2 generales fascistas§! al comienzo de la guerra. \n"
+ ARG_civilwar:0 "Serás lanzado a una §Rguerra civil§!, sin embargo, también desbloquearás decisiones que §GTe permitirán comprar armas extranjeras de potencias fascistas§! durante la guerra civil. \n"
+ ARG_uruguay_influence:0 "Se establecerá un §Ygobierno fascista colaboracionista§! en Uruguay. \n"
+ ARG_greaterconfederation:0 "La §YConfederación Argentina§! ahora se conocerá como la §YGran Confederación Argentina§!. \n"
+ ARG_demand_territory:0 "Cuanto §Ymás mano de obra§! tiene en el campo, §Gmayor es la probabilidad§! tiene del país de destino §Gcediendo§! ese territorio. \n"
+ ARG_invper:0 "[PRU.GetFlag] §Y[PRU.GetName]§! obtendrá una §Yinvitación§! a nuestra facción".
+ ARG_invven:0 "[VEN.GetFlag] §Y[VEN.GetName]§! obtendrá una §Yinvitación§! a nuestra facción".
+ ARG_invitedominican:0 "[DOM.GetFlag] §Y[DOM.GetName]§! obtendrá una §Yinvitación§! a nuestra facción".
+ ARG_invitesalvador:0 "[ELS.GetFlag] §Y[ELS.GetName]§! obtendrá una §Yinvites§! a nuestra facción".
+ ARG_invchile:0 "[CHL.GetFlag] §Y[CHL.GetName]§! obtendrá una §Yinvitación§! a nuestra facción".
+ ARG_invcol:0 "[COL.GetFlag] §Y[COL.GetName]§! obtendrá una §Yinvitación§! para nuestra facción".
+ ARG_invurg:0 "[URG.GetFlag] §Y[URG.GetName]§! obtendrá una §Yinvitación§! a nuestra facción".
+ ARG_invecu:0 "[ECU.GetFlag] §Y[ECU.GetName]§! obtendrá una §Yinvitación§! a nuestra facción".
+ ARG_removefascismfromcontinent:0 "Obtendrás §Yjustificaciones de guerra§! contra cada nación §Yfascista§! en el continente."
+ ARG_removecommunismfromcontinent:0 "Obtendrá §Yjustificaciones de guerra§! contra cada nación §Ycommunista§! en el continente."
+ ARG_asked_for_control_over_the_southern_atlantic:0 "§RI si le ha pedido a Gran Bretaña el control del Atlántico Sur y ellos aceptaron:§!\n"
+ ARG_rivadavia:0 "§Y2 Acorazados clase Rivadavia§! se colocarán en la cola de producción §G70%§! y §G55%§! completos respectivamente".
+>>>>>>> Oscar's-branch
  ARG_rapidlymobilize:0 "§RA la gente no le gustará que el gobierno se movilice rápidamente.§!"
  ARG_infamous:0 "Si desea §Ycontinuar por este camino§W, debe §Ycompletar§W este enfoque §Yantes de las elecciones de 1937§W".
  ARG_createmountaineers:0 "Crea §Y3§W divisiones de montañeros con §Y7§W batallones montañeros "
@@ -116,6 +140,7 @@
  PRU_stabilized_army_navy:0 "\n   El §YEjército§! y la §YArmada§! no estan en un estado de §Rrivalidad§!"
 
 
+<<<<<<< HEAD
  EFFECT_LIST_OTHERS:0 "$LIST$ y $NUMBER|Y$ otros"
  EFFECT_LIST_COUNTRY:1 "@$TAG$$COUNTRY|UH$"
  EFFECT_TRANSFER_STATE:0 "Se convierte en dueño y controlador de $STATE|Y$."
@@ -425,3 +450,5 @@
  CUSTOM_EFFECT_CREATE_FAKE_ARMIES:0 "Se crearán unidades de inteligencia falsa para engañar al enemigo."
  CUSTOM_EFFECT_CREATE_FAKE_ARMIES_RESULT:0 "Se han creado [?num_to_create|.0H] unidades de inteligencia falsa para engañar al enemigo."
  EFFECT_ADD_CIVIL_WAR_TARGET:0 "Considerar a $COUNTRY$ el instigador de la guerra civil"
+=======
+>>>>>>> Oscar's-branch

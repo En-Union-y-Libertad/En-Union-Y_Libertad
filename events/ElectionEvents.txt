@@ -34,13 +34,33 @@ country_event = {
 				date < 1949.1.1
 			} 
 			AND = { 
+				has_dlc = "Arms Against Tyranny"
+				tag = DEN 
+				power_balance_value = { #BoP is on the Warfare Side
+					id = DEN_balance_of_power
+					value > 0
+				}
+			} 
+			AND = { 
 				tag = PAN
 				date < 1937.1.1
 			} 
-                        AND = { 
+            AND = { 
 				tag = COS
 				date < 1937.1.1
 			} 
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = CHL 
+				original_tag = URG 
+				original_tag = PRU
+				original_tag = BOL 
+				original_tag = VEN 
+				original_tag = ECU
+			}
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
@@ -97,13 +117,33 @@ country_event = {
 				date < 1949.1.1
 			} 
 			AND = { 
+				has_dlc = "Arms Against Tyranny"
+				tag = DEN 
+				power_balance_value = { #BoP is on the Welfare Side
+					id = DEN_balance_of_power
+					value < 0
+				}
+			}
+			AND = { 
 				tag = PAN
 				date < 1937.1.1
 			} 
-                        AND = { 
+            AND = { 
 				tag = COS
 				date < 1937.1.1
 			} 
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = CHL 
+				original_tag = URG 
+				original_tag = PRU
+				original_tag = BOL 
+				original_tag = VEN 
+				original_tag = ECU
+			}
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
@@ -179,11 +219,17 @@ country_event = {
 				tag = USA 
 				date < 1949.1.1
 			} 
+			AND = {
+				has_dlc = "Arms Against Tyranny"
+				tag = DEN
+				is_subject = yes
+				var:DEN.DEN_overlord_nation = { has_government = fascism }
+			}
 			AND = { 
 				tag = PAN
 				date < 1937.1.1
 			} 
-                        AND = { 
+            AND = { 
 				tag = COS
 				date < 1937.1.1
 			} 
@@ -191,7 +237,20 @@ country_event = {
 				tag = GRE 
 				#has_dlc = "Battle for the Bosporus"
 			} 
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = CHL 
+				original_tag = URG 
+				original_tag = PRU
+				original_tag = BOL 
+				original_tag = VEN 
+				original_tag = ECU
+			}
 		}
+		NOR_AAT = no
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		NOT = { has_idea = fascism_defeated }
@@ -251,6 +310,12 @@ country_event = {
 				tag = USA 
 				date < 1949.1.1
 			} 
+			AND = {
+				has_dlc = "Arms Against Tyranny"
+				tag = DEN
+				is_subject = yes
+				var:DEN.DEN_overlord_nation = { has_government = communism }
+			}
 			AND = { 
 				tag = PAN
 				date < 1937.1.1
@@ -262,8 +327,21 @@ country_event = {
 			AND = { 
 				tag = GRE 
 				#has_dlc = "Battle for the Bosporus"
+			}
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = CHL 
+				original_tag = URG 
+				original_tag = PRU
+				original_tag = BOL 
+				original_tag = VEN 
+				original_tag = ECU
 			} 
 		}
+		NOR_AAT = no 
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		NOT = { has_idea = communism_defeated }
@@ -349,7 +427,7 @@ country_event = {
 				tag = PAN
 				date < 1937.1.1
 			} 
-                        AND = { 
+            AND = { 
 				tag = COS
 				date < 1937.1.1
 			} 
@@ -357,6 +435,18 @@ country_event = {
 				tag = GRE 
 				#has_dlc = "Battle for the Bosporus"
 			} 
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = CHL 
+				original_tag = URG 
+				original_tag = PRU
+				original_tag = BOL 
+				original_tag = VEN 
+				original_tag = ECU
+			}
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
@@ -367,6 +457,16 @@ country_event = {
 	
 	option = {
 		name = election.6.a
+		trigger = {
+			NOT = {
+				AND = {
+					has_dlc = "Arms Against Tyranny"
+					tag = DEN
+					is_subject = yes
+					var:DEN.DEN_overlord_nation = { has_government = fascism }
+				}
+			}
+		}
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -383,6 +483,16 @@ country_event = {
 
 	option = {
 		name = election.6.b
+		trigger = {
+			NOT = {
+				AND = {
+					has_dlc = "Arms Against Tyranny"
+					tag = DEN
+					is_subject = yes
+					var:DEN.DEN_overlord_nation = { has_government = fascism }
+				}
+			}
+		}
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -435,7 +545,7 @@ country_event = {
 				tag = PAN
 				date < 1937.1.1
 			} 
-                        AND = { 
+            AND = { 
 				tag = COS
 				date < 1937.1.1
 			} 
@@ -443,7 +553,20 @@ country_event = {
 				tag = GRE 
 				#has_dlc = "Battle for the Bosporus"
 			} 
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = CHL 
+				original_tag = URG 
+				original_tag = PRU
+				original_tag = BOL 
+				original_tag = VEN 
+				original_tag = ECU
+			}
 		}
+		NOR_AAT = no
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		has_country_flag = coalition_with_fascists
@@ -528,7 +651,20 @@ country_event = {
 				tag = GRE 
 				#has_dlc = "Battle for the Bosporus"
 			} 
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = CHL 
+				original_tag = URG 
+				original_tag = PRU
+				original_tag = BOL 
+				original_tag = VEN 
+				original_tag = ECU
+			}
 		}
+		NOR_AAT = no
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		has_country_flag = coalition_with_communists
@@ -597,7 +733,16 @@ country_event = {
 	trigger = {
 		has_government = democratic
 		fascism > 0.5
-		is_puppet = no
+		OR = {
+			is_puppet = no
+			AND = {
+				has_dlc = "Arms Against Tyranny"
+				tag = DEN
+				is_subject = yes
+				var:DEN.DEN_overlord_nation = { has_government = fascism }
+			}
+		}
+		NOR_AAT = no
 		NOT = {
 			AND = {
 				original_tag = SPR
@@ -610,6 +755,20 @@ country_event = {
 			AND = {
 				original_tag = TUR
 				has_dlc = "Battle for the Bosporus"
+			}
+		}
+		NOT = {
+			OR = {
+				original_tag = ARG 
+				original_tag = CHL 
+				original_tag = BOL 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = VEN 
+				original_tag = ECU 
+				original_tag = PAR 
+				original_tag = URG
+				original_tag = PRU
 			}
 		}
 	}
@@ -650,7 +809,16 @@ country_event = {
 
 		has_government = democratic
 		communism > 0.5
-		is_puppet = no
+		OR = {
+			is_puppet = no
+			AND = {
+				has_dlc = "Arms Against Tyranny"
+				tag = DEN
+				is_subject = yes
+				var:DEN.DEN_overlord_nation = { has_government = communism }
+			}
+		}
+		NOR_AAT = no
 		NOT = {
 			AND = {
 				original_tag = GRE
@@ -659,6 +827,20 @@ country_event = {
 			AND = {
 				original_tag = TUR
 				has_dlc = "Battle for the Bosporus"
+			}
+		}
+		NOT = {
+			OR = {
+				original_tag = ARG 
+				original_tag = CHL 
+				original_tag = BOL 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = VEN 
+				original_tag = ECU 
+				original_tag = PAR 
+				original_tag = URG
+				original_tag = PRU
 			}
 		}
 	}
@@ -824,10 +1006,22 @@ country_event = {
 				tag = PAN
 				date < 1937.1.1
 			} 
-                        AND = { 
+            AND = { 
 				tag = COS
 				date < 1937.1.1
 			} 
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = CHL 
+				original_tag = URG 
+				original_tag = PRU
+				original_tag = BOL 
+				original_tag = VEN 
+				original_tag = ECU
+			}
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
@@ -893,10 +1087,22 @@ country_event = {
 				tag = PAN
 				date < 1937.1.1
 			} 
-                        AND = { 
+            AND = { 
 				tag = COS
 				date < 1937.1.1
 			} 
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = CHL 
+				original_tag = URG 
+				original_tag = PRU
+				original_tag = BOL 
+				original_tag = VEN 
+				original_tag = ECU
+			}
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = fascism
@@ -923,6 +1129,18 @@ country_event = {
 			AND = { 
 				tag = USA 
 				date < 1949.1.1
+			}
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR 
+				original_tag = BRA 
+				original_tag = COL 
+				original_tag = CHL 
+				original_tag = URG 
+				original_tag = PRU
+				original_tag = BOL 
+				original_tag = VEN 
+				original_tag = ECU
 			}
 		}
 		OR = { NOT = { original_tag = SPR } NOT = { date < 1937.1.1 } }

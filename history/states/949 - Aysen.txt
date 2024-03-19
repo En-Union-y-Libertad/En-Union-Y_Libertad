@@ -1,0 +1,29 @@
+
+state={
+	id=949
+	name="STATE_949"
+
+	history={
+		owner = CHL
+		add_core_of = CHL
+		add_core_of = PAT
+		buildings = {
+
+		}
+		victory_points = {
+			2161 3 
+		}
+
+	}
+
+	provinces={
+<<<<<<< HEAD:history/states/912 - Aisén.txt
+		5159 8198 10961 13652 13661 13666 13669 13670 13674 13675 
+=======
+		2161 5159 8198 10961 13295 13652 13661 13666 13669 13670 13674 13675 13681 
+>>>>>>> Oscar's-branch:history/states/949 - Aysen.txt
+	}
+	manpower=16324
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

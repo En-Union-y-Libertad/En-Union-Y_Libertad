@@ -407,6 +407,13 @@ news_event = {
 				has_war_with = CHL 
 			}
 		}
+		if = { ## Unlocks Second War of Pacific Focuses
+			limit = { original_tag = PRU }
+			custom_effect_tooltip = CHL_unlock_second_war_of_pacific_focuses
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
 	}
 
 	option = {
@@ -535,7 +542,6 @@ news_event = {
 
 	major = yes
 	is_triggered_only = yes
-	fire_only_once = yes 
 
 	option = {
 		name = news.346.a 
@@ -623,7 +629,6 @@ news_event = {
 
 	major = yes
 	is_triggered_only = yes
-	fire_only_once = yes 
 
 	option = {
 		name = news.347.a 
@@ -714,8 +719,13 @@ news_event = {
 	major = yes
 	
 	trigger = {
+<<<<<<< HEAD
 		888 = { is_controlled_by = URG }
 		888 = { is_owned_by = ARG }
+=======
+		1021 = { is_controlled_by = URG }
+		1021 = { is_owned_by = ARG }
+>>>>>>> Oscar's-branch
 		ARG = { 
 			has_war_with = URG 
 			has_civil_war = no
@@ -897,15 +907,19 @@ news_event = {
 
 #Fall of Buenos Aires (Generic)
 news_event = {
-	id = news.350
-	title = news.350.t
-	desc = news.350.d
+	id = news.750
+	title = news.750.t
+	desc = news.750.d
 	picture = GFX_news_event_soldiers_marching
 	
 	major = yes
 	
 	trigger = {
+<<<<<<< HEAD
 		888 = { 
+=======
+		1021 = { 
+>>>>>>> Oscar's-branch
 			is_owned_by = ARG 
 			NOT = {
 				is_controlled_by = ARG 
@@ -933,21 +947,29 @@ news_event = {
 	}
 	
 	option = {
-		name = news.350.a
+		name = news.750.a
 		trigger = {
 			NOT = {
 				OR = {
 					original_tag = ARG 
+<<<<<<< HEAD
 					controls_state = 888
+=======
+					controls_state = 1021
+>>>>>>> Oscar's-branch
 				}
 			}
 		}
 	}
 	option = {
-		name = news.350.b
+		name = news.750.b
 		trigger = { 
 			has_war_with = ARG 
+<<<<<<< HEAD
 			controls_state = 888
+=======
+			controls_state = 1021
+>>>>>>> Oscar's-branch
 		}
 	}
 	option = {
@@ -1076,7 +1098,11 @@ news_event = {
 	major = yes
 	
 	trigger = {
+<<<<<<< HEAD
 		847 = { 
+=======
+		1011 = { 
+>>>>>>> Oscar's-branch
 			is_owned_by = URG 
 			NOT = {
 				is_controlled_by = URG 
@@ -1103,7 +1129,11 @@ news_event = {
 			NOT = {
 				OR = {
 					original_tag = URG 
+<<<<<<< HEAD
 					controls_state = 847
+=======
+					controls_state = 1011
+>>>>>>> Oscar's-branch
 				}
 			}
 		}
@@ -1112,7 +1142,11 @@ news_event = {
 		name = news.353.b
 		trigger = { 
 			has_war_with = URG 
+<<<<<<< HEAD
 			controls_state = 847
+=======
+			controls_state = 1011
+>>>>>>> Oscar's-branch
 		}
 	}
 	option = {
@@ -1241,7 +1275,7 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		301 = { 
+		991 = { ## had it as 301 for the longest time lmaooo
 			is_owned_by = PAR 
 			NOT = {
 				is_controlled_by = PAR 
@@ -1406,7 +1440,11 @@ news_event = {
 	major = yes
 	
 	trigger = {
+<<<<<<< HEAD
 		863 = { 
+=======
+		1027 = { 
+>>>>>>> Oscar's-branch
 			is_owned_by = VEN 
 			NOT = {
 				is_controlled_by = VEN 
@@ -1433,7 +1471,11 @@ news_event = {
 			NOT = {
 				OR = {
 					original_tag = VEN 
+<<<<<<< HEAD
 					controls_state = 863
+=======
+					controls_state = 1027
+>>>>>>> Oscar's-branch
 				}
 			}
 		}
@@ -1442,11 +1484,394 @@ news_event = {
 		name = news.359.b
 		trigger = { 
 			has_war_with = VEN 
+<<<<<<< HEAD
 			controls_state = 863
+=======
+			controls_state = 1027
+>>>>>>> Oscar's-branch
 		}
 	}
 	option = {
 		name = news.348.c
 		trigger = { TAG = VEN }
 	}
+<<<<<<< HEAD
+=======
+}
+
+#Bolivian Civil War 
+news_event = {
+	id = news.bolivia 
+	title = news.bolivia.t 
+	desc = news.bolivia.d 
+	picture = GFX_news_event_generic_riot
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.bolivia.a 
+		trigger = { 
+			original_tag = BOL 
+		}
+	}
+
+	option = {
+		name = news.bolivia.b 
+		trigger = {
+			NOT = {
+				original_tag = BOL 
+			}
+		}
+	}
+}
+
+#Integralist Uprising 
+news_event = {
+	id = news.361
+	title = news.361.t 
+	desc = news.361.d 
+	picture = GFX_news_event_integralist_uprising
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.361.a 
+		trigger = {
+			original_tag = BRA 
+			has_government = fascism
+		}
+	}
+
+	option = {
+		name = news.361.b 
+		trigger = {
+			original_tag = BRA 
+			NOT = { has_government = fascism }
+		}
+	}
+
+	option = {
+		name = news.361.c 
+		trigger = {
+			NOT = { original_tag = BRA }
+		}
+	}
+}
+
+#Paulista Uprising 
+news_event = {
+	id = news.362
+	title = news.362.t 
+	desc = news.362.d 
+	picture = GFX_news_event_paulista_uprising
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.362.a 
+		trigger = {
+			original_tag = SAO 
+		}
+	}
+
+	option = {
+		name = news.362.b 
+		trigger = {
+			original_tag = BRA 
+		}
+	}
+
+	option = {
+		name = news.362.c 
+		trigger = {
+			NOT = {
+				original_tag = BRA 
+			}
+		}
+	}
+}
+
+#Communist Uprising in Brazil 
+news_event = {
+	id = news.363
+	title = news.363.t 
+	desc = news.363.d 
+	picture = GFX_news_event_communist_uprising
+
+	major = yes 
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = {
+		name = news.363.a 
+		trigger = {
+			NOT = {
+				OR = {
+					tag = BRC 
+					original_tag = BRA 
+				}
+			}
+		}
+	}
+
+	option = {
+		name = news.363.b 
+		trigger = {
+			original_tag = BRA 
+			NOT = {
+				tag = BRC 
+			}
+		}
+	}
+
+	option = {
+		name = news.363.c 
+		trigger = {
+			tag = BRC 
+		}
+	}
+}
+
+#Democratic insurrection in Brazil 
+news_event = {
+	id = news.364
+	title = news.364.t
+	desc = news.364.d 
+	picture = GFX_news_event_democratic_uprising
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.364.a 
+		trigger = {
+			NOT = {
+				OR = {
+					tag = BUS 
+					original_tag = BRA 
+				}
+			}
+		}
+	}
+
+	option = {
+		name = news.364.b 
+		trigger = {
+			original_tag = BRA 
+			NOT = {
+				tag = BUS 
+			}
+		}
+	}
+
+	option = {
+		name = news.364.c 
+		trigger = {
+			tag = BUS 
+		}
+	}
+}
+
+#Imperial Uprising in Brazil 
+news_event = {
+	id = news.365
+	title = news.365.t
+	desc = news.365.d 
+	picture = GFX_news_imperial_uprising
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.365.a 
+		trigger = {
+			NOT = {
+				OR = {
+					tag = BZE 
+					original_tag = BRA 
+					original_tag = POR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = news.365.b 
+		trigger = {
+			original_tag = BRA 
+			NOT = {
+				tag = BZE 
+			}
+		}
+	}
+
+	option = {
+		name = news.365.c 
+		trigger = {
+			tag = BZE 
+		}
+	}
+
+	option = {
+		name = news.365.e 
+		trigger = {
+			original_tag = POR
+		}
+	}
+}
+
+#Portugal Intervenes in the Brazilian Civil War 
+news_event = {
+	id = news.366
+	title = news.366.t 
+	desc = news.366.d 
+	picture = GFX_news_event_soldiers_marching
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.366.a 
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = BRA
+					tag = BZE 
+					original_tag = POR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = news.366.b 
+		trigger = {
+			original_tag = BRA 
+			NOT = {
+				OR = {
+					tag = BZE 
+					original_tag = POR 
+				}
+			}
+		}
+	}
+
+	option = {
+		name = news.366.c 
+		trigger = {
+			OR = {
+				tag = BZE 
+				original_tag = POR 
+			}
+		}
+	}
+}
+
+#Paraguay joins the second cisplatine war 
+news_event = {
+	id = news.367
+	title = news.367.t 
+	desc = news.367.d 
+	picture = GFX_news_event_soldiers_marching
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.367.a 
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = BRA
+					original_tag = ARG 
+					original_tag = PAR
+				}
+			}
+		}
+	}
+
+	option = {
+		name = news.367.b 
+		trigger = {
+			original_tag = BRA 
+		}
+	}
+
+	option = {
+		name = news.367.c 
+		trigger = {
+			OR = {
+				original_tag = ARG 
+				original_tag = PAR
+			}
+		}
+	}
+}
+
+#Papal State Declared in Argentina
+news_event = {
+	id = news.368
+	title = news.368.t 
+	desc = news.368.d 
+	picture = GFX_news_event_generic_parliament
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.368.a 
+		trigger = {
+			NOT = { original_tag = ARG }
+		}
+	}
+
+	option = {
+		name = news.368.b 
+		trigger = {
+			original_tag = ARG 
+		}
+	}
+}
+
+#Paraguayan War of Vengeance
+news_event = {
+	id = news.369
+	title = news.369.t
+	desc = news.369.d 
+	picture = GFX_news_event_PAR_war
+
+	major = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = news.369.a 
+		trigger = {
+			original_tag = PAR
+		}
+		PAR = { mark_focus_tree_layout_dirty = yes }
+	}
+
+	option = {
+		name = news.369.b 
+		trigger = {
+			NOT = { original_tag = PAR }
+			has_war_with = PAR
+		}
+	}
+
+	option = {
+		name = news.369.c 
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = PAR 
+					has_war_with = PAR
+				}
+			}
+		}
+	}
+>>>>>>> Oscar's-branch
 }

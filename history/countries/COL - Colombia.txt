@@ -1,6 +1,6 @@
 ﻿capital = 306
 
-recruit_character = COL_alfonso_lópez_pumarejo
+recruit_character = EUYL_COL_alfonso_lópez_pumarejo
 recruit_character = COL_eliseo_arango_ramos
 recruit_character = COL_alfredo_azuero_arenas
 recruit_character = COL_laureano_gómez
@@ -13,15 +13,15 @@ recruit_character = COL_miguel_j_neira
 recruit_character = COL_agustín_morales_olaya
 recruit_character = COL_aureliano_castro_romero
 recruit_character = COL_rufino_franco
-recruit_character = COL_luis_bernardo_andrade
-recruit_character = COL_luis_rodriguez
+recruit_character = EUYL_COL_luis_bernardo_andrade
+recruit_character = EUYL_COL_luis_rodriguez
 recruit_character = COL_rafael_navas_pardo
 recruit_character = COL_plinio_mendoza_neira
-recruit_character = COL_guillermo_padilla_manrique
+recruit_character = EUYL_COL_guillermo_padilla_manrique
 recruit_character = COL_salvador_tiaga_gonzalez_2
 recruit_character = COL_juan_de_la_cruz_posada
-recruit_character = COL_salvador_tiaga_gonzalez
-recruit_character = COL_querista_sellor
+recruit_character = EUYL_COL_salvador_tiaga_gonzalez
+recruit_character = EUYL_COL_querista_sellor
 recruit_character = COL_miguel_neira
 recruit_character = COL_ismael_perdomo_borrero
 recruit_character = COL_luis_bernardo_andrade_2
@@ -34,22 +34,27 @@ recruit_character = COL_deogracias_fonseca_espinosa
 recruit_character = COL_maria_cano
 recruit_character = COL_mariano_roldan_uribe
 recruit_character = COL_roberto_urdaneta_arbelaez
-recruit_character = COL_enrico_diaz_carias
+recruit_character = EUYL_COL_enrico_diaz_carias
 recruit_character = COL_gabriel_echevarria_misas
 recruit_character = COL_carlos_echeverri_cortes
 recruit_character = COL_ralph_douglas_binney
 recruit_character = COL_alvarez
 recruit_character = COL_luis_cano_villegas
 recruit_character = COL_jorge_hernandez_de_brigard
-recruit_character = COL_gabriel_paris_gordillo
+recruit_character = EUYL_COL_gabriel_paris_gordillo
 recruit_character = COL_jorge_eliecer_gaitan
 recruit_character = COL_pedro_estrada_gonzalez
 recruit_character = COL_laureano_gomez
 recruit_character = COL_tulio_enrique_tascon
-recruit_character = COL_camilo_daza_alvarez
-recruit_character = COL_manuel_quinones
-recruit_character = COL_ruben_piedrahita_arango
+recruit_character = EUYL_COL_camilo_daza_alvarez
+recruit_character = EUYL_COL_manuel_quinones
+recruit_character = EUYL_COL_ruben_piedrahita_arango
 recruit_character = COL_efrain_rojas_acevedo
+
+promote_character = EUYL_COL_alfonso_lópez_pumarejo
+
+486 = { add_dynamic_modifier = { modifier = EUYL_native_population } }
+1015 = { add_dynamic_modifier = { modifier = EUYL_native_population } }
 
 oob = "COL_1936"
 if = {
@@ -61,13 +66,17 @@ if = {
 }
 
 add_ideas = {
-	monroe_doctrine_idea
 	COL_political_violence_6
 	COL_politicised_army
 	COL_oposicion
 	COL_gaitan
 	COL_economia_1
 	COL_heridas
+<<<<<<< HEAD
+=======
+	extensive_conscription
+	EUYL_focus_on_army
+>>>>>>> Oscar's-branch
 }
 
 set_country_flag = monroe_doctrine
@@ -227,50 +236,6 @@ set_popularities = {
 	neutrality = 43
 	fascism = 5
 	communism = 7
-}
-
-create_country_leader = {
-	name = "Alfonso López Pumarejo"
-	desc = "POLITICS_ALFONSO_LOPEZ_PUMAREJO_DESC"
-	picture = "GFX_Portrait_columbia_alfonso_lopez"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Laureano Gómez"
-	desc = "POLITICS_LAUREANO_GOMEZ_DESC"
-	picture = "gfx/leaders/COL/Portrait_Laureano_Gomez.dds"
-	expire = "1965.1.1"
-	ideology = oligarchism
-	traits = {
-		conservative_grandee
-	}
-}
-
-create_country_leader = {
-	name = "Eutiquio Timoté"
-	desc = "POLITICS_EUTIQUIO_TIMOTE_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Eliseo Arango Ramos"
-	desc = "POLITICS_ELISEO_ARANGO_RAMOS_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
 }
 
 1939.1.1 = {
@@ -439,6 +404,21 @@ create_navy_leader = {
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Ship Variants ###
+}
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "P-6" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
 }
 if = {
 	limit = { has_dlc = "Man the Guns" }

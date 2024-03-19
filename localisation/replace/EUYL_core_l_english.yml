@@ -1726,4 +1726,9 @@
  MENU_DISCORD:0 "Official Discord Server for En Unión y Libertad"
  MENU_PATREON:0 "My Patreon, any donation is greatly appreciated!"
  MENU_TWITCH:0 "My Twitch, I do streams every now and then"
+<<<<<<< HEAD
 
+=======
+ MENU_SURVEY:0 "Player Feedback survey to rate the focus trees and overall countries. Your opinion is very important to me as it allows me to improve the mod even further for your enjoyment! Thank you and have a wonderful day!"
+ 
+>>>>>>> Oscar's-branch

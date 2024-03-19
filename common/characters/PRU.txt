@@ -1,14 +1,40 @@
 characters={
+	PRU_carlos_pio_habsburgo_borbon = {
+		name = "Carlos pio Hasburgo Borbon"
+		portraits={
+			civilian={
+				large="gfx/leaders/PRU/portrait_PRU_carlos_pio.png"
+			}
+		}
+	}
+	PRU_federico_more_barrionuevo = {
+		name = "Federico More Barrionuevo"
+		portraits = {
+			army = {
+				small = "GFX_idea_PRU_federico_more_barrionuevo_pic"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRU_federico_more_barrionuevo_idea
+			allowed  = {
+				original_tag  = PRU
+			}
+			cost = 115
+			available = {
+				NOT = {
+					has_completed_focus = PRU_social_democratic_peru
+				}
+			}
+			traits  = {
+				editor 
+			}
+		}
+	}
 	PRU_Oscar_benavides={
 		name="Óscar Benavides"
 		portraits={
 			civilian={
-				large="GFX_Portrait_peru_oscar_benavides"
-			}
-			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/PRU/portrait_per_oscar_benavides.dds"
 			}
 		}
@@ -55,21 +81,48 @@ characters={
 			id=-1
 		}
 	}
-	PRU_apu_panchau={
-		name="Apu-punchau"
+	PRU_luis_antonio_eguiguren_escudero = {
+		name = "Luis Antonio Eguiguren Escudero"
 		portraits={
 			civilian={
-				large="gfx/leaders/PRU/INC_sun_god_portrait.dds"
+				large="gfx/leaders/PRU/eguiguren.png"
+			}
+			army = {
+				small = "GFX_idea_PRU_eguiguren_icon"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRU_luis_antonio_eguiguren_escudero_idea
+			allowed  = {
+				original_tag  = PRU
+			}
+			cost = 75
+			available = {
+				NOT = { 
+					OR = {
+						has_government = fascism
+						has_completed_focus = PRU_delay_democracy
+					}
+				}
+				NOT = {
+					ROOT = { 
+						has_country_leader = {
+							character = PRU_luis_antonio_eguiguren_escudero
+							ruling_only = yes 
+						}
+					}
+				}
+			}
+			traits  = {
+				PAR_mayor 
 			}
 		}
 		country_leader={
-			desc = "POLITICS_SUN_GOD_DESC"
-			expire = "1965.1.1"
-			ideology = theocracy
-			traits = {
-				PRU_godly_being
-				PRU_not_a_real_person
-			}
+			desc="POLITICS_EGUIGUREN_DESC"
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 	PRU_josé_luis_bustamante_y_rivero={
@@ -95,11 +148,108 @@ characters={
 			}
 		}
 		country_leader={
-			desc="POLITICS_OSCAR_BENAVIDES_DESC"
+			desc="POLITICS_LUIS_FLORES_DESC"
 			ideology=fascism_ideology
 			expire="1965.1.1.1"
 			id=-1
 			traits = { CHL_military_leader }
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=3
+			visible = {
+				has_government = fascism
+			}
+		}
+	}
+	PRU_carlos_miro_quesada = {
+		name = "Carlos Miro Quesada" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRU/r56_portrait_PRU_Carlos_Miro_Quesada.png"
+			}
+			army = {
+				small = "GFX_idea_PRU_carlos_miro_icon"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRU_carlos_miro_quesada_idea
+			allowed  = {
+				original_tag  = PRU
+			}
+			cost = 100
+			available = {
+				OR = {
+					has_completed_focus = PRU_the_kingdom_of_peru
+					has_completed_focus = PRU_proclaim_peruvian_empire
+				}
+			}
+			traits = {
+				rearmament_proponent 
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=3
+		}
+	}
+
+	PRU_ernesto_montagne_markholz = {
+		name = "Ernesto Montagne Markholz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRU/montagne.png"
+			}
+			army = {
+				small = "GFX_idea_PRU_montagne_icon"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRU_ernesto_montagne_markholz_idea
+			allowed  = {
+				original_tag  = PRU
+			}
+			available = {
+				NOT = { 
+					has_government = democratic
+				}
+				NOT = {
+					ROOT = { 
+						has_country_leader = {
+							character = PRU_ernesto_montagne_markholz
+							ruling_only = yes 
+						}
+					}
+				}
+			}
+			traits  = {
+				nationalist_symbol 
+			}
+		}
+		country_leader={
+			desc="POLITICS_ERNESTO_DESC"
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+			traits = { PRU_compassionate_leader }
+		}
+		corps_commander={
+			traits={ trait_PRU_urrista old_guard }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=3
 		}
 	}
 	
@@ -122,16 +272,39 @@ characters={
 		name="Eloy Ureta Montehermoso"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_PRU_eloy_urreta_icon"
 			}
 			army={
 				large="gfx/leaders/PRU/PRU_eloy_ureta.dds"
 			}
 			
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRU_eloy_ureta_montehermoso_idea
+			allowed  = {
+				original_tag  = PRU
+			}
+			available = {
+				NOT = { 
+					has_government = democratic
+				}
+				NOT = {
+					ROOT = { 
+						has_country_leader = {
+							character = PRU_eloy_ureta_montehermoso_leader
+							ruling_only = yes 
+						}
+					}
+				}
+			}
+			traits  = {
+				fascist_corporatist 
+			}
+		}
 		
 		field_marshal={
-			traits={ offensive_doctrine }
+			traits={ trait_PRU_urrista offensive_doctrine }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -140,17 +313,117 @@ characters={
 			legacy_id=-1
 		}
 	}
+	PRU_haya_de_la_torre = {
+		name = "Haya de la Torre"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PRU/haya_de_la_torre.png"
+			}
+			army = {
+				small = "GFX_idea_PRU_haya_de_la_torre_icon"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_HAYA_TORRE_DESC"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+				PRU_visionary
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = PRU_haya_de_la_torre_idea
+			allowed  = {
+				original_tag  = PRU
+			}
+			available = {
+				NOT = { 
+					OR = {
+						has_government = fascism
+						has_completed_focus = PRU_delay_democracy
+					}
+				}
+				NOT = {
+					ROOT = { 
+						has_country_leader = {
+							character = PRU_haya_de_la_torre
+							ruling_only = yes 
+						}
+					}
+				}
+			}
+			traits  = {
+				SWI_social_democrat 
+			}
+		}
+	}
+	PRU_eudocio_ravines={
+		advisor={
+			slot = political_advisor
+			idea_token = PRU_eudocio_ravines_idea
+			allowed  = {
+				original_tag  = PRU
+			}
+			available = {
+				has_government = communism
+				NOT = {
+					ROOT = { 
+						has_country_leader = {
+							character = PRU_eudocio_ravines
+							ruling_only = yes 
+						}
+					}
+				}
+			}
+			traits  = {
+				PAR_revolutionary_writer 
+			}
+		}
+		name="Eudocio Ravines"
+		country_leader = {
+			desc = "POLITICS_EUDOCIO_RAVINES_DESC"
+			ideology = stalinism
+			expire = "1965.1.1"
+			traits = {
+				#
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_PRU_eudocio_r"
+			}
+			civilian = {
+				large = "gfx/leaders/PRU/portrait_PRU_eudocio_ravines.png"
+			}
+		}
+	}
 	PRU_miguel_monteza_tafur={
 		name="Miguel Monteza Tafur"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_south_america_generic_land_5.dds"
+				small="GFX_idea_PRU_monteza_icon"
 			}
 			army={
-				large="gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+				large="gfx/leaders/PRU/monteza tafur.png"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = PRU_miguel_monteza_tafur_idea
+			ledger = army
+			allowed = {
+				original_tag = PRU
+			}
+			
+			traits = {
+				military_theorist
 			}
 		}
 		field_marshal={
+			traits = { armor_officer }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -160,10 +433,10 @@ characters={
 		}
 	}
 	PRU_carlos_Miro={
-		name="Carlos Miro Quesada"
+		name="Manuel Ramirez"
 		portraits={
 			army={
-				large="gfx/leaders/PRU/Portrait_Peru_Carlos_Miro_Quesada.png"
+				large="gfx/leaders/PRU/sicca.png"
 			}
 		}
 		corps_commander={
@@ -206,7 +479,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard }
+			traits={ old_guard jungle_rat }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -226,6 +499,7 @@ characters={
 			}
 		}
 		corps_commander={
+			traits = { trait_PRU_urrista }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -235,17 +509,66 @@ characters={
 		}
 	}
 	PRU_luis_vinatea_almonte={
-		name="Luis Vinatea Almonte"
+		name="Felix Huaman"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_south_america_generic_land_2.dds"
 			}
 			army={
-				large="gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+				large="gfx/leaders/PRU/Felix.png"
 			}
 		}
 		corps_commander={
 			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	PRU_maximo_pimentel = {
+		name = "Maximo Pimentel Obregon"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRU/Maximo_Pimentel_Obregon.png"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	PRU_carlos_minano_mendocilla = {
+		name = "Carlos Miñano Mendocilla"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRU/PRU_carlos_minano.png"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	PRU_victor_rodriguez_zumaran = {
+		name = "Víctor Rodríguez Zumarán"
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRU/PRU_victor_rodriguez.png"
+			}
+		}
+		corps_commander={
+			traits = { jungle_rat }
+			skill=1
 			attack_skill=2
 			defense_skill=1
 			planning_skill=1
@@ -289,7 +612,7 @@ characters={
 				small="gfx/interface/ideas/idea_south_america_generic_navy_1.dds"
 			}
 			army={
-				large="gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
+				large="gfx/leaders/PRU/Roque.png"
 			}
 		}
 		navy_leader={
@@ -302,11 +625,45 @@ characters={
 			legacy_id=-1
 		}
 	}
+	PRU_carlos_rotalde={
+		name="Carlos Rotalde"
+		portraits={
+			army={
+				large="gfx/leaders/PRU/carlos_rotalde.png"
+			}
+		}
+		navy_leader={
+			traits={ }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	PRU_mariano_melgar={
+		name="Mariano H. Melgar Conde"
+		portraits={
+			army={
+				large="gfx/leaders/PRU/mariano_melgar_conde.png"
+			}
+		}
+		navy_leader={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
 	PRU_Cesar_Atahualpa={
 		name="Cesar Atahualpa"
 		portraits={
 			army={
-				large="gfx/leaders/PRU/Portrait_PRU_Cesar_Atahualpa.png"
+				large="gfx/leaders/PRU/Cusi_Huallpa.png"
 			}
 		}
 		corps_commander = {
@@ -314,8 +671,26 @@ characters={
 			skill=3
 			attack_skill=3
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id=-1
+			visible = { has_completed_focus = PRU_our_war_of_independence }
+		}
+	}
+	PRU_Wayna_Qhapaq={
+		name="Wayna Qhapaq"
+		portraits={
+			army={
+				large="gfx/leaders/PRU/Wayna_Qhapaq.png"
+			}
+		}
+		corps_commander = {
+			traits={  }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill = 2
+			logistics_skill = 1
 			legacy_id=-1
 			visible = { has_completed_focus = PRU_our_war_of_independence }
 		}
@@ -372,8 +747,8 @@ characters={
 			skill=2
 			attack_skill=1
 			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=1
+			planning_skill = 1
+			logistics_skill = 2
 			legacy_id=-1
 		}
 	}
@@ -388,8 +763,8 @@ characters={
 			skill=1
 			attack_skill=1
 			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
+			planning_skill = 1
+			logistics_skill = 1
 			legacy_id=-1
 		}
 	}
@@ -401,7 +776,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=peronist
+			ideology=peronism
 			expire="1943.1.1.12"
 			id=-1
 		}
@@ -435,10 +810,70 @@ characters={
 		corps_commander = {
 			traits={ trait_mountaineer } 
 			skill=4
-			attack_skill=3
-			defense_skill=4
-			maneuvering_skill=2
-			coordination_skill=1
+			attack_skill=2
+			defense_skill=3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id=-1
+			visible = { has_completed_focus = PRU_our_war_of_independence }
+		}
+	}
+
+	PRU_Mateo_Sahuaraural = {
+		name = "Mateo Sahuaraura"
+		portraits = {
+			army={
+				large="gfx/leaders/PRU/mateo.png"
+			}
+		}
+		
+		corps_commander = {
+			traits={ } 
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id=-1
+			visible = { has_completed_focus = PRU_our_war_of_independence }
+		}
+	}
+
+	PRU_Justo_Pumacahua = {
+		name = "Justo Pumacahua"
+		portraits = {
+			army={
+				large="gfx/leaders/PRU/mamani.png"
+			}
+		}
+		
+		corps_commander = {
+			traits={ trait_mountaineer } 
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id=-1
+			visible = { has_completed_focus = PRU_our_war_of_independence }
+		}
+	}
+
+	PRU_Amadeo_Quispe = {
+		name = "Amadeo Quispe"
+		portraits = {
+			army={
+				large="gfx/leaders/PRU/Mariano_quispe.png"
+			}
+		}
+		
+		corps_commander = {
+			traits={ trait_mountaineer } 
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill = 1
+			logistics_skill = 1
 			legacy_id=-1
 			visible = { has_completed_focus = PRU_our_war_of_independence }
 		}
@@ -548,27 +983,6 @@ characters={
 			}
 		}
 	}
-	PRU_eudocio_ravines={
-		advisor={
-			slot = political_advisor
-			idea_token = PRU_eudocio_ravines
-			allowed  = {
-				original_tag  = PRU
-			}
-			available = {
-				has_government = communism
-			}
-			traits  = {
-				communist_revolutionary 
-			}
-		}
-		name="Eudocio Ravines"
-		portraits={
-			army={
-				small="GFX_idea_PRU_eudocio_r"
-			}
-		}
-	}
 	PRU_felipe_tudela={
 		advisor={
 			slot = navy_chief
@@ -653,17 +1067,17 @@ characters={
 	}
 	PRU_luis_ramirez_ortiz={
 		advisor={
-			slot = theorist
-			idea_token = PRU_luis_ramirez_ortiz
+			slot = high_command
+			idea_token = PRU_luis_navarrete
 			ledger  = army 
 				allowed  = {
 					original_tag  = PRU
 				}
-				research_bonus  = {
-					land_doctrine  = 0.100
-				}
 				traits  = {
-					military_theorist 
+					army_regrouping_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
 				}
 		}
 		name="PRU_luis_ramirez_ortiz"
@@ -941,5 +1355,14 @@ characters={
 				small="GFX_idea_generic_air_south_america_1"
 			}
 		}
+	}
+	PRU_apu_panchau={
+		name="Apu-punchau"
+		portraits={
+			civilian={
+				large="gfx/leaders/PRU/INC_sun_god_portrait.dds"
+			}
+		}
+		
 	}
 }

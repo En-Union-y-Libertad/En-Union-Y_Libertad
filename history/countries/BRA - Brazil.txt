@@ -1,8 +1,188 @@
 ﻿capital = 500
+<<<<<<< HEAD
 add_ideas = monroe_doctrine_idea
 
 oob = "BRA_1936"
 
+=======
+
+every_core_state = {
+	ROOT = {
+		add_to_array = { cores_at_game_start = PREV }
+	}
+}
+
+for_each_scope_loop = {
+    array = core_states
+    
+    set_state_flag = brazilian_starting_state
+}
+
+oob = "BRA_1936"
+
+### EUYL ###
+recruit_character = BRA_armando_sales
+recruit_character = EUYL_BRA_eurico_gaspar_dutra
+recruit_character = EUYL_BRA_mascarenhas_de_morais
+recruit_character = EUYL_BRA_augusto_rademaker
+recruit_character = EUYL_BRA_getulio_vargas
+recruit_character = EUYL_BRA_plinio_salgado
+recruit_character = EUYL_BRA_luis_carlos_prestes
+recruit_character = BRA_gastão_labatut
+recruit_character = EUYL_BRA_agliberto_vieira
+recruit_character = EUYL_BRA_eduardo_gomes
+recruit_character = EUYL_BRA_epaminondas_dos_santos
+recruit_character = EUYL_BRA_ismael_motta_paes
+recruit_character = EUYL_BRA_afranio_de_mello_franco
+recruit_character = EUYL_BRA_salgado_filho
+recruit_character = EUYL_BRA_floriano_peixoto
+recruit_character = EUYL_BRA_aristides_guilhem
+recruit_character = BRA_joao_neves_da_fontoura
+recruit_character = EUYL_BRA_moreira_lima
+recruit_character = EUYL_BRA_nero_fiuza_de_castro
+recruit_character = EUYL_BRA_artur_da_costa_e_silva
+recruit_character = EUYL_BRA_jorge_martins
+recruit_character = EUYL_BRA_washington_luis_pereira
+recruit_character = EUYL_BRA_osvaldo_aranha
+recruit_character = EUYL_BRA_newton_cavalcanti
+recruit_character = EUYL_BRA_gustavo_barroso
+recruit_character = BRA_antonio_alves_camara
+recruit_character = BRA_moyses_chahon
+recruit_character = BRA_congresso_do_brasil
+recruit_character = BRA_ewert_arthur
+recruit_character = BRA_benedito_valadares
+recruit_character = BRA_santiago_daltas
+recruit_character = BRA_mascarenhas_de_morais_advisor
+recruit_character = BRA_francisco_morato
+recruit_character = BRA_fabio_de_sa_earp
+recruit_character = BRA_dom_pedro_iii
+recruit_character = EUYL_BRA_filinto_muller
+recruit_character = BRA_juscelino_kubitschek
+recruit_character = BRA_joao_cafe_filho
+recruit_character = BRA_rui_moreira_lima
+recruit_character = BRA_armed_civilians
+recruit_character = BRA_juarez_tavora
+recruit_character = BRA_olimpio_mourao_filho
+recruit_character = BRA_bertoldo_klinger
+recruit_character = BRA_carlos_marighella
+recruit_character = BRA_samuel_kicis
+recruit_character = BRA_ernesto_geisel
+recruit_character = BRA_sylvio_frota
+recruit_character = BRA_joao_figueiredo
+recruit_character = BRA_amaro_soares_bittencourt
+recruit_character = BRA_golbery_do_couto_e_silva
+recruit_character = BRA_emilio_garratzu
+recruit_character = BRA_adalberto_pereira_do_santos
+recruit_character = BRA_aurelio_de_lira_traves
+recruit_character = EUYL_BRA_jose_americo_de_almeida
+recruit_character = BRA_basil_do_santos
+recruit_character = BRA_joao_mangabeira
+recruit_character = BRA_anti_submarine_naval_council
+recruit_character = BRA_logistics_naval_council
+recruit_character = BRA_close_air_support_aviation_council
+recruit_character = BRA_naval_strike_aviation_council
+recruit_character = BRA_concealment_military_council
+recruit_character = BRA_army_regrouping_military_council
+recruit_character = BRA_infantry_military_council
+recruit_character = BRA_anti_submarine_naval_imperial_council
+recruit_character = BRA_logistics_naval_imperial_council
+recruit_character = BRA_close_air_support_aviation_imperial_council
+recruit_character = BRA_naval_strike_aviation_imperial_council
+recruit_character = BRA_concealment_military_imperial_council
+recruit_character = BRA_army_regrouping_military_imperial_council
+recruit_character = BRA_infantry_military_imperial_council
+recruit_character = BRA_pedro_gastao_orleans
+recruit_character = EUYL_BRA_arlindo_veiga_dos_santos
+recruit_character = BRA_empress_maria_elisabeth
+recruit_character = EUYL_BRA_pedro_alcantrara
+### EUYL ###
+
+### DLC ### 
+IF = {
+	limit = {
+		has_dlc = "Trial of Allegiance"
+	}
+	#Political
+	recruit_character = BRA_armando_de_sales_oliveira
+	recruit_character = BRA_domingos_bras
+	recruit_character = BRA_jose_linhares
+	recruit_character = BRA_benedito_valadres
+	recruit_character = BRA_alfred_agache
+	recruit_character = BRA_joao_neves_da_fortuna
+	recruit_character = BRA_joao_marques_de_reis
+	recruit_character = BRA_francisco_campos
+	recruit_character = BRA_filinto_muller
+	recruit_character = BRA_indigenous_council
+	recruit_character = BRA_lindolfo_collor
+	recruit_character = BRA_jose_americo_de_almeida
+	recruit_character = BRA_anisio_teixeira
+	recruit_character = BRA_integralist_militia_general
+	recruit_character = BRA_pedro_henrique
+	recruit_character = BRA_pedro_de_alcantara
+	recruit_character = BRA_alianca_nacional_libertadora_council
+	recruit_character = BRA_minervino_de_oliveira
+	recruit_character = BRA_olga_benario_prestes
+	recruit_character = BRA_apolonio_de_carvalho
+	recruit_character = BRA_war_industrialist
+	recruit_character = BRA_captain_of_industry
+	recruit_character = BRA_leoncio_basbaum
+	recruit_character = BRA_geremia_lunarelli
+	recruit_character = BRA_henry_ford
+	recruit_character = BRA_gustavo_barroso
+	recruit_character = BRA_miguel_reale
+	recruit_character = BRA_oliveria_viana
+	#Army
+	recruit_character = BRA_augusto_fragoso
+	recruit_character = BRA_alvaro_de_castro
+	recruit_character = BRA_gois_monterio
+	recruit_character = BRA_euclides_zenobio_da_costa
+	recruit_character = BRA_jose_pessoa_cavalcanti_de_albuquerque
+	recruit_character = BRA_henrique_teixeira_lott
+	recruit_character = BRA_pereira_de_oliveira
+	recruit_character = BRA_eduardo_guedes
+	recruit_character = BRA_cristovao_de_castro
+	recruit_character = BRA_milton_de_freitas
+	recruit_character = BRA_candido_mariano
+	recruit_character = BRA_olympio_falconiere_da_cunha
+	recruit_character = BRA_floriano_de_lima_brayner
+	#Navy
+	recruit_character = BRA_henrique_aristides_guilhem
+	recruit_character = BRA_silvio_de_noronha
+	recruit_character = BRA_protogenes_guimaraes
+	recruit_character = BRA_renato_de_almeida_guillobel
+	recruit_character = BRA_alvaro_alberto_da_motta_e_silva
+	#Cangaco
+	recruit_character = BRA_lampiao
+}
+recruit_character = BRA_getulio_vargas
+recruit_character = BRA_plinio_salgado
+recruit_character = BRA_luis_carlos_prestes
+#recruit_character = BRA_armando_sales
+recruit_character = BRA_eurico_gaspar_dutra
+recruit_character = BRA_mascarenhas_de_morais
+recruit_character = BRA_augusto_rademaker
+recruit_character = BRA_agliberto_vieira
+recruit_character = BRA_eduardo_gomes
+recruit_character = BRA_salgado_filho
+recruit_character = BRA_floriano_peixoto
+recruit_character = BRA_aristides_guilhem
+#recruit_character = BRA_joao_neves_da_fontoura
+recruit_character = BRA_epaminondas_dos_santos
+recruit_character = BRA_moreira_lima
+recruit_character = BRA_nero_fiuza_de_castro
+recruit_character = BRA_artur_da_costa_e_silva
+recruit_character = BRA_ismael_motta_paes
+recruit_character = BRA_jorge_martins
+recruit_character = BRA_newton_cavalcanti
+recruit_character = BRA_afranio_de_mello_franco
+recruit_character = BRA_washington_luis_pereira
+recruit_character = BRA_osvaldo_aranha
+recruit_character = BRA_arlindo_veiga_dos_santos
+recruit_character = BRA_random_army_chief
+### DLC ###
+
+
+>>>>>>> Oscar's-branch
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -11,9 +191,56 @@ set_technology = {
 	gw_artillery = 1
 	interwar_antiair = 1
 	gwtank = 1
+<<<<<<< HEAD
 	early_fighter = 1
 	CAS1 = 1
 	basic_train = 1	
+=======
+	basic_train = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "BRA_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			early_bombs = 1
+			iw_medium_airframe = 1
+		}
+	else = {
+		set_air_oob = "BRA_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+>>>>>>> Oscar's-branch
+}
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "F4B" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Avro 504" #
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
 }
 if = {
 	limit = {
@@ -73,6 +300,19 @@ recruit_character = BRA_washington_luis_pereira
 recruit_character = BRA_osvaldo_aranha
 recruit_character = BRA_arlindo_veiga_dos_santos
 
+<<<<<<< HEAD
+=======
+set_popularities = {
+	neutrality = 42
+	democratic = 24
+	fascism = 29
+	communism = 5
+
+}
+
+
+set_convoys = 40
+>>>>>>> Oscar's-branch
 
 1939.1.1 = {
 
