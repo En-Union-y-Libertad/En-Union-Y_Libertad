@@ -1,16 +1,12 @@
 state={
-<<<<<<<< HEAD:history/states/857-Manabi.txt
 	id=857
 	name="STATE_857"
-========
-	id=972
-	name="Manabi"
->>>>>>>> Oscar's-branch:history/states/972-Manabi.txt
 	history={
 		owner = ECU
 		buildings = {
 			infrastructure = 4
 			arms_factory = 1
+			industrial_complex = 2
 		}
 		victory_points = {
 			5051 10

@@ -1,12 +1,7 @@
 
 state={
-<<<<<<<< HEAD:history/states/876-Piaui.txt
 	id=876
 	name="STATE_876"
-========
-	id=937
-	name="STATE_937"
->>>>>>>> Oscar's-branch:history/states/937 - Piaui.txt
 	resources={
 		rubber=9.000
 	}

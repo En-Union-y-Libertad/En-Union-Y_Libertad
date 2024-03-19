@@ -1,12 +1,7 @@
 
 state={
-<<<<<<<< HEAD:history/states/841-Oruro.txt
 	id=841
 	name="STATE_841"
-========
-	id=1003
-	name="STATE_1003"
->>>>>>>> Oscar's-branch:history/states/1003-Oruro.txt
 	resources={
 		tungsten=16.000
 		steel=4.000

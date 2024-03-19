@@ -1,12 +1,7 @@
 
 state={
-<<<<<<<< HEAD:history/states/914 - Atacama.txt
 	id=914
 	name="STATE_914"
-========
-	id=952
-	name="STATE_952"
->>>>>>>> Oscar's-branch:history/states/952 - Atacama.txt
 	resources={
 		steel=18.000
 	}

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 ﻿capital = 857
 add_ideas = monroe_doctrine_idea
-=======
-﻿capital = 972
->>>>>>> Oscar's-branch
 oob = "ECU_1936"
 
 # Starting tech
@@ -14,10 +10,7 @@ set_technology = {
 }
 
 recruit_character = ECU_federico_páez
-recruit_character = ECU_neptali_bonifaz
-#recruit_character = ECU_juan_toro
-recruit_character = ECU_ricardo_paredes_romero
-recruit_character = ECU_jorge_luna_yepez
+recruit_character = ECU_juan_toro
 recruit_character = ECU_andrés_guilarte
 recruit_character = ECU_josé_la_mar
 recruit_character = ECU_cosme_renella_barbatto
@@ -40,8 +33,6 @@ recruit_character = ECU_gilberto_enriquez_gallo
 recruit_character = ECU_davide_flores
 recruit_character = ECU_carlos_arosemena_tola
 recruit_character = ECU_carlos_arroyo_del_rio
-
-1010 = { add_dynamic_modifier = { modifier = EUYL_native_population } }
 
 
 set_country_flag = monroe_doctrine
@@ -102,10 +93,7 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 55
-	communism = 17
-	fascism = 4
-	neutrality = 24
+	democratic = 100
 }
 
 1939.1.1 = {

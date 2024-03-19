@@ -1,4 +1,5 @@
 capital = 305
+add_ideas = monroe_doctrine_idea
 
 # Starting tech
 set_technology = {

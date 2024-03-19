@@ -1,11 +1,6 @@
 state={
-<<<<<<<< HEAD:history/states/848-Guajira.txt
 	id=848
 	name="STATE_848"
-========
-	id=1012
-	name="STATE_1012"
->>>>>>>> Oscar's-branch:history/states/1012-Guajira.txt
 	resources={
 		oil=9.000
 	}

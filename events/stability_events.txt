@@ -18,7 +18,6 @@ country_event = {
 	trigger = {
 		has_war = yes
 		has_civil_war = no
-		is_government_in_exile = no # strikes etc shouldn't affect you if you are not there... 
 		OR = {
 			has_stability < 0.5
 			has_war_support < 0.5
@@ -46,14 +45,7 @@ country_event = {
 			}
 		}
 		NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-		NOT = { has_completed_focus = ARG_argentina_para_argentinos }
 		NOT = { has_completed_focus = CHL_our_own_fate }
-		NOT = { has_completed_focus = URG_anarchist_takeover }
-		NOT = { original_tag = VEN } ## Venezuela has its own mechanic when it comes to this
-		NOT = {
-			original_tag = SWE
-			has_idea = SWE_hungershield
-		}
 	}
 
 	mean_time_to_happen = { 

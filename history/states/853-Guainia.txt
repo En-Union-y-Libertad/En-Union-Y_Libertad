@@ -1,12 +1,7 @@
 
 state={
-<<<<<<<< HEAD:history/states/853-Guainia.txt
 	id=853
 	name="STATE_853"
-========
-	id=1017
-	name="STATE_1017"
->>>>>>>> Oscar's-branch:history/states/1017-Guainia.txt
 	history={
 		owner = COL
 		buildings = {

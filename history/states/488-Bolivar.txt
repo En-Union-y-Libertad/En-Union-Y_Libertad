@@ -2,9 +2,7 @@
 state={
 	id=488
 	name="STATE_488"
-	resources = {
-		oil = 24.000
-	}
+
 	history={
 		owner = VEN
 		buildings = {
@@ -13,15 +11,11 @@ state={
 		}
 		add_core_of = VEN
 		victory_points = {
-			10879 5
+			10879 3
 		}
 		victory_points = {
-			14464 5 ## Ciudad Bolivar
+			14471 1 
 		}
-		victory_points = {
-			14471 1 ## Caicara del Orinoco
-		}
-		
 
 	}
 

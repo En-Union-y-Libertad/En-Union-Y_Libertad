@@ -4,144 +4,8 @@ ideas = {
 		law = yes
 		use_list_view = yes
 
-		ARG_collectivized_society_1 = { ## Weakest Version
-			name = SPR_collectivized_society
-
-			picture = SPR_collectivized_society		
-			
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-		
-			modifier = {
-				stability_factor = -1
-				resistance_target = -0.1
-				consumer_goods_expected_value = 0.25
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = 0.1
-				conversion_cost_civ_to_mil_factor= -0.1
-				conversion_cost_mil_to_civ_factor = -0.1
-				global_building_slots_factor = 0.1
-				industrial_capacity_factory = 0.1
-				industrial_capacity_dockyard = 0.1
-				research_speed_factor = -0.1
-				production_factory_efficiency_gain_factor = -0.1
-				production_factory_max_efficiency_factor = -0.1
-				line_change_production_efficiency_factor = 0.1
-			}
-			
-			allowed_to_remove = {
-				always = no
-			}
-			
-			cancel_if_invalid = no
-		}
-
-		ARG_collectivized_society_2 = { ## Industry is Priority
-			name = SPR_collectivized_society
-
-			picture = SPR_collectivized_society		
-			
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-		
-			modifier = {
-				stability_factor = -1
-				resistance_target = -0.1
-				consumer_goods_expected_value = 0.1
-				production_speed_industrial_complex_factor = 0.3
-				production_speed_arms_factory_factor = -0.1
-				conversion_cost_civ_to_mil_factor= -0.1
-				conversion_cost_mil_to_civ_factor = -0.1
-				global_building_slots_factor = 0.1
-				industrial_capacity_factory = 0.1
-				industrial_capacity_dockyard = 0.1
-				research_speed_factor = -0.1
-				production_factory_efficiency_gain_factor = -0.1
-				production_factory_max_efficiency_factor = -0.1
-				line_change_production_efficiency_factor = 0.1
-			}
-			
-			allowed_to_remove = {
-				always = no
-			}
-			
-			cancel_if_invalid = no
-		}
-
-		ARG_collectivized_society_3 = { ## Military Above All
-			name = SPR_collectivized_society
-
-			picture = SPR_collectivized_society		
-			
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-		
-			modifier = {
-				stability_factor = -1
-				resistance_target = -0.1
-				consumer_goods_expected_value = 0.2
-				production_speed_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = 0.4
-				conversion_cost_civ_to_mil_factor= -0.1
-				conversion_cost_mil_to_civ_factor = -0.1
-				global_building_slots_factor = 0.1
-				industrial_capacity_factory = 0.5
-				industrial_capacity_dockyard = 0.5
-				research_speed_factor = -0.1
-				production_factory_efficiency_gain_factor = -0.1
-				production_factory_max_efficiency_factor = -0.1
-				line_change_production_efficiency_factor = 0.1
-			}
-			
-			allowed_to_remove = {
-				always = no
-			}
-			
-			cancel_if_invalid = no
-		}
-
-		ARG_collectivized_society_4 = { ## Revolutionized Industry
-			name = SPR_collectivized_society
-
-			picture = SPR_collectivized_society		
-			
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-		
-			modifier = {
-				stability_factor = -1
-				resistance_target = -0.2
-				consumer_goods_expected_value = 0.15
-				production_speed_industrial_complex_factor = 0.15
-				production_speed_arms_factory_factor = 0.3
-				conversion_cost_civ_to_mil_factor= -0.3
-				conversion_cost_mil_to_civ_factor = -0.3
-				global_building_slots_factor = 0.1
-				industrial_capacity_factory = 0.7
-				industrial_capacity_dockyard = 0.7
-				research_speed_factor = -0.1
-				production_factory_efficiency_gain_factor = -0.2
-				production_factory_max_efficiency_factor = -0.2
-				line_change_production_efficiency_factor = 0.1
-			}
-			
-			allowed_to_remove = {
-				always = no
-			}
-			
-			cancel_if_invalid = no
-		}
-
 		laissez_faire = {
-			name = "Laissez Faire"
+
 			allowed = {
 				always = no 
 				original_tag = CHL 
@@ -171,12 +35,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.15
-				production_speed_industrial_complex_factor = -0.75
-				production_speed_arms_factory_factor = -0.5
-				production_speed_dockyard_factor = -0.5
-				industrial_capacity_factory = -0.2
-				industrial_capacity_dockyard = -0.2
+				consumer_goods_factor = 0.15
+				production_speed_industrial_complex_factor = -0.7
+				production_speed_arms_factory_factor = -0.7
+				production_speed_dockyard_factor = -0.7
+				industrial_capacity_factory = -0.45
+				industrial_capacity_dockyard = -0.45
 				conversion_cost_civ_to_mil_factor = 0.5
 				conversion_cost_mil_to_civ_factor = 0.5
 				fuel_gain_factor = -0.3
@@ -199,12 +63,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.2
+				consumer_goods_factor = 0.2
 				production_speed_industrial_complex_factor = -0.55
-				production_speed_arms_factory_factor = -0.4
-				production_speed_dockyard_factor = -0.4
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
+				production_speed_arms_factory_factor = -0.55
+				production_speed_dockyard_factor = -0.55
+				industrial_capacity_factory = -0.35
+				industrial_capacity_dockyard = -0.35
 				conversion_cost_civ_to_mil_factor = 0.4
 				conversion_cost_mil_to_civ_factor = 0.4
 				fuel_gain_factor = -0.3
@@ -227,10 +91,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.3
-				production_speed_industrial_complex_factor = -0.35
+				consumer_goods_factor = 0.25
+				production_speed_industrial_complex_factor = -0.3
 				production_speed_arms_factory_factor = -0.3
 				production_speed_dockyard_factor = -0.3
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
 				conversion_cost_civ_to_mil_factor = 0.4
 				conversion_cost_mil_to_civ_factor = 0.4
 				fuel_gain_factor = -0.3
@@ -253,12 +119,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.4
-				production_speed_industrial_complex_factor = -0.1
+				consumer_goods_factor = 0.3
+				production_speed_industrial_complex_factor = -0.15
 				production_speed_arms_factory_factor = -0.15
 				production_speed_dockyard_factor = -0.15
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
 				conversion_cost_civ_to_mil_factor = 0.4
 				conversion_cost_mil_to_civ_factor = 0.4
 				fuel_gain_factor = -0.3
@@ -282,7 +148,7 @@ ideas = {
 			removal_cost = -1
 		
 			modifier = {
-				consumer_goods_expected_value = 0.50
+				consumer_goods_factor = 0.50
 				production_speed_industrial_complex_factor = -0.5
 				production_speed_arms_factory_factor = -0.5
 				production_speed_dockyard_factor = -0.5
@@ -317,7 +183,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_expected_value = 0.4
+				consumer_goods_factor = 0.4
 				production_speed_industrial_complex_factor = -0.4
 				production_speed_arms_factory_factor = -0.4
 				production_speed_dockyard_factor = -0.4
@@ -349,7 +215,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_expected_value = 0.35
+				consumer_goods_factor = 0.35
 				production_speed_industrial_complex_factor = -0.3
 				production_speed_arms_factory_factor = -0.3
 				conversion_cost_civ_to_mil_factor= 0.3
@@ -365,7 +231,6 @@ ideas = {
 			available = {
 				if = {
 					limit = { original_tag = CHL }
-					NOT = { has_idea = CHL_remnants_of_the_great_depression }
 					NOT = {
 						OR = {
 							has_completed_focus = CHL_everyone_must_bear_the_torch
@@ -405,7 +270,6 @@ ideas = {
 					limit = {
 						original_tag = CHL
 					}
-					NOT = { has_idea = CHL_remnants_of_the_great_depression }
 					NOT = {
 						OR = {
 							has_completed_focus = CHL_everyone_must_bear_the_torch
@@ -435,7 +299,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_expected_value = 0.3
+				consumer_goods_factor = 0.3
 				production_speed_industrial_complex_factor = -0.1
 				production_speed_arms_factory_factor = -0.1
 				fuel_gain_factor = -0.25
@@ -491,7 +355,6 @@ ideas = {
 					limit = {
 						original_tag = CHL
 					}
-					NOT = { has_idea = CHL_remnants_of_the_great_depression }
 					NOT = {
 						OR = {
 							has_completed_focus = CHL_everyone_must_bear_the_torch
@@ -511,7 +374,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = 0.25
 				production_speed_arms_factory_factor = 0.1
 				conversion_cost_civ_to_mil_factor= -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
@@ -579,7 +442,6 @@ ideas = {
 					limit = {
 						original_tag = CHL
 					}
-					NOT = { has_idea = CHL_remnants_of_the_great_depression }
 					NOT = {
 						OR = {
 							has_completed_focus = CHL_everyone_must_bear_the_torch
@@ -599,7 +461,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_expected_value = 0.2
+				consumer_goods_factor = 0.2
 				production_speed_arms_factory_factor = 0.2
 				conversion_cost_civ_to_mil_factor= -0.2
 				conversion_cost_mil_to_civ_factor = -0.2
@@ -671,7 +533,6 @@ ideas = {
 					limit = {
 						original_tag = CHL
 					}
-					NOT = { has_idea = CHL_remnants_of_the_great_depression }
 					NOT = {
 						has_completed_focus = CHL_everyone_must_bear_the_torch
 					}
@@ -748,7 +609,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_expected_value = 0.10
+				consumer_goods_factor = 0.10
 				conscription = -0.03
 				production_speed_arms_factory_factor = 0.3
 				conversion_cost_civ_to_mil_factor= -0.3
@@ -775,7 +636,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_expected_value = 0.15	
+				consumer_goods_factor = 0.15	
 				production_speed_buildings_factor = -0.15 
 				
 			}
@@ -804,7 +665,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_expected_value = 0.10	
+				consumer_goods_factor = 0.10	
 				production_speed_buildings_factor = -0.2 
 				global_building_slots_factor = 0.1
 			}
@@ -832,7 +693,7 @@ ideas = {
 		
 			modifier = {
 				min_export = 0.25
-				consumer_goods_expected_value = 0.05
+				consumer_goods_factor = 0.05
 				civilian_intel_to_others = 40.0
 				navy_intel_to_others = 40.0
 				agency_upgrade_time = 0.15
@@ -853,140 +714,6 @@ ideas = {
 							state = 807
 						}
 						is_coastal = yes
-					}
-				}
-			}
-			
-			cancel_if_invalid = no
-		}
-		
-		roca_runciman_treaty_1 = {
-			name = roca_runciman_treaty
-			allowed = {
-				always = no 
-			}
-			removal_cost = -1
-			picture = ARG_roca_runciman_export_icon
-			
-			available = {
-				NOT = {
-					OR = {
-						has_war_with = ENG 
-						has_completed_focus = ARG_cancel_the_roca_runciman_treaty
-						ENG = {
-							exists = no 
-						}
-						exists = no 
-					}
-				}
-			}
-		
-			modifier = {
-				min_export = 0.4
-				consumer_goods_expected_value = -0.03
-				civilian_intel_to_others = 40.0
-				navy_intel_to_others = 40.0
-				agency_upgrade_time = 0.15
-				custom_modifier_tooltip = ARG_countries_other_than_uk_less_likely_to_trade_tt
-			}
-			
-			allowed_to_remove = {
-				OR = {
-					has_war = yes
-					ENG = {
-						is_subject = yes 
-					}
-					ENG = {
-						has_capitulated = yes 
-					}
-				}
-			}
-			
-			on_remove = {
-				hidden_effect = {
-					add_ideas = limited_exports
-					every_other_country = {
-						remove_opinion_modifier = {
-							target = ROOT
-							modifier = ARG_roca_runciman_other_country
-						}
-					}
-					ENG = {
-						remove_opinion_modifier = {
-							target = ROOT
-							modifier = ARG_roca_runciman_england
-						}
-					}
-					remove_opinion_modifier = {
-						target = ENG 
-						modifier = ARG_roca_runciman_england
-					}
-				}
-			}
-			
-			cancel_if_invalid = no
-		}
-		
-		roca_runciman_treaty_2 = {
-			name = roca_runciman_treaty
-			allowed = {
-				always = no 
-			}
-			removal_cost = -1
-			picture = ARG_roca_runciman_export_icon
-			
-			available = {
-				NOT = {
-					OR = {
-						has_war_with = ENG 
-						has_completed_focus = ARG_cancel_the_roca_runciman_treaty
-						ENG = {
-							exists = no 
-						}
-						exists = no 
-					}
-				}
-			}
-		
-			modifier = {
-				min_export = 0.5
-				consumer_goods_expected_value = -0.05
-				civilian_intel_to_others = 40.0
-				navy_intel_to_others = 40.0
-				agency_upgrade_time = 0.15
-				custom_modifier_tooltip = ARG_countries_other_than_uk_less_likely_to_trade_tt
-			}
-			
-			allowed_to_remove = {
-				OR = {
-					has_war = yes
-					ENG = {
-						is_subject = yes 
-					}
-					ENG = {
-						has_capitulated = yes 
-					}
-				}
-			}
-			
-			on_remove = {
-				hidden_effect = {
-					add_ideas = limited_exports
-					every_other_country = {
-						remove_opinion_modifier = {
-							target = ROOT
-							modifier = ARG_roca_runciman_other_country
-						}
-					}
-					ENG = {
-						remove_opinion_modifier = {
-							target = ROOT
-							modifier = ARG_roca_runciman_england
-						}
-					}
-					remove_opinion_modifier = {
-						target = ENG 
-						modifier = ARG_roca_runciman_england
 					}
 				}
 			}
@@ -1018,20 +745,6 @@ ideas = {
 					NOT = {
 						has_completed_focus = CHL_everyone_must_bear_the_torch
 					}
-				}
-				if = {
-					limit = {
-						original_tag = VEN
-					}
-					NOT = {
-						OR = {
-							has_completed_focus = VEN_nationalize_the_oil_fields
-							has_completed_focus = VEN_adopt_a_protectionist_policy
-						}
-					}
-				}
-				NOT = {
-					has_country_flag = EUYL_adopted_the_ISI_model_flag
 				}
 			}
 						
@@ -1114,17 +827,6 @@ ideas = {
 						OR = {
 							has_completed_focus = ARG_federalize_the_economy 
 							has_completed_focus = ARG_autarky
-						}
-					}
-				}
-				if = {
-					limit = {
-						original_tag = VEN
-					}
-					NOT = {
-						OR = {
-							has_completed_focus = VEN_nationalize_the_oil_fields
-							has_completed_focus = VEN_adopt_a_protectionist_policy
 						}
 					}
 				}

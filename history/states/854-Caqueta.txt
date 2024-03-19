@@ -1,11 +1,6 @@
 state={
-<<<<<<<< HEAD:history/states/854-Caqueta.txt
 	id=854
 	name="STATE_854"
-========
-	id=1018
-	name="STATE_1018"
->>>>>>>> Oscar's-branch:history/states/1018-Caqueta.txt
 	resources={
 		rubber=6.000
 	}

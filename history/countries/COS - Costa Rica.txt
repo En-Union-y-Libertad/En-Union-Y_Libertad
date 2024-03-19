@@ -1,4 +1,5 @@
 ﻿capital = 316
+add_ideas = monroe_doctrine_idea
 oob = "COS_1936"
 
 # Starting tech

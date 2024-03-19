@@ -26,7 +26,10 @@ division_template = {
 units = {
 	##### Ejército del Perú #####
 	division= {	# "1era Div. de Infantería 'Bolognesi'"
-		name = "I División de Ejército 'Bolognesi'"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
 		location = 12997 # Lima
 		division_template = "División de Infanteria"
 		start_experience_factor = 0.1
@@ -34,7 +37,10 @@ units = {
 
 	}
 	division= {	# "2da División de Infantería"
-		name = "II División de Ejército"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
 		location = 2210 # Arequipa
 		division_template = "División de Infanteria"
 		start_experience_factor = 0.1
@@ -42,7 +48,10 @@ units = {
 
 	}
 	division= {	# "3era División de Infantería"
-		name = "III División de Ejército"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
 		location = 2156 # Plura
 		division_template = "División de Infanteria"
 		start_experience_factor = 0.1
@@ -50,7 +59,10 @@ units = {
 
 	}
 	division= {	# "4ta División de Infantería"
-		name = "IV División de Ejército"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
 		location = 8213 # Iquitos
 		division_template = "División de Infanteria"
 		start_experience_factor = 0.1
@@ -58,11 +70,15 @@ units = {
 
 	}
 	division= {	# "5ta División de Infantería"
-		name = "V División de Ejército"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
 		location = 8213 # Iquitos
 		division_template = "División de Infanteria"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.7
+
 	}
 	division= {	
 		name = "División de Caballería"
@@ -97,7 +113,7 @@ instant_effect = {
 			creator = "PRU"
 		}
 		requested_factories = 1
-		progress = 0.86
+		progress = 0.79
 		efficiency = 100
 	}
 	add_equipment_production = {

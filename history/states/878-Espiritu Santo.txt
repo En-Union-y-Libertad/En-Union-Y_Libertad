@@ -1,11 +1,6 @@
 state={
-<<<<<<<< HEAD:history/states/878-Espiritu Santo.txt
 	id=878
 	name="STATE_878"
-========
-	id=943
-	name="STATE_943"
->>>>>>>> Oscar's-branch:history/states/943 - Espirito Santo.txt
 	resources={
 		oil=1.000
 	}
@@ -28,5 +23,5 @@ state={
 	}
 	manpower=887465
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=rural
 }

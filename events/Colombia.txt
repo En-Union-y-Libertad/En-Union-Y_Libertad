@@ -170,7 +170,7 @@ country_event = {
 		show_ideas_tooltip = COL_jorge_hernandez_de_brigard
 
 		custom_effect_tooltip = remove_chief_of_airforce
-		show_ideas_tooltip = EUYL_COL_luis_bernardo_andrade
+		show_ideas_tooltip = COL_luis_bernardo_andrade
 
 		trigger = {
 			has_country_flag = tragedy_1
@@ -184,7 +184,7 @@ country_event = {
 		show_ideas_tooltip = COL_jorge_hernandez_de_brigard
 
 		custom_effect_tooltip = remove_chief_of_navy
-		show_ideas_tooltip = EUYL_COL_salvador_tiaga_gonzalez
+		show_ideas_tooltip = COL_salvador_tiaga_gonzalez
 		trigger = {
 			has_country_flag = tragedy_1
 			has_country_flag = tragedy_3
@@ -194,10 +194,10 @@ country_event = {
 	option = {
 		name = colombia.9.a
 		custom_effect_tooltip = remove_chief_of_airforce
-		show_ideas_tooltip = EUYL_COL_luis_bernardo_andrade
+		show_ideas_tooltip = COL_luis_bernardo_andrade
 
 		custom_effect_tooltip = remove_chief_of_navy
-		show_ideas_tooltip = EUYL_COL_salvador_tiaga_gonzalez
+		show_ideas_tooltip = COL_salvador_tiaga_gonzalez
 		trigger = {
 			has_country_flag = tragedy_3
 			has_country_flag = tragedy_2
@@ -650,53 +650,19 @@ country_event = {
 		custom_effect_tooltip = colombia_25_tt
 		hidden_effect = {
 			set_capital = { state = 306 }
-			if = {
-				limit = {
-					NOT = { has_template = "Milicias" }
-				}
-				division_template = { 
-					name = "Milicias" 
-					division_names_group = SPAN_INF_02 
-					is_locked = yes 
-					regiments = { 
-						infantry = { x = 0 y = 0 }  
-						infantry = { x = 0 y = 1 } 
-						infantry = { x = 0 y = 2 } 
-					}
-				}
-			}
 			start_civil_war = {
 				ideology = fascism
 				size = 0.2
-<<<<<<< HEAD
 				capital = 850
 				states = { 850 854 855 }
-=======
-				capital = 1014
-				states = { 1014 1018 1019 }
->>>>>>> Oscar's-branch
 			}
 			remove_ideas = COL_oposicion
-			every_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-					count = 2
-				}
-			}
 		}
 		hidden_effect = {
 			random_other_country = {
 				limit = {
 					original_tag = COL
 					has_war_with = ROOT
-				}
-				every_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = ROOT
-						count = 2
-					}
 				}
 
 				remove_ideas = COL_oposicion
@@ -731,13 +697,6 @@ country_event = {
 					original_tag = COL
 					has_war_with = ROOT
 					has_government = fascism
-				}
-				every_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-						count = 2
-					}
 				}
 				save_event_target_as = conservador_civil_war
 				every_unit_leader = {
@@ -775,54 +734,19 @@ country_event = {
 		custom_effect_tooltip = colombia_26_tt
 		hidden_effect = {
 			set_capital = { state = 306 }
-			if = {
-				limit = {
-					NOT = { has_template = "Milicias" }
-				}
-				division_template = { 
-					name = "Milicias" 
-					division_names_group = SPAN_INF_02 
-					is_locked = yes 
-					regiments = { 
-						infantry = { x = 0 y = 0 }  
-						infantry = { x = 0 y = 1 } 
-						infantry = { x = 0 y = 2 } 
-					}
-				}
-			}
 			start_civil_war = {
 				ideology = neutrality
 				size = 0.2
-<<<<<<< HEAD
 				capital = 853
 				states = { 486 852 853 }
-=======
-				capital = 1017
-				states = { 486 1016 1017 }
->>>>>>> Oscar's-branch
 			}
 			remove_ideas = COL_politicised_army
-			every_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-					count = 2
-				}
-			}
 		}
 		hidden_effect = {
 			random_other_country = {
 				limit = {
 					original_tag = COL
 					has_war_with = ROOT
-				}
-				
-				every_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-						count = 2
-					}
 				}
 
 				every_unit_leader = {
@@ -1068,21 +992,7 @@ country_event = {
 		name = colombia.27.a
 		hidden_effect = {
 			set_capital = { state = 306 }
-			if = {
-				limit = {
-					NOT = { has_template = "Milicias" }
-				}
-				division_template = { 
-					name = "Milicias" 
-					division_names_group = SPAN_INF_02 
-					is_locked = yes 
-					regiments = { 
-						infantry = { x = 0 y = 0 }  
-						infantry = { x = 0 y = 1 } 
-						infantry = { x = 0 y = 2 } 
-					}
-				}
-			}
+			
 			if = {
 				limit = {
 					COL = {
@@ -1093,11 +1003,7 @@ country_event = {
 					ideology = communism
 					size = 0.2
 					capital = 493
-<<<<<<< HEAD
 					states = { 493 848 849 850 489 864 }
-=======
-					states = { 493 1012 1013 1014 489 1028 }
->>>>>>> Oscar's-branch
 				}
 			}
 			else = {
@@ -1105,34 +1011,16 @@ country_event = {
 					ideology = communism
 					size = 0.2
 					capital = 493
-<<<<<<< HEAD
 					states = { 493 848 849 }
-=======
-					states = { 493 1012 1013 }
->>>>>>> Oscar's-branch
 				}
 			}
 			remove_ideas = COL_oposicion
-			every_controlled_state = {
-				create_unit = {
-					division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-					owner = ROOT
-					count = 2
-				}
-			}
 		}
 		hidden_effect = {
 			random_other_country = {
 				limit = {
 					original_tag = COL
 					has_war_with = ROOT
-				}
-				every_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-						count = 2
-					}
 				}
 
 				create_corps_commander = {
@@ -1178,13 +1066,6 @@ country_event = {
 					original_tag = COL
 					has_war_with = ROOT
 					has_government = communism
-				}
-				every_controlled_state = {
-					create_unit = {
-						division = "name = \"Milicias\" division_template = \"Milicias\" start_experience_factor = 0.02 start_equipment_factor = 0.9" 
-						owner = PREV
-						count = 2
-					}
 				}
 				save_event_target_as = liberal_civil_war
 				every_unit_leader = {
@@ -1921,11 +1802,7 @@ country_event = {
 			start_civil_war = {
 				ideology = democratic
 				size = civil_war_size_var
-<<<<<<< HEAD
 				states = { 493 848 849 }
-=======
-				states = { 493 1012 1013 }
->>>>>>> Oscar's-branch
 			}
 		}
 		hidden_effect = {
@@ -2021,11 +1898,7 @@ country_event = {
 			start_civil_war = {
 				ideology = democratic
 				size = civil_war_size_var
-<<<<<<< HEAD
 				states = { 493 848 849 }
-=======
-				states = { 493 1012 1013 }
->>>>>>> Oscar's-branch
 			}
 		}
 		hidden_effect = {
@@ -2094,31 +1967,31 @@ country_event = {
 			base = 50
 			modifier = {
 				add = 15
-				FROM = { has_army_size = { size > 19 } }
+				COL = { has_army_size = { size > 19 } }
 			}
 			modifier = {
 				add = 100
-				FROM = { has_army_size = { size > 29 } }
+				COL = { has_army_size = { size > 29 } }
 			}
 			modifier = {
 				add = 20
-				is_in_faction_with = FROM
+				is_in_faction_with = COL
 			}
 			modifier = {
 				add = 40
 				has_opinion = {
-					target = FROM
+					target = COL
 					value > 40
 				}
 			}
 			modifier = {
 				add = 10
-				FROM = {
+				COL = {
 					num_of_military_factories > 7
 				}
 			}
 		}
-		FROM = {
+		COL = {
 			country_event = { hours = 2 id = colombia.46 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
@@ -2128,7 +2001,7 @@ country_event = {
 		ai_chance = {
 			base = 10			
 			modifier = {
-				FROM = { has_army_size = { size > 19 } }
+				COL = { has_army_size = { size > 19 } }
 				factor = 0.5
 			}
 			modifier = {
@@ -2143,11 +2016,11 @@ country_event = {
 			modifier = {
 				factor = 2
 				is_in_faction = yes
-				NOT = { is_in_faction_with = FROM }
+				NOT = { is_in_faction_with = COL }
 			}
 			modifier = {
 				any_other_country = {
-					has_guaranteed = ROOT
+					has_guaranteed = ECU
 				}
 				factor = 5 #i've got friends
 			}
@@ -2157,16 +2030,16 @@ country_event = {
 						tag = USA
 					}
 					is_major = yes
-					has_guaranteed = ROOT
+					has_guaranteed = ECU
 				}
 				factor = 5 #i've got big friends
 			}
 		}
-		FROM = {
+		COL = {
 			add_opinion_modifier = { target = ROOT modifier = COL_grc_rejected }
 			country_event = { hours = 2 id = colombia.45 }
-			if = { limit = { is_in_faction_with = ROOT }
-				remove_from_faction = ROOT
+			if = { limit = { is_in_faction_with = ECU }
+				remove_from_faction = ECU
 			}
 		}
 	}
@@ -2185,26 +2058,16 @@ country_event = {
 		name = colombia.45.a
 		hidden_effect = {
 			add_state_claim = 305
-<<<<<<< HEAD
 			add_state_claim = 857
 			add_state_claim = 856
 			add_state_claim = 846
-=======
-			add_state_claim = 956
-			add_state_claim = 1020
-			add_state_claim = 1010
->>>>>>> Oscar's-branch
 			add_state_claim = 490
 			add_state_claim = 649
 		}
 		create_wargoal = {
 			type = take_state_focus
 			target = ECU
-<<<<<<< HEAD
 			generator = { 305 857 856 846 490 649 }
-=======
-			generator = { 305 956 1020 1010 490 649 }
->>>>>>> Oscar's-branch
 		}
 	}
 }
@@ -2222,17 +2085,17 @@ country_event = {
 		name = colombia.46.a
 		ECU = {
 			every_unit_leader = {
-				set_nationality = ROOT
+				set_nationality = COL
 			}
 		}
 		annex_country = { target = ECU transfer_troops = yes }
-		add_political_power = 25
+		add_political_power = 75
 		hidden_effect = {
 			every_owned_state = {
 				limit = {
 					is_core_of = ECU
 				}
-				add_compliance = 35
+				add_compliance = 70
 			} 
 		}
 	}
@@ -2253,31 +2116,31 @@ country_event = {
 			base = 60
 			modifier = {
 				add = 15
-				FROM = { has_army_size = { size > 9 } }
+				COL = { has_army_size = { size > 9 } }
 			}
 			modifier = {
 				add = 100
-				FROM = { has_army_size = { size > 19 } }
+				COL = { has_army_size = { size > 19 } }
 			}
 			modifier = {
 				add = 20
-				is_in_faction_with = FROM
+				is_in_faction_with = COL
 			}
 			modifier = {
 				add = 30
 				has_opinion = {
-					target = FROM
+					target = COL
 					value > 40
 				}
 			}
 			modifier = {
 				add = 10
-				FROM = {
+				COL = {
 					num_of_military_factories > 7
 				}
 			}
 		}
-		FROM = {
+		COL = {
 			country_event = { hours = 2 id = colombia.49 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
@@ -2287,17 +2150,17 @@ country_event = {
 		ai_chance = {
 			base = 10			
 			modifier = {
-				FROM = { has_army_size = { size > 9 } }
+				COL = { has_army_size = { size > 9 } }
 				factor = 0.5
 			}
 			modifier = {
 				factor = 2
 				is_in_faction = yes
-				NOT = { is_in_faction_with = FROM }
+				NOT = { is_in_faction_with = COL }
 			}
 			modifier = {
 				any_other_country = {
-					has_guaranteed = ROOT
+					has_guaranteed = PAN
 				}
 				factor = 5 #i've got friends
 			}
@@ -2307,16 +2170,16 @@ country_event = {
 						tag = USA
 					}
 					is_major = yes
-					has_guaranteed = ROOT
+					has_guaranteed = PAN
 				}
 				factor = 5 #i've got big friends
 			}
 		}
-		FROM = {
+		COL = {
 			add_opinion_modifier = { target = ROOT modifier = COL_grc_rejected }
 			country_event = { hours = 2 id = colombia.48 }
-			if = { limit = { is_in_faction_with = ROOT }
-				remove_from_faction = ROOT
+			if = { limit = { is_in_faction_with = PAN }
+				remove_from_faction = PAN
 			}
 		}
 	}
@@ -2357,23 +2220,23 @@ country_event = {
 		name = colombia.49.a
 		PAN = {
 			every_unit_leader = {
-				set_nationality = ROOT
+				set_nationality = COL
 			}
 		}
 		annex_country = { target = PAN transfer_troops = yes }
-		add_political_power = 25
+		add_political_power = 75
 		hidden_effect = {
 			every_owned_state = {
 				limit = {
 					is_core_of = PAN
 				}
-				add_compliance = 35
+				add_compliance = 70
 			} 
 		}
 	}
 }
 
-# GRC - Venezuela/Colombia
+# GRC - Venezuela
 country_event = {
 	id = colombia.50
 	title = colombia.50.title
@@ -2388,31 +2251,31 @@ country_event = {
 			base = 60
 			modifier = {
 				add = 15
-				FROM = { has_army_size = { size > 19 } }
+				COL = { has_army_size = { size > 19 } }
 			}
 			modifier = {
 				add = 100
-				FROM = { has_army_size = { size > 29 } }
+				COL = { has_army_size = { size > 29 } }
 			}
 			modifier = {
 				add = 20
-				is_in_faction_with = FROM
+				is_in_faction_with = COL
 			}
 			modifier = {
 				add = 30
 				has_opinion = {
-					target = FROM
+					target = COL
 					value > 50
 				}
 			}
 			modifier = {
 				add = 10
-				FROM = {
+				COL = {
 					num_of_military_factories > 7
 				}
 			}
 		}
-		FROM = {
+		COL = {
 			country_event = { hours = 2 id = colombia.52 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
@@ -2422,17 +2285,17 @@ country_event = {
 		ai_chance = {
 			base = 10			
 			modifier = {
-				FROM = { has_army_size = { size > 19 } }
+				COL = { has_army_size = { size > 19 } }
 				factor = 0.5
 			}
 			modifier = {
 				factor = 2
 				is_in_faction = yes
-				NOT = { is_in_faction_with = FROM }
+				NOT = { is_in_faction_with = COL }
 			}
 			modifier = {
 				any_other_country = {
-					has_guaranteed = ROOT
+					has_guaranteed = VEN
 				}
 				factor = 5 #i've got friends
 			}
@@ -2442,22 +2305,22 @@ country_event = {
 						tag = USA
 					}
 					is_major = yes
-					has_guaranteed = ROOT
+					has_guaranteed = VEN
 				}
 				factor = 5 #i've got big friends
 			}
 		}
-		FROM = {
+		COL = {
 			add_opinion_modifier = { target = ROOT modifier = COL_grc_rejected }
 			country_event = { hours = 2 id = colombia.51 }
-			if = { limit = { is_in_faction_with = ROOT }
-				remove_from_faction = ROOT
+			if = { limit = { is_in_faction_with = VEN }
+				remove_from_faction = VEN
 			}
 		}
 	}
 }
 
-# GRC - Venezuela/Colombia se niega
+# GRC - Venezuela se niega
 country_event = {
 	id = colombia.51
 	title = colombia.51.title
@@ -2469,7 +2332,6 @@ country_event = {
 	option = {
 		name = colombia.51.a
 		hidden_effect = {
-<<<<<<< HEAD
 			add_state_claim = 489
 			add_state_claim = 864
 			add_state_claim = 307
@@ -2486,20 +2348,6 @@ country_event = {
 			type = take_state_focus
 			target = VEN
 			generator = { 489 864 307 488 860 865 867 869 868 863 866 }
-=======
-			every_state = {
-				limit = {
-					is_core_of = FROM 
-				}
-				ROOT = {
-					add_state_claim = PREV
-				}
-			}
-		}
-		create_wargoal = {
-			type = annex_everything
-			target = FROM
->>>>>>> Oscar's-branch
 		}
 	}
 }
@@ -2515,19 +2363,19 @@ country_event = {
 
 	option = {
 		name = colombia.52.a
-		FROM = {
-			every_character = {
-				set_nationality = ROOT
+		VEN = {
+			every_unit_leader = {
+				set_nationality = COL
 			}
 		}
-		annex_country = { target = FROM transfer_troops = yes }
-		add_political_power = 35
+		annex_country = { target = VEN transfer_troops = yes }
+		add_political_power = 75
 		hidden_effect = {
 			every_owned_state = {
 				limit = {
-					is_core_of = FROM
+					is_core_of = VEN
 				}
-				add_compliance = 25
+				add_compliance = 70
 			} 
 		}
 	}
@@ -2562,7 +2410,7 @@ country_event = {
                 num_of_civilian_factories > 12
             }
 		}
-		FROM = {
+		COL = {
 			country_event = { id = colombia.54 hours = 3 }
 		}
 		effect_tooltip = {
@@ -2585,7 +2433,7 @@ country_event = {
 				}
 			}
 		}
-		FROM = {
+		COL = {
 			country_event = { id = colombia.55 hours = 6 }
 		}
 	}
@@ -2603,13 +2451,8 @@ country_event = {
 	option = {
 		name = colombia.54.a
 
-<<<<<<< HEAD
 		COL = {
 			transfer_state = 887
-=======
-		ROOT = {
-			transfer_state = 1022
->>>>>>> Oscar's-branch
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -2620,13 +2463,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-<<<<<<< HEAD
 			887 = {
 				set_compliance = 40
-=======
-			1022 = {
-				set_compliance = 15
->>>>>>> Oscar's-branch
 			} 
 		}
 
@@ -2653,45 +2491,25 @@ country_event = {
 
 		ai_chance = {
 			base = 30
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = EUYL_chaos_mode
-					option = YES
-				}
-			}
 		}
 
 		hidden_effect = {
 			if = {
 				limit = {
 					NOT = {
-<<<<<<< HEAD
 						887 = {
 							is_core_of = COL
 						}
 					}
 				}
 				add_state_claim = 887
-=======
-						1022 = {
-							is_core_of = ROOT
-						}
-					}
-				}
-				add_state_claim = 1022
->>>>>>> Oscar's-branch
 			}
 		}
 
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
-<<<<<<< HEAD
 			generator = { 887 }
-=======
-			generator = { 1022 }
->>>>>>> Oscar's-branch
 		}
 	}
 
@@ -2733,7 +2551,7 @@ country_event = {
                 num_of_civilian_factories > 12
             }
 		}
-		FROM = {
+		COL = {
 			country_event = { id = colombia.57 hours = 3 }
 		}
 		effect_tooltip = {
@@ -2760,7 +2578,7 @@ country_event = {
                 has_war = yes 
             }
 		}
-		FROM = {
+		COL = {
 			country_event = { id = colombia.58 hours = 6 }
 		}
 	}
@@ -2778,13 +2596,8 @@ country_event = {
 	option = {
 		name = colombia.57.a
 
-<<<<<<< HEAD
 		COL = {
 			transfer_state = 886
-=======
-		ROOT = {
-			transfer_state = 1023
->>>>>>> Oscar's-branch
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -2795,13 +2608,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-<<<<<<< HEAD
 			886 = {
 				set_compliance = 40
-=======
-			1023 = {
-				set_compliance = 15
->>>>>>> Oscar's-branch
 			} 
 		}
 
@@ -2826,47 +2634,23 @@ country_event = {
 	option = { #WAR
 		name = colombia.58.a
 
-		ai_chance = {
-			base = 2
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = EUYL_chaos_mode
-					option = YES
-				}
-			}
-		}
-
 		hidden_effect = {
 			if = {
 				limit = {
 					NOT = {
-<<<<<<< HEAD
 						886 = {
 							is_core_of = COL
 						}
 					}
 				}
 				add_state_claim = 886
-=======
-						1023 = {
-							is_core_of = ROOT
-						}
-					}
-				}
-				add_state_claim = 1023
->>>>>>> Oscar's-branch
 			}
 		}
 
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
-<<<<<<< HEAD
 			generator = { 886 }
-=======
-			generator = { 1023 }
->>>>>>> Oscar's-branch
 		}
 	}
 
@@ -2905,7 +2689,7 @@ country_event = {
                 num_of_civilian_factories > 12
             }
 		}
-		FROM = {
+		COL = {
 			country_event = { id = colombia.60 hours = 3 }
 		}
 		effect_tooltip = {
@@ -2932,7 +2716,7 @@ country_event = {
                 has_war = yes 
             }
 		}
-		FROM = {
+		COL = {
 			country_event = { id = colombia.61 hours = 6 }
 		}
 	}
@@ -2950,13 +2734,8 @@ country_event = {
 	option = {
 		name = colombia.60.a
 
-<<<<<<< HEAD
 		COL = {
 			transfer_state = 858
-=======
-		ROOT = {
-			transfer_state = 974 ## Japura
->>>>>>> Oscar's-branch
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -2967,13 +2746,8 @@ country_event = {
 		}
 
 		hidden_effect = {
-<<<<<<< HEAD
 			858 = {
 				set_compliance = 40
-=======
-			974 = {
-				set_compliance = 15
->>>>>>> Oscar's-branch
 			} 
 		}
 
@@ -2998,47 +2772,23 @@ country_event = {
 	option = { #WAR
 		name = colombia.61.a
 
-		ai_chance = {
-			base = 2
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = EUYL_chaos_mode
-					option = YES
-				}
-			}
-		}
-
 		hidden_effect = {
 			if = {
 				limit = {
 					NOT = {
-<<<<<<< HEAD
 						858 = {
 							is_core_of = COL
 						}
 					}
 				}
 				add_state_claim = 858
-=======
-						958 = {
-							is_core_of = ROOT
-						}
-					}
-				}
-				add_state_claim = 974
->>>>>>> Oscar's-branch
 			}
 		}
 
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
-<<<<<<< HEAD
 			generator = { 858 }
-=======
-			generator = { 974 }
->>>>>>> Oscar's-branch
 		}
 	}
 
@@ -3077,7 +2827,7 @@ country_event = {
                 num_of_civilian_factories > 12
             }
 		}
-		FROM = {
+		COL = {
 			country_event = { id = colombia.63 hours = 3 }
 		}
 		effect_tooltip = {
@@ -3100,7 +2850,7 @@ country_event = {
 				}
 			}
 		}
-		FROM = {
+		COL = {
 			country_event = { id = colombia.64 hours = 6 }
 		}
 	}
@@ -3118,13 +2868,8 @@ country_event = {
 	option = {
 		name = colombia.63.a
 
-<<<<<<< HEAD
 		COL = {
 			transfer_state = 859
-=======
-		ROOT = {
-			transfer_state = 975
->>>>>>> Oscar's-branch
 			random_owned_controlled_state = {
 				limit = { industrial_complex > 1 }
 				remove_building = {
@@ -3135,11 +2880,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-<<<<<<< HEAD
 			859 = {
-=======
-			975 = {
->>>>>>> Oscar's-branch
 				set_compliance = 40
 			} 
 		}
@@ -3166,27 +2907,12 @@ country_event = {
 		name = colombia.64.a
 
 		ai_chance = {
-			base = 2
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = EUYL_chaos_mode
-					option = YES
-				}
-			}
-		}
-
-		ai_chance = {
 			base = 50
 			modifier = {
 				factor = 1.5
 				any_other_country = {
 					is_major = no
-<<<<<<< HEAD
 					has_full_control_of_state = 859
-=======
-					has_full_control_of_state = 975
->>>>>>> Oscar's-branch
 				}
 			}
 		}
@@ -3195,32 +2921,19 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-<<<<<<< HEAD
 						859 = {
 							is_core_of = COL
 						}
 					}
 				}
 				add_state_claim = 859
-=======
-						975 = {
-							is_core_of = ROOT
-						}
-					}
-				}
-				add_state_claim = 975
->>>>>>> Oscar's-branch
 			}
 		}
 
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
-<<<<<<< HEAD
 			generator = { 859 }
-=======
-			generator = { 975 }
->>>>>>> Oscar's-branch
 		}
 	}
 
@@ -3231,11 +2944,7 @@ country_event = {
 				factor = 1.5
 				any_other_country = {
 					is_major = yes
-<<<<<<< HEAD
 					has_full_control_of_state = 859
-=======
-					has_full_control_of_state = 975
->>>>>>> Oscar's-branch
 				}
 			}
 		}
@@ -3797,11 +3506,11 @@ country_event = {
 		add_political_power = 100
 		
 		add_opinion_modifier = {
-			target = FROM
+			target = COL
 			modifier = embargo
 		}
 		
-		FROM = {
+		COL = {
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = embargo
@@ -3834,15 +3543,15 @@ country_event = {
 		
 		create_wargoal = {
 			type = puppet_wargoal_focus
-			target = FROM
+			target = COL
 		}
 		
 		add_opinion_modifier = {
-			target = FROM
+			target = COL
 			modifier = embargo
 		}
 		
-		FROM = {
+		COL = {
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = embargo
@@ -3903,11 +3612,11 @@ country_event = {
 		army_experience = 25
 		
 		add_opinion_modifier = {
-			target = FROM
+			target = COL
 			modifier = embargo
 		}
 		
-		FROM = {
+		COL = {
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = embargo
@@ -3928,13 +3637,6 @@ country_event = {
 				factor = 0.5
 				is_historical_focus_on = yes
 			}
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = EUYL_chaos_mode
-					option = YES
-				}
-			}
 		}
 	}
 	
@@ -3945,15 +3647,15 @@ country_event = {
 		
 		create_wargoal = {
 			type = puppet_wargoal_focus
-			target = FROM
+			target = COL
 		}
 		
 		add_opinion_modifier = {
-			target = FROM
+			target = COL
 			modifier = embargo
 		}
 		
-		FROM = {
+		COL = {
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = embargo
@@ -3973,13 +3675,6 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				has_war = yes
-			}
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = EUYL_chaos_mode
-					option = YES
-				}
 			}
 		}
 	}
@@ -4041,7 +3736,7 @@ news_event = {
 		
 		trigger = {
 			OR = {
-				has_cosmetic_tag = GCO_UNIFIED
+				original_tag = COL
 				is_in_faction_with = COL
 			}
 		}
@@ -4062,7 +3757,7 @@ news_event = {
 		trigger = {
 			NOT = {
 				OR = {
-					has_cosmetic_tag = GCO_UNIFIED
+					original_tag = COL
 					is_in_faction_with = COL
 					original_tag = USA
 					is_in_faction_with = USA
@@ -4125,13 +3820,8 @@ country_event = {
 							has_country_flag = ceder_guajira_flag
 						}
 					}
-<<<<<<< HEAD
 					give_resource_rights = { receiver = USA state = 848 }
 					848 = {
-=======
-					give_resource_rights = { receiver = USA state = 1012 }
-					1012 = {
->>>>>>> Oscar's-branch
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4182,13 +3872,8 @@ country_event = {
 							has_country_flag = ceder_arauca_flag
 						}
 					}
-<<<<<<< HEAD
 					give_resource_rights = { receiver = USA state = 851 }
 					851 = {
-=======
-					give_resource_rights = { receiver = USA state = 1015 }
-					1015 = {
->>>>>>> Oscar's-branch
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4275,13 +3960,8 @@ country_event = {
 							has_country_flag = ceder_guajira_flag
 						}
 					}
-<<<<<<< HEAD
 					give_resource_rights = { receiver = FRA state = 848 }
 					848 = {
-=======
-					give_resource_rights = { receiver = FRA state = 1012 }
-					1012 = {
->>>>>>> Oscar's-branch
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4332,13 +4012,8 @@ country_event = {
 							has_country_flag = ceder_arauca_flag
 						}
 					}
-<<<<<<< HEAD
 					give_resource_rights = { receiver = FRA state = 851 }
 					851 = {
-=======
-					give_resource_rights = { receiver = FRA state = 1015 }
-					1015 = {
->>>>>>> Oscar's-branch
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4425,13 +4100,8 @@ country_event = {
 							has_country_flag = ceder_guajira_flag
 						}
 					}
-<<<<<<< HEAD
 					give_resource_rights = { receiver = ENG state = 848 }
 					848 = {
-=======
-					give_resource_rights = { receiver = ENG state = 1012 }
-					1012 = {
->>>>>>> Oscar's-branch
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4482,13 +4152,8 @@ country_event = {
 							has_country_flag = ceder_arauca_flag
 						}
 					}
-<<<<<<< HEAD
 					give_resource_rights = { receiver = ENG state = 851 }
 					851 = {
-=======
-					give_resource_rights = { receiver = ENG state = 1015 }
-					1015 = {
->>>>>>> Oscar's-branch
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4644,13 +4309,8 @@ country_event = {
 							has_country_flag = ceder_guajira_flag
 						}
 					}
-<<<<<<< HEAD
 					give_resource_rights = { receiver = THIS state = 848 }
 					848 = {
-=======
-					give_resource_rights = { receiver = THIS state = 1012 }
-					1012 = {
->>>>>>> Oscar's-branch
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4701,13 +4361,8 @@ country_event = {
 							has_country_flag = ceder_arauca_flag
 						}
 					}
-<<<<<<< HEAD
 					give_resource_rights = { receiver = THIS state = 851 }
 					851 = {
-=======
-					give_resource_rights = { receiver = THIS state = 1015 }
-					1015 = {
->>>>>>> Oscar's-branch
 						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
@@ -4790,15 +4445,9 @@ country_event = {
 			}
 			effect_tooltip = {
 				COL = {
-<<<<<<< HEAD
 					give_resource_rights = { receiver = ROOT state = 848 }	
 				}
 				848 = {
-=======
-					give_resource_rights = { receiver = ROOT state = 1012 }	
-				}
-				1012 = {
->>>>>>> Oscar's-branch
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -4856,15 +4505,9 @@ country_event = {
 			}
 			effect_tooltip = {
 				COL = {
-<<<<<<< HEAD
 					give_resource_rights = { receiver = ROOT state = 851 }
 				}
 				851 = {
-=======
-					give_resource_rights = { receiver = ROOT state = 1015 }
-				}
-				1015 = {
->>>>>>> Oscar's-branch
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
@@ -4960,15 +4603,9 @@ country_event = {
 				}
 			}
 			COL = {
-<<<<<<< HEAD
 				give_resource_rights = { receiver = FROM state = 848 }	
 			}
 			848 = {
-=======
-				give_resource_rights = { receiver = FROM state = 1012 }	
-			}
-			1012 = {
->>>>>>> Oscar's-branch
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -5049,15 +4686,9 @@ country_event = {
 				}
 			}
 			COL = {
-<<<<<<< HEAD
 				give_resource_rights = { receiver = FROM state = 851 }
 			}
 			851 = {
-=======
-				give_resource_rights = { receiver = FROM state = 1015 }
-			}
-			1015 = {
->>>>>>> Oscar's-branch
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -5201,17 +4832,10 @@ country_event = {
 		306 = {
 			set_state_flag = oligarquia_state_flag
 		}
-<<<<<<< HEAD
 		850 = {
 			set_state_flag = oligarquia_state_flag
 		}
 		849 = {
-=======
-		1014 = {
-			set_state_flag = oligarquia_state_flag
-		}
-		1013 = {
->>>>>>> Oscar's-branch
 			set_state_flag = oligarquia_state_flag
 		}
 	}
@@ -5814,11 +5438,7 @@ country_event = {
 					has_country_flag = japura_incident
 				}
 			}
-<<<<<<< HEAD
 			transfer_state = 858
-=======
-			transfer_state = 958
->>>>>>> Oscar's-branch
 		}
 		else_if = {
 			limit = {
@@ -5826,11 +5446,7 @@ country_event = {
 					has_country_flag = mapari_incident
 				}
 			}
-<<<<<<< HEAD
 			transfer_state = 886
-=======
-			transfer_state = 1023
->>>>>>> Oscar's-branch
 		}
 
 		add_stability = 0.05
@@ -6180,13 +5796,6 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				has_war = yes
-			}
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = EUYL_chaos_mode
-					option = YES
-				}
 			}
 		}
 	}

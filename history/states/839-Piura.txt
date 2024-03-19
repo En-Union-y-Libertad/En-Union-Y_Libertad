@@ -1,13 +1,8 @@
 
 state={
-<<<<<<<< HEAD:history/states/839-Piura.txt
 	id=839
 	name="STATE_839"
 
-========
-	id=1005
-	name="Piura"
->>>>>>>> Oscar's-branch:history/states/1005-Piura.txt
 	history={
 		owner = PRU
 		add_core_of = PRU
@@ -16,7 +11,7 @@ state={
 
 		}
 		victory_points = {
-			14235 3 
+			2156 3 
 		}
 
 	}
@@ -24,7 +19,7 @@ state={
 	provinces={
 		2156 14235 14239 14256 14263 
 	}
-	manpower=640178
+	manpower=34503
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

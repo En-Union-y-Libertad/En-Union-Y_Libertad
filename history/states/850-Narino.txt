@@ -1,12 +1,7 @@
 
 state={
-<<<<<<<< HEAD:history/states/850-Narino.txt
 	id=850
 	name="STATE_850"
-========
-	id=1014
-	name="STATE_1014"
->>>>>>>> Oscar's-branch:history/states/1014-Narino.txt
 	resources={
 		chromium=6.000
 	}

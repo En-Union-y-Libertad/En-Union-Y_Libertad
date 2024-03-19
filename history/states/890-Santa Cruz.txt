@@ -1,21 +1,14 @@
 
 state={
-<<<<<<<< HEAD:history/states/890-Santa Cruz.txt
 	id=890
 	name="STATE_890"
-========
-	id=954
-	name="STATE_954"
->>>>>>>> Oscar's-branch:history/states/954 - Santa Cruz.txt
 
 	history={
 		owner = ARG
 		buildings = {
 			infrastructure = 1
 			air_base = 2
-			5173 = {
-				naval_base = 1
-			}
+
 		}
 		add_core_of = ARG
 		add_core_of = PAT

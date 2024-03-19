@@ -1,12 +1,7 @@
 
 state={
-<<<<<<<< HEAD:history/states/897-San Juan.txt
 	id=897
 	name="STATE_897"
-========
-	id=960
-	name="STATE_960"
->>>>>>>> Oscar's-branch:history/states/960 - San Juan.txt
 
 	history={
 		owner = ARG

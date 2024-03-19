@@ -1,11 +1,6 @@
 state={
-<<<<<<<< HEAD:history/states/866-Sucre.txt
 	id=866
 	name="STATE_866"
-========
-	id=1030
-	name="Sucre"
->>>>>>>> Oscar's-branch:history/states/1030-Sucre.txt
 	history={
 		owner = VEN
 		buildings = {

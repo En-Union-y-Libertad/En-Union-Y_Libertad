@@ -1,11 +1,6 @@
 state={
-<<<<<<<< HEAD:history/states/879-Parana.txt
 	id=879
 	name="STATE_879"
-========
-	id=944
-	name="STATE_944"
->>>>>>>> Oscar's-branch:history/states/944 - Parana.txt
 	history={
 		owner = BRA
 		buildings = {

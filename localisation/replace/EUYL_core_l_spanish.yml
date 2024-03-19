@@ -1758,13 +1758,3 @@
  MSGRDK_INVITE_UNAVAILABLE_PRIVILEGE:0 "***Tu amigo juega en otra plataforma y los ajustes de su perfil no permiten las partidas multijugador multiplataforma.***"
  MSGRDK_JOIN_UNAVAILABLE_PRIVILEGE:0 "***Tu amigo juega en otra plataforma y los ajustes de tu perfil no permiten las partidas multijugador multiplataforma.***"
  INVALID_PRIVILEGES:0 "Debes iniciar sesión con un perfil de usuario que tenga el privilegio de partidas cruzadas entre plataformas habilitado."
-<<<<<<< HEAD
-=======
- 
- ### EUYL ###
- 
- MENU_DISCORD:0 "Servidor de Discord Oficial para En Unión y Libertad"
- MENU_PATREON:0 "Mi Patreon, cualquier donación me ayudaría muchisimo!"
- MENU_TWITCH:0 "Mi Twitch, hago streams de vez en cuando"
- MENU_SURVEY:0 "Encuesta de opinión de los jugadores para valorar los árboles de enfoque y los países en general. ¡Su opinión es muy importante para mí, ya que me permite mejorar el mod aún más para su disfrute! Gracias y ¡que tengas un buen día!"
->>>>>>> Oscar's-branch

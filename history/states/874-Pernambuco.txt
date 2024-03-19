@@ -1,11 +1,6 @@
 state={
-<<<<<<<< HEAD:history/states/874-Pernambuco.txt
 	id=874
 	name="STATE_874"
-========
-	id=936
-	name="STATE_936"
->>>>>>>> Oscar's-branch:history/states/936 - Pernambuco.txt
 	resources={
 		oil=2
 		steel=2

@@ -1,4 +1,5 @@
 ﻿capital = 303
+add_ideas = monroe_doctrine_idea
 oob = "PRU_1936"
 
 add_ideas = {
@@ -8,7 +9,6 @@ add_ideas = {
 	PRU_divided_army
 	PRU_naval_democratic_loyalties
 	PRU_fiat_currency_instability_1
-<<<<<<< HEAD
 }
 
 set_variable = { PRU_army_power = 5 }
@@ -20,23 +20,7 @@ set_variable = { PRU_military_factory_speed = 0.01 }
 set_variable = { PRU_dockyard_output = -0.02}
 set_variable = { PRU_ship_attack_and_defense = -0.01 }
 set_variable = { PRU_dockyard_production_speed = -0.01 }
-=======
-	limited_conscription
-	EUYL_focus_on_army
-}
 
-set_variable = { PRU_army_ideology = 1 } ## 1 - fascist | 0 - democratic 
-set_variable = { PRU_navy_ideology = 0 } ## 1 - fascist | 0 - democratic 
-
-set_variable = { PRU_support_for_the_revolution = 0 }
-set_variable = { PRU_100 = 100 }
-
-activate_mission = PRU_upcoming_elections
->>>>>>> Oscar's-branch
-
-
-494 = { add_dynamic_modifier = { modifier = EUYL_native_population } }
-988 = { add_dynamic_modifier = { modifier = EUYL_native_population } }
 
 recruit_character = PRU_Oscar_benavides
 recruit_character = PRU_manuel_prado_ugarteche
@@ -54,7 +38,6 @@ recruit_character = PRU_armando_figueroa_roggero
 recruit_character = PRU_josé_r_alzamora
 recruit_character = PRU_federico_corrico
 recruit_character = PRU_rafael_escardo
-recruit_character = PRU_Wayna_Qhapaq
 recruit_character = PRU_alberto_lopez_flores
 recruit_character = PRU_oscar_gilardi
 recruit_character = PRU_armando_reveredo_iglesias
@@ -84,77 +67,9 @@ recruit_character = PRU_apu_panchau
 recruit_character = PRU_Cesar_Atahualpa
 recruit_character = PRU_eloy_ureta_montehermoso_leader
 recruit_character = PRU_carlos_Miro
+recruit_character = PRU_eudocio_ravines
 recruit_character = PRU_ricardo_perez_godoy_general
 recruit_character = PRU_nicolas_lindley_lopez
-<<<<<<< HEAD
-=======
-recruit_character = PRU_ernesto_montagne_markholz
-recruit_character = PRU_Justo_Pumacahua
-recruit_character = PRU_Mateo_Sahuaraural
-recruit_character = PRU_Amadeo_Quispe
-recruit_character = PRU_maximo_pimentel
-recruit_character = PRU_carlos_rotalde
-recruit_character = PRU_carlos_minano_mendocilla
-recruit_character = PRU_victor_rodriguez_zumaran
-recruit_character = PRU_haya_de_la_torre
-recruit_character = PRU_eudocio_ravines
-recruit_character = PRU_luis_antonio_eguiguren_escudero
-recruit_character = PRU_carlos_pio_habsburgo_borbon
-recruit_character = PRU_federico_more_barrionuevo
-recruit_character = PRU_carlos_miro_quesada
-
-promote_character = PRU_eudocio_ravines
-
-PRU_manuel_a_odria = {
-	set_character_flag = PRU_urrista
-}
-
-PRU_carlos_pio_habsburgo_borbon = {
-	set_character_flag = PRU_urrista
-}
-
-PRU_eloy_ureta_montehermoso = {
-	set_character_flag = PRU_urrista
-}
-
-PRU_ernesto_montagne_markholz = {
-	set_character_flag = PRU_urrista
-}
-
-PRU_Amadeo_Quispe = {
-	set_character_flag = PRU_inca 
-}
-
-PRU_Mateo_Sahuaraural = {
-	set_character_flag = PRU_inca
-}
-
-PRU_Justo_Pumacahua = {
-	set_character_flag = PRU_inca
-}
-
-PRU_Cesar_Atahualpa = {
-	set_character_flag = PRU_inca
-}
-
-PRU_pachacutec_2 = {
-	set_character_flag = PRU_inca 
-}
-
-PRU_pachacutec_2_general = {
-	set_character_flag = PRU_inca 
-}
-PRU_ricardo_perez_godoy_general = {
-	set_character_flag = PRU_inca
-}
-
-PRU_eudocio_ravines = { set_character_flag = PRU_communist }
-PRU_haya_de_la_torre = { set_character_flag = PRU_communist }
-PRU_jorge_del_prado_chávez = { set_character_flag = PRU_communist }
-PRU_luis_antonio_eguiguren_escudero = { set_character_flag = PRU_communist }
-
-
->>>>>>> Oscar's-branch
 
 set_war_support = 0.2
 

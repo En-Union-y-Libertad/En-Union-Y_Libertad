@@ -1,19 +1,11 @@
 state={
-<<<<<<<< HEAD:history/states/863-Distrito Capital.txt
 	id=863
 	name="STATE_863"
-========
-	id=1027
-	name="Distrito Capital"
->>>>>>>> Oscar's-branch:history/states/1027-Distrito Capital.txt
 	history={
 		owner = VEN
 		add_core_of = VEN
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 4
-			arms_factory = 1
-			air_base = 3
 			8113 = {
 				naval_base = 3
 			}
@@ -28,7 +20,7 @@ state={
 	provinces={
 		7968 8113 14509 14512 14519 
 	}
-	manpower=1651101
+	manpower=2403110
 	buildings_max_level_factor=1.000
 	state_category=city
 }

@@ -1,36 +1,23 @@
-
 state={
-<<<<<<<< HEAD:history/states/885-La Araucania.txt
 	id=885
 	name="STATE_885"
-========
-	id=950
-	name="STATE_950"
-
->>>>>>>> Oscar's-branch:history/states/950 - Araucania.txt
 	history={
 		owner = CHL
 		add_core_of = CHL
 		add_core_of = PAT
 		buildings = {
-			infrastructure = 1
 			5121 = {
 				naval_base = 2
-
 			}
-
 		}
 		victory_points = {
 			5121 2 
 		}
-
 	}
-
 	provinces={
-		5121 12920 13738 13739
+		5121 12920 13738 13739 13740 13741 
 	}
 	manpower=132200
 	buildings_max_level_factor=1.000
 	state_category=pastoral
-	local_supplies=0.000
 }

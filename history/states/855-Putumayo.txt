@@ -1,18 +1,12 @@
 state={
-<<<<<<<< HEAD:history/states/855-Putumayo.txt
 	id=855
 	name="STATE_855"
-========
-	id=1019
-	name="STATE_1019"
->>>>>>>> Oscar's-branch:history/states/1019-Putumayo.txt
 	resources={
 		rubber=14
 	}
 
 	history={
 		owner = COL
-		add_claim_by = PRU
 		buildings = {
 			infrastructure = 1
 		}

@@ -3,122 +3,12 @@
  ARG_greater_confederation_DEF:0 "La Gran Confederación Argentina"
  ARG_military_junta:0 "Junta Militar Argentina"
  ARG_military_junta_DEF:0 "La Junta Militar Argentina"
- ARG_greater_confederation_ADJ:0 "Argentino"
- ARG_military_junta_ADJ:0 "Argentino"
-
- BRA_TEMPORARY_MONARCHIST_STATE:0 "Estado Monárquico Temporal de Brasil"
- BRA_TEMPORARY_MONARCHIST_STATE_DEF:0 "Estado Monárquico Temporal de Brasil"
- BRA_TEMPORARY_MONARCHIST_STATE_ADJ:0 "Brasileño"
-
- PRU_KINGDOM:0 "Reino del Perú"
- PRU_KINGDOM_DEF:0 "el Reino del Perú"
- PRU_KINGDOM_ADJ:0 "Peruano"
-
- PRU_GREATER_KINGDOM:0 "Gran Reino del Perú"
- PRU_GREATER_KINGDOM_DEF:0 "el Gran Reino del Perú"
- PRU_GREATER_KINGDOM_ADJ:0 "Peruano"
-
- PRU_SPANISH_EMPIRE:0 "Imperio Español"
- PRU_SPANISH_EMPIRE_DEF:0 "Imperio español"
- PRU_SPANISH_EMPIRE_ADJ:0 "español-peruano"
-
- BRA_BAY_KINGDOM:0 "Reino de Brasil y Baviera"
- BRA_BAY_KINGDOM_DEF:0 "Reino de Brasil y Baviera"
- BRA_BAY_KINGDOM_ADJ:0 "brasileño-bávaro"
-
- BRA_WEST_AFRICA:0 "África Occidental Brasileña"
- BRA_WEST_AFRICA_DEF:0 "África Occidental Brasileña"
- BRA_WEST_AFRICA_ADJ:0 "África Occidental Brasileña"
-
- CVE_communist:0 "República Popular de Venezuela"
- CVE_communist_DEF:0 "República Popular de Venezuela"
- CVE_communist_ADJ:0 "Venezolano"
-
- greater_paraguay:0 "Gran Paraguay"
- greater_paraguay_DEF:0 "Gran Paraguay"
- greater_paraguay_ADJ:0 "Paraguayo"
-
- PAR_NATIVE:0 "Paraguái Tavakuairetã"
- PAR_NATIVE_DEF:0 "el Paraguái Tavakuairetã"
- PAR_NATIVE_ADJ:0 "Paraguáire"
+ ARG_greater_confederation_ADJ:0 "Gran Confederación Argentina"
+ ARG_military_junta_ADJ:0 "Junta Militar Argentina"
  
-<<<<<<< HEAD
  CHL_anarchist_global_commune:0 "Comunidad Anrquísta Global"
  CHL_anarchist_global_commune_DEF:0 "La Comunidad Anrquísta Global"
  CHL_anarchist_global_commune_ADJ:0 "Comunidad Anrquísta Global"
-=======
- CHL_anarchist_global_commune:0 "Comunidad Anarquísta Global"
- CHL_anarchist_global_commune_DEF:0 "La Comunidad Anarquísta Global"
- CHL_anarchist_global_commune_ADJ:0 "Comunidad Anarquísta Global"
- 
- AARC:0 "Consejo Anarquista Argentino"
- AARC_DEF:0 "el Consejo Anarquista Argentino"
- AARC_ADJ:0 "Argentino"
-
- ARCC:0 "Confederación Argentina"
- ARCC_DEF:0 "la Confederación Argentina"
- ARCC_ADJ:0 "Argentino"
-
- FARC:0 "Argentina Revolucionaria"
- FARC_DEF:0 "Agentina Revolucionaria"
- FARC_ADJ:0 "Argentino"
-
- PARGC:0 "Estado Revolucionario de Argentina"
- PARGC_DEF:0 "el Estado Revolucionario de Argentina"
- PARCG_ADJ:0 "Argentino"
-
- BRA_SECOND_EMPIRE:0 "Segundo Imperio Brasileño"
- BRA_SECOND_EMPIRE_DEF:0 "Segundo Imperio Brasileño"
- BRA_SECOND_EMPIRE_ADJ:0 "brasileño"
-
- CARC:0 "República Argentina"
- CARC_DEF:0 "la República Argentina"
- CARC_ADJ:0 "Argentino"
-
- TAS:0 "Estado Anarquista Temporal"
- TAS_DEF:0 "Estado Anarquista Temporal"
- TAS_ADJ:0 "Anarquistas"
-
- FARGC:0 "Reich Argentino"
- FARGC_DEF:0 "el Reich Argentino"
- FARGC_ADJ:0 "Argentino"
-
- FARGD:0 "Argentina católica"
- FARGD_DEF:0 "Argentina católica"
- FARGD_ADJ:0 "Argentino"
-
- ARG_PAPAL:0 "Santo Estado Pontificio"
- ARG_PAPAL_DEF:0 "el Santo Estado Papal"
- ARG_PAPAL_ADJ:0 "Argentino"
-
- ARG_PROVINCIAS:0 "Provincias Unidas del Río de la Plata"
- ARG_PROVINCIAS_DEF:0 "las Provincias Unidas del Río de la Plata"
- ARG_PROVINCIAS_ADJ:0 "Platense"
-
- ARG_REICH:0 "Reich Argentino"
- ARG_REICH_DEF:0 "el Reich Argentino"
- ARG_REICH_ADJ:0 "Argentino"
-
- ARG_GERMANY:0 "Reich alemán"
- ARG_GERMANY_DEF:0 "el Reich alemán"
- ARG_GERMANY_ADJ:0 "Alemán-Argentino"
-
- ARG_TNM:0 "Argentina Tacuarista"
- ARG_TNM_DEF:0 "la Argentina Tacuarista"
- ARG_TNM_ADJ:0 "Argentino"
-
- ARG_la_plata:0 "Comuna de La Plata"
- ARG_la_plata_DEF:0 "la Comuna de La Plata"
- ARG_la_plata_ADJ:0 "Platense"
->>>>>>> Oscar's-branch
-
- ARG_PLATA:0 "La Plata Revolucionaria"
- ARG_PLATA_DEF:0 "La Plata Revolucionaria"
- ARG_PLATA_ADJ:0 "Platense"
-
- ARG_ANDESIA:0 "Andesia"
- ARG_ANDESIA_DEF:0 "Andesia"
- ARG_ANDESIA_ADJ:0 "Andesino"
 
  BOL_government:0 "Gobierno Boliviano"
  BOL_armed_forces:0 "Las Fuerzas Armadas Bolivianas"
@@ -149,24 +39,6 @@
  GCO_UNIFIED_fascism_DEF:0 "la Gran Colombia"
  GCO_UNIFIED_communism_ADJ:0 "la Gran Colombia"
  GCO_UNIFIED_fascism_ADJ:0 "la Gran Colombia"
- GCO_UNIFIED_democratic:0 "República de Gran Colombia"
- GCO_UNIFIED_democratic_DEF:0 "República de Gran Colombia"
- GCO_UNIFIED_democratic_ADJ:0 "Gran Colombiana"
- GCO_UNIFIED_neutrality:0 "Estado de Gran Colombia"
- GCO_UNIFIED_neutrality_DEF:0 "el Estado de Gran Colombia"
- GCO_UNIFIED_neutrality_ADJ:0 "la Gran Colombia"
-
- VEN_JUNTA:0 "Junta Militar Venezolana"
- VEN_JUNTA_DEF:0 "Junta Militar Venezolana"
- VEN_JUNTA_ADJ:0 "Venezolana"
-
- GUOSR_UNIFIED:0 "Unión Global de Repúblicas Socialistas"
- GUOSR_UNIFIED_DEF:0 "Unión Global de Repúblicas Socialistas"
- GUOSR_UNIFIED_ADJ:0 "Globalistas"
-
- VEN_GREATER:0 "Gran Venezuela"
- VEN_GREATER_DEF:0 "Gran Venezuela"
- VEN_GREATER_ADJ:0 "venezolanos"
 
  VRP_UNIFIED:0 "Virreinato del Río de la Plata"
  VRP_UNIFIED_DEF:0 "el Virreinato del Río de la Plata"
@@ -188,9 +60,6 @@
  PBC_UNIFIED_fascism_DEF:0 "la Confederación Perú-Boliviana"
  PBC_UNIFIED_communism_ADJ:0 "Perú-Boliviana"
  PBC_UNIFIED_fascism_ADJ:0 "Perú-Boliviana"
- PBC_UNIFIED_democratic:0 "República Peru-Bolivian "
- PBC_UNIFIED_democratic_DEF:0 "la República Perúu-Boliviana"
- PBC_UNIFIED_democratic_ADJ:0 "Perú-Boliviana"
  
  RPE_UNIFIED_neutrality:0 "Imperio Rioplatense"
  RPE_UNIFIED_fascism:0 "Imperio Rioplatense"

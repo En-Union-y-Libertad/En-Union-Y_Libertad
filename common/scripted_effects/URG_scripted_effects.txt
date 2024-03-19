@@ -1,0 +1,69 @@
+#Increases Blanco opposition
+URG_increase_blanco_opposition = {
+	if = {
+		limit = {
+			has_idea = URG_blancos_in_opposition0
+		}
+		swap_ideas = {
+			remove_idea = URG_blancos_in_opposition0
+			add_idea = URG_blancos_in_opposition1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = URG_blancos_in_opposition1
+		}
+		swap_ideas = {
+			remove_idea = URG_blancos_in_opposition1
+			add_idea = URG_blancos_in_opposition2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = URG_blancos_in_opposition2
+		}
+		swap_ideas = {
+			remove_idea = URG_blancos_in_opposition2
+			add_idea = URG_blancos_in_opposition3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = URG_blancos_in_opposition3
+		}
+		remove_ideas = URG_blancos_in_opposition3
+		URG = {
+			country_event = uruguay.31
+		}
+	}
+}
+
+URG_reduce_blanco_opposition = {
+	if = {
+		limit = {
+			has_idea = URG_blancos_in_opposition1
+		}
+		swap_ideas = {
+			remove_idea = URG_blancos_in_opposition1 
+			add_idea = URG_blancos_in_opposition0
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = URG_blancos_in_opposition2
+		}
+		swap_ideas = {
+			remove_idea = URG_blancos_in_opposition2
+			add_idea = URG_blancos_in_opposition1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = URG_blancos_in_opposition3
+		}
+		swap_ideas = {
+			remove_idea = URG_blancos_in_opposition3
+			add_idea = URG_blancos_in_opposition2
+		}
+	}
+}

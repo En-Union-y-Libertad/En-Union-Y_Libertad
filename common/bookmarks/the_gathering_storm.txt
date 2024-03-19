@@ -114,31 +114,14 @@ bookmarks = {
 		"ITA"={
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
-			available = { has_dlc = "By Blood Alone" }
 			ideas = {
-				vittorio_emanuele
-				ITA_iri_fake_ns
-				ITA_re_fake_ns
+				vittoria_mutilata
+				victor_emmanuel
 			}	
 			focuses = {
-				ITA_comandante_diavolo
-				ITA_il_sol_dell_avvenire
-				ITA_a_colonial_empire
-			}		
-		}
-		"ITA"={
-			history = "ITA_GATHERING_STORM_DESC"
-			ideology = fascism
-			available = { NOT = { has_dlc = "By Blood Alone" } }
-			ideas = {
-				vittorio_emanuele
-				ITA_iri_fake_ns
-				ITA_re_fake_ns
-			}	
-			focuses = {
-				ITA_comandante_diavolo
-				ITA_to_live_as_a_lion
-				ITA_a_colonial_empire
+				ITA_pact_of_steel
+				ITA_spanish_italian_faction
+				ITA_italy_first
 			}		
 		}
 		"JAP"={
@@ -607,124 +590,20 @@ bookmarks = {
 				POL_fulfil_fifth_of_november
 			}
 		}
-		"ETH"={
-			minor = yes
-			history = "ETH_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				ETH_conservative_high_command_idea
-				ETH_the_heroes_of_adwa_idea
-				ETH_on_our_own_idea
-			}
-			focuses = {
-				ETH_rally_around_the_emperor
-				ETH_reach_out_to_the_italians
-				ETH_military_communism
-			}
-		}
-		"SWI"={
-			minor = yes
-			history = "SWI_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				SWI_swiss_neutrality
-				SWI_foreign_fascist_propaganda
-			}
-			focuses = {
-				SWI_national_redoubt
-				SWI_take_a_stance
-				SWI_the_new_eidgenossenschaft
-			}
-		}
-		
-		FIN={
-			minor = yes
-			history = FIN_GATHERING_STORM_DESC
-			ideology = neutrality
-			available = {  NOT = { has_dlc = "Arms Against Tyranny" } }
-			ideas = {
-				FIN_sisu_2
-			}
-			focuses = {
-				FIN_winter_warfare
-				FIN_greater_finland
-				FIN_oy_alkoholiliike
-			}
-		}
-		FIN={
-			minor = yes
-			history = FIN_GATHERING_STORM_DESC
-			ideology = neutrality
-			available = { has_dlc = "Arms Against Tyranny" } 
-			ideas = {
-				FIN_sisu_2
-			}
-			focuses = {
-				FIN_red_finland
-				FIN_winter_warfare
-				FIN_greater_finland
-			}
-		}
-		SWE={
-			minor = yes
-			history = "SWE_GATHERING_STORM_DESC"
-			ideology = democratic
-			available = { has_dlc = "Arms Against Tyranny" } 
-			ideas = {
-				SWE_hungershield
-				SWE_gustaf_v_idea
-				SWE_severe_lack_of_ammunition
-			}
-			focuses = {
-				SWE_strike_the_capitalist_beast_down
-				SWE_prevent_a_red_dictatorship
-				SWE_king_in_council
-			}
-		}
-		"NOR"={
-			minor = yes
-			history = "NOR_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				NOR_complacent_cabinet_ns
-				NOR_the_hard_thirties_ns
-				NOR_anti_communist_sentiment_ns
-			}
-			focuses = {
-				NOR_continue_nygaardsvold_government
-				NOR_the_stumbling_storting
-				NOR_arrest_quisling			
-			}
-		}
-		"DEN"={
-			minor = yes
-			history = DEN_GATHERING_STORM_DESC
-			ideology = democratic
-			ideas = {
-				DEN_fake_neglected_military_ns 
-				DEN_fake_economic_crisis_ns
-				DEN_fake_industrial_capability_ns
-			}
-			focuses = {
-				DEN_declare_neutrality
-				DEN_establish_the_danelaw 
-				DEN_pan_scandinavianism
-			}
-		}
 		
 		"ARG" = {
 			minor = yes
 			history = "ARG_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				ARG_infamous_decade_showcase_idea
+				ARG_economic_depression
 				ARG_distrust_of_military
-				ARG_corruption_scandal_showcase_idea
+				ARG_rampant_corruption
 			}
 			focuses = {
 				ARG_infamous_decade
 				ARG_viva_la_patria_argentina
-				ARG_prepare_the_army
+				ARG_drift_back_towards_the_confederation
 			}
 		}
 		
@@ -755,7 +634,7 @@ bookmarks = {
 			}
 			focuses = {
 				URG_lessons_of_paso_morlan
-				URG_legacy_of_batlle
+				URG_uruguayan_golden_age
 				URG_industrial_economy
 			}
 		}
@@ -791,6 +670,10 @@ bookmarks = {
 				BOL_reform_the_peru_bolivian_confederation
 			}
 		}		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
 		
 		"COL" = {
 			minor = yes 
@@ -806,58 +689,6 @@ bookmarks = {
 				COL_pueblo_a_la_carga
 				COL_nuestro_por_derecho
 			}
-		}
-		
-		"BRA" = {
-			minor = yes 
-			history = "BRA_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				BRA_scars_of_the_1930_revolution_1
-				BRA_police_brutality_1
-				rural_economy
-			}
-			focuses = {
-				BRA_the_blue_purge
-				BRA_enact_the_cohen_plan
-				BRA_officialy_establish_the_empire
-			}
-		}
-
-		"PAR" = {
-			minor = yes 
-			history = "PAR_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				PAR_worn_out_army_1
-				PAR_political_instability
-				PAR_victor_of_the_chaco_war
-			}
-			focuses = {
-				PAR_support_the_revolution
-				PAR_restructure_the_country
-				PAR_the_legacy_of_selano_lopez
-			}
-		}
-
-		"VEN" = {
-			minor = yes 
-			history = "VEN_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				VEN_abrupt_government_transition_3
-				VEN_dependent_on_oil_extraction_1
-				VEN_transition_to_democracy
-			}
-			focuses = {
-				VEN_temporarily_imprison_galavis
-				VEN_the_terror_of_the_americas
-				VEN_la_tierra_de_bolivar
-			}
-		}
-		effect = {
-			randomize_weather = 22345 # <- Obligatory in every bookmark !
-			#123 = { rain_light = yes }
 		}
 	}
 }

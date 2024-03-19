@@ -1,11 +1,6 @@
 state={
-<<<<<<<< HEAD:history/states/887-Yaguas.txt
 	id=887
 	name="STATE_887"
-========
-	id=1022
-	name="Yaguas"
->>>>>>>> Oscar's-branch:history/states/1022-Yaguas.txt
 	history={
 		owner = PRU
 		buildings = {

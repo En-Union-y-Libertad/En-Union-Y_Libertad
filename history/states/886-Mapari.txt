@@ -1,16 +1,8 @@
-
 state={
-<<<<<<<< HEAD:history/states/886-Mapari.txt
 	id=886
 	name="STATE_886"
 	resources = {
 		rubber = 3
-========
-	id=1023
-	name="Mapari"
-	resources={
-		rubber=3.000
->>>>>>>> Oscar's-branch:history/states/1023-Mapari.txt
 	}
 
 	history={
@@ -19,18 +11,11 @@ state={
 			13083 1 
 		}
 		add_core_of = BRA
-<<<<<<<< HEAD:history/states/886-Mapari.txt
-========
-		add_core_of = ROA
-		
->>>>>>>> Oscar's-branch:history/states/1023-Mapari.txt
 	}
-
 	provinces={
-		13083 13343 14282 14302 14304 14310 14316 14321 14326 14327 14347
+		13083 14282 14302 14304 14310 14316 
 	}
 	manpower=119305
 	buildings_max_level_factor=1.000
 	state_category=pastoral
-	local_supplies=0.000
 }

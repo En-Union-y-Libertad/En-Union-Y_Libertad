@@ -1,11 +1,6 @@
 state={
-<<<<<<<< HEAD:history/states/888-Buenos Aires Capital.txt
 	id=888
 	name="STATE_888"
-========
-	id=1021
-	name="Capital Federal"
->>>>>>>> Oscar's-branch:history/states/1021-Buenos Aires Capital.txt
 	
 	state_category = megalopolis
 	

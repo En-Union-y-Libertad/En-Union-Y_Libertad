@@ -1,12 +1,7 @@
 
 state={
-<<<<<<<< HEAD:history/states/849-Antioquia.txt
 	id=849
 	name="STATE_849"
-========
-	id=1013
-	name="STATE_1013"
->>>>>>>> Oscar's-branch:history/states/1013-Antioquia.txt
 	resources={
 		chromium=4.000
 	}

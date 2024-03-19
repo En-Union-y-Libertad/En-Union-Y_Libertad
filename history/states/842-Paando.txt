@@ -1,12 +1,7 @@
 
 state={
-<<<<<<<< HEAD:history/states/842-Paando.txt
 	id=842
 	name="STATE_842"
-========
-	id=1004
-	name="Pando"
->>>>>>>> Oscar's-branch:history/states/1004-Paando.txt
 
 	history={
 		owner = BOL

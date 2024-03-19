@@ -1,10 +1,6 @@
 
 state={
-<<<<<<<< HEAD:history/states/847 - Montevideo.txt
 	id=847
-========
-	id=1011
->>>>>>>> Oscar's-branch:history/states/1011 - Montevideo.txt
 	name="Montevideo"
 	resources={
 		steel=5.000

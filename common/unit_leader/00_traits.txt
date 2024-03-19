@@ -20,14 +20,10 @@
 #	custom_prerequisite_tooltip = "" # loc key
 #	custom_gain_xp_trigger_tooltip = "" # loc key
 #	mutually_exclusive = other_trait # trait key
-#	parent = { # Can be added multiple times
-#	    traits = {XXX YYY ZZZ}  # A list of other traits that
-#       num_parents_needed = 1 # The number of the above traits that must be true
-#   }
-#   any_parent = { XXX YYY ZZZ } # shorthand for parent when num_parents_needed are defaulted to 1
-#   all_parents = { XXX YYY ZZZ } # shorthand for parent when num_parents_needed are the same as the number of parents
-#	gui_row = 0 # integer, starts at 0, unset or -1 means the trait does not appear in unlockable trait tree.
-#	gui_column = 0 # integer, starts at 0, unset or -1 means auto
+#	parent = other_trait # trait key
+#	num_parents_needed = -1 # integer, -1 means "all"
+#	gui_row = -1 # integer, starts at 0, -1 means auto
+#	gui_column = -1 # integer, starts at 0, -1 means auto
 #	allowed = trigger # scope is a unit leader
 #	prerequisites = trigger # scope is an unit leader
 #	gain_xp = trigger # scope is a combatant
@@ -88,7 +84,6 @@ leader_traits = {
 				factor = 0
 			}
 		}
-		
 	}
 	
 	
@@ -118,7 +113,6 @@ leader_traits = {
 				factor = 0
 			}
 		}
-		
 	}
 	
 	
@@ -152,7 +146,7 @@ leader_traits = {
 	}
 	
 	politically_connected = { 
-		type = land
+		type = { land navy }
 		trait_type = personality_trait
 		
 		non_shared_modifier = {
@@ -186,12 +180,12 @@ leader_traits = {
 		planning_skill_factor = 1
 		logistics_skill_factor = 1
 	}
-	
+
 	war_hero = { 
 		type = { land navy }
 		trait_type = personality_trait
 		
-		non_shared_modifier = { # WARNING! Changing the value of these modifiers requires changing them also in the tooltip ITA_heroes_of_the_nation_general_traits_tt
+		non_shared_modifier = {
 			promote_cost_factor = -0.5
 			reassignment_duration_factor = 0.5   # +50% cost to replace leader
 		}
@@ -363,7 +357,7 @@ leader_traits = {
 		logistics_skill_factor = 1
 	}
 
-	bearer_of_artillery = { # Reserved for Wojtek  
+	bearer_of_artillery = {
 		type = corps_commander
 		
 		trait_type = personality_trait
@@ -379,31 +373,7 @@ leader_traits = {
 	
 	infantry_officer = { 
 		type = land
-		trait_type = personality_trait 
-		
-		unit_trigger = {
-			OR = {
-				division_has_majority_template = infantry
-				division_has_majority_template = bicycle_battalion
-				division_has_majority_template = marine
-				division_has_majority_template = mountaineers
-				division_has_majority_template = paratrooper
-				division_has_majority_template = penal_battalion
-				
-				owner = {
-					has_idea = mass_assault_academy_spirit
-				}
-			}
-			owner = {
-				NOT = {
-					OR = {
-						has_idea = best_of_the_best_spirit
-						has_idea = academy_scholarships_spirit
-						has_idea = SOV_purged_junior_army_officers_3
-					}
-				}
-			}
-		}
+		trait_type = personality_trait
 		
 		trait_xp_factor = {
 			infantry_leader = 1     #+100%
@@ -413,10 +383,8 @@ leader_traits = {
 			factor = 1
 			
 			modifier = {
-				FROM = { 
-					has_idea = mass_assault_academy_spirit
-				}
-				factor = 2
+				FROM = { has_idea = mass_assault_academy_spirit }
+				factor = 1.5
 			}
 			
 			modifier = {
@@ -431,14 +399,6 @@ leader_traits = {
 				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
 				factor = 0
 			}
-			
-			modifier = {
-				FROM = { 
-					has_dlc = "By Blood Alone"
-				}
-				factor = 0
-			}
-			
 		}
 		defense_skill_factor = 1
 		planning_skill_factor = 1
@@ -447,30 +407,6 @@ leader_traits = {
 	cavalry_officer = { 
 		type = land
 		trait_type = personality_trait
-		unit_type = {
-			type = cavalry
-			type = camelry
-			type = motorized
-			type = mechanized
-		}
-		
-		unit_trigger = {
-			OR = {
-				division_has_majority_template = cavalry
-				division_has_majority_template = camelry
-				division_has_majority_template = motorized
-				division_has_majority_template = mechanized
-			}
-			owner = {
-				NOT = {
-					OR = {
-						has_idea = best_of_the_best_spirit
-						has_idea = academy_scholarships_spirit
-						has_idea = SOV_purged_junior_army_officers_3
-					}
-				}
-			}
-		}
 		
 		trait_xp_factor = {
 			cavalry_leader = 1     #+100%
@@ -478,7 +414,7 @@ leader_traits = {
 
 		new_commander_weight = {
 			factor = 1
-			
+
 			modifier = {
 				FROM = { has_idea = best_of_the_best_spirit }
 				factor = 0
@@ -491,14 +427,6 @@ leader_traits = {
 				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
 				factor = 0
 			}
-			
-			modifier = {
-				FROM = { 
-					has_dlc = "By Blood Alone"
-				}
-				factor = 0
-			}
-			
 		}
 		
 		attack_skill_factor = 1
@@ -512,40 +440,14 @@ leader_traits = {
 		trait_xp_factor = {
 			panzer_leader = 1     #+100%
 		}
-		
-		unit_trigger = {
-			OR = {
-				division_has_majority_template = light_armor
-				division_has_majority_template = medium_armor
-				division_has_majority_template = heavy_armor
-				division_has_majority_template = super_heavy_armor
-				
-				owner = {
-					has_idea = mobile_warfare_academy_spirit
-				}
-				
-			}
-			owner = {
-				NOT = {
-					OR = {
-						has_idea = best_of_the_best_spirit
-						has_idea = academy_scholarships_spirit
-						has_idea = SOV_purged_junior_army_officers_3
-					}
-				}
-			}
-		}
-		
 		new_commander_weight = {
 			factor = 1
 			
 			modifier = {
-				FROM = { 
-					has_idea = mobile_warfare_academy_spirit
-				}
-				factor = 2
+				FROM = { has_idea = mobile_warfare_academy_spirit }
+				factor = 1.5 
 			}
-			
+
 			modifier = {
 				FROM = { has_idea = best_of_the_best_spirit }
 				factor = 0
@@ -558,14 +460,6 @@ leader_traits = {
 				FROM = { has_idea = SOV_purged_junior_army_officers_3 }
 				factor = 0
 			}
-			
-			modifier = {
-				FROM = { 
-					has_dlc = "By Blood Alone"
-				}
-				factor = 0
-			}
-			
 		}
 		attack_skill_factor = 1
 		planning_skill_factor = 1
@@ -578,27 +472,6 @@ leader_traits = {
 		trait_xp_factor = {
 			trait_engineer = 1     #+100%
 		}
-		
-		unit_trigger = {
-			OR = {
-				division_has_battalion_in_template = engineer
-				division_has_battalion_in_template = light_flame_tank
-				division_has_battalion_in_template = medium_flame_tank
-				division_has_battalion_in_template = heavy_flame_tank
-				owner = {
-					has_idea = superior_firepower_academy_spirit
-				}
-			}
-			owner = {
-				NOT = {
-					OR = {
-						has_idea = best_of_the_best_spirit
-						has_idea = academy_scholarships_spirit
-					}
-				}
-			}
-		}
-		
 		new_commander_weight = {
 			factor = 1
 			
@@ -615,264 +488,11 @@ leader_traits = {
 				FROM = { has_idea = academy_scholarships_spirit }
 				factor = 0
 			}
-			
-			modifier = {
-				FROM = { has_dlc = "By Blood Alone" }
-				factor = 0
-			}
-			
 		}
 		attack_skill_factor = 1
 		planning_skill_factor = 1
 	}
 
-	irregulars_officer = { 
-		type = corps_commander
-
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = {
-				OR = {
-					original_tag = ITA
-					original_tag = ETH
-				}
-			}
-		}
-
-		unit_type = {
-			type = cavalry
-			type = camelry
-			type = irregular_infantry
-		}
-
-		unit_trigger = {
-			OR = {
-				division_has_majority_template = cavalry
-				division_has_majority_template = camelry
-				division_has_majority_template = irregular_infantry
-			}
-			owner = {
-				OR = {
-					original_tag = ITA
-					original_tag = ETH
-				}
-				NOT = {
-					OR = {
-						has_idea = best_of_the_best_spirit
-						has_idea = academy_scholarships_spirit
-					}
-				}
-			}
-		}
-		
-		modifier = {
-			modifier_army_sub_unit_irregular_infantry_attack_factor = 0.05
-			modifier_army_sub_unit_cavalry_speed_factor = 0.05
-			modifier_army_sub_unit_camelry_speed_factor = 0.05
-			out_of_supply_factor = -0.1
-			desert = {
-				movement = 0.1
-			}
-		}
-
-		new_commander_weight = {
-			base = 0
-			modifier = {
-				add = 0.5
-				FROM = { #Looks like the allowed parameter is doing NOTHING :D 
-					OR = {
-						original_tag = ITA
-						original_tag = ETH
-					}
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					has_completed_focus = ITA_comandante_diavolo
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					has_completed_focus = ITA_proclaim_the_italian_empire
-				}
-			}
-		}
-
-		attack_skill_factor = 1
-		planning_skill_factor = 1
-	}
-
-	ascari_officer = { 
-		type = corps_commander
-
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = {
-				original_tag = ITA
-			}
-		}
-
-		unit_type = {
-			type = infantry
-		}
-
-		unit_trigger = {
-			division_has_majority_template = infantry
-			owner = {
-				original_tag = ITA
-				NOT = {
-					OR = {
-						has_idea = best_of_the_best_spirit
-						has_idea = academy_scholarships_spirit
-					}
-				}
-			}
-		}
-		
-		modifier = {
-			modifier_army_sub_unit_infantry_defence_factor = 0.05
-			modifier_army_sub_unit_cavalry_defence_factor = 0.05
-			modifier_army_sub_unit_camelry_defence_factor = 0.05
-			desert = {
-				defence = 0.05
-			}
-		}
-
-		new_commander_weight = {
-			base = 0
-			modifier = {
-				add = 0.5
-				FROM = { #Looks like the allowed parameter is doing NOTHING :D 
-					original_tag = ITA
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					has_completed_focus = ITA_strengthen_ascari_corps
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					has_completed_focus = ITA_novus_ordo
-				}
-			}
-		}
-
-		defense_skill_factor = 1
-		logistics_skill_factor = 1
-	}
-
-	militias_officer = { 
-		type = corps_commander
-
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = {
-				OR = {
-					original_tag = ITA
-					original_tag = SWI
-				}
-			}
-		}
-
-		unit_type = {
-			type = militia
-		}
-
-		unit_trigger = {
-			division_has_majority_template = militia
-			owner = {
-				OR = {
-					original_tag = ITA
-					original_tag = SWI
-				}
-				NOT = {
-					OR = {
-						has_idea = best_of_the_best_spirit
-						has_idea = academy_scholarships_spirit
-					}
-				}
-			}
-		}
-		
-		modifier = {
-			modifier_army_sub_unit_militia_defence_factor = 0.05
-			modifier_army_sub_unit_militia_speed_factor = 0.05
-			modifier_army_sub_unit_militia_max_org_factor = 0.05
-		}
-
-		new_commander_weight = {
-			base = 0
-			modifier = {
-				add = 0.5
-				FROM = { #Looks like the allowed parameter is doing NOTHING :D 
-					OR = {
-						original_tag = ITA
-						original_tag = SWI
-					}
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					OR = {
-						has_completed_focus = ITA_strengthen_the_blackshirts
-						#TODO_Manu: Alt-hist focuses
-					}
-				}
-			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					OR = {
-						has_completed_focus = ITA_divino_duce
-						has_completed_focus = ITA_a_greater_purpose
-					}
-				}
-			}
-		}
-
-		defense_skill_factor = 1
-		planning_skill_factor = 1
-	}
-
-	jaeger = { 
-		type = land
-		trait_type = personality_trait 
-
-		allowed = {
-			FROM = { original_tag = FIN }
-		}
-				
-		trait_xp_factor = {
-			trickster = 1     #+100%
-			winter_specialist = 1     #+100%
-			commando = 1     #+100%
-			swamp_fox = 1     #+100%
-			ranger = 1     #+100%
-			hill_fighter = 1     #+100%
-			urban_assault_specialist = 1     #+100%
-			naval_invader = 1     #+100%
-		}
-
-		modifier = {
-			equipment_capture = 0.03
-		}
-		
-		new_commander_weight = {
-			factor = 0			
-		}
-
-		attack_skill_factor = 1
-		logistics_skill_factor = 1
-	}
 
 	
 ##################################
@@ -895,7 +515,7 @@ leader_traits = {
 		}
 		gui_row = 0
 		trait_type = assignable_trait
-		any_parent = {organizer}
+		parent = organizer
 	}
 
 	offensive_doctrine = { 
@@ -964,7 +584,7 @@ leader_traits = {
 			factor = 1
 		}
 		gui_row = 1
-		any_parent = { organizer }
+		parent = organizer
 		mutually_exclusive = thorough_planner
 		trait_type = assignable_trait
 	}
@@ -989,7 +609,7 @@ leader_traits = {
 			factor = 1
 		}
 		gui_row = 2
-		any_parent = { organizer }
+		parent = organizer
 		mutually_exclusive = fast_planner
 		trait_type = assignable_trait
 	}
@@ -1119,7 +739,7 @@ leader_traits = {
 			factor = 1
 		}
 		trait_type = assignable_trait
-		any_parent = { skilled_staffer }
+		parent = skilled_staffer
 		gui_row = 15
 	}
 
@@ -1210,16 +830,10 @@ leader_traits = {
 	}
 	skilled_staffer = { 
 		type = corps_commander
-		gain_xp_leader = {
-			if = {
-				limit = { is_leading_army_group = yes }
-				check_variable = { num_units > 99 }
-			}
-			else = {
-				check_variable = { num_units > 23 }
-			}
+		gain_xp = {
+			check_variable = { num_units > 23 }
 		}
-		custom_gain_xp_trigger_tooltip = fighting_with_enough_units
+		custom_gain_xp_trigger_tooltip = fighting_with_at_least_23_units
 		
 		cost = 2000
 		
@@ -1299,19 +913,16 @@ leader_traits = {
 		trait_type = assignable_terrain_trait
 		gui_row = 3
 				
-		parent = {
-			traits = {
-				desert_fox
-				swamp_fox
-				trait_mountaineer
-				hill_fighter
-				jungle_rat
-				ranger
-				urban_assault_specialist
-				winter_specialist
-			}
-			num_parents_needed = 2
-		} 
+		parent = desert_fox
+		parent = swamp_fox
+		parent = trait_mountaineer
+		parent = hill_fighter
+		parent = jungle_rat
+		parent = ranger
+		parent = urban_assault_specialist
+		parent = winter_specialist
+		
+		num_parents_needed = 2
 	}
 
 	winter_expert = { 
@@ -1329,7 +940,7 @@ leader_traits = {
 			factor = 1
 		}
 		
-		any_parent = { winter_specialist }
+		parent = winter_specialist
 
 		trait_type = assignable_terrain_trait
 		gui_row = 7
@@ -1620,7 +1231,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { panzer_leader }
+		parent = panzer_leader
 		
 		mutually_exclusive = combined_arms_expert
 		mutually_exclusive = cavalry_expert
@@ -1651,12 +1262,13 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { cavalry_leader panzer_leader }
+		parent = cavalry_leader
+		parent = panzer_leader
 		
 		mutually_exclusive = panzer_expert
 		mutually_exclusive = cavalry_expert
 		
-		
+		num_parents_needed = 1
 		gui_row = 2
 	}
 	
@@ -1676,7 +1288,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { cavalry_leader }
+		parent = cavalry_leader
 		
 		mutually_exclusive = panzer_expert
 		mutually_exclusive = combined_arms_expert
@@ -1712,7 +1324,7 @@ leader_traits = {
 		gui_row = 4
 		
 		trait_type = assignable_trait
-		any_parent = { trait_engineer }
+		parent = trait_engineer
 		mutually_exclusive = scavenger
 	}
 	
@@ -1733,7 +1345,7 @@ leader_traits = {
 		trait_type = assignable_trait
 		
 		gui_row = 5
-		any_parent = { trait_engineer }
+		parent = trait_engineer
 		mutually_exclusive = fortress_buster
 	}
 	
@@ -1754,7 +1366,7 @@ leader_traits = {
 		mutually_exclusive = ambusher
 		
 		trait_type = assignable_trait
-		any_parent = { infantry_leader }
+		parent = infantry_leader
 		gui_row = 6
 	}
 	
@@ -1776,7 +1388,7 @@ leader_traits = {
 		mutually_exclusive = infantry_expert
 
 		trait_type = assignable_trait
-		any_parent = { infantry_leader }
+		parent = infantry_leader
 		
 		gui_row = 7
 	}
@@ -1797,7 +1409,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { naval_invader }
+		parent = naval_invader
 		
 		gui_row = 8
 	}
@@ -1816,7 +1428,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { naval_invader }
+		parent = naval_invader
 		
 		gui_row = 9
 	}
@@ -1837,7 +1449,7 @@ leader_traits = {
 		enable_ability = probing_attack
 		
 		trait_type = assignable_trait
-		any_parent = { commando }
+		parent = commando
 		
 		gui_row = 10
 	}
@@ -1859,7 +1471,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { commando }
+		parent = commando
 		
 		gui_row = 11
 	}
@@ -1886,7 +1498,7 @@ leader_traits = {
 		genius_advisor_trait = army_concealment_3
 		
 		trait_type = assignable_trait
-		any_parent = { commando }
+		parent = commando
 		
 		gui_row = 12
 	}
@@ -1933,7 +1545,7 @@ leader_traits = {
 		enable_ability = makeshift_bridges
 		
 		trait_type = assignable_trait
-		any_parent = { trickster }
+		parent = trickster
 		prerequisites = {
 			check_variable = { num_terrain_traits > 0 }
 		}
@@ -1957,7 +1569,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { trickster }
+		parent = trickster
 		
 		gui_row = 14
 	}
@@ -2161,7 +1773,7 @@ leader_traits = {
 		}
 
 		trait_type = assignable_trait
-		any_parent = { seawolf }
+		parent = seawolf
 		mutually_exclusive = lancer
 		gui_row = 1
 		gui_column = 1
@@ -2183,7 +1795,7 @@ leader_traits = {
 		}
 
 		trait_type = assignable_trait
-		any_parent = { silent_hunter }
+		parent = silent_hunter
 		gui_row = 1
 		gui_column = 2
 	}
@@ -2199,7 +1811,10 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { seawolf fleet_protector }
+		parent = seawolf
+		parent = fleet_protector
+
+		num_parents_needed = 1
 		
 		mutually_exclusive = silent_hunter
 		
@@ -2229,7 +1844,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { fleet_protector }
+		parent = fleet_protector
 		
 		gui_row = 3
 		gui_column = 1
@@ -2245,11 +1860,10 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = {
-			silent_hunter
-			lancer
-			destroyer_leader
-		}
+		num_parents_needed = 1
+		parent = silent_hunter
+		parent = lancer
+		parent = destroyer_leader
 		
 		gui_row = 2
 		gui_column = 2
@@ -2266,7 +1880,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { destroyer_leader }
+		parent = destroyer_leader
 		
 		gui_row = 3
 		gui_column = 2
@@ -2292,7 +1906,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { fly_swatter }
+		parent = fly_swatter
 		
 		gui_row = 4
 		gui_column = 1
@@ -2309,7 +1923,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { cruiser_captain }
+		parent = cruiser_captain
 		
 		gui_row = 4
 		gui_column = 2
@@ -2326,7 +1940,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { superior_tactician }
+		parent = superior_tactician
 		mutually_exclusive = concealment_expert
 		gui_row = 5
 		gui_column = 1
@@ -2348,11 +1962,10 @@ leader_traits = {
 		genius_advisor_trait = navy_chief_commerce_raiding_3
 		
 		trait_type = assignable_trait
-		any_parent = {
-			superior_tactician
-			spotter
-			blockade_runner
-		}
+		parent = superior_tactician
+		parent = spotter
+		parent = blockade_runner
+		num_parents_needed = 1
 		mutually_exclusive = lone_wolf
 		gui_row = 6
 		gui_column = 1
@@ -2369,10 +1982,9 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = {
-			spotter
-			blockade_runner
-		}
+		parent = spotter
+		parent = blockade_runner
+		num_parents_needed = 1
 		mutually_exclusive = mine_layer
 		gui_row = 7
 		gui_column = 1
@@ -2388,10 +2000,9 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = {
-			spotter
-			blockade_runner
-		}
+		parent = spotter
+		parent = blockade_runner
+		num_parents_needed = 1
 		mutually_exclusive = mine_sweeper
 		gui_row = 8
 		gui_column = 1
@@ -2408,10 +2019,9 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = {
-		 	lone_wolf
-			concealment_expert
-		}
+		parent = lone_wolf
+		parent = concealment_expert
+		num_parents_needed = 1
 		gui_row = 5
 		gui_column = 2
 	}
@@ -2432,7 +2042,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { ironside }
+		parent = ironside
 		
 		gui_row = 12
 		gui_column = 1
@@ -2448,7 +2058,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { ironside }
+		parent = ironside
 		
 		gui_row = 14
 		gui_column = 1
@@ -2469,7 +2079,7 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { ironside }
+		parent = ironside
 		
 		gui_row = 13
 		gui_column = 1
@@ -2491,7 +2101,7 @@ leader_traits = {
 		
 		trait_type = assignable_trait
 		mutually_exclusive = crisis_magician
-		any_parent = { big_guns_expert }
+		parent = big_guns_expert
 		
 		gui_row = 12
 		gui_column = 2
@@ -2508,7 +2118,7 @@ leader_traits = {
 		
 		trait_type = assignable_trait
 		mutually_exclusive = marksman
-		any_parent = { safety_first }
+		parent = safety_first
 		
 		gui_row = 13
 		gui_column = 2
@@ -2530,7 +2140,7 @@ leader_traits = {
 		
 		trait_type = assignable_trait
 		
-		any_parent = { air_controller }
+		parent = air_controller
 		
 		gui_row = 10
 		gui_column = 1
@@ -2548,7 +2158,7 @@ leader_traits = {
 		trait_type = assignable_trait
 		mutually_exclusive = dive_bomber
 		mutually_exclusive = torpedo_bomber
-		any_parent = { flight_deck_manager }
+		parent = flight_deck_manager
 		
 		gui_row = 9
 		gui_column = 2
@@ -2573,7 +2183,7 @@ leader_traits = {
 		trait_type = assignable_trait
 		mutually_exclusive = fighter_director
 		mutually_exclusive = torpedo_bomber
-		any_parent = { flight_deck_manager }
+		parent = flight_deck_manager
 		
 		gui_row = 10
 		gui_column = 2
@@ -2599,7 +2209,7 @@ leader_traits = {
 		trait_type = assignable_trait
 		mutually_exclusive = fighter_director
 		mutually_exclusive = dive_bomber
-		any_parent = { flight_deck_manager }
+		parent = flight_deck_manager
 		
 		gui_row = 11
 		gui_column = 2
@@ -2875,7 +2485,7 @@ leader_traits = {
 		type = navy
 		trait_type = personality_trait
 	
-		modifier = { # WARNING! Changing the value of these modifiers requires changing them also in the tooltip ITA_flotta_d_evasione_admiral_traits_tt
+		modifier = {
 			naval_damage_factor = 0.05
 			naval_speed_factor = 0.1
 		}
@@ -3620,21 +3230,6 @@ leader_traits = {
 		}
 	}
 	
-	promoted_from_the_ranks = {  
-		type = land
-		trait_type = personality_trait
-		
-		modifier = {
-			promote_cost_factor = 0.5
-			planning_speed = 0.1
-			recon_factor = 0.05
-		}
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-	
 	### Chile ###
 
 	trait_CHL_fascist_sympathies = {
@@ -3676,28 +3271,5 @@ leader_traits = {
 		}
 	}
 
-
-	## ARGENTINA ##
-
-	trait_ARG_rural_bandit = {
-		type = all 
-		trait_type = personality_trait
-
-		allowed = {
-			FROM = {
-				original_tag = ARG 
-			}
-		}
-
-		modifier = {
-			army_morale_factor = 0.05
-			dig_in_speed = 0.05
-			max_dig_in_factor = 0.05
-		}
-
-		new_commander_weight = {
-			factor = 0
-		}
-	}
 
 }

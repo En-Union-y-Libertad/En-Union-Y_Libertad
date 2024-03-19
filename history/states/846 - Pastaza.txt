@@ -1,10 +1,6 @@
 
 state={
-<<<<<<<< HEAD:history/states/846 - Pastaza.txt
 	id=846
-========
-	id=1010
->>>>>>>> Oscar's-branch:history/states/1010 - Pastaza.txt
 	name="Orellana"
 
 	history={
@@ -15,6 +11,7 @@ state={
 
 		}
 		add_core_of = ECU
+		add_core_of = PRU
 
 	}
 

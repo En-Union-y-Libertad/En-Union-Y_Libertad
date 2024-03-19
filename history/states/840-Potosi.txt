@@ -1,12 +1,7 @@
 
 state={
-<<<<<<<< HEAD:history/states/840-Potosi.txt
 	id=840
 	name="STATE_840"
-========
-	id=1006
-	name="Potosi"
->>>>>>>> Oscar's-branch:history/states/1006-Potosi.txt
 	resources={
 		tungsten=8.000
 	}

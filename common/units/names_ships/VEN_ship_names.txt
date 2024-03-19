@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ﻿##### VENEZUELA NAME LISTS #####
-=======
-##### URUGUAY NAME LISTS #####
->>>>>>> Oscar's-branch
 ### REGULAR DESTROYER NAMES###
 VEN_DD_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_DESTROYERS
@@ -12,19 +8,11 @@ VEN_DD_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_light destroyer }			
 
-<<<<<<< HEAD
 	prefix = "ARV "
 	fallback_name = "Destructor %d"					
 
 	unique = {											
 		"Nueva Esparta" "Zulia" "Aragua" "Almirante Clemente" "General Flores" "General Moran" "Almirante Brión" "General Austria" "Almirante Garcia"
-=======
-	prefix = "FNV "
-	fallback_name = "Destructor %d"					
-
-	unique = {											
-		"Venezuela" "Patria" "Independencia" "Libertad" "Victoria" "Bolivar" "Monagas" "Caracas" "Victoria"
->>>>>>> Oscar's-branch
 	}
 }
 
@@ -37,19 +25,11 @@ VEN_CL_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_cruiser light_cruiser }
 	
-<<<<<<< HEAD
 	prefix = "ARV "
 	fallback_name = "Crucero Ligero %d"
 
 	unique = {
 		"Maracay" "Barquisimeto" "Valencia" "Petare Teques" "Puerto de la Cruz" "Cumana" "Maturin" "Sotavento" "Isla de Tortuga" "Pedregal" 
-=======
-	prefix = "FNV "
-	fallback_name = "Crucero Ligero %d"
-
-	unique = {
-		"Venezuela" "Patria" "Independencia" "Libertad" "Victoria" "Bolivar" "Monagas" "Caracas" "Victoria"
->>>>>>> Oscar's-branch
 	}
 }
 
@@ -62,19 +42,11 @@ VEN_CA_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_cruiser heavy_cruiser }
 	
-<<<<<<< HEAD
 	prefix = "ARV "
 	fallback_name = "Crucero Pesado %d"
 
 	unique = {
 		"Maracay" "Barquisimeto" "Valencia" "Petare Teques" "Puerto de la Cruz" "Cumana" "Maturin" "Sotavento" "Isla de Tortuga" "Pedregal" 
-=======
-	prefix = "FNV "
-	fallback_name = "Crucero Pesado %d"
-
-	unique = {
-		"Venezuela" "Patria" "Independencia" "Libertad" "Victoria" "Bolivar" "Monagas" "Caracas" "Victoria"
->>>>>>> Oscar's-branch
 	}
 }
 
@@ -88,19 +60,11 @@ VEN_BB_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_heavy battleship }
 	
-<<<<<<< HEAD
 	prefix = "ARV "
 	fallback_name = "Acorazado %d"		
 
 	unique = {
 		"Coronel Eduardo Blanco" "Almirante San Pablo" "Caracas" 
-=======
-	prefix = "FNV "
-	fallback_name = "Acorazado %d"		
-
-	unique = {
-		"Almirante Brión" "General Soublette" "General Francisco de Miranda" 
->>>>>>> Oscar's-branch
 	}
 }
 
@@ -113,19 +77,11 @@ VEN_BC_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_heavy battle_cruiser }
 	
-<<<<<<< HEAD
 	prefix = "ARV "
 	fallback_name = "Crucero de Batalla %d"		
 
 	unique = {
 		"Coronel Eduardo Blanco" "Almirante San Pablo" "Caracas" 
-=======
-	prefix = "FNV "
-	fallback_name = "Crucero de Batalla %d"		
-
-	unique = {
-		"Almirante Brión" "General Soublette" "General Francisco de Miranda"
->>>>>>> Oscar's-branch
 	}
 }
 
@@ -138,19 +94,11 @@ VEN_CV_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_carrier carrier }
 	
-<<<<<<< HEAD
 	prefix = "ARV "
 	fallback_name = "Portaaviones %d"	
 
 	unique = {
 		"Republica de Venezuela" "Simón Bolivar" "General Urdaneta" "Almirante Brión" "General Soublette" "General Salóm" 
-=======
-	prefix = "FNV "
-	fallback_name = "Portaaviones %d"	
-
-	unique = {
-		"Almirante Brión" "General Soublette" "General Francisco de Miranda"
->>>>>>> Oscar's-branch
 	}
 }
 
@@ -163,18 +111,10 @@ VEN_SS_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_submarine submarine }
 	
-<<<<<<< HEAD
 	prefix = "ARV "
 	fallback_name = "Submarino %d"
 	
 	unique = {
 		"Sabalo" "Caribe" "Almirante Clemente" "General Flores" "General Moran" "Almirante Brión" "General Austria" "Almirante Garcia"
-=======
-	prefix = "FNV "
-	fallback_name = "Submarino %d"
-	
-	unique = {
-		"Bolivar" "Sábalo" "Caribe" "Rocha" "Federación"
->>>>>>> Oscar's-branch
 	}
 }

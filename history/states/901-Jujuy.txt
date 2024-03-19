@@ -21,11 +21,7 @@ state={
 	}
 
 	provinces={
-<<<<<<< HEAD:history/states/901-Jujuy.txt
 		2224 11001 13788 13794 13796 13806 
-=======
-		2224 11001 13788 13806
->>>>>>> Oscar's-branch:history/states/979-Jujuy.txt
 	}
 	manpower=123753
 	buildings_max_level_factor=1.000
