@@ -444,6 +444,18 @@ country_event = {
 				has_government = fascism
 			}
 		}
+		if = {
+			limit = {
+				original_tag = LAT
+				FROM = { original_tag = GER }
+				has_completed_focus = LAT_alignment_with_germany
+			}
+			uncomplete_national_focus = {
+				focus = LAT_alignment_with_germany
+				uncomplete_children = yes
+			}
+			complete_national_focus = LAT_the_thunder_strikes_alone
+		}
 	}
 	option = {
 		name = generic.4.c
@@ -592,9 +604,27 @@ country_event = {
 				is_in_faction_with = POL
 				POL = { has_completed_focus = POL_morges_pact }
 			}
+			modifier = {
+				factor = 2
+				has_global_flag = triple_alliance_formed_flag
+				has_war_with = PAR
+			}
+			modifier = {
+				factor = 1.2
+				capital_scope = { is_on_continent = south_america }
+				has_global_flag = triple_alliance_formed_flag
+				PAR = { check_variable = { PAR_global_concern > 4 } }
+			}
+			modifier = {
+				factor = 10
+				capital_scope = { is_on_continent = south_america }
+				PAR = { has_completed_focus = PAR_form_greater_paraguay }
+			}
 		}
-		FROM = { 
-			add_to_faction = ROOT
+		FROM = {
+			faction_leader = {
+				add_to_faction = ROOT
+			}
 			country_event = { id = generic.6 hours = 6 } 
 		}
 		add_ai_strategy = {
@@ -632,6 +662,22 @@ country_event = {
 		}
 		ai_chance = {
 			base = 100
+			modifier = {
+				factor = 2
+				has_global_flag = triple_alliance_formed_flag
+				has_war_with = PAR
+			}
+			modifier = {
+				factor = 1.2
+				capital_scope = { is_on_continent = south_america }
+				has_global_flag = triple_alliance_formed_flag
+				PAR = { check_variable = { PAR_global_concern > 4 } }
+			}
+			modifier = {
+				factor = 10
+				capital_scope = { is_on_continent = south_america }
+				PAR = { has_completed_focus = PAR_form_greater_paraguay }
+			}
 		}
 		FROM = { 
 			add_to_faction = ROOT
@@ -667,11 +713,25 @@ country_event = {
 				is_in_faction_with = POL
 				POL = { has_completed_focus = POL_morges_pact }
 			}
+			modifier = {
+				factor = 2
+				has_global_flag = triple_alliance_formed_flag
+				has_war_with = PAR
+			}
+			modifier = {
+				factor = 1.2
+				capital_scope = { is_on_continent = south_america }
+				has_global_flag = triple_alliance_formed_flag
+				PAR = { check_variable = { PAR_global_concern > 4 } }
+			}
+			modifier = {
+				factor = 10
+				capital_scope = { is_on_continent = south_america }
+				PAR = { has_completed_focus = PAR_form_greater_paraguay }
+			}
 		}
 		FROM = { 
-			faction_leader = {
-				add_to_faction = ROOT
-			}
+			add_to_faction = ROOT
 			country_event = { id = generic.6 hours = 6 }
 		}
 		add_ai_strategy = {
@@ -720,7 +780,20 @@ country_event = {
 					has_war = yes
 				}
 			}
-			
+
+			modifier = {
+				factor = 2
+				has_global_flag = triple_alliance_formed_flag
+				has_war_with = PAR
+			}
+
+			modifier = {
+				factor = 1.2
+				capital_scope = { is_on_continent = south_america }
+				has_global_flag = triple_alliance_formed_flag
+				PAR = { check_variable = { PAR_global_concern > 4 } }
+			}
+
 			modifier = {
 				factor = 0.5
 				NOT = {
@@ -734,9 +807,24 @@ country_event = {
 					is_major = no
 				}
 			}
+			
+			modifier = {
+				factor = 0
+				original_tag = FRA
+				is_in_faction_with = POL
+				POL = { has_completed_focus = POL_morges_pact }
+			}
+			modifier = {
+				factor = 10
+				capital_scope = { is_on_continent = south_america }
+				PAR = { has_completed_focus = PAR_form_greater_paraguay }
+			}
 		}
 		FROM = { 
-			add_to_faction = ROOT
+			faction_leader = {
+				add_to_faction = ROOT
+			}
+			
 			country_event = { id = generic.6 hours = 6 }
 		}
 		if = {
@@ -789,17 +877,24 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_country_flag = is_in_second_war_of_confederation
+				has_civil_war = no 
 			}
 			
 			modifier = {
 				factor = 0
 				has_country_flag = is_in_second_war_of_the_pacific
+				has_civil_war = no 
 			}
+
 			modifier = {
 				factor = 0
-				original_tag = FRA
-				is_in_faction_with = POL
-				POL = { has_completed_focus = POL_morges_pact }
+				has_country_flag = PAR_affected_by_paraguay_flag
+				has_civil_war = no 
+			}
+
+			modifier = {
+				factor = 0
+				has_war_with = PAR 
 			}
 			
 			modifier = {
@@ -856,6 +951,7 @@ country_event = {
 					is_major = yes
 				}
 			}
+			
 			modifier = {
 				factor = 0
 				tag = SPC

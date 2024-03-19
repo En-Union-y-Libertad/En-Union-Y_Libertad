@@ -8,9 +8,6 @@
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 	}
-	support = {
-		artillery = { x = 0 y = 0 }
-	}
 }
 
 
@@ -40,29 +37,7 @@ units = {
 	}
 }
 
-air_wings = {  #An airforce was used for the first time in Uruguay on 1935 on a revolution against Terra
-	300 = { 
-		# Fighter Air Group -- ARME Montevideo
-		fighter_equipment_0 =  {
-			owner = "URG" 
-			amount = 5
-		}
-		ace={ # 
-			modifier="fighter_genius"
-			name="Cesáreo"
-			surname="Berisso"
-			callsign="Leonardo"
-			portrait=1 # Pick random index here, or make special GFX_GER_ace_Erich_Hartmann to override.
-		}
-	}
-	300 = { 
-		CAS_equipment_1 = {
-			owner = "URG" 
-			amount = 2
-		}
-	}
-}
-
+##### No notable Air Forces #####
 instant_effect = {
 	add_equipment_production = {
 		equipment = {

@@ -31,6 +31,48 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_arg_posadist_texticon"
+		texturefile = "gfx/texticons/arg_posadist_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_arg_marxist_texticon"
+		texturefile = "gfx/texticons/arg_marxist_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_arg_socialist_texticon"
+		texturefile = "gfx/texticons/arg_socialist_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_arg_anarchist_texticon"
+		texturefile = "gfx/texticons/arg_anarchist_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_arg_motorized_texticon"
+		texturefile = "gfx/texticons/arg_motorized_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_arg_medicien_texticon"
+		texturefile = "gfx/texticons/arg_medicien_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_arg_peron_texticon"
+		texturefile = "gfx/texticons/arg_peron_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_col_athe"
 		texturefile = "gfx/texticons/col_athe.dds"
 		legacy_lazy_load = no
@@ -235,6 +277,24 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ucr_a_texticon"
+		texturefile = "gfx/texticons/ucr_a_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_partido_socialista_texticon"
+		texturefile = "gfx/texticons/partido_socialista_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_ucr_texticon"
+		texturefile = "gfx/texticons/ucr_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_BOL_bolivia_flag"
 		texturefile = "gfx/texticons/BOL_bolivia_flag.dds"
 		legacy_lazy_load = no
@@ -267,6 +327,30 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_PAN_panama_flag"
 		texturefile = "gfx/texticons/PAN_panama_flag.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_BRA_integralist"
+		texturefile = "gfx/texticons/BRA_integralist.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_BRA_Vargas"
+		texturefile = "gfx/texticons/BRA_Vargas.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_BRA_communist"
+		texturefile = "gfx/texticons/BRA_communist.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_BRA_monarchist"
+		texturefile = "gfx/texticons/BRA_monarchist.png"
 		legacy_lazy_load = no
 	}
 

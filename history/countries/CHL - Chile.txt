@@ -1,14 +1,48 @@
 ﻿capital = 279
 
-recruit_character = CHL_arturo_alessandri
-recruit_character = CHL_carlos_contreras_labarca
-recruit_character = CHL_escudero_oscar_otárola
-recruit_character = CHL_carlos_fuentes_rabe
-recruit_character = CHL_arturo_espinoza_mujica
+set_convoys = 75
+
+every_core_state = {
+	ROOT = {
+		add_to_array = { cores_at_game_start = PREV }
+	}
+}
+
+IF = {
+	limit = { 
+		has_dlc = "Trial of Allegiance"
+	}
+	set_oob = "CHL_TOA_1936"
+}
+IF = {
+	limit = {
+		NOT = {
+			has_dlc = "Trial of Allegiance"
+		}
+	}
+	set_oob = "CHL_1936"
+}
+
+IF = {
+	limit = {
+		AND = {
+			has_dlc = "La Resistance"
+			has_dlc = "Trial of Allegiance"
+		}
+	}
+	JUNO_create_rosita_serrano_operative = yes
+}
+
+### EUYL ###
+recruit_character = EUYL_CHL_arturo_alessandri
+recruit_character = EUYL_CHL_carlos_contreras_labarca
+recruit_character = EUYL_CHL_escudero_oscar_otárola
+recruit_character = EUYL_CHL_carlos_fuentes_rabe
+recruit_character = EUYL_CHL_arturo_espinoza_mujica
 recruit_character = CHL_jorge_gonzales_von_marées
 recruit_character = CHL_carlos_ibáñez_del_campo
 recruit_character = CHL_bartolomé_guillermo_blanche_espejo
-recruit_character = CHL_oscar_fuentes_pantoja
+recruit_character = EUYL_CHL_oscar_fuentes_pantoja
 recruit_character = CHL_alfredo_portales
 recruit_character = CHL_Óscar_novoa_fuentes
 recruit_character = CHL_ramon_cañas_montalva
@@ -16,27 +50,24 @@ recruit_character = CHL_daniel_herrera
 recruit_character = CHL_tomás_montt
 recruit_character = CHL_bartolomé_orbegoso
 recruit_character = CHL_ministerio_de_trabajadores
-recruit_character = CHL_pedro_aguirre_cerda
-recruit_character = CHL_jeronimo_mendez
+recruit_character = EUYL_CHL_pedro_aguirre_cerda
+recruit_character = EUYL_CHL_jeronimo_mendez
 recruit_character = CHL_gustavo_ross
 recruit_character = CHL_juan_antonio
-recruit_character = CHL_miguel_cruchaga_tacomal
-recruit_character = CHL_luis_alamos_barros
-recruit_character = CHL_pedro_dartnell
+recruit_character = EUYL_CHL_miguel_cruchaga_tacomal
+recruit_character = EUYL_CHL_luis_alamos_barros
+recruit_character = EUYL_CHL_pedro_dartnell
 recruit_character = CHL_augusto_pinochet
-recruit_character = CHL_julio_allard_pinto
-recruit_character = CHL_e_novoa_fuentes
-recruit_character = CHL_dario_mujica_gamboa
-recruit_character = CHL_marmaduke_grove
-recruit_character = CHL_c_j_de_la_motte
-recruit_character = CHL_francisco_o_ryan_orrego
-recruit_character = CHL_ernesto_m_orlando
-recruit_character = CHL_arturo_espinoza_mujica
-recruit_character = CHL_jose_luis_sanchez_besa
-recruit_character = CHL_carlos_puga_monsalve
-recruit_character = CHL_gustavo_silva
-recruit_character = CHL_dario_cellejas_rojas
-recruit_character = CHL_ariosto_herrera
+recruit_character = EUYL_CHL_dario_mujica_gamboa
+recruit_character = EUYL_CHL_marmaduke_grove
+recruit_character = EUYL_CHL_c_j_de_la_motte
+recruit_character = EUYL_CHL_francisco_o_ryan_orrego
+recruit_character = EUYL_CHL_ernesto_m_orlando
+recruit_character = EUYL_CHL_jose_luis_sanchez_besa
+recruit_character = EUYL_CHL_carlos_puga_monsalve
+recruit_character = EUYL_CHL_gustavo_silva
+recruit_character = EUYL_CHL_dario_cellejas_rojas
+recruit_character = EUYL_CHL_ariosto_herrera
 recruit_character = CHL_defensive_military_council
 recruit_character = CHL_offensive_military_council
 recruit_character = CHL_organizational_military_council
@@ -51,9 +82,141 @@ recruit_character = CHL_naval_strike_aviation_council
 recruit_character = CHL_close_air_support_aviation_council
 recruit_character = CHL_logistics_naval_council
 recruit_character = CHL_anti_submarine_naval_council
+recruit_character = EUYL_CHL_peter_hansen
+recruit_character = CHL_francisco_javier_diaz
+recruit_character = CHL_venancio_conuepan
+recruit_character = EUYL_CHL_rene_schneider
+recruit_character = EUYL_CHL_carlos_prats
+recruit_character = EUYL_CHL_guillermo_barrios_tirado
+recruit_character = CHL_vicente_merino_bielich
+recruit_character = CHL_navo_jorge_videla_cobo
+### EUYL ###
 
+### DLC ###
+IF = {
+	limit = { 
+		NOT = {
+			has_dlc = "Trial of Allegiance"
+		}
+	}
+	recruit_character = CHL_arturo_alessandri
+	recruit_character = CHL_jorge_gonzález_von_marées
+	recruit_character = CHL_carlos_contreras_labarca
+	recruit_character = CHL_escudero_oscar_otárola
+	recruit_character = CHL_domingo_blanco # not in the dlc
+	recruit_character = CHL_julio_allard_pinto
+	recruit_character = CHL_gustavo_silva # not in the dlc
+	recruit_character = CHL_jose_luis_sanchez_besa
+	recruit_character = CHL_marmaduke_grove
+	recruit_character = CHL_e_novoa_fuentes
+	recruit_character = CHL_dario_mujica_gamboa
+	recruit_character = CHL_c_j_de_la_motte
+	recruit_character = CHL_carlos_fuentes_rabe
+	recruit_character = CHL_arturo_espinoza_mujica
+	recruit_character = CHL_carlos_puga_monsalve
+	recruit_character = CHL_francisco_o_ryan_orrego
+	recruit_character = CHL_ernesto_m_orlando
+	recruit_character = CHL_dario_cellejas_rojas
+	recruit_character = CHL_ariosto_herrera
+	recruit_character = CHL_luis_alamos_barros
+	recruit_character = CHL_miguel_cruchaga_tacomal
+	recruit_character = CHL_gustavo_ross_santa_maria
+	ELSE_IF = {
+		limit = {
+			has_dlc = "Trial of Allegiance"
+		}
+		recruit_character = CHL_arturo_alessandri
+		recruit_character = CHL_jorge_gonzález_von_marées
+		recruit_character = CHL_carlos_contreras_labarca
+		recruit_character = CHL_pedro_aguirre_cerda
+		recruit_character = CHL_escudero_oscar_otárola
+		recruit_character = CHL_julio_allard_pinto
+		recruit_character = CHL_jose_luis_sanchez_besa
+		recruit_character = CHL_marmaduke_grove
+		recruit_character = CHL_e_novoa_fuentes
+		recruit_character = CHL_carlos_fuentes_rabe
+		recruit_character = CHL_arturo_espinoza_mujica
+		recruit_character = CHL_ariosto_herrera
+		recruit_character = CHL_luis_alamos_barros
+		recruit_character = CHL_miguel_cruchaga_tacomal
+		recruit_character = CHL_gustavo_ross_santa_maria
+		recruit_character = CHL_elias_lafertte_gavino
+		recruit_character = CHL_carlos_ibanez
+		recruit_character = CHL_carlos_keller_reuff
+		recruit_character = CHL_juan_gomez_millas
+		recruit_character = CHL_manuel_hidalgo_plaza
+		recruit_character = CHL_juan_antonio_rios
+		recruit_character = CHL_gabriel_gonzales_videla
+		recruit_character = CHL_eduardo_cruz_coke
+		recruit_character = CHL_fernando_alessandri
+		recruit_character = CHL_antoine_iii
+		recruit_character = CHL_manuel_manquilef
+		recruit_character = CHL_venancio_huenchual
+		recruit_character = CHL_esteban_romero_sandoval
+		recruit_character = CHL_bartolome_blanche
+		recruit_character = CHL_pedro_dartnell
+		recruit_character = CHL_guillermo_barrios_tirado
+		recruit_character = CHL_francisco_valderrama
+		recruit_character = CHL_augustin_de_guevara
+		recruit_character = CHL_pedro_calderon
+		recruit_character = CHL_ricardo_aguayo
+		recruit_character = CHL_humberto_valdivieso
+		recruit_character = CHL_gregorio_tascon
+		recruit_character = CHL_rafael_reyes
+		recruit_character = CHL_vincente_merino_bielich
+		recruit_character = CHL_oscar_reeves_leiva
+		recruit_character = CHL_oscar_fuentes_pantoja
+		recruit_character = CHL_alfredo_portales_mourgues
+		recruit_character = CHL_olegario_reyes
+		recruit_character = CHL_emilio_soto
+		recruit_character = CHL_jorge_cobo
+		recruit_character = CHL_peter_hansen
+		recruit_character = CHL_manuel_pedregal
+		recruit_character = CHL_augusto_pimochet
+		recruit_character = CHL_carlos_prats
+		recruit_character = CHL_rene_schneider
+		recruit_character = CHL_ulk
+		recruit_character = CHL_arnaldo_carrasco
+		recruit_character = CHL_elena_caffarena
+		recruit_character = CHL_pablo_neruda
+		recruit_character = CHL_jaime_quintana
+		recruit_character = CHL_maria_de_la_cruz
+		recruit_character = CHL_salvador_allende
+		recruit_character = CHL_rayen_quitral
+		recruit_character = CHL_jorge_alessandri
+		recruit_character = CHL_guido_beck
+		recruit_character = CHL_gabriela_mistral
+		recruit_character = CHL_juan_rosetti
+		recruit_character = CHL_emilio_codesido
+		recruit_character = CHL_ernesto_jarpa
+		recruit_character = CHL_francisco_encina
+		recruit_character = CHL_jose_morales
+		recruit_character = CHL_ramon_perez
+		recruit_character = CHL_manuel_panguilef
+		recruit_character = CHL_oskar_schnake
+		recruit_character = CHL_bernardo_leighton
+		recruit_character = CHL_tancredo_pinochet
+		recruit_character = CHL_emilio_diaz
+		recruit_character = CHL_radomiro_romero
+		recruit_character = CHL_roberto_araya
+		recruit_character = CHL_arturo_olavaria
+		recruit_character = CHL_rolando_reyes
+		recruit_character = CHL_diego_aguilar
+		recruit_character = CHL_arturo_benitez
+		recruit_character = CHL_jeronimo_mendez
+		recruit_character = CHL_miguel_serrano
+		recruit_character = CHL_manuel_neculman
+		recruit_character = CHL_benjamin_larrain
+		recruit_character = CHL_pedro_alfonso
+		recruit_character = CHL_guillermo_araya
+		recruit_character = CHL_marta_vergara
+		recruit_character = CHL_osvaldo_lira_perez
+		recruit_character = CHL_quintin_lame
+		recruit_character = CHL_carlos_huayquinir
+	}
+}
+### DLC ###
 
-oob = "CHL_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "CHL_1936_naval_mtg"
@@ -68,9 +231,29 @@ set_technology = {
 	gw_artillery = 1
 	interwar_antiair = 1
 	tech_mountaineers = 1
+	basic_train = 1
+	tech_trucks = 1
+	motorised_infantry = 1
 	early_fighter = 1
-	cv_early_fighter = 1
-	early_bomber = 1
+	tech_support = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "CHL_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			early_bombs = 1
+			iw_small_airframe = 1
+		}
+	else = {
+		set_air_oob = "CHL_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			early_bomber = 1
+		}
+	}
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -103,28 +286,6 @@ if = {
 
 set_country_flag = monroe_doctrine
 
-set_convoys = 75
-set_research_slots = 3
-add_ideas = CHL_highly_divided_social_classes_idea
-add_ideas = CHL_land_of_mountain
-add_ideas = monroe_doctrine_idea
-set_variable = { CHL_nacista_power = 3 }
-set_variable = { CHL_communists_power = 2 }
-set_variable = { CHL_control_over_nation = 95 }
-set_variable = { CHL_nacista_influence_days = 35 }
-set_variable = { CHL_communist_influencce_days = 35 }
-set_variable = { CHL_fascist_drift = CHL_nacista_power }
-set_variable = { CHL_communist_drift = CHL_communists_power }
-set_variable = { CHL_chance_of_communist = 50 }
-set_variable = { CHL_chance_of_fascist = 50 }
-set_variable = { CHL_days_for_people_to_calm_down = 210 }
-divide_variable = { CHL_fascist_drift = 450 }
-divide_variable = { CHL_communist_drift = 450 }
-hidden_effect = {	
-	add_dynamic_modifier = { modifier = CHL_political_instability }
-}
-country_event = { id = chile.18 days = 1 }
-
 1939.1.1 = {
 
 	add_political_power = 798
@@ -141,7 +302,18 @@ country_event = { id = chile.18 days = 1 }
 	complete_national_focus = CHL_aftermath_of_the_great_depression
 	complete_national_focus = CHL_maintain_the_stability_of_the_nation
 	complete_national_focus = CHL_expand_the_industry
-	
+	complete_national_focus = CHL_make_an_effort_to_stabilize_the_nation
+	complete_national_focus = CHL_cooperate_with_el_frente
+	complete_national_focus = CHL_liberalism_focus
+	complete_national_focus = CHL_expand_the_welfare_plans
+	complete_national_focus = CHL_nationalize_key_industries
+	complete_national_focus = CHL_advocate_a_compromise_with_the_democrats
+	complete_national_focus = CHL_victory_for_the_fp
+	complete_national_focus = CHL_focus_on_internal_politics
+	complete_national_focus = CHL_reignite_ties_with_the_british
+	complete_national_focus = CHL_fuerzas_armadas
+	complete_national_focus = CHL_ejercito_de_chile
+	complete_national_focus = CHL_armada_chilena
 	
 	oob = "CHL_1939"
 	if = {
@@ -204,16 +376,6 @@ set_popularities = {
 	fascism = 6
 }
 
-create_country_leader = {
-	name = "Arturo Alessandri"
-	desc = "POLITICS_ARTURO_ALESSANDRI_DESC"
-	picture = "GFX_Portrait_chile_arturo_alessandri"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
 
 1939.1.1 = {
 	set_politics = {
@@ -241,28 +403,6 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Jorge Gonzales Von Marées"
-	desc = "POLITICS_JORGE_GONZÁLEZ_VON_MARÉES_DESC"
-	picture = "portrait_chl_jorge_gonzales_von_mares.dds"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-		CHL_el_jefe
-	}
-}
-
-create_country_leader = {
-	name = "Carlos Contreras Labarca"
-	desc = "POLITICS_CARLOS_CONTRERAS_LABARCA_DESC"
-	picture = "gfx/leaders/CHL/labarca.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
 ### VARIANTS ###
 # 1936 Start #
 if = {
@@ -287,6 +427,21 @@ if = {
 			ship_ASW_upgrade = 1
 			ship_anti_air_upgrade = 1
 		}
+	}
+}
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "P-6" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
 	}
 }
 if = {

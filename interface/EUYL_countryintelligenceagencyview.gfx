@@ -314,12 +314,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_hon"
-		texturefile = "gfx/interface/operatives/agencies/agency_logo_hon.dds"
-		noOfFrames = 2
-	}
-
-	spriteType = {
 		name = "GFX_intelligence_agency_logo_hol"
 		texturefile = "gfx/interface/operatives/agencies/agency_logo_hol.dds"
 		noOfFrames = 2
@@ -406,12 +400,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_intelligence_agency_logo_uk"
 		texturefile = "gfx/interface/operatives/agencies/agency_logo_uk.dds"
-		noOfFrames = 2
-	}
-
-	spriteType = {
-		name = "GFX_intelligence_agency_logo_urg"
-		texturefile = "gfx/interface/operatives/agencies/agency_logo_urg.dds"
 		noOfFrames = 2
 	}
 	

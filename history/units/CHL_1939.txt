@@ -33,7 +33,7 @@ division_template = {
 
 division = {
 	name = "División Montañera"
-	division_names_group = division_names_group = SPAN_MNT_02
+	division_names_group = SPAN_MNT_02
 	
 	regiments = {
 		mountaineers = { x = 0 y = 0 }	
@@ -110,20 +110,6 @@ units = {
 		division_template = "División de Caballería"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
-	}
-	division = {
-		name = "División Montañera de Arica"
-		location = 5131
-		division_template = "División Montañera"
-		start_experience_factor = 0.15
-		start_equipment_factor = 0.85
-	}
-	division = {
-		name = "División Montañera de Magallanes"
-		location = 2161
-		division_template = "División Montañera"
-		start_experience_factor = 0.15
-		start_equipment_factor = 0.85
 	}
 }
 

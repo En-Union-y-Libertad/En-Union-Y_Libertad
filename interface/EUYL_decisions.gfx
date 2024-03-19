@@ -7,6 +7,92 @@ spriteTypes = {
 
 	### categories
 	
+	### Venezuela ###
+
+	spriteType = {
+		name = "GFX_VEN_oil_strike_pic"
+		texturefile = "gfx/interface/decisions/VEN_oil_strike_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_oil_strike_image"
+		texturefile = "gfx/interface/decisions/VEN_oil_strike_image.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_escalantes_dementia"
+		texturefile = "gfx/interface/decisions/VEN_escalantes_dementia.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_escalantes_dementia_pic"
+		texturefile = "gfx/interface/decisions/VEN_escalantes_dementia_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_greater_venezuela_icon"
+		texturefile = "gfx/interface/decisions/VEN_greater_venezuela_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_greater_venezuela_picture"
+		texturefile = "gfx/interface/decisions/VEN_greater_venezuela_picture.png"
+	}
+
+	spriteType = {
+		name = "GFX_EUYL_american_intervention"
+		texturefile = "gfx/interface/decisions/EUYL_american_intervention.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_oil_management_icon"
+		texturefile = "gfx/interface/decisions/VEN_oil_management_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_oil_management_image"
+		texturefile = "gfx/interface/decisions/VEN_oil_management_image.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_gloria_al_bravo_pueblo_image"
+		texturefile = "gfx/interface/decisions/VEN_gloria_al_bravo_pueblo_image.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_gloria_al_bravo_pueblo"
+		texturefile = "gfx/interface/decisions/VEN_gloria_al_bravo_pueblo.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_national_syndicate_icon"
+		texturefile = "gfx/interface/decisions/VEN_national_syndicate_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_VEN_influence_ven"
+		texturefile = "gfx/interface/decisions/VEN_influence_ven.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_VEN_oil_extraction_0"
+		texturefile = "gfx/interface/decisions/decision_VEN_oil_extraction_0.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_VEN_oil_extraction_1"
+		texturefile = "gfx/interface/decisions/decision_VEN_oil_extraction_1.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_VEN_oil_extraction_2"
+		texturefile = "gfx/interface/decisions/decision_VEN_oil_extraction_2.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_VEN_oil_extraction_3"
+		texturefile = "gfx/interface/decisions/decision_VEN_oil_extraction_3.png"
+	}
 
 	spriteType = {
 		name = "GFX_decision_category_generic"
@@ -19,6 +105,309 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_EUYL_foreing_immigration"
+		texturefile = "gfx/interface/decisions/EUYL_foreing_immigration.png"
+	}
+
+	spriteType = {
+		name = "GFX_URG_political_actions_icon"
+		texturefile = "gfx/interface/decisions/URG_political_actions_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_URG_bop_decision_icon"
+		texturefile = "gfx/interface/decisions/URG_bop_decision_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_promote_anarchism"
+		texturefile = "gfx/interface/decisions/ARG_promote_anarchism.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_promote_marxism"
+		texturefile = "gfx/interface/decisions/ARG_promote_marxism.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_promote_posadism"
+		texturefile = "gfx/interface/decisions/ARG_promote_posadism.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_promote_socdem"
+		texturefile = "gfx/interface/decisions/ARG_promote_socdem.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_cultural_dev"
+		texturefile = "gfx/interface/decisions/ARG_cultural_dev.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_stadium_decision"
+		texturefile = "gfx/interface/decisions/ARG_stadium_decision.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_spread_of_anarchism_icon"
+		texturefile = "gfx/interface/decisions/ARG_spread_of_anarchism_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_spread_of_anarchism_picture"
+		texturefile = "gfx/interface/decisions/ARG_spread_of_anarchism_picture.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_posadist_ambitions_pic"
+		texturefile = "gfx/interface/decisions/ARG_posadist_ambitions_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_posadist_ambitions_icon"
+		texturefile = "gfx/interface/decisions/ARG_posadist_ambitions_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_generic_research_icon"
+		texturefile = "gfx/interface/decisions/ARG_generic_research_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_patrianovissm_icon"
+		texturefile = "gfx/interface/decisions/BRA_patrianovissm_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_patrianovism_pic"
+		texturefile = "gfx/interface/decisions/BRA_patrianovism_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_PRU_imperial_management_pic"
+		texturefile = "gfx/interface/decisions/PRU_imperial_management_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_monarchist_influence_icon"
+		texturefile = "gfx/interface/decisions/BRA_monarchist_influence_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_andenesia"
+		texturefile = "gfx/interface/decisions/ARG_andenesia.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_opposition_civil_war_icon"
+		texturefile = "gfx/interface/decisions/ARG_opposition_civil_war_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_bavaria_independence"
+		texturefile = "gfx/interface/decisions/BRA_bavaria_independence.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_managing_west_africa"
+		texturefile = "gfx/interface/decisions/BRA_managing_west_africa.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_imperial_management_pic"
+		texturefile = "gfx/interface/decisions/BRA_imperial_management_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_west_africa_administration_pic"
+		texturefile = "gfx/interface/decisions/BRA_west_africa_administration_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_new_era_decision_icon"
+		texturefile = "gfx/interface/decisions/ARG_new_era_decision_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_spread_of_peronism_icon"
+		texturefile = "gfx/interface/decisions/ARG_spread_of_peronism_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_spread_of_peronism_pic"
+		texturefile = "gfx/interface/decisions/ARG_spread_of_peronism_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_independents_icon"
+		texturefile = "gfx/interface/decisions/ARG_independents_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_accion_catolica_argentina_icon"
+		texturefile = "gfx/interface/decisions/ARG_accion_catolica_argentina_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_liga_patriotica_icon"
+		texturefile = "gfx/interface/decisions/ARG_liga_patriotica_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_legion_civica_icon"
+		texturefile = "gfx/interface/decisions/ARG_legion_civica_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_partido_fascista_icon"
+		texturefile = "gfx/interface/decisions/ARG_partido_fascista_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_coalition_formation"
+		texturefile = "gfx/interface/decisions/ARG_coalition_formation.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_federalists"
+		texturefile = "gfx/interface/decisions/ARG_federalists.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_forming_coalition_pic"
+		texturefile = "gfx/interface/decisions/ARG_forming_coalition_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_holy_crusades_dec_icon"
+		texturefile = "gfx/interface/decisions/ARG_holy_crusades_dec_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_holy_crusades_pic"
+		texturefile = "gfx/interface/decisions/ARG_holy_crusades_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_form_united_prov"
+		texturefile = "gfx/interface/decisions/ARG_form_united_prov.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_germany_pic"
+		texturefile = "gfx/interface/decisions/ARG_germany_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_PRU_amarican_armament"
+		texturefile = "gfx/interface/decisions/PRU_amarican_armament.png"
+	}
+
+	spriteType = {
+		name = "GFX_PRU_united_revolution_icon"
+		texturefile = "gfx/interface/decisions/PRU_united_revolution_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_PRU_united_revolution_pic"
+		texturefile = "gfx/interface/decisions/PRU_united_revolution_pic.png"
+	}
+
+	### PAR ###
+	spriteType = {
+		name = "GFX_PAR_icon_feb_revolution"
+		texturefile = "gfx/interface/decisions/PAR_icon_feb_revolution.png"
+	}
+
+	spriteType = {
+		name = "GFX_PAR_legacy_of_selano_lopez_icon"
+		texturefile = "gfx/interface/decisions/PAR_legacy_of_selano_lopez_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_PAR_legacy_of_solano_lopez_image"
+		texturefile = "gfx/interface/decisions/PAR_legacy_of_solano_lopez_image.png"
+	}
+
+	spriteType = {
+		name = "GFX_PAR_native_uprising_pic"
+		texturefile = "gfx/interface/decisions/PAR_native_uprising_pic.png"
+	}
+
+	spriteType = {
+		name = "GFX_PAR_native_solidarity_img"
+		texturefile = "gfx/interface/decisions/PAR_native_solidarity_img.png"
+	}
+
+	spriteType = {
+		name = "GFX_PAR_image_feb_revolution"
+		texturefile = "gfx/interface/decisions/PAR_image_feb_revolution.png"
+	}
+
+	spriteType = {
+		name = "GFX_PAR_industry_category"
+		texturefile = "gfx/interface/decisions/PAR_industry_category.png"
+	}
+
+	spriteType = {
+		name = "GFX_PAR_politics"
+		texturefile = "gfx/interface/decisions/PAR_politics.png"
+	}
+
+	spriteType = {
+		name = "GFX_PAR_committee_of_mob"
+		texturefile = "gfx/interface/decisions/PAR_committee_of_mob.png"
+	}
+
+
+	### END PAR ###
+	spriteType = {
+		name = "GFX_ARG_manage_army"
+		texturefile = "gfx/interface/decisions/ARG_manage_army.png"
+	}
+	
+	spriteType = {
+		name = "GFX_ARG_unify_la_plata"
+		texturefile = "gfx/interface/decisions/ARG_unify_la_plata.png"
+	}
+
+	spriteType = {
+		name = "GFX_UCRA_secure_state"
+		texturefile = "gfx/interface/decisions/UCRA_secure_state.png"
+	}
+
+	spriteType = {
+		name = "GFX_PS_secure_state"
+		texturefile = "gfx/interface/decisions/PS_secure_state.png"
+	}
+
+	spriteType = {
+		name = "GFX_UCR_secure_state"
+		texturefile = "gfx/interface/decisions/UCR_secure_state.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_left_spy"
+		texturefile = "gfx/interface/decisions/ARG_left_spy.png"
+	}
+
+	spriteType = {
+		name = "GFX_EUYL_image_one"
+		texturefile = "gfx/interface/decisions/EUYL_image_one.png"
+	}
+
+	spriteType = {
+		name = "GFX_EUYL_image_two"
+		texturefile = "gfx/interface/decisions/EUYL_image_two.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_right_spy"
+		texturefile = "gfx/interface/decisions/ARG_right_spy.png"
+	}
+
+	spriteType = {
 		name = "GFX_BRA_coffee_dependency"
 		texturefile = "gfx/interface/decisions/BRA_coffee_dependency.dds"
 	}
@@ -27,10 +416,134 @@ spriteTypes = {
 		name = "GFX_BRA_coffee_plantation_image"
 		texturefile = "gfx/interface/decisions/BRA_coffee_plantation_image.dds"
 	}
+
+	spriteType = {
+		name = "GFX_BRA_imperial_management_icon"
+		texturefile = "gfx/interface/decisions/BRA_imperial_management_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_infamous_decade_icon"
+		texturefile = "gfx/interface/decisions/ARG_infamous_decade_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_ARG_infamous_decade_picture"
+		texturefile = "gfx/interface/decisions/ARG_infamous_decade_picture.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_smoking_snakes_category"
+		texturefile = "gfx/interface/decisions/BRA_smoking_snakes_category.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_smoking_snakes_picture"
+		texturefile = "gfx/interface/decisions/BRA_smoking_snakes_picture.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_peasant_revolt"
+		texturefile = "gfx/interface/decisions/BRA_peasant_revolt.png"
+	}
+
+	spriteType = {
+		name = "GFX_URG_combat_influence"
+		texturefile = "gfx/interface/decisions/URG_combat_influence.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_integralist_category"
+		texturefile = "gfx/interface/decisions/BRA_integralist_category.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_civil_war_icon"
+		texturefile = "gfx/interface/decisions/BRA_civil_war_icon.png"
+	}
 	
 	spriteType = {
 		name = "GFX_PRU_fascist_coup"
 		texturefile = "gfx/interface/decisions/PRU_fascist_coup.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_vargas_estado_novo"
+		texturefile = "gfx/interface/decisions/BRA_vargas_estado_novo.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_shut_down_integralist_coup"
+		texturefile = "gfx/interface/decisions/BRA_shut_down_integralist_coup.png"
+	}
+
+	spriteType = {
+		name = "GFX_EUYL_attract_refugees"
+		texturefile = "gfx/interface/decisions/EUYL_attract_refugees.png"
+	}
+
+	spriteType = {
+		name = "GFX_EUYL_little_immigration"
+		texturefile = "gfx/interface/decisions/EUYL_little_immigration.png"
+	}
+
+	spriteType = {
+		name = "GFX_EUYL_some_immigration"
+		texturefile = "gfx/interface/decisions/EUYL_some_immigration.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_civil_war_preperations"
+		texturefile = "gfx/interface/decisions/BRA_civil_war_preperations.png"
+	}
+
+	spriteType = {
+		name = "GFX_BOL_claim_anto_0"
+		texturefile = "gfx/interface/decisions/BOL_claim_anto_0.png"
+	}
+	spriteType = {
+		name = "GFX_BOL_claim_anto_1"
+		texturefile = "gfx/interface/decisions/BOL_claim_anto_1.png"
+	}
+	spriteType = {
+		name = "GFX_BOL_claim_anto_2"
+		texturefile = "gfx/interface/decisions/BOL_claim_anto_2.png"
+	}
+	spriteType = {
+		name = "GFX_BOL_claim_anto_3"
+		texturefile = "gfx/interface/decisions/BOL_claim_anto_3.png"
+	}
+
+	spriteType = {
+		name = "GFX_brazil_empire_claim_0"
+		texturefile = "gfx/interface/decisions/brazil_empire_claim_0.png"
+	}
+	spriteType = {
+		name = "GFX_brazil_empire_claim_1"
+		texturefile = "gfx/interface/decisions/brazil_empire_claim_1.png"
+	}
+	spriteType = {
+		name = "GFX_brazil_empire_claim_2"
+		texturefile = "gfx/interface/decisions/brazil_empire_claim_2.png"
+	}
+	spriteType = {
+		name = "GFX_brazil_empire_claim_3"
+		texturefile = "gfx/interface/decisions/brazil_empire_claim_3.png"
+	}
+
+	spriteType = {
+		name = "GFX_brazilian_government_management"
+		texturefile = "gfx/interface/decisions/brazilian_government_management.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_giv_management_picture"
+		texturefile = "gfx/interface/decisions/BRA_giv_management_picture.png"
+	}
+
+	spriteType = {
+		name = "GFX_BRA_plane_production"
+		texturefile = "gfx/interface/decisions/BRA_plane_production.png"
 	}
 
 	spriteType = {
@@ -323,6 +836,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_PRU_decision_category_army_navy"
 		texturefile = "gfx/interface/decisions/PRU_decision_category_army_navy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_PRU_politic_icon"
+		texturefile = "gfx/interface/decisions/PRU_politic_icon.png"
 	}
 	
 	spriteType = {
@@ -1534,6 +2052,28 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_faction_CHL_upper_class"
 		texturefile = "gfx/interface/decisions/CHL_upper_class.dds"
+	}
+	
+	###
+	
+	spriteType = {
+		name = "GFX_decision_faction_BRA_communists"
+		texturefile = "gfx/interface/decisions/decision_faction_bra_communism.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_faction_BRA_congress"
+		texturefile = "gfx/interface/decisions/decision_faction_bra_congress.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_faction_BRA_integralists"
+		texturefile = "gfx/interface/decisions/decision_faction_bra_integralism.png"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_faction_BRA_vargas"
+		texturefile = "gfx/interface/decisions/decision_faction_bra_vargas.png"
 	}
 
 

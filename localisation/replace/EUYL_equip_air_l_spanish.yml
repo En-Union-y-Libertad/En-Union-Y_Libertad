@@ -2026,21 +2026,6 @@
  URG_tac_bomber_equipment_2:0 "North American B-25 Mitchell"
  URG_tac_bomber_equipment_2_short:0 "B-25 Mitchell" 
 
- GUA_fighter_equipment_0:0 "Waco UMF-3"
- GUA_fighter_equipment_0_short:0 "UMF-3"
- GUA_fighter_equipment_1:0 "Waco VPF-7"
- GUA_fighter_equipment_1_short:0 "VPF-7"
- GUA_fighter_equipment_2:0 "Boeing P-26A Peashooter"
- GUA_fighter_equipment_2_short:0 "P-26A Peashooter"
- GUA_fighter_equipment_3:0 "North American P-51 Mustang"
- GUA_fighter_equipment_3_short:0 "P-51 Mustang"
- GUA_jet_fighter_equipment_2:0 "Cessna A-37 Dragonfly"
- GUA_jet_fighter_equipment_2_short:0 "A-37 Dragonfly"
- GUA_tac_bomber_equipment_0:0 "Potez 25A-2"
- GUA_tac_bomber_equipment_0_short:0 "Potez 25A-2"
- GUA_tac_bomber_equipment_3:0 "Douglas A-26 Invader"
- GUA_tac_bomber_equipment_3_short:0 "Douglas A-26 Invader"
-
 
 # === [LocEditor:OrphanedKeys] Keys that do not exist in English ===
  scout_plane_desc:0 "Un avión desarrollado específicamente para el reconocimiento fotográfico. Depende principalmente de la velocidad y el sigilo para sobrevivir. Perderá en enfrentamientos violentos."

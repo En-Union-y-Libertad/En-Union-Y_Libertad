@@ -267,28 +267,6 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
-	picture = GFX_intelligence_agency_logo_urg
-	names = { "Servicio de Inteligencia y Enlace" }
-
-	available = { always = yes }
-	
-	default = { tag = URG }
-	available = { original_tag = URG }
-}
-
-intelligence_agency = {
-	
-	picture = GFX_intelligence_agency_logo_hon
-	names = { "Policía Secreta de Honduras" }
-
-	available = { always = yes }
-	
-	default = { tag = HON }
-	available = { original_tag = HON }
-}
-
-intelligence_agency = {
-	
 	picture = GFX_intelligence_agency_logo_generic_1
 	names = { "Rooke" }
 	

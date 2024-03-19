@@ -1,4 +1,4 @@
-﻿##### VENEZUELA NAME LISTS #####
+##### URUGUAY NAME LISTS #####
 ### REGULAR DESTROYER NAMES###
 VEN_DD_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_DESTROYERS
@@ -8,11 +8,11 @@ VEN_DD_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_light destroyer }			
 
-	prefix = "ARV "
+	prefix = "FNV "
 	fallback_name = "Destructor %d"					
 
 	unique = {											
-		"Nueva Esparta" "Zulia" "Aragua" "Almirante Clemente" "General Flores" "General Moran" "Almirante Brión" "General Austria" "Almirante Garcia"
+		"Venezuela" "Patria" "Independencia" "Libertad" "Victoria" "Bolivar" "Monagas" "Caracas" "Victoria"
 	}
 }
 
@@ -25,11 +25,11 @@ VEN_CL_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_cruiser light_cruiser }
 	
-	prefix = "ARV "
+	prefix = "FNV "
 	fallback_name = "Crucero Ligero %d"
 
 	unique = {
-		"Maracay" "Barquisimeto" "Valencia" "Petare Teques" "Puerto de la Cruz" "Cumana" "Maturin" "Sotavento" "Isla de Tortuga" "Pedregal" 
+		"Venezuela" "Patria" "Independencia" "Libertad" "Victoria" "Bolivar" "Monagas" "Caracas" "Victoria"
 	}
 }
 
@@ -42,11 +42,11 @@ VEN_CA_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_cruiser heavy_cruiser }
 	
-	prefix = "ARV "
+	prefix = "FNV "
 	fallback_name = "Crucero Pesado %d"
 
 	unique = {
-		"Maracay" "Barquisimeto" "Valencia" "Petare Teques" "Puerto de la Cruz" "Cumana" "Maturin" "Sotavento" "Isla de Tortuga" "Pedregal" 
+		"Venezuela" "Patria" "Independencia" "Libertad" "Victoria" "Bolivar" "Monagas" "Caracas" "Victoria"
 	}
 }
 
@@ -60,11 +60,11 @@ VEN_BB_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_heavy battleship }
 	
-	prefix = "ARV "
+	prefix = "FNV "
 	fallback_name = "Acorazado %d"		
 
 	unique = {
-		"Coronel Eduardo Blanco" "Almirante San Pablo" "Caracas" 
+		"Almirante Brión" "General Soublette" "General Francisco de Miranda" 
 	}
 }
 
@@ -77,11 +77,11 @@ VEN_BC_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_heavy battle_cruiser }
 	
-	prefix = "ARV "
+	prefix = "FNV "
 	fallback_name = "Crucero de Batalla %d"		
 
 	unique = {
-		"Coronel Eduardo Blanco" "Almirante San Pablo" "Caracas" 
+		"Almirante Brión" "General Soublette" "General Francisco de Miranda"
 	}
 }
 
@@ -94,11 +94,11 @@ VEN_CV_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_carrier carrier }
 	
-	prefix = "ARV "
+	prefix = "FNV "
 	fallback_name = "Portaaviones %d"	
 
 	unique = {
-		"Republica de Venezuela" "Simón Bolivar" "General Urdaneta" "Almirante Brión" "General Soublette" "General Salóm" 
+		"Almirante Brión" "General Soublette" "General Francisco de Miranda"
 	}
 }
 
@@ -111,10 +111,10 @@ VEN_SS_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_submarine submarine }
 	
-	prefix = "ARV "
+	prefix = "FNV "
 	fallback_name = "Submarino %d"
 	
 	unique = {
-		"Sabalo" "Caribe" "Almirante Clemente" "General Flores" "General Moran" "Almirante Brión" "General Austria" "Almirante Garcia"
+		"Bolivar" "Sábalo" "Caribe" "Rocha" "Federación"
 	}
 }
